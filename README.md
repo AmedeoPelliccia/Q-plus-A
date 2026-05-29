@@ -247,7 +247,7 @@ Each band identifies a major architecture domain within the Q+ technical-knowled
 | `400–499` | `EPTA` | **Energy and Propulsion Technology Architecture** | Energy systems, hydrogen, batteries, fuel cells, hybrid-electric propulsion, thermal management, power distribution, and sustainable propulsion architectures. |
 | `500–599` | `AMTA` | **Advanced Materials Technology Architecture** | Materials, composites, bio-materials, nano-materials, coatings, structural materials, process qualification, and material lifecycle traceability. |
 | `600–699` | `OGATA` | **Operational Ground Automation Technology Architecture** | Ground automation, robotics, airport/spaceport automation, GSE, logistics automation, maintenance automation, and industrial support systems. |
-| `700–799` | `ACV` | **Aerial City and Vehicles** | Urban air mobility, aerial city systems, eVTOL, vertiport interfaces, mobility corridors, aerial infrastructure, and city-airspace integration. |
+| `700–799` | `ATACV` | **Air Traffic and Aerial City Vehicles** | Urban air mobility, aerial city systems, eVTOL, vertiport interfaces, mobility corridors, aerial infrastructure, air traffic management, and city-airspace integration. |
 | `800–899` | `CYB` | **Cybersecurity Architecture** | Cybersecurity, post-quantum security, secure systems, identity, access control, threat modelling, resilience, and cyber-assurance. |
 | `900–999` | `QCSAA` | **Quantum Computing and Sentient Agency Architecture** | Quantum computing, quantum sensing, quantum communication, agency models, quantum-classical bridges, QSN, and controlled sentient/agentic system governance. |
 
@@ -263,7 +263,7 @@ DTCEC            = 300–399 digital twin, cloud, edge and AI computing band
 EPTA             = 400–499 energy and propulsion technology architecture band
 AMTA             = 500–599 advanced materials technology architecture band
 OGATA            = 600–699 operational ground automation technology architecture band
-ACV              = 700–799 aerial city and vehicles band
+ATACV            = 700–799 air traffic and aerial city vehicles band
 CYB              = 800–899 cybersecurity architecture band
 QCSAA            = 900–999 quantum computing and sentient agency architecture band
 ```
@@ -282,7 +282,7 @@ The physical folders under `01-03-01_Q+ATLANTIDE/` are the architecture-band imp
 01-03-01-05_400-499_EPTA/
 01-03-01-06_500-599_AMTA/
 01-03-01-07_600-699_OGATA/
-01-03-01-08_700-799_ACV/
+01-03-01-08_700-799_ATACV/
 01-03-01-09_800-899_CYB/
 01-03-01-10_900-999_QCSAA/
 ```
@@ -296,7 +296,7 @@ Architecture bands:
 * [`01-03-01-05_400-499_EPTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-05_400-499_EPTA/)
 * [`01-03-01-06_500-599_AMTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-06_500-599_AMTA/)
 * [`01-03-01-07_600-699_OGATA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-07_600-699_OGATA/)
-* [`01-03-01-08_700-799_ACV/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-08_700-799_ACV/)
+* [`01-03-01-08_700-799_ATACV/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-08_700-799_ATACV/)
 * [`01-03-01-09_800-899_CYB/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-09_800-899_CYB/)
 * [`01-03-01-10_900-999_QCSAA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-10_900-999_QCSAA/)
 
