@@ -158,6 +158,99 @@ The PBS is the **product** decomposition. The matching **work** decomposition (W
 
 ---
 
+## Forward fuselage section branch
+
+The forward fuselage branch (`eWTW-PBS-10-10-10`) is scaffolded in-repo down to detail-part level so the programme can attach element documentation, SSOT records, and publication artefacts without redefining system ownership.
+
+```text
+eWTW-PBS-00/
+└── eWTW-PBS-10/
+    └── eWTW-PBS-10-10/
+        └── eWTW-PBS-10-10-10/
+            ├── PUB/
+            ├── SSOT/
+            ├── eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/
+            │   ├── eWTW-PBS-10-10-10-10-10_Radome/
+            │   ├── eWTW-PBS-10-10-10-10-20_Radome-Backup-Bulkhead/
+            │   ├── eWTW-PBS-10-10-10-10-30_Nose-Cap-and-Forward-Fairing/
+            │   └── eWTW-PBS-10-10-10-10-40_Lightning-Diverter-Provisions/
+            ├── eWTW-PBS-10-10-10-20_Forward-Pressure-Bulkhead/
+            │   ├── eWTW-PBS-10-10-10-20-10_Bulkhead-Web/
+            │   ├── eWTW-PBS-10-10-10-20-20_Stiffeners-and-Ring-Frame/
+            │   └── eWTW-PBS-10-10-10-20-30_Penetration-and-Seal-Provisions/
+            ├── eWTW-PBS-10-10-10-30_Flight-Deck-Structure/
+            │   ├── eWTW-PBS-10-10-10-30-10_Flight-Deck-Floor-Grid/
+            │   ├── eWTW-PBS-10-10-10-30-20_Windshield-Surround-and-Posts/
+            │   ├── eWTW-PBS-10-10-10-30-30_Canopy-and-Roof-Frames/
+            │   ├── eWTW-PBS-10-10-10-30-40_Glareshield-Support-Structure/
+            │   └── eWTW-PBS-10-10-10-30-50_Crew-Volume-Crashworthy-Members/
+            ├── eWTW-PBS-10-10-10-40_Side-Window-Structural-Surrounds/
+            │   ├── eWTW-PBS-10-10-10-40-10_Window-Cut-Out-Reinforcement/
+            │   └── eWTW-PBS-10-10-10-40-20_Window-Frame-Fittings/
+            ├── eWTW-PBS-10-10-10-50_Nose-Landing-Gear-Bay-and-Attach/
+            │   ├── eWTW-PBS-10-10-10-50-10_NLG-Bay-Structure/
+            │   ├── eWTW-PBS-10-10-10-50-20_NLG-Trunnion-Attach-Fittings/
+            │   ├── eWTW-PBS-10-10-10-50-30_Drag-and-Side-Load-Fittings/
+            │   └── eWTW-PBS-10-10-10-50-40_Bay-Doors-Hinge-Structure/
+            ├── eWTW-PBS-10-10-10-60_Forward-Equipment-Bay-Structure/
+            │   ├── eWTW-PBS-10-10-10-60-10_Equipment-Rack-Support-Structure/
+            │   ├── eWTW-PBS-10-10-10-60-20_Shelf-and-Mounting-Provisions/
+            │   ├── eWTW-PBS-10-10-10-60-30_EMI-HIRF-Shielding-Provisions/
+            │   ├── eWTW-PBS-10-10-10-60-40_Cooling-Duct-and-Routing-Provisions/
+            │   └── eWTW-PBS-10-10-10-60-50_Access-Panel-and-Door-Structure/
+            ├── eWTW-PBS-10-10-10-70_Forward-Barrel-Skin-Stringer-Frame/
+            │   ├── eWTW-PBS-10-10-10-70-10_Skin-Panels/
+            │   ├── eWTW-PBS-10-10-10-70-20_Stringers/
+            │   ├── eWTW-PBS-10-10-10-70-30_Frames/
+            │   └── eWTW-PBS-10-10-10-70-40_Forward-Production-Join-Splice/
+            └── eWTW-PBS-10-10-10-80_Forward-Door-Hatch-Surrounds/
+                ├── eWTW-PBS-10-10-10-80-10_Door-Cut-Out-Reinforcement/
+                └── eWTW-PBS-10-10-10-80-20_Hatch-Surround-Fittings/
+```
+
+## Forward fuselage detail-part index
+
+| PBS ID | Detail part | Primary driver / note |
+|---|---|---|
+| `eWTW-PBS-10-10-10-10-10` | Radome | RF-transparent nose fairing; bird strike, lightning Zone 1A, weather-radar RF window |
+| `eWTW-PBS-10-10-10-10-20` | Radome backup bulkhead | Structural closure behind radome; bird-strike load path |
+| `eWTW-PBS-10-10-10-10-30` | Nose cap and forward fairing | Aerodynamic nose; erosion and lightning |
+| `eWTW-PBS-10-10-10-10-40` | Lightning diverter provisions | Bonding/diverter mounts; provisions only, system owned by `eWTW-PBS-40-40` |
+| `eWTW-PBS-10-10-10-20-10` | Bulkhead web | Pressure boundary; pressurization fatigue and damage tolerance |
+| `eWTW-PBS-10-10-10-20-20` | Stiffeners and ring frame | Bulkhead stiffening; pressure stability |
+| `eWTW-PBS-10-10-10-20-30` | Penetration and seal provisions | Feed-through points; sealed routing for harnesses and ducts |
+| `eWTW-PBS-10-10-10-30-10` | Flight-deck floor grid | Crew floor; crashworthiness and equipment loads |
+| `eWTW-PBS-10-10-10-30-20` | Windshield surround and posts | Windshield reaction structure; bird strike and field of view |
+| `eWTW-PBS-10-10-10-30-30` | Canopy and roof frames | Flight-deck roof; pressure and escape provisions |
+| `eWTW-PBS-10-10-10-30-40` | Glareshield support structure | Instrument-panel support; crew interface install provision for `eWTW-PBS-50-50` |
+| `eWTW-PBS-10-10-10-30-50` | Crew-volume crashworthy members | Survivable-volume structure; crashworthiness |
+| `eWTW-PBS-10-10-10-40-10` | Window cut-out reinforcement | Local reinforcement; fatigue around cut-outs |
+| `eWTW-PBS-10-10-10-40-20` | Window frame fittings | Transparency attach; pressure-seal interface |
+| `eWTW-PBS-10-10-10-50-10` | NLG bay structure | Gear cavity; reacts landing gear loads |
+| `eWTW-PBS-10-10-10-50-20` | NLG trunnion attach fittings | Primary gear attach; interface to `eWTW-PBS-60-50` |
+| `eWTW-PBS-10-10-10-50-30` | Drag and side-load fittings | Gear load reaction; landing and taxi loads |
+| `eWTW-PBS-10-10-10-50-40` | Bay doors hinge structure | Gear-door support; door system provision |
+| `eWTW-PBS-10-10-10-60-10` | Equipment rack support structure | E/E rack structure; avionics install provision for `eWTW-PBS-50` |
+| `eWTW-PBS-10-10-10-60-20` | Shelf and mounting provisions | Equipment shelves; install provision |
+| `eWTW-PBS-10-10-10-60-30` | EMI/HIRF shielding provisions | Shielding structure elevated for electric architecture |
+| `eWTW-PBS-10-10-10-60-40` | Cooling duct and routing provisions | Thermal-path provision; cooling system owned by `eWTW-PBS-60-20` |
+| `eWTW-PBS-10-10-10-60-50` | Access panel and door structure | Maintenance access; maintainability |
+| `eWTW-PBS-10-10-10-70-10` | Skin panels | Fuselage shell; pressure and bending |
+| `eWTW-PBS-10-10-10-70-20` | Stringers | Longitudinal stiffening; bending and buckling |
+| `eWTW-PBS-10-10-10-70-30` | Frames | Circumferential stiffening; shape and pressure |
+| `eWTW-PBS-10-10-10-70-40` | Forward production join splice | Mate to centre section; shared interface with `eWTW-PBS-10-10-20` |
+| `eWTW-PBS-10-10-10-80-10` | Door cut-out reinforcement | Local reinforcement; fatigue around door cut-outs |
+| `eWTW-PBS-10-10-10-80-20` | Hatch surround fittings | Hatch attach; seal interface |
+
+### Forward fuselage notes
+
+- **Provisions vs systems.** Structural provisions in this branch own only mounts, routing paths, shielding, and load paths. The corresponding systems remain owned by their governing PBS branches (for example `eWTW-PBS-40-40` and `eWTW-PBS-60-20`).
+- **Shared interface.** `eWTW-PBS-10-10-10-70-40` is the controlled splice to the centre section (`eWTW-PBS-10-10-20`); any definition change on either side requires coordinated review across both product elements.
+- **Effectivity inheritance.** The branch inherits `eWTW · baseline · MSN-001..050` by default, while detail parts can override `status` or block effectivity when needed.
+- **Element documents.** The drilled path and detail-part folders each carry a local `README.md` so configuration, SSOT, and publication artefacts can be added without changing the PBS identifier scheme.
+
+---
+
 ## Notes
 
 - **Electric-first architecture.** PBS-60-10 is named "electric-first" because the eWTW removes the conventional central hydraulic system in favour of electromechanical actuation; residual hydraulics, if retained for specific actuators, are a configuration decision recorded in effectivity.
