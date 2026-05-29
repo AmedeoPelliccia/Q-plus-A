@@ -1,4 +1,4 @@
-# Q-plus-A — Indice della Repository
+# Q-plus-A — Index
 
 ## 0. Root
 
