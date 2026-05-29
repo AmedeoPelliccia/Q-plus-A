@@ -197,7 +197,41 @@ Path:
 
 ### 01-03-01 — Q+ATLANTIDE
 
-* `README.md`
+```text
+Q+ATLANTIDE =
+Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem
+```
+
+Controlled definition:
+
+> **Q+ATLANTIDE** is the controlled architecture-taxonomy and technical-knowledge ecosystem used to identify, classify, govern, trace, and relate aerospace, space, defence, digital, energy, material, infrastructure, cybersecurity, quantum, and emerging-technology architectures across the full lifecycle.
+
+`Q+ATLANTIDE` is not a single technology and not a programme. It is the controlled **technology and architecture identification ecosystem** of Q+.
+
+```yaml
+q_atlantide:
+  full_name: "Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem"
+  short_name: "Q+ATLANTIDE"
+  schema_name: "Q+ATLANTIDE1000"
+  schema_range: "000–999"
+  role: "controlled architecture-taxonomy and technical-knowledge ecosystem"
+  physical_location: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/"
+  q_atlantide1000_is_folder: false
+  q_atlantide1000_role: "controlled 000–999 identification schema / register"
+```
+
+Controlled distinction:
+
+| Element | Meaning |
+| --- | --- |
+| `Q+` | Public mark / organizational umbrella. |
+| `Q+ATLANTIDE` | Controlled architecture-taxonomy and technical-knowledge ecosystem. |
+| `Q+ATLANTIDE1000` | Controlled `000–999` identification schema/register; not a physical folder unless explicitly created. |
+| `ATLAS` | `000–099` Aircraft Top Level Architecture Schema/System. |
+| `STA` | `100–199` Space Technology Architecture. |
+
+Architecture bands:
+
 * [`01-03-01-01_000-099_ATLAS/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-01_000-099_ATLAS/)
 * [`01-03-01-02_100-199_STA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-02_100-199_STA/)
 * [`01-03-01-03_200-299_DTTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-03_200-299_DTTA/)
