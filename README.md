@@ -43,17 +43,6 @@
 
 # 01 — OPTIONS Architecture
 
-```text
-OPTIONS =
-O  Organizations
-P  Programmes
-T  Technologies
-I  Infrastructures
-O  Operations
-N  Neural Networks
-S  Standards
-```
-
 ---
 
 ## 01-01 — Organizations
@@ -197,96 +186,6 @@ Path:
 
 ### 01-03-01 — Q+ATLANTIDE
 
-Q+ATLANTIDE = Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem.
-
-```text
-Q+ATLANTIDE =
-Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem
-```
-
-Controlled definition:
-
-> **Q+ATLANTIDE** is the controlled architecture-taxonomy and technical-knowledge ecosystem used to identify, classify, govern, trace, and relate aerospace, space, defence, digital, energy, material, infrastructure, cybersecurity, quantum, and emerging-technology architectures across the full lifecycle.
-
-`Q+ATLANTIDE` is not a single technology and not a programme. It is the controlled **technology and architecture identification ecosystem** of Q+.
-
-```yaml
-q_atlantide:
-  full_name: "Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem"
-  short_name: "Q+ATLANTIDE"
-  schema_name: "Q+ATLANTIDE1000"
-  schema_range: "000–999"
-  role: "controlled architecture-taxonomy and technical-knowledge ecosystem"
-  physical_location: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/"
-  q_atlantide1000_is_folder: false
-  q_atlantide1000_role: "controlled 000–999 identification schema / register"
-```
-
-Controlled distinction:
-
-| Element | Meaning |
-| --- | --- |
-| `Q+` | Public mark / organizational umbrella. |
-| `Q+ATLANTIDE` | Controlled architecture-taxonomy and technical-knowledge ecosystem. |
-| `Q+ATLANTIDE1000` | Controlled `000–999` identification schema/register; not a physical folder unless explicitly created. |
-| `ATLAS` | `000–099` Aircraft Top Level Architecture Schema/System. |
-| `STA` | `100–199` Space Technology Architecture. |
-
-#### Controlled Architecture Band Meanings
-
-`Q+ATLANTIDE1000` is organized into ten controlled architecture bands from `000` to `999`.
-
-Each band identifies a major architecture domain within the Q+ technical-knowledge ecosystem.
-
-| Range | Code | Controlled Meaning | Scope |
-| ---: | --- | --- | --- |
-| `000–099` | `ATLAS` | **Aircraft Top Level Architecture Schema/System** | New commercial aircraft architectures, aircraft systems, structures, propulsion, avionics, S1000D/CSDB mapping, type-specific expansion, and aircraft lifecycle traceability. |
-| `100–199` | `STA` | **Space Technology Architecture** | Spacecraft, launchers, orbital systems, space propulsion, space structures, mission systems, space operations, and orbital infrastructure. |
-| `200–299` | `DTTA` | **Defence Technology and Tactical Architecture** | Defence systems, controlled non-operational armament classification, tactical architecture boundaries, interoperability, safety, export-control, and assurance. |
-| `300–399` | `DTCEC` | **Digital Twin, Cloud, Edge and AI Computing** | Digital twins, cloud/edge systems, AI/ML platforms, simulation environments, data pipelines, compute governance, and lifecycle evidence. |
-| `400–499` | `EPTA` | **Energy and Propulsion Technology Architecture** | Energy systems, hydrogen, batteries, fuel cells, hybrid-electric propulsion, thermal management, power distribution, and sustainable propulsion architectures. |
-| `500–599` | `AMTA` | **Advanced Materials Technology Architecture** | Materials, composites, bio-materials, nano-materials, coatings, structural materials, process qualification, and material lifecycle traceability. |
-| `600–699` | `OGATA` | **Operational Ground Automation Technology Architecture** | Ground automation, robotics, airport/spaceport automation, GSE, logistics automation, maintenance automation, and industrial support systems. |
-| `700–799` | `ATACV` | **Air Traffic and Aerial City Vehicles** | Urban air mobility, aerial city systems, eVTOL, vertiport interfaces, mobility corridors, aerial infrastructure, air traffic management, and city-airspace integration. |
-| `800–899` | `CYB` | **Cybersecurity Architecture** | Cybersecurity, post-quantum security, secure systems, identity, access control, threat modelling, resilience, and cyber-assurance. |
-| `900–999` | `QCSAA` | **Quantum Computing and Sentient Agency Architecture** | Quantum computing, quantum sensing, quantum communication, agency models, quantum-classical bridges, QSN, and controlled sentient/agentic system governance. |
-
-##### Controlled Distinction
-
-```text
-Q+ATLANTIDE      = architecture-taxonomy and technical-knowledge ecosystem
-Q+ATLANTIDE1000  = controlled 000–999 identification schema/register
-ATLAS            = 000–099 aircraft architecture band
-STA              = 100–199 space technology architecture band
-DTTA             = 200–299 defence technology and tactical architecture band
-DTCEC            = 300–399 digital twin, cloud, edge and AI computing band
-EPTA             = 400–499 energy and propulsion technology architecture band
-AMTA             = 500–599 advanced materials technology architecture band
-OGATA            = 600–699 operational ground automation technology architecture band
-ATACV            = 700–799 air traffic and aerial city vehicles band
-CYB              = 800–899 cybersecurity architecture band
-QCSAA            = 900–999 quantum computing and sentient agency architecture band
-```
-
-##### Controlled Rule
-
-`Q+ATLANTIDE1000` is a schema/register, not a physical folder unless explicitly created.
-
-The physical folders under `01-03-01_Q+ATLANTIDE/` are the architecture-band implementation folders:
-
-```text
-01-03-01-01_000-099_ATLAS/
-01-03-01-02_100-199_STA/
-01-03-01-03_200-299_DTTA/
-01-03-01-04_300-399_DTCEC/
-01-03-01-05_400-499_EPTA/
-01-03-01-06_500-599_AMTA/
-01-03-01-07_600-699_OGATA/
-01-03-01-08_700-799_ATACV/
-01-03-01-09_800-899_CYB/
-01-03-01-10_900-999_QCSAA/
-```
-
 Architecture bands:
 
 * [`01-03-01-01_000-099_ATLAS/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01-01_000-099_ATLAS/)
@@ -366,17 +265,6 @@ Path:
 
 ### 01-07-01 — IDEALE-ESG
 
-```text
-IDEALE-ESG =
-I    Information
-D    Defense
-E    Energy & Propulsion
-A    Aerospace
-L    Logistics
-E    Economics
-ESG  Environmental, Social and Governance
-```
-
 * [`01-07-01-01_I-Information/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-01_I-Information/)
 * [`01-07-01-02_D-Defense/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-02_D-Defense/)
 * [`01-07-01-03_E-Energy-and-Propulsion/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-03_E-Energy-and-Propulsion/)
@@ -403,3 +291,121 @@ ESG  Environmental, Social and Governance
 * [`01-07-04-01_CSDB-and-DMC/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-04-01_CSDB-and-DMC/)
 * [`01-07-04-02_DIGITAL-PRODUCT-PASSPORT/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-04-02_DIGITAL-PRODUCT-PASSPORT/)
 * [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/)
+
+---
+
+# Glossary of Terms and Acronyms
+
+## OPTIONS
+
+```text
+OPTIONS =
+O  Organizations
+P  Programmes
+T  Technologies
+I  Infrastructures
+O  Operations
+N  Neural Networks
+S  Standards
+```
+
+## Q+ATLANTIDE
+
+```text
+Q+ATLANTIDE =
+Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem
+```
+
+**Q+ATLANTIDE** is the controlled architecture-taxonomy and technical-knowledge ecosystem used to identify, classify, govern, trace, and relate aerospace, space, defence, digital, energy, material, infrastructure, cybersecurity, quantum, and emerging-technology architectures across the full lifecycle.
+
+`Q+ATLANTIDE` is not a single technology and not a programme. It is the controlled **technology and architecture identification ecosystem** of Q+.
+
+```yaml
+q_atlantide:
+  full_name: "Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem"
+  short_name: "Q+ATLANTIDE"
+  schema_name: "Q+ATLANTIDE1000"
+  schema_range: "000–999"
+  role: "controlled architecture-taxonomy and technical-knowledge ecosystem"
+  physical_location: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/"
+  q_atlantide1000_is_folder: false
+  q_atlantide1000_role: "controlled 000–999 identification schema / register"
+```
+
+### Element Distinction
+
+| Element | Meaning |
+| --- | --- |
+| `Q+` | Public mark / organizational umbrella. |
+| `Q+ATLANTIDE` | Controlled architecture-taxonomy and technical-knowledge ecosystem. |
+| `Q+ATLANTIDE1000` | Controlled `000–999` identification schema/register; not a physical folder unless explicitly created. |
+| `ATLAS` | `000–099` Aircraft Top Level Architecture Schema/System. |
+| `STA` | `100–199` Space Technology Architecture. |
+| `DTTA` | `200–299` Defence Technology and Tactical Architecture. |
+| `DTCEC` | `300–399` Digital Twin, Cloud, Edge and AI Computing. |
+| `EPTA` | `400–499` Energy and Propulsion Technology Architecture. |
+| `AMTA` | `500–599` Advanced Materials Technology Architecture. |
+| `OGATA` | `600–699` Operational Ground Automation Technology Architecture. |
+| `ATACV` | `700–799` Air Traffic and Aerial City Vehicles. |
+| `CYB` | `800–899` Cybersecurity Architecture. |
+| `QCSAA` | `900–999` Quantum Computing and Sentient Agency Architecture. |
+
+### Q+ATLANTIDE1000 Architecture Bands
+
+`Q+ATLANTIDE1000` is organized into ten controlled architecture bands from `000` to `999`. Each band identifies a major architecture domain within the Q+ technical-knowledge ecosystem.
+
+| Range | Code | Controlled Meaning | Scope |
+| ---: | --- | --- | --- |
+| `000–099` | `ATLAS` | **Aircraft Top Level Architecture Schema/System** | New commercial aircraft architectures, aircraft systems, structures, propulsion, avionics, S1000D/CSDB mapping, type-specific expansion, and aircraft lifecycle traceability. |
+| `100–199` | `STA` | **Space Technology Architecture** | Spacecraft, launchers, orbital systems, space propulsion, space structures, mission systems, space operations, and orbital infrastructure. |
+| `200–299` | `DTTA` | **Defence Technology and Tactical Architecture** | Defence systems, controlled non-operational armament classification, tactical architecture boundaries, interoperability, safety, export-control, and assurance. |
+| `300–399` | `DTCEC` | **Digital Twin, Cloud, Edge and AI Computing** | Digital twins, cloud/edge systems, AI/ML platforms, simulation environments, data pipelines, compute governance, and lifecycle evidence. |
+| `400–499` | `EPTA` | **Energy and Propulsion Technology Architecture** | Energy systems, hydrogen, batteries, fuel cells, hybrid-electric propulsion, thermal management, power distribution, and sustainable propulsion architectures. |
+| `500–599` | `AMTA` | **Advanced Materials Technology Architecture** | Materials, composites, bio-materials, nano-materials, coatings, structural materials, process qualification, and material lifecycle traceability. |
+| `600–699` | `OGATA` | **Operational Ground Automation Technology Architecture** | Ground automation, robotics, airport/spaceport automation, GSE, logistics automation, maintenance automation, and industrial support systems. |
+| `700–799` | `ATACV` | **Air Traffic and Aerial City Vehicles** | Urban air mobility, aerial city systems, eVTOL, vertiport interfaces, mobility corridors, aerial infrastructure, air traffic management, and city-airspace integration. |
+| `800–899` | `CYB` | **Cybersecurity Architecture** | Cybersecurity, post-quantum security, secure systems, identity, access control, threat modelling, resilience, and cyber-assurance. |
+| `900–999` | `QCSAA` | **Quantum Computing and Sentient Agency Architecture** | Quantum computing, quantum sensing, quantum communication, agency models, quantum-classical bridges, QSN, and controlled sentient/agentic system governance. |
+
+```text
+Q+ATLANTIDE      = architecture-taxonomy and technical-knowledge ecosystem
+Q+ATLANTIDE1000  = controlled 000–999 identification schema/register
+ATLAS            = 000–099 aircraft architecture band
+STA              = 100–199 space technology architecture band
+DTTA             = 200–299 defence technology and tactical architecture band
+DTCEC            = 300–399 digital twin, cloud, edge and AI computing band
+EPTA             = 400–499 energy and propulsion technology architecture band
+AMTA             = 500–599 advanced materials technology architecture band
+OGATA            = 600–699 operational ground automation technology architecture band
+ATACV            = 700–799 air traffic and aerial city vehicles band
+CYB              = 800–899 cybersecurity architecture band
+QCSAA            = 900–999 quantum computing and sentient agency architecture band
+```
+
+`Q+ATLANTIDE1000` is a schema/register, not a physical folder unless explicitly created. The physical folders under `01-03-01_Q+ATLANTIDE/` are the architecture-band implementation folders:
+
+```text
+01-03-01-01_000-099_ATLAS/
+01-03-01-02_100-199_STA/
+01-03-01-03_200-299_DTTA/
+01-03-01-04_300-399_DTCEC/
+01-03-01-05_400-499_EPTA/
+01-03-01-06_500-599_AMTA/
+01-03-01-07_600-699_OGATA/
+01-03-01-08_700-799_ATACV/
+01-03-01-09_800-899_CYB/
+01-03-01-10_900-999_QCSAA/
+```
+
+## IDEALE-ESG
+
+```text
+IDEALE-ESG =
+I    Information
+D    Defense
+E    Energy & Propulsion
+A    Aerospace
+L    Logistics
+E    Economics
+ESG  Environmental, Social and Governance
+```
