@@ -126,6 +126,7 @@ Controlled breakdown structures:
 * [`01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/)
 * [`01-02-01-01-01-01-06_LBS_Logistic-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-06_LBS_Logistic-Breakdown-Structure/)
 * [`01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/)
+* [`01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/)
 
 ##### 01-02-01-01-02 — BWB-Q100
 
