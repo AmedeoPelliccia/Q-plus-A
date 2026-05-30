@@ -49,6 +49,8 @@ The element belongs to ATLAS node **053 (Fuselage)**; its data modules use SNS `
 
 ## 3. PUB folder tree
 
+All publication-controlled artefacts for `eWTW-PBS-10-10-10` stay under this `PUB/` container. `APPLIC/`, `BREX/`, `DM/`, `DMRL/`, `ICN/`, and `PM/` are not peer folders of the PBS node; they are children of `.../eWTW-PBS-10-10-10/PUB/`.
+
 ```text
 eWTW-PBS-10-10-10/
 └── PUB/

@@ -22,3 +22,8 @@ Primary structural branch for the airframe product definition.
 ## Child elements
 
 - `eWTW-PBS-10-10` — Fuselage — wide tube
+- `eWTW-PBS-10-20` — Wing
+- `eWTW-PBS-10-30` — Empennage
+- `eWTW-PBS-10-40` — Doors, windows, and moveable structure
+- `eWTW-PBS-10-50` — Landing gear structure and nacelle/pylon structure
+- `eWTW-PBS-10-60` — Exterior and secondary structure

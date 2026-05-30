@@ -158,6 +158,52 @@ The PBS is the **product** decomposition. The matching **work** decomposition (W
 
 ---
 
+## Repository nesting rule
+
+The physical repository tree follows the PBS hierarchy. Parent PBS folders contain their child PBS folders; large product blocks are nested under `eWTW-PBS-00/`, and publication artefacts stay inside the owning element's `PUB/` container.
+
+```text
+eWTW-PBS-00/
+├── eWTW-PBS-10/
+│   ├── eWTW-PBS-10-10/
+│   │   ├── eWTW-PBS-10-10-10/
+│   │   │   ├── SSOT/
+│   │   │   ├── PUB/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── APPLIC/
+│   │   │   │   ├── BREX/
+│   │   │   │   ├── DM/
+│   │   │   │   ├── DMRL/
+│   │   │   │   ├── ICN/
+│   │   │   │   └── PM/
+│   │   │   ├── eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/
+│   │   │   ├── eWTW-PBS-10-10-10-20_Forward-Pressure-Bulkhead/
+│   │   │   ├── eWTW-PBS-10-10-10-30_Flight-Deck-Structure/
+│   │   │   ├── eWTW-PBS-10-10-10-40_Side-Window-Structural-Surrounds/
+│   │   │   ├── eWTW-PBS-10-10-10-50_Nose-Landing-Gear-Bay-and-Attach/
+│   │   │   ├── eWTW-PBS-10-10-10-60_Forward-Equipment-Bay-Structure/
+│   │   │   ├── eWTW-PBS-10-10-10-70_Forward-Barrel-Skin-Stringer-Frame/
+│   │   │   └── eWTW-PBS-10-10-10-80_Forward-Door-Hatch-Surrounds/
+│   │   ├── eWTW-PBS-10-10-20/
+│   │   ├── eWTW-PBS-10-10-30/
+│   │   └── eWTW-PBS-10-10-40/
+│   ├── eWTW-PBS-10-20/
+│   ├── eWTW-PBS-10-30/
+│   ├── eWTW-PBS-10-40/
+│   ├── eWTW-PBS-10-50/
+│   └── eWTW-PBS-10-60/
+├── eWTW-PBS-20/
+├── eWTW-PBS-30/
+├── eWTW-PBS-40/
+├── eWTW-PBS-50/
+├── eWTW-PBS-60/
+├── eWTW-PBS-70/
+├── eWTW-PBS-80/
+└── eWTW-PBS-90/
+```
+
+---
+
 ## Forward fuselage section branch
 
 The forward fuselage branch (`eWTW-PBS-10-10-10`) is scaffolded in-repo down to detail-part level so the programme can attach element documentation, SSOT records, and publication artefacts without redefining system ownership.
