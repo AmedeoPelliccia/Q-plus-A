@@ -32,7 +32,7 @@ Controls the mechanical attachment of the radome to the backup bulkhead: the hin
 | Load path | Aero / bird-strike / handling reacted into backup bulkhead |
 | Attachment pattern | TBD (fastener pitch, hinge axis, latch positions) |
 | Clearance | TBD closed-gap and seal-land clearance |
-| Ownership note | Hinge/latch fittings owned by the radome (PBS `…-10-10`); the bulkhead lands owned by PBS `…-10-20` |
+| Ownership note | Hinge/latch fittings owned by the radome (PBS `eWTW-PBS-10-10-10-10-10`); the bulkhead lands owned by PBS `eWTW-PBS-10-10-10-10-20` |
 
 ## Constraints
 

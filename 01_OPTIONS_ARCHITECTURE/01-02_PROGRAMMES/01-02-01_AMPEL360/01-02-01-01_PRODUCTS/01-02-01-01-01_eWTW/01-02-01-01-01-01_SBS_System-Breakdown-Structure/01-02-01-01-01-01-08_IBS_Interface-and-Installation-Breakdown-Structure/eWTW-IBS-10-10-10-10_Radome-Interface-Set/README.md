@@ -1,7 +1,7 @@
 ---
 status: draft
 ibs_id: eWTW-IBS-10-10-10-10
-parent: eWTW-IBS-10-10-10-10
+parent: eWTW-PBS-10-10-10-10
 serves_pbs: eWTW-PBS-10-10-10-10-10
 item_type: interface_set
 item_name: Radome Interface Set
