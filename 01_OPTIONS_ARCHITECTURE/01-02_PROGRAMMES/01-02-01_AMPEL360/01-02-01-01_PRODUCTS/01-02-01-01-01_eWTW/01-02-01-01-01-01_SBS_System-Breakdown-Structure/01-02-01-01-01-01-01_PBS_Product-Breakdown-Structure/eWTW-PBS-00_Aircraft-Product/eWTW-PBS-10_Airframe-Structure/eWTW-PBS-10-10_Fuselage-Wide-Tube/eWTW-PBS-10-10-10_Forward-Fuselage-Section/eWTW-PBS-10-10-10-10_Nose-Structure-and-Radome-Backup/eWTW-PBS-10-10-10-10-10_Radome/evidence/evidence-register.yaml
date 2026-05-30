@@ -1,0 +1,79 @@
+---
+# Evidence Register — eWTW-PBS-10-10-10-10-10 Radome
+# Controlled under Q-plus / OPTIONS_ARCHITECTURE / AMPEL360 / eWTW PBS
+evidence_register_id: EVID-eWTW-PBS-10-10-10-10-10
+pbs_id: eWTW-PBS-10-10-10-10-10
+part_number: PN-eWTW-5310-0001
+revision: A
+status: draft
+effectivity:
+  product: eWTW
+  configuration: baseline
+  msn_range: MSN-001..050
+  status: active
+
+# Evidence anchor — stamped at commit under the IEF
+evidence_anchor: "<sha256: to-be-stamped-at-commit>"
+
+# Evidence items
+items:
+  - id: EVID-10-10-10-10-10-001
+    title: RF Range Test — Transmission Loss and Boresight Error
+    type: test_report
+    requirement: RF transmission efficiency and boresight error (from WXR ICD, PBS-50-30/40)
+    status: planned
+    record_ref: TBD
+    anchor: TBD
+
+  - id: EVID-10-10-10-10-10-002
+    title: Bird Strike Analysis and Test
+    type: test_analysis_report
+    requirement: Bird strike — CS-25 / FAR-25 applicable paragraphs
+    status: planned
+    record_ref: TBD
+    anchor: TBD
+
+  - id: EVID-10-10-10-10-10-003
+    title: Lightning Zone 1A Test and Analysis
+    type: test_analysis_report
+    requirement: Lightning protection — Zone 1A — CS-25 Appendix H
+    status: planned
+    record_ref: TBD
+    anchor: TBD
+
+  - id: EVID-10-10-10-10-10-004
+    title: Rain Erosion Qualification
+    type: test_report
+    requirement: Rain erosion — leading-surface durability
+    status: planned
+    record_ref: TBD
+    anchor: TBD
+
+  - id: EVID-10-10-10-10-10-005
+    title: Moisture Ingress and RF Performance After Environmental Soak
+    type: test_report
+    requirement: Moisture sealing — RF-critical; water in core degrades εr
+    status: planned
+    record_ref: TBD
+    anchor: TBD
+
+  - id: EVID-10-10-10-10-10-006
+    title: Structural Qualification — Aero Loads and Handling
+    type: test_analysis_report
+    requirement: Structural integrity under aero, handling, and thermal loads
+    status: planned
+    record_ref: TBD
+    anchor: TBD
+
+traceability_rule:
+  id: IEF-PBS-EVID-001
+  rule: >
+    Each evidence item anchors to the PBS ID (eWTW-PBS-10-10-10-10-10) and its
+    sha256 anchor is stamped at commit under the IEF (Integrated Evidence Framework).
+    No evidence record shall be accepted without a corresponding anchor hash.
+
+change_log:
+  - version: "1.0.0"
+    date: "2026-05-29"
+    author: Q-STRUCTURES
+    change: Initial draft evidence register for eWTW-PBS-10-10-10-10-10 Radome element.
