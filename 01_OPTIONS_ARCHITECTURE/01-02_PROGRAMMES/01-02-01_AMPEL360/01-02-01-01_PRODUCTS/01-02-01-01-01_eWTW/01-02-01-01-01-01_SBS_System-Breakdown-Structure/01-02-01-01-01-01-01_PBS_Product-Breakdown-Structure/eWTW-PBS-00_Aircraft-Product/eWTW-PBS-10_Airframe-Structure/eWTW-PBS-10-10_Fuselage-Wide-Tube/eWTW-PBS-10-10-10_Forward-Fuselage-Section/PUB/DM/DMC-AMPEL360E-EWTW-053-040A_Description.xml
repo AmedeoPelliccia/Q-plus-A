@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dmodule issue="5.0" type="description">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode scheme="house">DMC-AMPEL360E-EWTW-053-040A</dmCode>
+        <dmCode scheme="s1000d">DMC-AMPEL360E-A-53-10-00-00A-040A-D</dmCode>
+        <language languageIsoCode="en" />
+        <issueInfo issueNumber="001" inWork="00" />
+      </dmIdent>
+      <dmAddressItems>
+        <dmTitle>
+          <techName>Forward fuselage section</techName>
+          <infoName>Description</infoName>
+        </dmTitle>
+        <issueDate year="2026" month="05" day="30" />
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <originator enterpriseCode="Q-DATAGOV">Q-DATAGOV</originator>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360E">AMPEL360 / Q-plus</responsiblePartnerCompany>
+      <security classification="01">unclassified</security>
+      <brexDmRef>
+        <dmRef refType="brex">DMC-AMPEL360E-EWTW-022-00WA</dmRef>
+      </brexDmRef>
+      <applic>
+        <displayText>product=eWTW; configuration=baseline; MSN=001..050; status=active</displayText>
+        <applicCrossRefTableRef>ACT-AMPEL360E-EWTW.xml</applicCrossRefTableRef>
+        <condCrossRefTableRef>CCT-AMPEL360E-EWTW.xml</condCrossRefTableRef>
+        <prodCrossRefTableRef>PCT-AMPEL360E-EWTW.xml</prodCrossRefTableRef>
+      </applic>
+      <sourceSet>
+        <sourceDoc>../../README.md</sourceDoc>
+        <sourceDoc>../README.md</sourceDoc>
+        <sourceDoc>../../eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md</sourceDoc>
+      </sourceSet>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <refs>
+      <dmRef refType="ssot-element" target="eWTW-PBS-10-10-10">../../README.md</dmRef>
+      <dmRef refType="pub-index" target="AMPEL360-eWTW-PBS-10-10-10-PUB-README">../README.md</dmRef>
+      <dmRef refType="supporting-source" target="eWTW-PBS-10-10-10-10-10" note="../../eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md">Radome SSOT leaf</dmRef>
+      <dmRef refType="external-system" target="eWTW-PBS-40-40" note="Referenced only; diverter strips remain LPS-owned">Grounding, bonding and lightning protection</dmRef>
+      <dmRef refType="external-system" target="eWTW-PBS-50-30/40" note="Referenced only; RF requirement source">Weather radar</dmRef>
+    </refs>
+    <dmBody>
+      <projectionRules>
+        <rule>PUB derives from SSOT; engineering truth remains in the referenced SSOT documents.</rule>
+        <rule>Applicability is mandatory and bound to ACT/CCT/PCT for eWTW baseline MSN-001..050.</rule>
+        <rule>System-owned lightning and weather-radar content is referenced by dmRef and not duplicated into this structural publication layer.</rule>
+      </projectionRules>
+      <section>
+        <title>Purpose</title>
+        <para>Publishes the high-level description of the forward fuselage section derived from the section SSOT and the radome leaf SSOT.</para>
+        <para>The section contains the nose, flight deck, forward pressure bulkhead, NLG bay, forward equipment bay, forward barrel, and forward door/hatch surrounds.</para>
+      </section>
+      <section>
+        <title>Structural decomposition</title>
+        <para>The section-level SSOT defines eight child structural branches: nose structure and radome backup; forward pressure bulkhead; flight deck structure; side-window structural surrounds; nose landing gear bay and attach; forward equipment bay structure; forward barrel skin/stringer/frame; and forward door/hatch surrounds.</para>
+        <para>System ownership remains outside this element for lightning protection, avionics/weather radar, cooling, and landing-gear systems; this data module therefore publishes structure and provisions only.</para>
+      </section>
+      <section>
+        <title>Detailed source projection available at baseline</title>
+        <para>The only detailed leaf source attached at baseline is the radome (`eWTW-PBS-10-10-10-10-10`). It is the RF-transparent nose fairing, forward of the forward pressure bulkhead, and is driven by RF transparency, bird strike, lightning Zone 1A, rain erosion, and moisture-ingress control.</para>
+        <para>The radome owns the fairing, attachment, sealing, and bonding provisions; weather-radar and lightning-diverter system content is referenced by `dmRef`, never duplicated.</para>
+      </section>
+      <warning>
+        <para>TBD: Expand this description with equivalent constituent/interface detail for the non-radome forward-fuselage branches when their SSOT element documents are enriched beyond the current PBS node summaries.</para>
+      </warning>
+    </dmBody>
+  </content>
+</dmodule>
