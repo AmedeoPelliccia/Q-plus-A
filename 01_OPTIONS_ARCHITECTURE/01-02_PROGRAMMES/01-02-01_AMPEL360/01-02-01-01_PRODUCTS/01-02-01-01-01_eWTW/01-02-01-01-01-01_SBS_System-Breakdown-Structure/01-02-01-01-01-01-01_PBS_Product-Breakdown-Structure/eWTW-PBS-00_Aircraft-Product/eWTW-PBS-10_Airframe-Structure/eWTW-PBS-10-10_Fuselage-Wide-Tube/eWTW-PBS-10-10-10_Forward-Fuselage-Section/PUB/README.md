@@ -38,7 +38,7 @@ The `PUB/` folder is the **S1000D/CSDB publication projection** of the Forward F
 ```text
 SSOT (engineering truth)            PUB (publication projection)
 ─────────────────────────          ──────────────────────────────
-eWTW-PBS-10-10-10/README.md   ───▶  PUB/DM/     (data modules, by info code)
+eWTW-PBS-10-10-10_Forward-Fuselage-Section/README.md   ───▶  PUB/DM/     (data modules, by info code)
   constituents, interfaces,         PUB/ICN/    (illustrations)
   requirements, traceability        PUB/APPLIC/ (applicability tables)
                                      PUB/BREX/   (business-rule reference)
@@ -49,10 +49,10 @@ The element belongs to ATLAS node **053 (Fuselage)**; its data modules use SNS `
 
 ## 3. PUB folder tree
 
-All publication-controlled artefacts for `eWTW-PBS-10-10-10` stay under this `PUB/` container. `APPLIC/`, `BREX/`, `DM/`, `DMRL/`, `ICN/`, and `PM/` are not peer folders of the PBS node; they are children of `.../eWTW-PBS-10-10-10/PUB/`.
+All publication-controlled artefacts for `eWTW-PBS-10-10-10` stay under this `PUB/` container. `APPLIC/`, `BREX/`, `DM/`, `DMRL/`, `ICN/`, and `PM/` are not peer folders of the PBS node; they are children of `.../eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/`.
 
 ```text
-eWTW-PBS-10-10-10/
+eWTW-PBS-10-10-10_Forward-Fuselage-Section/
 └── PUB/
     ├── README.md                                   # this index
     ├── DMRL/

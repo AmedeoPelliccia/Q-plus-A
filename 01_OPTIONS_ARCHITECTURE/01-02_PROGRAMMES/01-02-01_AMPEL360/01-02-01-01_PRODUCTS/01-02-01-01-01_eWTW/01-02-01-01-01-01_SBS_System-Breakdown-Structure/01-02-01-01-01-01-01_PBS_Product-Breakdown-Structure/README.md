@@ -160,13 +160,13 @@ The PBS is the **product** decomposition. The matching **work** decomposition (W
 
 ## Repository nesting rule
 
-The physical repository tree follows the PBS hierarchy. Parent PBS folders contain their child PBS folders; large product blocks are nested under `eWTW-PBS-00/`, and publication artefacts stay inside the owning element's `PUB/` container.
+The physical repository tree follows the PBS hierarchy. Parent PBS folders contain their child PBS folders; physical folder names append a nomenclature slug to the semantic PBS-ID (`<PBS-ID>_<Nomenclature>`), large product blocks are nested under `eWTW-PBS-00_Aircraft-Product/`, and publication artefacts stay inside the owning element's `PUB/` container.
 
 ```text
-eWTW-PBS-00/
-├── eWTW-PBS-10/
-│   ├── eWTW-PBS-10-10/
-│   │   ├── eWTW-PBS-10-10-10/
+eWTW-PBS-00_Aircraft-Product/
+├── eWTW-PBS-10_Airframe-Structure/
+│   ├── eWTW-PBS-10-10_Fuselage-Wide-Tube/
+│   │   ├── eWTW-PBS-10-10-10_Forward-Fuselage-Section/
 │   │   │   ├── SSOT/
 │   │   │   ├── PUB/
 │   │   │   │   ├── README.md
@@ -184,22 +184,22 @@ eWTW-PBS-00/
 │   │   │   ├── eWTW-PBS-10-10-10-60_Forward-Equipment-Bay-Structure/
 │   │   │   ├── eWTW-PBS-10-10-10-70_Forward-Barrel-Skin-Stringer-Frame/
 │   │   │   └── eWTW-PBS-10-10-10-80_Forward-Door-Hatch-Surrounds/
-│   │   ├── eWTW-PBS-10-10-20/
-│   │   ├── eWTW-PBS-10-10-30/
-│   │   └── eWTW-PBS-10-10-40/
-│   ├── eWTW-PBS-10-20/
-│   ├── eWTW-PBS-10-30/
-│   ├── eWTW-PBS-10-40/
-│   ├── eWTW-PBS-10-50/
-│   └── eWTW-PBS-10-60/
-├── eWTW-PBS-20/
-├── eWTW-PBS-30/
-├── eWTW-PBS-40/
-├── eWTW-PBS-50/
-├── eWTW-PBS-60/
-├── eWTW-PBS-70/
-├── eWTW-PBS-80/
-└── eWTW-PBS-90/
+│   │   ├── eWTW-PBS-10-10-20_Centre-Section/
+│   │   ├── eWTW-PBS-10-10-30_Aft-Section/
+│   │   └── eWTW-PBS-10-10-40_Pressure-Bulkheads-and-Frames/
+│   ├── eWTW-PBS-10-20_Wing/
+│   ├── eWTW-PBS-10-30_Empennage/
+│   ├── eWTW-PBS-10-40_Nacelles-and-Pylons-Motor-Mounting-Structure/
+│   ├── eWTW-PBS-10-50_Doors-Hatches-and-Windows/
+│   └── eWTW-PBS-10-60_Landing-Gear-Structure-Bays-Attach-Fittings/
+├── eWTW-PBS-20_Electric-Propulsion-System/
+├── eWTW-PBS-30_Energy-Storage-and-Optional-Hybrid-Generation/
+├── eWTW-PBS-40_Electrical-Power-Distribution/
+├── eWTW-PBS-50_Avionics-and-Flight-Systems/
+├── eWTW-PBS-60_Mechanical-and-Utility-Systems/
+├── eWTW-PBS-70_Cabin-and-Payload/
+├── eWTW-PBS-80_Ground-and-Servicing-Interfaces/
+└── eWTW-PBS-90_Product-Software-and-Digital-Configuration-Items/
 ```
 
 ---
@@ -209,10 +209,10 @@ eWTW-PBS-00/
 The forward fuselage branch (`eWTW-PBS-10-10-10`) is scaffolded in-repo down to detail-part level so the programme can attach element documentation, SSOT records, and publication artefacts without redefining system ownership.
 
 ```text
-eWTW-PBS-00/
-└── eWTW-PBS-10/
-    └── eWTW-PBS-10-10/
-        └── eWTW-PBS-10-10-10/
+eWTW-PBS-00_Aircraft-Product/
+└── eWTW-PBS-10_Airframe-Structure/
+    └── eWTW-PBS-10-10_Fuselage-Wide-Tube/
+        └── eWTW-PBS-10-10-10_Forward-Fuselage-Section/
             ├── PUB/
             ├── SSOT/
             ├── eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/
