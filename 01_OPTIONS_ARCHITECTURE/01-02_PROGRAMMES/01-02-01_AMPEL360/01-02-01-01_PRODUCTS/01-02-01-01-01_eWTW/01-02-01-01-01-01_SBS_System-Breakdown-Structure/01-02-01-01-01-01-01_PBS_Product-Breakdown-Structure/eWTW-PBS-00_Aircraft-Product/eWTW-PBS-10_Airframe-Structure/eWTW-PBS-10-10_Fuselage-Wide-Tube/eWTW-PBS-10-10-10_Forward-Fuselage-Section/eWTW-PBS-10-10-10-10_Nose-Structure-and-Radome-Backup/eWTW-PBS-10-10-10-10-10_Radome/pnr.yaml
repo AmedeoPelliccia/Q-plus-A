@@ -1,0 +1,37 @@
+---
+# Part Number Register — eWTW-PBS-10-10-10-10-10 Radome
+# Controlled under Q-plus / OPTIONS_ARCHITECTURE / AMPEL360 / eWTW PBS
+pnr_id: PNR-eWTW-PBS-10-10-10-10-10
+pbs_id: eWTW-PBS-10-10-10-10-10
+part_number: PN-eWTW-5310-0001
+part_name: Radome
+item_class: physical_part
+item_type: detail_part
+revision: A
+lifecycle_state: draft
+make_buy: TBD
+serialization_required: true
+lot_control_required: true
+cad_required: true
+bom_required: true
+material_baseline: TBD
+supplier_status: TBD
+effectivity:
+  product: eWTW
+  configuration: baseline
+  msn_range: MSN-001..050
+  status: active
+cad:
+  native_model: cad/freecad/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+  exchange_model: cad/step/eWTW-PBS-10-10-10-10-10-Radome.step
+  drawing: drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf
+notes: >
+  The PBS ID (eWTW-PBS-10-10-10-10-10) is the product-structure identity.
+  The part number (PN-eWTW-5310-0001) is the PLM/manufacturing/procurement identifier.
+  These shall not be collapsed. The 5310 element is a PLM-namespace convention only;
+  it does not assert a consolidated ATLAS structural node (TBC).
+change_log:
+  - version: "1.0.0"
+    date: "2026-05-29"
+    author: Q-STRUCTURES
+    change: Initial draft PNR for eWTW-PBS-10-10-10-10-10 Radome element.
