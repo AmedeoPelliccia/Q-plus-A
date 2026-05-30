@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dmodule issue="5.0" type="repair">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode scheme="house">DMC-AMPEL360E-EWTW-053-620A</dmCode>
+        <dmCode scheme="s1000d">DMC-AMPEL360E-A-53-10-00-00A-620A-D</dmCode>
+        <language languageIsoCode="en" />
+        <issueInfo issueNumber="001" inWork="00" />
+      </dmIdent>
+      <dmAddressItems>
+        <dmTitle>
+          <techName>Forward fuselage section</techName>
+          <infoName>Repair - skin and frame</infoName>
+        </dmTitle>
+        <issueDate year="2026" month="05" day="30" />
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <originator enterpriseCode="Q-DATAGOV">Q-DATAGOV</originator>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360E">AMPEL360 / Q-plus</responsiblePartnerCompany>
+      <security classification="01">unclassified</security>
+      <brexDmRef>
+        <dmRef refType="brex">DMC-AMPEL360E-EWTW-022-00WA</dmRef>
+      </brexDmRef>
+      <applic>
+        <displayText>product=eWTW; configuration=baseline; MSN=001..050; status=active</displayText>
+        <applicCrossRefTableRef>ACT-AMPEL360E-EWTW.xml</applicCrossRefTableRef>
+        <condCrossRefTableRef>CCT-AMPEL360E-EWTW.xml</condCrossRefTableRef>
+        <prodCrossRefTableRef>PCT-AMPEL360E-EWTW.xml</prodCrossRefTableRef>
+      </applic>
+      <sourceSet>
+        <sourceDoc>../../README.md</sourceDoc>
+        <sourceDoc>../README.md</sourceDoc>
+        <sourceDoc>../../eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md</sourceDoc>
+      </sourceSet>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <refs>
+      <dmRef refType="ssot-element" target="eWTW-PBS-10-10-10">../../README.md</dmRef>
+      <dmRef refType="pub-index" target="AMPEL360-eWTW-PBS-10-10-10-PUB-README">../README.md</dmRef>
+    </refs>
+    <dmBody>
+      <projectionRules>
+        <rule>PUB derives from SSOT; engineering truth remains in the referenced SSOT documents.</rule>
+        <rule>Applicability is mandatory and bound to ACT/CCT/PCT for eWTW baseline MSN-001..050.</rule>
+        <rule>System-owned lightning and weather-radar content is referenced by dmRef and not duplicated into this structural publication layer.</rule>
+      </projectionRules>
+      <section>
+        <title>Scope</title>
+        <para>This module addresses forward-fuselage skin and frame repair intent for the forward barrel branch named in the section SSOT.</para>
+        <para>The radome is not a substitute pressure-shell skin/frame case and remains outside the specific repair content of this module; radome structural constraints are handled only as referenced context from the radome SSOT.</para>
+      </section>
+      <section>
+        <title>Repair constraints</title>
+        <para>Preserve load paths across skin panels, stringers, frames, and the forward production join splice to the centre section.</para>
+        <para>Do not compromise adjacent door, window, equipment-bay, or pressure-bulkhead interfaces when blending or restoring local skin/frame damage.</para>
+      </section>
+      <warning>
+        <para>TBD: The current SSOT does not define patch schemes, fastener patterns, blend limits, or dimensional tolerances for forward-barrel skin/frame repair. Add those values from the detailed barrel leaf documents when available.</para>
+      </warning>
+    </dmBody>
+  </content>
+</dmodule>

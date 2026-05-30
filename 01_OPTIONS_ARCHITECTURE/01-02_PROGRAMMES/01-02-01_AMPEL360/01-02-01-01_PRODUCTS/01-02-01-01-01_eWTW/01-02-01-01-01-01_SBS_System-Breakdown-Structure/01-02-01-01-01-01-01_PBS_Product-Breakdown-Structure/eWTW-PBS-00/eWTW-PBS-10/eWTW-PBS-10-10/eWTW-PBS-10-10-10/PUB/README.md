@@ -79,7 +79,7 @@ eWTW-PBS-10-10-10/
         └── PM-AMPEL360E-EWTW-53FWD-00.xml          # publication module (this element's DM set)
 ```
 
-The repository currently scaffolds these subfolders with tracked placeholders; the named CSDB artefacts are introduced as controlled content when the publication baseline is instantiated.
+The repository now carries an initial controlled DM XML set under `PUB/DM/` while the sibling publication subfolders remain scaffolded with tracked placeholders until their controlled CSDB artefacts are instantiated.
 
 ## 4. Controlled data-module set
 

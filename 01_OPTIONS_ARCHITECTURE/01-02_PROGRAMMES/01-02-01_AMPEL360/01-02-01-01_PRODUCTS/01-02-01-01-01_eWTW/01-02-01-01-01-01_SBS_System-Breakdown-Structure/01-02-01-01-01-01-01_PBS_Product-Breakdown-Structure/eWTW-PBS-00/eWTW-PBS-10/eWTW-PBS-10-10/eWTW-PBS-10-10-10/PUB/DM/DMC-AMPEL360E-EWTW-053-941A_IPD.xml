@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dmodule issue="5.0" type="ipd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode scheme="house">DMC-AMPEL360E-EWTW-053-941A</dmCode>
+        <dmCode scheme="s1000d">DMC-AMPEL360E-A-53-10-00-00A-941A-D</dmCode>
+        <language languageIsoCode="en" />
+        <issueInfo issueNumber="001" inWork="00" />
+      </dmIdent>
+      <dmAddressItems>
+        <dmTitle>
+          <techName>Forward fuselage section</techName>
+          <infoName>Illustrated parts data</infoName>
+        </dmTitle>
+        <issueDate year="2026" month="05" day="30" />
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <originator enterpriseCode="Q-DATAGOV">Q-DATAGOV</originator>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360E">AMPEL360 / Q-plus</responsiblePartnerCompany>
+      <security classification="01">unclassified</security>
+      <brexDmRef>
+        <dmRef refType="brex">DMC-AMPEL360E-EWTW-022-00WA</dmRef>
+      </brexDmRef>
+      <applic>
+        <displayText>product=eWTW; configuration=baseline; MSN=001..050; status=active</displayText>
+        <applicCrossRefTableRef>ACT-AMPEL360E-EWTW.xml</applicCrossRefTableRef>
+        <condCrossRefTableRef>CCT-AMPEL360E-EWTW.xml</condCrossRefTableRef>
+        <prodCrossRefTableRef>PCT-AMPEL360E-EWTW.xml</prodCrossRefTableRef>
+      </applic>
+      <sourceSet>
+        <sourceDoc>../../README.md</sourceDoc>
+        <sourceDoc>../README.md</sourceDoc>
+        <sourceDoc>../../eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md</sourceDoc>
+      </sourceSet>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <refs>
+      <dmRef refType="ssot-element" target="eWTW-PBS-10-10-10">../../README.md</dmRef>
+      <dmRef refType="pub-index" target="AMPEL360-eWTW-PBS-10-10-10-PUB-README">../README.md</dmRef>
+      <dmRef refType="supporting-source" target="eWTW-PBS-10-10-10-10-10" note="../../eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md">Radome PNR/BOM source</dmRef>
+      <dmRef refType="external-system" target="eWTW-PBS-40-40" note="Referenced system items stay external to the forward-fuselage owned parts list">Grounding, bonding and lightning protection</dmRef>
+      <dmRef refType="external-system" target="eWTW-PBS-50-30/40" note="Referenced system items stay external to the forward-fuselage owned parts list">Weather radar</dmRef>
+    </refs>
+    <dmBody>
+      <projectionRules>
+        <rule>PUB derives from SSOT; engineering truth remains in the referenced SSOT documents.</rule>
+        <rule>Applicability is mandatory and bound to ACT/CCT/PCT for eWTW baseline MSN-001..050.</rule>
+        <rule>System-owned lightning and weather-radar content is referenced by dmRef and not duplicated into this structural publication layer.</rule>
+      </projectionRules>
+      <section>
+        <title>Assembly note</title>
+        <para>This IPD projects only the parts explicitly defined in the current SSOT set. The section-level SSOT names the forward-fuselage branches but does not yet define a section assembly part number or a full section BOM.</para>
+      </section>
+      <section>
+        <title>Known owned part entries at baseline</title>
+        <para>Parent PN `PN-eWTW-5310-0001` — Radome.</para>
+        <para>Owned child items: outer RF-transparent laminate skin; dielectric core A-sandwich; inner RF-transparent laminate skin; rain erosion boot/coating; attachment hinge and latch fittings; moisture seal and drainage provisions; bonding and ground provisions.</para>
+        <para>Referenced external items only: lightning diverter strips (`REF-eWTW-LPS-DIVERTER`) and weather-radar antenna (`REF-eWTW-WXR-ANTENNA`).</para>
+      </section>
+      <illustratedPartsData>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001</partNumber>
+          <itemName>Radome</itemName>
+          <quantityPerAssembly unit="EA">1</quantityPerAssembly>
+          <partClassification>owned assembly</partClassification>
+          <remarks>Derived from radome PNR/BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-01</partNumber>
+          <itemName>Outer RF-transparent laminate skin</itemName>
+          <quantityPerAssembly unit="EA">1</quantityPerAssembly>
+          <partClassification>owned constituent</partClassification>
+          <remarks>Derived from radome BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-02</partNumber>
+          <itemName>Dielectric core A-sandwich</itemName>
+          <quantityPerAssembly unit="EA">1</quantityPerAssembly>
+          <partClassification>owned constituent</partClassification>
+          <remarks>Derived from radome BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-03</partNumber>
+          <itemName>Inner RF-transparent laminate skin</itemName>
+          <quantityPerAssembly unit="EA">1</quantityPerAssembly>
+          <partClassification>owned constituent</partClassification>
+          <remarks>Derived from radome BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-04</partNumber>
+          <itemName>Rain erosion boot or coating</itemName>
+          <quantityPerAssembly unit="EA">1</quantityPerAssembly>
+          <partClassification>owned constituent</partClassification>
+          <remarks>Derived from radome BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-05</partNumber>
+          <itemName>Attachment hinge and latch fittings</itemName>
+          <quantityPerAssembly unit="SET">1</quantityPerAssembly>
+          <partClassification>owned constituent</partClassification>
+          <remarks>Derived from radome BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-06</partNumber>
+          <itemName>Moisture seal and drainage provisions</itemName>
+          <quantityPerAssembly unit="SET">1</quantityPerAssembly>
+          <partClassification>owned constituent</partClassification>
+          <remarks>Derived from radome BOM</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>PN-eWTW-5310-0001-07</partNumber>
+          <itemName>Bonding and ground provisions</itemName>
+          <quantityPerAssembly unit="SET">1</quantityPerAssembly>
+          <partClassification>provision only</partClassification>
+          <remarks>Structural provision; LPS-owned function</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>REF-eWTW-LPS-DIVERTER</partNumber>
+          <itemName>Lightning diverter strips</itemName>
+          <quantityPerAssembly unit="REF">REF</quantityPerAssembly>
+          <partClassification>external system reference</partClassification>
+          <remarks>LPS-owned; do not treat as section-owned part</remarks>
+        </catalogSeqNumber>
+        <catalogSeqNumber>
+          <partNumber>REF-eWTW-WXR-ANTENNA</partNumber>
+          <itemName>Weather radar antenna</itemName>
+          <quantityPerAssembly unit="REF">REF</quantityPerAssembly>
+          <partClassification>external system reference</partClassification>
+          <remarks>WXR-owned; do not treat as section-owned part</remarks>
+        </catalogSeqNumber>
+      </illustratedPartsData>
+      <warning>
+        <para>TBD: Add the section assembly PNR/BOM and the remaining forward-fuselage child part entries once their SSOT leaf records exist. This IPD currently projects only the radome-owned parts explicitly present in source control.</para>
+      </warning>
+    </dmBody>
+  </content>
+</dmodule>
