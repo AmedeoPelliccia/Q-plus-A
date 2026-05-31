@@ -6,27 +6,41 @@ architecture: OPTIONS_ARCHITECTURE
 options_axis: P-Programmes
 programme: AMPEL360
 product: eWTW
+
 pbs_id: eWTW-PBS-10-10-10-10-10
 pbs_title: "Radome"
 parent_pbs_id: eWTW-PBS-10-10-10-10
 parent_title: "Nose Structure and Radome Backup"
+
 pnr_id: PNR-eWTW-PBS-10-10-10-10-10
 part_number: PN-eWTW-5310-0001
+
 cad_item: Radome_Body
 cad_file: eWTW-PBS-10-10-10-10-10-Radome.FCStd
 cad_tool: FreeCAD 1.1.1
 cad_workbench: Part Design
 model_type: preliminary_parametric_placeholder
 geometry_basis: wide_tube_and_wing
+
 version: "0.1.0"
 revision: A
 status: draft
 language: en
+
 effectivity:
   product: eWTW
   configuration: baseline
   msn_range: MSN-001..050
   status: active
+
+cad_status:
+  rev_a_axisymmetric_placeholder_created: true
+  cad_operation: "Part Design Additive Revolution / Girar"
+  revolution_axis: "horizontal sketch axis"
+  revolution_angle_deg: 360
+  geometry_status: "conceptual_placeholder"
+  wide_tube_final_geometry_required: true
+  next_revision_target: "elliptical_loft_radome"
 ---
 
 # eWTW · Radome Body Preliminary FreeCAD Model
