@@ -55,6 +55,9 @@ eWTW-PBS-10-10-10-10-10 — Radome
 
 The model is a **conceptual parametric placeholder** for a regional electric **Wide Tube-and-Wing** aircraft radome.
 
+<img width="2850" height="1664" alt="image" src="https://github.com/user-attachments/assets/20a91fcf-97ec-47c6-b6a5-398eb6775e65" />
+**figure-01** *Radome FreeCAD V.1.1.1 Conceptual Parametric Placeholder*
+
 It is not an approved engineering drawing, manufacturing definition, certification substantiation, or released PLM geometry.
 
 ---
