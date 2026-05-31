@@ -1,7 +1,7 @@
 ---
 document_id: AMPEL360-eWTW-CAD-RADOME-BODY-PRELIMINARY
 title: "eWTW · Radome Body Preliminary FreeCAD Model"
-register: Q-plus
+register: Q-plus-A
 architecture: OPTIONS_ARCHITECTURE
 options_axis: P-Programmes
 programme: AMPEL360
