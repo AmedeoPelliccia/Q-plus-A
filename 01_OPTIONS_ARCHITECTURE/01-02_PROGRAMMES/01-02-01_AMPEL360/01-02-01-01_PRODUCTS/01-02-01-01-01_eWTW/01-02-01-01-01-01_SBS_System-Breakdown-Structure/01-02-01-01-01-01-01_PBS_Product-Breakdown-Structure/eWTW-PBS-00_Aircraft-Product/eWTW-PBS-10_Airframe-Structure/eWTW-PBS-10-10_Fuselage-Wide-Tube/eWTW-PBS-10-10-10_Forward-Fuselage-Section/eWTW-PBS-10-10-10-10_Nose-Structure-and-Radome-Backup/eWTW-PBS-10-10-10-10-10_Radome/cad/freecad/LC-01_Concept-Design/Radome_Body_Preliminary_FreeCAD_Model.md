@@ -16,7 +16,7 @@ pnr_id: PNR-eWTW-PBS-10-10-10-10-10
 part_number: PN-eWTW-5310-0001
 
 cad_item: Radome_Body
-cad_file: eWTW-PBS-10-10-10-10-10-Radome.FCStd
+cad_file: "cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd"
 cad_tool: FreeCAD 1.1.1
 cad_workbench: Part Design
 model_type: preliminary_parametric_placeholder
@@ -39,6 +39,8 @@ cad_status:
   revolution_axis: "horizontal sketch axis"
   revolution_angle_deg: 360
   geometry_status: "conceptual_placeholder"
+  freecad_file_uploaded: true
+  freecad_file_path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_PRODUCTS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd"
   wide_tube_final_geometry_required: true
   next_revision_target: "elliptical_loft_radome"
 ---
@@ -55,8 +57,10 @@ eWTW-PBS-10-10-10-10-10 — Radome
 
 The model is a **conceptual parametric placeholder** for a regional electric **Wide Tube-and-Wing** aircraft radome.
 
-<img width="2850" height="1664" alt="image" src="https://github.com/user-attachments/assets/20a91fcf-97ec-47c6-b6a5-398eb6775e65" />
-**figure-01** *Radome FreeCAD V.1.1.1 Conceptual Parametric Placeholder*
+<img width="2850" height="1664" alt="FreeCAD 1.1.1 radome axisymmetric conceptual placeholder" src="https://github.com/user-attachments/assets/20a91fcf-97ec-47c6-b6a5-398eb6775e65" />
+
+**Figure 01 — Radome FreeCAD 1.1.1 Conceptual Parametric Placeholder.**
+Rev A axisymmetric placeholder generated with `Part Design → Girar` using a closed XZ-plane sketch and a 360° revolution about the horizontal sketch axis.
 
 It is not an approved engineering drawing, manufacturing definition, certification substantiation, or released PLM geometry.
 
@@ -64,21 +68,21 @@ It is not an approved engineering drawing, manufacturing definition, certificati
 
 ## 2. Controlled CAD Identity
 
-| Field          | Value                                  |
-| -------------- | -------------------------------------- |
-| PBS ID         | `eWTW-PBS-10-10-10-10-10`              |
-| PBS element    | Radome                                 |
-| Parent PBS     | `eWTW-PBS-10-10-10-10`                 |
-| Parent element | Nose Structure and Radome Backup       |
-| PNR ID         | `PNR-eWTW-PBS-10-10-10-10-10`          |
-| Part Number    | `PN-eWTW-5310-0001`                    |
-| CAD tool       | FreeCAD 1.1.1                          |
-| Workbench      | Part Design                            |
-| Body name      | `Radome_Body`                          |
-| Native file    | `eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
-| STEP export    | `eWTW-PBS-10-10-10-10-10-Radome.step`  |
-| Status         | Draft                                  |
-| Revision       | A                                      |
+| Field          | Value                                                                   |
+| -------------- | ----------------------------------------------------------------------- |
+| PBS ID         | `eWTW-PBS-10-10-10-10-10`                                               |
+| PBS element    | Radome                                                                  |
+| Parent PBS     | `eWTW-PBS-10-10-10-10`                                                  |
+| Parent element | Nose Structure and Radome Backup                                        |
+| PNR ID         | `PNR-eWTW-PBS-10-10-10-10-10`                                           |
+| Part Number    | `PN-eWTW-5310-0001`                                                     |
+| CAD tool       | FreeCAD 1.1.1                                                           |
+| Workbench      | Part Design                                                             |
+| Body name      | `Radome_Body`                                                           |
+| Native file    | `cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
+| STEP export    | `cad/step/eWTW-PBS-10-10-10-10-10-Radome.step`                          |
+| Status         | Draft                                                                   |
+| Revision       | A                                                                       |
 
 ---
 
@@ -90,18 +94,18 @@ The correct mature geometry should be a **lofted oval / elliptical radome**, com
 
 However, for the first FreeCAD placeholder, two modelling routes are allowed:
 
-| Route                   | Use                           | Status                    |
-| ----------------------- | ----------------------------- | ------------------------- |
-| Axisymmetric revolution | Fast training placeholder     | Allowed for Rev A only    |
-| Elliptical loft         | Wide-tube compatible geometry | Preferred mature approach |
+| Route                   | Use                           | Status             |
+| ----------------------- | ----------------------------- | ------------------ |
+| Axisymmetric revolution | Fast training placeholder     | Created for Rev A  |
+| Elliptical loft         | Wide-tube compatible geometry | Required for Rev B |
 
-The current model shall start as:
+The current model status is:
 
 ```text
-Rev A — preliminary parametric placeholder
+Rev A — axisymmetric conceptual parametric placeholder created
 ```
 
-and later evolve toward:
+The next geometry target is:
 
 ```text
 Rev B — lofted oval wide-tube-compatible radome
@@ -120,12 +124,13 @@ Rev B — lofted oval wide-tube-compatible radome
 | Attachment plane | `X = L_radome`                                                              |
 | Symmetry         | Symmetric about aircraft centre plane.                                      |
 
-For the first FreeCAD sketch:
+For the Rev A FreeCAD sketch:
 
 ```text
 Sketch plane: XZ_Plane
-Profile type: half-section profile
-Revolution axis: X-axis
+Profile type: closed half-section profile
+Revolution axis: horizontal sketch axis / aircraft X-axis
+Revolution angle: 360°
 ```
 
 ---
@@ -273,6 +278,12 @@ Create and save:
 eWTW-PBS-10-10-10-10-10-Radome.FCStd
 ```
 
+Current uploaded file path:
+
+```text
+01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_PRODUCTS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+```
+
 ### Step 2 — Create Body
 
 In `Part Design`:
@@ -281,19 +292,7 @@ In `Part Design`:
 Create Body → rename to Radome_Body
 ```
 
-### Step 3 — Create Spreadsheet
-
-Switch to `Spreadsheet` workbench:
-
-```text
-Create Spreadsheet → rename to Parameters
-```
-
-Add parameters from section 6.
-
-### Step 4 — Create profile sketch
-
-Switch to `Part Design`.
+### Step 3 — Create profile sketch
 
 Create a sketch on:
 
@@ -307,67 +306,43 @@ Sketch name:
 Sketch_Radome_Profile
 ```
 
-Draw a half-profile with:
+The Rev A sketch was defined using:
 
-* nose tip at `X = 0`;
-* attachment plane at `X = L_radome`;
-* maximum radius at base using preliminary circular placeholder:
+* construction axis: `1500 mm`;
+* lower profile closure line: `1500 mm`;
+* vertical base line: `550 mm`;
+* outer curve / arc connecting nose tip to base upper point.
 
-  * `R_base_placeholder = H_base / 2 = 550 mm`;
-* nose tip radius `R_tip = 100 mm`.
-
-### Step 5 — Create revolution
+### Step 4 — Create revolution
 
 Use:
 
 ```text
-Part Design → Additive Revolution
+Part Design → Girar
 ```
 
 Revolve the profile:
 
 ```text
 Angle: 360 degrees
-Axis: X-axis / aircraft longitudinal axis
+Axis: horizontal sketch axis
 ```
 
-### Step 6 — Add wall thickness
+### Step 5 — Rev A result
 
-Use a preliminary wall thickness:
+The Rev A FreeCAD body was successfully generated as an axisymmetric radome placeholder.
 
-```text
-t_wall = 18 mm
-```
+This body represents the external conceptual radome volume only.
 
-If shell/thickness operation is unstable, keep the radome as a solid outer placeholder and record:
+It does not yet include:
 
-```text
-wall_thickness_pending = true
-```
-
-### Step 7 — Add attachment plane marker
-
-Create a datum plane at:
-
-```text
-X = 1500 mm
-```
-
-Name:
-
-```text
-Datum_Attachment_Plane
-```
-
-### Step 8 — Add seal land placeholder
-
-At attachment plane, add a simple ring/flange placeholder:
-
-```text
-W_seal = 45 mm
-```
-
-This is not final hardware. It is a geometric reference for the radome-to-backup-structure interface.
+* sandwich wall thickness;
+* inner surface;
+* seal land;
+* attachment flange;
+* diverter reference paths;
+* radar clearance volume;
+* wide-tube elliptical base transition.
 
 ---
 
@@ -468,7 +443,7 @@ Do not model final hardware until the interface control document is baselined.
 When the placeholder is complete, export:
 
 ```text
-cad/freecad/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd
 cad/step/eWTW-PBS-10-10-10-10-10-Radome.step
 drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf
 ```
@@ -481,15 +456,15 @@ Use STEP export only after the geometry regenerates without errors.
 
 The CAD placeholder shall trace to:
 
-| Layer    | Identifier                             |
-| -------- | -------------------------------------- |
-| PBS      | `eWTW-PBS-10-10-10-10-10`              |
-| PNR      | `PNR-eWTW-PBS-10-10-10-10-10`          |
-| PN       | `PN-eWTW-5310-0001`                    |
-| BOM      | `BOM-eWTW-PBS-10-10-10-10-10`          |
-| CAD      | `eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
-| STEP     | `eWTW-PBS-10-10-10-10-10-Radome.step`  |
-| Evidence | `PBS-EVIDENCE-REGISTER.yaml`           |
+| Layer    | Identifier                                                              |
+| -------- | ----------------------------------------------------------------------- |
+| PBS      | `eWTW-PBS-10-10-10-10-10`                                               |
+| PNR      | `PNR-eWTW-PBS-10-10-10-10-10`                                           |
+| PN       | `PN-eWTW-5310-0001`                                                     |
+| BOM      | `BOM-eWTW-PBS-10-10-10-10-10`                                           |
+| CAD      | `cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
+| STEP     | `cad/step/eWTW-PBS-10-10-10-10-10-Radome.step`                          |
+| Evidence | `PBS-EVIDENCE-REGISTER.yaml`                                            |
 
 ---
 
@@ -497,15 +472,17 @@ The CAD placeholder shall trace to:
 
 ```yaml
 validation_status:
-  geometry: conceptual_placeholder
+  geometry: conceptual_placeholder_created
+  rev_a_axisymmetric_placeholder: complete
   material_stack: TBD
   RF_performance: not_verified
   bird_strike: not_verified
   lightning_zone_1A: not_verified
   moisture_ingress: not_verified
-  CAD_regeneration: pending
+  CAD_regeneration: passed_preliminary
   STEP_export: pending
   drawing_release: pending
+  wide_tube_elliptical_loft: required_for_rev_b
 ```
 
 ---
@@ -514,7 +491,7 @@ validation_status:
 
 `Radome_Body_Preliminary.md` defines the initial FreeCAD modelling authority for the preliminary radome body.
 
-The file authorizes only a **conceptual parametric placeholder**.
+The file records the successful creation of the **Rev A axisymmetric conceptual parametric placeholder** in FreeCAD 1.1.1.
 
 It does not authorize production geometry, certified structure, final material selection, RF compliance, lightning compliance, bird-strike compliance, or released engineering drawing status.
 
@@ -523,4 +500,8 @@ All future geometry changes shall preserve the traceability chain:
 ```text
 PBS → PNR → PN → BOM → CAD → STEP → Drawing → Evidence
 ```
+
+```
+```
+
 
