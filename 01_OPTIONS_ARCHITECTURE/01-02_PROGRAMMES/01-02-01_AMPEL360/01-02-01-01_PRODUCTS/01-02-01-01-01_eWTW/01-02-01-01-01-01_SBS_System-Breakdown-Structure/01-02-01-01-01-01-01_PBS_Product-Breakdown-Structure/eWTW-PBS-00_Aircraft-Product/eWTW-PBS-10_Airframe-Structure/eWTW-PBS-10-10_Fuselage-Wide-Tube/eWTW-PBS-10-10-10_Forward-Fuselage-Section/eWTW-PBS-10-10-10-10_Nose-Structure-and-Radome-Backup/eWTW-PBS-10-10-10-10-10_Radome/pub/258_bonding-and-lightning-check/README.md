@@ -1,4 +1,3 @@
-````markdown
 ---
 document_id: AMPEL360-EWTW-PBS-10-10-10-10-10-PUB-258-BONDING-LIGHTNING-CHECK-README
 title: "eWTW · Radome — 258 Bonding and Lightning Check"
