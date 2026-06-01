@@ -21,16 +21,16 @@ Q+ATLANTIDE shall remain **programme-agnostic**. Programme-specific implementati
 01-03_TECHNOLOGIES/
 └── 01-03-01_Q+ATLANTIDE/
     ├── README.md
-    ├── 000-099_ATLAS/
-    ├── 100-199_STA/
-    ├── 200-299_DTTA/
-    ├── 300-399_DTCEC/
-    ├── 400-499_EPTA/
-    ├── 500-599_AMTA/
-    ├── 600-699_OGATA/
-    ├── 700-799_ATACV/
-    ├── 800-899_CYB/
-    └── 900-999_QCSAA/
+    ├── 01-03-01-01_000-099_ATLAS/
+    ├── 01-03-01-02_100-199_STA/
+    ├── 01-03-01-03_200-299_DTTA/
+    ├── 01-03-01-04_300-399_DTCEC/
+    ├── 01-03-01-05_400-499_EPTA/
+    ├── 01-03-01-06_500-599_AMTA/
+    ├── 01-03-01-07_600-699_OGATA/
+    ├── 01-03-01-08_700-799_ATACV/
+    ├── 01-03-01-09_800-899_CYB/
+    └── 01-03-01-10_900-999_QCSAA/
 ```
 
 Do not create a separate folder named:
@@ -346,7 +346,7 @@ Correct pattern:
 
 ```text
 Q+ATLANTIDE/
-└── 000-099_ATLAS/
+└── 01-03-01-01_000-099_ATLAS/
     └── 070-079_Eco-Tech-and-Hybrid-Electric-Propulsion/
         └── 070_Hybrid-Electric-Architecture-Overview/
             └── 070-000-General.md
