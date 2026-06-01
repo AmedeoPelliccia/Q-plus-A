@@ -7,7 +7,7 @@ axis: P-Programmes
 programme: AMPEL360
 product: eWTW
 pbs_id: eWTW-PBS-10-10-10
-ssot_source: "../README.md (eWTW-PBS-10-10-10 element document)"
+ssot_source: "../SSOT/README.md (Forward Fuselage Section SSOT)"
 csdb_standard: "S1000D Issue 5.0"
 atlas_reference: "000-099_ATLAS / node 053 Fuselage (050-059 Estructuras)"
 primary_q_division: Q-DATAGOV
@@ -38,23 +38,21 @@ The `PUB/` folder is the **S1000D/CSDB publication projection** of the Forward F
 ```text
 SSOT (engineering truth)            PUB (publication projection)
 ─────────────────────────          ──────────────────────────────
-eWTW-PBS-10-10-10_Forward-Fuselage-Section/README.md   ───▶  PUB/DM/     (data modules, by info code)
-  constituents, interfaces,         PUB/ICN/    (illustrations)
+eWTW-PBS-10-10-10/README.md   ───▶  PUB/DM/  (data modules, by info code)
+  constituents, interfaces,         PUB/ICN/ (illustrations)
   requirements, traceability        PUB/APPLIC/ (applicability tables)
-                                     PUB/BREX/   (business-rule reference)
-                                     PUB/PM/     (publication module membership)
+                                     PUB/BREX/  (business-rule reference)
+                                     PUB/PM/    (publication module membership)
 ```
 
 The element belongs to ATLAS node **053 (Fuselage)**; its data modules use SNS `53` with the section resolved by sub-system code and applicability. The controlled DMC house form is `DMC-AMPEL360E-EWTW-053-<info>`; the full S1000D DMC is carried for CSDB ingest.
 
 ## 3. PUB folder tree
 
-All publication-controlled artefacts for `eWTW-PBS-10-10-10` stay under this `PUB/` container. `APPLIC/`, `BREX/`, `DM/`, `DMRL/`, `ICN/`, and `PM/` are not peer folders of the PBS node; they are children of `.../eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/`.
-
 ```text
-eWTW-PBS-10-10-10_Forward-Fuselage-Section/
+eWTW-PBS-10-10-10/
 └── PUB/
-    ├── README.md                                   # this index
+    ├── README.md                                  # this index
     ├── DMRL/
     │   └── DMRL-eWTW-053-FWD.xml                   # data-module requirement list (scope of this element)
     ├── DM/                                         # data modules (S1000D)
@@ -80,8 +78,6 @@ eWTW-PBS-10-10-10_Forward-Fuselage-Section/
     └── PM/
         └── PM-AMPEL360E-EWTW-53FWD-00.xml          # publication module (this element's DM set)
 ```
-
-The repository now carries an initial controlled DM XML set under `PUB/DM/` while the sibling publication subfolders remain scaffolded with tracked placeholders until their controlled CSDB artefacts are instantiated.
 
 ## 4. Controlled data-module set
 
@@ -114,7 +110,7 @@ msn_range: MSN-001..050             ───▶  productAttribute: MSN ∈ 001.
 status: active                      ───▶  DM applicability active
 ```
 
-Provisions-only constituents (lightning diverter, EMI/HIRF shielding, cooling routing) publish their **structural** content here; the **system** content publishes under its owning PBS branch PUB (`eWTW-PBS-40-40`, `eWTW-PBS-60-20`) and is cross-referenced by `dmRef`, never duplicated.[^ssot]
+Provisions-only constituents (lightning diverter, EMI/HIRF shielding, cooling routing) publish their **structural** content here; the **system** content (the diverter, shielding, cooling systems) publishes under its own PBS branch's PUB (PBS-40-40, PBS-60-20) and is cross-referenced by `dmRef`, never duplicated.[^ssot]
 
 ## 6. Notes
 
@@ -132,10 +128,10 @@ Provisions-only constituents (lightning diverter, EMI/HIRF shielding, cooling ro
 
 ## 7. References
 
-[^ssot]: **SSOT element document (eWTW-PBS-10-10-10 Forward Fuselage Section)** — `../README.md`.
-[^pbs]: **eWTW Product Breakdown Structure (master)** — `../../../../../README.md`.
+[^ssot]: **SSOT element document (eWTW-PBS-10-10-10 Forward Fuselage Section)** — [`../SSOT/README.md`](../SSOT/README.md).
+[^pbs]: **eWTW Product Breakdown Structure (master)** — [`../../../eWTW-PBS-Product-Breakdown-Structure.md`](../../../eWTW-PBS-Product-Breakdown-Structure.md).
 [^atlas]: **Q+ATLANTIDE / ATLAS node 053 Fuselage (`050-059`)** — `01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/01-03-01-01_000-099_ATLAS/`.
-[^cert]: **AMPEL360 eWTW certification basis** — `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-02_CERTIFICATION/`.
+[^cert]: **AMPEL360 eWTW certification basis** — `01-02-01_AMPEL360/01-02-01-02_CERTIFICATION/`.
 [^brex]: **BREX data module (business rules)** — `PUB/BREX/DMC-AMPEL360E-EWTW-022-00WA_BREX.xml`.
 
 ## 8. Footprint
@@ -146,7 +142,7 @@ Provisions-only constituents (lightning diverter, EMI/HIRF shielding, cooling ro
 | PBS ID | `eWTW-PBS-10-10-10` |
 | Register | Q-plus / OPTIONS |
 | CSDB standard | S1000D Issue 5.0 |
-| SSOT source | `../README.md` |
+| SSOT source | `../SSOT/README.md` |
 | ATLAS reference | node 053 Fuselage (`050-059`) |
 | Owning Q-Division | Q-DATAGOV |
 | Support Q-Divisions | Q-STRUCTURES, Q-AIR |
