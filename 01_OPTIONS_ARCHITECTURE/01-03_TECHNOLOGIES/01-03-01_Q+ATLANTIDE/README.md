@@ -21,16 +21,16 @@ Q+ATLANTIDE shall remain **programme-agnostic**. Programme-specific implementati
 01-03_TECHNOLOGIES/
 └── 01-03-01_Q+ATLANTIDE/
     ├── README.md
-    ├── 01-03-01-01_000-099_ATLAS/
-    ├── 01-03-01-02_100-199_STA/
-    ├── 01-03-01-03_200-299_DTTA/
-    ├── 01-03-01-04_300-399_DTCEC/
-    ├── 01-03-01-05_400-499_EPTA/
-    ├── 01-03-01-06_500-599_AMTA/
-    ├── 01-03-01-07_600-699_OGATA/
-    ├── 01-03-01-08_700-799_ATACV/
-    ├── 01-03-01-09_800-899_CYB/
-    └── 01-03-01-10_900-999_QCSAA/
+    ├── 000-099_ATLAS/
+    ├── 100-199_STA/
+    ├── 200-299_DTTA/
+    ├── 300-399_DTCEC/
+    ├── 400-499_EPTA/
+    ├── 500-599_AMTA/
+    ├── 600-699_OGATA/
+    ├── 700-799_ATACV/
+    ├── 800-899_CYB/
+    └── 900-999_QCSAA/
 ```
 
 Do not create a separate folder named:
@@ -169,16 +169,16 @@ deprecated_terms:
 
 |                            Master Range | Architecture Code | Architecture Name                                       | Primary Focus                                                                                            |
 | --------------------------------------: | ----------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [`000–099`](01-03-01-01_000-099_ATLAS/) | `ATLAS`           | Aircraft Top Level Architecture Schema/System           | New commercial aircraft architectures, BWB, WTW, hybrid-electric, hydrogen, S1000D/CSDB/PLM integration. |
-|   [`100–199`](01-03-01-02_100-199_STA/) | `STA`             | Space Technology Architecture                           | Space systems, LEO+, orbital infrastructure, interplanetary concepts.                                    |
-|  [`200–299`](01-03-01-03_200-299_DTTA/) | `DTTA`            | Defence Technology Type Architecture                    | Defence, C4ISR, resilience, electronic warfare, autonomous systems.                                      |
-| [`300–399`](01-03-01-04_300-399_DTCEC/) | `DTCEC`           | Digital Twin, Cloud, Edge and AI Architecture           | Digital twins, AI, cloud, edge, XR, blockchain, analytics.                                               |
-|  [`400–499`](01-03-01-05_400-499_EPTA/) | `EPTA`            | Energy and Propulsion Technology Architecture           | Energy, storage, conversion, electric, hydrogen, and advanced propulsion.                                |
-|  [`500–599`](01-03-01-06_500-599_AMTA/) | `AMTA`            | Advanced Materials, Bio and Nanotechnology Architecture | Advanced materials, bio/nano, metamaterials, additive manufacturing.                                     |
-| [`600–699`](01-03-01-07_600-699_OGATA/) | `OGATA`           | On-Ground Automation Technology Architecture            | Ground automation, robotics, factories 4.0, logistics, human-robot interaction.                          |
-| [`700–799`](01-03-01-08_700-799_ATACV/) | `ATACV`           | Air Traffic and Aerial City Vehicles                    | Air traffic, aerial city vehicles, UAM, vertiports, UTM, noise, urban integration.                       |
-|   [`800–899`](01-03-01-09_800-899_CYB/) | `CYB`             | Cybersecurity Architecture                              | Cybersecurity, PQC, ICS/OT, SecOps, IAM, cyber-resilience.                                               |
-| [`900–999`](01-03-01-10_900-999_QCSAA/) | `QCSAA`           | Quantum Computing and Sentient Agency Architecture      | Quantum computing, QML, quantum networks, sensing, agency governance.                                    |
+| [`000–099`](000-099_ATLAS/) | `ATLAS`           | Aircraft Top Level Architecture Schema/System           | New commercial aircraft architectures, BWB, WTW, hybrid-electric, hydrogen, S1000D/CSDB/PLM integration. |
+|   [`100–199`](100-199_STA/) | `STA`             | Space Technology Architecture                           | Space systems, LEO+, orbital infrastructure, interplanetary concepts.                                    |
+|  [`200–299`](200-299_DTTA/) | `DTTA`            | Defence Technology Type Architecture                    | Defence, C4ISR, resilience, electronic warfare, autonomous systems.                                      |
+| [`300–399`](300-399_DTCEC/) | `DTCEC`           | Digital Twin, Cloud, Edge and AI Architecture           | Digital twins, AI, cloud, edge, XR, blockchain, analytics.                                               |
+|  [`400–499`](400-499_EPTA/) | `EPTA`            | Energy and Propulsion Technology Architecture           | Energy, storage, conversion, electric, hydrogen, and advanced propulsion.                                |
+|  [`500–599`](500-599_AMTA/) | `AMTA`            | Advanced Materials, Bio and Nanotechnology Architecture | Advanced materials, bio/nano, metamaterials, additive manufacturing.                                     |
+| [`600–699`](600-699_OGATA/) | `OGATA`           | On-Ground Automation Technology Architecture            | Ground automation, robotics, factories 4.0, logistics, human-robot interaction.                          |
+| [`700–799`](700-799_ATACV/) | `ATACV`           | Air Traffic and Aerial City Vehicles                    | Air traffic, aerial city vehicles, UAM, vertiports, UTM, noise, urban integration.                       |
+|   [`800–899`](800-899_CYB/) | `CYB`             | Cybersecurity Architecture                              | Cybersecurity, PQC, ICS/OT, SecOps, IAM, cyber-resilience.                                               |
+| [`900–999`](900-999_QCSAA/) | `QCSAA`           | Quantum Computing and Sentient Agency Architecture      | Quantum computing, QML, quantum networks, sensing, agency governance.                                    |
 
 ---
 
@@ -346,7 +346,7 @@ Correct pattern:
 
 ```text
 Q+ATLANTIDE/
-└── 01-03-01-01_000-099_ATLAS/
+└── 000-099_ATLAS/
     └── 070-079_Eco-Tech-and-Hybrid-Electric-Propulsion/
         └── 070_Hybrid-Electric-Architecture-Overview/
             └── 070-000-General.md
