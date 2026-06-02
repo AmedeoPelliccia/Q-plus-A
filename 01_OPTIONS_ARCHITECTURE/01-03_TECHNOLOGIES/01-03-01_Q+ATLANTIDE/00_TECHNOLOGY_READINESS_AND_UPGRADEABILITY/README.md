@@ -141,5 +141,5 @@ explicit **programme-specific effectivity**.
 
 | Ref | Title | Source |
 | --- | ----- | ------ |
-| [SEF-01] | *Systems Engineering Fundamentals* — Defense Acquisition University / DoD guide covering TRL definitions, systems engineering processes, and acquisition lifecycle management. | MIT OpenCourseWare, 16.885J Aircraft Systems Engineering, Fall 2005. <https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/sefguide_01_01/> |
+| [SEF-01] | *Systems Engineering Fundamentals* — Defense Acquisition University / DoD guide. | MIT OpenCourseWare, 16.885J Aircraft Systems Engineering, Fall 2005. <https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/sefguide_01_01/> |
 | [SE-PDF] | *SYSTEMS Engineering* — Comprehensive systems engineering reference covering SE processes, architecture development, requirements analysis, verification & validation, and technology maturity assessment. | `SYSTEMS_engineering.pdf` (repository-attached reference). |

@@ -260,9 +260,8 @@ upgrade_branch_record:
 ## 8. References
 
 - **[SEF-01]** *Systems Engineering Fundamentals* — Defense Acquisition
-  University / DoD guide covering TRL definitions, systems engineering
-  processes, and acquisition lifecycle management. MIT OCW 16.885J Aircraft
-  Systems Engineering, Fall 2005.
+  University / DoD guide. MIT OCW 16.885J Aircraft Systems Engineering,
+  Fall 2005.
   <https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/sefguide_01_01/>
 - **[SE-PDF]** *SYSTEMS Engineering* — Comprehensive SE reference covering
   SE processes, architecture development, requirements analysis, verification
