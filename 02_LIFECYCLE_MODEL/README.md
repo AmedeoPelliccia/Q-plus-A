@@ -6,8 +6,8 @@ path: 02_LIFECYCLE_MODEL/README.md
 register: Q-plus
 architecture: OPTIONS_ARCHITECTURE
 status: draft
-version: "0.1.0"
-revision: A
+version: "0.2.0"
+revision: A1
 classification: open-governance-baseline
 owner: AEROSPACEMODEL / Q-plus
 lifecycle_model: "LC-letter CAD/product maturity model"
@@ -18,15 +18,24 @@ language: en
 
 ## 1. Purpose
 
-`02_LIFECYCLE_MODEL/` defines the controlled lifecycle maturity model used by Q-plus-A artefacts, products, CAD models, PLM records, publication modules, and evidence records.
+`02_LIFECYCLE_MODEL/` defines the controlled lifecycle maturity model used by Q-plus-A artefacts, products, CAD models, PLM records, publication modules, requirements records, evidence records, upgrade branches, and configuration baselines.
 
 This lifecycle model provides a common governance language for moving an artefact from early conceptual definition to preliminary design, detailed design, qualification, certification, operations, MRO, and final nature-sustainment.
+
+Version `0.2.0 / A1` extends the lifecycle model with:
+
+- Technology Readiness Level integration;
+- upgradeability and technology insertion governance;
+- upgrade revision-cycle restart rules;
+- evolutionary block and incremental capability logic;
+- SBS-level breakdown integration;
+- revision-specific `ReqBS`, `IBS`, `CBS`, `RBS`, `EBS`, `TPMS`, BOM, CAD, and publication records.
 
 ---
 
 ## 2. Lifecycle Model Type
 
-Q-plus-A uses an **LC-letter CAD/product maturity model** for product and CAD artefacts.
+Q-plus-A uses an **LC-letter CAD/product maturity model** for product, CAD, PLM, publication, evidence, and configuration artefacts.
 
 ```text
 LC-letter stage      = maturity phase
@@ -56,22 +65,22 @@ The release gate of one lifecycle stage authorizes promotion to the next lifecyc
 
 ## 3. Controlled LC-letter Stages
 
-| LC     | Stage                                                 | Scope                                                                                          | Release Gate     |
-| ------ | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------- |
-| `LC-A` | Conceptual Design                                     | First concept, first geometry, early proportions, early feasibility placeholder.               | `REV-A_RELEASED` |
-| `LC-B` | Preliminary Design                                    | Main geometry, architecture sizing, preliminary interfaces, major configuration decisions.     | `REV-B_RELEASED` |
-| `LC-C` | Detailed Design                                       | Detailed CAD/product definition, material stack, BOM/CAD consistency, drawing preparation.     | `REV-C_RELEASED` |
-| `LC-D` | Analysis / Verification Design                        | Analysis-ready geometry, verification setup, simulation models, test logic.                    | `REV-D_RELEASED` |
-| `LC-E` | Release Candidate / Engineering Definition            | Engineering release candidate before physical mock-up, qualification, or certification use.    | `REV-E_RELEASED` |
-| `LC-F` | PMU/PMA — Physical Mock-Up Article and  Wind Tunnel | Physical mock-up, installation mock-up, aerodynamic mock-up, wind-test preparation.            | `REV-F_RELEASED` |
-| `LC-G` | Qualification                                         | Qualification test article, qualification evidence, test reports, compliance-relevant records. | `REV-G_RELEASED` |
-| `LC-H` | Hardware & Softwareization                            | Hardware embodiment, digital configuration, software/data integration, product-data binding.   | `REV-H_RELEASED` |
-| `LC-I` | Installation and Interface                            | Installation closure, interface maturity, aircraft or system integration readiness.            | `REV-I_RELEASED` |
-| `LC-J` | Certification                                         | Certification configuration, compliance evidence, authority-facing artefacts.                  | `REV-J_RELEASED` |
-| `LC-K` | First Flight and Industrialization                    | First-flight configuration, manufacturing readiness, industrialization transition.             | `REV-K_RELEASED` |
-| `LC-L` | Operations                                            | In-service operational configuration, operator feedback, operational evidence.                 | `REV-L_RELEASED` |
-| `LC-M` | MRO and Continuous Airworthiness                      | Maintenance, repair, overhaul, service bulletins, continued-airworthiness records.             | `REV-M_RELEASED` |
-| `LC-N` | Nature Sustainment                                    | Circular economy, retirement, reuse, disposal, recycling, environmental sustainment.           | `REV-N_RELEASED` |
+| LC     | Stage                                              | Scope                                                                                                                                              | Release Gate     |
+| ------ | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `LC-A` | Conceptual Design                                  | First concept, first geometry, early proportions, early feasibility placeholder, initial requirements baseline, initial upgrade watch list.        | `REV-A_RELEASED` |
+| `LC-B` | Preliminary Design                                 | Main geometry, architecture sizing, preliminary interfaces, major configuration decisions, first interface-controlled upgrade compatibility logic. | `REV-B_RELEASED` |
+| `LC-C` | Detailed Design                                    | Detailed CAD/product definition, material stack, BOM/CAD consistency, drawing preparation, detailed `ReqBS/IBS/CBS/RBS/EBS/TPMS` alignment.        | `REV-C_RELEASED` |
+| `LC-D` | Analysis / Verification Design                     | Analysis-ready geometry, verification setup, simulation models, test logic, requirements verification planning.                                    | `REV-D_RELEASED` |
+| `LC-E` | Release Candidate / Engineering Definition         | Engineering release candidate before physical mock-up, qualification, or certification use.                                                        | `REV-E_RELEASED` |
+| `LC-F` | PMU/PMA — Physical Mock-Up Article and Wind Tunnel | Physical mock-up, installation mock-up, aerodynamic mock-up, wind-test preparation.                                                                | `REV-F_RELEASED` |
+| `LC-G` | Qualification                                      | Qualification test article, qualification evidence, test reports, compliance-relevant records.                                                     | `REV-G_RELEASED` |
+| `LC-H` | Hardware & Softwareization                         | Hardware embodiment, digital configuration, software/data integration, product-data binding.                                                       | `REV-H_RELEASED` |
+| `LC-I` | Installation and Interface                         | Installation closure, interface maturity, aircraft or system integration readiness.                                                                | `REV-I_RELEASED` |
+| `LC-J` | Certification                                      | Certification configuration, compliance evidence, authority-facing artefacts.                                                                      | `REV-J_RELEASED` |
+| `LC-K` | First Flight and Industrialization                 | First-flight configuration, manufacturing readiness, industrialization transition.                                                                 | `REV-K_RELEASED` |
+| `LC-L` | Operations                                         | In-service operational configuration, operator feedback, operational evidence.                                                                     | `REV-L_RELEASED` |
+| `LC-M` | MRO and Continuous Airworthiness                   | Maintenance, repair, overhaul, service bulletins, continued-airworthiness records.                                                                 | `REV-M_RELEASED` |
+| `LC-N` | Nature Sustainment                                 | Circular economy, retirement, reuse, disposal, recycling, environmental sustainment.                                                               | `REV-N_RELEASED` |
 
 ---
 
@@ -104,6 +113,14 @@ RADOME-REV-A1
 RADOME-REV-A_RELEASED
 ```
 
+For upgrade-specific usage, the upgrade identifier shall be included:
+
+```text
+RADOME-UPG-001-REV-A0
+RADOME-UPG-001-REV-A1
+RADOME-UPG-001-REV-A_RELEASED
+```
+
 ---
 
 ## 5. Release Gate Rule
@@ -122,9 +139,7 @@ release_gate_rule:
 
 ## 6. Blocking Finding Rule
 
-Any CAD/product revision may record findings.
-
-Finding classes:
+Any CAD/product/configuration revision may record findings.
 
 | Finding Class | Meaning                            | Gate Impact                                            |
 | ------------- | ---------------------------------- | ------------------------------------------------------ |
@@ -208,6 +223,18 @@ item_lifecycle_record:
   next_release_gate: "<ITEM>-REV-A_RELEASED"
 ```
 
+For upgrade-specific records:
+
+```yaml
+upgrade_lifecycle_record:
+  upgrade_id: "<ITEM>-UPG-<NNN>"
+  parent_baseline: "<baseline id>"
+  lifecycle_model: "LC-letter CAD/product maturity model"
+  lc_stage: "LC-A"
+  current_revision: "<ITEM>-UPG-<NNN>-REV-A0"
+  next_release_gate: "<ITEM>-UPG-<NNN>-REV-A_RELEASED"
+```
+
 ---
 
 ## 9. Traceability Chain
@@ -231,6 +258,12 @@ Each lifecycle revision shall reference:
 | Drawing          | Required when drawing is produced |
 | Evidence record  | Yes                               |
 | Release gate     | Yes                               |
+
+For engineering breakdown traceability, the revision shall also reference:
+
+```text
+PBS REV-X → ReqBS REV-X → IBS REV-X → CBS REV-X → RBS REV-X → EBS REV-X → TPMS REV-X
+```
 
 ---
 
@@ -261,7 +294,261 @@ The root lifecycle model remains the controlling reference.
 
 ---
 
-## 11. Example — AMPEL360 eWTW Radome
+## 11. SBS Integration and Revisioned Breakdown Structures
+
+Each SBS shall act as the parent integration layer for controlled breakdown structures.
+
+Recommended SBS breakdown family:
+
+```text
+SBS_System-Breakdown-Structure/
+├── PBS_Product-Breakdown-Structure/
+├── FBS_Functional-Breakdown-Structure/
+├── WBS_Work-Breakdown-Structure/
+├── CBS_Cost-Breakdown-Structure/
+├── RBS_Risk-Breakdown-Structure/
+├── LBS_Logistic-Breakdown-Structure/
+├── EBS_Evidence-Breakdown-Structure/
+├── IBS_Interface-Breakdown-Structure/
+├── ReqBS_Requirements-Breakdown-Structure/
+└── TPMS_Technical-Performance-Measurement-Structure/
+```
+
+The SBS defines the breakdown family. The PBS defines the physical item. Each `PBS REV-X` defines the authoritative state of its associated revision-specific breakdowns.
+
+Controlled rule:
+
+```yaml
+revisioned_breakdown_structure_rule:
+  id: SBS-REV-BREAKDOWN-001
+  name: "Revisioned Breakdown Structures Rule"
+  rule: >
+    Each SBS shall include controlled breakdown structures for product,
+    function, work, cost, risk, logistics, evidence, interfaces, requirements,
+    and technical performance measurement. These structures may define generic
+    architecture patterns at SBS level, but their authoritative state for a
+    physical product item shall be recorded per PBS item revision. Therefore,
+    each PBS revision shall maintain its own revision-specific ReqBS, IBS, CBS,
+    RBS, EBS, BOM, CAD, TPMS, and publication references as applicable.
+```
+
+---
+
+## 12. Requirements Evolution Rule
+
+Requirements shall not be treated as static lifecycle-folder content.
+
+They shall be revisioned artefacts linked to the applicable PBS item, product configuration, and lifecycle maturity state.
+
+Controlled rule:
+
+```yaml
+requirements_evolution_rule:
+  id: REQBS-REV-001
+  name: "Requirements Evolve by Product Revision"
+  rule: >
+    Requirements shall not be treated as static lifecycle-folder content.
+    Requirements shall be controlled as revisioned artefacts linked to the
+    applicable PBS item, product configuration, and lifecycle maturity state.
+    A change in requirements that affects geometry, interfaces, cost, risk,
+    evidence, certification, operations, maintainability, or sustainability
+    shall create or update the corresponding REV-X ReqBS and trigger impact
+    assessment across IBS, CBS, RBS, EBS, BOM, CAD, TPMS, and PUB artefacts.
+```
+
+Minimum ReqBS class set:
+
+| ReqBS Class | Name                               |
+| ----------- | ---------------------------------- |
+| `ReqBS-01`  | Customer Expectations              |
+| `ReqBS-02`  | Project and Enterprise Constraints |
+| `ReqBS-03`  | External Constraints               |
+| `ReqBS-04`  | Operational Scenarios              |
+| `ReqBS-05`  | Measures of Effectiveness          |
+| `ReqBS-06`  | System Boundaries                  |
+| `ReqBS-07`  | Interfaces                         |
+| `ReqBS-08`  | Utilization Environments           |
+| `ReqBS-09`  | Lifecycle Requirements             |
+| `ReqBS-10`  | Functional Requirements            |
+| `ReqBS-11`  | Performance Requirements           |
+| `ReqBS-12`  | Modes of Operation                 |
+| `ReqBS-13`  | Technical Performance Measures     |
+| `ReqBS-14`  | Physical Characteristics           |
+| `ReqBS-15`  | Human Systems Integration          |
+
+---
+
+## 13. TRL, Upgradeability, and Technology Insertion
+
+Q-plus-A distinguishes technology maturity from product lifecycle maturity.
+
+```text
+TRL = technology maturity
+LC-letter = product/CAD/configuration maturity
+REV cycle = controlled design iteration inside a lifecycle stage
+```
+
+A technology reaching a target TRL does not automatically authorize installation into a product baseline. It authorizes the start of a controlled product-specific upgrade revision cycle.
+
+Controlled rule:
+
+```yaml
+trl_lifecycle_relationship:
+  id: QATL-TRL-LC-001
+  rule: >
+    TRL measures technology maturity. LC-letter stages measure product, CAD,
+    integration, and configuration maturity. A technology reaching a target TRL
+    does not automatically authorize installation into a product baseline. It
+    authorizes the start of a controlled product-specific upgrade revision cycle.
+```
+
+Controlled technology insertion rule:
+
+```yaml
+technology_insertion_rule:
+  id: QATL-TICC-001
+  name: "Technology Insertion and Configuration Compatibility"
+  rule: >
+    Product and architecture designs shall define a baseline configuration
+    using technology mature enough for the current lifecycle stage, while
+    maintaining controlled compatibility paths for future alternatives with
+    higher sustainability, efficiency, maintainability, safety, circularity,
+    or performance potential. No future technology shall be inserted into a
+    controlled product configuration without TRL assessment, interface
+    compatibility assessment, evidence delta analysis, lifecycle insertion
+    gate definition, and configuration-control approval.
+```
+
+---
+
+## 14. Upgrade Revision-Cycle Restart Rule
+
+When a future upgrade or alternative technology reaches the target TRL required for insertion, it shall not overwrite the existing released baseline.
+
+It shall start its own controlled concept baseline.
+
+Controlled rule:
+
+```yaml
+upgrade_revision_cycle_rule:
+  id: QATL-UPGRADE-REV-CYCLE-001
+  name: "Upgrade Revision Cycle Restart Rule"
+  rule: >
+    When an alternative technology reaches the target TRL required for product
+    insertion, it shall not overwrite the current released baseline. The upgrade
+    shall start a new controlled revision cycle from its own concept baseline,
+    beginning at LC-A / REV-A0 or an equivalent upgrade-specific concept state.
+    The upgrade may only modify or replace the current product baseline after
+    interface compatibility, evidence delta, configuration-control approval,
+    and lifecycle release gates are satisfied.
+```
+
+Controlled statement:
+
+```text
+A technology upgrade becomes eligible through TRL maturity.
+It becomes installable only through LC/REV maturity.
+It becomes part of the operational baseline only through configuration-control approval.
+```
+
+---
+
+## 15. Upgrade Branch Record
+
+Minimum upgrade branch metadata:
+
+```yaml
+upgrade_branch_record:
+  upgrade_id: "<UPGRADE-ID>"
+  upgrade_name: "<upgrade name>"
+  parent_product_baseline: "<baseline id>"
+  parent_block: "<block id>"
+  triggering_condition: "target TRL reached"
+  triggering_trl: "TRL-<1..9>"
+  starts_at_lifecycle_stage: "LC-A"
+  starts_at_revision: "<ITEM>-UPG-<NNN>-REV-A0"
+  current_revision: "<ITEM>-UPG-<NNN>-REV-A0"
+  next_release_gate: "<ITEM>-UPG-<NNN>-REV-A_RELEASED"
+  baseline_relation: "<replacement | modification | optional block upgrade | service bulletin candidate>"
+  insertion_allowed_only_after:
+    - "interface compatibility approved"
+    - "evidence delta closed"
+    - "requirements validation completed"
+    - "risk assessment accepted"
+    - "configuration-control approval"
+    - "lifecycle release gate closed"
+  operational_baseline_impact: "<none | optional | partial | replacement>"
+  status: "<concept | iterating | released | inserted | rejected | superseded>"
+```
+
+---
+
+## 16. Evolutionary Acquisition and Baseline Structuring
+
+Q-plus-A supports evolutionary acquisition logic:
+
+```text
+Core baseline → evolutionary blocks → incremental capability releases → associated product improvements
+```
+
+Mapping:
+
+| Characterization                   | System Level                                                | Programme Level                                               | Documentation Required                                                             | Baseline                                     | CM Authority                                                  |
+| ---------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------- |
+| Overall Need                       | Major Programme / Portfolio / Business Area                 | Capstone or Sub-Portfolio                                     | Capstone Acquisition Documentation                                                 | Top-Level Functional Baseline                | PMO                                                           |
+| Core and Evolutionary Blocks       | Build or Block of Major Programme                           | Acquisition Programme                                         | Full Programme Documentation                                                       | Cumulative Functional and Allocated Baseline | PMO with Contractor Support                                   |
+| Incremental Delivery of Capability | Release or Version of Block                                 | Internal to Acquisition Programme                             | Separate Acquisition Documentation Not Required unless required by programme rules | Product Baseline                             | Contractor / Delivery Authority; must meet Allocated Baseline |
+| Associated Product Improvements    | Application, Bridge, Upgrade Branch, or Product Improvement | Parallel Product Improvement / Technology Insertion Candidate | Component-Level or Lower-Decision-Level Processing                                 | Functional, Allocated, and Product Baselines | PMO / Contractor / Responsible Q-Division                     |
+
+Controlled rule:
+
+```yaml
+evolutionary_acquisition_rule:
+  id: QATL-EVO-ACQ-001
+  name: "Evolutionary Acquisition and Baseline Structuring Rule"
+  rule: >
+    Programmes shall define an operationally suitable core baseline and identify
+    the subsystems, components, technologies, interfaces, and documentation sets
+    most likely to evolve. Evolutionary blocks, incremental capability releases,
+    and associated product improvements shall be planned through controlled
+    baselines, TRL assessment, evidence records, configuration-management
+    authority, and lifecycle gates.
+```
+
+---
+
+## 17. Open Architecture Upgrade Rule
+
+The core system architecture shall be designed to accommodate change.
+
+Controlled rule:
+
+```yaml
+open_architecture_upgrade_rule:
+  id: QATL-OPEN-ARCH-UPGRADE-001
+  rule: >
+    The core system architecture shall emphasize openness, modularity,
+    functional partitioning, stable interfaces, and open-system design so that
+    future upgrades can be inserted through controlled modification rather than
+    uncontrolled redesign wherever technically and economically feasible.
+```
+
+Baseline hierarchy rule:
+
+```yaml
+baseline_hierarchy_rule:
+  id: QATL-BASELINE-HIERARCHY-001
+  rule: >
+    Q+ATLANTIDE and programme baselines shall distinguish top-level functional
+    baselines, allocated baselines, product baselines, and upgrade branch
+    baselines. Incremental capability releases shall meet the allocated baseline.
+    Upgrade branches shall not overwrite released product baselines until
+    configuration approval and lifecycle release gates are satisfied.
+```
+
+---
+
+## 18. Example — AMPEL360 eWTW Radome
 
 Example item:
 
@@ -277,23 +564,72 @@ radome_lifecycle_example:
   part_number: "PN-eWTW-5310-0001"
   lc_stage: "LC-A"
   lc_stage_name: "Conceptual Design"
-  current_revision: "RADOME-REV-A0"
+  current_revision: "RADOME-REV-A1"
   revision_status: "draft"
   next_release_gate: "RADOME-REV-A_RELEASED"
-  next_revision: "RADOME-REV-A1"
+  next_revision: "RADOME-REV-A2"
 ```
 
-Known REV-A0 gate findings:
+Current revision-specific breakdown package:
 
-| Finding | Meaning                                  | Gate Impact                     |
-| ------- | ---------------------------------------- | ------------------------------- |
-| `F1`    | Absolute scale must be resolved.         | Blocks `RADOME-REV-A_RELEASED`. |
-| `F2`    | Solid body only; sandwich wall deferred. | Deferred to LC-C.               |
-| `F3`    | Controlled metadata gaps.                | Blocks `RADOME-REV-A_RELEASED`. |
+```yaml
+radome_rev_a1_breakdown_package:
+  pbs_revision: "RADOME-REV-A1"
+  reqbs: "01_REQUIREMENTS/REV-A1/ReqBS-RADOME-REV-A1.md"
+  ibs: "02_INTERFACES/REV-A1/IBS-RADOME-REV-A1.md"
+  cbs: "03_COST/REV-A1/CBS-RADOME-REV-A1.md"
+  rbs: "04_RISK/REV-A1/RBS-RADOME-REV-A1.md"
+  ebs: "05_EVIDENCE/REV-A1/EBS-RADOME-REV-A1.md"
+  cad: "cad/freecad/LC-A_Concept-Design/REV-A1/"
+  pub_040: "pub/040_descriptive/"
+  pub_258: "pub/258_bonding-and-lightning-check/"
+```
+
+Known REV-A1 gate findings:
+
+| Finding | Meaning                                                       | Gate Impact                                                                |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `F1`    | Absolute scale must be verified or closed.                    | Blocks `RADOME-REV-A_RELEASED` until resolved.                             |
+| `F2`    | Solid body only; sandwich wall deferred.                      | Deferred to LC-C.                                                          |
+| `F3`    | Controlled metadata must be completed.                        | Blocks `RADOME-REV-A_RELEASED` until resolved.                             |
+| `F4`    | ReqBS exists; IBS/CBS/RBS/EBS/TPMS revision packages pending. | Blocks full configuration release if not completed or explicitly deferred. |
+
+Example upgrade candidate:
+
+```yaml
+radome_upgrade_candidate_example:
+  upgrade_id: "RADOME-UPG-001"
+  upgrade_name: "Recyclable Low-Loss Dielectric Core"
+  baseline_configuration: "RADOME-CONF-A"
+  baseline_technology: "Conventional RF-transparent sandwich laminate"
+  qatl_reference: "ATLAS-053 / AMTA material node TBD"
+  current_trl: "TRL-5"
+  target_trl_for_insertion: "TRL-6"
+  decision_status: "watched"
+  expected_benefit:
+    sustainability: "high"
+    efficiency: "medium"
+    circularity: "high"
+    weight_reduction: "medium"
+    maintainability: "medium"
+    safety: "medium"
+  compatibility_constraints:
+    - "radome backup mechanical interface"
+    - "RF transparency"
+    - "bird-strike resistance"
+    - "lightning diverter compatibility"
+    - "moisture ingress resistance"
+    - "certification basis"
+  upgrade_revision_cycle:
+    trigger: "target TRL reached"
+    starts_at: "LC-A / RADOME-UPG-001-REV-A0"
+    next_release_gate: "RADOME-UPG-001-REV-A_RELEASED"
+    baseline_relation: "candidate replacement or modification to RADOME-CONF-A"
+```
 
 ---
 
-## 12. Governance Rules
+## 19. Governance Rules
 
 1. The lifecycle model shall use LC-letter stages from `LC-A` through `LC-N`.
 2. Revisions inside a lifecycle stage shall use the corresponding revision letter.
@@ -302,22 +638,44 @@ Known REV-A0 gate findings:
 5. Deferred findings shall identify the lifecycle stage where they become mandatory.
 6. CAD/product lifecycle records shall preserve PBS, PN, CAD, evidence, and release-gate traceability.
 7. Product-specific lifecycle folders may extend this model but shall not contradict it.
-8. The root `02_LIFECYCLE_MODEL/README.md` is the controlling lifecycle reference for Q-plus-A unless superseded by a higher governance document.
+8. Each SBS shall define the controlled breakdown family for PBS, FBS, WBS, CBS, RBS, LBS, EBS, IBS, ReqBS, and TPMS.
+9. Each PBS revision shall maintain its own revision-specific breakdown records where applicable.
+10. Requirements shall evolve by product revision and shall not be stored only as static LC-folder content.
+11. TRL maturity shall not be treated as product installation maturity.
+12. A mature upgrade shall start its own LC/REV concept baseline before insertion.
+13. Upgrade branches shall not overwrite released product baselines without configuration-control approval.
+14. The root `02_LIFECYCLE_MODEL/README.md` is the controlling lifecycle reference for Q-plus-A unless superseded by a higher governance document.
 
 ---
 
-## 13. Controlled Closure Statement
+## 20. Controlled Closure Statement
 
 `02_LIFECYCLE_MODEL/README.md` defines the root lifecycle maturity model for Q-plus-A CAD/product artefacts.
 
 The model controls the progression from conceptual design through preliminary design, detailed design, qualification, certification, first flight, operations, MRO, and nature sustainment.
 
+Version `0.2.0 / A1` additionally controls the relationship between:
+
+```text
+LC-letter lifecycle maturity
+REV-controlled configuration states
+SBS breakdown families
+PBS revision-specific engineering truth
+ReqBS / IBS / CBS / RBS / EBS / TPMS revision packages
+TRL maturity
+upgradeability
+evolutionary acquisition blocks
+upgrade branch baselines
+```
+
 It shall be referenced by product-specific lifecycle records such as:
 
 ```text
-cad/freecad/LC-A_Concept-Design/REV-A0/Radome-CAD-Record.md
+cad/freecad/LC-A_Concept-Design/REV-A1/Radome-CAD-Record.md
+01_REQUIREMENTS/REV-A1/ReqBS-RADOME-REV-A1.md
 ```
 
 ```
-```
+
+
 
