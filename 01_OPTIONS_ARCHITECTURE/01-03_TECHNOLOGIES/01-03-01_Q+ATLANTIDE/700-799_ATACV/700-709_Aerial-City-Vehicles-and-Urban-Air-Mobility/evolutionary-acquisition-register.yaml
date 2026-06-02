@@ -1,0 +1,12 @@
+# Evolutionary acquisition register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+evolutionary_acquisition_register:
+  architecture_code: "ATACV"
+  master_range: "700-799"
+  code_range: "700-709_Aerial-City-Vehicles-and-Urban-Air-Mobility"
+  architecture_name: "Air Traffic and Aerial City Vehicles"
+  status: "draft"
+  core_blocks: []
+  incremental_releases: []
+  product_improvements: []
+  upgrade_branches: []

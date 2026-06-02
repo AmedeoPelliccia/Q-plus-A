@@ -1,12 +1,13 @@
-# AMPEL360 eWTW Radome — TRL and Upgradeability Example
+# AMPEL360 eWTW Radome — TRL, Upgradeability, and Evolutionary Acquisition Example
 #
 # PROGRAMME-SPECIFIC EXAMPLE — NOT GENERIC ARCHITECTURE TRUTH.
 #
 # This file is an illustrative, programme-specific example for AMPEL360 eWTW
 # placed under ATLAS 050-059 (Primary Structures and Programme Interfaces).
-# It demonstrates how programme TRL and upgrade records relate to the generic
-# Q+ATLANTIDE governance. The generic architecture registers in this folder
-# (TRL-register.yaml, upgradeability-register.yaml) remain programme-agnostic.
+# It demonstrates how programme TRL, upgrade, and evolutionary block records
+# relate to the generic Q+ATLANTIDE governance. The generic architecture
+# registers in this folder (TRL-register.yaml, upgradeability-register.yaml,
+# evolutionary-acquisition-register.yaml) remain programme-agnostic.
 #
 # Architecture-level TRL is programme-agnostic (QATL-TRL-PROGRAMME-001).
 # Programme-specific TRL values are recorded here with explicit effectivity.
@@ -62,3 +63,28 @@ upgrade_candidate:
     starts_at: "LC-A / RADOME-UPG-001-REV-A0"
     next_release_gate: "RADOME-UPG-001-REV-A_RELEASED"
     baseline_relation: "candidate replacement or modification to RADOME-CONF-A"
+
+evolutionary_block_example:
+  block_id: "AMPEL360-eWTW-FWD-FUSELAGE-BLOCK-A"
+  block_name: "Forward Fuselage Concept Block"
+  programme: "AMPEL360"
+  product: "eWTW"
+  characterization: "core_block"
+  baseline_type: "allocated"
+  related_pbs:
+    - "eWTW-PBS-10-10-10"
+    - "eWTW-PBS-10-10-10-10-10"
+  current_lifecycle: "LC-A / RADOME-REV-A1"
+  likely_to_evolve:
+    - "radome geometry"
+    - "RF-transparent material stack"
+    - "lightning diverter interface"
+    - "radome-to-backup structure attachment"
+    - "weather radar clearance volume"
+  upgrade_candidates:
+    - upgrade_id: "RADOME-UPG-001"
+      upgrade_name: "Recyclable Low-Loss Dielectric Core"
+      current_trl: "TRL-5"
+      target_trl_for_insertion: "TRL-6"
+      starts_at: "LC-A / RADOME-UPG-001-REV-A0"
+      baseline_relation: "candidate modification to RADOME-CONF-A"
