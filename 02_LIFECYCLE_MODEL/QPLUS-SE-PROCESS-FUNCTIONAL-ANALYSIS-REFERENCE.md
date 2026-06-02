@@ -2,8 +2,8 @@
 document_id: QPLUS-SE-PROCESS-FUNCTIONAL-ANALYSIS-REFERENCE
 title: "Systems Engineering Process & Functional Analysis — Reference Diagrams"
 register: Q-plus
-architecture: OPTIONS_ARCHITECTURE
-options_axis: S-Standards
+parent_section: 02_LIFECYCLE_MODEL
+path: 02_LIFECYCLE_MODEL/QPLUS-SE-PROCESS-FUNCTIONAL-ANALYSIS-REFERENCE.md
 governance_class: methodology-reference
 status: draft
 version: "0.1.0"
@@ -184,7 +184,7 @@ Each diagram is the method behind a controlled rule already in the repository.
 | Field | Value |
 |---|---|
 | Document ID | `QPLUS-SE-PROCESS-FUNCTIONAL-ANALYSIS-REFERENCE` |
-| Register | Q-plus / OPTIONS (S-Standards) |
+| Location | `02_LIFECYCLE_MODEL/` (methodology consumed by the lifecycle model) |
 | Source | DAU *Systems Engineering Fundamentals*, Jan 2001 (public domain) |
 | Diagrams | SE Process, FFBD format, IDEF0 box, applied FFBD micro-example |
 | Version | 0.1.0 |
