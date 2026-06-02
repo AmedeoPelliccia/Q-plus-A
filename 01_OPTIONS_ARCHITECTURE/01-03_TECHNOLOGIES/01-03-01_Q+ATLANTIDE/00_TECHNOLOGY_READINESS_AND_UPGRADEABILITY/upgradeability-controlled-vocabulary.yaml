@@ -1,0 +1,69 @@
+# Upgradeability Controlled Vocabulary
+#
+# Controlled vocabulary for technology upgradeability across Q+ATLANTIDE.
+# Q+ATLANTIDE is the programme-agnostic architecture-taxonomy ecosystem.
+# Q+ATLANTIDE1000 is the controlled 000-999 identification schema.
+
+upgradeability_controlled_vocabulary:
+  scheme: "Q+ATLANTIDE-UPGRADEABILITY"
+  status: "controlled"
+
+  decision_status:
+    - id: "candidate"
+      meaning: "Alternative technology identified as a possible future substitution."
+    - id: "watched"
+      meaning: "Alternative technology actively tracked for maturity progress."
+    - id: "selected"
+      meaning: "Alternative technology selected for a controlled upgrade revision cycle."
+    - id: "rejected"
+      meaning: "Alternative technology assessed and not retained."
+    - id: "inserted"
+      meaning: "Alternative technology inserted into a controlled product baseline after all gates satisfied."
+    - id: "superseded"
+      meaning: "Alternative technology replaced by a later alternative or baseline change."
+
+  upgrade_cycle_status:
+    - id: "concept"
+      meaning: "Upgrade revision cycle started at a concept baseline (LC-A / REV-A0)."
+    - id: "iterating"
+      meaning: "Upgrade revision cycle iterating through controlled revisions."
+    - id: "released"
+      meaning: "Upgrade revision cycle reached a controlled release gate."
+    - id: "inserted"
+      meaning: "Upgrade released and inserted into the product baseline."
+    - id: "rejected"
+      meaning: "Upgrade revision cycle stopped without insertion."
+    - id: "superseded"
+      meaning: "Upgrade superseded by a later upgrade or baseline change."
+
+  baseline_relation:
+    - id: "replacement"
+    - id: "modification"
+    - id: "optional block upgrade"
+    - id: "service bulletin candidate"
+
+  benefit_scale:
+    - "low"
+    - "medium"
+    - "high"
+
+  benefit_dimensions:
+    - "sustainability"
+    - "efficiency"
+    - "circularity"
+    - "weight_reduction"
+    - "maintainability"
+    - "safety"
+
+controlled_statement: >
+  A technology upgrade becomes eligible through TRL maturity.
+  It becomes installable only through LC/REV maturity.
+
+upgradeability_rule:
+  id: QATL-UPGRADE-001
+  rule: >
+    A Q+ATLANTIDE node may identify ready-to-use baseline technologies and
+    future alternative technologies. Future alternatives shall not replace the
+    baseline in a controlled programme configuration unless the target TRL,
+    interface compatibility, evidence delta, lifecycle insertion gate, and
+    configuration approval are satisfied.

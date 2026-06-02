@@ -1,0 +1,9 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "ATACV"
+  master_range: "700-799"
+  code_range: "750-759_Legal-Regulatory-and-Certification-Architecture"
+  architecture_name: "Air Traffic and Aerial City Vehicles"
+  status: "draft"
+  assessments: []

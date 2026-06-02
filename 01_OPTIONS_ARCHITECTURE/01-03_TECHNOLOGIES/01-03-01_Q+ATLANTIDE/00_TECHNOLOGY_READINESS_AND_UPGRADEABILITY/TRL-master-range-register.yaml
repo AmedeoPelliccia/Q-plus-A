@@ -1,0 +1,56 @@
+# TRL Master Range Register
+#
+# Programme-agnostic index of TRL and upgradeability registers for each
+# Q+ATLANTIDE master range (architecture band).
+#
+# Q+ATLANTIDE  = architecture-taxonomy ecosystem (programme-agnostic).
+# Q+ATLANTIDE1000 = controlled 000-999 identification schema.
+#
+# Architecture-level TRL values remain programme-agnostic. Programme-specific
+# TRL values must be recorded separately with programme/product/configuration/
+# lifecycle/evidence effectivity (QATL-TRL-PROGRAMME-001).
+
+trl_master_range_register:
+  scheme: "Q+ATLANTIDE1000"
+  status: "draft"
+  master_ranges:
+    - architecture_code: "ATLAS"
+      master_range: "000-099"
+      architecture_name: "Aircraft Top Level Architecture Schema/System"
+      register_path: "../000-099_ATLAS/"
+    - architecture_code: "STA"
+      master_range: "100-199"
+      architecture_name: "Space Technology Architecture"
+      register_path: "../100-199_STA/"
+    - architecture_code: "DTTA"
+      master_range: "200-299"
+      architecture_name: "Defence Technology Type Architecture"
+      register_path: "../200-299_DTTA/"
+    - architecture_code: "DTCEC"
+      master_range: "300-399"
+      architecture_name: "Digital Twin, Cloud, Edge and AI Architecture"
+      register_path: "../300-399_DTCEC/"
+    - architecture_code: "EPTA"
+      master_range: "400-499"
+      architecture_name: "Energy and Propulsion Technology Architecture"
+      register_path: "../400-499_EPTA/"
+    - architecture_code: "AMTA"
+      master_range: "500-599"
+      architecture_name: "Advanced Materials, Bio and Nanotechnology Architecture"
+      register_path: "../500-599_AMTA/"
+    - architecture_code: "OGATA"
+      master_range: "600-699"
+      architecture_name: "On-Ground Automation Technology Architecture"
+      register_path: "../600-699_OGATA/"
+    - architecture_code: "ATACV"
+      master_range: "700-799"
+      architecture_name: "Air Traffic and Aerial City Vehicles"
+      register_path: "../700-799_ATACV/"
+    - architecture_code: "CYB"
+      master_range: "800-899"
+      architecture_name: "Cybersecurity Architecture"
+      register_path: "../800-899_CYB/"
+    - architecture_code: "QCSAA"
+      master_range: "900-999"
+      architecture_name: "Quantum Computing and Sentient Agency Architecture"
+      register_path: "../900-999_QCSAA/"

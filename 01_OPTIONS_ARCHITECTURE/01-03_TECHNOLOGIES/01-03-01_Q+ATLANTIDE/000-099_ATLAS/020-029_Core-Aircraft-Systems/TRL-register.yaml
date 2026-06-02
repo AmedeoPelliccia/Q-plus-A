@@ -1,0 +1,9 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "ATLAS"
+  master_range: "000-099"
+  code_range: "020-029_Core-Aircraft-Systems"
+  architecture_name: "Aircraft Top Level Architecture Schema/System"
+  status: "draft"
+  assessments: []

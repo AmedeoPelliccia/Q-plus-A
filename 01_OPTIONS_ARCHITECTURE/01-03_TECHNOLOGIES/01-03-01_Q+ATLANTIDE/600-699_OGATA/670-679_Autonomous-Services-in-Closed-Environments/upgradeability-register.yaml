@@ -1,0 +1,11 @@
+# Upgradeability register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+upgradeability_register:
+  architecture_code: "OGATA"
+  master_range: "600-699"
+  code_range: "670-679_Autonomous-Services-in-Closed-Environments"
+  architecture_name: "On-Ground Automation Technology Architecture"
+  status: "draft"
+  baseline_technologies: []
+  alternative_technologies: []
+  upgrade_revision_cycles: []
