@@ -1,0 +1,11 @@
+# Evolutionary acquisition register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+evolutionary_acquisition_register:
+  architecture_code: "CYB"
+  master_range: "800-899"
+  architecture_name: "Cybersecurity Architecture"
+  status: "draft"
+  core_blocks: []
+  incremental_releases: []
+  product_improvements: []
+  upgrade_branches: []

@@ -1,0 +1,90 @@
+# AMPEL360 eWTW Radome — TRL, Upgradeability, and Evolutionary Acquisition Example
+#
+# PROGRAMME-SPECIFIC EXAMPLE — NOT GENERIC ARCHITECTURE TRUTH.
+#
+# This file is an illustrative, programme-specific example for AMPEL360 eWTW
+# placed under ATLAS 050-059 (Primary Structures and Programme Interfaces).
+# It demonstrates how programme TRL, upgrade, and evolutionary block records
+# relate to the generic Q+ATLANTIDE governance. The generic architecture
+# registers in this folder (TRL-register.yaml, upgradeability-register.yaml,
+# evolutionary-acquisition-register.yaml) remain programme-agnostic.
+#
+# Architecture-level TRL is programme-agnostic (QATL-TRL-PROGRAMME-001).
+# Programme-specific TRL values are recorded here with explicit effectivity.
+
+example_metadata:
+  type: "programme-specific-example"
+  programme: "AMPEL360 eWTW"
+  product: "Radome"
+  architecture_reference: "ATLAS 050-059 (Primary Structures and Programme Interfaces)"
+  note: >
+    Example only. Not generic architecture truth. TRL values are illustrative
+    and provisional unless supported by AMPEL360-specific evidence.
+
+technology_items:
+  - technology_name: "Axisymmetric conceptual radome outer mould line"
+    trl_current: "TRL-2"
+    rationale: "Concept and CAD placeholder formulated; no test evidence."
+  - technology_name: "RF-transparent sandwich radome wall"
+    trl_current: "TRL-3"
+    rationale: "Known technology class, but AMPEL360 eWTW material stack not yet validated."
+  - technology_name: "Lightning-diverter bonding provisions"
+    trl_current: "TRL-2"
+    rationale: "Interface concept described; no AMPEL360-specific continuity test evidence yet."
+  - technology_name: "Wide-tube elliptical loft radome geometry"
+    trl_current: "TRL-2"
+    rationale: "Concept planned for LC-B / REV-B0; not yet modelled in REV-A1."
+
+upgrade_candidate:
+  upgrade_id: "RADOME-UPG-001"
+  upgrade_name: "Recyclable Low-Loss Dielectric Core"
+  baseline_configuration: "RADOME-CONF-A"
+  baseline_technology: "Conventional RF-transparent sandwich laminate"
+  qatl_reference: "ATLAS-053 / AMTA material node TBD"
+  current_trl: "TRL-5"
+  target_trl_for_insertion: "TRL-6"
+  decision_status: "watched"
+  expected_benefit:
+    sustainability: "high"
+    efficiency: "medium"
+    circularity: "high"
+    weight_reduction: "medium"
+    maintainability: "medium"
+    safety: "medium"
+  compatibility_constraints:
+    - "radome backup mechanical interface"
+    - "RF transparency"
+    - "bird-strike resistance"
+    - "lightning diverter compatibility"
+    - "moisture ingress resistance"
+    - "certification basis"
+  upgrade_revision_cycle:
+    trigger: "target TRL reached"
+    starts_at: "LC-A / RADOME-UPG-001-REV-A0"
+    next_release_gate: "RADOME-UPG-001-REV-A_RELEASED"
+    baseline_relation: "candidate replacement or modification to RADOME-CONF-A"
+
+evolutionary_block_example:
+  block_id: "AMPEL360-eWTW-FWD-FUSELAGE-BLOCK-A"
+  block_name: "Forward Fuselage Concept Block"
+  programme: "AMPEL360"
+  product: "eWTW"
+  characterization: "core_block"
+  baseline_type: "allocated"
+  related_pbs:
+    - "eWTW-PBS-10-10-10"
+    - "eWTW-PBS-10-10-10-10-10"
+  current_lifecycle: "LC-A / RADOME-REV-A1"
+  likely_to_evolve:
+    - "radome geometry"
+    - "RF-transparent material stack"
+    - "lightning diverter interface"
+    - "radome-to-backup structure attachment"
+    - "weather radar clearance volume"
+  upgrade_candidates:
+    - upgrade_id: "RADOME-UPG-001"
+      upgrade_name: "Recyclable Low-Loss Dielectric Core"
+      current_trl: "TRL-5"
+      target_trl_for_insertion: "TRL-6"
+      starts_at: "LC-A / RADOME-UPG-001-REV-A0"
+      baseline_relation: "candidate modification to RADOME-CONF-A"

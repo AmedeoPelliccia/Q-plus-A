@@ -1,0 +1,12 @@
+# Evolutionary acquisition register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+evolutionary_acquisition_register:
+  architecture_code: "ATLAS"
+  master_range: "000-099"
+  code_range: "030-039_Protection-and-Mechanical-Systems"
+  architecture_name: "Aircraft Top Level Architecture Schema/System"
+  status: "draft"
+  core_blocks: []
+  incremental_releases: []
+  product_improvements: []
+  upgrade_branches: []

@@ -1,0 +1,11 @@
+# Upgradeability register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+upgradeability_register:
+  architecture_code: "DTTA"
+  master_range: "200-299"
+  code_range: "230-239_Defence-Robotics-and-Autonomous-Systems"
+  architecture_name: "Defence Technology Type Architecture"
+  status: "draft"
+  baseline_technologies: []
+  alternative_technologies: []
+  upgrade_revision_cycles: []

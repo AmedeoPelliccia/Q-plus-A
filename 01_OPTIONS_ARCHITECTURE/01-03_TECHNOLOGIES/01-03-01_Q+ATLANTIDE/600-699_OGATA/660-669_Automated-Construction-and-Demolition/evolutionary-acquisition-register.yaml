@@ -1,0 +1,12 @@
+# Evolutionary acquisition register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+evolutionary_acquisition_register:
+  architecture_code: "OGATA"
+  master_range: "600-699"
+  code_range: "660-669_Automated-Construction-and-Demolition"
+  architecture_name: "On-Ground Automation Technology Architecture"
+  status: "draft"
+  core_blocks: []
+  incremental_releases: []
+  product_improvements: []
+  upgrade_branches: []

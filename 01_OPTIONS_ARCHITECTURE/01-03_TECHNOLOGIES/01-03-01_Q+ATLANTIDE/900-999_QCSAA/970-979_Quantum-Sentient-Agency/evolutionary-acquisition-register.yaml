@@ -1,0 +1,12 @@
+# Evolutionary acquisition register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+evolutionary_acquisition_register:
+  architecture_code: "QCSAA"
+  master_range: "900-999"
+  code_range: "970-979_Quantum-Sentient-Agency"
+  architecture_name: "Quantum Computing and Sentient Agency Architecture"
+  status: "draft"
+  core_blocks: []
+  incremental_releases: []
+  product_improvements: []
+  upgrade_branches: []

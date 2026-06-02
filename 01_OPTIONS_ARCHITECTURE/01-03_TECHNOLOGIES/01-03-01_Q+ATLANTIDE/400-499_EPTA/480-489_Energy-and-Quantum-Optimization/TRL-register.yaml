@@ -1,0 +1,9 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "EPTA"
+  master_range: "400-499"
+  code_range: "480-489_Energy-and-Quantum-Optimization"
+  architecture_name: "Energy and Propulsion Technology Architecture"
+  status: "draft"
+  assessments: []

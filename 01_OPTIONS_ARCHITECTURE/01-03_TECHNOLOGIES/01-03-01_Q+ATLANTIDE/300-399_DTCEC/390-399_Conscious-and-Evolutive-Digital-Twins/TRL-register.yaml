@@ -1,0 +1,9 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "DTCEC"
+  master_range: "300-399"
+  code_range: "390-399_Conscious-and-Evolutive-Digital-Twins"
+  architecture_name: "Digital Twin, Cloud, Edge and AI Architecture"
+  status: "draft"
+  assessments: []

@@ -1,0 +1,8 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "QCSAA"
+  master_range: "900-999"
+  architecture_name: "Quantum Computing and Sentient Agency Architecture"
+  status: "draft"
+  assessments: []

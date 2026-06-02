@@ -1,0 +1,11 @@
+# Upgradeability register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+upgradeability_register:
+  architecture_code: "DTCEC"
+  master_range: "300-399"
+  code_range: "310-319_Sensors-and-IoT-for-Digital-Twins"
+  architecture_name: "Digital Twin, Cloud, Edge and AI Architecture"
+  status: "draft"
+  baseline_technologies: []
+  alternative_technologies: []
+  upgrade_revision_cycles: []

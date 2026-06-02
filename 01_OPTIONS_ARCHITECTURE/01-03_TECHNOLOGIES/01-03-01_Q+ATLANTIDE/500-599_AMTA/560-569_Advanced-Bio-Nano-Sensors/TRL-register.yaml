@@ -1,0 +1,9 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "AMTA"
+  master_range: "500-599"
+  code_range: "560-569_Advanced-Bio-Nano-Sensors"
+  architecture_name: "Advanced Materials, Bio and Nanotechnology Architecture"
+  status: "draft"
+  assessments: []

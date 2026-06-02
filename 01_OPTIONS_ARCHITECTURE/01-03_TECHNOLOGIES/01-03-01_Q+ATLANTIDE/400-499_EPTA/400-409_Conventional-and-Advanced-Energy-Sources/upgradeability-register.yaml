@@ -1,0 +1,11 @@
+# Upgradeability register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+upgradeability_register:
+  architecture_code: "EPTA"
+  master_range: "400-499"
+  code_range: "400-409_Conventional-and-Advanced-Energy-Sources"
+  architecture_name: "Energy and Propulsion Technology Architecture"
+  status: "draft"
+  baseline_technologies: []
+  alternative_technologies: []
+  upgrade_revision_cycles: []
