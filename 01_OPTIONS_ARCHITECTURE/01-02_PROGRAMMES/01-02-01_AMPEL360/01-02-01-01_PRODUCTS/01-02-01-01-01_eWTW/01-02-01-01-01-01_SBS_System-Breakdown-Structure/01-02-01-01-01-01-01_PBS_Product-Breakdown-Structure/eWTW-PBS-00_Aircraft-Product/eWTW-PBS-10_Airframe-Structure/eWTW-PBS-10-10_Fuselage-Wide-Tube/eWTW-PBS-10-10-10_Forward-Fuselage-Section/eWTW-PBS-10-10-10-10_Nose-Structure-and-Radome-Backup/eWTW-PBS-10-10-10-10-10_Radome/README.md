@@ -206,7 +206,7 @@ References are edges registered through the programme impact study; no system co
 ### 4.6 Traceability Anchors
 
 - **WBS / CBS / RBS:** layup, cure, RF verification, bird-strike test, and erosion-qualification work packages, costs, and risks anchor to `eWTW-PBS-10-10-10-10-10`.
-- **Requirements:** allocated requirements — RF transmission/boresight (from WXR), bird strike, lightning Zone 1A, erosion, moisture — trace to this PBS-ID.
+- **Requirements:** allocated requirements — RF transmission/boresight (from WXR), bird strike, lightning Zone 1A, erosion, moisture — trace to this PBS-ID. The first controlled requirements baseline for the conceptual CAD state is recorded as a revisioned ReqBS artefact: [`01_REQUIREMENTS/REV-A1/ReqBS-RADOME-REV-A1.md`](01_REQUIREMENTS/REV-A1/ReqBS-RADOME-REV-A1.md).
 - **PUB:** radome description (`…-040A`), IPD (`…-941A`), remove/install (`…-520A/720A`), and bonding/lightning check (`…-258A`) data modules publish this element.[^pub]
 - **Evidence (IEF):** RF range test, bird-strike test, lightning test, and erosion-qualification records anchor to this PBS-ID.
 

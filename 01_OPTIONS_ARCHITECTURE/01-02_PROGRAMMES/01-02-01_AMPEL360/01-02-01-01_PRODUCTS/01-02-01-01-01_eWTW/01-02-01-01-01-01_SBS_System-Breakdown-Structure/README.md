@@ -31,9 +31,13 @@ The SBS is the controlled decomposition layer used to organize the aircraft prod
 - risk breakdown;
 - logistic breakdown;
 - evidence breakdown;
-- interface and installation breakdown.
+- interface and installation breakdown;
+- requirements breakdown;
+- technical performance measurement.
 
 This structure is intended to support deterministic architecture development, certification-oriented traceability, technical-publication readiness, and future S1000D / CSDB mapping.
+
+> **Revisioned breakdown principle.** The SBS owns the breakdown *family* and may define generic architecture patterns. The authoritative engineering truth for a physical product item — its `ReqBS / CBS / RBS / IBS / EBS` state — is recorded **per PBS item revision** (`REV-X`), because requirements and configuration evolve across revisions. LC folders control lifecycle maturity gates, not the internal breakdown truth.
 
 ---
 
@@ -62,6 +66,8 @@ This structure is intended to support deterministic architecture development, ce
 ├── 01-02-01-01-01-01-06_LBS_Logistic-Breakdown-Structure/
 ├── 01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/
 ├── 01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/
+├── 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/
+├── 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/
 ├── .gitkeep
 └── README.md
 ```
@@ -80,6 +86,8 @@ This structure is intended to support deterministic architecture development, ce
 | `01-02-01-01-01-01-06` | `LBS_Logistic-Breakdown-Structure`                   | Logistic decomposition: supportability, spares, maintainability, ground support equipment, training, documentation, and service operations.           |
 | `01-02-01-01-01-01-07` | `EBS_Evidence-Breakdown-Structure`                   | Evidence decomposition: requirements evidence, design evidence, verification evidence, compliance evidence, test evidence, and publication evidence.  |
 | `01-02-01-01-01-01-08` | `IBS_Interface-and-Installation-Breakdown-Structure` | Interface and installation decomposition: mechanical, electrical, digital, thermal, functional, physical, installation, and aircraft-zone interfaces. |
+| `01-02-01-01-01-01-09` | `ReqBS_Requirements-Breakdown-Structure`            | Requirements decomposition: controlled `ReqBS-01..15` taxonomy (customer expectations, constraints, scenarios, MOEs, boundaries, interfaces, environments, lifecycle, functional, performance, modes, TPMs, physical characteristics, HSI). Authoritative state recorded **per PBS item revision**. |
+| `01-02-01-01-01-01-10` | `TPMS_Technical-Performance-Measurement-Structure`  | Technical performance measurement: controlled TPMs (mass, RF loss, boresight error, bonding resistance, erosion life, …) with target, threshold, current estimate, and margin; tracks `ReqBS-13` per PBS item revision. |
 
 ---
 
@@ -138,6 +146,8 @@ Each breakdown structure shall preserve traceability to the others.
 | LBS         | Supportability and logistics requirements                            |
 | EBS         | Verification, validation, compliance, and publication evidence       |
 | IBS         | Interfaces, installation constraints, zones, and integration records |
+| ReqBS       | Requirements (`ReqBS-01..15`), revisioned per PBS item baseline       |
+| TPMS        | Technical performance measures, targets, thresholds, and margins     |
 
 The intended traceability chain is:
 
@@ -166,7 +176,39 @@ Requirement
 6. Any function introduced in FBS shall be allocated to at least one physical or logical product element.
 7. Any certification-relevant claim shall be linked to EBS.
 8. Any installation-sensitive item shall be linked to IBS.
-9. S1000D / CSDB mapping shall only be generated from controlled SBS/PBS/FBS baselines.
+9. Any requirement shall be controlled as a revisioned `ReqBS` artefact linked to a PBS item revision (`REV-X`), never as static lifecycle-folder content.
+10. Any controlled technical performance measure shall be tracked under TPMS with a target, threshold, and current estimate, tracing to its `ReqBS-13` declaration.
+11. S1000D / CSDB mapping shall only be generated from controlled SBS/PBS/FBS baselines.
+
+### 8.1 Revisioned breakdown rules
+
+```yaml
+revisioned_breakdown_structure_rule:
+  id: SBS-REV-BREAKDOWN-001
+  name: "Revisioned Breakdown Structures Rule"
+  rule: >
+    Each SBS shall include controlled breakdown structures for product,
+    function, work, cost, risk, logistics, evidence, interfaces, requirements,
+    and technical performance measurement. These structures may define generic
+    architecture patterns at SBS level, but their authoritative state for a
+    physical product item shall be recorded per PBS item revision. Therefore,
+    each PBS revision shall maintain its own revision-specific ReqBS, IBS, CBS,
+    RBS, EBS, BOM, CAD, and publication references as applicable.
+```
+
+```yaml
+requirements_evolution_rule:
+  id: REQBS-REV-001
+  name: "Requirements Evolve by Product Revision"
+  rule: >
+    Requirements shall not be treated as static lifecycle-folder content.
+    Requirements shall be controlled as revisioned artefacts linked to the
+    applicable PBS item, product configuration, and lifecycle maturity state.
+    A change in requirements that affects geometry, interfaces, cost, risk,
+    evidence, certification, or operations shall create or update the
+    corresponding REV-X ReqBS and trigger impact assessment across IBS, CBS,
+    RBS, EBS, BOM, CAD, and PUB artefacts.
+```
 
 ---
 
@@ -183,6 +225,8 @@ rbs_defined: false
 lbs_defined: false
 ebs_defined: false
 ibs_defined: false
+reqbs_defined: false
+tpms_defined: false
 s1000d_mapping_ready: false
 configuration_locked: false
 ```
@@ -203,7 +247,7 @@ configuration_locked: false
 
 ## 11. Short Definition
 
-The **AMPEL360 eWTW SBS** is the controlled product-level breakdown container for the **100-passenger Electric Wide Tube-and-Wing aircraft option**, organizing physical, functional, work, cost, risk, logistic, evidence, and interface structures into a traceable architecture baseline.
+The **AMPEL360 eWTW SBS** is the controlled product-level breakdown container for the **100-passenger Electric Wide Tube-and-Wing aircraft option**, organizing physical, functional, work, cost, risk, logistic, evidence, interface, requirements, and technical-performance-measurement structures into a traceable architecture baseline whose authoritative engineering truth is revisioned per PBS item.
 
 ```
 ```
