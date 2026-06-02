@@ -16,9 +16,25 @@ reqbs_id: ReqBS-RADOME-REV-A1
 revision: RADOME-REV-A1
 lifecycle_stage: LC-A
 governance_class: baseline
-version: "1.0.0"
+version: "0.1.0"
 status: draft
 language: en
+effectivity:
+  product: eWTW
+  configuration: baseline
+  msn_range: MSN-001..050
+  status: active
+requirements_authority:
+  owner: Q-STRUCTURES
+  supporting_authorities:
+    - Q-DATAGOV
+    - Q-AIR
+    - Q-SCIRES
+  approval_status: unapproved
+related_revision_package:
+  cad_revision: RADOME-REV-A1
+  cad_record: "cad/freecad/LC-A_Concept-Design/REV-A1/Radome-CAD-Record.md"
+  publication_040: "pub/040_descriptive/DMC-AMPEL360-A-53-10-10-00A-040A-D_Radome-Description.xml"
 ---
 
 # eWTW · PBS-10-10-10-10-10 — Radome ReqBS Baseline (REV-A1)
@@ -30,6 +46,8 @@ language: en
 - **Item:** `eWTW-PBS-10-10-10-10-10` (Radome)
 - **Part number:** `PN-eWTW-5310-0001`
 - **Revision:** `RADOME-REV-A1` · **Lifecycle stage:** `LC-A — Conceptual Design`
+- **Effectivity:** eWTW · baseline · MSN-001..050 · active
+- **Requirements authority:** `Q-STRUCTURES` (supporting: `Q-DATAGOV`, `Q-AIR`, `Q-SCIRES`) · approval `unapproved`
 - **Record:** [`ReqBS-RADOME-REV-A1.yaml`](ReqBS-RADOME-REV-A1.yaml)
 
 ---
@@ -102,14 +120,16 @@ requirements_evolution_rule:        REQBS-REV-001            # requirements are 
 | PBS ID | `eWTW-PBS-10-10-10-10-10` |
 | Part number | `PN-eWTW-5310-0001` |
 | Revision · Stage | `RADOME-REV-A1` · `LC-A` |
-| Version | 1.0.0 |
+| Effectivity | eWTW · baseline · MSN-001..050 · active |
+| Requirements authority | `Q-STRUCTURES` · approval `unapproved` |
+| Version | 0.1.0 |
 | Status | draft |
 
 **Change log.**
 
 | Version | Date | Author / Division | Change |
 |---|---|---|---|
-| 1.0.0 | 2026-06-02 | Q-STRUCTURES | Initial controlled ReqBS baseline for the radome conceptual CAD state (`RADOME-REV-A1`). |
+| 0.1.0 | 2026-06-02 | Q-STRUCTURES | Initial draft ReqBS baseline for the radome conceptual CAD state (`RADOME-REV-A1`). |
 
 ## 7. References
 
