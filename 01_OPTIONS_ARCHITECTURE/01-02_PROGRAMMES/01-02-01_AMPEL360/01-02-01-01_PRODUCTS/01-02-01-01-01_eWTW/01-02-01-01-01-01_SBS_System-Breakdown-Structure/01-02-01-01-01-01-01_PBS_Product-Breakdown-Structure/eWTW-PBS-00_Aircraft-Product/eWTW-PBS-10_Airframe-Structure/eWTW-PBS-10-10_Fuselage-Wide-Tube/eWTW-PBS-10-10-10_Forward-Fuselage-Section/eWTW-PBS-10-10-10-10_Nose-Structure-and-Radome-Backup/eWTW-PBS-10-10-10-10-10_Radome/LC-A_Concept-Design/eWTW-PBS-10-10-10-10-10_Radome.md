@@ -25,7 +25,7 @@ related_files:
   geometry_material: geometry-material-spec.md
   evidence: evidence/evidence-register.yaml
   pub: pub/README.md
-  cad_native: cad/freecad/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+  cad_native: REV-A1/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd
   cad_step: cad/step/eWTW-PBS-10-10-10-10-10-Radome.step
   drawing: drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf
 ---
@@ -121,7 +121,7 @@ See `bom.yaml` and `bom.csv` for full BOM records.
 See [`geometry-material-spec.md`](geometry-material-spec.md) for wall construction baseline, dielectric properties, interface envelopes, and verification summary. All dimensional values are TBD pending RF and structural substantiation.
 
 **CAD authority:**
-- Native model: `cad/freecad/eWTW-PBS-10-10-10-10-10-Radome.FCStd`
+- Native model: `REV-A1/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd`
 - Exchange: `cad/step/eWTW-PBS-10-10-10-10-10-Radome.step`
 - Drawing: `drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf`
 
@@ -168,7 +168,7 @@ See [`pub/README.md`](pub/README.md).
 | PN | `PN-eWTW-5310-0001` | `pnr.yaml` |
 | BOM | `BOM-eWTW-PBS-10-10-10-10-10` | `bom.yaml` / `bom.csv` |
 | Geometry & material | `AMPEL360-eWTW-PBS-10-10-10-10-10-GMS` | `geometry-material-spec.md` |
-| CAD native | `eWTW-PBS-10-10-10-10-10-Radome.FCStd` | `cad/freecad/` |
+| CAD native | `eWTW-PBS-10-10-10-10-10-Radome.FCStd` | `REV-A1/FreeCAD/` |
 | CAD exchange | `eWTW-PBS-10-10-10-10-10-Radome.step` | `cad/step/` |
 | Drawing | `eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf` | `drawings/` |
 | Evidence | `EVID-eWTW-PBS-10-10-10-10-10` | `evidence/evidence-register.yaml` |
