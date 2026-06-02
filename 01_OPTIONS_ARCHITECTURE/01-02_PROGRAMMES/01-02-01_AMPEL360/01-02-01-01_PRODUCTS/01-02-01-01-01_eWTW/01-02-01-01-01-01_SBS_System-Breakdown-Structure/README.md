@@ -251,3 +251,14 @@ The **AMPEL360 eWTW SBS** is the controlled product-level breakdown container fo
 
 ```
 ```
+
+---
+
+## 12. References
+
+The SBS breakdown family and its governance rules draw on standard systems-engineering practice:
+
+[^sef]: Defense Acquisition University (DAU) Press. *Systems Engineering Fundamentals*. Fort Belvoir, VA, January 2001. — Ch. 4 *Requirements Analysis* (15 requirements analysis task areas behind the ReqBS taxonomy); Ch. 9 *Work Breakdown Structure* (WBS); Ch. 14 *Metrics* (TPMs).
+[^ieee1220]: IEEE Std 1220, *IEEE Standard for Application and Management of the Systems Engineering Process*.
+[^iso15288]: ISO/IEC/IEEE 15288, *Systems and software engineering — System life cycle processes*.
+[^incose]: INCOSE. *Systems Engineering Handbook: A Guide for System Life Cycle Processes and Activities*.

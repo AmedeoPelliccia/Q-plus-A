@@ -60,7 +60,7 @@ The baseline records one or more requirements per controlled class. Radome examp
 |---|---|---|
 | `ReqBS-01` | Customer Expectations | Maintain aerodynamic continuity and support weather-radar operation. |
 | `ReqBS-02` | Project and Enterprise Constraints | Use open FreeCAD-compatible CAD records and repository traceability. |
-| `ReqBS-03` | External Constraints | CS-25, lightning, bird strike, maintainability, environmental constraints. |
+| `ReqBS-03` | External Constraints | CS-25,[^cs25] lightning, bird strike, maintainability, environmental constraints. |
 | `ReqBS-04` | Operational Scenarios | Normal flight, rain, lightning exposure, bird strike, maintenance access. |
 | `ReqBS-05` | Measures of Effectiveness | RF transparency, aerodynamic continuity, maintainability, damage tolerance. |
 | `ReqBS-06` | System Boundaries | Radome shell and provisions only; WXR and LPS are referenced systems. |
@@ -74,7 +74,7 @@ The baseline records one or more requirements per controlled class. Radome examp
 | `ReqBS-14` | Physical Characteristics | Length, base envelope, wall stack, attachment geometry. |
 | `ReqBS-15` | Human Systems Integration | Safe maintainability, access, tool clearance, technician handling. |
 
-`ReqBS-13` declarations are tracked as quantified targets and margins under the TPMS (`…-10_TPMS_Technical-Performance-Measurement-Structure/`).
+`ReqBS-13` declarations are tracked as quantified targets and margins under the TPMS (`…-10_TPMS_Technical-Performance-Measurement-Structure/`). The `ReqBS-01..15` class set is the 15 IEEE P1220 requirements analysis task areas.[^sef][^ieee1220]
 
 ## 4. Traceability
 
@@ -110,3 +110,9 @@ requirements_evolution_rule:        REQBS-REV-001            # requirements are 
 | Version | Date | Author / Division | Change |
 |---|---|---|---|
 | 1.0.0 | 2026-06-02 | Q-STRUCTURES | Initial controlled ReqBS baseline for the radome conceptual CAD state (`RADOME-REV-A1`). |
+
+## 7. References
+
+[^sef]: Defense Acquisition University (DAU) Press. *Systems Engineering Fundamentals*. Fort Belvoir, VA, January 2001. — Ch. 4 *Requirements Analysis* (Fig. 4-3, the 15 requirements analysis task areas defining `ReqBS-01..15`).
+[^ieee1220]: IEEE Std 1220, *IEEE Standard for Application and Management of the Systems Engineering Process* — source of the 15 requirements analysis task areas.
+[^cs25]: EASA CS-25, *Certification Specifications and Acceptable Means of Compliance for Large Aeroplanes* — applicable airworthiness basis referenced by `ReqBS-03`.

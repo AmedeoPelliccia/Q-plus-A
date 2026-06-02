@@ -153,6 +153,23 @@ reqbs_record:
     revisioned_breakdown_rule: SBS-REV-BREAKDOWN-001
     requirements_evolution_rule: REQBS-REV-001
 
+  references:
+    - id: SEF-2001
+      title: Systems Engineering Fundamentals
+      publisher: Defense Acquisition University (DAU) Press
+      date: "2001-01"
+      note: >
+        Ch. 4 Requirements Analysis, Fig. 4-3 — the 15 requirements analysis
+        task areas that define the ReqBS-01..15 taxonomy.
+    - id: IEEE-1220
+      title: IEEE Standard for Application and Management of the Systems Engineering Process
+      publisher: IEEE
+      note: Source of the 15 requirements analysis task areas.
+    - id: EASA-CS-25
+      title: Certification Specifications and AMC for Large Aeroplanes (CS-25)
+      publisher: EASA
+      note: Applicable airworthiness basis referenced by ReqBS-03.
+
 change_log:
   - version: "1.0.0"
     date: "2026-06-02"

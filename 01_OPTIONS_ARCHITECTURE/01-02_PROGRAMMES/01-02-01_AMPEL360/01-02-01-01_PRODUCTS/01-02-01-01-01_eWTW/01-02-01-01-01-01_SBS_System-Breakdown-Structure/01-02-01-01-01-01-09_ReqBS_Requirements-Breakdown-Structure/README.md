@@ -94,6 +94,8 @@ Each PBS item revision records its requirements under the following controlled c
 | `ReqBS-14` | Physical Characteristics |
 | `ReqBS-15` | Human Systems Integration |
 
+This `ReqBS-01..15` taxonomy is the set of **15 IEEE P1220 Requirements Analysis task areas** (see Fig. 4-3 of *Systems Engineering Fundamentals* [^sef], and IEEE Std 1220 [^ieee1220]).
+
 `ReqBS-13 Technical Performance Measures` is the requirement-side entry point of the Technical Performance Measurement Structure (`…-10_TPMS`); TPM targets and tracking are controlled there.
 
 ---
@@ -145,3 +147,14 @@ The first controlled requirements baseline for the radome conceptual CAD state (
 ```
 
 It links upstream to `eWTW-PBS-10-10-10-10-10` and ATLAS-053, and downstream to the radome IBS, RBS, CBS, EBS, CAD (`RADOME-REV-A1`), and PUB artefacts.
+
+---
+
+## References
+
+The ReqBS taxonomy and governance model are grounded in the following systems-engineering sources:
+
+[^sef]: Defense Acquisition University (DAU) Press. *Systems Engineering Fundamentals*. Fort Belvoir, VA, January 2001. — Ch. 4 *Requirements Analysis* (Fig. 4-3, the 15 requirements analysis task areas that define `ReqBS-01..15`); Ch. 9 *Work Breakdown Structure*; Ch. 14 *Metrics*.
+[^ieee1220]: IEEE Std 1220, *IEEE Standard for Application and Management of the Systems Engineering Process* — original source of the 15 requirements analysis task areas (later carried into ISO/IEC 26702).
+[^iso15288]: ISO/IEC/IEEE 15288, *Systems and software engineering — System life cycle processes*.
+[^incose]: INCOSE. *Systems Engineering Handbook: A Guide for System Life Cycle Processes and Activities*.

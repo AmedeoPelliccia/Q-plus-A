@@ -72,3 +72,12 @@ For the radome (`eWTW-PBS-10-10-10-10-10`), the controlled TPMs include:
 | Erosion life | flight-hours | Rain-erosion durability |
 
 The radome TPM targets and margins are tracked against the revision baseline declared in `ReqBS-RADOME-REV-A1` (`ReqBS-13`).
+
+---
+
+## References
+
+[^sef]: Defense Acquisition University (DAU) Press. *Systems Engineering Fundamentals*. Fort Belvoir, VA, January 2001. — Ch. 4 *Requirements Analysis*, Task 13 *Technical Performance Measures (TPMs)*; Ch. 14 *Metrics*.
+[^ieee1220]: IEEE Std 1220, *IEEE Standard for Application and Management of the Systems Engineering Process* — defines Technical Performance Measures within the requirements analysis task areas.
+[^iso15288]: ISO/IEC/IEEE 15288, *Systems and software engineering — System life cycle processes*.
+[^incose]: INCOSE. *Systems Engineering Handbook: A Guide for System Life Cycle Processes and Activities* — Technical Performance Measurement.
