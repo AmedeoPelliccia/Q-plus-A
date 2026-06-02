@@ -1,0 +1,244 @@
+---
+# Requirements Breakdown Structure record — Radome REV-A1
+# First controlled requirements baseline for the radome conceptual CAD state (LC-A / RADOME-REV-A1).
+# Controlled under Q-plus / OPTIONS_ARCHITECTURE / AMPEL360 / eWTW PBS.
+# Authoritative requirement state is revisioned per PBS item (rule REQBS-REV-001).
+reqbs_record:
+  id: ReqBS-RADOME-REV-A1
+  item: eWTW-PBS-10-10-10-10-10
+  item_name: Radome
+  part_number: PN-eWTW-5310-0001
+  programme: AMPEL360
+  product: eWTW
+  lifecycle_stage: LC-A
+  lifecycle_stage_name: Conceptual Design
+  revision: RADOME-REV-A1
+  version: "0.1.0"
+  status: draft
+
+  effectivity:
+    product: eWTW
+    configuration: baseline
+    msn_range: MSN-001..050
+    status: active
+
+  requirements_authority:
+    owner: Q-STRUCTURES
+    supporting_authorities:
+      - Q-DATAGOV
+      - Q-AIR
+      - Q-SCIRES
+    approval_status: unapproved
+
+  related_revision_package:
+    cad_revision: RADOME-REV-A1
+    cad_record: "cad/freecad/LC-A_Concept-Design/REV-A1/Radome-CAD-Record.md"
+    publication_040: "pub/040_descriptive/DMC-AMPEL360-A-53-10-10-00A-040A-D_Radome-Description.xml"
+
+  requirement_classes:
+    - id: ReqBS-01
+      name: Customer Expectations
+      requirements:
+        - id: REQ-RADOME-A1-001
+          class: ReqBS-01
+          type: stakeholder
+          statement: >
+            Maintain aerodynamic continuity of the forward fuselage and support
+            unobstructed weather-radar operation.
+          verification_method: analysis
+          status: draft
+    - id: ReqBS-02
+      name: Project and Enterprise Constraints
+      requirements:
+        - id: REQ-RADOME-A1-002
+          class: ReqBS-02
+          type: constraint
+          statement: >
+            Use open FreeCAD-compatible CAD records and repository traceability
+            controlled under the SBS/PBS architecture.
+          verification_method: inspection
+          status: draft
+    - id: ReqBS-03
+      name: External Constraints
+      requirements:
+        - id: REQ-RADOME-A1-003
+          class: ReqBS-03
+          type: constraint
+          statement: >
+            Comply with CS-25 applicable paragraphs and lightning, bird-strike,
+            maintainability, and environmental constraints.
+          verification_method: inspection
+          status: draft
+    - id: ReqBS-04
+      name: Operational Scenarios
+      requirements:
+        - id: REQ-RADOME-A1-004
+          class: ReqBS-04
+          type: operational
+          statement: >
+            Support normal flight, rain, lightning exposure, bird strike, and
+            maintenance access scenarios.
+          verification_method: analysis
+          status: draft
+    - id: ReqBS-05
+      name: Measures of Effectiveness
+      requirements:
+        - id: REQ-RADOME-A1-005
+          class: ReqBS-05
+          type: effectiveness
+          statement: >
+            RF transparency, aerodynamic continuity, maintainability, and
+            damage tolerance.
+          verification_method: analysis
+          status: draft
+    - id: ReqBS-06
+      name: System Boundaries
+      requirements:
+        - id: REQ-RADOME-A1-006
+          class: ReqBS-06
+          type: boundary
+          statement: >
+            Radome shell and provisions only; the weather radar (WXR) and
+            lightning protection system (LPS) are referenced systems, not owned.
+          verification_method: inspection
+          status: draft
+    - id: ReqBS-07
+      name: Interfaces
+      requirements:
+        - id: REQ-RADOME-A1-007
+          class: ReqBS-07
+          type: interface
+          statement: >
+            Backup structure, WXR envelope, LPS diverters, moisture seal, and
+            attachment latches. Controlled in IBS-RADOME-REV-A1.
+          verification_method: inspection
+          status: draft
+    - id: ReqBS-08
+      name: Utilization Environments
+      requirements:
+        - id: REQ-RADOME-A1-008
+          class: ReqBS-08
+          type: environmental
+          statement: >
+            Ground, taxi, take-off, cruise, rain, hail, lightning zone (1A), and
+            maintenance environments.
+          verification_method: analysis
+          status: draft
+    - id: ReqBS-09
+      name: Lifecycle Requirements
+      requirements:
+        - id: REQ-RADOME-A1-009
+          class: ReqBS-09
+          type: lifecycle
+          statement: >
+            Support concept, preliminary, detailed, qualification, certification,
+            MRO, and retirement lifecycle stages.
+          verification_method: inspection
+          status: draft
+    - id: ReqBS-10
+      name: Functional Requirements
+      requirements:
+        - id: REQ-RADOME-A1-010
+          class: ReqBS-10
+          type: functional
+          statement: >
+            Protect the radar, provide an RF window, and provide an aerodynamic
+            fairing for the forward fuselage.
+          verification_method: analysis
+          status: draft
+    - id: ReqBS-11
+      name: Performance Requirements
+      requirements:
+        - id: REQ-RADOME-A1-011
+          class: ReqBS-11
+          type: performance
+          statement: >
+            Meet transmission loss, boresight error, impact resistance, and
+            erosion-resistance targets (RF targets sourced from WXR, PBS-50).
+          verification_method: test
+          status: draft
+    - id: ReqBS-12
+      name: Modes of Operation
+      requirements:
+        - id: REQ-RADOME-A1-012
+          class: ReqBS-12
+          type: operational
+          statement: >
+            Installed closed, opened for maintenance, removed, and
+            post-lightning inspection modes.
+          verification_method: demonstration
+          status: draft
+    - id: ReqBS-13
+      name: Technical Performance Measures
+      requirements:
+        - id: REQ-RADOME-A1-013
+          class: ReqBS-13
+          type: tpm
+          statement: >
+            Controlled TPMs: mass, RF loss, boresight error, bonding resistance,
+            and erosion life. Tracked under TPMS.
+          verification_method: analysis
+          status: draft
+          tpms_ref: SBS-TPMS-001
+    - id: ReqBS-14
+      name: Physical Characteristics
+      requirements:
+        - id: REQ-RADOME-A1-014
+          class: ReqBS-14
+          type: physical
+          statement: >
+            Length, base envelope, wall stack, and attachment geometry consistent
+            with the RADOME-REV-A1 conceptual CAD state.
+          verification_method: inspection
+          status: draft
+    - id: ReqBS-15
+      name: Human Systems Integration
+      requirements:
+        - id: REQ-RADOME-A1-015
+          class: ReqBS-15
+          type: human_factors
+          statement: >
+            Safe maintainability, access, tool clearance, and technician handling.
+          verification_method: demonstration
+          status: draft
+
+  traceability:
+    upstream:
+      - PBS: eWTW-PBS-10-10-10-10-10
+      - QATLANTIDE: ATLAS-053
+    downstream:
+      - IBS-RADOME-REV-A1
+      - RBS-RADOME-REV-A1
+      - CBS-RADOME-REV-A1
+      - EBS-RADOME-REV-A1
+      - CAD-RADOME-REV-A1
+      - PUB-040-RADOME
+
+  governance:
+    revisioned_breakdown_rule: SBS-REV-BREAKDOWN-001
+    requirements_evolution_rule: REQBS-REV-001
+
+  references:
+    - id: SEF-2001
+      title: Systems Engineering Fundamentals
+      publisher: Defense Acquisition University (DAU) Press
+      date: "2001-01"
+      note: >
+        Ch. 4 Requirements Analysis, Fig. 4-3 — the 15 requirements analysis
+        task areas that define the ReqBS-01..15 taxonomy.
+    - id: IEEE-1220
+      title: IEEE Standard for Application and Management of the Systems Engineering Process
+      publisher: IEEE
+      note: Source of the 15 requirements analysis task areas.
+    - id: EASA-CS-25
+      title: Certification Specifications and AMC for Large Aeroplanes (CS-25)
+      publisher: EASA
+      note: Applicable airworthiness basis referenced by ReqBS-03.
+
+change_log:
+  - version: "0.1.0"
+    date: "2026-06-02"
+    author: Q-STRUCTURES
+    change: >
+      Initial draft ReqBS baseline for the radome conceptual CAD state
+      (LC-A / RADOME-REV-A1).
