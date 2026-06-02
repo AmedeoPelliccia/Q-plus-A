@@ -534,7 +534,7 @@ radome_rev_a1_breakdown_package:
   cbs: "03_COST/REV-A1/CBS-RADOME-REV-A1.md"
   rbs: "04_RISK/REV-A1/RBS-RADOME-REV-A1.md"
   ebs: "05_EVIDENCE/REV-A1/EBS-RADOME-REV-A1.md"
-  cad: "cad/freecad/LC-A_Concept-Design/REV-A1/"
+  cad: "LC-A_Concept-Design/REV-A1/FreeCAD/"
   pub_040: "pub/040_descriptive/"
   pub_258: "pub/258_bonding-and-lightning-check/"
 ```
@@ -623,7 +623,7 @@ upgrade branch baselines
 It shall be referenced by product-specific lifecycle records such as:
 
 ```text
-cad/freecad/LC-A_Concept-Design/REV-A1/Radome-CAD-Record.md
+LC-A_Concept-Design/REV-A1/FreeCAD/Radome-CAD-Record.md
 01_REQUIREMENTS/REV-A1/ReqBS-RADOME-REV-A1.md
 ```
 

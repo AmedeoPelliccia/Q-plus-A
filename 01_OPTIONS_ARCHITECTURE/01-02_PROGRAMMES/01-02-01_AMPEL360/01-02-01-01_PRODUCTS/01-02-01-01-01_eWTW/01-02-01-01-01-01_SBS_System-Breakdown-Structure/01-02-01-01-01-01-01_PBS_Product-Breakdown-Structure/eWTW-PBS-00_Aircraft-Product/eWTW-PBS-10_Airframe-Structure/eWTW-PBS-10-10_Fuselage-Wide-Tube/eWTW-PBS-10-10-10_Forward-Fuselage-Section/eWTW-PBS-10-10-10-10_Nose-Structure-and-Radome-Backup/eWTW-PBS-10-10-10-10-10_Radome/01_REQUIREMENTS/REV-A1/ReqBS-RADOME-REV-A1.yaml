@@ -32,7 +32,7 @@ reqbs_record:
 
   related_revision_package:
     cad_revision: RADOME-REV-A1
-    cad_record: "cad/freecad/LC-A_Concept-Design/REV-A1/Radome-CAD-Record.md"
+    cad_record: "LC-A_Concept-Design/REV-A1/FreeCAD/Radome-CAD-Record.md"
     publication_040: "pub/040_descriptive/DMC-AMPEL360-A-53-10-10-00A-040A-D_Radome-Description.xml"
 
   requirement_classes:

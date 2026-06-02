@@ -45,8 +45,8 @@ plm:
   cad_required: true
   bom_required: true
 cad:
-  native_model: cad/freecad/eWTW-PBS-10-10-10-10-10-Radome.FCStd
-  exchange_model: cad/step/eWTW-PBS-10-10-10-10-10-Radome.step
+  native_model: LC-A_Concept-Design/REV-A1/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+  exchange_model: LC-A_Concept-Design/REV-A1/CAD/eWTW-PBS-10-10-10-10-10-Radome.step
   drawing: drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf
 evidence:
   evidence_anchor: "<sha256: to-be-stamped-at-commit>"

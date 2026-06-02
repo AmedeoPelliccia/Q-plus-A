@@ -33,7 +33,7 @@ requirements_authority:
   approval_status: unapproved
 related_revision_package:
   cad_revision: RADOME-REV-A1
-  cad_record: "cad/freecad/LC-A_Concept-Design/REV-A1/Radome-CAD-Record.md"
+  cad_record: "LC-A_Concept-Design/REV-A1/FreeCAD/Radome-CAD-Record.md"
   publication_040: "pub/040_descriptive/DMC-AMPEL360-A-53-10-10-00A-040A-D_Radome-Description.xml"
 ---
 
@@ -68,7 +68,7 @@ eWTW-PBS-10-10-10-10-10_Radome/
         └── ReqBS-RADOME-REV-A1.md     ← this document
 ```
 
-The breakdown type comes first (`01_REQUIREMENTS`), then the revision (`REV-A1`), mirroring the CAD layout (`cad/freecad/LC-A_Concept-Design/REV-A1/`).
+The breakdown type comes first (`01_REQUIREMENTS`), then the revision (`REV-A1`), mirroring the CAD layout (`LC-A_Concept-Design/REV-A1/FreeCAD/`).
 
 ## 3. Requirement classes (ReqBS-01..15)
 

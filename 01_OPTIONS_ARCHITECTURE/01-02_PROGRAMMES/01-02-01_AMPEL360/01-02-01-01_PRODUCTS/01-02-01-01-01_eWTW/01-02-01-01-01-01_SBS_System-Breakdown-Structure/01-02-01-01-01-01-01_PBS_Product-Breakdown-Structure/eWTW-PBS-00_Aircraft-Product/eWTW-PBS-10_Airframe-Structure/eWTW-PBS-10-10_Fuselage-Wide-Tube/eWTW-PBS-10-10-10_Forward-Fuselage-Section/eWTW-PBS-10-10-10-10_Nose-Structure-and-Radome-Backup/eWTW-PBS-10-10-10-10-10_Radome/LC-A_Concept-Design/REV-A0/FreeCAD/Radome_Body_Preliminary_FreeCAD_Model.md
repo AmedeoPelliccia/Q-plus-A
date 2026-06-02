@@ -16,7 +16,7 @@ pnr_id: PNR-eWTW-PBS-10-10-10-10-10
 part_number: PN-eWTW-5310-0001
 
 cad_item: Radome_Body
-cad_file: "cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd"
+cad_file: "LC-A_Concept-Design/REV-A0/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd"
 cad_tool: FreeCAD 1.1.1
 cad_workbench: Part Design
 model_type: preliminary_parametric_placeholder
@@ -40,7 +40,7 @@ cad_status:
   revolution_angle_deg: 360
   geometry_status: "conceptual_placeholder"
   freecad_file_uploaded: true
-  freecad_file_path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_PRODUCTS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd"
+  freecad_file_path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_PRODUCTS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/LC-A_Concept-Design/REV-A0/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd"
   wide_tube_final_geometry_required: true
   next_revision_target: "elliptical_loft_radome"
 ---
@@ -79,7 +79,7 @@ It is not an approved engineering drawing, manufacturing definition, certificati
 | CAD tool       | FreeCAD 1.1.1                                                           |
 | Workbench      | Part Design                                                             |
 | Body name      | `Radome_Body`                                                           |
-| Native file    | `cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
+| Native file    | `LC-A_Concept-Design/REV-A0/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
 | STEP export    | `cad/step/eWTW-PBS-10-10-10-10-10-Radome.step`                          |
 | Status         | Draft                                                                   |
 | Revision       | A                                                                       |
@@ -281,7 +281,7 @@ eWTW-PBS-10-10-10-10-10-Radome.FCStd
 Current uploaded file path:
 
 ```text
-01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_PRODUCTS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_PRODUCTS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/LC-A_Concept-Design/REV-A0/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd
 ```
 
 ### Step 2 — Create Body
@@ -443,7 +443,7 @@ Do not model final hardware until the interface control document is baselined.
 When the placeholder is complete, export:
 
 ```text
-cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+LC-A_Concept-Design/REV-A0/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd
 cad/step/eWTW-PBS-10-10-10-10-10-Radome.step
 drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf
 ```
@@ -462,7 +462,7 @@ The CAD placeholder shall trace to:
 | PNR      | `PNR-eWTW-PBS-10-10-10-10-10`                                           |
 | PN       | `PN-eWTW-5310-0001`                                                     |
 | BOM      | `BOM-eWTW-PBS-10-10-10-10-10`                                           |
-| CAD      | `cad/freecad/LC-01_Concept-Design/eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
+| CAD      | `LC-A_Concept-Design/REV-A0/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd` |
 | STEP     | `cad/step/eWTW-PBS-10-10-10-10-10-Radome.step`                          |
 | Evidence | `PBS-EVIDENCE-REGISTER.yaml`                                            |
 

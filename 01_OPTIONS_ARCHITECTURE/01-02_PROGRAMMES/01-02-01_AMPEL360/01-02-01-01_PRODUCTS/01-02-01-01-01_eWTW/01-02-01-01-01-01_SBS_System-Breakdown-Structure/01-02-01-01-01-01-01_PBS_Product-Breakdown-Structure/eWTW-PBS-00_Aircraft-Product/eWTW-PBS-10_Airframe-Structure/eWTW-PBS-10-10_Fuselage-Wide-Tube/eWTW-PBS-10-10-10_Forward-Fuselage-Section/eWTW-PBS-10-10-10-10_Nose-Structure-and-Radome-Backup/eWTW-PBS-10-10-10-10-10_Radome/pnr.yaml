@@ -22,7 +22,7 @@ effectivity:
   msn_range: MSN-001..050
   status: active
 cad:
-  native_model: cad/freecad/eWTW-PBS-10-10-10-10-10-Radome.FCStd
+  native_model: LC-A_Concept-Design/REV-A1/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd
   exchange_model: cad/step/eWTW-PBS-10-10-10-10-10-Radome.step
   drawing: drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf
 notes: >
