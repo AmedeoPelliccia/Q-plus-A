@@ -49,3 +49,13 @@ lifecycle stages and REV cycles).
 | TRL-7 | System prototype demonstration in operational environment.                 |
 | TRL-8 | Actual system completed and qualified through test and demonstration.      |
 | TRL-9 | Actual system proven through successful mission operations.                |
+
+## 5. References
+
+- **[SEF-01]** *Systems Engineering Fundamentals* — Defense Acquisition
+  University / DoD guide. MIT OCW 16.885J Aircraft Systems Engineering,
+  Fall 2005.
+  <https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/sefguide_01_01/>
+- **[SE-PDF]** *SYSTEMS Engineering* — Comprehensive SE reference covering
+  SE processes, architecture development, requirements analysis, verification
+  & validation, and technology maturity assessment (`SYSTEMS_engineering.pdf`).

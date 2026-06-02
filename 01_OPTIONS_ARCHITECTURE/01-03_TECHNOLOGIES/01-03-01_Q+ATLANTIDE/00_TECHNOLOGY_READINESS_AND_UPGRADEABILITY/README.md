@@ -134,3 +134,12 @@ product, configuration, lifecycle state, and evidence effectivity**.
 Programme-specific implementation data must not be placed directly into generic
 `Q+ATLANTIDE` nodes unless it is clearly marked as an **example** or carries
 explicit **programme-specific effectivity**.
+
+---
+
+## 8. References
+
+| Ref | Title | Source |
+| --- | ----- | ------ |
+| [SEF-01] | *Systems Engineering Fundamentals* — Defense Acquisition University / DoD guide covering TRL definitions, systems engineering processes, and acquisition lifecycle management. | MIT OpenCourseWare, 16.885J Aircraft Systems Engineering, Fall 2005. <https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/sefguide_01_01/> |
+| [SE-PDF] | *SYSTEMS Engineering* — Comprehensive systems engineering reference covering SE processes, architecture development, requirements analysis, verification & validation, and technology maturity assessment. | `SYSTEMS_engineering.pdf` (repository-attached reference). |

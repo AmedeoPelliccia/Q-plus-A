@@ -62,3 +62,15 @@ trl_lifecycle_relationship:
     does not automatically authorize installation into a product baseline. It
     authorizes the start of a controlled product-specific upgrade revision cycle.
 ```
+
+---
+
+## 6. References
+
+- **[SEF-01]** *Systems Engineering Fundamentals* — Defense Acquisition
+  University / DoD guide. MIT OCW 16.885J Aircraft Systems Engineering,
+  Fall 2005.
+  <https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/sefguide_01_01/>
+- **[SE-PDF]** *SYSTEMS Engineering* — Comprehensive SE reference covering
+  SE processes, architecture development, requirements analysis, verification
+  & validation, and technology maturity assessment (`SYSTEMS_engineering.pdf`).
