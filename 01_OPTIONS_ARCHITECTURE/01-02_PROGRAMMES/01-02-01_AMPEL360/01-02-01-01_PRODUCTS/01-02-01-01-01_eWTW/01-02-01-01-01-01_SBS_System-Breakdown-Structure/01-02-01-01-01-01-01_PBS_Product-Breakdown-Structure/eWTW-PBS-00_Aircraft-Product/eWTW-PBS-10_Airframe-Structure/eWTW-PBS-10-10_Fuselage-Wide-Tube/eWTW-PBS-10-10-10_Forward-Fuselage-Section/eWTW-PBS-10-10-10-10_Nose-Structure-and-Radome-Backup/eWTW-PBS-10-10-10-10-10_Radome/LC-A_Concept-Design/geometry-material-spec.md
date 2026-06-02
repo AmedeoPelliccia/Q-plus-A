@@ -17,7 +17,7 @@ effectivity:
 - **PBS ID:** `eWTW-PBS-10-10-10-10-10`
 - **Part Number:** `PN-eWTW-5310-0001`
 - **Parent:** `eWTW-PBS-10-10-10-10` (Nose Structure and Radome Backup)
-- **CAD authority:** `LC-A_Concept-Design/REV-A1/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd`
+- **CAD authority:** `REV-A1/FreeCAD/eWTW-PBS-10-10-10-10-10-Radome.FCStd`
 - **Exchange geometry:** `cad/step/eWTW-PBS-10-10-10-10-10-Radome.step`
 - **Drawing:** `drawings/eWTW-PBS-10-10-10-10-10-Radome-Drawing.pdf`
 - **Status:** draft — values TBC pending RF and structural substantiation
