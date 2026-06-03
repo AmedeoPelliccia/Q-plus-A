@@ -1,244 +1,626 @@
----
-# Requirements Breakdown Structure record — Radome REV-A1
-# First controlled requirements baseline for the radome conceptual CAD state (LC-A / RADOME-REV-A1).
-# Controlled under Q-plus / OPTIONS_ARCHITECTURE / AMPEL360 / eWTW PBS.
-# Authoritative requirement state is revisioned per PBS item (rule REQBS-REV-001).
-reqbs_record:
-  id: ReqBS-RADOME-REV-A1
-  item: eWTW-PBS-10-10-10-10-10
-  item_name: Radome
+# ============================================================================
+# ReqBS-RADOME-REV-A1.yaml
+# Controlled requirements record for eWTW-PBS-10-10-10-10-10 (Radome)
+# This is the SSOT for radome requirements; the companion .md is the
+# human-readable governance projection.
+# ============================================================================
+
+metadata:
+  document_id: AMPEL360-eWTW-PBS-10-10-10-10-10-ReqBS-REV-A1
+  reqbs_id: ReqBS-RADOME-REV-A1
+  pbs_id: eWTW-PBS-10-10-10-10-10
+  pbs_title: Radome
   part_number: PN-eWTW-5310-0001
   programme: AMPEL360
   product: eWTW
+  revision: RADOME-REV-A1
   lifecycle_stage: LC-A
   lifecycle_stage_name: Conceptual Design
-  revision: RADOME-REV-A1
-  version: "0.1.0"
+  revision_status: iterating
+  version: "1.0.0"
   status: draft
-
   effectivity:
     product: eWTW
     configuration: baseline
     msn_range: MSN-001..050
     status: active
-
-  requirements_authority:
+  authority:
     owner: Q-STRUCTURES
-    supporting_authorities:
+    supporting:
       - Q-DATAGOV
       - Q-AIR
       - Q-SCIRES
     approval_status: unapproved
+  supersedes: LC-A_Concept-Design/REV-A0/Requirements/Requirements_REV-A0.md
+  governing_rules:
+    - SBS-REV-BREAKDOWN-001
+    - REQBS-REV-001
+  sources:
+    - "IEEE Std 1220 (15 requirements analysis task areas)"
+    - "DAU Systems Engineering Fundamentals, Jan 2001, Ch. 4"
+    - "EASA CS-25"
+    - "RTCA DO-213"
+  companion_md: ReqBS-RADOME-REV-A1.md
 
-  related_revision_package:
-    cad_revision: RADOME-REV-A1
-    cad_record: "REV-A1/FreeCAD/Radome-CAD-Record.md"
-    publication_040: "pub/040_descriptive/DMC-AMPEL360-A-53-10-10-00A-040A-D_Radome-Description.xml"
+# ============================================================================
+# REQUIREMENTS BY CLASS
+# ============================================================================
 
-  requirement_classes:
-    - id: ReqBS-01
-      name: Customer Expectations
-      requirements:
-        - id: REQ-RADOME-A1-001
-          class: ReqBS-01
-          type: stakeholder
-          statement: >
-            Maintain aerodynamic continuity of the forward fuselage and support
-            unobstructed weather-radar operation.
-          verification_method: analysis
-          status: draft
-    - id: ReqBS-02
-      name: Project and Enterprise Constraints
-      requirements:
-        - id: REQ-RADOME-A1-002
-          class: ReqBS-02
-          type: constraint
-          statement: >
-            Use open FreeCAD-compatible CAD records and repository traceability
-            controlled under the SBS/PBS architecture.
-          verification_method: inspection
-          status: draft
-    - id: ReqBS-03
-      name: External Constraints
-      requirements:
-        - id: REQ-RADOME-A1-003
-          class: ReqBS-03
-          type: constraint
-          statement: >
-            Comply with CS-25 applicable paragraphs and lightning, bird-strike,
-            maintainability, and environmental constraints.
-          verification_method: inspection
-          status: draft
-    - id: ReqBS-04
-      name: Operational Scenarios
-      requirements:
-        - id: REQ-RADOME-A1-004
-          class: ReqBS-04
-          type: operational
-          statement: >
-            Support normal flight, rain, lightning exposure, bird strike, and
-            maintenance access scenarios.
-          verification_method: analysis
-          status: draft
-    - id: ReqBS-05
-      name: Measures of Effectiveness
-      requirements:
-        - id: REQ-RADOME-A1-005
-          class: ReqBS-05
-          type: effectiveness
-          statement: >
-            RF transparency, aerodynamic continuity, maintainability, and
-            damage tolerance.
-          verification_method: analysis
-          status: draft
-    - id: ReqBS-06
-      name: System Boundaries
-      requirements:
-        - id: REQ-RADOME-A1-006
-          class: ReqBS-06
-          type: boundary
-          statement: >
-            Radome shell and provisions only; the weather radar (WXR) and
-            lightning protection system (LPS) are referenced systems, not owned.
-          verification_method: inspection
-          status: draft
-    - id: ReqBS-07
-      name: Interfaces
-      requirements:
-        - id: REQ-RADOME-A1-007
-          class: ReqBS-07
-          type: interface
-          statement: >
-            Backup structure, WXR envelope, LPS diverters, moisture seal, and
-            attachment latches. Controlled in IBS-RADOME-REV-A1.
-          verification_method: inspection
-          status: draft
-    - id: ReqBS-08
-      name: Utilization Environments
-      requirements:
-        - id: REQ-RADOME-A1-008
-          class: ReqBS-08
-          type: environmental
-          statement: >
-            Ground, taxi, take-off, cruise, rain, hail, lightning zone (1A), and
-            maintenance environments.
-          verification_method: analysis
-          status: draft
-    - id: ReqBS-09
-      name: Lifecycle Requirements
-      requirements:
-        - id: REQ-RADOME-A1-009
-          class: ReqBS-09
-          type: lifecycle
-          statement: >
-            Support concept, preliminary, detailed, qualification, certification,
-            MRO, and retirement lifecycle stages.
-          verification_method: inspection
-          status: draft
-    - id: ReqBS-10
-      name: Functional Requirements
-      requirements:
-        - id: REQ-RADOME-A1-010
-          class: ReqBS-10
-          type: functional
-          statement: >
-            Protect the radar, provide an RF window, and provide an aerodynamic
-            fairing for the forward fuselage.
-          verification_method: analysis
-          status: draft
-    - id: ReqBS-11
-      name: Performance Requirements
-      requirements:
-        - id: REQ-RADOME-A1-011
-          class: ReqBS-11
-          type: performance
-          statement: >
-            Meet transmission loss, boresight error, impact resistance, and
-            erosion-resistance targets (RF targets sourced from WXR, PBS-50).
-          verification_method: test
-          status: draft
-    - id: ReqBS-12
-      name: Modes of Operation
-      requirements:
-        - id: REQ-RADOME-A1-012
-          class: ReqBS-12
-          type: operational
-          statement: >
-            Installed closed, opened for maintenance, removed, and
-            post-lightning inspection modes.
-          verification_method: demonstration
-          status: draft
-    - id: ReqBS-13
-      name: Technical Performance Measures
-      requirements:
-        - id: REQ-RADOME-A1-013
-          class: ReqBS-13
-          type: tpm
-          statement: >
-            Controlled TPMs: mass, RF loss, boresight error, bonding resistance,
-            and erosion life. Tracked under TPMS.
-          verification_method: analysis
-          status: draft
-          tpms_ref: SBS-TPMS-001
-    - id: ReqBS-14
-      name: Physical Characteristics
-      requirements:
-        - id: REQ-RADOME-A1-014
-          class: ReqBS-14
-          type: physical
-          statement: >
-            Length, base envelope, wall stack, and attachment geometry consistent
-            with the RADOME-REV-A1 conceptual CAD state.
-          verification_method: inspection
-          status: draft
-    - id: ReqBS-15
-      name: Human Systems Integration
-      requirements:
-        - id: REQ-RADOME-A1-015
-          class: ReqBS-15
-          type: human_factors
-          statement: >
-            Safe maintainability, access, tool clearance, and technician handling.
-          verification_method: demonstration
-          status: draft
+requirements:
 
-  traceability:
-    upstream:
-      - PBS: eWTW-PBS-10-10-10-10-10
-      - QATLANTIDE: ATLAS-053
-    downstream:
-      - IBS-RADOME-REV-A1
-      - RBS-RADOME-REV-A1
-      - CBS-RADOME-REV-A1
-      - EBS-RADOME-REV-A1
-      - CAD-RADOME-REV-A1
-      - PUB-040-RADOME
+  # --------------------------------------------------------------------------
+  # ReqBS-01  Customer Expectations
+  # --------------------------------------------------------------------------
+  reqbs_01_customer_expectations:
+    - id: REQ-A1-0101
+      title: Weather-detection capability
+      description: >
+        The aircraft shall have forward-looking weather-detection capability
+        requiring an RF-transparent nose fairing.
+      source: programme-level
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
 
-  governance:
-    revisioned_breakdown_rule: SBS-REV-BREAKDOWN-001
-    requirements_evolution_rule: REQBS-REV-001
+  # --------------------------------------------------------------------------
+  # ReqBS-02  Project and Enterprise Constraints
+  # --------------------------------------------------------------------------
+  reqbs_02_project_enterprise_constraints:
+    - id: REQ-A1-0201
+      title: Programme governance
+      description: >
+        The radome shall be developed within the AMPEL360 eWTW programme,
+        electric-architecture configuration, under GQAOA governance.
+      source: programme
+      rev_a0_predecessor: null
+      verification: inspection
+      status: active
 
-  references:
-    - id: SEF-2001
-      title: Systems Engineering Fundamentals
-      publisher: Defense Acquisition University (DAU) Press
-      date: "2001-01"
+    - id: REQ-A1-0202
+      title: DMC identity compliance
+      description: >
+        The radome design shall be compatible with the Q-plus lifecycle model
+        (LC-letter) and the DMC identity convention (AMPEL360-DMC-ID-001).
+      source: AMPEL360-CSDB-DMC-IDENTITY-CONVENTION
+      rev_a0_predecessor: null
+      verification: inspection
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-03  External Constraints
+  # --------------------------------------------------------------------------
+  reqbs_03_external_constraints:
+    - id: REQ-A1-0301
+      title: Bird-strike resistance
+      description: >
+        The radome shall meet bird-strike resistance requirements of CS 25.631
+        (or equivalent) for the applicable aircraft category and speed.
+      source: CS-25
+      rev_a0_predecessor: REQ-A0-005
+      verification: test
+      status: active
+
+    - id: REQ-A1-0302
+      title: Lightning attachment zone 1A
+      description: >
+        The radome shall sustain lightning attachment in zone 1A per CS 25.581
+        without compromise to structural integrity or RF performance.
+      source: CS-25
+      rev_a0_predecessor: REQ-A0-005
+      verification: test
+      status: active
+
+    - id: REQ-A1-0303
+      title: RF performance standard
+      description: >
+        Radome RF performance shall be assessed against RTCA DO-213 or an
+        equivalent programme-accepted standard.
+      source: RTCA DO-213
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-04  Operational Scenarios
+  # --------------------------------------------------------------------------
+  reqbs_04_operational_scenarios:
+    - id: REQ-A1-0401
+      title: Normal operation
+      description: >
+        The radome transmits and receives radar signals with acceptable loss
+        during all phases of flight.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+
+    - id: REQ-A1-0402
+      title: Degraded operation
+      description: >
+        Moisture ingress or surface damage degrades RF performance; the crew
+        is alerted and maintenance is scheduled.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
+
+    - id: REQ-A1-0403
+      title: Maintenance operation
+      description: >
+        The radome is removed, inspected, repaired (patch or full replacement),
+        and reinstalled for radar access.
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-006
+      verification: demonstration
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-05  Measures of Effectiveness
+  # --------------------------------------------------------------------------
+  reqbs_05_measures_of_effectiveness:
+    - id: REQ-A1-0501
+      title: Primary effectiveness measures
+      description: >
+        RF transmission efficiency, boresight error, and structural margin
+        after bird strike shall be the primary effectiveness measures.
+      source: SSOT / TRL assessment
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
+      tpm_links:
+        - TPM-A1-01
+        - TPM-A1-02
+        - TPM-A1-04
+
+  # --------------------------------------------------------------------------
+  # ReqBS-06  System Boundaries
+  # --------------------------------------------------------------------------
+  reqbs_06_system_boundaries:
+    - id: REQ-A1-0601
+      title: Radome physical boundary
+      description: >
+        The radome boundary extends from the nose tip to the attachment
+        interface with the radome backup bulkhead. The radome is unpressurized
+        (forward of the forward pressure bulkhead).
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-003
+      verification: inspection
+      status: active
+
+    - id: REQ-A1-0602
+      title: Provisions-vs-systems boundary
+      description: >
+        The radome owns structure and installation provisions only. The
+        weather-radar antenna and the lightning diverter strips are external
+        systems, referenced not contained.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: inspection
+      status: active
       note: >
-        Ch. 4 Requirements Analysis, Fig. 4-3 — the 15 requirements analysis
-        task areas that define the ReqBS-01..15 taxonomy.
-    - id: IEEE-1220
-      title: IEEE Standard for Application and Management of the Systems Engineering Process
-      publisher: IEEE
-      note: Source of the 15 requirements analysis task areas.
-    - id: EASA-CS-25
-      title: Certification Specifications and AMC for Large Aeroplanes (CS-25)
-      publisher: EASA
-      note: Applicable airworthiness basis referenced by ReqBS-03.
+        This is the provisions-vs-systems rule applied to requirements.
+        The radome meets RF and lightning performance values set by external
+        systems (WXR, LPS); it does not define them.
 
-change_log:
-  - version: "0.1.0"
-    date: "2026-06-02"
-    author: Q-STRUCTURES
-    change: >
-      Initial draft ReqBS baseline for the radome conceptual CAD state
-      (LC-A / RADOME-REV-A1).
+  # --------------------------------------------------------------------------
+  # ReqBS-07  Interfaces
+  # --------------------------------------------------------------------------
+  reqbs_07_interfaces:
+    - id: REQ-A1-0701
+      title: Mechanical attach to backup bulkhead
+      description: >
+        Hinge/latch mechanical attachment to the radome backup bulkhead;
+        removable for radar access.
+      source: SSOT interfaces
+      rev_a0_predecessor: REQ-A0-003
+      verification: test
+      status: active
+      ibs_link: IBS-RADOME-REV-A1
+
+    - id: REQ-A1-0702
+      title: RF-window interface to WXR
+      description: >
+        The radome shall meet the RF-transparency requirement imposed by the
+        weather-radar system. The value is set by WXR (provisions vs systems).
+      source: SSOT interfaces
+      rev_a0_predecessor: REQ-A0-002
+      verification: test
+      status: active
+      ibs_link: IBS-RADOME-REV-A1
+      note: Value owner is WXR system branch, not radome.
+
+    - id: REQ-A1-0703
+      title: LPS bonding and diverter-strip mounting
+      description: >
+        Bonding and diverter-strip mounting provisions on the radome outer
+        surface for the lightning-protection system. The embedded conductive
+        mesh is radome-owned; surface diverter strips remain LPS-owned.
+      source: SSOT interfaces
+      rev_a0_predecessor: REQ-A0-005
+      verification: test
+      status: active
+      ibs_link: IBS-RADOME-REV-A1
+
+    - id: REQ-A1-0704
+      title: Moisture seal and drainage
+      description: >
+        Moisture-seal and drainage interface at the radome / backup-bulkhead
+        joint.
+      source: SSOT BOM
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-08  Utilization Environments
+  # --------------------------------------------------------------------------
+  reqbs_08_utilization_environments:
+    - id: REQ-A1-0801
+      title: Flight-envelope environments
+      description: >
+        The radome shall operate across the full eWTW flight envelope
+        (altitude, speed, temperature, pressure per CS 25.1309 environmental
+        conditions).
+      source: programme
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
+
+    - id: REQ-A1-0802
+      title: Surface erosion environments
+      description: >
+        The radome leading surface shall resist rain erosion, hail impact,
+        sand, and UV/ozone exposure.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+
+    - id: REQ-A1-0803
+      title: Lightning zone exposure
+      description: >
+        Lightning exposure zone 1A (initial attachment, high current).
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-005
+      verification: test
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-09  Lifecycle Requirements
+  # --------------------------------------------------------------------------
+  reqbs_09_lifecycle_requirements:
+    - id: REQ-A1-0901
+      title: Removability for radar access
+      description: >
+        The radome shall be removable by ground crew for weather-radar access,
+        inspection, and maintenance.
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-006
+      verification: demonstration
+      status: active
+
+    - id: REQ-A1-0902
+      title: In-service repairability
+      description: >
+        The radome shall be repairable in-service (local patch repair for
+        minor damage).
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: demonstration
+      status: active
+
+    - id: REQ-A1-0903
+      title: End-of-life circularity
+      description: >
+        The radome shall be designed for end-of-life recovery per LC-N
+        (materials recyclability and circularity).
+      source: lifecycle model
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-10  Functional Requirements
+  # --------------------------------------------------------------------------
+  reqbs_10_functional_requirements:
+    - id: REQ-A1-1001
+      title: Aerodynamic forward fairing
+      description: >
+        Provide an aerodynamic forward fairing for the aircraft nose.
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-001
+      verification: analysis
+      status: active
+
+    - id: REQ-A1-1002
+      title: RF-transparent window
+      description: >
+        Provide an RF-transparent window through which the weather radar
+        transmits and receives.
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-002
+      verification: test
+      status: active
+
+    - id: REQ-A1-1003
+      title: Bird-strike containment
+      description: >
+        Sustain bird strike without debris penetrating to the radar antenna
+        or the backup bulkhead.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+
+    - id: REQ-A1-1004
+      title: Lightning-attachment support
+      description: >
+        Support lightning attachment via bonding provisions and diverter-strip
+        mounting. The embedded conductive mesh is integral to the radome
+        laminate; surface diverter strips are LPS-owned provisions.
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-005
+      verification: test
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-11  Performance Requirements
+  # --------------------------------------------------------------------------
+  reqbs_11_performance_requirements:
+    - id: REQ-A1-1101
+      title: RF transmission loss
+      description: >
+        RF transmission loss through the radome wall shall not exceed the
+        value defined by the weather-radar system.
+      source: WXR interface (value set by radar system)
+      rev_a0_predecessor: REQ-A0-002
+      verification: test
+      status: active
+      value: "≤ 0.8"
+      unit: dB
+      tpm_link: TPM-A1-01
+      note: >
+        Provisions-vs-systems: Value resolved by upstream ARS-A1-0101-D01.
+        The radome shall meet ≤ 0.8 dB one-way transmission loss at 9.3–9.5 GHz
+        across ±60° azimuth / ±15° elevation. Source: ARS-A1-0101-D01.
+
+    - id: REQ-A1-1102
+      title: Boresight error
+      description: >
+        Boresight error introduced by the radome shall not exceed TBD degrees.
+      source: WXR interface
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+      value: TBD
+      unit: degrees
+      tpm_link: TPM-A1-02
+
+    - id: REQ-A1-1103
+      title: Bird-strike impact resistance
+      description: >
+        The radome shall sustain a bird-strike impact energy of TBD J at the
+        design speed per CS 25.631.
+      source: CS-25
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+      value: TBD
+      unit: J
+      tpm_link: TPM-A1-04
+
+  # --------------------------------------------------------------------------
+  # ReqBS-12  Modes of Operation
+  # --------------------------------------------------------------------------
+  reqbs_12_modes_of_operation:
+    - id: REQ-A1-1201
+      title: Normal mode
+      description: >
+        Radome installed, intact, RF performance nominal.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
+
+    - id: REQ-A1-1202
+      title: Degraded mode
+      description: >
+        Moisture ingress or minor damage; RF performance reduced but radar
+        functional with crew alert.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: analysis
+      status: active
+
+    - id: REQ-A1-1203
+      title: Maintenance mode
+      description: >
+        Radome removed; radar access open.
+      source: SSOT
+      rev_a0_predecessor: REQ-A0-006
+      verification: demonstration
+      status: active
+
+  # --------------------------------------------------------------------------
+  # ReqBS-14  Physical Characteristics
+  # --------------------------------------------------------------------------
+  reqbs_14_physical_characteristics:
+    - id: REQ-A1-1401
+      title: External form
+      description: >
+        The radome external form is a secant ogive with fineness ratio
+        approximately 1.36.
+      source: CAD record REV-A0/A1
+      rev_a0_predecessor: REQ-A0-004
+      verification: inspection
+      status: active
+
+    - id: REQ-A1-1402
+      title: Absolute dimensions
+      description: >
+        Absolute dimensions are TBD pending CAD scale resolution.
+      source: CAD finding F1
+      rev_a0_predecessor: REQ-A0-004
+      verification: inspection
+      status: active
+      blocked_by: F1
+
+    - id: REQ-A1-1403
+      title: Wall construction
+      description: >
+        The radome wall shall be an RF-transparent sandwich laminate. Detail
+        (ply count, core, material IDs) deferred to LC-C.
+      source: SSOT
+      rev_a0_predecessor: null
+      verification: test
+      status: active
+      deferred_detail_to: LC-C
+      blocked_by: F2
+
+  # --------------------------------------------------------------------------
+  # ReqBS-15  Human Systems Integration
+  # --------------------------------------------------------------------------
+  reqbs_15_human_systems_integration:
+    - id: REQ-A1-1501
+      title: Two-person removal/installation
+      description: >
+        Removal and installation by two ground-crew members without specialist
+        tooling.
+      source: SSOT lifecycle
+      rev_a0_predecessor: REQ-A0-006
+      verification: demonstration
+      status: active
+
+    - id: REQ-A1-1502
+      title: Visual inspection access
+      description: >
+        Visual inspection of internal and external surfaces without
+        disassembly of the radar antenna.
+      source: maintenance concept
+      rev_a0_predecessor: null
+      verification: demonstration
+      status: active
+
+    - id: REQ-A1-1503
+      title: Non-hazardous maintenance materials
+      description: >
+        Radome materials shall not require hazardous-material handling during
+        normal maintenance.
+      source: DEGF-INHERIT-001 (Kindness)
+      rev_a0_predecessor: null
+      verification: inspection
+      status: active
+      degf_trait: Kindness
+
+# ============================================================================
+# TECHNICAL PERFORMANCE MEASURES (ReqBS-13)
+# ============================================================================
+
+technical_performance_measures:
+  - id: TPM-A1-01
+    measure: RF transmission loss
+    unit: dB
+    target: "≤ 0.8"
+    threshold: 1.0
+    margin: TBD
+    status: concept
+    linked_reqs:
+      - REQ-A1-1101
+      - REQ-A1-0501
+
+  - id: TPM-A1-02
+    measure: Boresight error
+    unit: degrees
+    target: TBD
+    threshold: TBD
+    margin: TBD
+    status: concept
+    linked_reqs:
+      - REQ-A1-1102
+      - REQ-A1-0501
+
+  - id: TPM-A1-03
+    measure: Mass
+    unit: kg
+    target: TBD
+    threshold: TBD
+    margin: TBD
+    status: concept
+    linked_reqs:
+      - REQ-A1-1401
+
+  - id: TPM-A1-04
+    measure: Structural margin after bird strike
+    unit: ratio
+    target: ">= 1.0"
+    threshold: 1.0
+    margin: TBD
+    status: concept
+    linked_reqs:
+      - REQ-A1-1103
+      - REQ-A1-0501
+
+  - id: TPM-A1-05
+    measure: Moisture content
+    unit: "% by weight"
+    target: TBD
+    threshold: TBD
+    margin: TBD
+    status: concept
+    linked_reqs:
+      - REQ-A1-1202
+
+# ============================================================================
+# GATE FINDINGS (impact on requirements)
+# ============================================================================
+
+gate_findings:
+  - id: F1
+    class: F-BLOCK
+    description: Absolute scale must be verified or closed.
+    reqbs_impact: REQ-A1-1402 (dimensions TBD)
+    gate: blocks RADOME-REV-A_RELEASED
+
+  - id: F2
+    class: F-DEFER
+    description: Solid body only; sandwich wall detail deferred.
+    reqbs_impact: REQ-A1-1403 (wall construction detail deferred to LC-C)
+    gate: becomes mandatory at LC-C
+
+  - id: F3
+    class: F-BLOCK
+    description: Controlled CAD metadata must be completed.
+    reqbs_impact: Physical-characteristics traceability (ReqBS-14)
+    gate: blocks RADOME-REV-A_RELEASED
+
+  - id: F4
+    class: F-WARN
+    description: IBS/CBS/RBS/EBS/TPMS revision packages pending.
+    reqbs_impact: Full configuration release blocked if not completed.
+    gate: blocks full configuration release
+
+# ============================================================================
+# LINEAGE
+# ============================================================================
+
+lineage:
+  supersedes: Requirements_REV-A0.md
+  rev_a0_requirements_superseded:
+    - REQ-A0-001  # -> REQ-A1-1001
+    - REQ-A0-002  # -> REQ-A1-0702, REQ-A1-1002, REQ-A1-1101
+    - REQ-A0-003  # -> REQ-A1-0601, REQ-A1-0701
+    - REQ-A0-004  # -> REQ-A1-1401, REQ-A1-1402
+    - REQ-A0-005  # -> REQ-A1-0301, REQ-A1-0302, REQ-A1-0703, REQ-A1-0803, REQ-A1-1004
+    - REQ-A0-006  # -> REQ-A1-0403, REQ-A1-0901, REQ-A1-1203, REQ-A1-1501
+  new_requirements_in_rev_a1: 21
+  total_requirements: 38
+  total_tpms: 5
+  change_log:
+    - date: "2026-06-03"
+      revision: RADOME-REV-A1
+      description: >
+        Propagated RF transmission loss value from ARS-A1-0101-D01
+        (≤ 0.8 dB at 9.3–9.5 GHz). Updated REQ-A1-1101 value, unit, and note
+        with full source traceability. Minor language alignment in REQ-A1-0703
+        and REQ-A1-1004 for provisions-vs-systems ownership clarity.
+      author: Systems Engineering (via ARS governance alignment)
