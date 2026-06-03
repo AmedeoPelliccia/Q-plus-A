@@ -36,43 +36,34 @@ related_revision_package:
   cad_record: "REV-A1/FreeCAD/Radome-CAD-Record.md"
   publication_040: "pub/040_descriptive/DMC-AMPEL360-A-53-10-10-00A-040A-D_Radome-Description.xml"
 ---
-
 # eWTW · PBS-10-10-10-10-10 — Radome ReqBS Baseline (REV-A1)
-
 ![LC-A](https://img.shields.io/badge/maturity-LC--A%20Conceptual-5585b0)
 ![REV-A1](https://img.shields.io/badge/revision-REV--A1-c29c00)
 ![ReqBS](https://img.shields.io/badge/breakdown-ReqBS-1f883d)
-
 - **Item:** `eWTW-PBS-10-10-10-10-10` (Radome)
 - **Part number:** `PN-eWTW-5310-0001`
 - **Revision:** `RADOME-REV-A1` · **Lifecycle stage:** `LC-A — Conceptual Design`
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 - **Requirements authority:** `Q-STRUCTURES` (supporting: `Q-DATAGOV`, `Q-AIR`, `Q-SCIRES`) · approval `unapproved`
 - **Record:** [`ReqBS-RADOME-REV-A1.yaml`](ReqBS-RADOME-REV-A1.yaml)
-
 ---
-
 ## 1. Purpose
-
 This is the **first controlled requirements baseline** for the radome, defined for the conceptual CAD state `RADOME-REV-A1` (`LC-A`). It fixes the radome's requirements as **revisioned artefacts** linked to the PBS item and its configuration, in line with `SBS-REV-BREAKDOWN-001` and `REQBS-REV-001`.
 
 Requirements are **not** static lifecycle-folder content. The authoritative requirement state for the radome lives here — under the PBS item revision — not inside the LC maturity folders. LC folders control maturity gates; this `REV-A1` baseline controls the engineering requirement truth of the configuration.
 
 ## 2. Position
-
 ```text
 eWTW-PBS-10-10-10-10-10_Radome/
 └── LC-A_Concept-Design/
     └── REV-A1/
         └── Requirements/
-            ├── ReqBS-RADOME-REV-A1.yaml   ← controlled record
-            └── ReqBS-RADOME-REV-A1.md     ← this document
+            ├── ReqBS-RADOME-REV-A1.yaml ← controlled record
+            └── ReqBS-RADOME-REV-A1.md ← this document
 ```
-
 The lifecycle phase (`LC-A_Concept-Design`) governs the revision (`REV-A1`), which governs the artifact-domain folder (`Requirements/`). This mirrors the CAD layout (`REV-A1/FreeCAD/`) and follows the canonical governance rule: `<PBS item>/<LC>/<REV>/<artifact-domain>/`.
 
 ## 3. Requirement classes (ReqBS-01..15)
-
 The baseline records one or more requirements per controlled class. Radome examples:
 
 | Class | Name | Radome example |
@@ -95,25 +86,24 @@ The baseline records one or more requirements per controlled class. Radome examp
 
 `ReqBS-13` declarations are tracked as quantified targets and margins under the TPMS (`…-10_TPMS_Technical-Performance-Measurement-Structure/`). The `ReqBS-01..15` class set is the 15 IEEE P1220 requirements analysis task areas.[^sef][^ieee1220]
 
-## 4. Traceability
+**Key resolved performance value (REV-A1 update):**  
+RF transmission loss (REQ-A1-1101) has been resolved to **≤ 0.8 dB** (one-way, 9.3–9.5 GHz, ±60°/±15°) with full traceability to the upstream Aircraft Requirements Specification `ARS-A1-0101-D01`.
 
+## 4. Traceability
 | Direction | Linked artefacts |
 |---|---|
-| Upstream | `eWTW-PBS-10-10-10-10-10` · `ATLAS-053` |
+| Upstream | `eWTW-PBS-10-10-10-10-10` · `ATLAS-053` · `ARS-A1-0101` (system-level weather detection) |
 | Downstream | `IBS-RADOME-REV-A1` · `RBS-RADOME-REV-A1` · `CBS-RADOME-REV-A1` · `EBS-RADOME-REV-A1` · `CAD-RADOME-REV-A1` · `PUB-040-RADOME` |
 
 ## 5. Governing rules
-
 ```yaml
-revisioned_breakdown_structure_rule: SBS-REV-BREAKDOWN-001   # per-revision breakdown ownership
-requirements_evolution_rule:        REQBS-REV-001            # requirements are revisioned artefacts
+revisioned_breakdown_structure_rule: SBS-REV-BREAKDOWN-001 # per-revision breakdown ownership
+requirements_evolution_rule: REQBS-REV-001 # requirements are revisioned artefacts
 ```
-
 > [!IMPORTANT]
 > A change to these requirements that affects geometry, interfaces, cost, risk, evidence, certification, or operations shall create or update the corresponding `REV-X` ReqBS and trigger impact assessment across `IBS`, `CBS`, `RBS`, `EBS`, `BOM`, `CAD`, and `PUB` artefacts (`REQBS-REV-001`).
 
 ## 6. Footprint
-
 | Field | Value |
 |---|---|
 | Document ID | `AMPEL360-eWTW-PBS-10-10-10-10-10-ReqBS-REV-A1` |
@@ -128,12 +118,12 @@ requirements_evolution_rule:        REQBS-REV-001            # requirements are 
 
 **Change log.**
 
-| Version | Date | Author / Division | Change |
-|---|---|---|---|
-| 0.1.0 | 2026-06-02 | Q-STRUCTURES | Initial draft ReqBS baseline for the radome conceptual CAD state (`RADOME-REV-A1`). |
+| Version | Date       | Author / Division      | Change |
+|---------|------------|------------------------|--------|
+| 0.1.0   | 2026-06-02 | Q-STRUCTURES           | Initial draft ReqBS baseline for the radome conceptual CAD state (`RADOME-REV-A1`). |
+| 0.1.1   | 2026-06-03 | Systems Engineering    | Propagated resolved RF transmission loss value (REQ-A1-1101) from upstream `ARS-A1-0101-D01` (≤ 0.8 dB). Updated note with full source traceability. Minor language alignment in interface and functional requirements for provisions-vs-systems ownership clarity (embedded mesh vs. LPS diverter strips). |
 
 ## 7. References
-
 [^sef]: Defense Acquisition University (DAU) Press. *Systems Engineering Fundamentals*. Fort Belvoir, VA, January 2001. — Ch. 4 *Requirements Analysis* (Fig. 4-3, the 15 requirements analysis task areas defining `ReqBS-01..15`).
 [^ieee1220]: IEEE Std 1220, *IEEE Standard for Application and Management of the Systems Engineering Process* — source of the 15 requirements analysis task areas.
 [^cs25]: EASA CS-25, *Certification Specifications and Acceptable Means of Compliance for Large Aeroplanes* — applicable airworthiness basis referenced by `ReqBS-03`.
