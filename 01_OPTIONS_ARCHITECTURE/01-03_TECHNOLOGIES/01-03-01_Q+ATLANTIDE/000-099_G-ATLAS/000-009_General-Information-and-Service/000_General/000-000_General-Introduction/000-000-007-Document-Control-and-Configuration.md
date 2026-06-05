@@ -7,12 +7,38 @@ ata_ref: 00-00-07
 owner: Q-DATAGOV
 agnostic: true
 status: baseline
+version: "0.1.0"
+date: "2026-06-05"
+ief_anchor:
+  sha256: "<to-be-stamped-at-baseline>"
+  stamped_at: "<ISO-8601 timestamp>"
+  stamped_by: Q-DATAGOV
 ---
 
 # 000-000-007 — Document Control and Configuration
 
 > **Node:** `000-000` · **Item:** `007` · **ATA ref:** 00-00-07
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
+
+---
+
+## Index
+
+- [1. Purpose](#1-purpose)
+- [2. SSOT+PUB Doctrine](#2-ssotpub-doctrine)
+- [3. Versioning](#3-versioning)
+  - [3.1 Version Format](#31-version-format)
+  - [3.2 Status Values](#32-status-values)
+- [4. Change Control](#4-change-control)
+  - [4.1 Change Request (CR)](#41-change-request-cr)
+  - [4.2 Fast-Track Corrections](#42-fast-track-corrections)
+  - [4.3 No Programme Override](#43-no-programme-override)
+- [5. Configuration and Evidence Anchor](#5-configuration-and-evidence-anchor)
+- [6. Lifecycle Gate Control](#6-lifecycle-gate-control)
+- [7. Change Log (this item)](#7-change-log-this-item)
+- [Change Control Workflow Diagram](#change-control-workflow-diagram)
+- [Glossary](#glossary)
+- [References and Citations](#references-and-citations)
 
 ---
 
@@ -90,7 +116,7 @@ ief_anchor:
   stamped_by: Q-DATAGOV
 ```
 
-The anchor is recorded in the item's front matter and in the master evidence index (`000-000-008`).
+The anchor is recorded in the item's front matter and in the master evidence index ([`000-000-008`](000-000-008-Traceability-and-Evidence-Index.md)).
 
 ---
 
@@ -114,17 +140,60 @@ Nodes in master range `000–009` are governed across the Q+ATLANTIDE **LC-lette
 
 ---
 
-```yaml
-Last.MarkedDown:
-  node: 000-000
-  item: "007"
-  ata_ref: 00-00-07
-  file: 000-000-007-Document-Control-and-Configuration.md
-  owner: Q-DATAGOV
-  status: baseline
-  ief_anchor:
-    sha256: <to-be-stamped-at-baseline>
-    stamped_at: <ISO-8601 timestamp>
-    stamped_by: Q-DATAGOV
-  .YieldedAlgorithmicMachineLearning: true
+## Change Control Workflow Diagram
+
+```mermaid
+flowchart TD
+    START(["🔔 Change identified<br/>(defect, gap, or improvement)"]) --> RAISE["Originator raises<br/>Change Request (CR)"]
+    RAISE --> REVIEW{"Q-DATAGOV review:<br/>scope, agnosticism,<br/>governance impact"}
+    REVIEW -->|"Rejected"| REJECT["CR closed — no change<br/>Programme documents gap<br/>in impact study"]
+    REVIEW -->|"Approved"| APPLY["Q-DATAGOV applies change<br/>Updates version number<br/>Records CR reference"]
+    APPLY --> ANCHOR["SHA-256 anchor computed<br/>Stamped in front matter<br/>and evidence index 008"]
+    ANCHOR --> BASELINE(["✅ Item re-baselined<br/>Status: baseline"])
+
+    PATCH(["📝 Fast-track:<br/>editorial / typo only"]) --> DIRECT["Q-DATAGOV applies directly<br/>Note added to change log<br/>No full CR cycle needed"]
+    DIRECT --> BASELINE
+
+    style START fill:#fd7e14,color:#fff
+    style BASELINE fill:#198754,color:#fff
+    style REJECT fill:#dc3545,color:#fff
+    style PATCH fill:#6c757d,color:#fff
 ```
+
+---
+
+## Glossary
+
+| Term / Acronym | Definition |
+|---|---|
+| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **PUB** | Programme publication — S1000D CSDB derived from SSOT via impact study. |
+| **SSOT+PUB** | Two-layer architecture: SSOT standard + PUB programme instances. |
+| **CR** | Change Request — formal document raising a proposed modification to a baselined item. |
+| **Baseline** | Formally approved status; changes require a CR. |
+| **SHA-256** | Cryptographic hash algorithm; used to create a tamper-evident content anchor. |
+| **IEF** | Integrity Evidence Framework — evidence anchoring scheme using SHA-256 hashes. |
+| **LC-A** | First Q+ATLANTIDE lifecycle stage: Conceptual Design. |
+| **LC-letter stage** | Q+ATLANTIDE lifecycle maturity phase (LC-A … LC-N). |
+| **REV-A_RELEASED** | Release gate closing LC-A stage. |
+| **Q-DATAGOV** | Q-Division responsible for G-ATLAS content governance. |
+| **CSDB** | Common Source DataBase — S1000D document store. |
+| **DMC** | Data Module Code — S1000D identifier for a programme data module. |
+| **Impact study** | Documented programme process mapping G-ATLAS nodes to programme DMCs. |
+| **major / minor / patch** | Semantic versioning components (structural / content / editorial). |
+
+---
+
+## References and Citations
+
+| # | Reference | External Link | Applicability |
+|---|---|---|---|
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for SSOT+PUB doctrine |
+| R2 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | SHA-256 anchoring and evidence stamping rules |
+| R3 | S1000D Issue 4.2 — CSDB and change management | <https://www.s1000d.net/> | S1000D change management practices for PUB layer |
+| R4 | Traceability and Evidence Index (item 008) | [`000-000-008-Traceability-and-Evidence-Index.md`](000-000-008-Traceability-and-Evidence-Index.md) | Master evidence register where SHA-256 anchors are recorded |
+| R5 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions for lifecycle gate control |
+
+---
+
+*Document footprint: G-ATLAS-000-000-007 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

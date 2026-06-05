@@ -7,12 +7,30 @@ ata_ref: 00-00-02
 owner: Q-DATAGOV
 agnostic: true
 status: baseline
+version: "0.1.0"
+date: "2026-06-05"
 ---
 
 # 000-000-002 — Purpose and Mission
 
 > **Node:** `000-000` · **Item:** `002` · **ATA ref:** 00-00-02
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
+
+---
+
+## Index
+
+- [1. Mission Statement](#1-mission-statement)
+- [2. Purpose](#2-purpose)
+  - [2.1 Close the Gap Between ATA and Green Architecture](#21-close-the-gap-between-ata-and-green-architecture)
+  - [2.2 Enable Multi-Programme Reuse](#22-enable-multi-programme-reuse)
+  - [2.3 Support Certification Readiness](#23-support-certification-readiness)
+  - [2.4 Maintain Governance Integrity](#24-maintain-governance-integrity)
+- [3. Boundaries](#3-boundaries)
+- [4. Relationship to the Model Digital Constitution](#4-relationship-to-the-model-digital-constitution)
+- [Constitutional Hierarchy Diagram](#constitutional-hierarchy-diagram)
+- [Glossary](#glossary)
+- [References and Citations](#references-and-citations)
 
 ---
 
@@ -76,13 +94,58 @@ G-ATLAS is constituted power under the **Model Digital Constitution** (`00_MODEL
 
 ---
 
-```yaml
-Last.MarkedDown:
-  node: 000-000
-  item: "002"
-  ata_ref: 00-00-02
-  file: 000-000-002-Purpose-and-Mission.md
-  owner: Q-DATAGOV
-  status: baseline
-  .YieldedAlgorithmicMachineLearning: true
+## Constitutional Hierarchy Diagram
+
+```mermaid
+graph TD
+    MDC["⚖️ Model Digital Constitution<br/>(Supreme constitutional authority)"]
+    GATLAS["📐 G-ATLAS SSOT<br/>(Constituted standard — agnostic architecture)"]
+    PUB["📦 Programme CSDB / PUB<br/>(Programme-specific publication)"]
+    REG["🏛️ ICAO / EASA / FAA<br/>(Regulatory ceiling)"]
+
+    REG -->|"airworthiness requirements"| MDC
+    MDC -->|"constitutes"| GATLAS
+    GATLAS -->|"impact study → DMC"| PUB
+
+    style MDC fill:#dc3545,color:#fff
+    style GATLAS fill:#0d6efd,color:#fff
+    style PUB fill:#6f42c1,color:#fff
+    style REG fill:#fd7e14,color:#fff
 ```
+
+---
+
+## Glossary
+
+| Term / Acronym | Definition |
+|---|---|
+| **G-ATLAS** | Green Aircraft Top-Level Architecture Schema. |
+| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **PUB** | Programme publication — S1000D CSDB derived from SSOT via impact study. |
+| **SSOT+PUB** | Two-layer architecture: SSOT standard + PUB programme instances. |
+| **MDC** | Model Digital Constitution — constitutional authority for G-ATLAS. |
+| **DMC** | Data Module Code — S1000D identifier for a programme data module. |
+| **LC-A** | First Q+ATLANTIDE lifecycle stage: Conceptual Design. |
+| **Delta node** | G-ATLAS node with suffix `-900`; no ATA equivalent; tagged `[G]`. |
+| **ATA** | Air Transport Association — publisher of ATA 100 / iSpec 2200. |
+| **iSpec 2200** | ATA specification extending ATA 100 with structured authoring rules. |
+| **DPP** | Digital Product Passport — lifecycle sustainability data record. |
+| **CSDB** | Common Source DataBase — S1000D document store. |
+| **Agnostic** | No programme- or product-specific assumption; energy-carrier and geometry neutral. |
+
+---
+
+## References and Citations
+
+| # | Reference | External Link | Applicability |
+|---|---|---|---|
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional ceiling; source of G-ATLAS governance values |
+| R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Documentation structure standard G-ATLAS mirrors and extends |
+| R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Publication standard for programme CSDB / PUB instances |
+| R4 | ICAO Annex 8 — Airworthiness | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Regulatory authority above all documentation standards |
+| R5 | EASA CS-25 | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Primary certification basis for large aircraft programmes |
+| R6 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions referenced in §2.3 |
+
+---
+
+*Document footprint: G-ATLAS-000-000-002 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

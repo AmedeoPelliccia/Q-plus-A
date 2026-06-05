@@ -7,12 +7,34 @@ ata_ref: 00-00-06
 owner: Q-DATAGOV
 agnostic: true
 status: baseline
+version: "0.1.0"
+date: "2026-06-05"
 ---
 
 # 000-000-006 — Standards Alignment: ATA 100 / iSpec 2200 / S1000D
 
 > **Node:** `000-000` · **Item:** `006` · **ATA ref:** 00-00-06
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
+
+---
+
+## Index
+
+- [1. Purpose of This Item](#1-purpose-of-this-item)
+- [2. ATA 100 Alignment](#2-ata-100-alignment)
+  - [2.1 Chapter Mirror](#21-chapter-mirror)
+  - [2.2 Section Mirror](#22-section-mirror)
+  - [2.3 What G-ATLAS Adds](#23-what-g-atlas-adds)
+  - [2.4 Chapters Reserved by ATA for Operators](#24-chapters-reserved-by-ata-for-operators)
+- [3. iSpec 2200 Alignment](#3-ispec-2200-alignment)
+- [4. S1000D Alignment](#4-s1000d-alignment)
+  - [4.1 Data Module Codes](#41-data-module-codes)
+  - [4.2 Issue Alignment](#42-issue-alignment)
+  - [4.3 CSDB and SSOT+PUB](#43-csdb-and-ssotpub)
+- [5. Standards Hierarchy](#5-standards-hierarchy)
+- [Standards Hierarchy Diagram](#standards-hierarchy-diagram)
+- [Glossary](#glossary)
+- [References and Citations](#references-and-citations)
 
 ---
 
@@ -121,13 +143,60 @@ G-ATLAS sits between iSpec 2200 and the programme CSDB. It does not override reg
 
 ---
 
-```yaml
-Last.MarkedDown:
-  node: 000-000
-  item: "006"
-  ata_ref: 00-00-06
-  file: 000-000-006-Standards-Alignment-ATA-iSpec-2200.md
-  owner: Q-DATAGOV
-  status: baseline
-  .YieldedAlgorithmicMachineLearning: true
+## Standards Hierarchy Diagram
+
+```mermaid
+graph TD
+    REG["🏛️ ICAO Annex 8 / CS-25 / Special Conditions<br/>(Regulatory — supreme for airworthiness)"]
+    ATA["📖 ATA 100 / iSpec 2200<br/>(Documentation structure standard)"]
+    GATLAS["📐 G-ATLAS SSOT<br/>(Agnostic architecture standard)"]
+    PUB["📦 Programme CSDB / PUB<br/>(S1000D data modules — programme-specific)"]
+
+    REG -->|"airworthiness requirements"| ATA
+    ATA -->|"chapter–section–subject structure"| GATLAS
+    GATLAS -->|"impact study → DMC"| PUB
+
+    style REG fill:#dc3545,color:#fff
+    style ATA fill:#fd7e14,color:#fff
+    style GATLAS fill:#0d6efd,color:#fff
+    style PUB fill:#6f42c1,color:#fff
 ```
+
+---
+
+## Glossary
+
+| Term / Acronym | Definition |
+|---|---|
+| **ATA 100** | Air Transport Association specification defining chapter-based aviation documentation structure. |
+| **iSpec 2200** | ATA extension to ATA 100 adding structured authoring rules and S1000D compatibility. |
+| **S1000D** | International specification for technical publications; defines data module codes and CSDB rules. |
+| **DMC** | Data Module Code — S1000D identifier for a programme data module. |
+| **MIC** | Model Identification Code — S1000D DMC component identifying the aircraft model. |
+| **SNS** | System/Sub-system/Subject — S1000D code component aligning to ATA chapter-section-subject. |
+| **CSDB** | Common Source DataBase — S1000D-compliant programme document store. |
+| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **PUB** | Programme publication — S1000D CSDB instance derived from SSOT via impact study. |
+| **SSOT+PUB** | Two-layer publication architecture: SSOT standard + PUB programme instances. |
+| **Delta node** | G-ATLAS node with suffix `-900`; tagged `[G]`; no ATA equivalent. |
+| **DPP** | Digital Product Passport — lifecycle sustainability data record. |
+| **LC-letter stage** | Q+ATLANTIDE lifecycle maturity phase (LC-A … LC-N). |
+| **ICAO** | International Civil Aviation Organization — publisher of Annex 8 (Airworthiness). |
+| **CS-25** | EASA Certification Specifications for Large Aeroplanes. |
+| **Bijective mapping** | One-to-one correspondence between ATA section numbers and G-ATLAS node suffixes. |
+
+---
+
+## References and Citations
+
+| # | Reference | External Link | Applicability |
+|---|---|---|---|
+| R1 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Primary documentation structure standard G-ATLAS mirrors |
+| R2 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Data module, CSDB, DMC, and SNS rules |
+| R3 | ICAO Annex 8 — Airworthiness of Aircraft | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Regulatory ceiling above all documentation standards |
+| R4 | EASA CS-25 Large Aeroplanes | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Primary certification basis for large aircraft programmes |
+| R5 | FAA AC 25.1309-1A | <https://rgl.faa.gov/Regulatory_and_Guidance_Library/rgAdvisoryCircular.nsf/0/99c827db969ed18e852569b90069e99c/$FILE/AC25.1309-1A.pdf> | System design and analysis guidance for complex systems |
+
+---
+
+*Document footprint: G-ATLAS-000-000-006 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
