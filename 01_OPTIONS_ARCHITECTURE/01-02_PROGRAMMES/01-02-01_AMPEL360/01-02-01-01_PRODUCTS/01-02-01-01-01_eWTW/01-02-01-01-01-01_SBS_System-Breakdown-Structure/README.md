@@ -68,6 +68,7 @@ This structure is intended to support deterministic architecture development, ce
 ├── 01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/
 ├── 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/
 ├── 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/
+├── 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/
 ├── .gitkeep
 └── README.md
 ```
@@ -88,6 +89,7 @@ This structure is intended to support deterministic architecture development, ce
 | `01-02-01-01-01-01-08` | `IBS_Interface-and-Installation-Breakdown-Structure` | Interface and installation decomposition: mechanical, electrical, digital, thermal, functional, physical, installation, and aircraft-zone interfaces. |
 | `01-02-01-01-01-01-09` | `ReqBS_Requirements-Breakdown-Structure`            | Requirements decomposition: controlled `ReqBS-01..15` taxonomy (customer expectations, constraints, scenarios, MOEs, boundaries, interfaces, environments, lifecycle, functional, performance, modes, TPMs, physical characteristics, HSI). Authoritative state recorded **per PBS item revision**. |
 | `01-02-01-01-01-01-10` | `TPMS_Technical-Performance-Measurement-Structure`  | Technical performance measurement: controlled TPMs (mass, RF loss, boresight error, bonding resistance, erosion life, …) with target, threshold, current estimate, and margin; tracks `ReqBS-13` per PBS item revision. |
+| `01-02-01-01-01-01-11` | `TPuBS_Technical-Publications-Breakdown-Structure`  | Technical publications decomposition (PUB side of the SSOT+PUB doctrine): the S1000D/CSDB object set (APPLIC, BREX, DM, DMRL, ICN, PM, SSOT) filed by the impacted G-ATLAS master ranges and node sections. Counterpart to the PBS; each PBS-leaf `PUB` is relocated here. |
 
 ---
 

@@ -1,0 +1,52 @@
+dm_release_index:
+  publication_baseline: PUB-BL-0001
+  publication_issue: "001-00"
+
+  data_modules:
+    - info_code: "040"
+      folder: DM/040_descriptive
+      dmc_short: DMC-EWTW-053-100-100-001-040
+      issue: "001-00"
+      linked_engineering_revision: REV-A1
+      valid_through_engineering_revision: REV-A2
+      changed_by_rev_a2: false
+
+    - info_code: "258"
+      folder: DM/258_bonding-and-lightning-check
+      dmc_short: DMC-EWTW-053-100-100-001-258
+      issue: "001-00"
+      linked_engineering_revision: REV-A1
+      valid_through_engineering_revision: REV-A2
+      changed_by_rev_a2: false
+
+    - info_code: "310"
+      folder: DM/310_inspection-general
+      dmc_short: DMC-EWTW-053-100-100-001-310
+      issue: "001-00"
+      linked_engineering_revision: REV-A1
+      valid_through_engineering_revision: REV-A2
+      changed_by_rev_a2: false
+
+    - info_code: "520"
+      folder: DM/520_removal
+      dmc_short: DMC-EWTW-053-100-100-001-520
+      issue: "001-00"
+      linked_engineering_revision: REV-A1
+      valid_through_engineering_revision: REV-A2
+      changed_by_rev_a2: false
+
+    - info_code: "720"
+      folder: DM/720_installation
+      dmc_short: DMC-EWTW-053-100-100-001-720
+      issue: "001-00"
+      linked_engineering_revision: REV-A1
+      valid_through_engineering_revision: REV-A2
+      changed_by_rev_a2: false
+
+    - info_code: "941"
+      folder: DM/941_illustrated-parts-data
+      dmc_short: DMC-EWTW-053-100-100-001-941
+      issue: "001-00"
+      linked_engineering_revision: REV-A1
+      valid_through_engineering_revision: REV-A2
+      changed_by_rev_a2: false

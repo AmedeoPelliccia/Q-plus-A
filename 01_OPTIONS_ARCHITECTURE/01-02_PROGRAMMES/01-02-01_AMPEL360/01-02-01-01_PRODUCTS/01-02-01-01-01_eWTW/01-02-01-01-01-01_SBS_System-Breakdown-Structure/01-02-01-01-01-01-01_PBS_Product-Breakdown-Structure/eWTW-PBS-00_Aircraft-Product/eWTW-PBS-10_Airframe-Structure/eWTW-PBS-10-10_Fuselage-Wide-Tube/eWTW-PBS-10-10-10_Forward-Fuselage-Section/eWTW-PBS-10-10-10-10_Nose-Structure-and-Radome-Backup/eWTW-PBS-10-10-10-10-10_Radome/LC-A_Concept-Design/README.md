@@ -21,10 +21,10 @@ q_orb_support:
   - Q-RISK
   - Q-GOV
 atlas_references:
-  - "000-099_ATLAS / 050-059_Estructuras"
+  - "000-099_ATLAS / 050-059_Primary-Structures-and-Programme-Interfaces"
   - "Fuselage / Forward Section / Nose Structure — programme PBS allocation"
-  - "030-039_Proteccion-y-Sistemas-Mecanicos / lightning and rain protection interface"
-  - "040-049_Avionica-Informacion-y-APU / weather-radar interface"
+  - "030-039_Protection-and-Mechanical-Systems / lightning and rain protection interface"
+  - "040-049_Avionics-Information-Systems-and-APU / weather-radar interface"
 governance_class: baseline
 version: "1.0.0"
 revision: A
@@ -69,7 +69,7 @@ bom:
 # eWTW · PBS-10-10-10-10-10 — Radome
 
 - **Parent:** `eWTW-PBS-10-10-10-10` (Nose Structure and Radome Backup)
-- **ATLAS reference:** `050-059_Estructuras` (programme PBS allocation; structural node not yet consolidated)
+- **ATLAS reference:** `050-059_Primary-Structures-and-Programme-Interfaces` (programme PBS allocation; structural node not yet consolidated)
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
 ## Index
@@ -196,10 +196,10 @@ The radome **owns the fairing and the provisions**; it **does not own** the rada
 
 | Reference | ATLAS / PBS target |
 |---|---|
-| Structural domain (this element) | ATLAS `050-059_Estructuras` (code range; node TBC) |
-| Weather-radar system (RF requirement source) | `eWTW-PBS-50-30/40` → ATLAS `040-049` Aviónica |
-| Lightning protection (diverters/bonding) | `eWTW-PBS-40-40` → ATLAS `030-039` Protección |
-| Mechanical protection (ice/rain context) | ATLAS `030-039` Protección & Sistemas Mecánicos |
+| Structural domain (this element) | ATLAS `050-059_Primary-Structures-and-Programme-Interfaces` (code range; node TBC) |
+| Weather-radar system (RF requirement source) | `eWTW-PBS-50-30/40` → ATLAS `040-049` Avionics |
+| Lightning protection (diverters/bonding) | `eWTW-PBS-40-40` → ATLAS `030-039` Protection |
+| Mechanical protection (ice/rain context) | ATLAS `030-039` Protection and Mechanical Systems |
 
 References are edges registered through the programme impact study; no system content is duplicated into this structural element.[^atlas]
 
@@ -328,8 +328,8 @@ traceability_rule:
 [^parent]: **Parent element (PBS-10-10-10-10 Nose Structure and Radome Backup)** — [`../README.md`](../README.md).
 [^section]: **Forward Fuselage Section (PBS-10-10-10)** — [`../../README.md`](../../README.md).
 [^pbs]: **eWTW Product Breakdown Structure (master)** — [`../../../../../eWTW-PBS-Product-Breakdown-Structure.md`](../../../../../eWTW-PBS-Product-Breakdown-Structure.md).
-[^atlas]: **Q+ATLANTIDE / ATLAS `050-059_Estructuras` (code range; structural node TBC)** — `01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/01-03-01-01_000-099_ATLAS/`.
-[^pub]: **PUB layer (Forward Fuselage Section data modules)** — [`../../PUB/README.md`](../../PUB/README.md).
+[^atlas]: **Q+ATLANTIDE / ATLAS `050-059_Primary-Structures-and-Programme-Interfaces` (code range; structural node TBC)** — `01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/01-03-01-01_000-099_ATLAS/`.
+[^pub]: **PUB layer (Forward Fuselage Section data modules)** — [`../../../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/PUB-Layer-Notes.md`](../../../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/PUB-Layer-Notes.md).
 [^cert]: **AMPEL360 eWTW certification basis** — `01-02-01_AMPEL360/01-02-01-02_CERTIFICATION/`.
 
 ## 7. Footprint
@@ -343,7 +343,7 @@ traceability_rule:
 | Programme · Product | AMPEL360 · eWTW |
 | Owning Q-Division | Q-STRUCTURES |
 | Support Q-Divisions | Q-AIR, Q-DATAGOV, Q-HORIZON |
-| ATLAS reference | `050-059_Estructuras` (code range; node TBC) |
+| ATLAS reference | `050-059_Primary-Structures-and-Programme-Interfaces` (code range; node TBC) |
 | Effectivity | eWTW · baseline · MSN-001..050 · active |
 | Version | 1.0.0 |
 | Status | draft |

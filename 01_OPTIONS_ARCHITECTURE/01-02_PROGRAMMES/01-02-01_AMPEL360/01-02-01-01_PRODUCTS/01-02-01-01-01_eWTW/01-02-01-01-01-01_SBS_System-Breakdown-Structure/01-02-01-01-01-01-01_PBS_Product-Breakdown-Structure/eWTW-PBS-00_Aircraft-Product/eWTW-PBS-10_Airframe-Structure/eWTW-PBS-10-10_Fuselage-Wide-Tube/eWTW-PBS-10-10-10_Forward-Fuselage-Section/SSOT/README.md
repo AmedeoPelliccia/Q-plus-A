@@ -9,9 +9,9 @@ product: eWTW
 pbs_id: eWTW-PBS-10-10-10
 pbs_title: "Forward Fuselage Section"
 layer: SSOT
-counterpart: "../PUB/"
+counterpart: "../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/"
 atlas_references:
-  - "000-099_ATLAS / 050-059_Estructuras"
+  - "000-099_ATLAS / 050-059_Primary-Structures-and-Programme-Interfaces"
 primary_q_division: Q-STRUCTURES
 support_q_divisions:
   - Q-AIR
@@ -37,7 +37,7 @@ effectivity:
 
 `SSOT/` holds the **authoritative engineering content** for the Forward Fuselage Section (`eWTW-PBS-10-10-10`). It is the single source of truth: the element definition, constituent registry, interface definitions, allocated requirements, and evidence anchors all originate here.
 
-Its counterpart `../PUB/` is a **projection** of this content into S1000D/CSDB form. Content flows **SSOT → PUB, never the reverse.** If `PUB/` and `SSOT/` disagree, `SSOT/` prevails and the publication is the defect.
+Its counterpart `../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/` is a **projection** of this content into S1000D/CSDB form. Content flows **SSOT → PUB, never the reverse.** If `PUB/` and `SSOT/` disagree, `SSOT/` prevails and the publication is the defect.
 
 ## 2. SSOT → PUB authority rule
 
@@ -83,7 +83,7 @@ The Forward Fuselage Section owns the following structural constituents. Each ch
 
 ## 5. Element definition (authoritative)
 
-The Forward Fuselage Section is the structural assembly from the nose tip to the forward production join with the centre fuselage. It provides the pressurized crew volume (flight deck), closes the forward pressure boundary, carries nose-landing-gear loads, and houses the forward equipment (E/E) bay. It is part of the airframe structure (`eWTW-PBS-10`) and references ATLAS `050-059_Estructuras` for the structures domain.
+The Forward Fuselage Section is the structural assembly from the nose tip to the forward production join with the centre fuselage. It provides the pressurized crew volume (flight deck), closes the forward pressure boundary, carries nose-landing-gear loads, and houses the forward equipment (E/E) bay. It is part of the airframe structure (`eWTW-PBS-10`) and references ATLAS `050-059_Primary-Structures-and-Programme-Interfaces` for the structures domain.
 
 Ownership boundary: this element owns **structure and installation provisions only**. Systems installed in or attached to it (avionics/IMA, ice/rain protection, weather radar, nose gear) are owned by their own PBS branches and referenced, never contained.
 
@@ -97,7 +97,7 @@ Ownership boundary: this element owns **structure and installation provisions on
 | Requirements | child SSOT `requirements.md` |
 | CAD | per-leaf `cad/<tool>/<LC-stage>/<REV>/` (rule `CAD-REVDIR-001`) |
 | Lifecycle | LC-letter model — `02_LIFECYCLE_MODEL/README.md` |
-| Publication | `../PUB/` (projection; rule `SSOT-AUTHORITY-001`) |
+| Publication | `../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/` (projection; rule `SSOT-AUTHORITY-001`) |
 | Evidence | IEF anchor per object |
 
 ## 7. Footprint
@@ -106,10 +106,10 @@ Ownership boundary: this element owns **structure and installation provisions on
 |---|---|
 | Document ID | `AMPEL360-eWTW-PBS-10-10-10-SSOT-README` |
 | PBS ID | `eWTW-PBS-10-10-10` |
-| Layer | SSOT (counterpart `../PUB/`) |
+| Layer | SSOT (counterpart `../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/`) |
 | Register | Q-plus / OPTIONS |
 | Owning Q-Division | Q-STRUCTURES |
-| ATLAS reference | `050-059_Estructuras` |
+| ATLAS reference | `050-059_Primary-Structures-and-Programme-Interfaces` |
 | Effectivity | eWTW · baseline · MSN-001..050 · active |
 | Version | 1.0.0 |
 | Status | draft |
