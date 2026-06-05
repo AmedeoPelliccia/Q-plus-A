@@ -1,0 +1,26 @@
+linked_engineering_baselines:
+  publication_baseline: PUB-BL-0001
+  pbs_leaf: eWTW-PBS-10-10-10-10-10_Radome
+  atlas_part_code: 053-100-100-001
+
+  engineering_states:
+    - lifecycle: LC-A_Concept-Design
+      revision: REV-A0
+      relationship: superseded
+      pub_impact: none
+
+    - lifecycle: LC-A_Concept-Design
+      revision: REV-A1
+      relationship: origin
+      pub_impact: publication_created
+
+    - lifecycle: LC-A_Concept-Design
+      revision: REV-A2
+      relationship: valid_through
+      pub_impact: none_per_impact_analysis
+      impact_analysis_ref: IMPACT-RADOME-PUB-0001
+
+  rule:
+    revision_link_mode: referenced_not_nested
+    engineering_revision_change_requires_pub_change: false
+    publication_change_trigger: impact_analysis

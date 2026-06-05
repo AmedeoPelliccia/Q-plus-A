@@ -329,7 +329,7 @@ traceability_rule:
 [^section]: **Forward Fuselage Section (PBS-10-10-10)** — [`../../README.md`](../../README.md).
 [^pbs]: **eWTW Product Breakdown Structure (master)** — [`../../../../../eWTW-PBS-Product-Breakdown-Structure.md`](../../../../../eWTW-PBS-Product-Breakdown-Structure.md).
 [^atlas]: **Q+ATLANTIDE / ATLAS `050-059_Estructuras` (code range; structural node TBC)** — `01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/01-03-01-01_000-099_ATLAS/`.
-[^pub]: **PUB layer (Forward Fuselage Section data modules)** — [`../../PUB/README.md`](../../PUB/README.md).
+[^pub]: **PUB layer (Forward Fuselage Section data modules)** — [`../../../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/053-100_Forward-Fuselage-Section/PUB-Layer-Notes.md`](../../../../../../../../01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/053-100_Forward-Fuselage-Section/PUB-Layer-Notes.md).
 [^cert]: **AMPEL360 eWTW certification basis** — `01-02-01_AMPEL360/01-02-01-02_CERTIFICATION/`.
 
 ## 7. Footprint

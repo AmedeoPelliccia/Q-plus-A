@@ -1,0 +1,19 @@
+impact_analysis_id: IMPACT-FWD-FUSELAGE-NODE-0001
+level: node
+atlas_node_code: 053-100
+pbs_item: eWTW-PBS-10-10-10_Forward-Fuselage-Section
+scope: >
+  Node-level (chapter-section) publication impact register for the forward
+  fuselage section. Aggregates part-level impact analyses and records whether a
+  section-wide engineering change affects published content, applicability,
+  procedures, illustrations, parts data, or publication assembly.
+change_policy:
+  engineering_revision_change_requires_pub_change: false
+  publication_change_trigger: impact_analysis
+linked_part_impacts:
+  - 053-100-100-001  # Radome → IMPACT-RADOME-PUB-0001
+authority:
+  owner: Q-DATAGOV
+  publication_authority: TPuBS
+  engineering_authority: PBS
+status: baseline

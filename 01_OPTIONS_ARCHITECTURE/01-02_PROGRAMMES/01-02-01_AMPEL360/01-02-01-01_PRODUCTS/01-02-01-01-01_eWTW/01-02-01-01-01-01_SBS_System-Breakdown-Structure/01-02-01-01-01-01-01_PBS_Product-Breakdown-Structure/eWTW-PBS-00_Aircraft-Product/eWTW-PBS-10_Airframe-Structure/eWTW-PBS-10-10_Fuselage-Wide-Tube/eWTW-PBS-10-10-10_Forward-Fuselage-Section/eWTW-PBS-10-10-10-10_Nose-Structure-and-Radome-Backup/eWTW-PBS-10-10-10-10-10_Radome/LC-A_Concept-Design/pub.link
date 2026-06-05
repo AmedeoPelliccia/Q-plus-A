@@ -1,0 +1,13 @@
+# PUB relocated to TPuBS under SSOT+PUB separation
+# Doctrine: engineering revision ≠ publication revision; LC/REV referenced, not nested.
+#
+# Destination (TPuBS part node):
+#   01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/
+#     000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/
+#       053-100_Forward-Fuselage-Section/
+#         053-100-100_Nose-Structure-and-Radome-Backup/
+#           053-100-100-001_Radome/
+#
+# ATLAS part code: 053-100-100-001  (⇄ PBS eWTW-PBS-10-10-10-10-10_Radome, ATA 53-10-10-01)
+# Publication baseline: PUB-BL-0001
+# Engineering LC/REV states are referenced in PUB-BASELINES/, never nested in DM/.
