@@ -96,13 +96,13 @@ The anchor is recorded in the item's front matter and in the master evidence ind
 
 ## 6. Lifecycle Gate Control
 
-Nodes in master range `000–009` are governed across **LC01–LC14**. The following nodes are **gate-critical** (their baseline status is verified at named lifecycle gates):
+Nodes in master range `000–009` are governed across the Q+ATLANTIDE **LC-letter stages** (LC-A through LC-N). The following nodes are **gate-critical** (their baseline status is verified at named lifecycle gates):
 
 | Node | Gate-critical at |
 |---|---|
-| `004-xxx` (Airworthiness Limitations) | LC05, LC07, LC09, LC11 |
-| `005-xxx` (Time Limits) | LC05, LC07, LC09, LC11 |
-| `000-000` (this node) | LC01 (first formal baseline) |
+| `004-xxx` (Airworthiness Limitations) | LC-D (Analysis/Verification), LC-G (Qualification), LC-J (Certification), LC-M (MRO) |
+| `005-xxx` (Time Limits) | LC-D (Analysis/Verification), LC-G (Qualification), LC-J (Certification), LC-M (MRO) |
+| `000-000` (this node) | LC-A (first formal baseline — `REV-A_RELEASED`) |
 
 ---
 

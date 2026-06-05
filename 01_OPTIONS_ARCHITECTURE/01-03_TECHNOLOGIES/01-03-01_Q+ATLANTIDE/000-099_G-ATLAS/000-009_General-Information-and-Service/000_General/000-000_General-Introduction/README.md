@@ -33,7 +33,7 @@ This node is the **orientation entry point** for the entire G-ATLAS data set. It
 
 ## Governance
 
-Inherits **DEGF v1.0** (eleven mandatory traits) from the band. Governed across **LC01–LC14**. Doctrines: **No-AAA**, **SICO.CA**, **SSOT+PUB**. This node is **SSOT**; programme CSDBs are **PUB**.
+Governed under the **SSOT+PUB** doctrine. Lifecycle stages follow the Q+ATLANTIDE LC-letter model (LC-A through LC-N). This node is **SSOT**; programme CSDBs are **PUB**.
 
 ---
 

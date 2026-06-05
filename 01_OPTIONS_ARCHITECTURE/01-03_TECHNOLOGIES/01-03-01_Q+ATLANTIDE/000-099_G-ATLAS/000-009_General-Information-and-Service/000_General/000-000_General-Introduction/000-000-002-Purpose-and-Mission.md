@@ -44,7 +44,7 @@ A single standard that all Q+ATLANTIDE programmes share means:
 
 ### 2.3 Support Certification Readiness
 
-Every G-ATLAS item is structured so that a programme can, at any lifecycle gate from LC01 onwards, demonstrate:
+Every G-ATLAS item is structured so that a programme can, at any lifecycle gate from LC-A (Conceptual Design) onwards, demonstrate:
 
 - Which standard node/item the content derives from.
 - Which requirement the item satisfies.
@@ -54,7 +54,7 @@ Every G-ATLAS item is structured so that a programme can, at any lifecycle gate 
 
 ### 2.4 Maintain Governance Integrity
 
-G-ATLAS is governed under **DEGF v1.0** (eleven mandatory traits), the **No-AAA** constitutional rule, and **SSOT+PUB** discipline. This ensures the standard cannot be silently modified by a programme, and that all changes go through controlled amendment.
+G-ATLAS is governed under the **SSOT+PUB** doctrine. This ensures the standard cannot be silently modified by a programme, and that all changes go through controlled amendment.
 
 ---
 

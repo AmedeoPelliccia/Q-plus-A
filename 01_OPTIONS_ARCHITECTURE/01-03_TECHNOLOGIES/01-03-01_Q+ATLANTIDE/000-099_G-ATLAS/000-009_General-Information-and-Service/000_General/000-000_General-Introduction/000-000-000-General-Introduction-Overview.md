@@ -51,7 +51,7 @@ G-ATLAS covers **band `000–099`** — the top-level architecture schema — an
 The data set is:
 
 - **A single-source-of-truth (SSOT)** standard. Programmes publish it into their own CSDBs (PUB) via impact studies; they do not modify the SSOT.
-- **Lifecycle-governed** across LC01–LC14 under the Q+ATLANTIDE governance framework.
+- **Lifecycle-governed**: artefact maturity follows the Q+ATLANTIDE LC-letter stages (LC-A Conceptual Design through LC-N Nature Sustainment).
 - **Certification-ready**: every item is structured to support traceability from architecture to requirement, evidence, and Data Module Code (DMC).
 
 ---

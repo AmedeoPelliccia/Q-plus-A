@@ -32,7 +32,7 @@ A G-ATLAS node defines *what* a function is and *what* must be documented about 
 
 | G-ATLAS slot (agnostic) | eWTW binding | hBWB binding |
 |---|---|---|
-| `000-900` — Sustainability, lifecycle & DPP framing | Battery-electric DPP; LC01–LC14 carbon accounting | Hydrogen DPP; well-to-wake H₂ lifecycle |
+| `000-900` — Sustainability, lifecycle & DPP framing | Battery-electric DPP; LC-letter lifecycle accounting | Hydrogen DPP; well-to-wake H₂ lifecycle |
 | `004-900` — Energy-carrier & storage airworthiness limits | Battery + power-electronics limits (CS-23/25 + SC) | Cryo-tank + fuel-cell stack limits (novel SC) |
 | `008-900` — Energy-carrier mass & CG effects | Battery mass distribution; pack layout CG model | LH₂ low-density mass + boil-off CG shift |
 

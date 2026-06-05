@@ -46,7 +46,7 @@ status: baseline
 
 | File | Purpose |
 |---|---|
-| `000-099_G-ATLAS/README.md` (band) | Band overview, DEGF inheritance, all master ranges |
+| `000-099_G-ATLAS/README.md` (band) | Band overview, governance framework, all master ranges |
 | `000-009_.../README.md` (master range) | Node register, numbering rules, green-delta table |
 | `000_General/README.md` (chapter) | Chapter-level navigation |
 | `000-000_.../README.md` (this node) | Node item set, governance, navigation |

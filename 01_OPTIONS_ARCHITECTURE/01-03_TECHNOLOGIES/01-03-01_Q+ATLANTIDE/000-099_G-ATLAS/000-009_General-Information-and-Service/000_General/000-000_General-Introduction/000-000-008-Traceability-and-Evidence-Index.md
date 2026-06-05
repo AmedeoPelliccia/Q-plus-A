@@ -33,7 +33,7 @@ Each G-ATLAS item has a four-link traceability chain:
 
 ```text
 Item (SSOT)
-  └── Parent requirement (DEGF / Model Digital Constitution / governing standard)
+  └── Parent requirement (Model Digital Constitution / governing standard)
       └── Applicable standard reference (ATA chapter, CS-25 article, …)
           └── IEF evidence anchor (SHA-256 at baseline)
               └── Programme DMC (in programme CSDB / PUB)
@@ -45,15 +45,15 @@ Item (SSOT)
 
 | Item | File | Parent requirement | Applicable standard | IEF anchor | DMC short-form |
 |---|---|---|---|---|---|
-| `000` | `000-000-000-…-Overview.md` | DEGF v1.0 — Orientation entry point | ATA 00-00-00; iSpec 2200 §0 | `<sha256: TBS>` | `DMC-<PROG>-000-000-000` |
-| `001` | `000-000-001-…-Definitions.md` | DEGF v1.0 — Scope and vocabulary control | ATA 00-00-01 | `<sha256: TBS>` | `DMC-<PROG>-000-000-001` |
+| `000` | `000-000-000-…-Overview.md` | MDC — Orientation entry point for the data set | ATA 00-00-00; iSpec 2200 §0 | `<sha256: TBS>` | `DMC-<PROG>-000-000-000` |
+| `001` | `000-000-001-…-Definitions.md` | MDC — Scope and vocabulary control | ATA 00-00-01 | `<sha256: TBS>` | `DMC-<PROG>-000-000-001` |
 | `002` | `000-000-002-…-Mission.md` | MDC Art. 2 — Mission and foundational values | ATA 00-00-02 | `<sha256: TBS>` | `DMC-<PROG>-000-000-002` |
-| `003` | `000-000-003-…-Agnosticism.md` | DEGF v1.0 — Agnosticism principle | ATA 00-00-03 | `<sha256: TBS>` | `DMC-<PROG>-000-000-003` |
-| `004` | `000-000-004-…-Use.md` | DEGF v1.0 — Navigation and usage guide | ATA 00-00-04 | `<sha256: TBS>` | `DMC-<PROG>-000-000-004` |
-| `005` | `000-000-005-…-Numbering.md` | DEGF v1.0 — Numbering convention | ATA 00-00-05; iSpec 2200 SNS rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-005` |
-| `006` | `000-000-006-…-ATA-iSpec.md` | DEGF v1.0 — Standards alignment | ATA 100; iSpec 2200; S1000D Issue 4.2 | `<sha256: TBS>` | `DMC-<PROG>-000-000-006` |
-| `007` | `000-000-007-…-Control.md` | DEGF v1.0 — Document control; MDC Art. 4 | SSOT+PUB doctrine; IEF | `<sha256: TBS>` | `DMC-<PROG>-000-000-007` |
-| `008` | `000-000-008-…-Index.md` (this) | DEGF v1.0 — Evidence index | IEF; S1000D DMC rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-008` |
+| `003` | `000-000-003-…-Agnosticism.md` | MDC — Agnosticism principle | ATA 00-00-03 | `<sha256: TBS>` | `DMC-<PROG>-000-000-003` |
+| `004` | `000-000-004-…-Use.md` | MDC — Navigation and usage guide | ATA 00-00-04 | `<sha256: TBS>` | `DMC-<PROG>-000-000-004` |
+| `005` | `000-000-005-…-Numbering.md` | MDC — Numbering convention | ATA 00-00-05; iSpec 2200 SNS rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-005` |
+| `006` | `000-000-006-…-ATA-iSpec.md` | MDC — Standards alignment | ATA 100; iSpec 2200; S1000D Issue 4.2 | `<sha256: TBS>` | `DMC-<PROG>-000-000-006` |
+| `007` | `000-000-007-…-Control.md` | MDC Art. 4 — Document control | SSOT+PUB doctrine; IEF | `<sha256: TBS>` | `DMC-<PROG>-000-000-007` |
+| `008` | `000-000-008-…-Index.md` (this) | MDC — Evidence index | IEF; S1000D DMC rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-008` |
 
 > **TBS** — To Be Stamped at formal baseline by Q-DATAGOV IEF tooling.
 > **MDC** — Model Digital Constitution (`00_MODEL-DIGITAL-CONSTITUTION/`).
@@ -90,7 +90,6 @@ Anchors marked `<sha256: TBS>` indicate the item is approved in content but awai
 | Upstream artefact | Location | Relevance |
 |---|---|---|
 | Model Digital Constitution | `00_MODEL-DIGITAL-CONSTITUTION/` | Constitutional authority for G-ATLAS |
-| DEGF v1.0 | `000-099_G-ATLAS/README.md` (band) | Eleven mandatory inheritance traits |
 | SSOT+PUB doctrine | `000-000-007` (item 007) | Change-control and publication rules |
 | IEF (Integrity Evidence Framework) | `01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/` | Evidence anchoring scheme |
 | ATA 100 / iSpec 2200 | `01-07-02-02_ATA-iSpec-2200/` | Numbering and structure reference |

@@ -26,7 +26,7 @@ The scope includes:
 
 - The architectural standard layer (SSOT): G-ATLAS nodes, items, and their governance.
 - The programme publication layer (PUB): CSDB instances derived from the SSOT via impact studies.
-- The lifecycle governance model (LC01–LC14) as it applies to nodes in this master range.
+- The lifecycle governance model (Q+ATLANTIDE LC-letter stages, LC-A through LC-N) as it applies to nodes in this master range.
 - The traceability linkage from items to requirements, evidence, and DMCs.
 
 ### 1.2 What Is Not Covered
@@ -59,15 +59,12 @@ The scope includes:
 | **DMC** | Data Module Code. An S1000D identifier assigned to a PUB instance of a G-ATLAS item. |
 | **CSDB** | Common Source DataBase. The S1000D-compliant storage for programme data modules. |
 | **Impact study** | The documented process by which a programme determines which G-ATLAS nodes/items apply, and maps them to DMCs. |
-| **DEGF** | Data-Engineering Governance Framework. The eleven mandatory inheritance traits applied to all G-ATLAS content. |
-| **LC01–LC14** | Lifecycle phases 01 through 14 in the Q+ATLANTIDE lifecycle model. |
+| **LC-letter stage** | A product/CAD maturity phase in the Q+ATLANTIDE lifecycle model (LC-A Conceptual Design … LC-N Nature Sustainment), each closed by a `REV-<LC>_RELEASED` gate. |
 
 ### 2.3 Doctrine Terms
 
 | Term | Definition |
 |---|---|
-| **No-AAA** | Constitutional rule: `AAA` is not a valid node, section, item, division, or taxonomy element in Q-plus. |
-| **SICO.CA** | Single-item, single-owner, controlled-authorship discipline: each item has exactly one controlling author and one controlling owner. |
 | **SSOT+PUB** | The two-layer publication architecture: SSOT (this standard) and PUB (programme CSDB). |
 | **Agnostic** | A content attribute meaning the item contains no programme- or product-specific assumption. |
 | **Baseline** | A governance status meaning the item is formally approved and under change control. |

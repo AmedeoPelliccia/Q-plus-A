@@ -51,7 +51,7 @@ G-ATLAS section numbers are ATA section numbers scaled by ×10 (three-digit suff
 ATA 100 does not define architecture content for:
 - Novel energy carriers (batteries, cryogenic hydrogen, ammonia, fuel cells)
 - Digital Product Passports
-- Lifecycle-phase sustainability accounting (LC01–LC14)
+- Lifecycle-phase sustainability accounting (LC-letter stages LC-A through LC-N)
 - Post-retirement nature-sustainment
 
 G-ATLAS adds **agnostic delta nodes** (`00X-900`) for each of these. These nodes are formally labelled `[G]` and have no ATA equivalent.
