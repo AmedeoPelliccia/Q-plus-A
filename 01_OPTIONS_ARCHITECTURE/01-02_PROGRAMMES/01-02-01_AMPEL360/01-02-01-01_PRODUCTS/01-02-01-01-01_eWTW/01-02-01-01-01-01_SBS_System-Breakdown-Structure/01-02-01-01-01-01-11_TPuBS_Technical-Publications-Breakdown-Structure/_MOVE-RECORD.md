@@ -8,8 +8,8 @@
 
 | From (PBS leaf) | To (TPuBS node section) |
 |---|---|
-| `…/eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/DM/*.xml` | `000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/053-100_Forward-Fuselage-Section/DM/` |
-| `…/eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/PM/*` | `000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/053-100_Forward-Fuselage-Section/PM/` |
+| `…/eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/DM/*.xml` | `000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/DM/` |
+| `…/eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/PM/*` | `000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/PM/` |
 | `…/eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/{APPLIC,BREX,DMRL,ICN}/` | seeded under `053-100_Forward-Fuselage-Section/` (same object classes) |
 
 ### Radome part — `pub/` relocated (corrected migration)
@@ -31,7 +31,7 @@ publication content now lives under the TPuBS, filed by the **G-ATLAS SNS**.
 
 ## Mapping rule
 
-`eWTW-PBS-10-10-10` (Forward Fuselage Section) ⇄ G-ATLAS node `050-059_Estructuras/053_Fuselage/053-100`
+`eWTW-PBS-10-10-10` (Forward Fuselage Section) ⇄ G-ATLAS node `050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100`
 (⇄ ATA 53-10). Below the node the ×10 SNS grammar continues for the sub-assembly
 (`eWTW-PBS-10-10-10-10` ⇄ `053-100-100`, ATA 53-10-10) and parts use **sequential**
 identifiers (`eWTW-PBS-10-10-10-10-10_Radome` ⇄ `053-100-100-001`, ATA 53-10-10-01).
@@ -47,8 +47,8 @@ Part: `SSOT` · `APPLIC` · `IMPACT` · `DM` (flat) · `ICN` · `PM` · `PUB-BAS
 
 | Master range | Node section | ATA | Built |
 |---|---|---|:--:|
-| `050-059_Estructuras` | `053-100` Forward Fuselage Section | 53-10 | ✅ instantiated |
-| `050-059_Estructuras` | `053-100-100-001` Radome (part) | 53-10-10-01 | ✅ instantiated |
+| `050-059_Primary-Structures-and-Programme-Interfaces` | `053-100` Forward Fuselage Section | 53-10 | ✅ instantiated |
+| `050-059_Primary-Structures-and-Programme-Interfaces` | `053-100-100-001` Radome (part) | 53-10-10-01 | ✅ instantiated |
 | `000-009_General-Information-and-Service` | `000-000` General / Introduction | 00-00 | pattern |
 | `000-009_General-Information-and-Service` | `006-200` Stations, Zones & Major Areas | 06-20 | pattern |
 | `000-009_General-Information-and-Service` | `007-100` Jacking Points | 07-10 | pattern |

@@ -9,7 +9,7 @@ product: eWTW
 pbs_id: eWTW-PBS-10-10-10
 ssot_source: "../../../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md (Forward Fuselage Section SSOT, PBS-side)"
 csdb_standard: "S1000D Issue 5.0"
-atlas_reference: "000-099_ATLAS / node 053 Fuselage (050-059 Estructuras)"
+atlas_reference: "000-099_ATLAS / node 053 Fuselage (050-059 Primary-Structures-and-Programme-Interfaces)"
 primary_q_division: Q-DATAGOV
 support_q_divisions:
   - Q-STRUCTURES

@@ -15,7 +15,7 @@ ssot_manifest:
   impact: "Mass/CG contribution"
   pbs_ssot_source:
     pbs_item: eWTW-PBS-10-10-10_Forward-Fuselage-Section
-    path: "../../../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md"
+    path: "../../../../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md"
     authority_rule: SSOT-AUTHORITY-001
   gatlas_standard_node:
     master_range: 000-009_General-Information-and-Service

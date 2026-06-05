@@ -2,7 +2,7 @@
 
 > **TPuBS publication entry (part level)** for the eWTW Radome.
 > **Maps from PBS:** `eWTW-PBS-10-10-10-10-10_Radome`
-> **G-ATLAS SNS:** `050-059_Estructuras` → `053_Fuselage` → `053-100` → `053-100-100` → **`053-100-100-001`** ⇄ **ATA 53-10-10-01**
+> **G-ATLAS SNS:** `050-059_Primary-Structures-and-Programme-Interfaces` → `053_Fuselage` → `053-100` → `053-100-100` → **`053-100-100-001`** ⇄ **ATA 53-10-10-01**
 > **Programme:** AMPEL360 / eWTW · **Standard:** S1000D Issue 4.2
 
 This part node holds the S1000D objects published for the Radome. Its `pub/`

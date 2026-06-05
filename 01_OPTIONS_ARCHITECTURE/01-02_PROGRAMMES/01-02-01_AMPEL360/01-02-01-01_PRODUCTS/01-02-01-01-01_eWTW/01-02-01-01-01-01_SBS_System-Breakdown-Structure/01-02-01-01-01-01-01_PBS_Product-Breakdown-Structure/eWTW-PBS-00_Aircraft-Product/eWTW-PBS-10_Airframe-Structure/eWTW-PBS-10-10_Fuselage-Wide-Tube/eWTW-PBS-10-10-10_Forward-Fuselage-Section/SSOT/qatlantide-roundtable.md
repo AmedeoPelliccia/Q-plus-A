@@ -74,12 +74,12 @@ Element: `eWTW-PBS-10-10-10` Forward Fuselage Section · effectivity `eWTW · ba
 
 | Q+ATLANTIDE node | Band | Relation | Criticality | Basis |
 |---|---|---|---|---|
-| `050-059_Estructuras` | ATLAS | `used-by` | high | Primary structural domain; the element *is* airframe structure. |
+| `050-059_Primary-Structures-and-Programme-Interfaces` | ATLAS | `used-by` | high | Primary structural domain; the element *is* airframe structure. |
 | Fuselage / forward-section node *(TBC)* | ATLAS | `used-by` | high | Section-level structural node; node consolidation pending. |
-| `030-039_Proteccion-y-Sistemas-Mecanicos` | ATLAS | `constrained-by` | high | Lightning Zone 1A and ice/rain protection on nose/radome drive structural provisions. |
-| `040-049_Avionica-Informacion-y-APU` | ATLAS | `constrained-by` | medium | E/E bay structure sized and accessed for avionics/IMA install. |
-| `020-029_Sistemas-Core-de-Aeronave` | ATLAS | `constrained-by` | medium | Local routing/bonding provisions for wiring and ducting. |
-| `010-019_Manejo-en-Tierra-Servicio` | ATLAS | `used-by` | low | Forward access and servicing interfaces. |
+| `030-039_Protection-and-Mechanical-Systems` | ATLAS | `constrained-by` | high | Lightning Zone 1A and ice/rain protection on nose/radome drive structural provisions. |
+| `040-049_Avionics-Information-Systems-and-APU` | ATLAS | `constrained-by` | medium | E/E bay structure sized and accessed for avionics/IMA install. |
+| `020-029_Core-Aircraft-Systems` | ATLAS | `constrained-by` | medium | Local routing/bonding provisions for wiring and ducting. |
+| `010-019_Ground-Handling-and-Servicing` | ATLAS | `used-by` | low | Forward access and servicing interfaces. |
 | `500-599_AMTA` (advanced materials) | AMTA | `used-by` | high | Composite skins, frames, and sandwich materials (cross-band). |
 | `800-899_CYB` | CYB | `constrained-by` | low | E/E bay EMI/HIRF shielding provisions (interface to cyber-resilient avionics). |
 
@@ -87,7 +87,7 @@ Element: `eWTW-PBS-10-10-10` Forward Fuselage Section · effectivity `eWTW · ba
 
 | Q+ATLANTIDE node | Relation | Criticality | Basis |
 |---|---|---|---|
-| `040-049_Avionica` + `800-899_CYB` | `modified-for` | medium | The eWTW electric architecture raises avionics/power-electronics density, so the E/E bay structure is **modified-for** elevated thermal and HIRF-shielding provisions relative to a conventional regional aircraft. |
+| `040-049_Avionics` + `800-899_CYB` | `modified-for` | medium | The eWTW electric architecture raises avionics/power-electronics density, so the E/E bay structure is **modified-for** elevated thermal and HIRF-shielding provisions relative to a conventional regional aircraft. |
 
 No `newly-required-by` or `retired-by` rows at baseline. The `modified-for` row is the one genuine deviation the electric configuration imposes on this structural element.
 
@@ -107,7 +107,7 @@ provenance:
 
 ## 5. Change-impact use
 
-This table is the element's entry in the change-impact spine: a change to any referenced Q+ATLANTIDE node can be queried back to every element that references it. For this element, a change to `030-039 Protección` (e.g. revised lightning zoning) or `500-599 AMTA` (e.g. material substitution) directly re-opens the structural provisions — high-criticality edges flagged accordingly.
+This table is the element's entry in the change-impact spine: a change to any referenced Q+ATLANTIDE node can be queried back to every element that references it. For this element, a change to `030-039 Protection` (e.g. revised lightning zoning) or `500-599 AMTA` (e.g. material substitution) directly re-opens the structural provisions — high-criticality edges flagged accordingly.
 
 ## 6. Footprint
 

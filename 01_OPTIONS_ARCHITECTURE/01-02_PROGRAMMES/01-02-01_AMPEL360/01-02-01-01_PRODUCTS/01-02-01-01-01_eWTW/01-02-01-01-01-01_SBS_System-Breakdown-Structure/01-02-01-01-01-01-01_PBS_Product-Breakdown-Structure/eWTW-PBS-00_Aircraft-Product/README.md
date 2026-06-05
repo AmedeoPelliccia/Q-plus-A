@@ -12,7 +12,7 @@ effectivity:
 # eWTW-PBS-00 — Aircraft Product
 
 - **Parent:** `PBS root`
-- **ATLAS reference:** `050-059` Estructuras
+- **ATLAS reference:** `050-059` Primary Structures and Programme Interfaces
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
 ## Scope

@@ -12,7 +12,7 @@ effectivity:
 # eWTW-PBS-10-10-10-40-10 — Window Cut Out Reinforcement
 
 - **Parent:** `eWTW-PBS-10-10-10-40`
-- **ATLAS reference:** `050-059` Estructuras
+- **ATLAS reference:** `050-059` Primary Structures and Programme Interfaces
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
 ## Scope

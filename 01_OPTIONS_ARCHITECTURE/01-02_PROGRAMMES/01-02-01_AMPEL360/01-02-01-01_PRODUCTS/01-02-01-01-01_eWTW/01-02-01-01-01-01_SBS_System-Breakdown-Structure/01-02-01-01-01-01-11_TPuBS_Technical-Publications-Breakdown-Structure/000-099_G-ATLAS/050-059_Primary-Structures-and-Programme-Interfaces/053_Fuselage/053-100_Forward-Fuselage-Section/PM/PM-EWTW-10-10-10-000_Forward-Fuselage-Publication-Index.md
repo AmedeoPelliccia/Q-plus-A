@@ -493,10 +493,10 @@ configuration_locked: false
 It is a **PBS-linked publication-layer object**, not a physical product breakdown object.
 
 ```text
-PBS = producto físico
-PUB/PM = índice y paquete de publicación
-DM/DMC = data modules S1000D cuando maduren
-EBS/IEF = evidencia
+PBS = physical product
+PUB/PM = publication index and package
+DM/DMC = S1000D data modules as they mature
+EBS/IEF = evidence
 ```
 
 ```

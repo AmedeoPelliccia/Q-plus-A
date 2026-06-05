@@ -128,14 +128,14 @@ The PBS organizes the physical product; ATLAS defines the systems. Each PBS segm
 
 | PBS segment | References ATLAS code range |
 |---|---|
-| `eWTW-PBS-10` Airframe Structure | `050-059` Estructuras |
-| `eWTW-PBS-20` Electric Propulsion | `070-079` Propulsión Eco-Tech e Híbrido-Eléctrica |
-| `eWTW-PBS-30` Energy Storage / Hybrid | `070-079` (hybrid) + EPTA `420-429` Almacenamiento de Energía (cross-band) |
-| `eWTW-PBS-40` Electrical Power Distribution | `020-029` Sistemas Core de Aeronave |
-| `eWTW-PBS-50` Avionics and Flight Systems | `040-049` Aviónica, Información & APU |
-| `eWTW-PBS-60` Mechanical and Utility Systems | `030-039` Protección & Sistemas Mecánicos |
+| `eWTW-PBS-10` Airframe Structure | `050-059` Primary Structures and Programme Interfaces |
+| `eWTW-PBS-20` Electric Propulsion | `070-079` Eco-Tech and Hybrid-Electric Propulsion |
+| `eWTW-PBS-30` Energy Storage / Hybrid | `070-079` (hybrid) + EPTA `420-429` Energy Storage (cross-band) |
+| `eWTW-PBS-40` Electrical Power Distribution | `020-029` Core Aircraft Systems |
+| `eWTW-PBS-50` Avionics and Flight Systems | `040-049` Avionics, Information Systems and APU |
+| `eWTW-PBS-60` Mechanical and Utility Systems | `030-039` Protection and Mechanical Systems |
 | `eWTW-PBS-70` Cabin and Payload | `020-029` (interiors/systems) + `010-019` service interfaces |
-| `eWTW-PBS-80` Ground and Servicing Interfaces | `010-019` Manejo en Tierra & Servicio |
+| `eWTW-PBS-80` Ground and Servicing Interfaces | `010-019` Ground Handling and Servicing |
 | `eWTW-PBS-90` Product Software / Digital | `040-049` (avionics SW) + Standards `CSDB/DMC`, `DPP` |
 
 Cross-band references (e.g. PBS-30 → EPTA `420-429`) are reference edges only and are registered through the programme impact study, not duplicated into ATLAS.

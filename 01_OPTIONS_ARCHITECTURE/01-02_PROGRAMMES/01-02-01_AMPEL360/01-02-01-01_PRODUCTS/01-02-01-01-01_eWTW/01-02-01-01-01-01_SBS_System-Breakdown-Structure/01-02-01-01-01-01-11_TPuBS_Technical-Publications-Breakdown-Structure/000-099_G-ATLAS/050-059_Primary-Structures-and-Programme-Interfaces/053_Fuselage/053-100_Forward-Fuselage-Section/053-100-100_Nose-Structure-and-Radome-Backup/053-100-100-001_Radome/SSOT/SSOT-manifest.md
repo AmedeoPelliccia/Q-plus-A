@@ -23,7 +23,7 @@ ssot_manifest:
 
   # (b) Standard node — Q+ATLANTIDE G-ATLAS Standard Numbering System
   gatlas_standard_node:
-    master_range: 050-059_Estructuras
+    master_range: 050-059_Primary-Structures-and-Programme-Interfaces
     chapter: 053_Fuselage
     node_section: 053-100
     registry: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces"
@@ -37,9 +37,9 @@ ssot_manifest:
   # DM → SSOT realisation
   realises:
     - dm: DMC-EWTW-053-100-100-001-040
-      from: "G-ATLAS 050-059_Estructuras/053-100 (descriptive)"
+      from: "G-ATLAS 050-059_Primary-Structures-and-Programme-Interfaces/053-100 (descriptive)"
     - dm: DMC-EWTW-053-100-100-001-520
-      from: "G-ATLAS 050-059_Estructuras/053-100 (procedural)"
+      from: "G-ATLAS 050-059_Primary-Structures-and-Programme-Interfaces/053-100 (procedural)"
     - object: part-identity
       from: "PBS eWTW-PBS-10-10-10-10-10_Radome"
 

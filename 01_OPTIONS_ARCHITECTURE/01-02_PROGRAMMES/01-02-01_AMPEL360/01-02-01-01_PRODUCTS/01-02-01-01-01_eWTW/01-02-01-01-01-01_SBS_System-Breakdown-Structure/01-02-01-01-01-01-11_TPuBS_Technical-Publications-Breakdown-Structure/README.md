@@ -58,7 +58,7 @@ Master ranges and node sections impacted by `eWTW-PBS-10-10-10_Forward-Fuselage-
 
 | Master range | Node section | ATA | Impact | Built |
 |---|---|---|---|:--:|
-| `050-059_Estructuras` | `053-100` Forward Fuselage Section | 53-10 | **Primary** | ✅ |
+| `050-059_Primary-Structures-and-Programme-Interfaces` | `053-100` Forward Fuselage Section | 53-10 | **Primary** | ✅ |
 | └ part | `053-100-100-001` Radome | 53-10-10-01 | **Primary part** (pub relocated) | ✅ |
 | `000-009_General-Information-and-Service` | `000-000` General / Introduction | 00-00 | Identification, general | pattern |
 | `000-009_General-Information-and-Service` | `006-200` Stations, Zones & Areas | 06-20 | Fuselage stations | pattern |
@@ -81,7 +81,7 @@ Last.MarkedDown:
   standard: S1000D-Issue-4.2
   sns_taxonomy: 000-099_G-ATLAS
   object_classes: [APPLIC, BREX, DM, DMRL, ICN, PM, SSOT, IMPACT, PUB-BASELINES]
-  primary_impact: 000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/053-100
+  primary_impact: 000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100
   primary_part: 053-100-100-001_Radome
   doctrine: SSOT+PUB-separation (engineering rev ≠ publication rev)
   status: baseline

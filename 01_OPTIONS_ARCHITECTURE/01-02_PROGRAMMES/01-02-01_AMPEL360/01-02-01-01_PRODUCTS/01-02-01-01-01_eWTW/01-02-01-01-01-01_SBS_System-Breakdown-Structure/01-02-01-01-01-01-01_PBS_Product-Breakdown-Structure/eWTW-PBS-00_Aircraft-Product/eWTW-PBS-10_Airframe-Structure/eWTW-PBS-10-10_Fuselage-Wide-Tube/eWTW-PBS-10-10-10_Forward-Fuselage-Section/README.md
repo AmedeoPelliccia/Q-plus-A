@@ -12,14 +12,14 @@ effectivity:
 # eWTW-PBS-10-10-10 — Forward Fuselage Section
 
 - **Parent:** `eWTW-PBS-10-10`
-- **ATLAS reference:** `050-059` Estructuras
+- **ATLAS reference:** `050-059` Primary Structures and Programme Interfaces
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
 ## Scope
 
 Forward fuselage section containing the nose, flight deck, forward pressure boundary, NLG bay, and forward equipment bay structural provisions.
 
-- This element carries an `SSOT/` folder for programme records. Its publication artefacts (the former `PUB/` layer) now live in the **TPuBS** at `…-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Estructuras/053_Fuselage/053-100_Forward-Fuselage-Section/`.
+- This element carries an `SSOT/` folder for programme records. Its publication artefacts (the former `PUB/` layer) now live in the **TPuBS** at `…-11_TPuBS_Technical-Publications-Breakdown-Structure/000-099_G-ATLAS/050-059_Primary-Structures-and-Programme-Interfaces/053_Fuselage/053-100_Forward-Fuselage-Section/`.
 - Structural provisions here do not absorb system ownership from lightning, avionics, cooling, or landing-gear system PBS branches.
 
 ## Child elements

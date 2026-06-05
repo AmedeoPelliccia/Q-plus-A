@@ -2,7 +2,7 @@
 
 > **TPuBS publication entry** for the eWTW forward fuselage.
 > **Maps from PBS:** `eWTW-PBS-10-10-10_Forward-Fuselage-Section`
-> **G-ATLAS SNS:** `050-059_Estructuras` → `053_Fuselage` → `053-100` ⇄ **ATA 53-10**
+> **G-ATLAS SNS:** `050-059_Primary-Structures-and-Programme-Interfaces` → `053_Fuselage` → `053-100` ⇄ **ATA 53-10**
 > **Programme:** AMPEL360 / eWTW · **Standard:** S1000D Issue 4.2
 
 This node holds all S1000D objects published for the forward fuselage section. The exact SNS section (`53-10` here) follows the programme structural SNS.
