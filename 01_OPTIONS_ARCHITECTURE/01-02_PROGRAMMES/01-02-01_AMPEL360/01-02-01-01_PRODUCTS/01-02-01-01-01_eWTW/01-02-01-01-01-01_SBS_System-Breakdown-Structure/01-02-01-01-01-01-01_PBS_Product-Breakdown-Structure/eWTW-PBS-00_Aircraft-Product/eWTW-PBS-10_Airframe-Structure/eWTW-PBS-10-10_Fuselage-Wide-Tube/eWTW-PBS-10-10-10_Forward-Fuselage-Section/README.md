@@ -19,7 +19,7 @@ effectivity:
 
 Forward fuselage section containing the nose, flight deck, forward pressure boundary, NLG bay, and forward equipment bay structural provisions.
 
-- This element carries `SSOT/` and `PUB/` folders for programme records and publication artefacts.
+- This element carries an `SSOT/` folder for programme records. Its publication artefacts (the former `PUB/` layer) now live in the **TPuBS** at `…-11_TPuBS_Technical-Publications-Breakdown-Structure/050-059_Estructuras/053-100_Forward-Fuselage-Section/`.
 - Structural provisions here do not absorb system ownership from lightning, avionics, cooling, or landing-gear system PBS branches.
 
 ## Child elements

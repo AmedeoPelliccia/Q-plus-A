@@ -7,7 +7,7 @@ axis: P-Programmes
 programme: AMPEL360
 product: eWTW
 pbs_id: eWTW-PBS-10-10-10
-ssot_source: "../SSOT/README.md (Forward Fuselage Section SSOT)"
+ssot_source: "../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md (Forward Fuselage Section SSOT, PBS-side)"
 csdb_standard: "S1000D Issue 5.0"
 atlas_reference: "000-099_ATLAS / node 053 Fuselage (050-059 Estructuras)"
 primary_q_division: Q-DATAGOV
@@ -26,6 +26,13 @@ effectivity:
 ---
 
 # eWTW · PBS-10-10-10 — PUB (S1000D Publication Layer)
+
+> [!NOTE]
+> **Relocated.** This is the detailed PUB-layer reference for the forward fuselage,
+> retained from the former `…/eWTW-PBS-10-10-10_Forward-Fuselage-Section/PUB/README.md`.
+> The publication objects now live in this TPuBS node (`053-100`). The canonical
+> entry is [`README.md`](./README.md); the standard binding is [`SSOT/SSOT-manifest.md`](./SSOT/SSOT-manifest.md).
+> The PBS-side `SSOT/` folder remains in the PBS leaf as the engineering source of truth.
 
 ## 1. Purpose
 
@@ -128,8 +135,8 @@ Provisions-only constituents (lightning diverter, EMI/HIRF shielding, cooling ro
 
 ## 7. References
 
-[^ssot]: **SSOT element document (eWTW-PBS-10-10-10 Forward Fuselage Section)** — [`../SSOT/README.md`](../SSOT/README.md).
-[^pbs]: **eWTW Product Breakdown Structure (master)** — [`../../../eWTW-PBS-Product-Breakdown-Structure.md`](../../../eWTW-PBS-Product-Breakdown-Structure.md).
+[^ssot]: **SSOT element document (eWTW-PBS-10-10-10 Forward Fuselage Section)** — [`../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md`](../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md).
+[^pbs]: **eWTW Product Breakdown Structure (master)** — [`../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/README.md`](../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/README.md).
 [^atlas]: **Q+ATLANTIDE / ATLAS node 053 Fuselage (`050-059`)** — `01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/01-03-01-01_000-099_ATLAS/`.
 [^cert]: **AMPEL360 eWTW certification basis** — `01-02-01_AMPEL360/01-02-01-02_CERTIFICATION/`.
 [^brex]: **BREX data module (business rules)** — `PUB/BREX/DMC-AMPEL360E-EWTW-022-00WA_BREX.xml`.
@@ -142,7 +149,7 @@ Provisions-only constituents (lightning diverter, EMI/HIRF shielding, cooling ro
 | PBS ID | `eWTW-PBS-10-10-10` |
 | Register | Q-plus / OPTIONS |
 | CSDB standard | S1000D Issue 5.0 |
-| SSOT source | `../SSOT/README.md` |
+| SSOT source | `../../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/SSOT/README.md` |
 | ATLAS reference | node 053 Fuselage (`050-059`) |
 | Owning Q-Division | Q-DATAGOV |
 | Support Q-Divisions | Q-STRUCTURES, Q-AIR |
