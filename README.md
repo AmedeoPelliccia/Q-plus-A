@@ -191,7 +191,7 @@ Node README: [`01-03-01_Q+ATLANTIDE/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIE
 
 Architecture bands:
 
-* [`000-099_ATLAS/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_ATLAS/)
+* [`000-099_G-ATLAS/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/)
 * [`100-199_STA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/100-199_STA/)
 * [`200-299_DTTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/200-299_DTTA/)
 * [`300-399_DTCEC/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/300-399_DTCEC/)
@@ -342,7 +342,7 @@ q_atlantide:
 | `Q+` | Public mark / organizational umbrella. |
 | `Q+ATLANTIDE` | Controlled architecture-taxonomy and technical-knowledge ecosystem. |
 | `Q+ATLANTIDE1000` | Controlled `000–999` identification schema/register; not a physical folder unless explicitly created. |
-| `ATLAS` | `000–099` Aircraft Top Level Architecture Schema/System. |
+| `G-ATLAS` | `000–099` Green Aircraft Top-Level Architecture Schema/System. |
 | `STA` | `100–199` Space Technology Architecture. |
 | `DTTA` | `200–299` Defence Technology and Tactical Architecture. |
 | `DTCEC` | `300–399` Digital Twin, Cloud, Edge and AI Computing. |
@@ -359,7 +359,7 @@ q_atlantide:
 
 | Range | Code | Controlled Meaning | Scope |
 | ---: | --- | --- | --- |
-| `000–099` | `ATLAS` | **Aircraft Top Level Architecture Schema/System** | New commercial aircraft architectures, aircraft systems, structures, propulsion, avionics, S1000D/CSDB mapping, type-specific expansion, and aircraft lifecycle traceability. |
+| `000–099` | `G-ATLAS` | **Green Aircraft Top-Level Architecture Schema/System** | New commercial aircraft architectures, aircraft systems, structures, propulsion, avionics, S1000D/CSDB mapping, type-specific expansion, and aircraft lifecycle traceability. |
 | `100–199` | `STA` | **Space Technology Architecture** | Spacecraft, launchers, orbital systems, space propulsion, space structures, mission systems, space operations, and orbital infrastructure. |
 | `200–299` | `DTTA` | **Defence Technology and Tactical Architecture** | Defence systems, controlled non-operational armament classification, tactical architecture boundaries, interoperability, safety, export-control, and assurance. |
 | `300–399` | `DTCEC` | **Digital Twin, Cloud, Edge and AI Computing** | Digital twins, cloud/edge systems, AI/ML platforms, simulation environments, data pipelines, compute governance, and lifecycle evidence. |
@@ -373,7 +373,7 @@ q_atlantide:
 ```text
 Q+ATLANTIDE      = architecture-taxonomy and technical-knowledge ecosystem
 Q+ATLANTIDE1000  = controlled 000–999 identification schema/register
-ATLAS            = 000–099 aircraft architecture band
+G-ATLAS          = 000–099 green aircraft architecture band
 STA              = 100–199 space technology architecture band
 DTTA             = 200–299 defence technology and tactical architecture band
 DTCEC            = 300–399 digital twin, cloud, edge and AI computing band
@@ -388,7 +388,7 @@ QCSAA            = 900–999 quantum computing and sentient agency architecture 
 `Q+ATLANTIDE1000` is a schema/register, not a physical folder unless explicitly created. The physical folders under `01-03-01_Q+ATLANTIDE/` are the architecture-band implementation folders:
 
 ```text
-000-099_ATLAS/
+000-099_G-ATLAS/
 100-199_STA/
 200-299_DTTA/
 300-399_DTCEC/
