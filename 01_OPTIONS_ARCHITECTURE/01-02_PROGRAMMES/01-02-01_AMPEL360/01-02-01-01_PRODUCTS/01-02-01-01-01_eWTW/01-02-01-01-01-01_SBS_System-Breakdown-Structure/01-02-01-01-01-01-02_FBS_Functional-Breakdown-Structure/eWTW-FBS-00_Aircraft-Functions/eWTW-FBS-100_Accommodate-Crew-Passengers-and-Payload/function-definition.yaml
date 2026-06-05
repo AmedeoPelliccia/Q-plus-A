@@ -1,0 +1,14 @@
+function_id: eWTW-FBS-100
+function_statement: "Accommodate crew, passengers, and payload."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-100-10
+  - eWTW-FBS-100-20
+  - eWTW-FBS-100-30
+  - eWTW-FBS-100-40
+allocation:
+  g_atlas_chapters: ["025", "044"]
+  pbs_items: ["PBS Cabin"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

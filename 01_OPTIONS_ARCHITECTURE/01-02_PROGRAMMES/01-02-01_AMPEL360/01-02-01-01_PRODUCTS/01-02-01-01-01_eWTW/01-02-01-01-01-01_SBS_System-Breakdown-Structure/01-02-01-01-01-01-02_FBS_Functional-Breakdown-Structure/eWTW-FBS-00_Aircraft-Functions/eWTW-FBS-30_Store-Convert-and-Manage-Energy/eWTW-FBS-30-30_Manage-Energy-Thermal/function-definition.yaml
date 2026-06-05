@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-30-30
+function_statement: "Manage thermal conditions of energy storage system."
+parent: eWTW-FBS-30
+children: []
+allocation:
+  g_atlas_chapters: ["004-900"]
+  pbs_items: ["PBS Energy Storage"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

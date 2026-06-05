@@ -1,0 +1,15 @@
+function_id: eWTW-FBS-50
+function_statement: "Provide structural integrity under all load conditions."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-50-10
+  - eWTW-FBS-50-20
+  - eWTW-FBS-50-30
+  - eWTW-FBS-50-40
+  - eWTW-FBS-50-50
+allocation:
+  g_atlas_chapters: ["050-059"]
+  pbs_items: ["PBS-10 Airframe Structure"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

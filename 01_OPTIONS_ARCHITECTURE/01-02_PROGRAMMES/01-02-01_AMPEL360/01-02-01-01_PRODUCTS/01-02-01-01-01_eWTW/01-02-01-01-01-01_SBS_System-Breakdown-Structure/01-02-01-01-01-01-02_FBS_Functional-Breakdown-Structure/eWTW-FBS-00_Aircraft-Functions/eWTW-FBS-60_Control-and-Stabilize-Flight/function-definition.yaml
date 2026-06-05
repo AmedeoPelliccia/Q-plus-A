@@ -1,0 +1,15 @@
+function_id: eWTW-FBS-60
+function_statement: "Control and stabilize aircraft flight in all axes."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-60-10
+  - eWTW-FBS-60-20
+  - eWTW-FBS-60-30
+  - eWTW-FBS-60-40
+  - eWTW-FBS-60-50
+allocation:
+  g_atlas_chapters: ["027", "022"]
+  pbs_items: ["PBS Flight Controls"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

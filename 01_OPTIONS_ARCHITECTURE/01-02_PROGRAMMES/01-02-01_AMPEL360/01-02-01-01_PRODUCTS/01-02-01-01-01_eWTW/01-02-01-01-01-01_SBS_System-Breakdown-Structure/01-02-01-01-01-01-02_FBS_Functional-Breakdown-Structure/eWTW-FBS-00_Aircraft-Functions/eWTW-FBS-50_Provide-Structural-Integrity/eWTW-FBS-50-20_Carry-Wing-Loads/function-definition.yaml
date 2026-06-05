@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-50-20
+function_statement: "Carry and distribute wing structural loads."
+parent: eWTW-FBS-50
+children: []
+allocation:
+  g_atlas_chapters: ["057"]
+  pbs_items: ["PBS-10 Airframe Structure"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

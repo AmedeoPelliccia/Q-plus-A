@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-120-10
+function_statement: "Detect and suppress fire."
+parent: eWTW-FBS-120
+children: []
+allocation:
+  g_atlas_chapters: ["026"]
+  pbs_items: ["PBS Safety"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

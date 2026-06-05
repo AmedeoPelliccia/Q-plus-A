@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-90-20
+function_statement: "Manage onboard data networks and buses."
+parent: eWTW-FBS-90
+children: []
+allocation:
+  g_atlas_chapters: ["042", "046"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

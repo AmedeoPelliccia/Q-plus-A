@@ -1,0 +1,14 @@
+function_id: eWTW-FBS-90
+function_statement: "Provide information management and avionics integration."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-90-10
+  - eWTW-FBS-90-20
+  - eWTW-FBS-90-30
+  - eWTW-FBS-90-40
+allocation:
+  g_atlas_chapters: ["042", "046"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

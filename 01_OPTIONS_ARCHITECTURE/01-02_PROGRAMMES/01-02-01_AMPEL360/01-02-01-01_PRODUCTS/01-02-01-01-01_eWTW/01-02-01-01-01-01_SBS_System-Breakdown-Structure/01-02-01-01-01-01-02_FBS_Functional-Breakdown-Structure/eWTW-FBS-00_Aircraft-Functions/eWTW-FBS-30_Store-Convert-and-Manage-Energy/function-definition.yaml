@@ -1,0 +1,15 @@
+function_id: eWTW-FBS-30
+function_statement: "Store, convert, and manage electrical energy for the mission."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-30-10
+  - eWTW-FBS-30-20
+  - eWTW-FBS-30-30
+  - eWTW-FBS-30-40
+  - eWTW-FBS-30-50
+allocation:
+  g_atlas_chapters: ["004-900", "005-900"]
+  pbs_items: ["PBS Energy Storage"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

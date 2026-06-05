@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-40-30
+function_statement: "Distribute low-voltage power to avionics and cabin systems."
+parent: eWTW-FBS-40
+children: []
+allocation:
+  g_atlas_chapters: ["024"]
+  pbs_items: ["PBS Electrical"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

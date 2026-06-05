@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-30-40
+function_statement: "Ensure safe isolation and containment of energy hazards."
+parent: eWTW-FBS-30
+children: []
+allocation:
+  g_atlas_chapters: ["004-900"]
+  pbs_items: ["PBS Energy Storage"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

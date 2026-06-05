@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-70-30
+function_statement: "Provide ice and rain protection for aircraft surfaces."
+parent: eWTW-FBS-70
+children: []
+allocation:
+  g_atlas_chapters: ["030"]
+  pbs_items: ["PBS ECS"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

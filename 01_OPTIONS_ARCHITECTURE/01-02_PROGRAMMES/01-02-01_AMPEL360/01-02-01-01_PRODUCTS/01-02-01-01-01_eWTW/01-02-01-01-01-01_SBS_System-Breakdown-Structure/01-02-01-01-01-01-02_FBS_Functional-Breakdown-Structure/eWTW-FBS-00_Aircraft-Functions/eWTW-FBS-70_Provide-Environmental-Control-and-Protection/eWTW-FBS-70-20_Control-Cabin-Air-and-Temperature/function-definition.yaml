@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-70-20
+function_statement: "Control cabin air quality and temperature."
+parent: eWTW-FBS-70
+children: []
+allocation:
+  g_atlas_chapters: ["021"]
+  pbs_items: ["PBS ECS"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

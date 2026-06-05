@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-70-40
+function_statement: "Provide thermal management for aircraft systems."
+parent: eWTW-FBS-70
+children: []
+allocation:
+  g_atlas_chapters: ["036"]
+  pbs_items: ["PBS ECS"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

@@ -1,0 +1,14 @@
+function_id: eWTW-FBS-110
+function_statement: "Enable ground operations and mobility of the aircraft."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-110-10
+  - eWTW-FBS-110-20
+  - eWTW-FBS-110-30
+  - eWTW-FBS-110-40
+allocation:
+  g_atlas_chapters: ["032", "009", "010"]
+  pbs_items: ["PBS Landing Gear"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

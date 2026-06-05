@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-80-40
+function_statement: "Provide guidance and flight management functions."
+parent: eWTW-FBS-80
+children: []
+allocation:
+  g_atlas_chapters: ["022", "034"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

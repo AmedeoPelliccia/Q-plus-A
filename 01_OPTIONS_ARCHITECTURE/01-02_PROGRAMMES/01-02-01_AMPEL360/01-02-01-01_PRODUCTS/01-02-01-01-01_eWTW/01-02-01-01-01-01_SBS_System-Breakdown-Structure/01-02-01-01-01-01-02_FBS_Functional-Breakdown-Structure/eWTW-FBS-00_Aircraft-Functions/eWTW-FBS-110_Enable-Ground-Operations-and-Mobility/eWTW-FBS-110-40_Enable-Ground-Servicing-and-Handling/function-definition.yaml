@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-110-40
+function_statement: "Enable ground servicing and handling of the aircraft."
+parent: eWTW-FBS-110
+children: []
+allocation:
+  g_atlas_chapters: ["010"]
+  pbs_items: ["PBS Landing Gear"]
+criticality: DAL-D
+owner: Q-AIR
+status: baseline

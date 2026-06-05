@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-50-40
+function_statement: "Support and distribute landing gear loads."
+parent: eWTW-FBS-50
+children: []
+allocation:
+  g_atlas_chapters: ["032"]
+  pbs_items: ["PBS-10 Airframe Structure"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-120-20
+function_statement: "Provide emergency egress for occupants."
+parent: eWTW-FBS-120
+children: []
+allocation:
+  g_atlas_chapters: ["025"]
+  pbs_items: ["PBS Safety"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-10-40
+function_statement: "Manage aerodynamic loads and flow distribution."
+parent: eWTW-FBS-10
+children: []
+allocation:
+  g_atlas_chapters: ["057"]
+  pbs_items: ["PBS-10"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline
