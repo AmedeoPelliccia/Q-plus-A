@@ -36,7 +36,7 @@ The standard **must fit all of them unchanged**. Where ATA has no equivalent (en
 | Tier | Format | ATA mirror | Example |
 |---|---|---|---|
 | Master Range | `000–009` | General group | `000-009_General-Information-and-Service` |
-| Chapter (implicit, encoded in node prefix) | `00X` | ATA chapter `0X` | `002` ⇄ ATA 02 |
+| Chapter (physical folder) | `00X_<Title>` | ATA chapter `0X` | `002_Operations` ⇄ ATA 02 |
 | **Node = Code Section** | `00X-Y00` | ATA chapter-section `0X-Y0` | `002-100` ⇄ **ATA 02-10** |
 | Item / Subject (markdown file) | `<node>-<item>-<Title>.md` | ATA subject `0X-Y0-ZZ` | `002-100-001-…md` ⇄ ATA 02-10-01 |
 
@@ -53,76 +53,76 @@ A node's **`-000`** code section is its chapter-general / overview node (ATA `0X
 000-009_General-Information-and-Service/                              (MASTER RANGE)
 ├── README.md                                                         ← this index
 │
-│   ── 000  ⇄ ATA 00  General / Introduction ──────────────────────
-├── 000-000_General-Introduction/
-├── 000-100_Applicability-and-Effectivity/
-├── 000-200_Identification-and-Designation/
-├── 000-300_Vocabulary-Units-and-Reference-Frames/
-├── 000-900_Sustainability-Lifecycle-and-DPP-Framing/                 [G]
+├── 000_General/                            ⇄ ATA 00  General / Introduction
+│   ├── 000-000_General-Introduction/
+│   ├── 000-100_Applicability-and-Effectivity/
+│   ├── 000-200_Identification-and-Designation/
+│   ├── 000-300_Vocabulary-Units-and-Reference-Frames/
+│   └── 000-900_Sustainability-Lifecycle-and-DPP-Framing/             [G]
 │
-│   ── 001  ⇄ ATA 01  Maintenance Policy (programme-governed) ──────
-├── 001-000_Maintenance-Policy-General/
-├── 001-100_Maintenance-Concept-and-Philosophy/
-├── 001-200_Maintenance-Programme-Structure-MSG-3/
-├── 001-300_Reliability-and-Condition-Monitoring-Policy/
-├── 001-900_Green-Maintenance-and-Circularity-Policy/                 [G]
+├── 001_Maintenance-Policy/                 ⇄ ATA 01  Maintenance Policy (programme-governed)
+│   ├── 001-000_Maintenance-Policy-General/
+│   ├── 001-100_Maintenance-Concept-and-Philosophy/
+│   ├── 001-200_Maintenance-Programme-Structure-MSG-3/
+│   ├── 001-300_Reliability-and-Condition-Monitoring-Policy/
+│   └── 001-900_Green-Maintenance-and-Circularity-Policy/             [G]
 │
-│   ── 002  ⇄ ATA 02  Operations (programme-governed) ──────────────
-├── 002-000_Operations-Information-General/
-├── 002-100_Operating-Limitations-General/
-├── 002-200_Crew-Roles-and-Responsibilities/
-├── 002-300_Operational-Envelope-and-Mission-Profiles/
-├── 002-900_Energy-and-Emissions-Operating-Considerations/           [G]
+├── 002_Operations/                         ⇄ ATA 02  Operations (programme-governed)
+│   ├── 002-000_Operations-Information-General/
+│   ├── 002-100_Operating-Limitations-General/
+│   ├── 002-200_Crew-Roles-and-Responsibilities/
+│   ├── 002-300_Operational-Envelope-and-Mission-Profiles/
+│   └── 002-900_Energy-and-Emissions-Operating-Considerations/       [G]
 │
-│   ── 003  ⇄ ATA 03  Support (programme-governed) ─────────────────
-├── 003-000_Support-General/
-├── 003-100_Ground-Support-Equipment-Interfaces-General/
-├── 003-200_Maintenance-and-Support-Facilities/
-├── 003-300_Safety-Zones-and-Hazard-Management-General/
-├── 003-900_Energy-Replenishment-Ground-Infrastructure/              [G]
+├── 003_Support/                            ⇄ ATA 03  Support (programme-governed)
+│   ├── 003-000_Support-General/
+│   ├── 003-100_Ground-Support-Equipment-Interfaces-General/
+│   ├── 003-200_Maintenance-and-Support-Facilities/
+│   ├── 003-300_Safety-Zones-and-Hazard-Management-General/
+│   └── 003-900_Energy-Replenishment-Ground-Infrastructure/          [G]
 │
-│   ── 004  ⇄ ATA 04  Airworthiness Limitations ───────────────────
-├── 004-000_Airworthiness-Limitations-General-ALS/
-├── 004-100_Structural-Airworthiness-Limitations/
-├── 004-200_Systems-Airworthiness-Limitations/
-├── 004-300_Certification-Maintenance-Requirements-CMR/
-├── 004-900_Energy-Carrier-and-Storage-Airworthiness-Limitations/    [G]
+├── 004_Airworthiness-Limitations/          ⇄ ATA 04  Airworthiness Limitations
+│   ├── 004-000_Airworthiness-Limitations-General-ALS/
+│   ├── 004-100_Structural-Airworthiness-Limitations/
+│   ├── 004-200_Systems-Airworthiness-Limitations/
+│   ├── 004-300_Certification-Maintenance-Requirements-CMR/
+│   └── 004-900_Energy-Carrier-and-Storage-Airworthiness-Limitations/ [G]
 │
-│   ── 005  ⇄ ATA 05  Time Limits / Maintenance Checks ─────────────
-├── 005-000_Time-Limits-General/
-├── 005-100_Time-Limits-and-Life-Limited-Parts/
-├── 005-200_Scheduled-Maintenance-Checks/
-├── 005-500_Unscheduled-and-Conditional-Inspections/
-├── 005-900_Energy-Storage-Inspection-and-Health-Intervals/          [G]
+├── 005_Time-Limits-and-Maintenance-Checks/ ⇄ ATA 05  Time Limits / Maintenance Checks
+│   ├── 005-000_Time-Limits-General/
+│   ├── 005-100_Time-Limits-and-Life-Limited-Parts/
+│   ├── 005-200_Scheduled-Maintenance-Checks/
+│   ├── 005-500_Unscheduled-and-Conditional-Inspections/
+│   └── 005-900_Energy-Storage-Inspection-and-Health-Intervals/      [G]
 │
-│   ── 006  ⇄ ATA 06  Dimensions and Areas ─────────────────────────
-├── 006-000_Dimensions-and-Areas-General/
-├── 006-100_Principal-Dimensions/
-├── 006-200_Stations-Zones-and-Major-Areas/
-├── 006-300_Access-Doors-and-Panels/
-├── 006-900_Configuration-Geometry-and-Energy-Carrier-Zoning-Delta/  [G]
+├── 006_Dimensions-and-Areas/               ⇄ ATA 06  Dimensions and Areas
+│   ├── 006-000_Dimensions-and-Areas-General/
+│   ├── 006-100_Principal-Dimensions/
+│   ├── 006-200_Stations-Zones-and-Major-Areas/
+│   ├── 006-300_Access-Doors-and-Panels/
+│   └── 006-900_Configuration-Geometry-and-Energy-Carrier-Zoning-Delta/ [G]
 │
-│   ── 007  ⇄ ATA 07  Lifting and Shoring ──────────────────────────
-├── 007-000_Lifting-and-Shoring-General/
-├── 007-100_Jacking-Points-and-Procedures/
-├── 007-200_Shoring-Points-and-Procedures/
-├── 007-900_Configuration-Specific-Lifting-Load-Paths-Delta/         [G]
+├── 007_Lifting-and-Shoring/                ⇄ ATA 07  Lifting and Shoring
+│   ├── 007-000_Lifting-and-Shoring-General/
+│   ├── 007-100_Jacking-Points-and-Procedures/
+│   ├── 007-200_Shoring-Points-and-Procedures/
+│   └── 007-900_Configuration-Specific-Lifting-Load-Paths-Delta/     [G]
 │
-│   ── 008  ⇄ ATA 08  Levelling and Weighing ───────────────────────
-├── 008-000_Levelling-and-Weighing-General/
-├── 008-100_Weighing-and-Balancing/
-├── 008-200_Levelling/
-├── 008-300_Weight-and-Balance-Reference-Data/
-├── 008-900_Energy-Carrier-Mass-and-CG-Effects-Delta/                [G]
+├── 008_Levelling-and-Weighing/             ⇄ ATA 08  Levelling and Weighing
+│   ├── 008-000_Levelling-and-Weighing-General/
+│   ├── 008-100_Weighing-and-Balancing/
+│   ├── 008-200_Levelling/
+│   ├── 008-300_Weight-and-Balance-Reference-Data/
+│   └── 008-900_Energy-Carrier-Mass-and-CG-Effects-Delta/            [G]
 │
-│   ── 009  ⇄ ATA 09  Towing and Taxiing ──────────────────────────
-├── 009-000_Towing-and-Taxiing-General/
-├── 009-100_Towing-Procedures-and-Limits/
-├── 009-200_Taxiing-Procedures-and-Limits/
-└── 009-900_Electrified-and-Energy-Carrier-Ground-Movement-Delta/    [G]
+└── 009_Towing-and-Taxiing/                 ⇄ ATA 09  Towing and Taxiing
+    ├── 009-000_Towing-and-Taxiing-General/
+    ├── 009-100_Towing-Procedures-and-Limits/
+    ├── 009-200_Taxiing-Procedures-and-Limits/
+    └── 009-900_Electrified-and-Energy-Carrier-Ground-Movement-Delta/ [G]
 ```
 
-> **Structure note:** section-nodes sit **directly** under the master range (flat), as instructed (`master range → nodes`). The chapter (`00X`) is encoded in each node ID; `00X-000` carries the chapter-general content.
+> **Structure note:** each chapter (`00X`) is a physical folder (`000_General/`, `001_Maintenance-Policy/`, …) that wraps its section-nodes for navigability. The chapter is also encoded in each node ID; `00X-000` carries the chapter-general content.
 
 ---
 
@@ -193,13 +193,14 @@ Convention: `000` = Overview · `001` = Scope and Definitions · then topic-spec
 **Worked example — node `002-100` (⇄ ATA 02-10, Operating Limitations — General):**
 
 ```text
-002-100_Operating-Limitations-General/
-├── README.md
-├── 002-100-000-Operating-Limitations-Overview.md
-├── 002-100-001-Scope-and-Definitions.md
-├── 002-100-002-General-Operating-Limitations.md
-├── 002-100-003-Environmental-and-Weather-Limitations.md
-└── 002-100-004-Traceability-and-Evidence-Links.md
+002_Operations/
+└── 002-100_Operating-Limitations-General/
+    ├── README.md
+    ├── 002-100-000-Operating-Limitations-Overview.md
+    ├── 002-100-001-Scope-and-Definitions.md
+    ├── 002-100-002-General-Operating-Limitations.md
+    ├── 002-100-003-Environmental-and-Weather-Limitations.md
+    └── 002-100-004-Traceability-and-Evidence-Links.md
 ```
 
 The same item pattern applies to every node above.
@@ -271,6 +272,7 @@ G-ATLAS node/item            ──(impact study)──►   Programme DMC
 | Element | Format | Example |
 |---|---|---|
 | Master range | `000-009_<Title>` | `000-009_General-Information-and-Service` |
+| Chapter (physical folder) | `00X_<Title>` | `002_Operations` |
 | Node (code section) | `00X-Y00_<Title>` | `002-100_Operating-Limitations-General` |
 | Item (markdown file) | `<node>-<item>-<Title>.md` | `002-100-001-Scope-and-Definitions.md` |
 | Section scaling | ATA `Y0` → `Y00` (`×10`) | `02-10 → 002-100` |
@@ -288,7 +290,7 @@ Last.MarkedDown:
   band_meaning: Green Aircraft Top-Level Architecture Schema
   master_range: 000-009_General-Information-and-Service
   standards_mirror: ATA 100 / iSpec 2200 chapters 00-09
-  node_model: node = code section (00X-Y00) ⇄ ATA chapter-section (0X-Y0)
+  node_model: chapter folder (00X) -> node = code section (00X-Y00) ⇄ ATA chapter-section (0X-Y0)
   section_scaling: "ATA Y0 -> Y00 (x10); green delta -> 00X-900"
   agnostic: true
   reference_programmes: [eWTW, hBWB]
