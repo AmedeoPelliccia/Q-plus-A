@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-40
+title: Enterprise Risk Management
+owner_obs: 01-01-02-06_Q-RISK
+supporting_obs: [01-01-02-05_Q-PMO]
+control_account: CA-170
+lifecycle: LC-A..LC-N
+status: baseline

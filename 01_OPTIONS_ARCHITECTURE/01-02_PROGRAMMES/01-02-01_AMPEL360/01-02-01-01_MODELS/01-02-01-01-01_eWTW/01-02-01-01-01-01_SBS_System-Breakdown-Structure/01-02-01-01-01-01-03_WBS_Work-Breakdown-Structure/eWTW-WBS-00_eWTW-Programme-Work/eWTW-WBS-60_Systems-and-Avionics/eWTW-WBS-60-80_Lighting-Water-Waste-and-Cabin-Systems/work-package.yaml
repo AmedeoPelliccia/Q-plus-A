@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-60-80
+title: Lighting, Water/Waste and Cabin Systems
+owner_obs: 01-01-01-01_Q-AIR
+supporting_obs: [01-01-01-08_Q-MECHANICS, 01-01-01-05_Q-DATAGOV]
+control_account: CA-60
+lifecycle: LC-A..LC-N
+status: baseline

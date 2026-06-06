@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-50-50
+title: Materials and Processes
+owner_obs: 01-01-01-04_Q-STRUCTURES
+supporting_obs: [01-01-01-08_Q-MECHANICS, 01-01-01-03_Q-GREENTECH]
+control_account: CA-50
+lifecycle: LC-A..LC-N
+status: baseline

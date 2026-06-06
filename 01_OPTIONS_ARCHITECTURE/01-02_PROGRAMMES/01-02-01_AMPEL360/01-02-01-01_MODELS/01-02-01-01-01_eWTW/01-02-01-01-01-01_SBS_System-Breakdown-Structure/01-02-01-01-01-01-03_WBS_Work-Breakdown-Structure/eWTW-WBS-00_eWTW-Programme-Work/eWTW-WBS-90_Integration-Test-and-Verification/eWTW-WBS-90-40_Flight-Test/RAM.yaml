@@ -1,0 +1,9 @@
+work_package_id: eWTW-WBS-90-40
+raci:
+  responsible: Q-AIR
+  accountable: Q-AIR
+  consulted:
+    - Q-HPC
+    - Q-SCIRES
+    - Q-STRUCTURES
+  informed: []

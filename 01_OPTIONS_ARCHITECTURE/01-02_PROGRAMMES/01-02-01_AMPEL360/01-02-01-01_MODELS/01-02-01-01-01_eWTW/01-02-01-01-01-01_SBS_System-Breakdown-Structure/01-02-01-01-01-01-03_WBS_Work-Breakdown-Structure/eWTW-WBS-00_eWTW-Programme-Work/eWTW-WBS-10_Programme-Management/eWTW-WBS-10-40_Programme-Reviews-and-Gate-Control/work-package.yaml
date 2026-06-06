@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-10-40
+title: Programme Reviews and Gate Control
+owner_obs: 01-01-02-05_Q-PMO
+supporting_obs: [01-01-02-06_Q-RISK, 01-01-02-01_Q-FINANCE, 01-01-02-07_Q-GOV]
+control_account: CA-10
+lifecycle: LC-A..LC-N
+status: baseline

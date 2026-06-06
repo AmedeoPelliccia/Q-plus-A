@@ -1,0 +1,9 @@
+work_package_id: eWTW-WBS-80-40
+raci:
+  responsible: Q-HPC
+  accountable: Q-HPC
+  consulted:
+    - Q-AIR
+    - Q-STRUCTURES
+    - Q-SCIRES
+  informed: []

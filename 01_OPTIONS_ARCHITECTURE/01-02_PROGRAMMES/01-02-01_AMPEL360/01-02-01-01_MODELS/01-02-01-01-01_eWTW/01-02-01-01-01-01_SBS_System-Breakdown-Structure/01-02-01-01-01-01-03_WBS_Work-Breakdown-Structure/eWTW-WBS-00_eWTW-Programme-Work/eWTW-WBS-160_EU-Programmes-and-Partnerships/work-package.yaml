@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-160
+title: EU Programmes and Partnerships
+owner_obs: 01-01-01-12_Q-HUESCORT-SCIRES-OPEN
+supporting_obs: [01-01-01-11_Q-SCIRES, 01-01-02-04_Q-LEGAL, 01-01-02-01_Q-FINANCE]
+control_account: CA-160
+lifecycle: LC-A..LC-N
+status: baseline

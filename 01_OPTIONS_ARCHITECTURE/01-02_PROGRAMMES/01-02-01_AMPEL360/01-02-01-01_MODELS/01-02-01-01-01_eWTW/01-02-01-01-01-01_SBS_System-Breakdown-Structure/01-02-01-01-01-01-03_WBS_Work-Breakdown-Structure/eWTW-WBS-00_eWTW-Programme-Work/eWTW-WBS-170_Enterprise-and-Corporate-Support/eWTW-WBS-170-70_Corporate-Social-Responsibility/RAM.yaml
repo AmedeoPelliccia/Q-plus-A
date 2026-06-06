@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-70
+raci:
+  responsible: Q-CSR
+  accountable: Q-CSR
+  consulted:
+    - Q-PMO
+  informed: []

@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-10
+raci:
+  responsible: Q-FINANCE
+  accountable: Q-FINANCE
+  consulted:
+    - Q-PMO
+  informed: []

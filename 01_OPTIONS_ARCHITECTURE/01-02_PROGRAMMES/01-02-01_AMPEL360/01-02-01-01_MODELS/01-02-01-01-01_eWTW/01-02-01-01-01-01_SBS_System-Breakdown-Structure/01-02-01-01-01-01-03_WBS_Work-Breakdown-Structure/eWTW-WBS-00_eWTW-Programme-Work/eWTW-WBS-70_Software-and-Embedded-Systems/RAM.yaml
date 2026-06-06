@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-70
+raci:
+  responsible: Q-HPC
+  accountable: Q-HPC
+  consulted:
+    - Q-AIR
+    - Q-DATAGOV
+  informed: []

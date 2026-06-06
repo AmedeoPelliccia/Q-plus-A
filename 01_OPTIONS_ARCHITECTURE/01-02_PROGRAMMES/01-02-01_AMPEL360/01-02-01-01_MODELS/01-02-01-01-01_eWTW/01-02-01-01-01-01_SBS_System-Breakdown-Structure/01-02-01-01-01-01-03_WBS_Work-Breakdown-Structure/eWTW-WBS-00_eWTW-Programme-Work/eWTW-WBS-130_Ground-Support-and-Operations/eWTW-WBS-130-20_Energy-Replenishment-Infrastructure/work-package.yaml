@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-130-20
+title: Energy Replenishment Infrastructure
+owner_obs: 01-01-01-09_Q-GROUND
+supporting_obs: [01-01-01-01_Q-AIR, 01-01-01-10_Q-INDUSTRY]
+control_account: CA-130
+lifecycle: LC-A..LC-N
+status: baseline

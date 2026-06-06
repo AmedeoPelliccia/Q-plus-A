@@ -1,0 +1,9 @@
+work_package_id: eWTW-WBS-10-60
+raci:
+  responsible: Q-PMO
+  accountable: Q-PMO
+  consulted:
+    - Q-RISK
+    - Q-FINANCE
+    - Q-GOV
+  informed: []

@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-130-20
+raci:
+  responsible: Q-GROUND
+  accountable: Q-GROUND
+  consulted:
+    - Q-AIR
+    - Q-INDUSTRY
+  informed: []

@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-70-70
+title: Software Verification and Assurance
+owner_obs: 01-01-01-06_Q-HPC
+supporting_obs: [01-01-01-01_Q-AIR, 01-01-01-05_Q-DATAGOV]
+control_account: CA-70
+lifecycle: LC-A..LC-N
+status: baseline

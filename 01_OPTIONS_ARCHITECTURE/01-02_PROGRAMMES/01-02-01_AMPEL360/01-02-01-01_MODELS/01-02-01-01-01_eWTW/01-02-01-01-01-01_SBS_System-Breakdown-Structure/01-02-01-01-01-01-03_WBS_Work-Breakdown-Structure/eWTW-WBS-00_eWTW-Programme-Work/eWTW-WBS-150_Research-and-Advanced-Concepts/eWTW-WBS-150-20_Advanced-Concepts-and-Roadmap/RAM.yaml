@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-150-20
+raci:
+  responsible: Q-SCIRES
+  accountable: Q-SCIRES
+  consulted:
+    - Q-HORIZON
+    - Q-HPC
+  informed: []

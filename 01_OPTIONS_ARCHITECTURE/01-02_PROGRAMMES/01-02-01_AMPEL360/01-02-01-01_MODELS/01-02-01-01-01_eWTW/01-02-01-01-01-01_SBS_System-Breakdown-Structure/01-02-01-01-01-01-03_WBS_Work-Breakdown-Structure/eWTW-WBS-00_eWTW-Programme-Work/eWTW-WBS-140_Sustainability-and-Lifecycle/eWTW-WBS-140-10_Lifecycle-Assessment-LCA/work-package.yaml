@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-140-10
+title: Lifecycle Assessment (LCA)
+owner_obs: 01-01-01-03_Q-GREENTECH
+supporting_obs: [01-01-02-08_Q-ESG, 01-01-02-03_Q-CSR]
+control_account: CA-140
+lifecycle: LC-A..LC-N
+status: baseline

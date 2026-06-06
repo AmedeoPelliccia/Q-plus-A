@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-120-30
+raci:
+  responsible: Q-INDUSTRY
+  accountable: Q-INDUSTRY
+  consulted:
+    - Q-STRUCTURES
+    - Q-MECHANICS
+  informed: []

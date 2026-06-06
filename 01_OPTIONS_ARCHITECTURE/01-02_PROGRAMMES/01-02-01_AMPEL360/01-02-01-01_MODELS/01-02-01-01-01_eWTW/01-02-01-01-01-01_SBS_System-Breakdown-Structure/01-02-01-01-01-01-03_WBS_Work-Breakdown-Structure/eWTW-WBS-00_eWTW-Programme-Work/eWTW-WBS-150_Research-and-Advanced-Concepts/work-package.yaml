@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-150
+title: Research and Advanced Concepts
+owner_obs: 01-01-01-11_Q-SCIRES
+supporting_obs: [01-01-01-07_Q-HORIZON, 01-01-01-06_Q-HPC]
+control_account: CA-150
+lifecycle: LC-A..LC-N
+status: baseline

@@ -1,0 +1,14 @@
+work_package_id: eWTW-WBS-170
+raci:
+  responsible: Q-PMO
+  accountable: Q-PMO
+  consulted:
+    - Q-FINANCE
+    - Q-HR
+    - Q-LEGAL
+    - Q-RISK
+    - Q-GOV
+    - Q-ESG
+    - Q-DEI
+    - Q-CSR
+  informed: []

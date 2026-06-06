@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-50-20
+raci:
+  responsible: Q-STRUCTURES
+  accountable: Q-STRUCTURES
+  consulted:
+    - Q-MECHANICS
+    - Q-GREENTECH
+  informed: []

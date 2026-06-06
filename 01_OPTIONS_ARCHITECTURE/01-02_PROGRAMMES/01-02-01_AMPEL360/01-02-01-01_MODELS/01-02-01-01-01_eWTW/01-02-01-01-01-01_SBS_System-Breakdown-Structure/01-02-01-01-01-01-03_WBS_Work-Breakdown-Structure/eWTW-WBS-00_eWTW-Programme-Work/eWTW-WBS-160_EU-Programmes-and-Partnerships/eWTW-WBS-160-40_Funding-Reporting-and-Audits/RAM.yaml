@@ -1,0 +1,9 @@
+work_package_id: eWTW-WBS-160-40
+raci:
+  responsible: Q-HUESCORT-SCIRES-OPEN
+  accountable: Q-HUESCORT-SCIRES-OPEN
+  consulted:
+    - Q-SCIRES
+    - Q-LEGAL
+    - Q-FINANCE
+  informed: []
