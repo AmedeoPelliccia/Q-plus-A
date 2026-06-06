@@ -1,0 +1,46 @@
+# Bidirectional coverage check for the aircraft-level allocation
+# Node: eWTW-FBS-00
+
+allocation_coverage:
+  node: eWTW-FBS-00
+  checked_against:
+    fbs: eWTW-FBS-00 (13 aircraft-level functions)
+    pbs: eWTW-PBS top-level (partial — codes TBD)
+
+  function_coverage:
+    functions_total: 13
+    functions_allocated: 13
+    orphan_functions: []        # every function is allocated — OK
+
+  shared_allocations:
+    - pbs_area: Avionics-platform
+      shared_by: [eWTW-FBS-80, eWTW-FBS-90, eWTW-FBS-130]
+      note: "Single avionics platform realizes nav/comm, information integration, and health monitoring."
+    - pbs_area: Airframe
+      shared_by: [eWTW-FBS-10, eWTW-FBS-50]
+      note: "Lifting surfaces (FBS-10) and structural integrity (FBS-50) both realized by the airframe."
+
+  pbs_coverage:
+    note: >
+      Reverse check (every PBS top-level item realizes >= 1 function) is pending
+      confirmation of the PBS top-level codes. PBS areas with pbs_code: TBD must be
+      bound before orphan-PBS detection can complete.
+    orphan_pbs_areas: pending_pbs_code_binding
+
+  taxonomy_coverage:
+    gatlas_chapters_referenced:
+      ["009","010","021","022","023","024","025","026","027","030","032","034",
+       "035","036","042","044","045","046","050-059","055","057","070-079",
+       "004-900","005-900"]
+    note: "Green-delta nodes (004-900, 005-900) are referenced by energy and safety functions."
+
+  open_items:
+    - "Bind all pbs_code: TBD to actual PBS top-level codes."
+    - "Complete reverse orphan-PBS check after binding."
+    - "Confirm DAL per function from each FBS-*/FHA."
+
+  governance:
+    inherits: DEGF-v1.0
+    lifecycle: LC-A..LC-N
+    rules: [No-AAA, SSOT+PUB]
+  status: baseline
