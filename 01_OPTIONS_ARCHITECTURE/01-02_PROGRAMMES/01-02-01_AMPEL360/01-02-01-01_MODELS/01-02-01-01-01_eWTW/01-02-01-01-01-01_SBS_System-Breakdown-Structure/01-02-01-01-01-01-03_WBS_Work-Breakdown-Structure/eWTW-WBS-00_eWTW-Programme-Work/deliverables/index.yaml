@@ -1,0 +1,162 @@
+# Programme deliverables register (roll-up) — eWTW WBS root
+# Node: eWTW-WBS-00  |  Principle: LINKED, NOT STORED.
+# Deliverables live in their home structure; this register only references them.
+
+deliverables_register:
+  node: eWTW-WBS-00
+  level: "programme (roll-up)"
+  programme: AMPEL360
+  product: eWTW
+  side: SSOT
+  principle: "Deliverables are referenced, not stored here. Each has a single authoritative home."
+
+  deliverables:
+    - id: DLV-EWTW-001
+      title: Programme baseline (plan, schedule, cost, risk)
+      type: management
+      produced_by: [eWTW-WBS-10]
+      home: eWTW-WBS-10
+      owner_obs: 01-01-02-05_Q-PMO
+      status: in-progress
+
+    - id: DLV-EWTW-002
+      title: Systems-engineering data (requirements, architecture, ICDs, CAD/PLM config)
+      type: data
+      produced_by: [eWTW-WBS-20]
+      home: eWTW-WBS-20
+      owner_obs: 01-01-01-05_Q-DATAGOV
+      status: in-progress
+
+    - id: DLV-EWTW-003
+      title: eWTW product definition (as-designed geometry, integrated DMU)
+      type: product
+      produced_by: [eWTW-WBS-30, eWTW-WBS-40, eWTW-WBS-50, eWTW-WBS-60]
+      home: 01-02-01-01-01-01-01_PBS
+      owner_obs: 01-01-01-01_Q-AIR
+      status: in-progress
+
+    - id: DLV-EWTW-004
+      title: Functional architecture (functions, FHA, allocation)
+      type: functional
+      produced_by: [eWTW-WBS-20, eWTW-WBS-30]
+      home: 01-02-01-01-01-01-02_FBS
+      owner_obs: 01-01-01-05_Q-DATAGOV
+      status: in-progress
+
+    - id: DLV-EWTW-005
+      title: Software lifecycle data (DO-178C)
+      type: software
+      produced_by: [eWTW-WBS-70]
+      home: eWTW-WBS-70
+      owner_obs: 01-01-01-06_Q-HPC
+      assurance_standard: DO-178C
+      status: in-progress
+
+    - id: DLV-EWTW-006
+      title: Engineering analysis & simulation results (CFD/FEA/MDO)
+      type: analysis
+      produced_by: [eWTW-WBS-80]
+      home: eWTW-WBS-80
+      owner_obs: 01-01-01-06_Q-HPC
+      status: in-progress
+
+    - id: DLV-EWTW-007
+      title: Test & verification evidence
+      type: evidence
+      produced_by: [eWTW-WBS-90]
+      home: evidence-chain
+      owner_obs: 01-01-01-01_Q-AIR
+      status: planned
+
+    - id: DLV-EWTW-008
+      title: Certification data package & compliance
+      type: evidence
+      produced_by: [eWTW-WBS-100]
+      home: evidence-chain
+      owner_obs: 01-01-01-05_Q-DATAGOV
+      status: planned
+
+    - id: DLV-EWTW-009
+      title: Safety assessment (FHA / PSSA / SSA, ARP4761A)
+      type: safety
+      produced_by: [eWTW-WBS-20, eWTW-WBS-100]
+      home: "FBS (FHA) + evidence-chain"
+      owner_obs: 01-01-01-05_Q-DATAGOV
+      assurance_standard: ARP4761A
+      status: in-progress
+
+    - id: DLV-EWTW-010
+      title: Technical publications (S1000D CSDB)
+      type: publications
+      produced_by: [eWTW-WBS-110]
+      home: 01-02-01-01-01-01-11_TPuBS
+      owner_obs: 01-01-01-05_Q-DATAGOV
+      status: in-progress
+
+    - id: DLV-EWTW-011
+      title: Industrialization & production data
+      type: production
+      produced_by: [eWTW-WBS-120]
+      home: eWTW-WBS-120
+      owner_obs: 01-01-01-10_Q-INDUSTRY
+      status: planned
+
+    - id: DLV-EWTW-012
+      title: ILS / ground-support package
+      type: support
+      produced_by: [eWTW-WBS-130]
+      home: eWTW-WBS-130
+      owner_obs: 01-01-01-09_Q-GROUND
+      status: planned
+
+    - id: DLV-EWTW-013
+      title: Sustainability — LCA + Digital Product Passport
+      type: sustainability
+      produced_by: [eWTW-WBS-140]
+      home: "DPP (eWTW-WBS-140)"
+      owner_obs: 01-01-01-03_Q-GREENTECH
+      status: in-progress
+
+    - id: DLV-EWTW-014
+      title: Research outputs & intellectual property
+      type: research
+      produced_by: [eWTW-WBS-150]
+      home: eWTW-WBS-150
+      owner_obs: 01-01-01-11_Q-SCIRES
+      status: in-progress
+
+    - id: DLV-EWTW-015
+      title: EU programme deliverables (grants, reports, dissemination)
+      type: funding
+      produced_by: [eWTW-WBS-160]
+      home: eWTW-WBS-160
+      owner_obs: 01-01-01-12_Q-HUESCORT-SCIRES-OPEN
+      status: in-progress
+
+    - id: DLV-EWTW-016
+      title: Enterprise & corporate records
+      type: enterprise
+      produced_by: [eWTW-WBS-170]
+      home: eWTW-WBS-170
+      owner_obs: 01-01-02-05_Q-PMO
+      status: ongoing
+
+  coverage:
+    deliverables_total: 16
+    homes:
+      sibling_structures: [PBS, FBS, TPuBS]
+      data_evidence: [evidence-chain, DPP, producing-element-store]
+    note: >
+      Product/functional/publication deliverables resolve to sibling SBS structures.
+      Evidence/data deliverables resolve to the evidence chain, the DPP, or the
+      producing element's store. A dedicated evidence/requirements structure can be
+      linked here once defined.
+    per_element_detail: "Each L1 element keeps granular deliverable links in its own deliverables/ folder."
+
+  governance:
+    inherits: DEGF-v1.0
+    lifecycle: LC-A..LC-N
+    rules: [No-AAA, SSOT+PUB]
+    owner: 01-01-02-05_Q-PMO
+  status: baseline
+  version: "1.0"
