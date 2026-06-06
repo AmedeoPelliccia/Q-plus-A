@@ -66,11 +66,11 @@ The **work** view of the eWTW under the SBS. It decomposes *the work required to
 | **CAD / PLM** | Computer-Aided Design / Product Lifecycle Management — geometry-authoring tools and the backbone managing product data and configuration. |
 | **DMU** | Digital Mock-Up — the integrated 3D assembly of all parts; used for spatial integration, space allocation, and clash detection. |
 | **OML** | Outer Mould Line — the external aerodynamic master surface that all parts are designed to. |
-| **DO-178C** | RTCA / EUROCAE *Software Considerations in Airborne Systems and Equipment Certification* (ED-12C); development-assurance standard for **airborne software**. Governs WBS-70. |
+| **DO-178C** | RTCA / EUROCAE *Software Considerations in Airborne Systems and Equipment Certification* (ED-12C); development-assurance standard for **airborne software**. Governs WBS-70.[^do178c] |
 | **IMA** | Integrated Modular Avionics — shared computing platform hosting partitioned airborne software. |
 | **BMS** | Battery Management System — the software/hardware that monitors and controls the energy store. |
 | **ILS** | Integrated Logistics Support — spares, maintenance, training, and support planning. |
-| **MIL-STD-881F** | DoD standard practice for Work Breakdown Structures; Appendix A defines the aircraft-systems WBS. |
+| **MIL-STD-881F** | DoD standard practice for Work Breakdown Structures; Appendix A defines the aircraft-systems WBS.[^milstd881] |
 | **PMO** | Programme Management Office (Q-PMO); owns the WBS and its baseline. |
 | **SSOT** | Single Source of Truth; the WBS is SSOT-side programme content. |
 | **LC-A … LC-N** | The letter-coded engineering lifecycle axis (LC-A = Concept-Design, through LC-N); work matures across these stages. |
@@ -81,7 +81,7 @@ The **work** view of the eWTW under the SBS. It decomposes *the work required to
 
 ## 1. Purpose
 
-This structure defines **what work must be done** to deliver the eWTW, decomposed into work packages and assigned to the organizational units that perform it. It is the integrating framework for scope, schedule, cost, risk, and responsibility — the role MIL-STD-881F assigns to a programme WBS. Whereas the PBS answers *what the aircraft is* and the FBS *what it does*, the WBS answers *what the enterprise must do, and who does it*.
+This structure defines **what work must be done** to deliver the eWTW, decomposed into work packages and assigned to the organizational units that perform it. It is the integrating framework for scope, schedule, cost, risk, and responsibility — the role MIL-STD-881F assigns to a programme WBS.[^milstd881] Whereas the PBS answers *what the aircraft is* and the FBS *what it does*, the WBS answers *what the enterprise must do, and who does it*.
 
 The WBS is **SSOT-side** and is owned by **Q-PMO**.
 
@@ -133,13 +133,13 @@ WBS codes are an independent space from PBS and FBS codes; they are joined by **
     │   ├── eWTW-WBS-20-10_Requirements-Engineering-and-Management/
     │   ├── eWTW-WBS-20-20_Architecture-and-Interface-Management/
     │   ├── eWTW-WBS-20-30_Configuration-and-Data-Management/
-    │   ├── eWTW-WBS-20-40_CAD-PLM-and-Geometry-Configuration/
+    │   ├── eWTW-WBS-20-40_CAD-PLM-and-Geometry-Configuration/          ← NEW (central CAD/PLM backbone)
     │   ├── eWTW-WBS-20-50_Verification-and-Validation-Planning/
     │   └── eWTW-WBS-20-60_Specialty-Engineering-Integration/
     ├── eWTW-WBS-30_Air-Vehicle/                           [owner: Q-AIR]
     │   ├── eWTW-WBS-30-10_Aerodynamics-and-OML/
     │   ├── eWTW-WBS-30-20_Flight-Physics-and-Performance/
-    │   ├── eWTW-WBS-30-30_Vehicle-Configuration-Integration-and-Digital-Mock-Up-DMU/
+    │   ├── eWTW-WBS-30-30_Vehicle-Configuration-Integration-and-Digital-Mock-Up-DMU/   ← renamed (+DMU)
     │   └── eWTW-WBS-30-40_Mass-Properties-and-Balance/
     ├── eWTW-WBS-40_Propulsion-and-Energy/                 [owner: Q-GREENTECH]
     │   ├── eWTW-WBS-40-10_Electric-Propulsion-System/
@@ -230,14 +230,14 @@ WBS codes are an independent space from PBS and FBS codes; they are joined by **
     │   ├── eWTW-WBS-160-40_Funding-Reporting-and-Audits/
     │   └── eWTW-WBS-160-50_Dissemination-and-Open-Science/
     └── eWTW-WBS-170_Enterprise-and-Corporate-Support/     [owner: Q-PMO + corporate]
-        ├── eWTW-WBS-170-10_Finance-and-Controlling/
-        ├── eWTW-WBS-170-20_Human-Resources-and-Skills/
-        ├── eWTW-WBS-170-30_Legal-and-IP/
-        ├── eWTW-WBS-170-40_Enterprise-Risk-Management/
-        ├── eWTW-WBS-170-50_Governance-and-Compliance/
-        ├── eWTW-WBS-170-60_ESG/
-        ├── eWTW-WBS-170-70_Corporate-Social-Responsibility/
-        └── eWTW-WBS-170-80_Diversity-Equity-and-Inclusion/
+        ├── eWTW-WBS-170-10_Finance-and-Controlling/            [Q-FINANCE]
+        ├── eWTW-WBS-170-20_Human-Resources-and-Skills/         [Q-HR]
+        ├── eWTW-WBS-170-30_Legal-and-IP/                       [Q-LEGAL]
+        ├── eWTW-WBS-170-40_Enterprise-Risk-Management/         [Q-RISK]
+        ├── eWTW-WBS-170-50_Governance-and-Compliance/          [Q-GOV]
+        ├── eWTW-WBS-170-60_ESG/                                [Q-ESG]
+        ├── eWTW-WBS-170-70_Corporate-Social-Responsibility/    [Q-CSR]
+        └── eWTW-WBS-170-80_Diversity-Equity-and-Inclusion/     [Q-DEI]
 ```
 
 ```mermaid
@@ -349,11 +349,11 @@ flowchart LR
 | `160` EU Programmes & Partnerships | Q-HUESCORT-SCIRES-OPEN | Q-SCIRES, Q-LEGAL, Q-FINANCE |
 | `170` Enterprise & Corporate Support | Q-PMO | Q-FINANCE, Q-HR, Q-LEGAL, Q-RISK, Q-GOV, Q-ESG, Q-DEI, Q-CSR |
 
-> **WBS-70 ownership note.** Q-HPC is set as primary per the software-as-computing remit. Because WBS-70 contains **airborne/embedded software under DO-178C**, certification accountability is shared: **Q-AIR** (the systems the software serves) and **Q-DATAGOV** (certification and software lifecycle data) are supporting.
+> **WBS-70 ownership note.** Q-HPC is set as primary per the software-as-computing remit. Because WBS-70 contains **airborne/embedded software under DO-178C**, certification accountability is shared: **Q-AIR** (the systems the software serves) and **Q-DATAGOV** (certification and software lifecycle data) are supporting. If this node is predominantly airborne software, consider Q-AIR as primary with Q-HPC supporting — a one-line flip.
 >
 > **WBS-170** sub-packages map one-to-one to the corporate divisions, so each corporate Q-Division owns its own work package while Q-PMO integrates.
 >
-> **Q-SPACE** is not a primary owner for eWTW work. The per-work-package RACI is recorded in each element's `RAM.yaml`.
+> **Q-SPACE** is not a primary owner for eWTW work (it leads space-model programmes such as the Q10 spacecraft). The per-work-package RACI is recorded in each element's `RAM.yaml`.
 
 ---
 
@@ -370,6 +370,8 @@ flowchart LR
 | `100` Certification & Compliance | compliance evidence; airworthiness-limitation data |
 | `110` Technical Data & Publications | the TPuBS data modules (PUB projection of the product) |
 | `140` Sustainability & Lifecycle | DPP records; circularity evidence |
+
+The forward link (work → product/function) is recorded per work package; the reverse (a PBS/FBS item back to the work that produced it) closes the loop.
 
 ---
 
@@ -415,14 +417,19 @@ status: baseline
 
 The external aerodynamic surface (**OML**) is defined in `WBS-30-10` (Q-AIR); every domain designs *to* it. This keeps design intent with the domain experts while the OML, the DMU, and the CAD/PLM backbone hold the geometry coherent across teams.
 
-The WBS is **SSOT-side** programme content. Work packages mature across the **LC-A … LC-N** engineering lifecycle; the WBS baseline is owned and version-controlled by **Q-PMO**. The structure inherits **DEGF v1.0**, is bound by the **No-AAA** rule, and follows the **SSOT+PUB** doctrine.
+The WBS is **SSOT-side** programme content. Work packages mature across the **LC-A … LC-N** engineering lifecycle (LC-A = Concept-Design); the WBS baseline is owned and version-controlled by **Q-PMO**. The structure inherits **DEGF v1.0** (eleven mandatory traits), is bound by the **No-AAA** rule, and follows the **SSOT+PUB** doctrine — the WBS is source-of-truth and is *referenced by*, never authored in, the TPuBS.
 
 ---
 
 ## References
 
-1. US DoD — *MIL-STD-881F: Work Breakdown Structures for Defense Materiel Items* (13 May 2022). <https://assist.dla.mil/>
+1. US DoD — *MIL-STD-881F: Work Breakdown Structures for Defense Materiel Items* (13 May 2022; supersedes 881E). Appendix A — Aircraft Systems. <https://assist.dla.mil/>
 2. RTCA / EUROCAE — *DO-178C / ED-12C: Software Considerations in Airborne Systems and Equipment Certification* (2011). <https://www.rtca.org/>
-3. PMI — *Practice Standard for Work Breakdown Structures* and *PMBOK Guide*. <https://www.pmi.org/>
+3. PMI — *Practice Standard for Work Breakdown Structures* and *PMBOK Guide* (WBS, OBS, RAM/RACI). <https://www.pmi.org/>
 4. ISO — *ISO 21502:2020, Project, programme and portfolio management — Guidance on project management*. <https://www.iso.org/>
-5. SAE International — *ARP4754B*. <https://www.sae.org/standards/content/arp4754b/>
+5. SAE International — *ARP4754B* (systems-engineering work-package context). <https://www.sae.org/standards/content/arp4754b/>
+
+<!-- Footprint: footnote definitions -->
+
+[^milstd881]: US Department of Defense, *MIL-STD-881F — Work Breakdown Structures for Defense Materiel Items*, 13 May 2022; Appendix A defines the aircraft-systems WBS and Appendix K the common elements. <https://assist.dla.mil/>
+[^do178c]: RTCA / EUROCAE, *DO-178C / ED-12C — Software Considerations in Airborne Systems and Equipment Certification*, 2011; the development-assurance standard for airborne software. <https://www.rtca.org/>

@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-20-10
+raci:
+  responsible: Q-DATAGOV
+  accountable: Q-DATAGOV
+  consulted:
+    - Q-AIR
+    - Q-HPC
+  informed: []

@@ -1,0 +1,217 @@
+# Responsibility Assignment Matrix (RAM) — eWTW Programme Work
+# Node: eWTW-WBS-00  |  Scope: WBS L1 (17 elements) × OBS (Q-Divisions)  |  Model: RACI
+# Per-work-package (L2) RACI lives in each element's own RAM.yaml; this is the L1 master.
+
+ram:
+  node: eWTW-WBS-00
+  title: eWTW Programme Work — Responsibility Assignment Matrix (L1 master)
+  programme: AMPEL360
+  product: eWTW
+  side: SSOT
+  model: RACI
+  obs_root: 01-01_ORGANIZATIONS
+
+  legend:
+    A: Accountable — single owner, answerable for the outcome
+    R: Responsible — performs the work
+    C: Consulted — provides input (two-way)
+    I: Informed — kept informed (one-way)
+
+  conventions:
+    - "Exactly one Accountable (A) per WBS element."
+    - "At L1, Accountable and Responsible are the same Q-Division (the primary); supporting divisions are Consulted."
+    - "Q-PMO is Informed on every element it does not own, as programme integrator."
+    - "Corporate divisions become Accountable at L2 inside WBS-170 (see wbs_170_corporate_subpackages)."
+
+  assignments:
+
+    - wbs: eWTW-WBS-10
+      title: Programme Management
+      accountable: 01-01-02-05_Q-PMO
+      responsible: [01-01-02-05_Q-PMO]
+      consulted: [01-01-02-06_Q-RISK, 01-01-02-01_Q-FINANCE, 01-01-02-07_Q-GOV]
+      informed: [01-01-02-07_Q-GOV]
+
+    - wbs: eWTW-WBS-20
+      title: Systems Engineering
+      accountable: 01-01-01-05_Q-DATAGOV
+      responsible: [01-01-01-05_Q-DATAGOV]
+      consulted: [01-01-01-01_Q-AIR, 01-01-01-06_Q-HPC]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-30
+      title: Air Vehicle
+      accountable: 01-01-01-01_Q-AIR
+      responsible: [01-01-01-01_Q-AIR]
+      consulted: [01-01-01-06_Q-HPC, 01-01-01-04_Q-STRUCTURES]
+      informed: [01-01-02-05_Q-PMO]
+      note: "Owns the OML (WBS-30-10) and the integrated DMU (WBS-30-30)."
+
+    - wbs: eWTW-WBS-40
+      title: Propulsion and Energy
+      accountable: 01-01-01-03_Q-GREENTECH
+      responsible: [01-01-01-03_Q-GREENTECH]
+      consulted: [01-01-01-01_Q-AIR, 01-01-01-08_Q-MECHANICS]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-50
+      title: Structures
+      accountable: 01-01-01-04_Q-STRUCTURES
+      responsible: [01-01-01-04_Q-STRUCTURES]
+      consulted: [01-01-01-08_Q-MECHANICS, 01-01-01-03_Q-GREENTECH]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-60
+      title: Systems and Avionics
+      accountable: 01-01-01-01_Q-AIR
+      responsible: [01-01-01-01_Q-AIR]
+      consulted: [01-01-01-08_Q-MECHANICS, 01-01-01-05_Q-DATAGOV]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-70
+      title: Software and Embedded Systems
+      accountable: 01-01-01-06_Q-HPC
+      responsible: [01-01-01-06_Q-HPC]
+      consulted: [01-01-01-01_Q-AIR, 01-01-01-05_Q-DATAGOV]
+      informed: [01-01-02-05_Q-PMO]
+      assurance_standard: DO-178C
+      note: >
+        DO-178C airborne software — certification accountability is shared:
+        Q-AIR (systems served) and Q-DATAGOV (cert + software lifecycle data) are Consulted.
+        OPEN DECISION: if predominantly airborne software, flip Accountable to Q-AIR with Q-HPC Consulted.
+
+    - wbs: eWTW-WBS-80
+      title: Engineering Analysis and Simulation
+      accountable: 01-01-01-06_Q-HPC
+      responsible: [01-01-01-06_Q-HPC]
+      consulted: [01-01-01-01_Q-AIR, 01-01-01-04_Q-STRUCTURES, 01-01-01-11_Q-SCIRES]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-90
+      title: Integration, Test and Verification
+      accountable: 01-01-01-01_Q-AIR
+      responsible: [01-01-01-01_Q-AIR]
+      consulted: [01-01-01-06_Q-HPC, 01-01-01-11_Q-SCIRES, 01-01-01-04_Q-STRUCTURES]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-100
+      title: Certification and Compliance
+      accountable: 01-01-01-05_Q-DATAGOV
+      responsible: [01-01-01-05_Q-DATAGOV]
+      consulted: [01-01-01-01_Q-AIR, 01-01-02-04_Q-LEGAL]
+      informed: [01-01-02-05_Q-PMO, 01-01-02-07_Q-GOV]
+
+    - wbs: eWTW-WBS-110
+      title: Technical Data and Publications
+      accountable: 01-01-01-05_Q-DATAGOV
+      responsible: [01-01-01-05_Q-DATAGOV]
+      consulted: [01-01-01-01_Q-AIR, 01-01-01-09_Q-GROUND]
+      informed: [01-01-02-05_Q-PMO]
+      note: "Produces the TPuBS data modules (PUB projection)."
+
+    - wbs: eWTW-WBS-120
+      title: Industrialization and Production
+      accountable: 01-01-01-10_Q-INDUSTRY
+      responsible: [01-01-01-10_Q-INDUSTRY]
+      consulted: [01-01-01-04_Q-STRUCTURES, 01-01-01-08_Q-MECHANICS]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-130
+      title: Ground Support and Operations
+      accountable: 01-01-01-09_Q-GROUND
+      responsible: [01-01-01-09_Q-GROUND]
+      consulted: [01-01-01-01_Q-AIR, 01-01-01-10_Q-INDUSTRY]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-140
+      title: Sustainability and Lifecycle
+      accountable: 01-01-01-03_Q-GREENTECH
+      responsible: [01-01-01-03_Q-GREENTECH]
+      consulted: [01-01-02-08_Q-ESG, 01-01-02-03_Q-CSR]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-150
+      title: Research and Advanced Concepts
+      accountable: 01-01-01-11_Q-SCIRES
+      responsible: [01-01-01-11_Q-SCIRES]
+      consulted: [01-01-01-07_Q-HORIZON, 01-01-01-06_Q-HPC]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-160
+      title: EU Programmes and Partnerships
+      accountable: 01-01-01-12_Q-HUESCORT-SCIRES-OPEN
+      responsible: [01-01-01-12_Q-HUESCORT-SCIRES-OPEN]
+      consulted: [01-01-01-11_Q-SCIRES, 01-01-02-04_Q-LEGAL, 01-01-02-01_Q-FINANCE]
+      informed: [01-01-02-05_Q-PMO]
+
+    - wbs: eWTW-WBS-170
+      title: Enterprise and Corporate Support
+      accountable: 01-01-02-05_Q-PMO
+      responsible: [01-01-02-05_Q-PMO]
+      consulted:
+        - 01-01-02-01_Q-FINANCE
+        - 01-01-02-02_Q-HR
+        - 01-01-02-04_Q-LEGAL
+        - 01-01-02-06_Q-RISK
+        - 01-01-02-07_Q-GOV
+        - 01-01-02-08_Q-ESG
+        - 01-01-02-09_Q-DEI
+        - 01-01-02-03_Q-CSR
+      informed: [01-01-02-07_Q-GOV]
+      note: "Q-PMO integrates; corporate divisions are Accountable at L2 (below)."
+
+  # L2 — WBS-170 distributes accountability to each corporate division
+  wbs_170_corporate_subpackages:
+    - wbs: eWTW-WBS-170-10
+      title: Finance and Controlling
+      accountable: 01-01-02-01_Q-FINANCE
+    - wbs: eWTW-WBS-170-20
+      title: Human Resources and Skills
+      accountable: 01-01-02-02_Q-HR
+    - wbs: eWTW-WBS-170-30
+      title: Legal and IP
+      accountable: 01-01-02-04_Q-LEGAL
+    - wbs: eWTW-WBS-170-40
+      title: Enterprise Risk Management
+      accountable: 01-01-02-06_Q-RISK
+    - wbs: eWTW-WBS-170-50
+      title: Governance and Compliance
+      accountable: 01-01-02-07_Q-GOV
+    - wbs: eWTW-WBS-170-60
+      title: ESG
+      accountable: 01-01-02-08_Q-ESG
+    - wbs: eWTW-WBS-170-70
+      title: Corporate Social Responsibility
+      accountable: 01-01-02-03_Q-CSR
+    - wbs: eWTW-WBS-170-80
+      title: Diversity, Equity and Inclusion
+      accountable: 01-01-02-09_Q-DEI
+
+  coverage:
+    l1_elements: 17
+    each_element_has_single_accountable: true
+    divisions_accountable_at_L1:
+      [01-01-02-05_Q-PMO, 01-01-01-05_Q-DATAGOV, 01-01-01-01_Q-AIR,
+       01-01-01-03_Q-GREENTECH, 01-01-01-04_Q-STRUCTURES, 01-01-01-06_Q-HPC,
+       01-01-01-10_Q-INDUSTRY, 01-01-01-09_Q-GROUND, 01-01-01-11_Q-SCIRES,
+       01-01-01-12_Q-HUESCORT-SCIRES-OPEN]
+    divisions_accountable_only_at_L2:
+      [01-01-02-01_Q-FINANCE, 01-01-02-02_Q-HR, 01-01-02-03_Q-CSR,
+       01-01-02-04_Q-LEGAL, 01-01-02-06_Q-RISK, 01-01-02-07_Q-GOV,
+       01-01-02-08_Q-ESG, 01-01-02-09_Q-DEI]
+    divisions_with_no_eWTW_role:
+      - 01-01-01-02_Q-SPACE   # leads space-model programmes (e.g. Q10 spacecraft), not eWTW
+    consulted_only_at_L1:
+      - 01-01-01-07_Q-HORIZON  # consulted on WBS-150
+      - 01-01-01-08_Q-MECHANICS # consulted on WBS-40/50/60/120
+
+  open_decisions:
+    - "WBS-70 Accountable: keep Q-HPC, or flip to Q-AIR for airborne-software primacy?"
+
+  governance:
+    inherits: DEGF-v1.0
+    lifecycle: LC-A..LC-N
+    rules: [No-AAA, SSOT+PUB]
+    owner: 01-01-02-05_Q-PMO
+  status: baseline
+  version: "1.0"

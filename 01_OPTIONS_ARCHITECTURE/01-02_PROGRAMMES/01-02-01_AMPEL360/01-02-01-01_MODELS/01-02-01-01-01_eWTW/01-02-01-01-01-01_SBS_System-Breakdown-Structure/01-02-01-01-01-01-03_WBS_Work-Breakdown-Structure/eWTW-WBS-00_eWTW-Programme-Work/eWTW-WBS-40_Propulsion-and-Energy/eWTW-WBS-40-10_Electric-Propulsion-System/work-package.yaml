@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-40-10
+title: Electric Propulsion System
+owner_obs: 01-01-01-03_Q-GREENTECH
+supporting_obs: [01-01-01-01_Q-AIR, 01-01-01-08_Q-MECHANICS]
+control_account: CA-40
+lifecycle: LC-A..LC-N
+status: baseline

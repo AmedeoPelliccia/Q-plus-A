@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-30
+title: Legal and IP
+owner_obs: 01-01-02-04_Q-LEGAL
+supporting_obs: [01-01-02-05_Q-PMO]
+control_account: CA-170
+lifecycle: LC-A..LC-N
+status: baseline

@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-10
+title: Finance and Controlling
+owner_obs: 01-01-02-01_Q-FINANCE
+supporting_obs: [01-01-02-05_Q-PMO]
+control_account: CA-170
+lifecycle: LC-A..LC-N
+status: baseline

@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-20-50
+title: Verification and Validation Planning
+owner_obs: 01-01-01-05_Q-DATAGOV
+supporting_obs: [01-01-01-01_Q-AIR, 01-01-01-06_Q-HPC]
+control_account: CA-20
+lifecycle: LC-A..LC-N
+status: baseline

@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-140
+raci:
+  responsible: Q-GREENTECH
+  accountable: Q-GREENTECH
+  consulted:
+    - Q-ESG
+    - Q-CSR
+  informed: []

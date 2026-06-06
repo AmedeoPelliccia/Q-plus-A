@@ -1,0 +1,8 @@
+work_package_id: eWTW-WBS-60-70
+raci:
+  responsible: Q-AIR
+  accountable: Q-AIR
+  consulted:
+    - Q-MECHANICS
+    - Q-DATAGOV
+  informed: []

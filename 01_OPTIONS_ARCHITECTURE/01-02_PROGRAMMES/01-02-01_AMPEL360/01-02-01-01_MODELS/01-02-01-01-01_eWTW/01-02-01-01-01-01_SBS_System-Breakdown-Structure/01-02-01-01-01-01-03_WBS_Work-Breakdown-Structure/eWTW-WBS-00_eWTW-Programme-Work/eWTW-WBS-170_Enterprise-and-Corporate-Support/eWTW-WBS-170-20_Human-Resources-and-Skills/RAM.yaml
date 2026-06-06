@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-20
+raci:
+  responsible: Q-HR
+  accountable: Q-HR
+  consulted:
+    - Q-PMO
+  informed: []

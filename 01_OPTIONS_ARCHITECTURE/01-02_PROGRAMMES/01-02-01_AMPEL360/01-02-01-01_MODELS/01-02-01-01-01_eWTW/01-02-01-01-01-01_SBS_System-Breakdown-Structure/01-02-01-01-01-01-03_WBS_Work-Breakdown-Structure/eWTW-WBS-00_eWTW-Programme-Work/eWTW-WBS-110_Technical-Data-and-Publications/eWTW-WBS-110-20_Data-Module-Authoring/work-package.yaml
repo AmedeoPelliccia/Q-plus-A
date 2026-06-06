@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-110-20
+title: Data Module Authoring
+owner_obs: 01-01-01-05_Q-DATAGOV
+supporting_obs: [01-01-01-01_Q-AIR, 01-01-01-09_Q-GROUND]
+control_account: CA-110
+lifecycle: LC-A..LC-N
+status: baseline

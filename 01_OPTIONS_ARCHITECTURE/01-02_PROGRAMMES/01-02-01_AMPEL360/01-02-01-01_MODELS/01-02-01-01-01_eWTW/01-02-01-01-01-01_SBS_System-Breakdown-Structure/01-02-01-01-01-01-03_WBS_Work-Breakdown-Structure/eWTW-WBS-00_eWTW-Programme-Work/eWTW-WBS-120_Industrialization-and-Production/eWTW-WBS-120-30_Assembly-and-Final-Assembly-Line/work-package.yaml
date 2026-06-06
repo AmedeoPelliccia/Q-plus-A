@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-120-30
+title: Assembly and Final Assembly Line
+owner_obs: 01-01-01-10_Q-INDUSTRY
+supporting_obs: [01-01-01-04_Q-STRUCTURES, 01-01-01-08_Q-MECHANICS]
+control_account: CA-120
+lifecycle: LC-A..LC-N
+status: baseline

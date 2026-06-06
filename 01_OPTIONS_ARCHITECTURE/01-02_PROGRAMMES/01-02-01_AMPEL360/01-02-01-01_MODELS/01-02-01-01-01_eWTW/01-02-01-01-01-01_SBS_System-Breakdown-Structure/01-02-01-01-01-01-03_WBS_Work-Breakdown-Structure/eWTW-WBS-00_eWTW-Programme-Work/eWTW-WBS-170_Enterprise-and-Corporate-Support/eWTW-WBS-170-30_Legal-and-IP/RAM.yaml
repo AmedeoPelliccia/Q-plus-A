@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-30
+raci:
+  responsible: Q-LEGAL
+  accountable: Q-LEGAL
+  consulted:
+    - Q-PMO
+  informed: []

@@ -1,0 +1,7 @@
+work_package_id: eWTW-WBS-170-50
+raci:
+  responsible: Q-GOV
+  accountable: Q-GOV
+  consulted:
+    - Q-PMO
+  informed: []
