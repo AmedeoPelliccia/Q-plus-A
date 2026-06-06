@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-130-40
+function_statement: "Manage configuration data and operational logging."
+parent: eWTW-FBS-130
+children: []
+allocation:
+  g_atlas_chapters: ["045"]
+  pbs_items: ["PBS Avionics / Health"]
+criticality: DAL-D
+owner: Q-AIR
+status: baseline

@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-60-30
+function_statement: "Control aircraft yaw axis."
+parent: eWTW-FBS-60
+children: []
+allocation:
+  g_atlas_chapters: ["027"]
+  pbs_items: ["PBS Flight Controls"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

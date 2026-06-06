@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-40-10
+function_statement: "Distribute high-voltage power to propulsion and major loads."
+parent: eWTW-FBS-40
+children: []
+allocation:
+  g_atlas_chapters: ["024"]
+  pbs_items: ["PBS Electrical"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

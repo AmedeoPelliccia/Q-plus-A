@@ -1,0 +1,15 @@
+function_id: eWTW-FBS-40
+function_statement: "Generate and distribute electrical power across all systems."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-40-10
+  - eWTW-FBS-40-20
+  - eWTW-FBS-40-30
+  - eWTW-FBS-40-40
+  - eWTW-FBS-40-50
+allocation:
+  g_atlas_chapters: ["024"]
+  pbs_items: ["PBS Electrical"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

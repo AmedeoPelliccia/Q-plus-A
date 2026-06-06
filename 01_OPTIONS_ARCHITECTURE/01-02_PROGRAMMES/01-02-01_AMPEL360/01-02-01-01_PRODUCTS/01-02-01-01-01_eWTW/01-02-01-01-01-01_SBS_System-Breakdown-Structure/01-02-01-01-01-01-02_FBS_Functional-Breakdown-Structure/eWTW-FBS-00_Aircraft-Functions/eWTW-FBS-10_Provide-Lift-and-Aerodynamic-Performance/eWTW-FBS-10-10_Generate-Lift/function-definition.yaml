@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-10-10
+function_statement: "Generate aerodynamic lift to sustain flight."
+parent: eWTW-FBS-10
+children: []
+allocation:
+  g_atlas_chapters: ["057"]
+  pbs_items: ["PBS-10"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

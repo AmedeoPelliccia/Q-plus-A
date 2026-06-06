@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-20-30
+function_statement: "Control propulsion thrust level and response."
+parent: eWTW-FBS-20
+children: []
+allocation:
+  g_atlas_chapters: ["070-079"]
+  pbs_items: ["eWTW-PBS-..._Propulsion"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

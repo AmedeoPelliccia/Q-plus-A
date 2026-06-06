@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-90-30
+function_statement: "Provide crew interface, displays, and controls."
+parent: eWTW-FBS-90
+children: []
+allocation:
+  g_atlas_chapters: ["031", "046"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

@@ -1,0 +1,14 @@
+function_id: eWTW-FBS-10
+function_statement: "Provide lift and manage aerodynamic performance."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-10-10
+  - eWTW-FBS-10-20
+  - eWTW-FBS-10-30
+  - eWTW-FBS-10-40
+allocation:
+  g_atlas_chapters: ["057", "055"]
+  pbs_items: ["PBS-10 Airframe (lifting surfaces)"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

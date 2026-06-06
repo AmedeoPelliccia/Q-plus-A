@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-80-10
+function_statement: "Determine aircraft position, attitude, and velocity."
+parent: eWTW-FBS-80
+children: []
+allocation:
+  g_atlas_chapters: ["034"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-10-30
+function_statement: "Augment lift during take-off and landing."
+parent: eWTW-FBS-10
+children: []
+allocation:
+  g_atlas_chapters: ["057"]
+  pbs_items: ["PBS-10"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

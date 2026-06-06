@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-120-50
+function_statement: "Contain and manage energy hazards."
+parent: eWTW-FBS-120
+children: []
+allocation:
+  g_atlas_chapters: ["004-900"]
+  pbs_items: ["PBS Safety"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

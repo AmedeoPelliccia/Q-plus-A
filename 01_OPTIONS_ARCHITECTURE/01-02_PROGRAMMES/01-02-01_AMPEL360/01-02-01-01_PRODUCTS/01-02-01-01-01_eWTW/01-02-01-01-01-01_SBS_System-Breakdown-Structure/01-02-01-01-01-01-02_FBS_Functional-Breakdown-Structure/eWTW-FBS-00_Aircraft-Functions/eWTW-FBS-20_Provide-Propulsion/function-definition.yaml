@@ -1,0 +1,15 @@
+function_id: eWTW-FBS-20
+function_statement: "Provide propulsive thrust to meet the mission thrust schedule."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-20-10
+  - eWTW-FBS-20-20
+  - eWTW-FBS-20-30
+  - eWTW-FBS-20-40
+  - eWTW-FBS-20-50
+allocation:
+  g_atlas_chapters: ["070-079"]
+  pbs_items: ["eWTW-PBS-..._Propulsion"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

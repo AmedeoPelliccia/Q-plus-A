@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-90-10
+function_statement: "Integrate avionics functions via IMA platform."
+parent: eWTW-FBS-90
+children: []
+allocation:
+  g_atlas_chapters: ["042"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

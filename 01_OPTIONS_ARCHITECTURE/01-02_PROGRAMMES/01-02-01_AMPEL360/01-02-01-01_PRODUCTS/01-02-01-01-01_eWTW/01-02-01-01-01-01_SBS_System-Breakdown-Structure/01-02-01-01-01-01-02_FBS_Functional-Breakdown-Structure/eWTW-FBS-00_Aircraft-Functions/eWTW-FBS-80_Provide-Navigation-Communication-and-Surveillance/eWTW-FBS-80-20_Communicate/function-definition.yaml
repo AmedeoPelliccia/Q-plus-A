@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-80-20
+function_statement: "Communicate with ATC and other aircraft."
+parent: eWTW-FBS-80
+children: []
+allocation:
+  g_atlas_chapters: ["023"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

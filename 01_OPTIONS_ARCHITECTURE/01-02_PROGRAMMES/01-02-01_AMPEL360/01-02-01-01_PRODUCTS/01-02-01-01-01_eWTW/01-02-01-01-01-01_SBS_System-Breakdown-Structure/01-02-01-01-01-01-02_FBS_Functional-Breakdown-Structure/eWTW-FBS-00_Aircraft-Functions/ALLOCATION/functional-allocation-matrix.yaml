@@ -1,0 +1,127 @@
+# Aircraft-level functional allocation matrix
+# Node: eWTW-FBS-00 (Aircraft Functions)
+# Maps: function -> PBS items (realized_by) + G-ATLAS chapters (classified_under)
+# Note: pbs_code: TBD binds to actual PBS top-level codes once fixed.
+
+allocation_matrix:
+  node: eWTW-FBS-00
+  level: aircraft
+  programme: AMPEL360
+  product: eWTW
+  side: SSOT
+  relation_types: [realized_by, classified_under]
+
+  allocations:
+
+    - function: eWTW-FBS-10
+      title: Provide Lift and Aerodynamic Performance
+      realized_by:
+        - { pbs_area: Airframe-lifting-surfaces, pbs_code: eWTW-PBS-10 }
+      classified_under: ["057", "055"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-10/FHA
+
+    - function: eWTW-FBS-20
+      title: Provide Propulsion
+      realized_by:
+        - { pbs_area: Propulsion-assembly, pbs_code: TBD }
+      classified_under: ["070-079"]
+      allocation_type: full
+      fha_ref: eWTW-FBS-20/FHA
+
+    - function: eWTW-FBS-30
+      title: Store, Convert and Manage Energy
+      realized_by:
+        - { pbs_area: Energy-storage-assembly, pbs_code: TBD }
+      classified_under: ["004-900", "005-900"]
+      allocation_type: full
+      fha_ref: eWTW-FBS-30/FHA
+
+    - function: eWTW-FBS-40
+      title: Generate and Distribute Electrical Power
+      realized_by:
+        - { pbs_area: Electrical-system, pbs_code: TBD }
+      classified_under: ["024"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-40/FHA
+
+    - function: eWTW-FBS-50
+      title: Provide Structural Integrity
+      realized_by:
+        - { pbs_area: Airframe-structure, pbs_code: eWTW-PBS-10 }
+      classified_under: ["050-059"]
+      allocation_type: full
+      fha_ref: eWTW-FBS-50/FHA
+
+    - function: eWTW-FBS-60
+      title: Control and Stabilize Flight
+      realized_by:
+        - { pbs_area: Flight-control-system, pbs_code: TBD }
+      classified_under: ["027", "022"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-60/FHA
+
+    - function: eWTW-FBS-70
+      title: Provide Environmental Control and Protection
+      realized_by:
+        - { pbs_area: ECS-and-protection, pbs_code: TBD }
+      classified_under: ["021", "030", "036"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-70/FHA
+
+    - function: eWTW-FBS-80
+      title: Provide Navigation, Communication and Surveillance
+      realized_by:
+        - { pbs_area: Avionics-platform, pbs_code: TBD }
+      classified_under: ["023", "034"]
+      allocation_type: shared
+      shared_with: [eWTW-FBS-90, eWTW-FBS-130]
+      fha_ref: eWTW-FBS-80/FHA
+
+    - function: eWTW-FBS-90
+      title: Provide Information Management and Avionics Integration
+      realized_by:
+        - { pbs_area: Avionics-platform, pbs_code: TBD }
+      classified_under: ["042", "046"]
+      allocation_type: shared
+      shared_with: [eWTW-FBS-80, eWTW-FBS-130]
+      fha_ref: eWTW-FBS-90/FHA
+
+    - function: eWTW-FBS-100
+      title: Accommodate Crew, Passengers and Payload
+      realized_by:
+        - { pbs_area: Cabin-and-interior, pbs_code: TBD }
+      classified_under: ["025", "044"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-100/FHA
+
+    - function: eWTW-FBS-110
+      title: Enable Ground Operations and Mobility
+      realized_by:
+        - { pbs_area: Landing-gear-and-ground, pbs_code: TBD }
+      classified_under: ["032", "009", "010"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-110/FHA
+
+    - function: eWTW-FBS-120
+      title: Ensure Safety, Emergency and Survivability
+      realized_by:
+        - { pbs_area: Safety-systems, pbs_code: TBD }
+      classified_under: ["026", "035", "004-900"]
+      allocation_type: distributed
+      fha_ref: eWTW-FBS-120/FHA
+
+    - function: eWTW-FBS-130
+      title: Provide Health Monitoring and Maintenance Support
+      realized_by:
+        - { pbs_area: Avionics-platform, pbs_code: TBD }
+      classified_under: ["045"]
+      allocation_type: shared
+      shared_with: [eWTW-FBS-80, eWTW-FBS-90]
+      fha_ref: eWTW-FBS-130/FHA
+
+  governance:
+    inherits: DEGF-v1.0
+    lifecycle: LC-A..LC-N
+    rules: [No-AAA, SSOT+PUB]
+  status: baseline

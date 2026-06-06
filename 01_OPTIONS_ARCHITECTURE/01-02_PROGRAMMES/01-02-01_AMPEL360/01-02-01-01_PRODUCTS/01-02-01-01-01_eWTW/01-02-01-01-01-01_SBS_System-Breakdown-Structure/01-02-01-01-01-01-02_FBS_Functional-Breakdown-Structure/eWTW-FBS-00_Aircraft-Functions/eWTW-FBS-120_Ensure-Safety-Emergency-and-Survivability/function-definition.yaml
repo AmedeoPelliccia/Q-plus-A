@@ -1,0 +1,15 @@
+function_id: eWTW-FBS-120
+function_statement: "Ensure safety, emergency response, and survivability."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-120-10
+  - eWTW-FBS-120-20
+  - eWTW-FBS-120-30
+  - eWTW-FBS-120-40
+  - eWTW-FBS-120-50
+allocation:
+  g_atlas_chapters: ["026", "035", "004-900"]
+  pbs_items: ["PBS Safety"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

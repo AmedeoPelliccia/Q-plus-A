@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-100-20
+function_statement: "Provide passenger cabin accommodation."
+parent: eWTW-FBS-100
+children: []
+allocation:
+  g_atlas_chapters: ["025", "044"]
+  pbs_items: ["PBS Cabin"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

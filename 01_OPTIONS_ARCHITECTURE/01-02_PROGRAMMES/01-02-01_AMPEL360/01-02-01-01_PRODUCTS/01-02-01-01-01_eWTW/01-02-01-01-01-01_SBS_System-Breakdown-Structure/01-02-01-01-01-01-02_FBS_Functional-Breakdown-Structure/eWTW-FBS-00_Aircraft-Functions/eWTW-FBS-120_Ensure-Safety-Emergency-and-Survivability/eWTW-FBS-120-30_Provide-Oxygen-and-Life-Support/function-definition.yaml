@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-120-30
+function_statement: "Provide oxygen and life support."
+parent: eWTW-FBS-120
+children: []
+allocation:
+  g_atlas_chapters: ["035"]
+  pbs_items: ["PBS Safety"]
+criticality: DAL-A
+owner: Q-AIR
+status: baseline

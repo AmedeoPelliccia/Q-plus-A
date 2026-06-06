@@ -1,0 +1,14 @@
+function_id: eWTW-FBS-130
+function_statement: "Provide health monitoring and maintenance support."
+parent: eWTW-FBS-00
+children:
+  - eWTW-FBS-130-10
+  - eWTW-FBS-130-20
+  - eWTW-FBS-130-30
+  - eWTW-FBS-130-40
+allocation:
+  g_atlas_chapters: ["045"]
+  pbs_items: ["PBS Avionics / Health"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

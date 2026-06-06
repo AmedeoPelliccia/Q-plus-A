@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-130-10
+function_statement: "Monitor system health and detect anomalies."
+parent: eWTW-FBS-130
+children: []
+allocation:
+  g_atlas_chapters: ["045"]
+  pbs_items: ["PBS Avionics / Health"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

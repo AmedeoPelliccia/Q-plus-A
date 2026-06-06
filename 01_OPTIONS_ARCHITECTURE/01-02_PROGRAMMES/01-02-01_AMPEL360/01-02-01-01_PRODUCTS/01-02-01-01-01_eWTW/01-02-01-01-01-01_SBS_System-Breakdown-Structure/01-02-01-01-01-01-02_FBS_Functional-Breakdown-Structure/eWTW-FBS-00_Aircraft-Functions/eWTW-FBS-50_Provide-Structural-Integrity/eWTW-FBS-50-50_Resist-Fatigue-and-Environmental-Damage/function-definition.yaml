@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-50-50
+function_statement: "Resist fatigue, corrosion, and environmental damage."
+parent: eWTW-FBS-50
+children: []
+allocation:
+  g_atlas_chapters: ["050-059"]
+  pbs_items: ["PBS-10 Airframe Structure"]
+criticality: DAL-B
+owner: Q-AIR
+status: baseline

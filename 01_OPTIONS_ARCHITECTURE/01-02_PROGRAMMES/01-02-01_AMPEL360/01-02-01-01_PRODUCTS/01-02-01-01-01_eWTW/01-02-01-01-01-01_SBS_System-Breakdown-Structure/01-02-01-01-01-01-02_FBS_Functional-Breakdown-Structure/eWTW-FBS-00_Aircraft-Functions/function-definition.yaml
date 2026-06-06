@@ -1,0 +1,23 @@
+function_id: eWTW-FBS-00
+function_statement: "Provide all aircraft-level functions for the eWTW mission."
+parent: null
+children:
+  - eWTW-FBS-10
+  - eWTW-FBS-20
+  - eWTW-FBS-30
+  - eWTW-FBS-40
+  - eWTW-FBS-50
+  - eWTW-FBS-60
+  - eWTW-FBS-70
+  - eWTW-FBS-80
+  - eWTW-FBS-90
+  - eWTW-FBS-100
+  - eWTW-FBS-110
+  - eWTW-FBS-120
+  - eWTW-FBS-130
+allocation:
+  g_atlas_chapters: []
+  pbs_items: []
+criticality: TBD
+owner: Q-AIR
+status: baseline

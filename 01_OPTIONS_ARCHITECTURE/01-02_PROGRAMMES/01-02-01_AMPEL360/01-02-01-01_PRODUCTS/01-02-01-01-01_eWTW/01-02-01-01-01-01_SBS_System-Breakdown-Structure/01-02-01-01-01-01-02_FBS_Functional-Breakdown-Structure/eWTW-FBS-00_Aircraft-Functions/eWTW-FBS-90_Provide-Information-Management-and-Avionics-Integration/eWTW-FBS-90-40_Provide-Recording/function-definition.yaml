@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-90-40
+function_statement: "Provide flight and data recording."
+parent: eWTW-FBS-90
+children: []
+allocation:
+  g_atlas_chapters: ["031"]
+  pbs_items: ["PBS Avionics"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline

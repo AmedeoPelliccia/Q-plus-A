@@ -1,0 +1,10 @@
+function_id: eWTW-FBS-110-30
+function_statement: "Enable taxi operations."
+parent: eWTW-FBS-110
+children: []
+allocation:
+  g_atlas_chapters: ["009"]
+  pbs_items: ["PBS Landing Gear"]
+criticality: DAL-C
+owner: Q-AIR
+status: baseline
