@@ -1,7 +1,86 @@
-work_package_id: eWTW-WBS-00
-title: eWTW Programme Work
-owner_obs: TBD
-supporting_obs: []
-control_account: CA-00
-lifecycle: LC-A..LC-N
-status: baseline
+# WBS root work-package definition (WBS dictionary — root / roll-up entry)
+# Node: eWTW-WBS-00  |  This is a SUMMARY element, not a leaf work package.
+# Leaf (L2) packages carry their own work-package.yaml with detailed scope, schedule, and budget.
+
+work_package:
+  id: eWTW-WBS-00
+  title: eWTW Programme Work
+  node_type: root            # roll-up summary element
+  structure: WBS
+  sbs_code: 01-02-01-01-01-01-03
+  programme: AMPEL360
+  product: eWTW
+  model_ident_code: EWTW
+  side: SSOT
+  owner_obs: 01-01-02-05_Q-PMO
+
+  scope:
+    statement: >
+      The total work required to develop, analyse, build software for, integrate,
+      verify, certify, industrialize, support, and sustain the eWTW (electric wide
+      tube-and-wing), decomposed into 17 L1 elements and assigned to the Q-Division OBS.
+    includes:
+      - Programme management, systems engineering, and CAD/PLM backbone
+      - Air-vehicle, propulsion/energy, structures, systems/avionics design
+      - Software & embedded systems (DO-178C) and engineering analysis/simulation
+      - Integration, test & verification; certification & compliance
+      - Technical data & publications (TPuBS); industrialization; ground support
+      - Sustainability & lifecycle; research; EU programmes; enterprise support
+    excludes:
+      - Work belonging to other models (BWB-Q100, MRTT-Q300, Q10)
+      - Enterprise functions not specific to the eWTW (held at 01-01_ORGANIZATIONS)
+      - In-service fleet operations beyond initial support (see WBS-130)
+
+  objective: >
+    Deliver a certifiable eWTW with full SSOT→PUB traceability, on a gated and
+    auditable basis, with clear single-point accountability per work element.
+
+  # Roll-up index of the 17 Level-1 elements (detail in each child's own work-package.yaml)
+  children:
+    - { id: eWTW-WBS-10,  title: Programme Management,                 owner_obs: 01-01-02-05_Q-PMO }
+    - { id: eWTW-WBS-20,  title: Systems Engineering,                  owner_obs: 01-01-01-05_Q-DATAGOV }
+    - { id: eWTW-WBS-30,  title: Air Vehicle,                          owner_obs: 01-01-01-01_Q-AIR }
+    - { id: eWTW-WBS-40,  title: Propulsion and Energy,                owner_obs: 01-01-01-03_Q-GREENTECH }
+    - { id: eWTW-WBS-50,  title: Structures,                           owner_obs: 01-01-01-04_Q-STRUCTURES }
+    - { id: eWTW-WBS-60,  title: Systems and Avionics,                 owner_obs: 01-01-01-01_Q-AIR }
+    - { id: eWTW-WBS-70,  title: Software and Embedded Systems,        owner_obs: 01-01-01-06_Q-HPC }
+    - { id: eWTW-WBS-80,  title: Engineering Analysis and Simulation,  owner_obs: 01-01-01-06_Q-HPC }
+    - { id: eWTW-WBS-90,  title: Integration, Test and Verification,   owner_obs: 01-01-01-01_Q-AIR }
+    - { id: eWTW-WBS-100, title: Certification and Compliance,         owner_obs: 01-01-01-05_Q-DATAGOV }
+    - { id: eWTW-WBS-110, title: Technical Data and Publications,      owner_obs: 01-01-01-05_Q-DATAGOV }
+    - { id: eWTW-WBS-120, title: Industrialization and Production,     owner_obs: 01-01-01-10_Q-INDUSTRY }
+    - { id: eWTW-WBS-130, title: Ground Support and Operations,        owner_obs: 01-01-01-09_Q-GROUND }
+    - { id: eWTW-WBS-140, title: Sustainability and Lifecycle,         owner_obs: 01-01-01-03_Q-GREENTECH }
+    - { id: eWTW-WBS-150, title: Research and Advanced Concepts,       owner_obs: 01-01-01-11_Q-SCIRES }
+    - { id: eWTW-WBS-160, title: EU Programmes and Partnerships,       owner_obs: 01-01-01-12_Q-HUESCORT-SCIRES-OPEN }
+    - { id: eWTW-WBS-170, title: Enterprise and Corporate Support,     owner_obs: 01-01-02-05_Q-PMO }
+
+  planning:
+    control_accounts: "established at L1 (CA-10 … CA-170)"
+    master_schedule_ref: eWTW-WBS-10-10   # Programme Planning & Scheduling
+    budget_ref: eWTW-WBS-10-20            # Cost & Budget Management
+    baseline_status: pending              # set at the controlling LC gate
+
+  # Rolled-up outputs across the programme (detail allocated per child)
+  produces:
+    pbs: "01-02-01-01-01-01-01_PBS  — eWTW product breakdown"
+    fbs: "01-02-01-01-01-01-02_FBS  — eWTW functional architecture"
+    publications: "01-02-01-01-01-01-11_TPuBS  — S1000D publications (PUB projection)"
+    evidence: "certification, safety (ARP4761A), and software (DO-178C) evidence chains"
+
+  links:
+    ram: ./RAM.yaml
+    ssot: ./SSOT/
+    pbs: 01-02-01-01-01-01-01_PBS
+    fbs: 01-02-01-01-01-01-02_FBS
+    obs: 01-01_ORGANIZATIONS
+
+  open_decisions_ref: ./RAM.yaml   # see open_decisions (WBS-70 accountable: Q-HPC vs Q-AIR)
+
+  governance:
+    inherits: DEGF-v1.0
+    lifecycle: LC-A..LC-N
+    rules: [No-AAA, SSOT+PUB]
+    owner: 01-01-02-05_Q-PMO
+  status: baseline
+  version: "1.0"
