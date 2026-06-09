@@ -1,0 +1,71 @@
+---
+# dm-register.yaml — 003-900-010 Ground Charging Connection Interface
+# Data module allocation and ICN register.
+
+subject: "003-900-010"
+title: "Ground Charging Connection Interface"
+pmc: "PMC-EWTW-ECHM"
+
+data_modules:
+  - short_handle: "DMC-EWTW-003-900-010-040"
+    full_dmc: "DMC-EWTW-A-03-90-01-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-03-90-01-00A-040A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-003-900-010-034"
+    full_dmc: "DMC-EWTW-A-03-90-01-00A-034A-A"
+    info_code: "034"
+    type: "Operating principles"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-03-90-01-00A-034A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-003-900-010-720"
+    full_dmc: "DMC-EWTW-A-03-90-01-00A-720A-A"
+    info_code: "720"
+    type: "Connect procedure"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-03-90-01-00A-720A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-003-900-010-730"
+    full_dmc: "DMC-EWTW-A-03-90-01-00A-730A-A"
+    info_code: "730"
+    type: "Disconnect procedure"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-03-90-01-00A-730A-A_001-00_en-GB.xml"
+
+excluded_info_codes:
+  - code: "420"
+    reason: "Fault isolation is FIM scope, not handling"
+    routed_to: "FIM PMC"
+
+illustrations:
+  - icn: "ICN-EWTW-003900010-001-01"
+    caption: "Charging inlet location and access"
+    used_by: ["040"]
+    file: "ICN/ICN-EWTW-003900010-001-01.svg"
+
+  - icn: "ICN-EWTW-003900010-002-01"
+    caption: "Connector engagement sequence / contacts"
+    used_by: ["040", "034", "720"]
+    file: "ICN/ICN-EWTW-003900010-002-01.svg"
+
+  - icn: "ICN-EWTW-003900010-003-01"
+    caption: "Grounding / bonding sequence and latch"
+    used_by: ["720", "730"]
+    file: "ICN/ICN-EWTW-003900010-003-01.svg"
+
+sns_status: "PROVISIONAL — pending _CSDB-CONTROL/SNS-mapping.yaml"

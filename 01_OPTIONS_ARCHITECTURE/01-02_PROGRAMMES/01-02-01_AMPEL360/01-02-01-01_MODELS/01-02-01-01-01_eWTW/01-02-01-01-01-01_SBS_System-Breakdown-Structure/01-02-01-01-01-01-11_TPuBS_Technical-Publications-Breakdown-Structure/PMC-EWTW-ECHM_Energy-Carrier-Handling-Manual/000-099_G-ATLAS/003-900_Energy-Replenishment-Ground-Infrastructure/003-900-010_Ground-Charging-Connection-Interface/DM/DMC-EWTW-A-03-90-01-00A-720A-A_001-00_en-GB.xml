@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DMC-EWTW-A-03-90-01-00A-720A-A_001-00_en-GB.xml
+  Subject 003-900-010 — Ground Charging Connection Interface
+  Info code 720 — Connect procedure
+  Status: inWork · Quality: unverified · Security: 01
+  BREX: DMC-EWTW-A-00-00-00-00A-022A-D
+-->
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="EWTW"
+                systemDiffCode="A"
+                systemCode="03"
+                subSystemCode="9"
+                subSubSystemCode="0"
+                assyCode="01"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="720"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="GB"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <dmTitle>
+          <techName>Ground Charging Connection Interface</techName>
+          <infoName>Connect procedure</infoName>
+        </dmTitle>
+        <issueDate year="2026" month="06" day="09"/>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="EWTW"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="0"
+                    subSubSystemCode="0"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <!-- STUB — content pending authoring.
+           Scope: area-safety → bonding → mate/latch → interlock →
+           handshake → authorise. HV / arc-flash warnings; no-mate-under-load. -->
+      <para>Content pending.</para>
+    </description>
+  </content>
+</dmodule>

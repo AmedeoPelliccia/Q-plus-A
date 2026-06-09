@@ -1,0 +1,12 @@
+# ECHM-10.link — Publication-tree pointer
+# Subject 003-900-010 feeds ECHM-10 (Energy-Carrier Replenishment)
+# This is a link index entry, not a copy of the PM.
+
+target_tree_entry: "ECHM-10"
+tree_title: "Energy-Carrier Replenishment"
+subject: "003-900-010"
+dms_referenced:
+  - "DMC-EWTW-A-03-90-01-00A-040A-A"
+  - "DMC-EWTW-A-03-90-01-00A-034A-A"
+  - "DMC-EWTW-A-03-90-01-00A-720A-A"
+  - "DMC-EWTW-A-03-90-01-00A-730A-A"
