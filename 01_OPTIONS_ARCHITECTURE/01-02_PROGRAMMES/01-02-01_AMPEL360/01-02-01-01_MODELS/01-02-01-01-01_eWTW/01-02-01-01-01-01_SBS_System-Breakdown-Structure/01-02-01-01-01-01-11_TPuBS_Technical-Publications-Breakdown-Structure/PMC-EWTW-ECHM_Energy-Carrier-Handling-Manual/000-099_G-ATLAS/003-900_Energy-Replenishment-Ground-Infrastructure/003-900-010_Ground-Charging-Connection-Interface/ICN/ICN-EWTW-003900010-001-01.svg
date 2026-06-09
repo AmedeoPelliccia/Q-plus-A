@@ -1,12 +1,168 @@
+Create this file at:
+
+```text
+.../ICN/ICN-EWTW-003900010-001-01.svg
+```
+
+Recommended role:
+
+```yaml
+icn: ICN-EWTW-003900010-001-01
+title: Ground charging connection interface — aircraft inlet location
+used_by:
+  - DMC-EWTW-A-03-90-01-00A-040A-A
+  - DMC-EWTW-A-03-90-01-00A-034A-A
+type: simplified technical illustration
+```
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ICN-EWTW-003900010-001-01 — Charging inlet location and access
-     Placeholder stub pending illustration. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-  <rect width="800" height="600" fill="#f8f9fa" stroke="#dee2e6"/>
-  <text x="400" y="280" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#6c757d">
-    ICN-EWTW-003900010-001-01
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="800"
+     viewBox="0 0 1200 800"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Ground charging connection interface — aircraft inlet location</title>
+  <desc id="desc">
+    Simplified technical illustration showing the eWTW aircraft ground charging inlet,
+    ground charger connector, bonding lead, and interface status indication.
+  </desc>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#ffffff"/>
+
+  <!-- Aircraft simplified outline -->
+  <path d="M140 390 C260 300, 430 250, 600 250 C770 250, 940 300, 1060 390
+           C930 455, 760 490, 600 490 C440 490, 270 455, 140 390 Z"
+        fill="#eef3f7"
+        stroke="#1f2937"
+        stroke-width="4"/>
+
+  <!-- Centre body -->
+  <ellipse cx="600" cy="385" rx="210" ry="95"
+           fill="#dbe7f0"
+           stroke="#1f2937"
+           stroke-width="3"/>
+
+  <!-- Charging inlet location -->
+  <rect x="760" y="385" width="80" height="55" rx="8"
+        fill="#ffffff"
+        stroke="#0f172a"
+        stroke-width="4"/>
+
+  <circle cx="800" cy="412" r="18"
+          fill="#c7d2fe"
+          stroke="#0f172a"
+          stroke-width="3"/>
+
+  <!-- Ground charger -->
+  <rect x="900" y="560" width="120" height="120" rx="10"
+        fill="#f3f4f6"
+        stroke="#111827"
+        stroke-width="4"/>
+
+  <text x="960" y="625"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="20"
+        fill="#111827">GCU</text>
+
+  <!-- Charging cable -->
+  <path d="M900 585 C850 555, 835 500, 815 440"
+        fill="none"
+        stroke="#111827"
+        stroke-width="10"
+        stroke-linecap="round"/>
+
+  <!-- Connector head -->
+  <rect x="790" y="428" width="55" height="32" rx="6"
+        fill="#e5e7eb"
+        stroke="#111827"
+        stroke-width="3"
+        transform="rotate(-20 817 444)"/>
+
+  <!-- Bonding lead -->
+  <path d="M930 560 C880 530, 820 500, 760 470"
+        fill="none"
+        stroke="#6b7280"
+        stroke-width="5"
+        stroke-dasharray="12 8"
+        stroke-linecap="round"/>
+
+  <!-- Callout: inlet -->
+  <line x1="820" y1="385" x2="930" y2="300"
+        stroke="#111827"
+        stroke-width="2"/>
+  <rect x="930" y="260" width="220" height="70" rx="8"
+        fill="#ffffff"
+        stroke="#111827"
+        stroke-width="2"/>
+  <text x="1040" y="290"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="18"
+        fill="#111827">Charging inlet</text>
+  <text x="1040" y="315"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#374151">003-900-010 interface</text>
+
+  <!-- Callout: bonding -->
+  <line x1="760" y1="470" x2="550" y2="620"
+        stroke="#6b7280"
+        stroke-width="2"/>
+  <rect x="330" y="590" width="230" height="65" rx="8"
+        fill="#ffffff"
+        stroke="#6b7280"
+        stroke-width="2"/>
+  <text x="445" y="620"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="18"
+        fill="#111827">Bonding lead</text>
+  <text x="445" y="642"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#374151">equipotential reference</text>
+
+  <!-- Status panel -->
+  <rect x="70" y="80" width="310" height="170" rx="10"
+        fill="#ffffff"
+        stroke="#111827"
+        stroke-width="3"/>
+  <text x="225" y="115"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        fill="#111827">Interface Status</text>
+
+  <circle cx="105" cy="150" r="9" fill="#16a34a"/>
+  <text x="125" y="156" font-family="Arial, sans-serif" font-size="16" fill="#111827">Mated</text>
+
+  <circle cx="105" cy="180" r="9" fill="#16a34a"/>
+  <text x="125" y="186" font-family="Arial, sans-serif" font-size="16" fill="#111827">Locked</text>
+
+  <circle cx="105" cy="210" r="9" fill="#16a34a"/>
+  <text x="125" y="216" font-family="Arial, sans-serif" font-size="16" fill="#111827">Bonded / interlock closed</text>
+
+  <!-- Footer metadata -->
+  <text x="60" y="760"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#4b5563">
+    ICN-EWTW-003900010-001-01 — Ground Charging Connection Interface
   </text>
-  <text x="400" y="320" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#adb5bd">
-    Charging inlet location and access — placeholder
+
+  <text x="1140" y="760"
+        text-anchor="end"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#4b5563">
+    QplusA .INC
   </text>
 </svg>
+```
