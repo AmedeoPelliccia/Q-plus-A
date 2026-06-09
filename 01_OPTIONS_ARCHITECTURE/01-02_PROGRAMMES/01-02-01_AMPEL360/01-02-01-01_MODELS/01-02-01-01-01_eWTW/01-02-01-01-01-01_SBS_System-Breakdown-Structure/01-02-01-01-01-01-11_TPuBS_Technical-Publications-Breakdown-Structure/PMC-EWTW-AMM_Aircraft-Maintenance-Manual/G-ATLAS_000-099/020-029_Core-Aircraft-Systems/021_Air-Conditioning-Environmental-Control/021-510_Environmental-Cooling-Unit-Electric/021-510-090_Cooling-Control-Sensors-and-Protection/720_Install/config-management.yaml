@@ -1,0 +1,15 @@
+---
+# config-management.yaml — 021-510-090 / 720 Install procedures
+# Convention: AMPEL360-AMM-INFOCODE-CM-001 (modification stack → resulting effectivity).
+
+subject: "021-510-090"
+info_code: "720"
+pmc: "PMC-EWTW-AMM"
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+modification_stack:
+  - baseline: "BASELINE"
+resulting_solutions:
+  - variant: "720A"
+    effectivity: "EFF-ALL"
+    msn_range: "MSN 0001-*"
+version: "1.0"

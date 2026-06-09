@@ -1,0 +1,18 @@
+---
+# config-management.yaml — 021-510-010 / 200 Servicing
+# Convention: AMPEL360-AMM-INFOCODE-CM-001 (modification stack → resulting effectivity).
+
+subject: "021-510-010"
+info_code: "200"
+pmc: "PMC-EWTW-AMM"
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+modification_stack:
+  - baseline: "BASELINE"
+  - mod: "MOD-EWTW-021-001"
+    description: "Vapour-cycle compressor upgrade (embodied MSN 0050)"
+    affects_this_info_code: false
+resulting_solutions:
+  - variant: "200A"
+    effectivity: "EFF-ALL"
+    msn_range: "MSN 0001-*"
+version: "1.0"

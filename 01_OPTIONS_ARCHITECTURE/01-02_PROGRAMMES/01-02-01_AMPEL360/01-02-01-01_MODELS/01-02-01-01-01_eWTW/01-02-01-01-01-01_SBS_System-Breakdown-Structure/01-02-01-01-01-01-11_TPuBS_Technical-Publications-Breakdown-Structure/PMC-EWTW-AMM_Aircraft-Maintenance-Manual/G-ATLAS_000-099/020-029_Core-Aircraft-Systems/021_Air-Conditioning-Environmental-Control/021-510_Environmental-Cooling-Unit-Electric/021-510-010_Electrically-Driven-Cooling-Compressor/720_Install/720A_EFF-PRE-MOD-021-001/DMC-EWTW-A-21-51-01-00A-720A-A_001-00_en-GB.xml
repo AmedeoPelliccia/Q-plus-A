@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-2/xml_schema_flat/proced.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="21" subSystemCode="5"
+                subSubSystemCode="1" assyCode="01" disassyCode="00" disassyCodeVariant="A"
+                infoCode="720" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="GB"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="06" day="09"/>
+        <dmTitle>
+          <techName>Electrically driven cooling compressor</techName>
+          <infoName>Install procedures</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>QplusA .INC</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>QplusA .INC</enterpriseName></originator>
+      <applic><displayText><simplePara>eWTW — MSN 0001-0049 (pre MOD-EWTW-021-001)</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent><dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="00"
+          subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00"
+          disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <procedure>
+      <preliminaryRqmts/>
+      <mainProcedure>
+        <proceduralStep><para>Make sure the mounting interface, air ducts and feeder cables are clean and serviceable.</para></proceduralStep>
+        <proceduralStep><para>Install the two-stage centrifugal compressor and torque the attachment bolts.</para></proceduralStep>
+        <proceduralStep><para>Connect the inlet and outlet air ducts and the three-phase feeder cables from the remote motor controller to the motor terminal box.</para></proceduralStep>
+        <proceduralStep><para>Install the ram-air cooling shroud on the motor housing.</para></proceduralStep>
+        <proceduralStep><para>Restore the 540 V DC supply, do an operational test up to maximum continuous speed (45 000 rpm) and return the aircraft to its initial configuration.</para></proceduralStep>
+      </mainProcedure>
+      <closeRqmts/>
+    </procedure>
+  </content>
+</dmodule>

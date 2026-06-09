@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-2/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="21" subSystemCode="5"
+                subSubSystemCode="1" assyCode="01" disassyCode="00" disassyCodeVariant="A"
+                infoCode="040" infoCodeVariant="B" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="GB"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="06" day="09"/>
+        <dmTitle>
+          <techName>Electrically driven cooling compressor</techName>
+          <infoName>Description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>QplusA .INC</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>QplusA .INC</enterpriseName></originator>
+      <applic><displayText><simplePara>eWTW — MSN 0050 and up (post MOD-EWTW-021-001)</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent><dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="00"
+          subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00"
+          disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>General</title>
+        <para>The electrically driven cooling compressor (post MOD-EWTW-021-001 configuration) is a hermetic scroll compressor operating in the vapour-cycle cooling loop. MOD-EWTW-021-001 (vapour-cycle compressor upgrade, embodied from MSN 0050) replaces the two-stage centrifugal unit.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Drive and control</title>
+        <para>The compressor is driven by a 540 V DC motor with an integrated silicon-carbide (SiC) motor controller mounted directly on the compressor housing. The maximum continuous speed is 9 000 rpm; the motor and controller are refrigerant-cooled, and the ram-air cooling shroud of the pre-mod unit is deleted.</para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
