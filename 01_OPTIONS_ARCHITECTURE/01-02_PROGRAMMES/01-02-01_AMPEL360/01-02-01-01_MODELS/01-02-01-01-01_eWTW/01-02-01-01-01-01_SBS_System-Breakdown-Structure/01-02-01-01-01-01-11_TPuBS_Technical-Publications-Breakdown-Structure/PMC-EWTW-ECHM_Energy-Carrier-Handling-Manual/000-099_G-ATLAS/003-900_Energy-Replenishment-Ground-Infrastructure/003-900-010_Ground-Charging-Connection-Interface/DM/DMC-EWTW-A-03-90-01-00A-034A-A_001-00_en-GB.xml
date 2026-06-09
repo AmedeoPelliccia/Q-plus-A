@@ -7,7 +7,7 @@
       <dmIdent>
         <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="03" subSystemCode="9"
                 subSubSystemCode="0" assyCode="01" disassyCode="00" disassyCodeVariant="A"
-                infoCode="040" infoCodeVariant="A" itemLocationCode="A"/>
+                infoCode="034" infoCodeVariant="A" itemLocationCode="A"/>
         <language languageIsoCode="en" countryIsoCode="GB"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </dmIdent>
@@ -15,7 +15,7 @@
         <issueDate year="2026" month="06" day="09"/>
         <dmTitle>
           <techName>Ground charging connection interface</techName>
-          <infoName>Description</infoName>
+          <infoName>Operating principles</infoName>
         </dmTitle>
       </dmAddressItems>
     </dmAddress>
@@ -35,8 +35,8 @@
   <content>
     <description>
       <levelledPara>
-        <title>General</title>
-        <para>The ground charging connection interface is the on-aircraft mating point through which ground charging infrastructure delivers electrical energy to the aircraft energy store.</para>
+        <title>Scope</title>
+        <para>This data module describes the operating principles of the charging connection interface.</para>
       </levelledPara>
     </description>
   </content>
