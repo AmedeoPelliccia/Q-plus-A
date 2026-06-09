@@ -1,0 +1,19 @@
+# Applicability Model — PMC-EWTW-FCOM
+# S1000D Issue 4.2 | eWTW | ACT/CCT/PCT placeholder
+
+applicability:
+  pmc: "PMC-EWTW-FCOM"
+  model: eWTW
+  mic: EWTW
+  act_ref: null     # Applicability Cross-Reference Table DMC — to be assigned
+  cct_ref: null     # Conditions Cross-Reference Table DMC — to be assigned
+  pct_ref: null     # Product Cross-Reference Table DMC — to be assigned
+
+  product_attributes:
+    - name: modelIdent
+      values: [EWTW]
+    - name: version
+      values: [ALL]
+
+  msn_range: "MSN-001.."
+  status: draft
