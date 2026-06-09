@@ -1,0 +1,35 @@
+---
+# applicability.yaml — 003-900-010 Ground Charging Connection Interface
+# Carrier-binding and exclusion rules for the subject's data modules.
+
+subject: "003-900-010"
+title: "Ground Charging Connection Interface"
+pmc: "PMC-EWTW-ECHM"
+
+applicability:
+  carrier: "eWTW"
+  carrier_description: "Electrical-charge carrier (electric/charging)"
+  binding: "electric"
+  brex: "DMC-EWTW-A-00-00-00-00A-022A-D"
+  security: "01"  # unclassified
+
+  applicable_models:
+    - model: "eWTW"
+      description: "Electric wing-to-wing configuration"
+
+  excluded_carriers:
+    - carrier: "hydrogen/cryogenic"
+      reason: "Not applicable — projects in hBWB ECHM sibling"
+      sibling_pmc: "PMC-hBWB-ECHM"
+
+  cross_references:
+    - subject: "003-900-060"
+      note: "Battery thermal pre-conditioning (cross-reference)"
+    - subject: "003-900-040"
+      note: "HV isolation (cross-reference)"
+    - node: "028-900-090"
+      note: "Energy-store thermal/fire delta"
+    - node: "026-900"
+      note: "Fire/arc-flash protection"
+
+all_dms_bind_to: "eWTW"

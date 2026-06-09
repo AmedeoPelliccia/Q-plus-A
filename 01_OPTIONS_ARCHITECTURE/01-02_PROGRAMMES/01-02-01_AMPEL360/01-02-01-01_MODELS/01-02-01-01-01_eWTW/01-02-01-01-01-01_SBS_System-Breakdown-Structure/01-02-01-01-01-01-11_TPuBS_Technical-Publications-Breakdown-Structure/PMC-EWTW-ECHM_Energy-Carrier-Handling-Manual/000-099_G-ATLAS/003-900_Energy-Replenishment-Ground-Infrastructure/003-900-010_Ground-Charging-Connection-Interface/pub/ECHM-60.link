@@ -1,0 +1,11 @@
+# ECHM-60.link — Publication-tree pointer
+# Subject 003-900-010 feeds ECHM-60 (Ground-Infrastructure Interface)
+# This is a link index entry, not a copy of the PM.
+
+target_tree_entry: "ECHM-60"
+tree_title: "Ground-Infrastructure Interface"
+subject: "003-900-010"
+dms_referenced:
+  - "DMC-EWTW-A-03-90-01-00A-040A-A"
+  - "DMC-EWTW-A-03-90-01-00A-720A-A"
+  - "DMC-EWTW-A-03-90-01-00A-730A-A"

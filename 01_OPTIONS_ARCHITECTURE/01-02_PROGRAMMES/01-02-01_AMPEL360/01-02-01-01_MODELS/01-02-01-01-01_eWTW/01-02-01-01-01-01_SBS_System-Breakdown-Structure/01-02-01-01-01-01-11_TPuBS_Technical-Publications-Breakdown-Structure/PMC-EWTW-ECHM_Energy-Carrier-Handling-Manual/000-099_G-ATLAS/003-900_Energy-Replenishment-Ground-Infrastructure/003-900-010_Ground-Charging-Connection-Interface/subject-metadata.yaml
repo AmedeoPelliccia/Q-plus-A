@@ -1,0 +1,50 @@
+---
+# subject-metadata.yaml — 003-900-010 Ground Charging Connection Interface
+# Authoritative subject definition for the eWTW projection.
+
+subject: "003-900-010"
+title: "Ground Charging Connection Interface"
+description: >-
+  On-aircraft charging interface: physical and operational connection between
+  the eWTW aircraft and the ground charging infrastructure (charging inlet,
+  high-power conductive coupling, MCS-class).
+
+parent_node: "003-900"
+pmc: "PMC-EWTW-ECHM"
+model: "eWTW"
+mic: "EWTW"
+side: "PUB"
+owner: "Q-GREENTECH"
+
+projection:
+  ssot_subject: "003-900-010"
+  ssot_function: "replenishment connection interface"
+  carrier_binding: "electric/charging"
+  excluded_carriers: ["hydrogen/cryogenic (→ hBWB sibling)"]
+
+feeds_tree:
+  - "ECHM-10"
+  - "ECHM-60"
+
+dm_set: ["040", "034", "720", "730"]
+excluded_info_codes:
+  - code: "420"
+    reason: "Fault isolation is FIM scope, not handling"
+    routed_to: "FIM PMC"
+
+sns:
+  system_code: "03"
+  sub_system: "9"
+  sub_sub_system: "0"
+  assy: "01"
+  status: "PROVISIONAL"
+  pending: "_CSDB-CONTROL/SNS-mapping.yaml"
+
+governance:
+  - "DEGF-v1.0"
+  - "LC-A..LC-N"
+  - "No-AAA"
+  - "SSOT+PUB"
+
+status: "baseline"
+version: "1.0"

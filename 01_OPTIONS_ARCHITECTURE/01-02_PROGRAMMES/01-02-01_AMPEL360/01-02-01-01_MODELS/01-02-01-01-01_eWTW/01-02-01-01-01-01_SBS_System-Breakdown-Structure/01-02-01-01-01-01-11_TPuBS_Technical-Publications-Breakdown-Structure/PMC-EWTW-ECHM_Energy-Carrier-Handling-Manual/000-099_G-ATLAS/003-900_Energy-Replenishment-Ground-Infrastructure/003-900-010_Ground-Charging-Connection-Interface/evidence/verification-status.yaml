@@ -1,0 +1,49 @@
+---
+# verification-status.yaml — 003-900-010 Ground Charging Connection Interface
+# Per-DM QA state and lifecycle gates.
+
+subject: "003-900-010"
+title: "Ground Charging Connection Interface"
+
+data_modules:
+  - dmc: "DMC-EWTW-A-03-90-01-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-03-90-01-00A-034A-A"
+    info_code: "034"
+    type: "Operating principles"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-03-90-01-00A-720A-A"
+    info_code: "720"
+    type: "Connect procedure"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-03-90-01-00A-730A-A"
+    info_code: "730"
+    type: "Disconnect procedure"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+overall_status: "unverified"
