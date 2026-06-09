@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmodule xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-2/xml_schema_flat/proced.xsd">
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-2/xml_schema_flat/fault.xsd">
   <identAndStatusSection>
     <dmAddress>
       <dmIdent>
         <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="03" subSystemCode="9"
                 subSubSystemCode="0" assyCode="01" disassyCode="00" disassyCodeVariant="A"
-                infoCode="730" infoCodeVariant="A" itemLocationCode="A"/>
+                infoCode="420" infoCodeVariant="A" itemLocationCode="A"/>
         <language languageIsoCode="en" countryIsoCode="GB"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </dmIdent>
@@ -15,7 +15,7 @@
         <issueDate year="2026" month="06" day="09"/>
         <dmTitle>
           <techName>Ground charging connection interface</techName>
-          <infoName>Disconnect</infoName>
+          <infoName>Fault isolation</infoName>
         </dmTitle>
       </dmAddressItems>
     </dmAddress>
@@ -33,16 +33,15 @@
     </dmStatus>
   </identAndStatusSection>
   <content>
-    <procedure>
-      <preliminaryRqmts/>
-      <mainProcedure>
-        <proceduralStep><para>Terminate the charge session.</para></proceduralStep>
-        <proceduralStep><para>Verify that the connector is de-energised.</para></proceduralStep>
-        <proceduralStep><para>Release the lock and demate the connector.</para></proceduralStep>
-        <proceduralStep><para>Fit the environmental cover.</para></proceduralStep>
-        <proceduralStep><para>Remove equipotential bonding.</para></proceduralStep>
-      </mainProcedure>
-      <closeRqmts/>
-    </procedure>
+    <faultIsolation>
+      <faultIsolationProcedure>
+        <isolationMainProcedure>
+          <proceduralStep><para>If the connector does not report mated status, inspect connector alignment, latch engagement and inlet obstruction.</para></proceduralStep>
+          <proceduralStep><para>If the interlock does not close, verify latch position, pilot-contact continuity and connector seating.</para></proceduralStep>
+          <proceduralStep><para>If bonding is not confirmed, inspect the bonding lead, bonding point and ground infrastructure reference.</para></proceduralStep>
+          <proceduralStep><para>If readiness is not achieved after corrective action, stop the charging operation and report the defect.</para></proceduralStep>
+        </isolationMainProcedure>
+      </faultIsolationProcedure>
+    </faultIsolation>
   </content>
 </dmodule>
