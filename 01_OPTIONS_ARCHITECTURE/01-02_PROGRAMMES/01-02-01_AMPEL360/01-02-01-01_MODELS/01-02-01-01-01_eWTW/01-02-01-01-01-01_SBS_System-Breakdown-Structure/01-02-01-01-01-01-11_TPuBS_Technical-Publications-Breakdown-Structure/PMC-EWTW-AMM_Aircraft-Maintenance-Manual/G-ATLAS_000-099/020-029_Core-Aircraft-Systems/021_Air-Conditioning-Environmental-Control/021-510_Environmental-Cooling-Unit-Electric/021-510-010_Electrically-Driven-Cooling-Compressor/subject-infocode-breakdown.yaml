@@ -1,0 +1,33 @@
+---
+# subject-infocode-breakdown.yaml — 021-510-010 Electrically driven cooling compressor
+# Convention: AMPEL360-AMM-INFOCODE-CM-001
+
+subject: "021-510-010"
+title: "Electrically driven cooling compressor"
+pmc: "PMC-EWTW-AMM"
+model: "eWTW"
+mic: "EWTW"
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+doctrine: "green-native"
+owner: "Q-AIR"
+
+info_codes:
+  - info_code: "040"
+    name: "Description"
+    solutions: 2
+    variants: ["040A", "040B"]
+  - info_code: "200"
+    name: "Servicing"
+    solutions: 1
+    variants: ["200A"]
+  - info_code: "520"
+    name: "Remove procedures"
+    solutions: 2
+    variants: ["520A", "520B"]
+  - info_code: "720"
+    name: "Install procedures"
+    solutions: 2
+    variants: ["720A", "720B"]
+
+status: "scaffold"
+version: "1.0"

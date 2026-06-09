@@ -1,0 +1,13 @@
+---
+# ssot-ref.yaml — 021-510-010 / 520 Remove procedures
+# One-way PBS source link (SSOT → PUB projection).
+
+subject: "021-510-010"
+info_code: "520"
+pmc: "PMC-EWTW-AMM"
+ssot:
+  pbs_item: "EWTW-PBS-21-51-10-01"
+  pbs_kind: "LRU"
+  source: "G-ATLAS SSOT — chapter 021 (green-native)"
+  direction: "one-way"
+version: "1.0"

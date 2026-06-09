@@ -1,0 +1,15 @@
+---
+# config-management.yaml — 021-510-070 / 040 Description
+# Convention: AMPEL360-AMM-INFOCODE-CM-001 (modification stack → resulting effectivity).
+
+subject: "021-510-070"
+info_code: "040"
+pmc: "PMC-EWTW-AMM"
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+modification_stack:
+  - baseline: "BASELINE"
+resulting_solutions:
+  - variant: "040A"
+    effectivity: "EFF-ALL"
+    msn_range: "MSN 0001-*"
+version: "1.0"

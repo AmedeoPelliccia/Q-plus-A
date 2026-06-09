@@ -1,0 +1,33 @@
+---
+# subject-infocode-breakdown.yaml — 021-900-050 ECS / thermal management system coupling
+# Convention: AMPEL360-AMM-INFOCODE-CM-001
+
+subject: "021-900-050"
+title: "ECS / thermal management system coupling"
+pmc: "PMC-EWTW-AMM"
+model: "eWTW"
+mic: "EWTW"
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+doctrine: "green-native"
+owner: "Q-AIR"
+
+info_codes:
+  - info_code: "040"
+    name: "Description"
+    solutions: 1
+    variants: ["040A"]
+  - info_code: "200"
+    name: "Servicing"
+    solutions: 1
+    variants: ["200A"]
+  - info_code: "520"
+    name: "Remove procedures"
+    solutions: 1
+    variants: ["520A"]
+  - info_code: "720"
+    name: "Install procedures"
+    solutions: 1
+    variants: ["720A"]
+
+status: "scaffold"
+version: "1.0"

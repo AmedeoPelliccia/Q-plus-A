@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-2/xml_schema_flat/proced.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="21" subSystemCode="5"
+                subSubSystemCode="1" assyCode="01" disassyCode="00" disassyCodeVariant="A"
+                infoCode="520" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="GB"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="06" day="09"/>
+        <dmTitle>
+          <techName>Electrically driven cooling compressor</techName>
+          <infoName>Remove procedures</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>QplusA .INC</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>QplusA .INC</enterpriseName></originator>
+      <applic><displayText><simplePara>eWTW — MSN 0001-0049 (pre MOD-EWTW-021-001)</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent><dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="00"
+          subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00"
+          disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <procedure>
+      <preliminaryRqmts/>
+      <mainProcedure>
+        <proceduralStep><para>Make the aircraft safe and isolate the related electrical supplies.</para></proceduralStep>
+        <proceduralStep><para>Get access to the component and disconnect the electrical and mechanical interfaces.</para></proceduralStep>
+        <proceduralStep><para>Remove the component and install protective caps and covers.</para></proceduralStep>
+      </mainProcedure>
+      <closeRqmts/>
+    </procedure>
+  </content>
+</dmodule>
