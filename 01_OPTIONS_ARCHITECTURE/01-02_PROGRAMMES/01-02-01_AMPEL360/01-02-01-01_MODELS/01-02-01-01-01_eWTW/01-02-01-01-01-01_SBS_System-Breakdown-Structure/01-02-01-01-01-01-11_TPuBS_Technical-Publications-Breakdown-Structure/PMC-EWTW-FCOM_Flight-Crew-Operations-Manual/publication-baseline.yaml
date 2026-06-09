@@ -1,0 +1,23 @@
+# Publication Baseline — PMC-EWTW-FCOM
+# S1000D Issue 4.2 | eWTW | MIC: EWTW | Side: PUB
+# Doctrine: engineering revision != publication revision
+
+publication:
+  pmc: "PMC-EWTW-FCOM"
+  dtd: "FCOM"
+  title: "Flight Crew Operations Manual"
+  class: "STD"
+  model: eWTW
+  mic: EWTW
+  side: PUB
+  standard: S1000D Issue 4.2
+  band: 000-099_G-ATLAS
+  g_atlas_scope: "operations"
+
+baseline:
+  id: PUB-BL-0001
+  status: draft
+  issued: null
+  engineering_baseline_ref: null   # e.g. REV-A0 — set when first publication baseline is released
+
+rule: "PM references DMs by DMC; it never holds DM content (linked, not stored)."

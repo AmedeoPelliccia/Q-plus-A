@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- S1000D Issue 4.2 Publication Module (skeleton) -->
+<!-- PMC: PMC-EWTW-MPD | DTD: MPD | eWTW | MIC: EWTW -->
+<pm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000DIsue42/xml_schema_flat/pm.xsd">
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="EWTW" pmIssuer="AMPEL" pmNumber="MPD" pmVolume="00"/>
+        <issueInfo issueNumber="000" inWork="00"/>
+        <language languageIsoCode="en" countryIsoCode="EU"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2026" month="06" day="09"/>
+        <pmTitle>Maintenance Planning Document</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus>
+      <security securityClassification="01"/>
+      <dataRestrictions>
+        <restrictionInstructions>
+          <dataDistribution>To be distributed per eWTW publication policy</dataDistribution>
+        </restrictionInstructions>
+      </dataRestrictions>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applic>
+        <displayText><simplePara>eWTW — all variants</simplePara></displayText>
+      </applic>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </pmStatus>
+  </identAndStatusSection>
+  <content>
+    <pmEntry>
+      <!-- DM references will be listed here (linked, not stored) -->
+      <!-- Rule: PM references DMs by DMC; it never holds DM content. -->
+    </pmEntry>
+  </content>
+</pm>

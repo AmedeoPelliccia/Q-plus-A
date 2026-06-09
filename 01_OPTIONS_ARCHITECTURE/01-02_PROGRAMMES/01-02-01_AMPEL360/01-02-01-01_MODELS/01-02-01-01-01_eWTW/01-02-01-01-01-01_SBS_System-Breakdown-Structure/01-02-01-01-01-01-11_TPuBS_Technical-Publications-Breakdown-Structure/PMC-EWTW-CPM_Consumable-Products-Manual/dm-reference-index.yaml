@@ -1,0 +1,18 @@
+# DM Reference Index — PMC-EWTW-CPM
+# Lists DMCs assembled in this publication module.
+# Rule: PM references DMs by DMC; DM content lives in the node DM/ folders.
+
+publication:
+  pmc: "PMC-EWTW-CPM"
+  dtd: "CPM"
+  title: "Consumable Products Manual"
+  class: "STD"
+  g_atlas_scope: "consumables/materials"
+
+dm_references: []
+# Each entry will follow the pattern:
+#   - dmc: "DMC-EWTW-A-<SNS>-<DISASSC>-<DISASSMT>-<INCODE>-<INCODEV>-A-<ISSNO>-<INWORK>"
+#     g_atlas_node: "<chapter>/<node-section>"
+#     title: "<DM title>"
+#     issue: "000"
+#     status: draft

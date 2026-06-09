@@ -1,0 +1,18 @@
+# DM Reference Index — PMC-EWTW-ECHM
+# Lists DMCs assembled in this publication module.
+# Rule: PM references DMs by DMC; DM content lives in the node DM/ folders.
+
+publication:
+  pmc: "PMC-EWTW-ECHM"
+  dtd: "ECHM"
+  title: "Energy-Carrier Handling Manual"
+  class: "green-delta"
+  g_atlas_scope: "012-900, 003-900, 070-079"
+
+dm_references: []
+# Each entry will follow the pattern:
+#   - dmc: "DMC-EWTW-A-<SNS>-<DISASSC>-<DISASSMT>-<INCODE>-<INCODEV>-A-<ISSNO>-<INWORK>"
+#     g_atlas_node: "<chapter>/<node-section>"
+#     title: "<DM title>"
+#     issue: "000"
+#     status: draft

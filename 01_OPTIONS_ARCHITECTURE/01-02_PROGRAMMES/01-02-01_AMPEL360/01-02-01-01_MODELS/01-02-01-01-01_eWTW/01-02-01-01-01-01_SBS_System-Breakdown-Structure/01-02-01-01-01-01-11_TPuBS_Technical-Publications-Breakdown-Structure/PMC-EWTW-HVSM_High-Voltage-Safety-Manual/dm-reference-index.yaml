@@ -1,0 +1,18 @@
+# DM Reference Index — PMC-EWTW-HVSM
+# Lists DMCs assembled in this publication module.
+# Rule: PM references DMs by DMC; DM content lives in the node DM/ folders.
+
+publication:
+  pmc: "PMC-EWTW-HVSM"
+  dtd: "HVSM"
+  title: "High-Voltage Safety Manual"
+  class: "green-delta"
+  g_atlas_scope: "020-900, 024"
+
+dm_references: []
+# Each entry will follow the pattern:
+#   - dmc: "DMC-EWTW-A-<SNS>-<DISASSC>-<DISASSMT>-<INCODE>-<INCODEV>-A-<ISSNO>-<INWORK>"
+#     g_atlas_node: "<chapter>/<node-section>"
+#     title: "<DM title>"
+#     issue: "000"
+#     status: draft
