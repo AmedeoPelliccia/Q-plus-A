@@ -36,9 +36,11 @@
     <procedure>
       <preliminaryRqmts/>
       <mainProcedure>
-        <proceduralStep><para>Make the aircraft safe and isolate the related electrical supplies.</para></proceduralStep>
-        <proceduralStep><para>Get access to the component and disconnect the electrical and mechanical interfaces.</para></proceduralStep>
-        <proceduralStep><para>Remove the component and install protective caps and covers.</para></proceduralStep>
+        <proceduralStep><para>Make the aircraft safe and isolate the 540 V DC supply to the remote motor controller in the forward equipment bay.</para></proceduralStep>
+        <proceduralStep><para>Get access to the compressor and remove the ram-air cooling shroud from the motor housing.</para></proceduralStep>
+        <proceduralStep><para>Disconnect the three-phase feeder cables between the remote motor controller and the compressor motor terminal box.</para></proceduralStep>
+        <proceduralStep><para>Disconnect the inlet and outlet air ducts from the two-stage centrifugal compressor.</para></proceduralStep>
+        <proceduralStep><para>Remove the compressor attachment bolts, remove the compressor and install protective caps and covers.</para></proceduralStep>
       </mainProcedure>
       <closeRqmts/>
     </procedure>

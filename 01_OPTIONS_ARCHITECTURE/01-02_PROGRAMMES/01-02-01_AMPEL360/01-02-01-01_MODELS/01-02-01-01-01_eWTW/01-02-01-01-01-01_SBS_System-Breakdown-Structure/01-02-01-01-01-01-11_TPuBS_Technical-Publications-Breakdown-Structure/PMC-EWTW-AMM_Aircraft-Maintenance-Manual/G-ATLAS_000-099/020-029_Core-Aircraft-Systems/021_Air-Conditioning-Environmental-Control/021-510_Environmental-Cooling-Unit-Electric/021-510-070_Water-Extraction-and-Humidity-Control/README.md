@@ -16,4 +16,5 @@ No modification currently affects this subject; every info code resolves to a si
 | `520` | Remove procedures | `520A` |
 | `720` | Install procedures | `720A` |
 
-SSOT/PBS source: `EWTW-PBS-21-51-70-01` (one-way link, G-ATLAS SSOT chapter 021).
+SSOT/PBS source: `eWTW-PBS-60-20_Environmental-Control-System-ECS-Electric` (one-way link, eWTW SSOT PBS:
+`01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-60_Mechanical-and-Utility-Systems/eWTW-PBS-60-20_Environmental-Control-System-ECS-Electric`).

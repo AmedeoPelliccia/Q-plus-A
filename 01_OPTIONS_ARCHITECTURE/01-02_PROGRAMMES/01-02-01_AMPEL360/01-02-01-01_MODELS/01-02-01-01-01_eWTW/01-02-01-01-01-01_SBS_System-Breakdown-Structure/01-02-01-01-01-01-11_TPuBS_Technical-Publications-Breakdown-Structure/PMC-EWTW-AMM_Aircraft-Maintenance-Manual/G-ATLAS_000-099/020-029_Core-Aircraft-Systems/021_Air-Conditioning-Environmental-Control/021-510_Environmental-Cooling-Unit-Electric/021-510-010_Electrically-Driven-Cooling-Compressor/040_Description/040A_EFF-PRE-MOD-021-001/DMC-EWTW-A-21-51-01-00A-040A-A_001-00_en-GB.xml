@@ -36,7 +36,11 @@
     <description>
       <levelledPara>
         <title>General</title>
-        <para>The electrically driven cooling compressor is part of the eWTW air conditioning and environmental control system (chapter 021, green-native architecture).</para>
+        <para>The electrically driven cooling compressor (pre MOD-EWTW-021-001 configuration) is a two-stage centrifugal compressor on oil-free foil-gas bearings. It is the motive element of the electric environmental cooling unit of the eWTW green-native architecture (no engine bleed).</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Drive and control</title>
+        <para>The compressor is driven by a 540 V DC permanent-magnet motor supplied from a remote motor controller installed in the forward equipment bay. The maximum continuous speed is 45 000 rpm; motor cooling is by ram-air through a dedicated cooling shroud.</para>
       </levelledPara>
     </description>
   </content>

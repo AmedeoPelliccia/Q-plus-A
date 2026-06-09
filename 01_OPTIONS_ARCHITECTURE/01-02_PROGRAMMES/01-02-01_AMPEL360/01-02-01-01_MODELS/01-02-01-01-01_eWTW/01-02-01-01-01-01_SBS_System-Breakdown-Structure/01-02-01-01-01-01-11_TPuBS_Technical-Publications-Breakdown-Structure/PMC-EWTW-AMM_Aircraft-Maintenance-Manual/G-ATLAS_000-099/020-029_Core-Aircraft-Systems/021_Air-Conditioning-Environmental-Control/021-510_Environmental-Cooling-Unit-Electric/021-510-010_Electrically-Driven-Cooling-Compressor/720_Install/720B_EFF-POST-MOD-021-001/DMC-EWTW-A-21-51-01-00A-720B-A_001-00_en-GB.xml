@@ -36,9 +36,11 @@
     <procedure>
       <preliminaryRqmts/>
       <mainProcedure>
-        <proceduralStep><para>Make sure the work area and interfaces are clean and serviceable.</para></proceduralStep>
-        <proceduralStep><para>Install the component and connect the mechanical and electrical interfaces.</para></proceduralStep>
-        <proceduralStep><para>Do an operational test and return the aircraft to its initial configuration.</para></proceduralStep>
+        <proceduralStep><para>Make sure the mounting interface and the refrigerant line fittings are clean and serviceable.</para></proceduralStep>
+        <proceduralStep><para>Install the hermetic scroll compressor and torque the attachment bolts.</para></proceduralStep>
+        <proceduralStep><para>Connect the refrigerant suction and discharge lines, then evacuate the vapour-cycle loop and charge it with the specified refrigerant quantity.</para></proceduralStep>
+        <proceduralStep><para>Connect the integrated SiC motor controller harness connector at the compressor housing.</para></proceduralStep>
+        <proceduralStep><para>Restore the 540 V DC supply, do an operational test and a refrigerant leak check, and return the aircraft to its initial configuration.</para></proceduralStep>
       </mainProcedure>
       <closeRqmts/>
     </procedure>

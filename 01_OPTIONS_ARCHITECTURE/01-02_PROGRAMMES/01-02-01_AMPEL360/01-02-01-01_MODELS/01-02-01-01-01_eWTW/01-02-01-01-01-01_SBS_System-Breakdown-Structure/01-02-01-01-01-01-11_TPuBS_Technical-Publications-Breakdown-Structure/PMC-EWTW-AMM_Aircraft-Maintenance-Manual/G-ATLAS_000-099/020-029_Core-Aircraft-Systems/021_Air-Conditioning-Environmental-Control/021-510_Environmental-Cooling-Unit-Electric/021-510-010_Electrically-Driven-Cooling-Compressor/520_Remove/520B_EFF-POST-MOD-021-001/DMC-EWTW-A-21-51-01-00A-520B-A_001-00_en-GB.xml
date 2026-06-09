@@ -36,9 +36,11 @@
     <procedure>
       <preliminaryRqmts/>
       <mainProcedure>
-        <proceduralStep><para>Make the aircraft safe and isolate the related electrical supplies.</para></proceduralStep>
-        <proceduralStep><para>Get access to the component and disconnect the electrical and mechanical interfaces.</para></proceduralStep>
-        <proceduralStep><para>Remove the component and install protective caps and covers.</para></proceduralStep>
+        <proceduralStep><para>Make the aircraft safe and isolate the 540 V DC supply to the integrated motor controller at the compressor.</para></proceduralStep>
+        <proceduralStep><para>Recover the refrigerant charge from the vapour-cycle loop with the approved recovery equipment and confirm zero residual pressure.</para></proceduralStep>
+        <proceduralStep><para>Disconnect the integrated SiC motor controller harness connector at the compressor housing.</para></proceduralStep>
+        <proceduralStep><para>Disconnect the refrigerant suction and discharge lines from the hermetic scroll compressor and cap the open lines immediately.</para></proceduralStep>
+        <proceduralStep><para>Remove the compressor attachment bolts, remove the compressor and install protective caps and covers.</para></proceduralStep>
       </mainProcedure>
       <closeRqmts/>
     </procedure>

@@ -62,7 +62,7 @@ version: "1.0"
 │   │   ├── subject-infocode-breakdown.yaml        # 040×2, 200×1, 520×2, 720×2
 │   │   │
 │   │   ├── 040_Description/
-│   │   │   ├── ssot-ref.yaml                       # PBS: EWTW-PBS-21-51-10-01 (LRU)
+│   │   │   ├── ssot-ref.yaml                       # PBS: eWTW-PBS-60-20 (ECS — Electric)
 │   │   │   ├── config-management.yaml              # BASELINE → MOD-EWTW-021-001 ; affects=true
 │   │   │   ├── 040A_EFF-PRE-MOD-021-001/           # MSN 0001-0049
 │   │   │   │   └── DMC-EWTW-A-21-51-01-00A-040A-A_001-00_en-GB.xml
@@ -138,10 +138,13 @@ subject node
 
 Each DM carries `<applic>` matching its range, so an IETP filtered to a given MSN resolves to exactly one solution per info code. `infoCodeVariant` (A/B) is the S1000D variant key; the folder name binds it to the effectivity.
 
+> **Fork rule** — a new solution exists only where the mod changes the DM **content** (text, steps or illustration). Each PRE/POST DM pair carries a concrete technical delta (centrifugal → scroll compressor, remote → integrated SiC controller, refrigerant recovery/charge steps), recorded as `content_delta` in the info code's `config-management.yaml`. An effectivity update alone does **not** generate a new solution — it is only a stack update.
+
 ---
 
 ## References
 
 1. `AMPEL360-AMM-INFOCODE-CM-001` — info-code / effectivity-variant convention.
 2. S1000D Issue 4.2 — DM, DMC, info codes, applicability.
-3. G-ATLAS SSOT — chapter 021 (green-native).
+3. eWTW SSOT PBS — `eWTW-PBS-60-20_Environmental-Control-System-ECS-Electric` (under `01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-60_Mechanical-and-Utility-Systems/`).
+4. G-ATLAS SSOT — chapter 021 (green-native).

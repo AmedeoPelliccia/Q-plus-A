@@ -36,7 +36,11 @@
     <description>
       <levelledPara>
         <title>General</title>
-        <para>The electrically driven cooling compressor is part of the eWTW air conditioning and environmental control system (chapter 021, green-native architecture).</para>
+        <para>The electrically driven cooling compressor (post MOD-EWTW-021-001 configuration) is a hermetic scroll compressor operating in the vapour-cycle cooling loop. MOD-EWTW-021-001 (vapour-cycle compressor upgrade, embodied from MSN 0050) replaces the two-stage centrifugal unit.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Drive and control</title>
+        <para>The compressor is driven by a 540 V DC motor with an integrated silicon-carbide (SiC) motor controller mounted directly on the compressor housing. The maximum continuous speed is 9 000 rpm; the motor and controller are refrigerant-cooled, and the ram-air cooling shroud of the pre-mod unit is deleted.</para>
       </levelledPara>
     </description>
   </content>
