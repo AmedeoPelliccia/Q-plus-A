@@ -1,69 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  DMC-EWTW-A-03-90-01-00A-040A-A_001-00_en-GB.xml
-  Subject 003-900-010 — Ground Charging Connection Interface
-  Info code 040 — Description
-  Status: inWork · Quality: unverified · Security: 01
-  BREX: DMC-EWTW-A-00-00-00-00A-022A-D
--->
-<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<dmodule xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_4-2/xml_schema_flat/descript.xsd">
   <identAndStatusSection>
     <dmAddress>
       <dmIdent>
-        <dmCode modelIdentCode="EWTW"
-                systemDiffCode="A"
-                systemCode="03"
-                subSystemCode="9"
-                subSubSystemCode="0"
-                assyCode="01"
-                disassyCode="00"
-                disassyCodeVariant="A"
-                infoCode="040"
-                infoCodeVariant="A"
-                itemLocationCode="A"/>
+        <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="03" subSystemCode="9"
+                subSubSystemCode="0" assyCode="01" disassyCode="00" disassyCodeVariant="A"
+                infoCode="040" infoCodeVariant="A" itemLocationCode="A"/>
         <language languageIsoCode="en" countryIsoCode="GB"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </dmIdent>
       <dmAddressItems>
+        <issueDate year="2026" month="06" day="09"/>
         <dmTitle>
-          <techName>Ground Charging Connection Interface</techName>
+          <techName>Ground charging connection interface</techName>
           <infoName>Description</infoName>
         </dmTitle>
-        <issueDate year="2026" month="06" day="09"/>
       </dmAddressItems>
     </dmAddress>
-    <dmStatus>
+    <dmStatus issueType="new">
       <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>QplusA .INC</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>QplusA .INC</enterpriseName></originator>
+      <applic><displayText><simplePara>eWTW — electrical-charge carrier</simplePara></displayText></applic>
       <brexDmRef>
-        <dmRef>
-          <dmRefIdent>
-            <dmCode modelIdentCode="EWTW"
-                    systemDiffCode="A"
-                    systemCode="00"
-                    subSystemCode="0"
-                    subSubSystemCode="0"
-                    assyCode="00"
-                    disassyCode="00"
-                    disassyCodeVariant="A"
-                    infoCode="022"
-                    infoCodeVariant="A"
-                    itemLocationCode="D"/>
-          </dmRefIdent>
-        </dmRef>
+        <dmRef><dmRefIdent><dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="00"
+          subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00"
+          disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
       </brexDmRef>
-      <qualityAssurance>
-        <unverified/>
-      </qualityAssurance>
+      <qualityAssurance><unverified/></qualityAssurance>
     </dmStatus>
   </identAndStatusSection>
   <content>
     <description>
-      <!-- STUB — content pending authoring.
-           Scope: high-power conductive coupling (MCS-class), location/access,
-           contact arrangement (HV power, first-make/last-break protective earth,
-           pilot contacts), latch/lock, cover and seal, bonding point,
-           path to the HV charging input (028-900). -->
-      <para>Content pending.</para>
+      <levelledPara>
+        <title>General</title>
+        <para>The ground charging connection interface is the on-aircraft mating point through which ground charging infrastructure delivers electrical energy to the aircraft energy store.</para>
+      </levelledPara>
     </description>
   </content>
 </dmodule>
