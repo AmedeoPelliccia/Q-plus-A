@@ -10,7 +10,7 @@
 |---|---|
 | Document ID | `Q+A-METHOD-CGROWTH-SPEC-001` |
 | Title | C-GROWTH Method Specification |
-| Version | `v0.1.4` |
+| Version | `v0.1.5` |
 | Status | DRAFT — for review |
 | Classification | Controlled method specification |
 | Owner | Q+A.inc — Methods & Lifecycle Governance |
@@ -54,9 +54,11 @@ flowchart TD
 
 ### 1.1 Method Definition
 
-C-GROWTH defines the **intra-phase execution method** for Q+A.inc programmes: the controlled, circular process by which artefacts are generated, reviewed, optimized, integrated, tested, and physically correlated **within** a lifecycle phase of the LC-letter axis.
+C-GROWTH defines the **per-layer execution method** for Q+A.inc programmes: the controlled, circular process by which the deliverables of an LC stage layer are generated, reviewed, optimized, integrated, tested, and physically correlated.
 
-C-GROWTH does not replace, span, or re-sequence lifecycle phases. Lifecycle progression (phase entry/exit) remains governed exclusively by the LC-letter axis and its gates. C-GROWTH governs **what happens inside a phase**: it is the engine; the LC axis is the road.
+Under the anchored-letter / decoupled-number lifecycle model (`QPLUS-A-02-LIFECYCLE-MODEL-README` v0.6.0+), each LC stage is a deliverable layer with its REV letter anchored and its iteration number independent. Accordingly, **every layer may initiate its own C-GROWTH revolutions and work packages from layer-local inputs** — upstream source-data deltas, service bulletins, document-structure improvements, operator feedback, regulatory change, routed feedback packages — independent of whether any other layer is iterating. Each revolution executes within exactly one layer; its gate records attach to that layer's REV; cross-layer consistency is maintained exclusively by SSOT source-data pinning, never by forced co-revolution.
+
+C-GROWTH does not replace, span, or re-sequence lifecycle layers. Layer initialization and baseline release remain governed exclusively by the LC-letter axis and its `*_RELEASED` gates. C-GROWTH governs **what happens inside a layer**: it is the engine; the LC axis is the road.
 
 ### 1.2 Problem Addressed
 
@@ -200,7 +202,7 @@ Loops are continuous and may run concurrently on *different* artefacts. A single
 | Field | Definition |
 |---|---|
 | Scope | Authoring of controlled artefacts: requirements (ReqBS), models, S1000D data modules, source code, configurations, BREX rules, impact analyses |
-| Entry condition | Authorized work package within the active LC phase, **or** a CH feedback package (§6) |
+| Entry condition | Authorized work package within the applicable LC stage layer, initiated from layer-local inputs (upstream source-data delta, service bulletin, document-structure improvement, operator/regulatory input), **or** a CH feedback package (§6) routed to this layer |
 | Controlled obligation | Q+ATLANTIDE node assignment at creation. An artefact without a node assignment is non-conformant and shall not exit CG |
 | Output | Versioned candidate artefacts with provisional DMC mapping where applicable |
 | Exit gate | **G1** — completeness check: identification, node assignment, declared applicability |
@@ -286,9 +288,10 @@ The CH→CG edge is the substantive distinction between C-GROWTH and linear CI/C
 ### 6.2 Contract Rules
 
 1. A feedback package that identifies affected artefacts **obligates** a CG entry for each; the disposition may be "no change," but the disposition itself must exist.
-2. Feedback packages are configuration items: versioned, anchored, and traceable like any other artefact.
-3. Degradation and wear data (e.g., fuel-cell polarization drift, LH₂ boil-off rates, DEP thermal margins) feed the descriptive and procedural DM baselines and the SSOT impact layer — they are not retained as side-channel engineering notes.
-4. The CH→CG edge never bypasses gates: re-seeded artefacts traverse the full revolution.
+2. **Cross-layer routing:** a feedback package may affect deliverables in several LC stage layers simultaneously (e.g., an in-service anomaly seeding both a design-fix revolution in the LC-C layer and a procedure-revision revolution in the LC-M layer). The package shall be routed to every affected layer; each affected layer opens its own CG entry and runs its own revolution. Resulting deliverable REVs update their pinned source sets per `QPLUS-LC-SSOT-PIN-001`.
+3. Feedback packages are configuration items: versioned, anchored, and traceable like any other artefact.
+4. Degradation and wear data (e.g., fuel-cell polarization drift, LH₂ boil-off rates, DEP thermal margins) feed the descriptive and procedural DM baselines and the SSOT impact layer — they are not retained as side-channel engineering notes.
+5. The CH→CG edge never bypasses gates: re-seeded artefacts traverse the full revolution within their layer.
 
 ---
 
@@ -301,6 +304,7 @@ The CH→CG edge is the substantive distinction between C-GROWTH and linear CI/C
 | **OPTIONS** | *Organizations, Programs, Technologies, Infrastructures, Operations, Neural Networks, Standards.* CT executes within the Operations axis; CH extends Operations into physical correlation; the Standards axis supplies conformance baselines for CR and CT; Neural Networks axis governs agent-review roles in CR (OI-05) |
 | Q+ATLANTIDE1000 | Node assignment at CG; method-spec registration TBD per §9 |
 | S1000D / CSDB | CW is the ingestion and anchoring boundary; DM baselines are CG/CR/CO subjects |
+| DEGF v1.0 | Mandatory-inheritance traits apply to all artefacts traversing the cycle |
 | CI/CD (industry) | C-GROWTH ⊃ CI/CD: CG/CW/CT subsume generation–integration–test; CR, CO, and CH are the additions, with CH providing physical-layer loop closure absent from CI/CD |
 
 ---
@@ -356,6 +360,7 @@ No candidate band is asserted normatively in this version. Until registration, t
 | v0.1.2 | 2026-06-11 | Strategic pathway added (§1.4): C-GROWTH defined as the pathway to softwareization and sensorization; four-rung scalability ladder (component → subsystem → system → assembled vehicle); end-state defined as the intelligent, quantum-sensored, assembled aerospace vehicle; OI-07 (rung-promotion criteria) and OI-08 (quantum-sensing qualification path) opened | AM.PEL — author amendment |
 | v0.1.3 | 2026-06-11 | TRL growth reading added (§1.5): controlled organic metaphor (revolution = feeding cycle, feedback package = nutrient, evidence baseline = body mass, TRL = growth stage); growth-ring visualization defined as canonical form; anti-force-feeding rule made normative (TRL claims require digested evidence mass; schedule–evidence divergence becomes a risk record); OI-09 opened (growth-ring diagram as controlled ICN computed from SSOT) | AM.PEL — author amendment |
 | v0.1.4 | 2026-06-11 | Diagram notation controlled (§0.3): Mermaid adopted as the in-document diagram notation (GitHub-native, versionable, diffable); §1.0 hierarchy, §3 topology, and §1.5 growth-ring schematic converted from text art to Mermaid; canonical radial growth-ring figure confirmed as computed ICN (OI-09), with the in-document Mermaid form designated schematic | AM.PEL — notation amendment |
+| v0.1.5 | 2026-06-11 | Critical alignment with lifecycle README v0.6.0 (anchored-letter / decoupled-number model): method redefined as **per-layer** (§1.1) — every LC stage layer initiates its own revolutions and work packages from layer-local inputs, independent of other layers; CG entry condition extended accordingly (§4.1); cross-layer feedback-package routing added to the feedback contract (§6.2 rule 2) with re-pinning per `QPLUS-LC-SSOT-PIN-001`; coordination across layers occurs only via SSOT source-data pinning, never forced co-revolution | AM.PEL — alignment amendment |
 
 ---
 
