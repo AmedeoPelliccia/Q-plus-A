@@ -160,7 +160,7 @@ Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA**, 
 ## References
 
 1. ATA / Airlines for America — *iSpec 2200*. <a href="https://publications.airlines.org/">https://publications.airlines.org/</a>
-2. Embraer — *ATA breakdown, EMB 170/175/190/195 and Lineage 1000* (heritage footprint source, chapters 30–31).
+2. Embraer — *ATA breakdown, EMB 170/175/190/195 and Lineage 1000* (heritage footprint source, chapters 30–31; internal/proprietary programme reference, no public URL).
 3. S1000D — *International Specification for Technical Publications* (SNS; baseline Issue 4.2). <a href="https://s1000d.org/">https://s1000d.org/</a>
 
 ---
