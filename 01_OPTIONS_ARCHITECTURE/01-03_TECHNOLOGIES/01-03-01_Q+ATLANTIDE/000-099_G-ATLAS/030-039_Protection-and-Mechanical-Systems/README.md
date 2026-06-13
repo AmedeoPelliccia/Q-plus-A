@@ -26,15 +26,15 @@ Two chapters at opposite ends of the green divergence. **030** carries the band'
 
 ## Index
 
-- <a>Glossary</a>
-- <a>1. Green-Native Doctrine for 030 / 031</a>
-- <a>2. Numbering Map</a>
-- <a>3. Chapter 030 — Ice and Rain Protection</a>
-- <a>4. Chapter 031 — Indicating and Recording Systems</a>
-- <a>5. Programme Binding — eWTW / hBWB</a>
-- <a>6. Governance</a>
-- <a>References</a>
-- <a>Conventional Heritage Footprint</a>
+- [Glossary](#glossary)
+- [1. Green-Native Doctrine for 030 / 031](#1-green-native-doctrine-for-030--031)
+- [2. Numbering Map](#2-numbering-map)
+- [3. Chapter 030 — Ice and Rain Protection](#3-chapter-030--ice-and-rain-protection)
+- [4. Chapter 031 — Indicating and Recording Systems](#4-chapter-031--indicating-and-recording-systems)
+- [5. Programme Binding — eWTW / hBWB](#5-programme-binding--ewtw--hbwb)
+- [6. Governance](#6-governance)
+- [References](#references)
+- [Conventional Heritage Footprint](#conventional-heritage-footprint)
 
 ---
 
