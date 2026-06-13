@@ -209,7 +209,10 @@ def main() -> None:
             nreadme.write_text(f"# {node}\n\nNode index · {CODE_RANGE}.\n", encoding="utf-8")
             created += 1
         for code, title, layer in items:
-            f = ndir / f"{code}-{slug(title)}.md"
+            name = f"{code}-{slug(title)}"
+            sdir = ndir / name
+            sdir.mkdir(parents=True, exist_ok=True)
+            f = sdir / f"{name}.md"
             if f.exists():
                 skipped += 1
                 continue
