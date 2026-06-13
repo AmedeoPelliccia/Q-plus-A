@@ -1,0 +1,11 @@
+subject_infocode_breakdown:
+  subject: 021-310-030
+  title: Cabin Pressure Controller
+  section: 021-310
+  layer: "STD"
+  model: eWTW
+  pmc: PMC-EWTW-AMM
+  convention: AMPEL360-AMM-INFOCODE-CM-001
+  amm_infocodes: [{code: "040"}, {code: "034"}, {code: "200"}, {code: "300"}]
+  status: stub
+  version: "1.0"

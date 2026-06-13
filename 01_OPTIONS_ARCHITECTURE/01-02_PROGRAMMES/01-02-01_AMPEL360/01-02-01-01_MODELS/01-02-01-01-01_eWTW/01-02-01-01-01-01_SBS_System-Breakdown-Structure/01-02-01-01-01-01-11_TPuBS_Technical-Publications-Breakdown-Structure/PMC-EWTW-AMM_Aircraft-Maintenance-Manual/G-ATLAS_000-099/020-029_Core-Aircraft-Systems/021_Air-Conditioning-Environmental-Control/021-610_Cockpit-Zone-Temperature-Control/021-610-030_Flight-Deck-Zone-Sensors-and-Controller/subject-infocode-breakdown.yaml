@@ -1,0 +1,11 @@
+subject_infocode_breakdown:
+  subject: 021-610-030
+  title: Flight Deck Zone Sensors and Controller
+  section: 021-610
+  layer: "STD"
+  model: eWTW
+  pmc: PMC-EWTW-AMM
+  convention: AMPEL360-AMM-INFOCODE-CM-001
+  amm_infocodes: [{code: "040"}, {code: "034"}, {code: "200"}, {code: "300"}]
+  status: stub
+  version: "1.0"

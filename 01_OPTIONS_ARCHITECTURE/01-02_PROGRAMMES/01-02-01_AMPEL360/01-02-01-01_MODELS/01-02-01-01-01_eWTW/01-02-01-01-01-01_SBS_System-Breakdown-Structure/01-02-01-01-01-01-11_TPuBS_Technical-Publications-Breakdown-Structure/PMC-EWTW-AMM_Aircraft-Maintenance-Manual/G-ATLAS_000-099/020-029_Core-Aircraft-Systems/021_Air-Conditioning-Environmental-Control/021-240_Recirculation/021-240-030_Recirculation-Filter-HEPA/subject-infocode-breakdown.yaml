@@ -1,0 +1,11 @@
+subject_infocode_breakdown:
+  subject: 021-240-030
+  title: Recirculation Filter HEPA
+  section: 021-240
+  layer: "STD"
+  model: eWTW
+  pmc: PMC-EWTW-AMM
+  convention: AMPEL360-AMM-INFOCODE-CM-001
+  amm_infocodes: [{code: "040"}, {code: "200"}, {code: "300"}, {code: "520"}, {code: "720"}]
+  status: stub
+  version: "1.0"
