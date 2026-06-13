@@ -30,7 +30,6 @@ ROOT_REL = (
     "020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control"
 )
 CONVENTION = "AMPEL360-AMM-INFOCODE-CM-001"
-DEV = "021-510-010"  # subject con CM package completo (artefatto separato)
 
 # sezione id -> (titolo, layer)
 SECTIONS = {
@@ -137,6 +136,296 @@ def write(path, text):
     return True
 
 
+PMC = "PMC-EWTW-AMM"
+PUB_TREE = "AMM"  # publication-tree entry the AMM subjects feed
+OWNER = "Q-AIR"
+ISSUE_DATE = ("2026", "06", "13")  # deterministic issue date for stub DMs
+
+# info code -> (S1000D info name, S1000D 4.2 flat schema basename)
+INFO_NAMES = {
+    "040": ("Description", "descript"),
+    "034": ("Operating principles", "descript"),
+    "200": ("Servicing", "proced"),
+    "300": ("Scheduled maintenance", "proced"),
+    "520": ("Remove procedures", "proced"),
+    "720": ("Install procedures", "proced"),
+}
+
+
+def sns_from_subject(subj):
+    """Provisional SNS derived from the G-ATLAS triplet 021-SSS-UUU.
+
+    Mirrors the existing AMM convention, e.g. 021-510-010 -> systemCode 21,
+    subSystemCode 5, subSubSystemCode 1, assyCode 01 (DMC-EWTW-A-21-51-01-...).
+    """
+    chap, section3, subjsuf = subj.split("-")
+    return {
+        "systemCode": chap[1:],          # "021" -> "21"
+        "subSystemCode": section3[0],    # "510" -> "5"
+        "subSubSystemCode": section3[1],  # "510" -> "1"
+        "assyCode": subjsuf[:2],         # "010" -> "01"
+    }
+
+
+def dmc_handle(sns, code):
+    """Full provisional DMC string for the given SNS and info code."""
+    return ("DMC-EWTW-A-%s-%s%s-%s-00A-%sA-A"
+            % (sns["systemCode"], sns["subSystemCode"],
+               sns["subSubSystemCode"], sns["assyCode"], code))
+
+
+def dm_xml(sns, code, tech_name):
+    """Minimal valid S1000D 4.2 data-module stub for a given info code."""
+    info_name, schema = INFO_NAMES.get(code, ("Description", "descript"))
+    yr, mo, dy = ISSUE_DATE
+    if schema == "proced":
+        content = (
+            '    <procedure>\n'
+            '      <preliminaryRqmts/>\n'
+            '      <mainProcedure>\n'
+            '        <proceduralStep><para>%s — %s. Stub step pending authoring.</para></proceduralStep>\n'
+            '      </mainProcedure>\n'
+            '      <closeRqmts/>\n'
+            '    </procedure>\n'
+            % (tech_name, info_name))
+    else:
+        content = (
+            '    <description>\n'
+            '      <levelledPara>\n'
+            '        <title>General</title>\n'
+            '        <para>%s — %s. Stub data module pending authoring.</para>\n'
+            '      </levelledPara>\n'
+            '    </description>\n'
+            % (tech_name, info_name))
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<dmodule xmlns:xlink="http://www.w3.org/1999/xlink"\n'
+        '         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n'
+        '         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/'
+        'S1000D_4-2/xml_schema_flat/%s.xsd">\n'
+        '  <identAndStatusSection>\n'
+        '    <dmAddress>\n'
+        '      <dmIdent>\n'
+        '        <dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="%s" subSystemCode="%s"\n'
+        '                subSubSystemCode="%s" assyCode="%s" disassyCode="00" disassyCodeVariant="A"\n'
+        '                infoCode="%s" infoCodeVariant="A" itemLocationCode="A"/>\n'
+        '        <language languageIsoCode="en" countryIsoCode="GB"/>\n'
+        '        <issueInfo issueNumber="001" inWork="00"/>\n'
+        '      </dmIdent>\n'
+        '      <dmAddressItems>\n'
+        '        <issueDate year="%s" month="%s" day="%s"/>\n'
+        '        <dmTitle>\n'
+        '          <techName>%s</techName>\n'
+        '          <infoName>%s</infoName>\n'
+        '        </dmTitle>\n'
+        '      </dmAddressItems>\n'
+        '    </dmAddress>\n'
+        '    <dmStatus issueType="new">\n'
+        '      <security securityClassification="01"/>\n'
+        '      <responsiblePartnerCompany><enterpriseName>QplusA .INC</enterpriseName></responsiblePartnerCompany>\n'
+        '      <originator><enterpriseName>QplusA .INC</enterpriseName></originator>\n'
+        '      <applic><displayText><simplePara>eWTW</simplePara></displayText></applic>\n'
+        '      <brexDmRef>\n'
+        '        <dmRef><dmRefIdent><dmCode modelIdentCode="EWTW" systemDiffCode="A" systemCode="00"\n'
+        '          subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00"\n'
+        '          disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>\n'
+        '      </brexDmRef>\n'
+        '      <qualityAssurance><unverified/></qualityAssurance>\n'
+        '    </dmStatus>\n'
+        '  </identAndStatusSection>\n'
+        '  <content>\n'
+        '%s'
+        '  </content>\n'
+        '</dmodule>\n'
+        % (schema, sns["systemCode"], sns["subSystemCode"], sns["subSubSystemCode"],
+           sns["assyCode"], code, yr, mo, dy, tech_name, info_name, content)
+    )
+
+
+def is_developed(subj_dir):
+    """True if the subject already holds the AMM info-code-folder package
+    (e.g. 040_Description/); such curated nodes are left untouched."""
+    if not os.path.isdir(subj_dir):
+        return False
+    for name in os.listdir(subj_dir):
+        if os.path.isdir(os.path.join(subj_dir, name)) and name[:3].isdigit() and "_" in name:
+            return True
+    return False
+
+
+def emit_subject_package(subj_dir, subj, title, layer, codes):
+    """Write the ECHM-style subject package (mirrors PMC-EWTW-ECHM
+    003-900-010): metadata + registers + DM/ICN/evidence/pub folders."""
+    sid = subj.rsplit("-", 1)[0]
+    tech_name = title.replace("-", " ")
+    sns = sns_from_subject(subj)
+    digits = subj.replace("-", "")
+    dm_dir = os.path.join(subj_dir, "DM")
+    icn_dir = os.path.join(subj_dir, "ICN")
+    ev_dir = os.path.join(subj_dir, "evidence")
+    pub_dir = os.path.join(subj_dir, "pub")
+    for d in (dm_dir, icn_dir, ev_dir, pub_dir):
+        os.makedirs(d, exist_ok=True)
+
+    dm_rows = []
+    dm_files = []
+    for code in codes:
+        info_name, _ = INFO_NAMES.get(code, ("Description", "descript"))
+        handle = dmc_handle(sns, code)
+        fname = "%s_001-00_en-GB.xml" % handle
+        write(os.path.join(dm_dir, fname), dm_xml(sns, code, tech_name))
+        dm_files.append(handle)
+        dm_rows.append((code, info_name, handle, fname))
+
+    # ICN stub (one placeholder illustration)
+    icn = "ICN-EWTW-%s-001-01" % digits
+    write(os.path.join(icn_dir, "%s.svg" % icn),
+          '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">\n'
+          '  <rect width="1200" height="800" fill="#f4f4f4" stroke="#999"/>\n'
+          '  <text x="600" y="400" font-family="sans-serif" font-size="28" '
+          'text-anchor="middle" fill="#555">%s — placeholder</text>\n</svg>\n'
+          % tech_name)
+
+    # subject-metadata.yaml
+    dmset = "[" + ", ".join('"%s"' % c for c in codes) + "]"
+    write(os.path.join(subj_dir, "subject-metadata.yaml"),
+          "---\n# subject-metadata.yaml — %s %s\n"
+          "# Authoritative subject definition for the eWTW projection.\n\n"
+          'subject: "%s"\ntitle: "%s"\n'
+          "description: >-\n  %s subject package for the eWTW AMM "
+          "(%s · %s layer).\n\n"
+          'parent_node: "%s"\npmc: "%s"\nmodel: "eWTW"\nmic: "EWTW"\n'
+          'side: "PUB"\nowner: "%s"\n\n'
+          "dm_set: %s\n\n"
+          "sns:\n  system_code: \"%s\"\n  sub_system: \"%s\"\n"
+          "  sub_sub_system: \"%s\"\n  assy: \"%s\"\n  status: \"PROVISIONAL\"\n"
+          "  pending: \"_CSDB-CONTROL/SNS-mapping.yaml\"\n\n"
+          "feeds_tree:\n  - \"%s\"\n\n"
+          "convention: \"%s\"\ngovernance:\n  - \"LC-A..LC-N\"\n  - \"SSOT+PUB\"\n\n"
+          'status: "scaffold"\nversion: "1.0"\n'
+          % (subj, tech_name, subj, tech_name, tech_name, sid, layer,
+             sid, PMC, OWNER, dmset, sns["systemCode"], sns["subSystemCode"],
+             sns["subSubSystemCode"], sns["assyCode"], PUB_TREE, CONVENTION))
+
+    # dm-register.yaml
+    dm_yaml = ""
+    for code, info_name, handle, fname in dm_rows:
+        dm_yaml += (
+            '  - short_handle: "DMC-EWTW-%s-%s"\n'
+            '    full_dmc: "%s"\n'
+            '    info_code: "%s"\n    type: "%s"\n    language: "en-GB"\n'
+            '    issue: "001-00"\n    in_work: true\n    quality: "unverified"\n'
+            '    file: "DM/%s"\n\n'
+            % (subj, code, handle, code, info_name, fname))
+    write(os.path.join(subj_dir, "dm-register.yaml"),
+          "---\n# dm-register.yaml — %s %s\n"
+          "# Data module allocation and ICN register.\n\n"
+          'subject: "%s"\ntitle: "%s"\npmc: "%s"\n\n'
+          "data_modules:\n%s"
+          "illustrations:\n  - icn: \"%s\"\n    caption: \"%s — general arrangement\"\n"
+          "    used_by: %s\n    file: \"ICN/%s.svg\"\n\n"
+          'sns_status: "PROVISIONAL — pending _CSDB-CONTROL/SNS-mapping.yaml"\n'
+          % (subj, tech_name, subj, tech_name, PMC, dm_yaml, icn, tech_name,
+             dmset, icn))
+
+    # applicability.yaml
+    write(os.path.join(subj_dir, "applicability.yaml"),
+          "---\n# applicability.yaml — %s %s\n"
+          "# Carrier-binding and exclusion rules for the subject's data modules.\n\n"
+          'subject: "%s"\ntitle: "%s"\npmc: "%s"\n\n'
+          "applicability:\n  carrier: \"eWTW\"\n"
+          "  carrier_description: \"Electric wing-to-wing configuration\"\n"
+          "  binding: \"electric\"\n"
+          "  brex: \"DMC-EWTW-A-00-00-00-00A-022A-D\"\n"
+          "  security: \"01\"  # unclassified\n\n"
+          "  applicable_models:\n    - model: \"eWTW\"\n"
+          "      description: \"Electric wing-to-wing configuration\"\n\n"
+          "all_dms_bind_to: \"eWTW\"\n"
+          % (subj, tech_name, subj, tech_name, PMC))
+
+    # evidence/
+    req_rows = "".join(
+        "| TBD-%s-%03d | TBD requirement for %s | `%s` | TBD | TBD |\n"
+        % (subj[-3:], i + 1, info_name.lower(), code)
+        for i, (code, info_name, _, _) in enumerate(dm_rows))
+    write(os.path.join(ev_dir, "interface-requirements-matrix.md"),
+          "# Interface Requirements Matrix — %s\n\n"
+          "Requirement -> DM -> verification trace for the %s subject.\n\n"
+          "| Req ID | Requirement | DM(s) | Verification method | Status |\n"
+          "|---|---|---|---|---|\n%s\n"
+          "> **Note:** Requirement IDs are provisional (TBD-nnn-nnn) pending "
+          "formal allocation in the ReqBS register.\n"
+          % (subj, tech_name, req_rows))
+    write(os.path.join(ev_dir, "standards-cross-reference.md"),
+          "# Standards Cross-Reference — %s\n\n"
+          "Standards map for the %s subject. TBDs are flagged; no standards "
+          "are invented.\n\n"
+          "| Topic | Standard / Reference | Status | Notes |\n|---|---|---|---|\n"
+          "| Maintenance information | S1000D Issue 4.2 | Reference | "
+          "Data module authoring specification |\n"
+          "| Subject standards | TBD | TBD | Pending allocation |\n\n"
+          "> **Note:** Cross-references will be updated as applicable standards "
+          "mature.\n"
+          % (subj, tech_name))
+    vs_rows = "".join(
+        "  - dmc: \"%s\"\n    info_code: \"%s\"\n    type: \"%s\"\n"
+        "    quality: \"unverified\"\n    issue: \"001-00\"\n    in_work: true\n"
+        "    lc_gate: null\n    last_review: null\n    reviewer: null\n\n"
+        % (handle, code, info_name)
+        for code, info_name, handle, _ in dm_rows)
+    write(os.path.join(ev_dir, "verification-status.yaml"),
+          "---\n# verification-status.yaml — %s %s\n"
+          "# Per-DM QA state and lifecycle gates.\n\n"
+          'subject: "%s"\ntitle: "%s"\n\n'
+          "data_modules:\n%s"
+          'overall_status: "unverified"\n'
+          % (subj, tech_name, subj, tech_name, vs_rows))
+
+    # pub/ link index
+    refs = "".join('  - "%s"\n' % h for h in dm_files)
+    write(os.path.join(pub_dir, "%s.link" % PUB_TREE),
+          "# %s.link — Publication-tree pointer\n"
+          "# Subject %s feeds %s\n"
+          "# This is a link index entry, not a copy of the PM.\n\n"
+          'target_tree_entry: "%s"\nsubject: "%s"\ndms_referenced:\n%s'
+          % (PUB_TREE, subj, PUB_TREE, PUB_TREE, subj, refs))
+
+    # README.md (ECHM-style subject package overview)
+    dmc_table = "".join(
+        "| `DMC-EWTW-%s-%s` | `%s` | %s | %s |\n"
+        % (subj, code, handle, code, info_name)
+        for code, info_name, handle, _ in dm_rows)
+    write(os.path.join(subj_dir, "README.md"),
+          "---\nsubject: %s\ntitle: %s — Subject Package\n"
+          "pmc: %s\nparent_node: %s\nmodel: eWTW\nmic: EWTW\nside: PUB\n"
+          "owner: %s\nfeeds_tree: [%s]\ndm_set: %s\n"
+          "sns_status: \"PROVISIONAL — pending _CSDB-CONTROL/SNS-mapping.yaml\"\n"
+          "status: scaffold\nversion: \"1.0\"\n---\n\n"
+          "# %s — %s · Subject Package\n\n"
+          "TPuBS container for the **%s** subject of chapter `%s`, projected to "
+          "the eWTW AMM. Structure mirrors the PMC-EWTW-ECHM subject package "
+          "(`003-900-010`).\n\n"
+          "## Directory tree\n\n```text\n%s_%s/\n"
+          "├── README.md\n├── subject-metadata.yaml\n├── dm-register.yaml\n"
+          "├── applicability.yaml\n├── DM/                # S1000D 4.2 data modules\n"
+          "├── ICN/               # illustrations\n"
+          "├── evidence/          # leaf-level traceability\n"
+          "└── pub/               # publication-tree pointers\n```\n\n"
+          "## DMC allocation\n\nSNS (`systemCode %s · subSystem %s · "
+          "subSubSystem %s · assy %s`) is **derived** from the G-ATLAS triplet "
+          "and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.\n\n"
+          "| Short handle | Full DMC (provisional) | Info | Type |\n"
+          "|---|---|---|---|\n%s\n"
+          "## References\n\n"
+          "1. S1000D — *International Specification for Technical Publications*, "
+          "Issue 4.2. https://s1000d.org/\n"
+          "2. Convention `%s`.\n"
+          % (subj, tech_name, PMC, sid, OWNER, PUB_TREE, dmset,
+             subj, tech_name, tech_name, sid, subj, title,
+             sns["systemCode"], sns["subSystemCode"], sns["subSubSystemCode"],
+             sns["assyCode"], dmc_table, CONVENTION))
+
+
 def main():
     base = sys.argv[1] if len(sys.argv) > 1 else "."
     root = os.path.join(base, ROOT_REL)
@@ -165,17 +454,12 @@ def main():
             subj = "%s-%s" % (sid, suf)
             subj_dir = os.path.join(sec_dir, "%s_%s" % (subj, t))
             os.makedirs(subj_dir, exist_ok=True)
-            codes = infocode_menu(t, lay)
-            codestr = "[" + ", ".join('{code: "%s"}' % c for c in codes) + "]"
-            status = ('"developed - full CM package available (%s demo)"' % CONVENTION
-                      if subj == DEV else "stub")
-            write(os.path.join(subj_dir, "subject-infocode-breakdown.yaml"),
-                  "subject_infocode_breakdown:\n  subject: %s\n  title: %s\n"
-                  "  section: %s\n  layer: \"%s\"\n  model: eWTW\n"
-                  "  pmc: PMC-EWTW-AMM\n  convention: %s\n"
-                  "  amm_infocodes: %s\n  status: %s\n  version: \"1.0\"\n"
-                  % (subj, t.replace("-", " "), sid, lay, CONVENTION, codestr, status))
             n_sub += 1
+            # Leave curated/developed AMM nodes (info-code-folder package) untouched.
+            if is_developed(subj_dir):
+                continue
+            codes = infocode_menu(t, lay)
+            emit_subject_package(subj_dir, subj, t, lay, codes)
 
     # README di capitolo
     rows = ""

@@ -1,0 +1,36 @@
+---
+# subject-metadata.yaml — 021-220-030 Cabin Outlets and Diffusers
+# Authoritative subject definition for the eWTW projection.
+
+subject: "021-220-030"
+title: "Cabin Outlets and Diffusers"
+description: >-
+  Cabin Outlets and Diffusers subject package for the eWTW AMM (021-220 · STD layer).
+
+parent_node: "021-220"
+pmc: "PMC-EWTW-AMM"
+model: "eWTW"
+mic: "EWTW"
+side: "PUB"
+owner: "Q-AIR"
+
+dm_set: ["040", "200", "300", "520", "720"]
+
+sns:
+  system_code: "21"
+  sub_system: "2"
+  sub_sub_system: "2"
+  assy: "03"
+  status: "PROVISIONAL"
+  pending: "_CSDB-CONTROL/SNS-mapping.yaml"
+
+feeds_tree:
+  - "AMM"
+
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+governance:
+  - "LC-A..LC-N"
+  - "SSOT+PUB"
+
+status: "scaffold"
+version: "1.0"

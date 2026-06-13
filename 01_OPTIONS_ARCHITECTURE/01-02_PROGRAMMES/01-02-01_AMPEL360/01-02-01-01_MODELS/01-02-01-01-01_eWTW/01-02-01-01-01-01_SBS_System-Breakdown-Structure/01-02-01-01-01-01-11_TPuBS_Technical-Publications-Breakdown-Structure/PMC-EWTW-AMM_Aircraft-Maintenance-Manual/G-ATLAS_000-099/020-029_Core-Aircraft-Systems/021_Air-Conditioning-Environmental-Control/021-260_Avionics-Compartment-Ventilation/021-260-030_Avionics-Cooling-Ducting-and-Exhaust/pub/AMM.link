@@ -1,0 +1,10 @@
+# AMM.link — Publication-tree pointer
+# Subject 021-260-030 feeds AMM
+# This is a link index entry, not a copy of the PM.
+
+target_tree_entry: "AMM"
+subject: "021-260-030"
+dms_referenced:
+  - "DMC-EWTW-A-21-26-03-00A-040A-A"
+  - "DMC-EWTW-A-21-26-03-00A-200A-A"
+  - "DMC-EWTW-A-21-26-03-00A-300A-A"

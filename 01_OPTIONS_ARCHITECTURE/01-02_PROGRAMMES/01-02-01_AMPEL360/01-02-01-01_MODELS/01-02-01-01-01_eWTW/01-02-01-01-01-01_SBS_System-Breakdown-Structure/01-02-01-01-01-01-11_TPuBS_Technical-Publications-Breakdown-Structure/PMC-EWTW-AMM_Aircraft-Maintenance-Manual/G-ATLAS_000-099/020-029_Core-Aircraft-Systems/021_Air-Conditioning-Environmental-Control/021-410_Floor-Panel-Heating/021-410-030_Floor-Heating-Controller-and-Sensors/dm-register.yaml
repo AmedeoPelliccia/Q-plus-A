@@ -1,0 +1,56 @@
+---
+# dm-register.yaml — 021-410-030 Floor Heating Controller and Sensors
+# Data module allocation and ICN register.
+
+subject: "021-410-030"
+title: "Floor Heating Controller and Sensors"
+pmc: "PMC-EWTW-AMM"
+
+data_modules:
+  - short_handle: "DMC-EWTW-021-410-030-040"
+    full_dmc: "DMC-EWTW-A-21-41-03-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-41-03-00A-040A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-410-030-034"
+    full_dmc: "DMC-EWTW-A-21-41-03-00A-034A-A"
+    info_code: "034"
+    type: "Operating principles"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-41-03-00A-034A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-410-030-200"
+    full_dmc: "DMC-EWTW-A-21-41-03-00A-200A-A"
+    info_code: "200"
+    type: "Servicing"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-41-03-00A-200A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-410-030-300"
+    full_dmc: "DMC-EWTW-A-21-41-03-00A-300A-A"
+    info_code: "300"
+    type: "Scheduled maintenance"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-41-03-00A-300A-A_001-00_en-GB.xml"
+
+illustrations:
+  - icn: "ICN-EWTW-021410030-001-01"
+    caption: "Floor Heating Controller and Sensors — general arrangement"
+    used_by: ["040", "034", "200", "300"]
+    file: "ICN/ICN-EWTW-021410030-001-01.svg"
+
+sns_status: "PROVISIONAL — pending _CSDB-CONTROL/SNS-mapping.yaml"
