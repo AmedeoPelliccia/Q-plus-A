@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-030
+  title: Protection and Mechanical Systems
+  type: group
+  g_atlas: "030"
+  parent: eWTW-PBS-000
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

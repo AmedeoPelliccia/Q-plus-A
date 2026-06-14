@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-080-000
+  title: Reserved Future
+  type: chapter
+  g_atlas: "080"
+  parent: eWTW-PBS-080
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

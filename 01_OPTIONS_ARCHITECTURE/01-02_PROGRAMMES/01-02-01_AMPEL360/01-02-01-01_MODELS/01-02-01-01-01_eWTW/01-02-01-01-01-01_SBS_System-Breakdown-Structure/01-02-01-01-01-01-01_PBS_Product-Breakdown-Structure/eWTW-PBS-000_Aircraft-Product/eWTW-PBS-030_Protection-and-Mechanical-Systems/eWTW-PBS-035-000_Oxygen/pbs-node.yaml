@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-035-000
+  title: Oxygen
+  type: chapter
+  g_atlas: "035"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

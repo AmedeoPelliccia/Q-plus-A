@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-090-100
+  title: Computer Software Configuration Items
+  type: chapter
+  g_atlas: "090"
+  parent: eWTW-PBS-090
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

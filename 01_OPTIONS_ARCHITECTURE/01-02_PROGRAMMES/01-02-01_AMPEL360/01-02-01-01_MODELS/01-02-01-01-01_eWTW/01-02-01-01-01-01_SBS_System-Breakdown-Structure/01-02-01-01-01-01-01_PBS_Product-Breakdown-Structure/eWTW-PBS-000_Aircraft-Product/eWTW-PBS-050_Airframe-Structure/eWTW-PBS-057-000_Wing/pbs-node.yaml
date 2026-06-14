@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-057-000
+  title: Wing
+  type: chapter
+  g_atlas: "057"
+  parent: eWTW-PBS-050
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

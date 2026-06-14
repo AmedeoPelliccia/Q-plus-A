@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-042-000
+  title: Integrated Modular Avionics
+  type: chapter
+  g_atlas: "042"
+  parent: eWTW-PBS-040
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

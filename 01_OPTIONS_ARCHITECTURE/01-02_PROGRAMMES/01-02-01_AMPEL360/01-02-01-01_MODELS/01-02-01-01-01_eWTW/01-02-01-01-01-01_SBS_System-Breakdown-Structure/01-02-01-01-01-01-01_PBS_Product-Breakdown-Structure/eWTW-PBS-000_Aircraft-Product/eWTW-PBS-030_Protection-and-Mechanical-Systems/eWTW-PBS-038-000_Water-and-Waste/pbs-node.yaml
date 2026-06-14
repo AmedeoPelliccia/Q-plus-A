@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-038-000
+  title: Water and Waste
+  type: chapter
+  g_atlas: "038"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

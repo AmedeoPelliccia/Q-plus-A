@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-034-000
+  title: Navigation
+  type: chapter
+  g_atlas: "034"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

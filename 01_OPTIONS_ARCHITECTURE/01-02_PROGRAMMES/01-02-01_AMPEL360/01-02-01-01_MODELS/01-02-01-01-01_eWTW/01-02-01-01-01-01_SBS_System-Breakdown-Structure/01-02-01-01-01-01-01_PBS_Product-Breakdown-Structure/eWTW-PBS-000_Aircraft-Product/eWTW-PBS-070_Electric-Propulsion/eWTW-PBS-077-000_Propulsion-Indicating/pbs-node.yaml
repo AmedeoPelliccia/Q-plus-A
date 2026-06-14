@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-077-000
+  title: Propulsion Indicating
+  type: chapter
+  g_atlas: "077"
+  parent: eWTW-PBS-070
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

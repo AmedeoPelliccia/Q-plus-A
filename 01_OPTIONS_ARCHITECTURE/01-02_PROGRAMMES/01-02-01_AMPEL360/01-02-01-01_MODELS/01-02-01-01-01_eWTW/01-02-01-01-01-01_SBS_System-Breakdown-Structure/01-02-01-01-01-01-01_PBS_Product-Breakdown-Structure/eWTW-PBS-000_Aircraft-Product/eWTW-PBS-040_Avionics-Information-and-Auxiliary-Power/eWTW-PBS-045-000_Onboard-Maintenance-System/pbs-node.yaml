@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-045-000
+  title: Onboard Maintenance System
+  type: chapter
+  g_atlas: "045"
+  parent: eWTW-PBS-040
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

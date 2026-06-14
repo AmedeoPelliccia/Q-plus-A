@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-071-000
+  title: Propulsion Module Installation
+  type: chapter
+  g_atlas: "071"
+  parent: eWTW-PBS-070
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

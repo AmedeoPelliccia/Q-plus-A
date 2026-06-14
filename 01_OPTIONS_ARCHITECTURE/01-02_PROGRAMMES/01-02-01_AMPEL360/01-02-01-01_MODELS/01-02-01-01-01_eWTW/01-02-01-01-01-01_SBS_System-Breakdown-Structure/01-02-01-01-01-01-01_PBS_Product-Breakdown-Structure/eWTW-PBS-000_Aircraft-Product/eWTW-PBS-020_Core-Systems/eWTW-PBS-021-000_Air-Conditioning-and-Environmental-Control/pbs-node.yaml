@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-021-000
+  title: Air Conditioning and Environmental Control
+  type: chapter
+  g_atlas: "021"
+  parent: eWTW-PBS-020
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-029-000
+  title: Actuation and Utility Power
+  type: chapter
+  g_atlas: "029"
+  parent: eWTW-PBS-020
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

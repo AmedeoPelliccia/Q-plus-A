@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-052-000
+  title: Doors
+  type: chapter
+  g_atlas: "052"
+  parent: eWTW-PBS-050
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"
