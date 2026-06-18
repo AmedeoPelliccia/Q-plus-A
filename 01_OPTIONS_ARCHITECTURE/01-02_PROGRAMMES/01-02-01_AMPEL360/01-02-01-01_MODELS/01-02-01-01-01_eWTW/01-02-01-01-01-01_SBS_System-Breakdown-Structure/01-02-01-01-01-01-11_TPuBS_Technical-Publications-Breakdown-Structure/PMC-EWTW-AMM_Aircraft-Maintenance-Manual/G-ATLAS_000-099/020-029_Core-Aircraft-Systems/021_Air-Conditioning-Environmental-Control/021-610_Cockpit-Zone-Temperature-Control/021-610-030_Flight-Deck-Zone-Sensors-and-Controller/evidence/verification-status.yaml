@@ -1,0 +1,49 @@
+---
+# verification-status.yaml — 021-610-030 Flight Deck Zone Sensors and Controller
+# Per-DM QA state and lifecycle gates.
+
+subject: "021-610-030"
+title: "Flight Deck Zone Sensors and Controller"
+
+data_modules:
+  - dmc: "DMC-EWTW-A-21-61-03-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-61-03-00A-034A-A"
+    info_code: "034"
+    type: "Operating principles"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-61-03-00A-200A-A"
+    info_code: "200"
+    type: "Servicing"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-61-03-00A-300A-A"
+    info_code: "300"
+    type: "Scheduled maintenance"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+overall_status: "unverified"

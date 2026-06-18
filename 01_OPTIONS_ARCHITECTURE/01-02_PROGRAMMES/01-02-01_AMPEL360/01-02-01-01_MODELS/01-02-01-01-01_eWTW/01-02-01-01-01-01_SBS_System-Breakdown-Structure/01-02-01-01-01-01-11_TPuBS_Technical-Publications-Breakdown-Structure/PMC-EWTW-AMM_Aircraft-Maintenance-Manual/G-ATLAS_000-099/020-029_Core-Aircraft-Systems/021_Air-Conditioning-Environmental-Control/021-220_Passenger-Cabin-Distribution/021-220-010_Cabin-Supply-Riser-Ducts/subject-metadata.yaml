@@ -1,0 +1,36 @@
+---
+# subject-metadata.yaml — 021-220-010 Cabin Supply Riser Ducts
+# Authoritative subject definition for the eWTW projection.
+
+subject: "021-220-010"
+title: "Cabin Supply Riser Ducts"
+description: >-
+  Cabin Supply Riser Ducts subject package for the eWTW AMM (021-220 · STD layer).
+
+parent_node: "021-220"
+pmc: "PMC-EWTW-AMM"
+model: "eWTW"
+mic: "EWTW"
+side: "PUB"
+owner: "Q-AIR"
+
+dm_set: ["040", "200", "300"]
+
+sns:
+  system_code: "21"
+  sub_system: "2"
+  sub_sub_system: "2"
+  assy: "01"
+  status: "PROVISIONAL"
+  pending: "_CSDB-CONTROL/SNS-mapping.yaml"
+
+feeds_tree:
+  - "AMM"
+
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+governance:
+  - "LC-A..LC-N"
+  - "SSOT+PUB"
+
+status: "scaffold"
+version: "1.0"

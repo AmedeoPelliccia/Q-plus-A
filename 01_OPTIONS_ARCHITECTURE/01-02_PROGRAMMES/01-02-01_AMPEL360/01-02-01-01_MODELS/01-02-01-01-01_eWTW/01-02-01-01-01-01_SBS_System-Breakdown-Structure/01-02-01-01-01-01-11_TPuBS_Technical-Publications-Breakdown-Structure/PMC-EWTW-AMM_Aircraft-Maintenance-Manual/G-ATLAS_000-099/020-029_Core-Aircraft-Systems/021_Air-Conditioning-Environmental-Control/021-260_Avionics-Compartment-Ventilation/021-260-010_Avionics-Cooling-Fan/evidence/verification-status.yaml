@@ -1,0 +1,59 @@
+---
+# verification-status.yaml — 021-260-010 Avionics Cooling Fan
+# Per-DM QA state and lifecycle gates.
+
+subject: "021-260-010"
+title: "Avionics Cooling Fan"
+
+data_modules:
+  - dmc: "DMC-EWTW-A-21-26-01-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-26-01-00A-200A-A"
+    info_code: "200"
+    type: "Servicing"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-26-01-00A-300A-A"
+    info_code: "300"
+    type: "Scheduled maintenance"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-26-01-00A-520A-A"
+    info_code: "520"
+    type: "Remove procedures"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+  - dmc: "DMC-EWTW-A-21-26-01-00A-720A-A"
+    info_code: "720"
+    type: "Install procedures"
+    quality: "unverified"
+    issue: "001-00"
+    in_work: true
+    lc_gate: null
+    last_review: null
+    reviewer: null
+
+overall_status: "unverified"

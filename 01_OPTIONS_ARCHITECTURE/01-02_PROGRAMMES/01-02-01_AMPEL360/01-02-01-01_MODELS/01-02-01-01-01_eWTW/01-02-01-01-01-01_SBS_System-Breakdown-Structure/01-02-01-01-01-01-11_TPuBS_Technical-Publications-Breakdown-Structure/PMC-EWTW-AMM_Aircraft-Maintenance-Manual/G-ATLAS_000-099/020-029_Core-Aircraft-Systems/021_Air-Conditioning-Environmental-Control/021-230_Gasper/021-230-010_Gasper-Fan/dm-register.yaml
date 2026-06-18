@@ -1,0 +1,66 @@
+---
+# dm-register.yaml — 021-230-010 Gasper Fan
+# Data module allocation and ICN register.
+
+subject: "021-230-010"
+title: "Gasper Fan"
+pmc: "PMC-EWTW-AMM"
+
+data_modules:
+  - short_handle: "DMC-EWTW-021-230-010-040"
+    full_dmc: "DMC-EWTW-A-21-23-01-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-23-01-00A-040A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-230-010-200"
+    full_dmc: "DMC-EWTW-A-21-23-01-00A-200A-A"
+    info_code: "200"
+    type: "Servicing"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-23-01-00A-200A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-230-010-300"
+    full_dmc: "DMC-EWTW-A-21-23-01-00A-300A-A"
+    info_code: "300"
+    type: "Scheduled maintenance"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-23-01-00A-300A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-230-010-520"
+    full_dmc: "DMC-EWTW-A-21-23-01-00A-520A-A"
+    info_code: "520"
+    type: "Remove procedures"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-23-01-00A-520A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-230-010-720"
+    full_dmc: "DMC-EWTW-A-21-23-01-00A-720A-A"
+    info_code: "720"
+    type: "Install procedures"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-23-01-00A-720A-A_001-00_en-GB.xml"
+
+illustrations:
+  - icn: "ICN-EWTW-021230010-001-01"
+    caption: "Gasper Fan — general arrangement"
+    used_by: ["040", "200", "300", "520", "720"]
+    file: "ICN/ICN-EWTW-021230010-001-01.svg"
+
+sns_status: "PROVISIONAL — pending _CSDB-CONTROL/SNS-mapping.yaml"

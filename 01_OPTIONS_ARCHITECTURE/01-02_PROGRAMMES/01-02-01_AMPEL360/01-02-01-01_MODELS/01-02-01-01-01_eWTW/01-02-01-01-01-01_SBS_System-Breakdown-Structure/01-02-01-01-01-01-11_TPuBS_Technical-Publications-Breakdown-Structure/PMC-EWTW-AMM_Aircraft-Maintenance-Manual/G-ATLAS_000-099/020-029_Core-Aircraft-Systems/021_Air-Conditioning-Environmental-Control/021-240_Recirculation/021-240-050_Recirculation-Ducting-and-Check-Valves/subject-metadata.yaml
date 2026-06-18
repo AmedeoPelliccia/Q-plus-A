@@ -1,0 +1,36 @@
+---
+# subject-metadata.yaml — 021-240-050 Recirculation Ducting and Check Valves
+# Authoritative subject definition for the eWTW projection.
+
+subject: "021-240-050"
+title: "Recirculation Ducting and Check Valves"
+description: >-
+  Recirculation Ducting and Check Valves subject package for the eWTW AMM (021-240 · STD layer).
+
+parent_node: "021-240"
+pmc: "PMC-EWTW-AMM"
+model: "eWTW"
+mic: "EWTW"
+side: "PUB"
+owner: "Q-AIR"
+
+dm_set: ["040", "200", "300", "520", "720"]
+
+sns:
+  system_code: "21"
+  sub_system: "2"
+  sub_sub_system: "4"
+  assy: "05"
+  status: "PROVISIONAL"
+  pending: "_CSDB-CONTROL/SNS-mapping.yaml"
+
+feeds_tree:
+  - "AMM"
+
+convention: "AMPEL360-AMM-INFOCODE-CM-001"
+governance:
+  - "LC-A..LC-N"
+  - "SSOT+PUB"
+
+status: "scaffold"
+version: "1.0"

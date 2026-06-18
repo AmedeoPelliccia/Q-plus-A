@@ -1,0 +1,56 @@
+---
+# dm-register.yaml — 021-610-010 Flight Deck Electric Reheat Trim
+# Data module allocation and ICN register.
+
+subject: "021-610-010"
+title: "Flight Deck Electric Reheat Trim"
+pmc: "PMC-EWTW-AMM"
+
+data_modules:
+  - short_handle: "DMC-EWTW-021-610-010-040"
+    full_dmc: "DMC-EWTW-A-21-61-01-00A-040A-A"
+    info_code: "040"
+    type: "Description"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-61-01-00A-040A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-610-010-034"
+    full_dmc: "DMC-EWTW-A-21-61-01-00A-034A-A"
+    info_code: "034"
+    type: "Operating principles"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-61-01-00A-034A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-610-010-200"
+    full_dmc: "DMC-EWTW-A-21-61-01-00A-200A-A"
+    info_code: "200"
+    type: "Servicing"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-61-01-00A-200A-A_001-00_en-GB.xml"
+
+  - short_handle: "DMC-EWTW-021-610-010-300"
+    full_dmc: "DMC-EWTW-A-21-61-01-00A-300A-A"
+    info_code: "300"
+    type: "Scheduled maintenance"
+    language: "en-GB"
+    issue: "001-00"
+    in_work: true
+    quality: "unverified"
+    file: "DM/DMC-EWTW-A-21-61-01-00A-300A-A_001-00_en-GB.xml"
+
+illustrations:
+  - icn: "ICN-EWTW-021610010-001-01"
+    caption: "Flight Deck Electric Reheat Trim — general arrangement"
+    used_by: ["040", "034", "200", "300"]
+    file: "ICN/ICN-EWTW-021610010-001-01.svg"
+
+sns_status: "PROVISIONAL — pending _CSDB-CONTROL/SNS-mapping.yaml"

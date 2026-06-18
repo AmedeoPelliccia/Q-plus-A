@@ -1,0 +1,20 @@
+---
+# applicability.yaml — 021-230-030 Gasper Outlets and Ducting
+# Carrier-binding and exclusion rules for the subject's data modules.
+
+subject: "021-230-030"
+title: "Gasper Outlets and Ducting"
+pmc: "PMC-EWTW-AMM"
+
+applicability:
+  carrier: "eWTW"
+  carrier_description: "Electric wing-to-wing configuration"
+  binding: "electric"
+  brex: "DMC-EWTW-A-00-00-00-00A-022A-D"
+  security: "01"  # unclassified
+
+  applicable_models:
+    - model: "eWTW"
+      description: "Electric wing-to-wing configuration"
+
+all_dms_bind_to: "eWTW"
