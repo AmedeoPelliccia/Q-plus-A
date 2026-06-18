@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-036-000
+  title: Pneumatic Vacated
+  type: chapter
+  g_atlas: "036"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

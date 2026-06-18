@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-011-000
+  title: Placards and Markings
+  type: chapter
+  g_atlas: "011"
+  parent: eWTW-PBS-010
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

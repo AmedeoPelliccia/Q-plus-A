@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-073-000
+  title: Energy Delivery to Propulsion
+  type: chapter
+  g_atlas: "073"
+  parent: eWTW-PBS-070
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-033-000
+  title: Lights
+  type: chapter
+  g_atlas: "033"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

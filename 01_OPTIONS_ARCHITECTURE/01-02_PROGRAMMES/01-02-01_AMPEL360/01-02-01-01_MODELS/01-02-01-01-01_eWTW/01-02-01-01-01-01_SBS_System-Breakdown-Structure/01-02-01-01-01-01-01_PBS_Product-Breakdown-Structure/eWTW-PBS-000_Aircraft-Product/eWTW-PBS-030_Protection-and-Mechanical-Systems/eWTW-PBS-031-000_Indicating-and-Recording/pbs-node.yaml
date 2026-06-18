@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-031-000
+  title: Indicating and Recording
+  type: chapter
+  g_atlas: "031"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

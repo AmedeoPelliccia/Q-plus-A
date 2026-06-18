@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-049-000
+  title: Auxiliary Power Module
+  type: chapter
+  g_atlas: "049"
+  parent: eWTW-PBS-040
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

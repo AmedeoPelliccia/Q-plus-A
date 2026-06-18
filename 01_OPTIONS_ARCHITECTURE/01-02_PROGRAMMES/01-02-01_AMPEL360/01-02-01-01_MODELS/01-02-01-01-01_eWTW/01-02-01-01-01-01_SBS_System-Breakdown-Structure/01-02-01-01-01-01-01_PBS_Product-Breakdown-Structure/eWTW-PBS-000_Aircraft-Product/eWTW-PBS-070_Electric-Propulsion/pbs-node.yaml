@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-070
+  title: Electric Propulsion
+  type: group
+  g_atlas: "070"
+  parent: eWTW-PBS-000
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

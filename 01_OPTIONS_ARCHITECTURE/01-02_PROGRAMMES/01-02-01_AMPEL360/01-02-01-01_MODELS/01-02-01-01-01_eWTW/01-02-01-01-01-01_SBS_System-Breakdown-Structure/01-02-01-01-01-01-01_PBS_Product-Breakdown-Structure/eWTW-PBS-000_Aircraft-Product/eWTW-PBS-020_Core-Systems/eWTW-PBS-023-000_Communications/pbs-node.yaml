@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-023-000
+  title: Communications
+  type: chapter
+  g_atlas: "023"
+  parent: eWTW-PBS-020
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

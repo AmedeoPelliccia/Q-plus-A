@@ -1,0 +1,11 @@
+pbs_node:
+  id: eWTW-PBS-030-000
+  title: Ice and Rain Protection
+  type: chapter
+  g_atlas: "030"
+  parent: eWTW-PBS-030
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"
