@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
 """
-G-ATLAS scaffold generator — code range 030-039, chapters 032 (Landing Gear) & 033 (Lights).
+G-ATLAS scaffold generator — code range 030-039 (Protection and Mechanical Systems).
+Chapters: 032 Landing Gear · 033 Lights · 034 Navigation · 035 Oxygen ·
+          036 Pneumatic (vacated) · 037 Vacuum (vestigial).
 
-Deterministic · idempotent · zero LLM. Source of truth:
-032-033_G-ATLAS-Green-Native-Breakdown.md (v1.0).
+Deterministic · idempotent · zero LLM. Sources of truth:
+  032-033_G-ATLAS-Green-Native-Breakdown.md (v1.0)
+  034-037_G-ATLAS-Green-Native-Breakdown.md (v1.0)
 
 Usage:
-    python3 scaffold_030-039.py              # creates under current dir (run from repo root)
+    python3 scaffold_030-039.py              # run from repo root
     python3 scaffold_030-039.py /path/to/repo
-Re-running is safe: existing files are skipped, never overwritten.
+Re-running is safe: existing files are skipped, never overwritten (top-up only).
+
+Layer glyphs: STD carries · ⚡ source substitution · ◇ green overlay ·
+              STD-G green delta · ∅ vacated (function migrated out of the chapter).
+Note: 034-600 (FMS computing) is marked ◇ in the source prose but its Layer
+      column reads STD; the Layer column is taken verbatim here.
 """
 import re
 import sys
@@ -88,6 +96,75 @@ NODES = {
         ("033-900-030", "Lighting electrical-load management", "G-subject"),
         ("033-900-050", "Energy-independent emergency-egress marking (photoluminescent)", "G-subject"),
     ],
+    "034_Navigation": [
+        ("034-000", "General — Navigation", "STD"),
+        ("034-010", "Navigation antennas", "STD"),
+        ("034-020", "Modular radio cabinet (MRC / MMRC / NIM)", "STD"),
+        ("034-100", "Flight Environment Data", "STD"),
+        ("034-110", "Integrated electronic standby system", "STD"),
+        ("034-130", "Integrated pitot/static/AOA system", "STD"),
+        ("034-150", "Air-data computing (ADC, TAT)", "STD"),
+        ("034-200", "Attitude and Direction", "STD"),
+        ("034-230", "Standby compass", "STD"),
+        ("034-250", "Head-up guidance system", "STD"),
+        ("034-260", "Inertial reference system (micro IRU)", "STD"),
+        ("034-270", "Enhanced flight vision system", "STD"),
+        ("034-300", "Landing and Taxiing Aids", "STD"),
+        ("034-310", "Radar altimeter", "STD"),
+        ("034-320", "VHF nav (VOR/LOC, marker, glide slope)", "STD"),
+        ("034-400", "Independent Position Determining", "STD"),
+        ("034-410", "EGPWS / windshear", "STD"),
+        ("034-420", "Weather radar", "STD"),
+        ("034-430", "TCAS", "STD"),
+        ("034-440", "Lightning sensor", "STD"),
+        ("034-500", "Dependent Position Determining", "STD"),
+        ("034-510", "DME", "STD"),
+        ("034-520", "Transponder", "STD"),
+        ("034-530", "ADF", "STD"),
+        ("034-560", "GPS", "STD"),
+        ("034-600", "Flight Management Computing", "STD"),
+        ("034-610", "Flight management system", "STD"),
+        ("034-900", "Energy-Aware Navigation and Flight Management", "STD-G"),
+        ("034-900-010", "Energy-aware FMS — range/reserve from energy state", "G-subject"),
+        ("034-900-030", "Energy-optimal trajectory optimization (green routing)", "G-subject"),
+        ("034-900-050", "Electric-taxi navigation/guidance", "G-subject"),
+    ],
+    "035_Oxygen": [
+        ("035-000", "General — Oxygen", "STD"),
+        ("035-100", "Crew Oxygen (cylinder, charging valve, mask)", "STD"),
+        ("035-110", "Crew control / indicating", "STD"),
+        ("035-120", "Oxygen-cylinder-bay ventilation", "STD"),
+        ("035-200", "Passenger-Cabin Oxygen (chemical generator / gaseous)", "STD"),
+        ("035-210", "Passenger control / indicating", "STD"),
+        ("035-220", "Passenger gaseous-oxygen system", "STD"),
+        ("035-300", "Portable Oxygen (cylinder, mask, PBE)", "STD"),
+        ("035-900", "Oxygen-System Integration Safety (thin)", "STD-G"),
+        ("035-900-010", "Zonal segregation from hydrogen / high-voltage zones", "G-subject"),
+    ],
+    "036_Pneumatic": [
+        ("036-000", "General — Pneumatic", "STD"),
+        ("036-100", "Air-Bleed Distribution", "∅"),
+        ("036-110", "Engine pneumatic bleed system", "∅"),
+        ("036-120", "APU pneumatic bleed system", "∅"),
+        ("036-130", "Ground air supply (HP)", "∅"),
+        ("036-140", "Bleed control (overpressure, HPSOV)", "∅"),
+        ("036-150", "Water-tank pressurization → electric (migrates)", "⚡"),
+        ("036-200", "Pneumatic Indicating (bleed-leak detection)", "∅"),
+        ("036-300", "Ozone converters → on electric ECS air (migrates to 021)", "⚡"),
+        ("036-900", "Bleedless Architecture and Function Migration", "STD-G"),
+        ("036-900-010", "Bleedless doctrine — no engine/APU bleed offtake", "G-subject"),
+        ("036-900-030", "Function-migration map", "G-subject"),
+        ("036-900-050", "Residual dedicated pneumatic provision (electric, if any)", "G-subject"),
+    ],
+    "037_Vacuum": [
+        ("037-000", "General — Vacuum (vestigial)", "STD"),
+        ("037-100", "Vacuum source (engine-driven pump)", "∅"),
+        ("037-200", "Vacuum distribution", "∅"),
+        ("037-300", "Vacuum indicating", "∅"),
+        ("037-900", "Electric Vacuum Provision (if required)", "STD-G"),
+        ("037-900-010", "Electric vacuum source for any residual need", "G-subject"),
+        ("037-900-030", "Vacuum-waste motive — cross-ref to water/waste 038", "G-subject"),
+    ],
 }
 
 def slug(title: str) -> str:
@@ -115,12 +192,13 @@ def main() -> None:
     root = base / REL_ROOT
     created = skipped = 0
 
-    range_readme = root / "README.md"
     root.mkdir(parents=True, exist_ok=True)
+    range_readme = root / "README.md"
     if not range_readme.exists():
+        nodes_line = ", ".join(n.replace("_", " ") for n in NODES)
         range_readme.write_text(
-            f"# {CODE_RANGE}\n\nCode-range index · band {BAND}.\n"
-            "Nodes: 032 Landing Gear, 033 Lights.\n", encoding="utf-8")
+            f"# {CODE_RANGE}\n\nCode-range index · band {BAND}.\nNodes: {nodes_line}.\n",
+            encoding="utf-8")
         created += 1
 
     for node, items in NODES.items():
@@ -131,7 +209,10 @@ def main() -> None:
             nreadme.write_text(f"# {node}\n\nNode index · {CODE_RANGE}.\n", encoding="utf-8")
             created += 1
         for code, title, layer in items:
-            f = ndir / f"{code}-{slug(title)}.md"
+            name = f"{code}-{slug(title)}"
+            sdir = ndir / name
+            sdir.mkdir(parents=True, exist_ok=True)
+            f = sdir / f"{name}.md"
             if f.exists():
                 skipped += 1
                 continue
