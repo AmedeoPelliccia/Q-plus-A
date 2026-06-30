@@ -1,6 +1,7 @@
 pbs_item:
-  id: eWTW-PBS-053-000-020
+  id: eWTW-PBS-053-020-000
   title: Center Fuselage Section
+  level: section
   layer: "◇"
   owner: Q-STRUCTURES
   parent: eWTW-PBS-053-000

@@ -1,6 +1,7 @@
 pbs_item:
-  id: eWTW-PBS-053-000-030
+  id: eWTW-PBS-053-030-000
   title: Aft Fuselage Section
+  level: section
   layer: "STD"
   owner: Q-STRUCTURES
   parent: eWTW-PBS-053-000

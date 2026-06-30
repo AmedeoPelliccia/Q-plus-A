@@ -1,6 +1,7 @@
 pbs_item:
-  id: eWTW-PBS-053-000-090
+  id: eWTW-PBS-053-090-000
   title: Keel Beam and Major Attach Fittings
+  level: section
   layer: "◇"
   owner: Q-STRUCTURES
   parent: eWTW-PBS-053-000

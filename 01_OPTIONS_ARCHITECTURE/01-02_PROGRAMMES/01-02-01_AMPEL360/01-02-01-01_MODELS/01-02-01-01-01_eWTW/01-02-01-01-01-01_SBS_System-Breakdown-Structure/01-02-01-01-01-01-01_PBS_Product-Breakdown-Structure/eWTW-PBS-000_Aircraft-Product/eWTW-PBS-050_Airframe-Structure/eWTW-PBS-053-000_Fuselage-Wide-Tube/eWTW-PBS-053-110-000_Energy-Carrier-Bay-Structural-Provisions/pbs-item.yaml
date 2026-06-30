@@ -1,6 +1,7 @@
 pbs_item:
-  id: eWTW-PBS-053-000-110
+  id: eWTW-PBS-053-110-000
   title: Energy Carrier Bay Structural Provisions
+  level: section
   layer: "STD-G"
   owner: Q-GREENTECH
   parent: eWTW-PBS-053-000
