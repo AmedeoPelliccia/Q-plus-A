@@ -1,0 +1,19 @@
+pbs_item_register:
+  node: eWTW-PBS-053-000
+  g_atlas: "053"
+  grammar: "0CC-SS0-UU0 (x10 hierarchical)"
+  model: eWTW
+  side: SSOT
+  sections:
+    - {id: eWTW-PBS-053-000-000, title: General, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-000, title: Forward Fuselage Section, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-020-000, title: Center Fuselage Section, layer: "◇", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-030-000, title: Aft Fuselage Section, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-040-000, title: Tailcone and Auxiliary Power Module Bay, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-050-000, title: Skin Panels and Doublers, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-060-000, title: Frames Stringers and Longerons, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-070-000, title: Floor Structure Passenger and Cargo, layer: "◇", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-080-000, title: Pressure Bulkheads, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-090-000, title: Keel Beam and Major Attach Fittings, layer: "◇", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-100-000, title: Aerodynamic Fairings, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-110-000, title: Energy Carrier Bay Structural Provisions, layer: "STD-G", owner: Q-GREENTECH}
