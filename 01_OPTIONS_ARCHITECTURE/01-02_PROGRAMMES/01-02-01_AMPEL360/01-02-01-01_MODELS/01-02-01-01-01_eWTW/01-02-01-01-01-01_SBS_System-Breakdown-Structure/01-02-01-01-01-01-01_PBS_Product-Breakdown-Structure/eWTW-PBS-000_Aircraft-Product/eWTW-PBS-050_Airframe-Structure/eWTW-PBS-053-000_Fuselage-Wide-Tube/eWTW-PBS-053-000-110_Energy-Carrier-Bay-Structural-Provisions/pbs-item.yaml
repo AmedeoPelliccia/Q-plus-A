@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-110
+  title: Energy Carrier Bay Structural Provisions
+  layer: "STD-G"
+  owner: Q-GREENTECH
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Dedicated under-floor energy-carrier (battery) bay: structural enclosure, crash protection, thermal/fire containment interface to 026-900; carrier owned by 028."
+  status: scaffold
+  version: "1.0"

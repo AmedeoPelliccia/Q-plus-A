@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-080
+  title: Pressure Bulkheads
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Forward and aft pressure bulkheads."
+  status: scaffold
+  version: "1.0"

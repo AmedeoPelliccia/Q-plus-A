@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-070
+  title: Floor Structure Passenger and Cargo
+  layer: "◇"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Passenger and cargo floor beams and grid; now also carries energy-carrier bay loads and associated crash cases."
+  status: scaffold
+  version: "1.0"

@@ -1,11 +1,16 @@
 pbs_node:
   id: eWTW-PBS-053-000
-  title: Fuselage Wide Tube
+  title: Fuselage Wide-Tube
   type: chapter
   g_atlas: "053"
+  ata_origin: "53"
+  config: WTW (Wide Tube Wing)
   parent: eWTW-PBS-050
   model: eWTW
   side: SSOT
   member: "-01_PBS"
-  status: scaffold
-  version: "2.0"
+  owner: Q-STRUCTURES
+  green_overlay: Q-GREENTECH
+  items: 11
+  status: realized
+  version: "1.0"

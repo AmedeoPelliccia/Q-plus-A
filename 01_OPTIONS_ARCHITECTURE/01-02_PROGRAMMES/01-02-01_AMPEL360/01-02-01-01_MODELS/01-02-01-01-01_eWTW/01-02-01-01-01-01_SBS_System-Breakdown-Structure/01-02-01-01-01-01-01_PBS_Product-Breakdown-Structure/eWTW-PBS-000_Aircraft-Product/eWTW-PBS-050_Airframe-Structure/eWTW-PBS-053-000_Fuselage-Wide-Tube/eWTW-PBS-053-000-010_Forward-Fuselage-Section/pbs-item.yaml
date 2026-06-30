@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-010
+  title: Forward Fuselage Section
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Nose / Section 41: flight-deck structure, forward pressure-bulkhead interface, radome attach, nose-gear bay structure."
+  status: scaffold
+  version: "1.0"

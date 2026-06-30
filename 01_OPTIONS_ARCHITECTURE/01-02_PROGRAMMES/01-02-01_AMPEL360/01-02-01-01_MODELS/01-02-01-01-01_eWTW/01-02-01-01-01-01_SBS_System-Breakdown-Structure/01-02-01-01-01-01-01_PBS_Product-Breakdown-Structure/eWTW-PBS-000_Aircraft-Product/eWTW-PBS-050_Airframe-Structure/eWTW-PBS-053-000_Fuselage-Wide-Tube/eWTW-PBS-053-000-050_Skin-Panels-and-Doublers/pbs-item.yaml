@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-050
+  title: Skin Panels and Doublers
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Fuselage skin, lap/butt joints and doublers; standard practices per 051."
+  status: scaffold
+  version: "1.0"

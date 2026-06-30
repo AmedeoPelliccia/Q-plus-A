@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-090
+  title: Keel Beam and Major Attach Fittings
+  layer: "◇"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Keel beam; wing / gear / empennage / pylon attach fittings plus energy-carrier mount fittings."
+  status: scaffold
+  version: "1.0"

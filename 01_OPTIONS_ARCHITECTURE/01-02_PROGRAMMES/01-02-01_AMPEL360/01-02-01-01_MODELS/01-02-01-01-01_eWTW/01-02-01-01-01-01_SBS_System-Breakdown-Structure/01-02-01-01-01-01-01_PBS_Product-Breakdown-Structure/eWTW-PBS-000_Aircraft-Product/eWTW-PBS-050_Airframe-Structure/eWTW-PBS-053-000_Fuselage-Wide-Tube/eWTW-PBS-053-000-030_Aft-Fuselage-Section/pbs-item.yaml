@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-030
+  title: Aft Fuselage Section
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Section 46/47: aft pressure-bulkhead interface and empennage attach interface."
+  status: scaffold
+  version: "1.0"

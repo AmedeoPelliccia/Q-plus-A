@@ -1,0 +1,11 @@
+pbs_item:
+  id: eWTW-PBS-053-000-040
+  title: Tailcone and Auxiliary Power Module Bay
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-000
+  model: eWTW
+  side: SSOT
+  scope: "Section 48 tailcone; auxiliary-power-module mounting structure (engine/APU -> aux-power module, NORM-TERM-001)."
+  status: scaffold
+  version: "1.0"
