@@ -1,0 +1,12 @@
+pbs_item:
+  id: eWTW-PBS-053-010-070
+  title: Forward to Center Production Join
+  level: subject
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-010-000
+  model: eWTW
+  side: SSOT
+  scope: "Section 41-to-43/44 production splice frame and fastener system."
+  status: scaffold
+  version: "1.0"

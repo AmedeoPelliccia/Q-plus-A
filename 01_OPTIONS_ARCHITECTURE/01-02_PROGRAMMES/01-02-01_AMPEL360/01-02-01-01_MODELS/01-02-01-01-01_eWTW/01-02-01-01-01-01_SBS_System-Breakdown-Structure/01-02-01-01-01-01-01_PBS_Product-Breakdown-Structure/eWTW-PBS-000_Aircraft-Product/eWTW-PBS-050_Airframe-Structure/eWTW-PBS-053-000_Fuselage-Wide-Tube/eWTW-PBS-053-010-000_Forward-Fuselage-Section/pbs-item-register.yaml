@@ -1,0 +1,16 @@
+pbs_item_register:
+  node: eWTW-PBS-053-010-000
+  level: section
+  g_atlas: "053"
+  section: "053-010"
+  grammar: "0CC-SS0-UU0 (subjects on final triplet)"
+  model: eWTW
+  side: SSOT
+  subjects:
+    - {id: eWTW-PBS-053-010-010, title: Radome and Nose Cone Attach Structure, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-020, title: Flight Deck Enclosure and Windshield Post Structure, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-030, title: Forward Pressure Bulkhead, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-040, title: Nose Landing Gear Bay Structure, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-050, title: Forward Equipment Bay Structure, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-060, title: Nose Section Skin Frames and Stringers, layer: "STD", owner: Q-STRUCTURES}
+    - {id: eWTW-PBS-053-010-070, title: Forward to Center Production Join, layer: "STD", owner: Q-STRUCTURES}
