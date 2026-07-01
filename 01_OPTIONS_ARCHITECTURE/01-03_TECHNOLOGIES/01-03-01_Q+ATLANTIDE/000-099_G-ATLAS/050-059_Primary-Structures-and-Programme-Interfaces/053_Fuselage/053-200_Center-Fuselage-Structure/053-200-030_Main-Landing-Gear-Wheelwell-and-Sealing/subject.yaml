@@ -1,0 +1,16 @@
+subject:
+  id: 053-200-030
+  title: Main Landing Gear Wheelwell and Sealing
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-200"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-04-34"
+    - "53-04-35"
+  crossref_note: "system -> 032"
+  status: scaffold
+  version: "1.0"

@@ -1,0 +1,17 @@
+subject:
+  id: 053-100-020
+  title: Nose Landing Gear Bay and Door Supports
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-100"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-10-18"
+    - "53-10-31"
+    - "53-02-00"
+  crossref_note: "system -> 032"
+  status: scaffold
+  version: "1.0"

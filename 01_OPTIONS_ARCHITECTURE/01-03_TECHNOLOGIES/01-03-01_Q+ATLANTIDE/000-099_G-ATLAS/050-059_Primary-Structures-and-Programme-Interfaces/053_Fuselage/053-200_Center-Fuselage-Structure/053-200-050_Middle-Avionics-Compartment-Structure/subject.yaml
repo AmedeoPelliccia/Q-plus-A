@@ -1,0 +1,15 @@
+subject:
+  id: 053-200-050
+  title: Middle Avionics Compartment Structure
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-200"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-22-27"
+  crossref_note: "equipment -> 025/024/040"
+  status: scaffold
+  version: "1.0"

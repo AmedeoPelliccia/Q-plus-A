@@ -1,0 +1,16 @@
+subject:
+  id: 053-000-020
+  title: Fuselage Protective Films and Tapes
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-000"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-00-20"
+    - "53-00-40"
+  crossref_note: "green: recyclable/bio protective films -> 051-900"
+  status: scaffold
+  version: "1.0"

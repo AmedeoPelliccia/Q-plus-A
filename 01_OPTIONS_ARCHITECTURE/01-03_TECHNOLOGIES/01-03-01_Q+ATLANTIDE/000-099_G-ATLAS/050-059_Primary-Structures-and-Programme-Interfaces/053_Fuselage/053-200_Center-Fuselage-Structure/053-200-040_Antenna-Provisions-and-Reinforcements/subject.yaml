@@ -1,0 +1,21 @@
+subject:
+  id: 053-200-040
+  title: Antenna Provisions and Reinforcements
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-200"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-22-16"
+    - "53-22-17"
+    - "53-22-18"
+    - "53-22-20"
+    - "53-22-22"
+    - "53-22-25"
+    - "53-22-28"
+  crossref_note: "antennas -> 023"
+  status: scaffold
+  version: "1.0"

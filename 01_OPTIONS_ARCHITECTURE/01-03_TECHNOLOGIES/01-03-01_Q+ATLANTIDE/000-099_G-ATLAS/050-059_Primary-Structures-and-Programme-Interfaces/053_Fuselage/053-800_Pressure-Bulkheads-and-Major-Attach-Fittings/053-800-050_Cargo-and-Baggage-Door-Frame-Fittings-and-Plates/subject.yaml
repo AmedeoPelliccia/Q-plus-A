@@ -1,0 +1,20 @@
+subject:
+  id: 053-800-050
+  title: Cargo and Baggage Door Frame Fittings and Plates
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-800"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-21-29"
+    - "53-21-30"
+    - "53-23-29"
+    - "53-23-30"
+    - "53-23-31"
+    - "53-23-32"
+  crossref_note: "cross-ref 052"
+  status: scaffold
+  version: "1.0"

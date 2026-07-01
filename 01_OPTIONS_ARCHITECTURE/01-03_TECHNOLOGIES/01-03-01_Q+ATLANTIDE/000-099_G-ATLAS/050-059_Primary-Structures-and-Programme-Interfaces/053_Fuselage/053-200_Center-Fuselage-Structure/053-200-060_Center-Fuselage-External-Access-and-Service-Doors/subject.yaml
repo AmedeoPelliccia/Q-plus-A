@@ -1,0 +1,20 @@
+subject:
+  id: 053-200-060
+  title: Center Fuselage External Access and Service Doors
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-200"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-03-56"
+    - "53-03-57"
+    - "53-03-59"
+    - "53-03-60"
+    - "53-03-61"
+    - "53-03-62"
+  crossref_note: "oxygen -> 035, water/waste -> 038"
+  status: scaffold
+  version: "1.0"

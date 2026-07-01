@@ -1,0 +1,17 @@
+subject:
+  id: 053-700-030
+  title: Center Fuselage Floor Structure
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-700"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-21-10"
+    - "53-22-10"
+    - "53-23-10"
+  crossref_note: ""
+  status: scaffold
+  version: "1.0"

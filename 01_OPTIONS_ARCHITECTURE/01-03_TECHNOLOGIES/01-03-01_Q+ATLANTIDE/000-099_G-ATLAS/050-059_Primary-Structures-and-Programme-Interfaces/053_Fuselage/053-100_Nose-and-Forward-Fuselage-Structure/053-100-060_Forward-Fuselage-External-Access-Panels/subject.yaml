@@ -1,0 +1,15 @@
+subject:
+  id: 053-100-060
+  title: Forward Fuselage External Access Panels
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-100"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-03-55"
+  crossref_note: ""
+  status: scaffold
+  version: "1.0"
