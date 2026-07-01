@@ -1,0 +1,19 @@
+part:
+  pn: EWTW-530101-030
+  find: "030"
+  nomenclature: "FITTING, RADOME LATCH"
+  parent_pn: EWTW-530101-000
+  qty: 2
+  uom: EA
+  layer: "STD"
+  make_or_buy: buy
+  effectivity: EFF-BASE
+  catalog_pn: ""
+  interfaces: []
+  root: EWTW-530101
+  model: eWTW
+  side: SSOT
+  owner: Q-STRUCTURES
+  scope: "Quick-release latch fittings securing the radome closed."
+  status: realized
+  version: "1.0"
