@@ -1,0 +1,19 @@
+part:
+  pn: EWTW-530101-020
+  find: "020"
+  nomenclature: "FITTING, RADOME HINGE"
+  parent_pn: EWTW-530101-000
+  qty: 2
+  uom: EA
+  layer: "STD"
+  make_or_buy: buy
+  effectivity: EFF-BASE
+  catalog_pn: ""
+  interfaces: []
+  root: EWTW-530101
+  model: eWTW
+  side: SSOT
+  owner: Q-STRUCTURES
+  scope: "Handed hinge pair (radome opens for antenna access)."
+  status: realized
+  version: "1.0"

@@ -1,0 +1,19 @@
+part:
+  pn: EWTW-530101-021
+  find: "021"
+  nomenclature: "FITTING, RADOME HINGE LH"
+  parent_pn: EWTW-530101-020
+  qty: 1
+  uom: EA
+  layer: "STD"
+  make_or_buy: buy
+  effectivity: EFF-BASE
+  catalog_pn: ""
+  interfaces: []
+  root: EWTW-530101
+  model: eWTW
+  side: SSOT
+  owner: Q-STRUCTURES
+  scope: "Left-hand hinge (odd find = LH)."
+  status: realized
+  version: "1.0"

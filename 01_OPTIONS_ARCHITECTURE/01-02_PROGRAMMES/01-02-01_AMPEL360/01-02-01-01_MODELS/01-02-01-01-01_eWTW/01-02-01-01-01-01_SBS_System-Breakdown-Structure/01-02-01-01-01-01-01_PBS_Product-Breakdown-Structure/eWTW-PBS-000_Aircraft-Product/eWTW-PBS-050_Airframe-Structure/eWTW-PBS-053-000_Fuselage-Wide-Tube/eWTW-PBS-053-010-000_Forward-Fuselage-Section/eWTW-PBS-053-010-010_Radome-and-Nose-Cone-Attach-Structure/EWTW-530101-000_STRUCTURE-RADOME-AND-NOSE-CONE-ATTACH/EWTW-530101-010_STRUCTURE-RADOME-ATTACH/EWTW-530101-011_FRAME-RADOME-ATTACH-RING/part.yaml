@@ -1,0 +1,19 @@
+part:
+  pn: EWTW-530101-011
+  find: "011"
+  nomenclature: "FRAME, RADOME ATTACH RING"
+  parent_pn: EWTW-530101-010
+  qty: 1
+  uom: EA
+  layer: "STD"
+  make_or_buy: make
+  effectivity: EFF-BASE
+  catalog_pn: ""
+  interfaces: []
+  root: EWTW-530101
+  model: eWTW
+  side: SSOT
+  owner: Q-STRUCTURES
+  scope: "Circumferential attach ring the radome bolts to."
+  status: realized
+  version: "1.0"

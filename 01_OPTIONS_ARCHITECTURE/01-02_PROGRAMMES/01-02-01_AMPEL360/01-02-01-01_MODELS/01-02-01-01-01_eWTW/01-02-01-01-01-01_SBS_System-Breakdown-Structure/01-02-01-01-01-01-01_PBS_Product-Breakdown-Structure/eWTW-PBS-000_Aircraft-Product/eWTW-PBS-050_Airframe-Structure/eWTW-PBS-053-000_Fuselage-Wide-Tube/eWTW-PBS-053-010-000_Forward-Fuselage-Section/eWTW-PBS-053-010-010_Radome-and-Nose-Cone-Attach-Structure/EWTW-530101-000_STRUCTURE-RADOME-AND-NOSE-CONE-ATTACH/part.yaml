@@ -1,0 +1,24 @@
+part:
+  pn: EWTW-530101-000
+  find: "000"
+  nomenclature: "STRUCTURE, RADOME AND NOSE CONE ATTACH"
+  parent_pn: ""
+  qty: 1
+  uom: EA
+  layer: "STD"
+  make_or_buy: make
+  effectivity: EFF-BASE
+  catalog_pn: ""
+  interfaces:
+    - {node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
+    - {node: "053-010-030", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
+    - {node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
+    - {node: "030", item: "radome / nose de-ice", icd: ICD-053-010-010-030}
+  realizes: 053-010-010
+  root: EWTW-530101
+  model: eWTW
+  side: SSOT
+  owner: Q-STRUCTURES
+  scope: "Top assembly / station general: nose radome shell mount and attach structure."
+  status: realized
+  version: "1.0"
