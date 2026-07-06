@@ -1,0 +1,16 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-110-010"
+    csn: "531101"
+    title: "Bay Containment Structure"
+    realized: true
+  - id: "eWTW-PBS-053-110-020"
+    csn: "531102"
+    title: "Energy Module Mounting System"
+    realized: true
+  - id: "eWTW-PBS-053-110-030"
+    csn: "531103"
+    title: "Venting Drainage and Thermal Provisions"
+    realized: true

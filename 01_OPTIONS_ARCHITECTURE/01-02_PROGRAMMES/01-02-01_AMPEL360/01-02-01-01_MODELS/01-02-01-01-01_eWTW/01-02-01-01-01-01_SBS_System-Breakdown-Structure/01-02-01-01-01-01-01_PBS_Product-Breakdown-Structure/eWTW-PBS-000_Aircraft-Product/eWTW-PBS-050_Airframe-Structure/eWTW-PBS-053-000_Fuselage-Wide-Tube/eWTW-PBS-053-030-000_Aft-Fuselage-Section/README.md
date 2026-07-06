@@ -1,0 +1,13 @@
+# eWTW-PBS-053-030-000 - Aft Fuselage Section
+
+Ownership doctrine (chapter 053): geometric sections (010-040) own section-unique integration structure and their AFT production join; distributed families (050-110) own recurring constant-section structure, standards and typology. ALL pressure-boundary elements are owned by 053-080. Registers that aggregate instances across sections are DERIVED, never authored (usage.policy: derived).
+
+## Subjects
+
+- `053-030-010` - Aft Section Skin Frames and Stringers (7 items)
+- `053-030-020` - Empennage Attach Structure (6 items)
+- `053-030-030` - Door and Cutout Surrounds Aft (5 items)
+- `053-030-040` - Aft Equipment and Systems Support (5 items)
+- `053-030-050` - Aft to Tailcone Production Join (5 items)
+
+Generated 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant

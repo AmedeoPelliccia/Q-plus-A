@@ -1,0 +1,16 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-100-010"
+    csn: "531001"
+    title: "Belly Fairing Panels"
+    realized: true
+  - id: "eWTW-PBS-053-100-020"
+    csn: "531002"
+    title: "Wing to Body Fairing"
+    realized: true
+  - id: "eWTW-PBS-053-100-030"
+    csn: "531003"
+    title: "Tail and Transition Fairings"
+    realized: true

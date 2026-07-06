@@ -1,0 +1,16 @@
+# Part record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+part:
+  pn: "EWTW-530107-012"
+  nomenclature: "RING-JOIN-SEGMENT-LOWER"
+  csn: "530107"
+  item: "012"
+  type: "part"
+  role: "constituent"
+  parentAssembly: "EWTW-530107-010"
+  applicability:
+    model: "eWTW"
+    effectivity:
+      - "ALL"
+  status: "PLANNED"

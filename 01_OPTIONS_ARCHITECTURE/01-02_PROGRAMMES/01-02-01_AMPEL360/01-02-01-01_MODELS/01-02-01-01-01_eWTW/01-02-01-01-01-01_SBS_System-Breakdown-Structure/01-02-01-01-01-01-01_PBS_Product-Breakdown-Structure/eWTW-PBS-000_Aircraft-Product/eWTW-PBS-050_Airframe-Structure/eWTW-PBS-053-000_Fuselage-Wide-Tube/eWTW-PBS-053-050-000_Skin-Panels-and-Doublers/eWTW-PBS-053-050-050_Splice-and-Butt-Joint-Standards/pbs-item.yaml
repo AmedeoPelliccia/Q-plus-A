@@ -1,0 +1,10 @@
+# PBS item record (subject)
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+item:
+  id: "eWTW-PBS-053-050-050"
+  csn: "530505"
+  title: "Splice and Butt Joint Standards"
+  parentNode: "eWTW-PBS-053-050-000"
+  topAssembly: "EWTW-530505-000"
+  status: "PLANNED"

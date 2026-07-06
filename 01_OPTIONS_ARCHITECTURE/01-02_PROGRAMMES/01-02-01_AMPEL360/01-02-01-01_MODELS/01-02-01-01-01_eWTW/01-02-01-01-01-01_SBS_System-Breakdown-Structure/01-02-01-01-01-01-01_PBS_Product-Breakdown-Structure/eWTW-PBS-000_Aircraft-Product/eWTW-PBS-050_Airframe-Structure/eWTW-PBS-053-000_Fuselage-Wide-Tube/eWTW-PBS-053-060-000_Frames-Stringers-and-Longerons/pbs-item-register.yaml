@@ -1,0 +1,20 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-060-010"
+    csn: "530601"
+    title: "Typical Frames Constant Section"
+    realized: true
+  - id: "eWTW-PBS-053-060-020"
+    csn: "530602"
+    title: "Stringer System"
+    realized: true
+  - id: "eWTW-PBS-053-060-030"
+    csn: "530603"
+    title: "Longerons and Local Beams"
+    realized: true
+  - id: "eWTW-PBS-053-060-040"
+    csn: "530604"
+    title: "Shear Ties and Clips Standards"
+    realized: true

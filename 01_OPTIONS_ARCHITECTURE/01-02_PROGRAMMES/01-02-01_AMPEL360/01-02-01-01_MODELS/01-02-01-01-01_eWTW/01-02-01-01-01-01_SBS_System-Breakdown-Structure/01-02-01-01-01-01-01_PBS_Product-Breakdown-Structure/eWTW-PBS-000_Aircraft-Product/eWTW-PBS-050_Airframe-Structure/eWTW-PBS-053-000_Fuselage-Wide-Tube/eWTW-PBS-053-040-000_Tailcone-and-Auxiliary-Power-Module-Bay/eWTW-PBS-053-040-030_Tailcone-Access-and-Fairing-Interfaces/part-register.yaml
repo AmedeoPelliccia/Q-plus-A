@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+parts:
+  - pn: "EWTW-530403-000"
+    nomenclature: "STRUCTURE-TAILCONE-INTERFACES"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-040-030"
+  - pn: "EWTW-530403-010"
+    nomenclature: "SURROUND-ACCESS-DOOR"
+    role: "item"
+    parentAssembly: "EWTW-530403-000"
+  - pn: "EWTW-530403-020"
+    nomenclature: "FITTING-FAIRING-PICKUP-SET"
+    role: "item"
+    parentAssembly: "EWTW-530403-000"
+  - pn: "EWTW-530403-030"
+    nomenclature: "MOUNT-TAIL-NAV-LIGHT"
+    role: "item"
+    parentAssembly: "EWTW-530403-000"

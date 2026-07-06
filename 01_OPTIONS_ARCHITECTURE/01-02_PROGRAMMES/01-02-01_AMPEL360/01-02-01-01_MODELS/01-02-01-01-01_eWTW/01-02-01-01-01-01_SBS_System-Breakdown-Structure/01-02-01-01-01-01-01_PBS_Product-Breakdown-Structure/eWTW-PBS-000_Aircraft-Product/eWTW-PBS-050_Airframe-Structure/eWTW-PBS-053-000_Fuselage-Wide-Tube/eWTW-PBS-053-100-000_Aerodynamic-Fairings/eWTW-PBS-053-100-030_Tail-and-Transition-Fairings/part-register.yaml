@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+parts:
+  - pn: "EWTW-531003-000"
+    nomenclature: "STRUCTURE-TAIL-FAIRINGS"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-100-030"
+  - pn: "EWTW-531003-010"
+    nomenclature: "FAIRING-DORSAL-FIN-ROOT"
+    role: "item"
+    parentAssembly: "EWTW-531003-000"
+  - pn: "EWTW-531003-020"
+    nomenclature: "FAIRING-TAILCONE-TRANSITION"
+    role: "item"
+    parentAssembly: "EWTW-531003-000"
+  - pn: "EWTW-531003-030"
+    nomenclature: "SEAL-SET-TAIL-FAIRINGS"
+    role: "item"
+    parentAssembly: "EWTW-531003-000"

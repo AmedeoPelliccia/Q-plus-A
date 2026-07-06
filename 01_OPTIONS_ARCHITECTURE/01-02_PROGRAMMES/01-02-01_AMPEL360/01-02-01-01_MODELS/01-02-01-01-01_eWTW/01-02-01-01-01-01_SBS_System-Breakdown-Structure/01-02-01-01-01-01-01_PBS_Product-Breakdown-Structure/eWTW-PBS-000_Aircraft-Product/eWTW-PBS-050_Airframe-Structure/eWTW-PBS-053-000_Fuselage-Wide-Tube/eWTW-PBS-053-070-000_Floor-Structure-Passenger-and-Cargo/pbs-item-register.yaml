@@ -1,0 +1,16 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-070-010"
+    csn: "530701"
+    title: "Passenger Floor Grid"
+    realized: true
+  - id: "eWTW-PBS-053-070-020"
+    csn: "530702"
+    title: "Cargo Floor and Liner Support"
+    realized: true
+  - id: "eWTW-PBS-053-070-030"
+    csn: "530703"
+    title: "Under Floor Systems Raceway Provisions"
+    realized: true

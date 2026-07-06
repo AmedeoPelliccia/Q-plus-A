@@ -1,0 +1,23 @@
+# eWTW-PBS-053-010-020 - Flight Deck Enclosure and Windshield Post Structure
+
+CSN `530102` - grammar `EWTW-530102-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors.
+
+## Items
+
+- `EWTW-530102-000` STRUCTURE-FLIGHT-DECK-ENCLOSURE-AND-WINDSHIELD-POST
+- `EWTW-530102-010` FRAME-WINDSHIELD-MAIN-ARCH
+  - `EWTW-530102-011` ARCH-WINDSHIELD-UPPER
+  - `EWTW-530102-012` POST-WINDSHIELD-CENTER
+- `EWTW-530102-020` POST-WINDSHIELD-SIDE
+  - `EWTW-530102-021` POST-WINDSHIELD-SIDE-LH
+  - `EWTW-530102-022` POST-WINDSHIELD-SIDE-RH
+- `EWTW-530102-030` SILL-AND-CANT-RAIL-WINDSHIELD
+- `EWTW-530102-040` FLOOR-GRID-FLIGHT-DECK
+- `EWTW-530102-050` FRAME-FLIGHT-DECK-AFT-BULKHEAD-SURROUND
+- `EWTW-530102-060` FITTING-GLARESHIELD-SUPPORT
+
+## Notes
+
+- Windshield transparencies are ATA 56; door leaf of the flight-deck security door is 052. This subject owns surrounding structure only.
+
+Generated 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant

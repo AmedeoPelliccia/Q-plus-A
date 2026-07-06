@@ -1,0 +1,10 @@
+# PBS node record (section)
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+node:
+  id: "eWTW-PBS-053-070-000"
+  title: "Floor Structure Passenger and Cargo"
+  level: "section"
+  csnPrefix: "5307"
+  parent: "eWTW-PBS-053-000"
+  status: "PLANNED"

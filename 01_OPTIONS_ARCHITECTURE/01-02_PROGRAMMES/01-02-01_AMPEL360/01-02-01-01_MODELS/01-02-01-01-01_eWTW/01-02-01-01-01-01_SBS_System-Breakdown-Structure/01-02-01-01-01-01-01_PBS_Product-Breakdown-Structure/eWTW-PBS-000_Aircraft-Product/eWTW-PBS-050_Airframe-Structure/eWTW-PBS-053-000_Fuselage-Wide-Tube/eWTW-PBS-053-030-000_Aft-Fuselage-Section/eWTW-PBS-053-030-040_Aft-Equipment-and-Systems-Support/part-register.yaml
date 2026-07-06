@@ -1,0 +1,24 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+parts:
+  - pn: "EWTW-530304-000"
+    nomenclature: "STRUCTURE-AFT-SYSTEMS-SUPPORT"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-030-040"
+  - pn: "EWTW-530304-010"
+    nomenclature: "RAIL-EQUIPMENT-SUPPORT"
+    role: "item"
+    parentAssembly: "EWTW-530304-000"
+  - pn: "EWTW-530304-020"
+    nomenclature: "BRACKET-SYSTEMS-RUN-SET"
+    role: "item"
+    parentAssembly: "EWTW-530304-000"
+  - pn: "EWTW-530304-030"
+    nomenclature: "SURROUND-OUTFLOW-VALVE"
+    role: "item"
+    parentAssembly: "EWTW-530304-000"
+  - pn: "EWTW-530304-040"
+    nomenclature: "PROVISION-DRAIN-MAST"
+    role: "item"
+    parentAssembly: "EWTW-530304-000"

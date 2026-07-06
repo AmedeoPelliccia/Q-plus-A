@@ -1,0 +1,24 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-030-010"
+    csn: "530301"
+    title: "Aft Section Skin Frames and Stringers"
+    realized: true
+  - id: "eWTW-PBS-053-030-020"
+    csn: "530302"
+    title: "Empennage Attach Structure"
+    realized: true
+  - id: "eWTW-PBS-053-030-030"
+    csn: "530303"
+    title: "Door and Cutout Surrounds Aft"
+    realized: true
+  - id: "eWTW-PBS-053-030-040"
+    csn: "530304"
+    title: "Aft Equipment and Systems Support"
+    realized: true
+  - id: "eWTW-PBS-053-030-050"
+    csn: "530305"
+    title: "Aft to Tailcone Production Join"
+    realized: true

@@ -1,0 +1,8 @@
+# Assembly station record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+assemblyStation:
+  id: "AS-EWTW-530603"
+  csn: "530603"
+  scope: "Assembly and integration station - Longerons and Local Beams"
+  status: "PLANNED"

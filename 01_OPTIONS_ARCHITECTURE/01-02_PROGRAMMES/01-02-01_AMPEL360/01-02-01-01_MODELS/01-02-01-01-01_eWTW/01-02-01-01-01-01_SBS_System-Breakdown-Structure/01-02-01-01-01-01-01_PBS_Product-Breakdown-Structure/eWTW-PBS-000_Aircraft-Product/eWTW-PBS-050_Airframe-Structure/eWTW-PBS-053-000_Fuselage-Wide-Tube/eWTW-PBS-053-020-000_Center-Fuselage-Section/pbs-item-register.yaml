@@ -1,0 +1,28 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-020-010"
+    csn: "530201"
+    title: "Wing to Body Attach Frames"
+    realized: true
+  - id: "eWTW-PBS-053-020-020"
+    csn: "530202"
+    title: "Main Landing Gear Bay Structure"
+    realized: true
+  - id: "eWTW-PBS-053-020-030"
+    csn: "530203"
+    title: "Center Wing Box Carry Through Interface"
+    realized: true
+  - id: "eWTW-PBS-053-020-040"
+    csn: "530204"
+    title: "Pack Bay and Belly Support Frames"
+    realized: true
+  - id: "eWTW-PBS-053-020-050"
+    csn: "530205"
+    title: "Passenger and Service Door Surrounds"
+    realized: true
+  - id: "eWTW-PBS-053-020-060"
+    csn: "530206"
+    title: "Center to Aft Production Join"
+    realized: true

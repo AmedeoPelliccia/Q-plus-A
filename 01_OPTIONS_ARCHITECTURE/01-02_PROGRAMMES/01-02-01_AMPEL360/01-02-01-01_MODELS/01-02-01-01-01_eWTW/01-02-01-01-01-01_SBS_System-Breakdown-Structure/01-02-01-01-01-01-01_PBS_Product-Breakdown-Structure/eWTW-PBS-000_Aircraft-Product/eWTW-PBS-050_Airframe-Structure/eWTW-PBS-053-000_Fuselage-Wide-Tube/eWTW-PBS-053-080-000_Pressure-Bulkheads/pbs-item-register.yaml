@@ -1,0 +1,16 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-080-010"
+    csn: "530801"
+    title: "Aft Pressure Bulkhead"
+    realized: true
+  - id: "eWTW-PBS-053-080-020"
+    csn: "530802"
+    title: "Bulkhead Standards and Instance Register"
+    realized: true
+  - id: "eWTW-PBS-053-080-030"
+    csn: "530803"
+    title: "Pressure Decks and Local Webs"
+    realized: true

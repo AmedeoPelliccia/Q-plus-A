@@ -1,0 +1,13 @@
+# eWTW-PBS-053-110-030 - Venting Drainage and Thermal Provisions
+
+CSN `531103` - grammar `EWTW-531103-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors.
+
+## Items
+
+- `EWTW-531103-000` STRUCTURE-BAY-VENT-AND-THERMAL-PROVISIONS
+- `EWTW-531103-010` SURROUND-VENT-DUCT-OVERBOARD
+- `EWTW-531103-020` SURROUND-BURST-PANEL
+- `EWTW-531103-030` STRUCTURE-DRAIN-PATH
+- `EWTW-531103-040` SUPPORT-THERMAL-BARRIER
+
+Generated 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
