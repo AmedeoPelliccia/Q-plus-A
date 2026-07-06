@@ -1,4 +1,461 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">
-  <rect width="1200" height="800" fill="#f4f4f4" stroke="#999"/>
-  <text x="600" y="400" font-family="sans-serif" font-size="28" text-anchor="middle" fill="#555">ECS General and Zoning — placeholder</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ICN-EWTW-021000010-001-01
+  AMPEL360 eWTW - ENVIRONMENTAL CONTROL SYSTEM (ATA 21)
+  ECS GENERAL ARRANGEMENT AND CABIN ZONING
+  SNS 021-000-010 | AMM PMC-EWTW-AMM | Q+ATLANTIDE / G-ATLAS 000-099 / 020-029 / 021
+  Issue 01 | 2026-07-06 | Originator: GQAOA .INC (AM.PEL) | Sec class 01
+  Vector master for the Q+A repository. No-AAA compliant.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1684" height="1191" viewBox="0 0 1684 1191"
+     role="img" aria-labelledby="icnTitle icnDesc">
+  <title id="icnTitle">ICN-EWTW-021000010-001-01 - eWTW ECS general arrangement and cabin zoning</title>
+  <desc id="icnDesc">Plan view of ECS control zones and air distribution, and side elevation of
+  lower-lobe compartments and ventilation path, for the AMPEL360 eWTW bleedless electric ECS.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; fill:#1a1a1a; }
+      .t1 { font-size:23px; font-weight:bold; letter-spacing:.4px; }
+      .t2 { font-size:12.5px; fill:#444; }
+      .vt { font-size:15px; font-weight:bold; letter-spacing:.3px; }
+      .lb { font-size:11.5px; }
+      .sm { font-size:10.5px; fill:#222; }
+      .xs { font-size:9px; fill:#555; }
+      .b  { font-weight:bold; }
+      .mid { text-anchor:middle; }
+      .rgt { text-anchor:end; }
+      .outl { stroke:#1a1a1a; stroke-width:2; fill:none; stroke-linejoin:round; }
+      .ln   { stroke:#1a1a1a; stroke-width:1.3; fill:none; }
+      .thin { stroke:#666; stroke-width:.8; fill:none; }
+      .zb   { stroke:#1a1a1a; stroke-width:1; stroke-dasharray:6 4; fill:none; }
+      .apb  { stroke:#1a1a1a; stroke-width:1.5; stroke-dasharray:10 3 2 3; fill:none; }
+      .hid  { stroke:#555; stroke-width:1; stroke-dasharray:4 3; fill:none; }
+      .eq   { fill:#f4f6f8; stroke:#1a1a1a; stroke-width:1.3; }
+      .sup  { stroke:#1f6fb2; stroke-width:2; fill:none; }
+      .rec  { stroke:#2e8b57; stroke-width:1.7; stroke-dasharray:7 4; fill:none; }
+      .trm  { stroke:#d9822b; stroke-width:1.6; stroke-dasharray:2 3; fill:none; }
+      .ovb  { stroke:#5a5a5a; stroke-width:2; fill:none; }
+      .co   { fill:#ffffff; stroke:#1a1a1a; stroke-width:1.4; }
+      .cot  { font-size:12px; font-weight:bold; text-anchor:middle; }
+      .ldr  { stroke:#1a1a1a; stroke-width:.9; fill:none; }
+      .box  { fill:#ffffff; stroke:#1a1a1a; stroke-width:1.2; }
+      .hd   { fill:#eef1f4; stroke:#1a1a1a; stroke-width:1.2; }
+      .zfd { fill:#dde8f5; } .z1 { fill:#e2efdc; } .z2 { fill:#f7eed6; }
+      .z3  { fill:#ecdff2; } .uf { fill:#efefef; } .pb { fill:#f9f1ea; }
+      .np  { fill:#f5f5f5; }
+    </style>
+
+    <marker id="aBlu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1f6fb2"/></marker>
+    <marker id="aGrn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2e8b57"/></marker>
+    <marker id="aOrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d9822b"/></marker>
+    <marker id="aGry" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#5a5a5a"/></marker>
+    <marker id="aBlk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1a1a1a"/></marker>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <circle cx="5" cy="5" r="3" fill="#1a1a1a"/></marker>
+
+    <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#e8ebee"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#9aa4ad" stroke-width="1"/>
+    </pattern>
+
+    <clipPath id="fusePlan">
+      <path d="M130,390 C150,362 185,348 230,344 L920,344 C990,348 1045,368 1080,390
+               C1045,412 990,432 920,436 L230,436 C185,432 150,418 130,390 Z"/>
+    </clipPath>
+    <clipPath id="fuseSide">
+      <path d="M130,806 C152,766 196,744 260,740 L918,740 C992,741 1044,754 1080,776
+               C1030,802 960,842 860,860 L310,862 C225,861 158,842 130,806 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============ SHEET ============ -->
+  <rect x="0" y="0" width="1684" height="1191" fill="#ffffff"/>
+  <rect x="24" y="24" width="1636" height="1143" fill="#ffffff" stroke="#1a1a1a" stroke-width="2"/>
+  <rect x="30" y="30" width="1624" height="1131" fill="none" stroke="#1a1a1a" stroke-width="0.7"/>
+
+  <!-- ============ HEADER ============ -->
+  <text class="t1" x="48" y="64">AMPEL360 eWTW &#8212; ENVIRONMENTAL CONTROL SYSTEM (ATA 21)</text>
+  <text class="t2" x="48" y="88">ECS GENERAL ARRANGEMENT AND CABIN ZONING &#183; 021-000-010 &#183; AIRCRAFT MAINTENANCE MANUAL (PMC-EWTW-AMM)</text>
+  <text class="lb b rgt" x="1642" y="56">ICN-EWTW-021000010-001-01</text>
+  <text class="sm rgt" x="1642" y="74">S1000D ICN &#8212; VECTOR MASTER &#183; ISSUE 01 &#183; 2026-07-06</text>
+  <text class="xs rgt" x="1642" y="90">Q+ATLANTIDE &#8250; G-ATLAS 000-099 &#8250; 020-029 &#8250; 021 &#8250; 021-000 &#8250; 021-000-010</text>
+  <line x1="40" y1="102" x2="1644" y2="102" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- ============ VIEW A : PLAN VIEW ============ -->
+  <text class="vt" x="48" y="132">VIEW A &#8212; PLAN VIEW &#183; ECS CONTROL ZONES AND AIR DISTRIBUTION</text>
+  <line x1="48" y1="139" x2="560" y2="139" class="thin"/>
+  <line x1="122" y1="163" x2="82" y2="163" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#aBlk)"/>
+  <text class="sm b" x="130" y="167">FWD</text>
+
+  <!-- centerline -->
+  <line x1="106" y1="390" x2="1106" y2="390" stroke="#888" stroke-width="0.9" stroke-dasharray="20 5 4 5"/>
+  <text class="xs" x="1112" y="393">CL</text>
+
+  <!-- zone fills clipped to fuselage -->
+  <g clip-path="url(#fusePlan)">
+    <rect x="120" y="340" width="55"  height="100" class="np"/>
+    <rect x="175" y="340" width="90"  height="100" class="zfd"/>
+    <rect x="265" y="340" width="210" height="100" class="z1"/>
+    <rect x="475" y="340" width="210" height="100" class="z2"/>
+    <rect x="685" y="340" width="220" height="100" class="z3"/>
+    <rect x="905" y="340" width="185" height="100" class="np"/>
+  </g>
+
+  <!-- wings and tail (under fuselage outline) -->
+  <path d="M545,344 L722,158 L770,158 L700,344 Z" fill="#fdfdfd" class="ln" stroke-width="1.6"/>
+  <path d="M545,436 L722,622 L770,622 L700,436 Z" fill="#fdfdfd" class="ln" stroke-width="1.6"/>
+  <rect x="585" y="239" width="88" height="28" rx="8" fill="#ffffff" class="ln" stroke-width="1.5"/>
+  <circle cx="592" cy="253" r="4" fill="#cfd4d9" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="585" y="513" width="88" height="28" rx="8" fill="#ffffff" class="ln" stroke-width="1.5"/>
+  <circle cx="592" cy="527" r="4" fill="#cfd4d9" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M978,357 L1036,300 L1064,300 L1014,357 Z" fill="#fdfdfd" class="ln" stroke-width="1.4"/>
+  <path d="M978,423 L1036,480 L1064,480 L1014,423 Z" fill="#fdfdfd" class="ln" stroke-width="1.4"/>
+  <rect x="958" y="386" width="110" height="8" rx="4" fill="#d9dde1" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- fuselage outline -->
+  <path d="M130,390 C150,362 185,348 230,344 L920,344 C990,348 1045,368 1080,390
+           C1045,412 990,432 920,436 L230,436 C185,432 150,418 130,390 Z" class="outl"/>
+
+  <!-- zone boundaries -->
+  <line x1="175" y1="346" x2="175" y2="434" class="zb"/>
+  <line x1="265" y1="346" x2="265" y2="434" class="zb"/>
+  <line x1="475" y1="346" x2="475" y2="434" class="zb"/>
+  <line x1="685" y1="346" x2="685" y2="434" class="zb"/>
+  <line x1="905" y1="346" x2="905" y2="434" class="apb"/>
+
+  <!-- boundary ticks and tags -->
+  <line x1="265" y1="436" x2="265" y2="447" class="thin"/>
+  <line x1="475" y1="436" x2="475" y2="447" class="thin"/>
+  <line x1="905" y1="436" x2="905" y2="447" class="thin"/>
+  <text class="xs mid" x="265" y="458">ZB-1</text>
+  <text class="xs mid" x="475" y="458">ZB-2</text>
+  <line x1="685" y1="344" x2="685" y2="333" class="thin"/>
+  <rect x="668" y="316" width="34" height="12" fill="#ffffff"/>
+  <text class="xs mid" x="685" y="325">ZB-3</text>
+  <text class="xs mid" x="905" y="458">AFT PRESS BLKHD</text>
+
+  <!-- zone name labels -->
+  <text class="lb b mid" x="220" y="455">FD</text>
+  <text class="xs mid" x="220" y="467">FLIGHT DECK</text>
+  <text class="lb b mid" x="370" y="455">ZONE 1</text>
+  <text class="xs mid" x="370" y="467">FWD CABIN</text>
+  <rect x="488" y="444" width="64" height="26" fill="#ffffff" stroke="#999" stroke-width="0.5"/>
+  <text class="lb b mid" x="520" y="455">ZONE 2</text>
+  <text class="xs mid" x="520" y="467">MID CABIN</text>
+  <rect x="768" y="444" width="64" height="26" fill="#ffffff" stroke="#999" stroke-width="0.5"/>
+  <text class="lb b mid" x="800" y="455">ZONE 3</text>
+  <text class="xs mid" x="800" y="467">AFT CABIN</text>
+
+  <!-- belly fairing (hidden contour) -->
+  <rect x="545" y="322" width="255" height="136" rx="26" class="hid"/>
+  <text class="xs b mid" x="617" y="338">PB</text>
+
+  <!-- ram air inlets -->
+  <path d="M560,322 L596,322 L588,332 L568,332 Z" fill="#dfe6ec" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M560,458 L596,458 L588,448 L568,448 Z" fill="#dfe6ec" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="578" y1="300" x2="578" y2="318" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="578" y1="480" x2="578" y2="462" class="sup" marker-end="url(#aBlu)"/>
+
+  <!-- packs -->
+  <rect x="640" y="330" width="70" height="32" rx="4" class="eq"/>
+  <text class="sm b mid" x="675" y="350">E-PACK 1</text>
+  <rect x="640" y="418" width="70" height="32" rx="4" class="eq"/>
+  <text class="sm b mid" x="675" y="438">E-PACK 2</text>
+  <path d="M710,346 L770,346 L770,368" class="sup" marker-end="url(#aBlu)"/>
+  <path d="M710,434 L770,434 L770,412" class="sup" marker-end="url(#aBlu)"/>
+
+  <!-- recirculation fans -->
+  <circle cx="736" cy="366" r="8" class="eq"/>
+  <line x1="731" y1="361" x2="741" y2="371" class="ln" stroke-width="1"/>
+  <line x1="741" y1="361" x2="731" y2="371" class="ln" stroke-width="1"/>
+  <circle cx="736" cy="414" r="8" class="eq"/>
+  <line x1="731" y1="409" x2="741" y2="419" class="ln" stroke-width="1"/>
+  <line x1="741" y1="409" x2="731" y2="419" class="ln" stroke-width="1"/>
+  <line x1="744" y1="368" x2="757" y2="376" class="rec" marker-end="url(#aGrn)"/>
+  <line x1="744" y1="412" x2="757" y2="404" class="rec" marker-end="url(#aGrn)"/>
+
+  <!-- recirc collectors -->
+  <path d="M868,346 L868,352 L748,352 L741,359" class="rec" marker-end="url(#aGrn)"/>
+  <path d="M340,410 L340,428 L716,428 L727,420" class="rec" marker-end="url(#aGrn)"/>
+  <line x1="553" y1="410" x2="553" y2="428" class="rec"/>
+
+  <!-- mixing unit -->
+  <rect x="760" y="372" width="55" height="36" rx="3" class="eq"/>
+  <text class="xs b mid" x="787" y="387">MIXING</text>
+  <text class="xs mid" x="787" y="399">UNIT</text>
+
+  <!-- distribution trunk and risers -->
+  <line x1="760" y1="390" x2="216" y2="390" class="sup" marker-end="url(#aBlu)"/>
+  <path d="M815,390 L852,390" class="sup"/>
+  <line x1="366" y1="384" x2="366" y2="358" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="366" y1="396" x2="366" y2="422" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="577" y1="384" x2="577" y2="358" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="577" y1="396" x2="577" y2="422" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="852" y1="384" x2="852" y2="358" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="852" y1="396" x2="852" y2="422" class="sup" marker-end="url(#aBlu)"/>
+
+  <!-- trim air valves -->
+  <g>
+    <circle cx="232" cy="390" r="5.5" class="eq"/><line x1="228" y1="394" x2="236" y2="386" class="ln" stroke-width="1.1"/>
+    <circle cx="352" cy="390" r="5.5" class="eq"/><line x1="348" y1="394" x2="356" y2="386" class="ln" stroke-width="1.1"/>
+    <circle cx="563" cy="390" r="5.5" class="eq"/><line x1="559" y1="394" x2="567" y2="386" class="ln" stroke-width="1.1"/>
+    <circle cx="830" cy="390" r="5.5" class="eq"/><line x1="826" y1="394" x2="834" y2="386" class="ln" stroke-width="1.1"/>
+    <line x1="218" y1="406" x2="228" y2="396" class="trm" marker-end="url(#aOrg)"/>
+    <line x1="338" y1="406" x2="348" y2="396" class="trm" marker-end="url(#aOrg)"/>
+    <line x1="549" y1="406" x2="559" y2="396" class="trm" marker-end="url(#aOrg)"/>
+    <line x1="816" y1="406" x2="826" y2="396" class="trm" marker-end="url(#aOrg)"/>
+  </g>
+
+  <!-- under-floor battery bay and E-E bay (hidden) -->
+  <rect x="625" y="358" width="115" height="64" class="hid"/>
+  <text class="xs mid" x="682" y="411">BATT BAY (053-900)</text>
+  <rect x="287" y="360" width="58" height="60" class="hid"/>
+  <text class="xs mid" x="316" y="382">E-E BAY</text>
+
+  <!-- outflow and relief valves -->
+  <rect x="933" y="400" width="26" height="16" rx="3" class="eq"/>
+  <line x1="959" y1="412" x2="988" y2="428" class="ovb" marker-end="url(#aGry)"/>
+  <text class="xs" x="992" y="436">OVBD</text>
+  <rect x="928" y="364" width="10" height="9" class="eq"/>
+  <rect x="942" y="364" width="10" height="9" class="eq"/>
+  <line x1="952" y1="366" x2="976" y2="352" class="ovb" stroke-width="1.4" marker-end="url(#aGry)"/>
+
+  <!-- ============ VIEW A CALLOUTS ============ -->
+  <g>
+    <line x1="628" y1="302" x2="658" y2="338" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="628" cy="298" r="11" class="co"/><text class="cot" x="628" y="302">1</text>
+    <line x1="628" y1="482" x2="658" y2="444" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="628" cy="486" r="11" class="co"/><text class="cot" x="628" y="490">2</text>
+    <line x1="546" y1="300" x2="570" y2="322" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="544" cy="296" r="11" class="co"/><text class="cot" x="544" y="300">3</text>
+    <line x1="868" y1="450" x2="795" y2="410" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="872" cy="453" r="11" class="co"/><text class="cot" x="872" y="457">4</text>
+    <line x1="710" y1="308" x2="733" y2="358" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="708" cy="304" r="11" class="co"/><text class="cot" x="708" y="308">5</text>
+    <line x1="300" y1="320" x2="330" y2="388" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="298" cy="316" r="11" class="co"/><text class="cot" x="298" y="320">6</text>
+    <line x1="518" y1="318" x2="560" y2="386" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="516" cy="314" r="11" class="co"/><text class="cot" x="516" y="318">7</text>
+    <line x1="998" y1="396" x2="962" y2="407" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="1002" cy="394" r="11" class="co"/><text class="cot" x="1002" y="398">8</text>
+    <line x1="996" y1="342" x2="956" y2="363" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="1000" cy="340" r="11" class="co"/><text class="cot" x="1000" y="344">9</text>
+    <line x1="742" y1="487" x2="738" y2="426" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="742" cy="498" r="11" class="co"/><text class="cot" x="742" y="502">10</text>
+    <line x1="252" y1="318" x2="296" y2="362" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="250" cy="314" r="11" class="co"/><text class="cot" x="250" y="318">11</text>
+  </g>
+
+  <!-- ============ VIEW B : SIDE ELEVATION ============ -->
+  <text class="vt" x="48" y="668">VIEW B &#8212; SIDE ELEVATION &#183; LOWER-LOBE COMPARTMENTS AND VENTILATION PATH</text>
+  <line x1="48" y1="675" x2="620" y2="675" class="thin"/>
+  <line x1="122" y1="700" x2="82" y2="700" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#aBlk)"/>
+  <text class="sm b" x="130" y="704">FWD</text>
+
+  <!-- fin and stab behind profile -->
+  <path d="M920,741 L955,680 L1016,680 L1050,741 Z" fill="#fdfdfd" class="ln" stroke-width="1.5"/>
+  <path d="M980,762 L1070,746 L1074,752 L986,769 Z" fill="#e8e8e8" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- zone tints -->
+  <g clip-path="url(#fuseSide)">
+    <rect x="120" y="740" width="55"  height="86" class="np"/>
+    <rect x="175" y="740" width="90"  height="86" class="zfd"/>
+    <rect x="265" y="740" width="210" height="86" class="z1"/>
+    <rect x="475" y="740" width="210" height="86" class="z2"/>
+    <rect x="685" y="740" width="220" height="86" class="z3"/>
+    <rect x="905" y="740" width="185" height="86" class="np"/>
+    <rect x="130" y="826" width="960" height="40" class="uf"/>
+  </g>
+
+  <!-- profile outline -->
+  <path d="M130,806 C152,766 196,744 260,740 L918,740 C992,741 1044,754 1080,776
+           C1030,802 960,842 860,860 L310,862 C225,861 158,842 130,806 Z" class="outl"/>
+  <polyline points="210,764 233,745 258,742" class="ln" stroke-width="1.4"/>
+
+  <!-- cabin floor -->
+  <line x1="172" y1="826" x2="902" y2="826" stroke="#333" stroke-width="1.2" stroke-dasharray="8 4"/>
+  <text class="xs" x="826" y="821">CABIN FLOOR</text>
+
+  <!-- zone boundaries -->
+  <line x1="265" y1="742" x2="265" y2="860" class="zb"/>
+  <line x1="475" y1="742" x2="475" y2="861" class="zb"/>
+  <line x1="685" y1="742" x2="685" y2="861" class="zb"/>
+  <line x1="905" y1="742" x2="905" y2="850" class="apb"/>
+  <text class="sm b" x="196" y="758">FD</text>
+  <text class="sm b" x="318" y="758">Z1</text>
+  <text class="sm b" x="522" y="758">Z2</text>
+  <text class="sm b" x="732" y="758">Z3</text>
+
+  <!-- belly fairing -->
+  <path d="M540,861 C560,884 600,890 660,890 L720,890 C772,890 802,880 815,860" class="ln" stroke-width="1.4" fill="#f9f1ea"/>
+  <rect x="636" y="868" width="30" height="15" class="eq"/><text class="xs mid" x="651" y="879">PK1</text>
+  <rect x="676" y="868" width="30" height="15" class="eq"/><text class="xs mid" x="691" y="879">PK2</text>
+  <line x1="505" y1="882" x2="536" y2="874" class="sup" marker-end="url(#aBlu)"/>
+  <text class="xs" x="480" y="894">RAM</text>
+  <line x1="818" y1="872" x2="850" y2="882" class="ovb" marker-end="url(#aGry)"/>
+  <text class="xs" x="854" y="892">RAM EXIT</text>
+
+  <!-- lower-lobe compartments -->
+  <rect x="235" y="830" width="60" height="28" class="box" stroke-width="1.1"/>
+  <text class="xs b mid" x="265" y="847">E-E</text>
+  <rect x="315" y="830" width="150" height="28" class="box" stroke-width="1.1"/>
+  <text class="xs b mid" x="390" y="847">FWD CARGO</text>
+  <rect x="480" y="830" width="128" height="28" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="1.1"/>
+  <rect x="500" y="836" width="88" height="14" fill="#ffffff" stroke="#999" stroke-width="0.5"/>
+  <text class="xs b mid" x="544" y="846">CTR WING BOX</text>
+  <rect x="622" y="830" width="116" height="28" fill="#f3e3e3" stroke="#1a1a1a" stroke-width="1.1"/>
+  <text class="xs b mid" x="680" y="842">BATT BAY</text>
+  <text class="xs mid" x="680" y="853">053-900</text>
+  <rect x="752" y="830" width="128" height="28" class="box" stroke-width="1.1"/>
+  <text class="xs b mid" x="816" y="847">AFT CARGO</text>
+
+  <!-- side airflow -->
+  <line x1="240" y1="752" x2="240" y2="772" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="370" y1="752" x2="370" y2="772" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="580" y1="752" x2="580" y2="772" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="795" y1="752" x2="795" y2="772" class="sup" marker-end="url(#aBlu)"/>
+  <line x1="330" y1="810" x2="330" y2="838" class="rec" marker-end="url(#aGrn)"/>
+  <line x1="614" y1="810" x2="614" y2="842" class="rec" marker-end="url(#aGrn)"/>
+  <line x1="745" y1="810" x2="745" y2="842" class="rec" marker-end="url(#aGrn)"/>
+  <line x1="852" y1="844" x2="882" y2="851" class="rec" marker-end="url(#aGrn)"/>
+  <rect x="888" y="848" width="22" height="12" class="eq"/>
+  <line x1="910" y1="856" x2="944" y2="871" class="ovb" marker-end="url(#aGry)"/>
+  <text class="xs" x="948" y="882">OVBD</text>
+  <line x1="712" y1="858" x2="712" y2="886" class="ovb" stroke-width="1.6" marker-end="url(#aGry)"/>
+  <line x1="252" y1="810" x2="252" y2="832" class="rec" marker-end="url(#aGrn)"/>
+  <line x1="295" y1="852" x2="313" y2="857" class="ovb" stroke-width="1.4" marker-end="url(#aGry)"/>
+  <rect x="386" y="824" width="9" height="9" class="eq"/>
+  <rect x="812" y="824" width="9" height="9" class="eq"/>
+
+  <!-- VIEW B callouts -->
+  <g>
+    <line x1="750" y1="914" x2="714" y2="884" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="752" cy="918" r="11" class="co"/><text class="cot" x="752" y="922">10</text>
+    <line x1="200" y1="896" x2="250" y2="850" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="197" cy="900" r="11" class="co"/><text class="cot" x="197" y="904">11</text>
+    <line x1="362" y1="902" x2="391" y2="836" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="360" cy="906" r="11" class="co"/><text class="cot" x="360" y="910">12</text>
+    <line x1="928" y1="906" x2="900" y2="862" class="ldr" marker-end="url(#dot)"/>
+    <circle cx="930" cy="910" r="11" class="co"/><text class="cot" x="930" y="914">8</text>
+  </g>
+
+  <!-- ============ RIGHT COLUMN : ITEM LEGEND ============ -->
+  <g>
+    <rect x="1162" y="115" width="492" height="348" class="box"/>
+    <rect x="1162" y="115" width="492" height="24" class="hd"/>
+    <text class="lb b" x="1174" y="132">ITEM &#183; NOMENCLATURE</text>
+    <g class="lb">
+      <circle cx="1184" cy="156" r="10" class="co"/><text class="cot" x="1184" y="160">1</text>
+      <text x="1204" y="160">Electric air-conditioning pack &#8212; E-PACK 1 (LH)</text>
+      <circle cx="1184" cy="182" r="10" class="co"/><text class="cot" x="1184" y="186">2</text>
+      <text x="1204" y="186">Electric air-conditioning pack &#8212; E-PACK 2 (RH)</text>
+      <circle cx="1184" cy="208" r="10" class="co"/><text class="cot" x="1184" y="212">3</text>
+      <text x="1204" y="212">Ram-air inlet / exit (L and R), pack heat-sink circuit</text>
+      <circle cx="1184" cy="234" r="10" class="co"/><text class="cot" x="1184" y="238">4</text>
+      <text x="1204" y="238">Mixing unit (fresh / recirculated air)</text>
+      <circle cx="1184" cy="260" r="10" class="co"/><text class="cot" x="1184" y="264">5</text>
+      <text x="1204" y="264">Recirculation fan and HEPA filter (L and R)</text>
+      <circle cx="1184" cy="286" r="10" class="co"/><text class="cot" x="1184" y="290">6</text>
+      <text x="1204" y="290">Conditioned-air distribution trunk and zone risers</text>
+      <circle cx="1184" cy="312" r="10" class="co"/><text class="cot" x="1184" y="316">7</text>
+      <text x="1204" y="316">Zone temperature trim valve (FD, Z1, Z2, Z3)</text>
+      <circle cx="1184" cy="338" r="10" class="co"/><text class="cot" x="1184" y="342">8</text>
+      <text x="1204" y="342">Outflow valve &#8212; cabin pressure control</text>
+      <circle cx="1184" cy="364" r="10" class="co"/><text class="cot" x="1184" y="368">9</text>
+      <text x="1204" y="368">Positive / negative pressure relief valves</text>
+      <circle cx="1184" cy="390" r="10" class="co"/><text class="cot" x="1184" y="394">10</text>
+      <text x="1204" y="394">Battery-bay ventilation group (REF 053-900)</text>
+      <circle cx="1184" cy="416" r="10" class="co"/><text class="cot" x="1184" y="420">11</text>
+      <text x="1204" y="420">Avionics (E-E) bay ventilation group</text>
+      <circle cx="1184" cy="442" r="10" class="co"/><text class="cot" x="1184" y="446">12</text>
+      <text x="1204" y="446">Cargo compartment isolation / vent valves</text>
+    </g>
+  </g>
+
+  <!-- ============ ZONE KEY ============ -->
+  <g>
+    <rect x="1162" y="478" width="492" height="182" class="box"/>
+    <rect x="1162" y="478" width="492" height="24" class="hd"/>
+    <text class="lb b" x="1174" y="495">ZONE KEY</text>
+    <g class="lb">
+      <rect x="1176" y="512" width="20" height="12" class="zfd" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="1206" y="522"><tspan class="b">FD</tspan>&#160;&#160;Flight deck zone</text>
+      <rect x="1176" y="536" width="20" height="12" class="z1" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="1206" y="546"><tspan class="b">Z1</tspan>&#160;&#160;Forward cabin zone</text>
+      <rect x="1176" y="560" width="20" height="12" class="z2" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="1206" y="570"><tspan class="b">Z2</tspan>&#160;&#160;Mid cabin zone</text>
+      <rect x="1176" y="584" width="20" height="12" class="z3" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="1206" y="594"><tspan class="b">Z3</tspan>&#160;&#160;Aft cabin zone</text>
+      <rect x="1176" y="608" width="20" height="12" class="uf" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="1206" y="618"><tspan class="b">UF</tspan>&#160;&#160;Under-floor compartments (E-E, cargo, battery bay)</text>
+      <rect x="1176" y="632" width="20" height="12" class="pb" stroke="#1a1a1a" stroke-width="0.8"/>
+      <text x="1206" y="642"><tspan class="b">PB</tspan>&#160;&#160;Pack bay &#8212; belly fairing (unpressurized)</text>
+    </g>
+  </g>
+
+  <!-- ============ AIRFLOW KEY ============ -->
+  <g>
+    <rect x="1162" y="674" width="492" height="150" class="box"/>
+    <rect x="1162" y="674" width="492" height="24" class="hd"/>
+    <text class="lb b" x="1174" y="691">AIRFLOW KEY</text>
+    <g class="lb">
+      <line x1="1176" y1="712" x2="1226" y2="712" class="sup" marker-end="url(#aBlu)"/>
+      <text x="1240" y="716">Conditioned supply air</text>
+      <line x1="1176" y1="736" x2="1226" y2="736" class="rec" marker-end="url(#aGrn)"/>
+      <text x="1240" y="740">Recirculation / return air</text>
+      <line x1="1176" y1="760" x2="1226" y2="760" class="trm" marker-end="url(#aOrg)"/>
+      <text x="1240" y="764">Trim air (warm) to zone valve</text>
+      <line x1="1176" y1="784" x2="1226" y2="784" class="ovb" marker-end="url(#aGry)"/>
+      <text x="1240" y="788">Exhaust / overboard</text>
+      <line x1="1176" y1="808" x2="1226" y2="808" class="hid"/>
+      <text x="1240" y="812">Hidden / below-floor contour</text>
+    </g>
+  </g>
+
+  <!-- ============ TITLE BLOCK ============ -->
+  <g>
+    <rect x="1162" y="838" width="492" height="322" class="box" stroke-width="1.6"/>
+    <rect x="1162" y="838" width="492" height="30" class="hd"/>
+    <text class="lb b" x="1174" y="858">GQAOA .INC &#8212; Q+ PROGRAMMES &#183; AMPEL360</text>
+    <line x1="1162" y1="892" x2="1654" y2="892" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="884">AIRCRAFT MAINTENANCE MANUAL &#8212; PMC-EWTW-AMM</text>
+    <text x="1174" y="918" style="font-size:17px;font-weight:bold">ECS &#8212; GENERAL AND ZONING</text>
+    <text class="xs" x="1174" y="934">GENERAL ARRANGEMENT &#183; CABIN ZONES &#183; AIR DISTRIBUTION</text>
+    <line x1="1162" y1="944" x2="1654" y2="944" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="962"><tspan class="b">MODEL:</tspan> AMPEL360 eWTW</text>
+    <text class="sm" x="1420" y="962"><tspan class="b">SNS:</tspan> 021-000-010</text>
+    <line x1="1162" y1="972" x2="1654" y2="972" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="990"><tspan class="b">ICN:</tspan> ICN-EWTW-021000010-001-01</text>
+    <line x1="1162" y1="1000" x2="1654" y2="1000" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="1018"><tspan class="b">ISSUE:</tspan> 01</text>
+    <text class="sm" x="1300" y="1018"><tspan class="b">DATE:</tspan> 2026-07-06</text>
+    <text class="sm" x="1490" y="1018"><tspan class="b">SHEET:</tspan> 1 OF 1</text>
+    <line x1="1162" y1="1028" x2="1654" y2="1028" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="1046"><tspan class="b">SEC CLASS:</tspan> 01 &#8212; UNCLASSIFIED</text>
+    <text class="sm" x="1450" y="1046"><tspan class="b">LANG:</tspan> EN</text>
+    <line x1="1162" y1="1056" x2="1654" y2="1056" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="1074"><tspan class="b">FRAMEWORK:</tspan> Q+ATLANTIDE &#8250; G-ATLAS 000-099 &#8250; 021</text>
+    <line x1="1162" y1="1084" x2="1654" y2="1084" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="1102"><tspan class="b">APPLICABILITY:</tspan> eWTW &#8212; ALL</text>
+    <line x1="1162" y1="1112" x2="1654" y2="1112" class="ln" stroke-width="0.8"/>
+    <text class="sm" x="1174" y="1130"><tspan class="b">ORIGINATOR:</tspan> AM.PEL &#8212; GQAOA .INC, NAPLES (IT)</text>
+    <text class="xs" x="1174" y="1148">Vector master &#183; No-AAA compliant &#183; TPuBS: PMC-EWTW-AMM / ICN</text>
+  </g>
+
+  <!-- ============ NOTES ============ -->
+  <g>
+    <text class="lb b" x="48" y="1022">NOTES</text>
+    <line x1="48" y1="1028" x2="110" y2="1028" class="thin"/>
+    <text class="lb" x="48" y="1050">1&#160;&#160;The eWTW ECS is a bleedless, all-electric architecture: both packs are motor-driven compressor units; no engine bleed air is used.</text>
+    <text class="lb" x="48" y="1074">2&#160;&#160;Zone boundaries ZB-1 / ZB-2 / ZB-3 are ECS control boundaries and do not necessarily coincide with structural station breaks.</text>
+    <text class="lb" x="48" y="1098">3&#160;&#160;The under-floor battery bay (REF 053-900) uses a dedicated, smoke-isolated ventilation and thermal-management circuit, segregated from cabin air.</text>
+    <text class="lb" x="48" y="1122">4&#160;&#160;For distribution detail refer to 021-020; for pressurization control refer to 021-030; for pack detail refer to 021-050.</text>
+    <text class="lb" x="48" y="1146">5&#160;&#160;Callout items 1&#8211;12: see ITEM &#183; NOMENCLATURE. Airflow direction symbols: see AIRFLOW KEY.</text>
+  </g>
 </svg>
