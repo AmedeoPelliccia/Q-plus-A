@@ -3,9 +3,13 @@
   ICN-EWTW-021000010-001-01
   AMPEL360 eWTW - ENVIRONMENTAL CONTROL SYSTEM (ATA 21)
   ECS GENERAL ARRANGEMENT AND CABIN ZONING
-  SNS 021-000-010 | AMM PMC-EWTW-AMM | Q+ATLANTIDE / G-ATLAS 000-099 / 020-029 / 021
+  SNS 021-000-010 | Q+ATLANTIDE / G-ATLAS 000-099 / 020-029 / 021 / 021-000 / 021-000-010
   Issue 01 | 2026-07-06 | Originator: GQAOA .INC (AM.PEL) | Sec class 01
-  Vector master for the Q+A repository. No-AAA compliant.
+  COMMON INFORMATION OBJECT - PUBLICATION-NEUTRAL ICN MASTER.
+  Publication context (AMM, SDS, FCOM, IETP, training) is assigned at generation
+  time by DMRL + Publication Module; renditions are stamped via id anchors
+  pubSubtitle / pubContextRow. Canonical location: 021-000-010/ICN/source/.
+  No-AAA compliant.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1684" height="1191" viewBox="0 0 1684 1191"
      role="img" aria-labelledby="icnTitle icnDesc">
@@ -81,7 +85,7 @@
 
   <!-- ============ HEADER ============ -->
   <text class="t1" x="48" y="64">AMPEL360 eWTW &#8212; ENVIRONMENTAL CONTROL SYSTEM (ATA 21)</text>
-  <text class="t2" x="48" y="88">ECS GENERAL ARRANGEMENT AND CABIN ZONING &#183; 021-000-010 &#183; AIRCRAFT MAINTENANCE MANUAL (PMC-EWTW-AMM)</text>
+  <text id="pubSubtitle" class="t2" x="48" y="88">ECS GENERAL ARRANGEMENT AND CABIN ZONING &#183; 021-000-010 &#183; COMMON INFORMATION OBJECT &#183; PUBLICATION-NEUTRAL MASTER</text>
   <text class="lb b rgt" x="1642" y="56">ICN-EWTW-021000010-001-01</text>
   <text class="sm rgt" x="1642" y="74">S1000D ICN &#8212; VECTOR MASTER &#183; ISSUE 01 &#183; 2026-07-06</text>
   <text class="xs rgt" x="1642" y="90">Q+ATLANTIDE &#8250; G-ATLAS 000-099 &#8250; 020-029 &#8250; 021 &#8250; 021-000 &#8250; 021-000-010</text>
@@ -424,7 +428,7 @@
     <rect x="1162" y="838" width="492" height="30" class="hd"/>
     <text class="lb b" x="1174" y="858">GQAOA .INC &#8212; Q+ PROGRAMMES &#183; AMPEL360</text>
     <line x1="1162" y1="892" x2="1654" y2="892" class="ln" stroke-width="0.8"/>
-    <text class="sm" x="1174" y="884">AIRCRAFT MAINTENANCE MANUAL &#8212; PMC-EWTW-AMM</text>
+    <text id="pubContextRow" class="sm" x="1174" y="884">COMMON INFORMATION OBJECT &#8212; ICN MASTER (PUBLICATION-NEUTRAL)</text>
     <text x="1174" y="918" style="font-size:17px;font-weight:bold">ECS &#8212; GENERAL AND ZONING</text>
     <text class="xs" x="1174" y="934">GENERAL ARRANGEMENT &#183; CABIN ZONES &#183; AIR DISTRIBUTION</text>
     <line x1="1162" y1="944" x2="1654" y2="944" class="ln" stroke-width="0.8"/>
@@ -445,7 +449,7 @@
     <text class="sm" x="1174" y="1102"><tspan class="b">APPLICABILITY:</tspan> eWTW &#8212; ALL</text>
     <line x1="1162" y1="1112" x2="1654" y2="1112" class="ln" stroke-width="0.8"/>
     <text class="sm" x="1174" y="1130"><tspan class="b">ORIGINATOR:</tspan> AM.PEL &#8212; GQAOA .INC, NAPLES (IT)</text>
-    <text class="xs" x="1174" y="1148">Vector master &#183; No-AAA compliant &#183; TPuBS: PMC-EWTW-AMM / ICN</text>
+    <text class="xs" x="1174" y="1148">Vector master &#183; No-AAA compliant &#183; 01_INFORMATION-ARCHITECTURE &#183; 021-000-010/ICN/source</text>
   </g>
 
   <!-- ============ NOTES ============ -->
