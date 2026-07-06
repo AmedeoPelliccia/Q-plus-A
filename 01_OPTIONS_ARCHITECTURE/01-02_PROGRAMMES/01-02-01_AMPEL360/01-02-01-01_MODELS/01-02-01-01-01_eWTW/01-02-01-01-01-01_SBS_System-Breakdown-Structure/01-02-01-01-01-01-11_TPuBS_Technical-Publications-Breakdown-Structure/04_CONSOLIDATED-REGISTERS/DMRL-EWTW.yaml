@@ -1,0 +1,2620 @@
+# DMRL-EWTW.yaml — Consolidated Data Module Requirements List (eWTW)
+# Generated aggregation of all node-level DMRLs in 01_INFORMATION-ARCHITECTURE.
+# Regenerate whenever a node DMRL changes; do not edit by hand.
+
+product: "eWTW"
+mic: "EWTW"
+standard: "S1000D Issue 4.2"
+scope: "01_INFORMATION-ARCHITECTURE (all bands)"
+requirementCount: 212
+
+dataModuleRequirements:
+
+  - requirementId: "DMREQ-003-900-010-034-001"
+    node: "003-900-010"
+    infoCode: "034"
+    title: "Ground Charging Connection Interface - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-03-90-01-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+
+  - requirementId: "DMREQ-003-900-010-040-001"
+    node: "003-900-010"
+    infoCode: "040"
+    title: "Ground Charging Connection Interface - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-03-90-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+
+  - requirementId: "DMREQ-003-900-010-420-001"
+    node: "003-900-010"
+    infoCode: "420"
+    title: "Ground Charging Connection Interface - Fault isolation"
+    schemaType: "fault"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+    dataModules:
+      - "DMC-EWTW-A-03-90-01-00A-420A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+
+  - requirementId: "DMREQ-003-900-010-720-001"
+    node: "003-900-010"
+    infoCode: "720"
+    title: "Ground Charging Connection Interface - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+    dataModules:
+      - "DMC-EWTW-A-03-90-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+
+  - requirementId: "DMREQ-003-900-010-730-001"
+    node: "003-900-010"
+    infoCode: "730"
+    title: "Ground Charging Connection Interface - Test and check"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+    dataModules:
+      - "DMC-EWTW-A-03-90-01-00A-730A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+
+  - requirementId: "DMREQ-021-000-010-040-001"
+    node: "021-000-010"
+    infoCode: "040"
+    title: "ECS General and Zoning - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-00-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-000-010-200-001"
+    node: "021-000-010"
+    infoCode: "200"
+    title: "ECS General and Zoning - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-00-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-000-010-300-001"
+    node: "021-000-010"
+    infoCode: "300"
+    title: "ECS General and Zoning - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-00-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-200-010-040-001"
+    node: "021-200-010"
+    infoCode: "040"
+    title: "Distribution Ducting Architecture - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-20-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
+
+  - requirementId: "DMREQ-021-200-010-200-001"
+    node: "021-200-010"
+    infoCode: "200"
+    title: "Distribution Ducting Architecture - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-20-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
+
+  - requirementId: "DMREQ-021-200-010-300-001"
+    node: "021-200-010"
+    infoCode: "300"
+    title: "Distribution Ducting Architecture - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-20-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
+
+  - requirementId: "DMREQ-021-200-030-034-001"
+    node: "021-200-030"
+    infoCode: "034"
+    title: "Distribution Control and Balancing - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-20-03-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+
+  - requirementId: "DMREQ-021-200-030-040-001"
+    node: "021-200-030"
+    infoCode: "040"
+    title: "Distribution Control and Balancing - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-20-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+
+  - requirementId: "DMREQ-021-200-030-200-001"
+    node: "021-200-030"
+    infoCode: "200"
+    title: "Distribution Control and Balancing - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-20-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+
+  - requirementId: "DMREQ-021-200-030-300-001"
+    node: "021-200-030"
+    infoCode: "300"
+    title: "Distribution Control and Balancing - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-20-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+
+  - requirementId: "DMREQ-021-210-010-040-001"
+    node: "021-210-010"
+    infoCode: "040"
+    title: "Flight Deck Supply Ducting - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-21-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
+
+  - requirementId: "DMREQ-021-210-010-200-001"
+    node: "021-210-010"
+    infoCode: "200"
+    title: "Flight Deck Supply Ducting - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-21-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
+
+  - requirementId: "DMREQ-021-210-010-300-001"
+    node: "021-210-010"
+    infoCode: "300"
+    title: "Flight Deck Supply Ducting - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-21-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
+
+  - requirementId: "DMREQ-021-210-030-040-001"
+    node: "021-210-030"
+    infoCode: "040"
+    title: "Flight Deck Outlets and Diffusers - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-21-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-210-030-200-001"
+    node: "021-210-030"
+    infoCode: "200"
+    title: "Flight Deck Outlets and Diffusers - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-21-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-210-030-300-001"
+    node: "021-210-030"
+    infoCode: "300"
+    title: "Flight Deck Outlets and Diffusers - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-21-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-210-030-520-001"
+    node: "021-210-030"
+    infoCode: "520"
+    title: "Flight Deck Outlets and Diffusers - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-21-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-210-030-720-001"
+    node: "021-210-030"
+    infoCode: "720"
+    title: "Flight Deck Outlets and Diffusers - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-21-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-220-010-040-001"
+    node: "021-220-010"
+    infoCode: "040"
+    title: "Cabin Supply Riser Ducts - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-22-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
+
+  - requirementId: "DMREQ-021-220-010-200-001"
+    node: "021-220-010"
+    infoCode: "200"
+    title: "Cabin Supply Riser Ducts - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
+
+  - requirementId: "DMREQ-021-220-010-300-001"
+    node: "021-220-010"
+    infoCode: "300"
+    title: "Cabin Supply Riser Ducts - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
+
+  - requirementId: "DMREQ-021-220-030-040-001"
+    node: "021-220-030"
+    infoCode: "040"
+    title: "Cabin Outlets and Diffusers - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-22-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-220-030-200-001"
+    node: "021-220-030"
+    infoCode: "200"
+    title: "Cabin Outlets and Diffusers - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-220-030-300-001"
+    node: "021-220-030"
+    infoCode: "300"
+    title: "Cabin Outlets and Diffusers - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-220-030-520-001"
+    node: "021-220-030"
+    infoCode: "520"
+    title: "Cabin Outlets and Diffusers - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-220-030-720-001"
+    node: "021-220-030"
+    infoCode: "720"
+    title: "Cabin Outlets and Diffusers - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+
+  - requirementId: "DMREQ-021-220-050-040-001"
+    node: "021-220-050"
+    infoCode: "040"
+    title: "Overhead Distribution Manifold - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-22-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+
+  - requirementId: "DMREQ-021-220-050-200-001"
+    node: "021-220-050"
+    infoCode: "200"
+    title: "Overhead Distribution Manifold - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+
+  - requirementId: "DMREQ-021-220-050-300-001"
+    node: "021-220-050"
+    infoCode: "300"
+    title: "Overhead Distribution Manifold - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-05-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+
+  - requirementId: "DMREQ-021-220-050-520-001"
+    node: "021-220-050"
+    infoCode: "520"
+    title: "Overhead Distribution Manifold - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-05-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+
+  - requirementId: "DMREQ-021-220-050-720-001"
+    node: "021-220-050"
+    infoCode: "720"
+    title: "Overhead Distribution Manifold - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-22-05-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+
+  - requirementId: "DMREQ-021-230-010-040-001"
+    node: "021-230-010"
+    infoCode: "040"
+    title: "Gasper Fan - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-23-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+
+  - requirementId: "DMREQ-021-230-010-200-001"
+    node: "021-230-010"
+    infoCode: "200"
+    title: "Gasper Fan - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+
+  - requirementId: "DMREQ-021-230-010-300-001"
+    node: "021-230-010"
+    infoCode: "300"
+    title: "Gasper Fan - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+
+  - requirementId: "DMREQ-021-230-010-520-001"
+    node: "021-230-010"
+    infoCode: "520"
+    title: "Gasper Fan - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+
+  - requirementId: "DMREQ-021-230-010-720-001"
+    node: "021-230-010"
+    infoCode: "720"
+    title: "Gasper Fan - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+
+  - requirementId: "DMREQ-021-230-030-040-001"
+    node: "021-230-030"
+    infoCode: "040"
+    title: "Gasper Outlets and Ducting - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-23-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+
+  - requirementId: "DMREQ-021-230-030-200-001"
+    node: "021-230-030"
+    infoCode: "200"
+    title: "Gasper Outlets and Ducting - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+
+  - requirementId: "DMREQ-021-230-030-300-001"
+    node: "021-230-030"
+    infoCode: "300"
+    title: "Gasper Outlets and Ducting - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+
+  - requirementId: "DMREQ-021-230-030-520-001"
+    node: "021-230-030"
+    infoCode: "520"
+    title: "Gasper Outlets and Ducting - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+
+  - requirementId: "DMREQ-021-230-030-720-001"
+    node: "021-230-030"
+    infoCode: "720"
+    title: "Gasper Outlets and Ducting - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-23-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+
+  - requirementId: "DMREQ-021-240-010-040-001"
+    node: "021-240-010"
+    infoCode: "040"
+    title: "Recirculation Fan - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-24-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+
+  - requirementId: "DMREQ-021-240-010-200-001"
+    node: "021-240-010"
+    infoCode: "200"
+    title: "Recirculation Fan - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+
+  - requirementId: "DMREQ-021-240-010-300-001"
+    node: "021-240-010"
+    infoCode: "300"
+    title: "Recirculation Fan - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+
+  - requirementId: "DMREQ-021-240-010-520-001"
+    node: "021-240-010"
+    infoCode: "520"
+    title: "Recirculation Fan - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+
+  - requirementId: "DMREQ-021-240-010-720-001"
+    node: "021-240-010"
+    infoCode: "720"
+    title: "Recirculation Fan - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+
+  - requirementId: "DMREQ-021-240-030-040-001"
+    node: "021-240-030"
+    infoCode: "040"
+    title: "Recirculation Filter HEPA - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-24-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+
+  - requirementId: "DMREQ-021-240-030-200-001"
+    node: "021-240-030"
+    infoCode: "200"
+    title: "Recirculation Filter HEPA - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+
+  - requirementId: "DMREQ-021-240-030-300-001"
+    node: "021-240-030"
+    infoCode: "300"
+    title: "Recirculation Filter HEPA - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+
+  - requirementId: "DMREQ-021-240-030-520-001"
+    node: "021-240-030"
+    infoCode: "520"
+    title: "Recirculation Filter HEPA - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+
+  - requirementId: "DMREQ-021-240-030-720-001"
+    node: "021-240-030"
+    infoCode: "720"
+    title: "Recirculation Filter HEPA - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+
+  - requirementId: "DMREQ-021-240-050-040-001"
+    node: "021-240-050"
+    infoCode: "040"
+    title: "Recirculation Ducting and Check Valves - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-24-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+
+  - requirementId: "DMREQ-021-240-050-200-001"
+    node: "021-240-050"
+    infoCode: "200"
+    title: "Recirculation Ducting and Check Valves - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+
+  - requirementId: "DMREQ-021-240-050-300-001"
+    node: "021-240-050"
+    infoCode: "300"
+    title: "Recirculation Ducting and Check Valves - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-05-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+
+  - requirementId: "DMREQ-021-240-050-520-001"
+    node: "021-240-050"
+    infoCode: "520"
+    title: "Recirculation Ducting and Check Valves - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-05-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+
+  - requirementId: "DMREQ-021-240-050-720-001"
+    node: "021-240-050"
+    infoCode: "720"
+    title: "Recirculation Ducting and Check Valves - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-24-05-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+
+  - requirementId: "DMREQ-021-250-010-040-001"
+    node: "021-250-010"
+    infoCode: "040"
+    title: "Ram Air Inlet and Scoop - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-25-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+
+  - requirementId: "DMREQ-021-250-010-200-001"
+    node: "021-250-010"
+    infoCode: "200"
+    title: "Ram Air Inlet and Scoop - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+
+  - requirementId: "DMREQ-021-250-010-300-001"
+    node: "021-250-010"
+    infoCode: "300"
+    title: "Ram Air Inlet and Scoop - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+
+  - requirementId: "DMREQ-021-250-010-520-001"
+    node: "021-250-010"
+    infoCode: "520"
+    title: "Ram Air Inlet and Scoop - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+
+  - requirementId: "DMREQ-021-250-010-720-001"
+    node: "021-250-010"
+    infoCode: "720"
+    title: "Ram Air Inlet and Scoop - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+
+  - requirementId: "DMREQ-021-250-030-040-001"
+    node: "021-250-030"
+    infoCode: "040"
+    title: "Ram Air Valve and Actuator - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-25-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-250-030-200-001"
+    node: "021-250-030"
+    infoCode: "200"
+    title: "Ram Air Valve and Actuator - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-250-030-300-001"
+    node: "021-250-030"
+    infoCode: "300"
+    title: "Ram Air Valve and Actuator - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-250-030-520-001"
+    node: "021-250-030"
+    infoCode: "520"
+    title: "Ram Air Valve and Actuator - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-250-030-720-001"
+    node: "021-250-030"
+    infoCode: "720"
+    title: "Ram Air Valve and Actuator - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-250-050-040-001"
+    node: "021-250-050"
+    infoCode: "040"
+    title: "Ram Air Ducting - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-25-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
+
+  - requirementId: "DMREQ-021-250-050-200-001"
+    node: "021-250-050"
+    infoCode: "200"
+    title: "Ram Air Ducting - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
+
+  - requirementId: "DMREQ-021-250-050-300-001"
+    node: "021-250-050"
+    infoCode: "300"
+    title: "Ram Air Ducting - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-25-05-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
+
+  - requirementId: "DMREQ-021-260-010-040-001"
+    node: "021-260-010"
+    infoCode: "040"
+    title: "Avionics Cooling Fan - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-26-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+
+  - requirementId: "DMREQ-021-260-010-200-001"
+    node: "021-260-010"
+    infoCode: "200"
+    title: "Avionics Cooling Fan - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+
+  - requirementId: "DMREQ-021-260-010-300-001"
+    node: "021-260-010"
+    infoCode: "300"
+    title: "Avionics Cooling Fan - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+
+  - requirementId: "DMREQ-021-260-010-520-001"
+    node: "021-260-010"
+    infoCode: "520"
+    title: "Avionics Cooling Fan - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+
+  - requirementId: "DMREQ-021-260-010-720-001"
+    node: "021-260-010"
+    infoCode: "720"
+    title: "Avionics Cooling Fan - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+
+  - requirementId: "DMREQ-021-260-030-040-001"
+    node: "021-260-030"
+    infoCode: "040"
+    title: "Avionics Cooling Ducting and Exhaust - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-26-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
+
+  - requirementId: "DMREQ-021-260-030-200-001"
+    node: "021-260-030"
+    infoCode: "200"
+    title: "Avionics Cooling Ducting and Exhaust - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
+
+  - requirementId: "DMREQ-021-260-030-300-001"
+    node: "021-260-030"
+    infoCode: "300"
+    title: "Avionics Cooling Ducting and Exhaust - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
+
+  - requirementId: "DMREQ-021-260-050-034-001"
+    node: "021-260-050"
+    infoCode: "034"
+    title: "Avionics Cooling Control and Override - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-26-05-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+
+  - requirementId: "DMREQ-021-260-050-040-001"
+    node: "021-260-050"
+    infoCode: "040"
+    title: "Avionics Cooling Control and Override - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-26-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+
+  - requirementId: "DMREQ-021-260-050-200-001"
+    node: "021-260-050"
+    infoCode: "200"
+    title: "Avionics Cooling Control and Override - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+
+  - requirementId: "DMREQ-021-260-050-300-001"
+    node: "021-260-050"
+    infoCode: "300"
+    title: "Avionics Cooling Control and Override - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-26-05-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+
+  - requirementId: "DMREQ-021-270-010-040-001"
+    node: "021-270-010"
+    infoCode: "040"
+    title: "Cargo Ventilation Fan - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-27-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+
+  - requirementId: "DMREQ-021-270-010-200-001"
+    node: "021-270-010"
+    infoCode: "200"
+    title: "Cargo Ventilation Fan - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-27-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+
+  - requirementId: "DMREQ-021-270-010-300-001"
+    node: "021-270-010"
+    infoCode: "300"
+    title: "Cargo Ventilation Fan - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-27-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+
+  - requirementId: "DMREQ-021-270-010-520-001"
+    node: "021-270-010"
+    infoCode: "520"
+    title: "Cargo Ventilation Fan - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-27-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+
+  - requirementId: "DMREQ-021-270-010-720-001"
+    node: "021-270-010"
+    infoCode: "720"
+    title: "Cargo Ventilation Fan - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-27-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+
+  - requirementId: "DMREQ-021-270-030-040-001"
+    node: "021-270-030"
+    infoCode: "040"
+    title: "Cargo Ventilation Ducting - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-27-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
+
+  - requirementId: "DMREQ-021-270-030-200-001"
+    node: "021-270-030"
+    infoCode: "200"
+    title: "Cargo Ventilation Ducting - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-27-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
+
+  - requirementId: "DMREQ-021-270-030-300-001"
+    node: "021-270-030"
+    infoCode: "300"
+    title: "Cargo Ventilation Ducting - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-27-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
+
+  - requirementId: "DMREQ-021-280-010-040-001"
+    node: "021-280-010"
+    infoCode: "040"
+    title: "Equipment Cooling Ventilation - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-28-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
+
+  - requirementId: "DMREQ-021-280-010-200-001"
+    node: "021-280-010"
+    infoCode: "200"
+    title: "Equipment Cooling Ventilation - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-28-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
+
+  - requirementId: "DMREQ-021-280-010-300-001"
+    node: "021-280-010"
+    infoCode: "300"
+    title: "Equipment Cooling Ventilation - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-28-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
+
+  - requirementId: "DMREQ-021-280-030-040-001"
+    node: "021-280-030"
+    infoCode: "040"
+    title: "Galley Chiller Ventilation - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-28-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
+
+  - requirementId: "DMREQ-021-280-030-200-001"
+    node: "021-280-030"
+    infoCode: "200"
+    title: "Galley Chiller Ventilation - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-28-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
+
+  - requirementId: "DMREQ-021-280-030-300-001"
+    node: "021-280-030"
+    infoCode: "300"
+    title: "Galley Chiller Ventilation - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-28-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
+
+  - requirementId: "DMREQ-021-290-010-040-001"
+    node: "021-290-010"
+    infoCode: "040"
+    title: "LP Ground Air Connection - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-29-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+
+  - requirementId: "DMREQ-021-290-010-200-001"
+    node: "021-290-010"
+    infoCode: "200"
+    title: "LP Ground Air Connection - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+
+  - requirementId: "DMREQ-021-290-010-300-001"
+    node: "021-290-010"
+    infoCode: "300"
+    title: "LP Ground Air Connection - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+
+  - requirementId: "DMREQ-021-290-010-520-001"
+    node: "021-290-010"
+    infoCode: "520"
+    title: "LP Ground Air Connection - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+
+  - requirementId: "DMREQ-021-290-010-720-001"
+    node: "021-290-010"
+    infoCode: "720"
+    title: "LP Ground Air Connection - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+
+  - requirementId: "DMREQ-021-290-030-040-001"
+    node: "021-290-030"
+    infoCode: "040"
+    title: "Ground Supply Check Valve - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-29-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+
+  - requirementId: "DMREQ-021-290-030-200-001"
+    node: "021-290-030"
+    infoCode: "200"
+    title: "Ground Supply Check Valve - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+
+  - requirementId: "DMREQ-021-290-030-300-001"
+    node: "021-290-030"
+    infoCode: "300"
+    title: "Ground Supply Check Valve - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+
+  - requirementId: "DMREQ-021-290-030-520-001"
+    node: "021-290-030"
+    infoCode: "520"
+    title: "Ground Supply Check Valve - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+
+  - requirementId: "DMREQ-021-290-030-720-001"
+    node: "021-290-030"
+    infoCode: "720"
+    title: "Ground Supply Check Valve - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-29-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+
+  - requirementId: "DMREQ-021-300-010-040-001"
+    node: "021-300-010"
+    infoCode: "040"
+    title: "Pressurization General and Schedule - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-30-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
+
+  - requirementId: "DMREQ-021-300-010-200-001"
+    node: "021-300-010"
+    infoCode: "200"
+    title: "Pressurization General and Schedule - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-30-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
+
+  - requirementId: "DMREQ-021-300-010-300-001"
+    node: "021-300-010"
+    infoCode: "300"
+    title: "Pressurization General and Schedule - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-30-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
+
+  - requirementId: "DMREQ-021-310-010-040-001"
+    node: "021-310-010"
+    infoCode: "040"
+    title: "Outflow Valve and Actuator - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-31-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-310-010-200-001"
+    node: "021-310-010"
+    infoCode: "200"
+    title: "Outflow Valve and Actuator - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-310-010-300-001"
+    node: "021-310-010"
+    infoCode: "300"
+    title: "Outflow Valve and Actuator - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-310-010-520-001"
+    node: "021-310-010"
+    infoCode: "520"
+    title: "Outflow Valve and Actuator - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-310-010-720-001"
+    node: "021-310-010"
+    infoCode: "720"
+    title: "Outflow Valve and Actuator - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+
+  - requirementId: "DMREQ-021-310-030-034-001"
+    node: "021-310-030"
+    infoCode: "034"
+    title: "Cabin Pressure Controller - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-31-03-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+
+  - requirementId: "DMREQ-021-310-030-040-001"
+    node: "021-310-030"
+    infoCode: "040"
+    title: "Cabin Pressure Controller - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-31-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+
+  - requirementId: "DMREQ-021-310-030-200-001"
+    node: "021-310-030"
+    infoCode: "200"
+    title: "Cabin Pressure Controller - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+
+  - requirementId: "DMREQ-021-310-030-300-001"
+    node: "021-310-030"
+    infoCode: "300"
+    title: "Cabin Pressure Controller - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+
+  - requirementId: "DMREQ-021-310-050-034-001"
+    node: "021-310-050"
+    infoCode: "034"
+    title: "Pressurization Indication and Sensors - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-31-05-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+
+  - requirementId: "DMREQ-021-310-050-040-001"
+    node: "021-310-050"
+    infoCode: "040"
+    title: "Pressurization Indication and Sensors - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-31-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+
+  - requirementId: "DMREQ-021-310-050-200-001"
+    node: "021-310-050"
+    infoCode: "200"
+    title: "Pressurization Indication and Sensors - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+
+  - requirementId: "DMREQ-021-310-050-300-001"
+    node: "021-310-050"
+    infoCode: "300"
+    title: "Pressurization Indication and Sensors - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-31-05-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+
+  - requirementId: "DMREQ-021-320-010-040-001"
+    node: "021-320-010"
+    infoCode: "040"
+    title: "Positive Pressure Relief Valve - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-32-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-010-200-001"
+    node: "021-320-010"
+    infoCode: "200"
+    title: "Positive Pressure Relief Valve - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-010-300-001"
+    node: "021-320-010"
+    infoCode: "300"
+    title: "Positive Pressure Relief Valve - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-010-520-001"
+    node: "021-320-010"
+    infoCode: "520"
+    title: "Positive Pressure Relief Valve - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-010-720-001"
+    node: "021-320-010"
+    infoCode: "720"
+    title: "Positive Pressure Relief Valve - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-030-040-001"
+    node: "021-320-030"
+    infoCode: "040"
+    title: "Negative Pressure Relief Valve - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-32-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-030-200-001"
+    node: "021-320-030"
+    infoCode: "200"
+    title: "Negative Pressure Relief Valve - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-030-300-001"
+    node: "021-320-030"
+    infoCode: "300"
+    title: "Negative Pressure Relief Valve - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-030-520-001"
+    node: "021-320-030"
+    infoCode: "520"
+    title: "Negative Pressure Relief Valve - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-320-030-720-001"
+    node: "021-320-030"
+    infoCode: "720"
+    title: "Negative Pressure Relief Valve - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-32-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+
+  - requirementId: "DMREQ-021-330-010-040-001"
+    node: "021-330-010"
+    infoCode: "040"
+    title: "Cargo Pressure Equalization Valves - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-33-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+
+  - requirementId: "DMREQ-021-330-010-200-001"
+    node: "021-330-010"
+    infoCode: "200"
+    title: "Cargo Pressure Equalization Valves - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-33-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+
+  - requirementId: "DMREQ-021-330-010-300-001"
+    node: "021-330-010"
+    infoCode: "300"
+    title: "Cargo Pressure Equalization Valves - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-33-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+
+  - requirementId: "DMREQ-021-330-010-520-001"
+    node: "021-330-010"
+    infoCode: "520"
+    title: "Cargo Pressure Equalization Valves - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-33-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+
+  - requirementId: "DMREQ-021-330-010-720-001"
+    node: "021-330-010"
+    infoCode: "720"
+    title: "Cargo Pressure Equalization Valves - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-33-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+
+  - requirementId: "DMREQ-021-400-010-040-001"
+    node: "021-400-010"
+    infoCode: "040"
+    title: "Heating General - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-40-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
+
+  - requirementId: "DMREQ-021-400-010-200-001"
+    node: "021-400-010"
+    infoCode: "200"
+    title: "Heating General - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-40-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
+
+  - requirementId: "DMREQ-021-400-010-300-001"
+    node: "021-400-010"
+    infoCode: "300"
+    title: "Heating General - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-40-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
+
+  - requirementId: "DMREQ-021-410-010-040-001"
+    node: "021-410-010"
+    infoCode: "040"
+    title: "Floor Heating Panels - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-41-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+
+  - requirementId: "DMREQ-021-410-010-200-001"
+    node: "021-410-010"
+    infoCode: "200"
+    title: "Floor Heating Panels - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-41-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+
+  - requirementId: "DMREQ-021-410-010-300-001"
+    node: "021-410-010"
+    infoCode: "300"
+    title: "Floor Heating Panels - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-41-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+
+  - requirementId: "DMREQ-021-410-010-520-001"
+    node: "021-410-010"
+    infoCode: "520"
+    title: "Floor Heating Panels - Removal"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-41-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+
+  - requirementId: "DMREQ-021-410-010-720-001"
+    node: "021-410-010"
+    infoCode: "720"
+    title: "Floor Heating Panels - Installation"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-41-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+
+  - requirementId: "DMREQ-021-410-030-034-001"
+    node: "021-410-030"
+    infoCode: "034"
+    title: "Floor Heating Controller and Sensors - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-41-03-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+
+  - requirementId: "DMREQ-021-410-030-040-001"
+    node: "021-410-030"
+    infoCode: "040"
+    title: "Floor Heating Controller and Sensors - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-41-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+
+  - requirementId: "DMREQ-021-410-030-200-001"
+    node: "021-410-030"
+    infoCode: "200"
+    title: "Floor Heating Controller and Sensors - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-41-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+
+  - requirementId: "DMREQ-021-410-030-300-001"
+    node: "021-410-030"
+    infoCode: "300"
+    title: "Floor Heating Controller and Sensors - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-41-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+
+  - requirementId: "DMREQ-021-500-010-040-001"
+    node: "021-500-010"
+    infoCode: "040"
+    title: "Integrated Cooling General and Architecture - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-50-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
+
+  - requirementId: "DMREQ-021-500-010-200-001"
+    node: "021-500-010"
+    infoCode: "200"
+    title: "Integrated Cooling General and Architecture - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-50-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
+
+  - requirementId: "DMREQ-021-500-010-300-001"
+    node: "021-500-010"
+    infoCode: "300"
+    title: "Integrated Cooling General and Architecture - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-50-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
+
+  - requirementId: "DMREQ-021-510-010-040-001"
+    node: "021-510-010"
+    infoCode: "040"
+    title: "Electrically Driven Cooling Compressor - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-51-01-00A-040A-A"
+      - "DMC-EWTW-A-21-51-01-00A-040B-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+
+  - requirementId: "DMREQ-021-510-010-200-001"
+    node: "021-510-010"
+    infoCode: "200"
+    title: "Electrically Driven Cooling Compressor - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+
+  - requirementId: "DMREQ-021-510-010-520-001"
+    node: "021-510-010"
+    infoCode: "520"
+    title: "Electrically Driven Cooling Compressor - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-01-00A-520A-A"
+      - "DMC-EWTW-A-21-51-01-00A-520B-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+
+  - requirementId: "DMREQ-021-510-010-720-001"
+    node: "021-510-010"
+    infoCode: "720"
+    title: "Electrically Driven Cooling Compressor - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-01-00A-720A-A"
+      - "DMC-EWTW-A-21-51-01-00A-720B-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+
+  - requirementId: "DMREQ-021-510-030-040-001"
+    node: "021-510-030"
+    infoCode: "040"
+    title: "Heat Exchanger Network - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-51-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+
+  - requirementId: "DMREQ-021-510-030-200-001"
+    node: "021-510-030"
+    infoCode: "200"
+    title: "Heat Exchanger Network - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+
+  - requirementId: "DMREQ-021-510-030-520-001"
+    node: "021-510-030"
+    infoCode: "520"
+    title: "Heat Exchanger Network - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+
+  - requirementId: "DMREQ-021-510-030-720-001"
+    node: "021-510-030"
+    infoCode: "720"
+    title: "Heat Exchanger Network - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+
+  - requirementId: "DMREQ-021-510-050-040-001"
+    node: "021-510-050"
+    infoCode: "040"
+    title: "Working Fluid Refrigerant Loop - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-51-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+
+  - requirementId: "DMREQ-021-510-050-200-001"
+    node: "021-510-050"
+    infoCode: "200"
+    title: "Working Fluid Refrigerant Loop - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+
+  - requirementId: "DMREQ-021-510-050-520-001"
+    node: "021-510-050"
+    infoCode: "520"
+    title: "Working Fluid Refrigerant Loop - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-05-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+
+  - requirementId: "DMREQ-021-510-050-720-001"
+    node: "021-510-050"
+    infoCode: "720"
+    title: "Working Fluid Refrigerant Loop - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-05-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+
+  - requirementId: "DMREQ-021-510-070-040-001"
+    node: "021-510-070"
+    infoCode: "040"
+    title: "Water Extraction and Humidity Control - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-51-07-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+
+  - requirementId: "DMREQ-021-510-070-200-001"
+    node: "021-510-070"
+    infoCode: "200"
+    title: "Water Extraction and Humidity Control - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-07-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+
+  - requirementId: "DMREQ-021-510-070-520-001"
+    node: "021-510-070"
+    infoCode: "520"
+    title: "Water Extraction and Humidity Control - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-07-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+
+  - requirementId: "DMREQ-021-510-070-720-001"
+    node: "021-510-070"
+    infoCode: "720"
+    title: "Water Extraction and Humidity Control - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-07-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+
+  - requirementId: "DMREQ-021-510-090-040-001"
+    node: "021-510-090"
+    infoCode: "040"
+    title: "Cooling Control Sensors and Protection - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-51-09-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+
+  - requirementId: "DMREQ-021-510-090-200-001"
+    node: "021-510-090"
+    infoCode: "200"
+    title: "Cooling Control Sensors and Protection - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-09-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+
+  - requirementId: "DMREQ-021-510-090-520-001"
+    node: "021-510-090"
+    infoCode: "520"
+    title: "Cooling Control Sensors and Protection - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-09-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+
+  - requirementId: "DMREQ-021-510-090-720-001"
+    node: "021-510-090"
+    infoCode: "720"
+    title: "Cooling Control Sensors and Protection - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-51-09-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+
+  - requirementId: "DMREQ-021-600-010-034-001"
+    node: "021-600-010"
+    infoCode: "034"
+    title: "Temperature Control General and Zoning - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-60-01-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-600-010-040-001"
+    node: "021-600-010"
+    infoCode: "040"
+    title: "Temperature Control General and Zoning - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-60-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-600-010-200-001"
+    node: "021-600-010"
+    infoCode: "200"
+    title: "Temperature Control General and Zoning - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-60-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-600-010-300-001"
+    node: "021-600-010"
+    infoCode: "300"
+    title: "Temperature Control General and Zoning - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-60-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+
+  - requirementId: "DMREQ-021-610-010-034-001"
+    node: "021-610-010"
+    infoCode: "034"
+    title: "Flight Deck Electric Reheat Trim - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-61-01-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-610-010-040-001"
+    node: "021-610-010"
+    infoCode: "040"
+    title: "Flight Deck Electric Reheat Trim - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-61-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-610-010-200-001"
+    node: "021-610-010"
+    infoCode: "200"
+    title: "Flight Deck Electric Reheat Trim - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-61-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-610-010-300-001"
+    node: "021-610-010"
+    infoCode: "300"
+    title: "Flight Deck Electric Reheat Trim - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-61-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-610-030-034-001"
+    node: "021-610-030"
+    infoCode: "034"
+    title: "Flight Deck Zone Sensors and Controller - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-61-03-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-610-030-040-001"
+    node: "021-610-030"
+    infoCode: "040"
+    title: "Flight Deck Zone Sensors and Controller - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-61-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-610-030-200-001"
+    node: "021-610-030"
+    infoCode: "200"
+    title: "Flight Deck Zone Sensors and Controller - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-61-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-610-030-300-001"
+    node: "021-610-030"
+    infoCode: "300"
+    title: "Flight Deck Zone Sensors and Controller - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-61-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-620-010-034-001"
+    node: "021-620-010"
+    infoCode: "034"
+    title: "Cabin Zone Electric Reheat Trim - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-62-01-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-620-010-040-001"
+    node: "021-620-010"
+    infoCode: "040"
+    title: "Cabin Zone Electric Reheat Trim - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-62-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-620-010-200-001"
+    node: "021-620-010"
+    infoCode: "200"
+    title: "Cabin Zone Electric Reheat Trim - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-62-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-620-010-300-001"
+    node: "021-620-010"
+    infoCode: "300"
+    title: "Cabin Zone Electric Reheat Trim - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-62-01-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+
+  - requirementId: "DMREQ-021-620-030-034-001"
+    node: "021-620-030"
+    infoCode: "034"
+    title: "Cabin Zone Sensors and Controller - Technical data"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-62-03-00A-034A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-620-030-040-001"
+    node: "021-620-030"
+    infoCode: "040"
+    title: "Cabin Zone Sensors and Controller - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-62-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-620-030-200-001"
+    node: "021-620-030"
+    infoCode: "200"
+    title: "Cabin Zone Sensors and Controller - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-62-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-620-030-300-001"
+    node: "021-620-030"
+    infoCode: "300"
+    title: "Cabin Zone Sensors and Controller - Scheduled maintenance"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-62-03-00A-300A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+
+  - requirementId: "DMREQ-021-900-010-040-001"
+    node: "021-900-010"
+    infoCode: "040"
+    title: "Energy Source Waste Heat Recovery - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-90-01-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+
+  - requirementId: "DMREQ-021-900-010-200-001"
+    node: "021-900-010"
+    infoCode: "200"
+    title: "Energy Source Waste Heat Recovery - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-01-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+
+  - requirementId: "DMREQ-021-900-010-520-001"
+    node: "021-900-010"
+    infoCode: "520"
+    title: "Energy Source Waste Heat Recovery - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-01-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+
+  - requirementId: "DMREQ-021-900-010-720-001"
+    node: "021-900-010"
+    infoCode: "720"
+    title: "Energy Source Waste Heat Recovery - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-01-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+
+  - requirementId: "DMREQ-021-900-030-040-001"
+    node: "021-900-030"
+    infoCode: "040"
+    title: "Cryogenic Cold Sink Utilization - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-90-03-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+
+  - requirementId: "DMREQ-021-900-030-200-001"
+    node: "021-900-030"
+    infoCode: "200"
+    title: "Cryogenic Cold Sink Utilization - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-03-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+
+  - requirementId: "DMREQ-021-900-030-520-001"
+    node: "021-900-030"
+    infoCode: "520"
+    title: "Cryogenic Cold Sink Utilization - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-03-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+
+  - requirementId: "DMREQ-021-900-030-720-001"
+    node: "021-900-030"
+    infoCode: "720"
+    title: "Cryogenic Cold Sink Utilization - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-03-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+
+  - requirementId: "DMREQ-021-900-050-040-001"
+    node: "021-900-050"
+    infoCode: "040"
+    title: "ECS Thermal Management System Coupling - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-90-05-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+
+  - requirementId: "DMREQ-021-900-050-200-001"
+    node: "021-900-050"
+    infoCode: "200"
+    title: "ECS Thermal Management System Coupling - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-05-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+
+  - requirementId: "DMREQ-021-900-050-520-001"
+    node: "021-900-050"
+    infoCode: "520"
+    title: "ECS Thermal Management System Coupling - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-05-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+
+  - requirementId: "DMREQ-021-900-050-720-001"
+    node: "021-900-050"
+    infoCode: "720"
+    title: "ECS Thermal Management System Coupling - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-05-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+
+  - requirementId: "DMREQ-021-900-070-040-001"
+    node: "021-900-070"
+    infoCode: "040"
+    title: "Bleedless Air Supply Interface - Description"
+    schemaType: "descriptive"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    dataModules:
+      - "DMC-EWTW-A-21-90-07-00A-040A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+
+  - requirementId: "DMREQ-021-900-070-200-001"
+    node: "021-900-070"
+    infoCode: "200"
+    title: "Bleedless Air Supply Interface - Servicing"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-07-00A-200A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+
+  - requirementId: "DMREQ-021-900-070-520-001"
+    node: "021-900-070"
+    infoCode: "520"
+    title: "Bleedless Air Supply Interface - Remove"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-07-00A-520A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+
+  - requirementId: "DMREQ-021-900-070-720-001"
+    node: "021-900-070"
+    infoCode: "720"
+    title: "Bleedless Air Supply Interface - Install"
+    schemaType: "procedural"
+    status: "AUTHORED"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    dataModules:
+      - "DMC-EWTW-A-21-90-07-00A-720A-A"
+    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"

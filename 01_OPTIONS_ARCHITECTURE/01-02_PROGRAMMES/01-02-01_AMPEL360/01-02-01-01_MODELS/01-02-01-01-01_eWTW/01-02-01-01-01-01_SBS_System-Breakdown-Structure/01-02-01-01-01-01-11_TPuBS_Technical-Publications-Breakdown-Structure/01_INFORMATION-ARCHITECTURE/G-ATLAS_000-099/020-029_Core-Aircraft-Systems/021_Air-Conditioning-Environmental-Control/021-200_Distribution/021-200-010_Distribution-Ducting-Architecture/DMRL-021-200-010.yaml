@@ -1,0 +1,44 @@
+# DMRL-021-200-010.yaml — Data Module Requirements List (node level)
+# Declares which Data Modules must exist for this G-ATLAS node.
+# Publication membership is metadata (publicationTargets), never folder structure.
+
+node:
+  code: "021-200-010"
+  title: "Distribution-Ducting-Architecture"
+  nodeType: "information-authoring-node"
+
+dataModuleRequirements:
+
+  - requirementId: "DMREQ-021-200-010-040-001"
+    infoCode: "040"
+    title: "Distribution Ducting Architecture - Description"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-20-01-00A-040A-A"
+        file: "DM/DMC-EWTW-A-21-20-01-00A-040A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-200-010-200-001"
+    infoCode: "200"
+    title: "Distribution Ducting Architecture - Servicing"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-20-01-00A-200A-A"
+        file: "DM/DMC-EWTW-A-21-20-01-00A-200A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-200-010-300-001"
+    infoCode: "300"
+    title: "Distribution Ducting Architecture - Scheduled maintenance"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-20-01-00A-300A-A"
+        file: "DM/DMC-EWTW-A-21-20-01-00A-300A-A_001-00_en-GB.xml"

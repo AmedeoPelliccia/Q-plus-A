@@ -1,0 +1,17 @@
+# DMRL-021-620.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-620"
+  title: "Passenger Cabin Zone Temperature Control"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-620-010"
+    title: "Cabin Zone Electric Reheat Trim"
+    dmrl: "021-620-010_Cabin-Zone-Electric-Reheat-Trim/DMRL-021-620-010.yaml"
+    dataModuleRequirements: 4
+  - code: "021-620-030"
+    title: "Cabin Zone Sensors and Controller"
+    dmrl: "021-620-030_Cabin-Zone-Sensors-and-Controller/DMRL-021-620-030.yaml"
+    dataModuleRequirements: 4

@@ -1,0 +1,21 @@
+# DMRL-021-250.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-250"
+  title: "Ram Air Ventilation"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-250-010"
+    title: "Ram Air Inlet and Scoop"
+    dmrl: "021-250-010_Ram-Air-Inlet-and-Scoop/DMRL-021-250-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-250-030"
+    title: "Ram Air Valve and Actuator"
+    dmrl: "021-250-030_Ram-Air-Valve-and-Actuator/DMRL-021-250-030.yaml"
+    dataModuleRequirements: 5
+  - code: "021-250-050"
+    title: "Ram Air Ducting"
+    dmrl: "021-250-050_Ram-Air-Ducting/DMRL-021-250-050.yaml"
+    dataModuleRequirements: 3

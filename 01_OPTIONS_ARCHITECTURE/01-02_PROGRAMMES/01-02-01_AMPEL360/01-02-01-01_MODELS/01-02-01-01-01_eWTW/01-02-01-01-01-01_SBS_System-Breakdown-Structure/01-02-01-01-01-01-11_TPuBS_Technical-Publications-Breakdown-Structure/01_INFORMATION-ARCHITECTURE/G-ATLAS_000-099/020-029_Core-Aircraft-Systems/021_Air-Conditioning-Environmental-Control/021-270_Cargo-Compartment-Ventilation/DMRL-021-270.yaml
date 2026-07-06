@@ -1,0 +1,17 @@
+# DMRL-021-270.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-270"
+  title: "Cargo Compartment Ventilation"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-270-010"
+    title: "Cargo Ventilation Fan"
+    dmrl: "021-270-010_Cargo-Ventilation-Fan/DMRL-021-270-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-270-030"
+    title: "Cargo Ventilation Ducting"
+    dmrl: "021-270-030_Cargo-Ventilation-Ducting/DMRL-021-270-030.yaml"
+    dataModuleRequirements: 3

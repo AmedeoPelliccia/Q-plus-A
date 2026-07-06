@@ -1,0 +1,219 @@
+# DMRL-EWTW — Consolidated Data Module Requirements List
+
+Generated aggregation of all node-level DMRLs in `01_INFORMATION-ARCHITECTURE`.
+One row per information requirement; publication membership is metadata, not folders.
+
+| Requirement ID | Node | Info code | Schema type | Title | Status | Publication targets |
+|---|---|---|---|---|---|---|
+| DMREQ-003-900-010-034-001 | 003-900-010 | 034 | descriptive | Ground Charging Connection Interface - Technical data | AUTHORED | PMC-EWTW-ECHM, PMC-EWTW-SDS |
+| DMREQ-003-900-010-040-001 | 003-900-010 | 040 | descriptive | Ground Charging Connection Interface - Description | AUTHORED | PMC-EWTW-ECHM, PMC-EWTW-SDS |
+| DMREQ-003-900-010-420-001 | 003-900-010 | 420 | fault | Ground Charging Connection Interface - Fault isolation | AUTHORED | PMC-EWTW-ECHM |
+| DMREQ-003-900-010-720-001 | 003-900-010 | 720 | procedural | Ground Charging Connection Interface - Installation | AUTHORED | PMC-EWTW-ECHM |
+| DMREQ-003-900-010-730-001 | 003-900-010 | 730 | procedural | Ground Charging Connection Interface - Test and check | AUTHORED | PMC-EWTW-ECHM |
+| DMREQ-021-000-010-040-001 | 021-000-010 | 040 | descriptive | ECS General and Zoning - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-000-010-200-001 | 021-000-010 | 200 | procedural | ECS General and Zoning - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-000-010-300-001 | 021-000-010 | 300 | procedural | ECS General and Zoning - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-200-010-040-001 | 021-200-010 | 040 | descriptive | Distribution Ducting Architecture - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-200-010-200-001 | 021-200-010 | 200 | procedural | Distribution Ducting Architecture - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-200-010-300-001 | 021-200-010 | 300 | procedural | Distribution Ducting Architecture - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-200-030-034-001 | 021-200-030 | 034 | descriptive | Distribution Control and Balancing - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-200-030-040-001 | 021-200-030 | 040 | descriptive | Distribution Control and Balancing - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-200-030-200-001 | 021-200-030 | 200 | procedural | Distribution Control and Balancing - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-200-030-300-001 | 021-200-030 | 300 | procedural | Distribution Control and Balancing - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-210-010-040-001 | 021-210-010 | 040 | descriptive | Flight Deck Supply Ducting - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-210-010-200-001 | 021-210-010 | 200 | procedural | Flight Deck Supply Ducting - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-210-010-300-001 | 021-210-010 | 300 | procedural | Flight Deck Supply Ducting - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-210-030-040-001 | 021-210-030 | 040 | descriptive | Flight Deck Outlets and Diffusers - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-210-030-200-001 | 021-210-030 | 200 | procedural | Flight Deck Outlets and Diffusers - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-210-030-300-001 | 021-210-030 | 300 | procedural | Flight Deck Outlets and Diffusers - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-210-030-520-001 | 021-210-030 | 520 | procedural | Flight Deck Outlets and Diffusers - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-210-030-720-001 | 021-210-030 | 720 | procedural | Flight Deck Outlets and Diffusers - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-010-040-001 | 021-220-010 | 040 | descriptive | Cabin Supply Riser Ducts - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-220-010-200-001 | 021-220-010 | 200 | procedural | Cabin Supply Riser Ducts - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-010-300-001 | 021-220-010 | 300 | procedural | Cabin Supply Riser Ducts - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-030-040-001 | 021-220-030 | 040 | descriptive | Cabin Outlets and Diffusers - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-220-030-200-001 | 021-220-030 | 200 | procedural | Cabin Outlets and Diffusers - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-030-300-001 | 021-220-030 | 300 | procedural | Cabin Outlets and Diffusers - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-030-520-001 | 021-220-030 | 520 | procedural | Cabin Outlets and Diffusers - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-030-720-001 | 021-220-030 | 720 | procedural | Cabin Outlets and Diffusers - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-050-040-001 | 021-220-050 | 040 | descriptive | Overhead Distribution Manifold - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-220-050-200-001 | 021-220-050 | 200 | procedural | Overhead Distribution Manifold - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-050-300-001 | 021-220-050 | 300 | procedural | Overhead Distribution Manifold - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-050-520-001 | 021-220-050 | 520 | procedural | Overhead Distribution Manifold - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-220-050-720-001 | 021-220-050 | 720 | procedural | Overhead Distribution Manifold - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-010-040-001 | 021-230-010 | 040 | descriptive | Gasper Fan - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-230-010-200-001 | 021-230-010 | 200 | procedural | Gasper Fan - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-010-300-001 | 021-230-010 | 300 | procedural | Gasper Fan - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-010-520-001 | 021-230-010 | 520 | procedural | Gasper Fan - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-010-720-001 | 021-230-010 | 720 | procedural | Gasper Fan - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-030-040-001 | 021-230-030 | 040 | descriptive | Gasper Outlets and Ducting - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-230-030-200-001 | 021-230-030 | 200 | procedural | Gasper Outlets and Ducting - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-030-300-001 | 021-230-030 | 300 | procedural | Gasper Outlets and Ducting - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-030-520-001 | 021-230-030 | 520 | procedural | Gasper Outlets and Ducting - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-230-030-720-001 | 021-230-030 | 720 | procedural | Gasper Outlets and Ducting - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-010-040-001 | 021-240-010 | 040 | descriptive | Recirculation Fan - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-240-010-200-001 | 021-240-010 | 200 | procedural | Recirculation Fan - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-010-300-001 | 021-240-010 | 300 | procedural | Recirculation Fan - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-010-520-001 | 021-240-010 | 520 | procedural | Recirculation Fan - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-010-720-001 | 021-240-010 | 720 | procedural | Recirculation Fan - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-030-040-001 | 021-240-030 | 040 | descriptive | Recirculation Filter HEPA - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-240-030-200-001 | 021-240-030 | 200 | procedural | Recirculation Filter HEPA - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-030-300-001 | 021-240-030 | 300 | procedural | Recirculation Filter HEPA - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-030-520-001 | 021-240-030 | 520 | procedural | Recirculation Filter HEPA - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-030-720-001 | 021-240-030 | 720 | procedural | Recirculation Filter HEPA - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-050-040-001 | 021-240-050 | 040 | descriptive | Recirculation Ducting and Check Valves - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-240-050-200-001 | 021-240-050 | 200 | procedural | Recirculation Ducting and Check Valves - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-050-300-001 | 021-240-050 | 300 | procedural | Recirculation Ducting and Check Valves - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-050-520-001 | 021-240-050 | 520 | procedural | Recirculation Ducting and Check Valves - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-240-050-720-001 | 021-240-050 | 720 | procedural | Recirculation Ducting and Check Valves - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-010-040-001 | 021-250-010 | 040 | descriptive | Ram Air Inlet and Scoop - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-250-010-200-001 | 021-250-010 | 200 | procedural | Ram Air Inlet and Scoop - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-010-300-001 | 021-250-010 | 300 | procedural | Ram Air Inlet and Scoop - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-010-520-001 | 021-250-010 | 520 | procedural | Ram Air Inlet and Scoop - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-010-720-001 | 021-250-010 | 720 | procedural | Ram Air Inlet and Scoop - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-030-040-001 | 021-250-030 | 040 | descriptive | Ram Air Valve and Actuator - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-250-030-200-001 | 021-250-030 | 200 | procedural | Ram Air Valve and Actuator - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-030-300-001 | 021-250-030 | 300 | procedural | Ram Air Valve and Actuator - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-030-520-001 | 021-250-030 | 520 | procedural | Ram Air Valve and Actuator - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-030-720-001 | 021-250-030 | 720 | procedural | Ram Air Valve and Actuator - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-050-040-001 | 021-250-050 | 040 | descriptive | Ram Air Ducting - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-250-050-200-001 | 021-250-050 | 200 | procedural | Ram Air Ducting - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-250-050-300-001 | 021-250-050 | 300 | procedural | Ram Air Ducting - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-010-040-001 | 021-260-010 | 040 | descriptive | Avionics Cooling Fan - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-260-010-200-001 | 021-260-010 | 200 | procedural | Avionics Cooling Fan - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-010-300-001 | 021-260-010 | 300 | procedural | Avionics Cooling Fan - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-010-520-001 | 021-260-010 | 520 | procedural | Avionics Cooling Fan - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-010-720-001 | 021-260-010 | 720 | procedural | Avionics Cooling Fan - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-030-040-001 | 021-260-030 | 040 | descriptive | Avionics Cooling Ducting and Exhaust - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-260-030-200-001 | 021-260-030 | 200 | procedural | Avionics Cooling Ducting and Exhaust - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-030-300-001 | 021-260-030 | 300 | procedural | Avionics Cooling Ducting and Exhaust - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-050-034-001 | 021-260-050 | 034 | descriptive | Avionics Cooling Control and Override - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-260-050-040-001 | 021-260-050 | 040 | descriptive | Avionics Cooling Control and Override - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-260-050-200-001 | 021-260-050 | 200 | procedural | Avionics Cooling Control and Override - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-260-050-300-001 | 021-260-050 | 300 | procedural | Avionics Cooling Control and Override - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-270-010-040-001 | 021-270-010 | 040 | descriptive | Cargo Ventilation Fan - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-270-010-200-001 | 021-270-010 | 200 | procedural | Cargo Ventilation Fan - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-270-010-300-001 | 021-270-010 | 300 | procedural | Cargo Ventilation Fan - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-270-010-520-001 | 021-270-010 | 520 | procedural | Cargo Ventilation Fan - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-270-010-720-001 | 021-270-010 | 720 | procedural | Cargo Ventilation Fan - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-270-030-040-001 | 021-270-030 | 040 | descriptive | Cargo Ventilation Ducting - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-270-030-200-001 | 021-270-030 | 200 | procedural | Cargo Ventilation Ducting - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-270-030-300-001 | 021-270-030 | 300 | procedural | Cargo Ventilation Ducting - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-280-010-040-001 | 021-280-010 | 040 | descriptive | Equipment Cooling Ventilation - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-280-010-200-001 | 021-280-010 | 200 | procedural | Equipment Cooling Ventilation - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-280-010-300-001 | 021-280-010 | 300 | procedural | Equipment Cooling Ventilation - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-280-030-040-001 | 021-280-030 | 040 | descriptive | Galley Chiller Ventilation - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-280-030-200-001 | 021-280-030 | 200 | procedural | Galley Chiller Ventilation - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-280-030-300-001 | 021-280-030 | 300 | procedural | Galley Chiller Ventilation - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-010-040-001 | 021-290-010 | 040 | descriptive | LP Ground Air Connection - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-290-010-200-001 | 021-290-010 | 200 | procedural | LP Ground Air Connection - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-010-300-001 | 021-290-010 | 300 | procedural | LP Ground Air Connection - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-010-520-001 | 021-290-010 | 520 | procedural | LP Ground Air Connection - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-010-720-001 | 021-290-010 | 720 | procedural | LP Ground Air Connection - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-030-040-001 | 021-290-030 | 040 | descriptive | Ground Supply Check Valve - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-290-030-200-001 | 021-290-030 | 200 | procedural | Ground Supply Check Valve - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-030-300-001 | 021-290-030 | 300 | procedural | Ground Supply Check Valve - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-030-520-001 | 021-290-030 | 520 | procedural | Ground Supply Check Valve - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-290-030-720-001 | 021-290-030 | 720 | procedural | Ground Supply Check Valve - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-300-010-040-001 | 021-300-010 | 040 | descriptive | Pressurization General and Schedule - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-300-010-200-001 | 021-300-010 | 200 | procedural | Pressurization General and Schedule - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-300-010-300-001 | 021-300-010 | 300 | procedural | Pressurization General and Schedule - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-010-040-001 | 021-310-010 | 040 | descriptive | Outflow Valve and Actuator - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-310-010-200-001 | 021-310-010 | 200 | procedural | Outflow Valve and Actuator - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-010-300-001 | 021-310-010 | 300 | procedural | Outflow Valve and Actuator - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-010-520-001 | 021-310-010 | 520 | procedural | Outflow Valve and Actuator - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-010-720-001 | 021-310-010 | 720 | procedural | Outflow Valve and Actuator - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-030-034-001 | 021-310-030 | 034 | descriptive | Cabin Pressure Controller - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-310-030-040-001 | 021-310-030 | 040 | descriptive | Cabin Pressure Controller - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-310-030-200-001 | 021-310-030 | 200 | procedural | Cabin Pressure Controller - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-030-300-001 | 021-310-030 | 300 | procedural | Cabin Pressure Controller - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-050-034-001 | 021-310-050 | 034 | descriptive | Pressurization Indication and Sensors - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-310-050-040-001 | 021-310-050 | 040 | descriptive | Pressurization Indication and Sensors - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-310-050-200-001 | 021-310-050 | 200 | procedural | Pressurization Indication and Sensors - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-310-050-300-001 | 021-310-050 | 300 | procedural | Pressurization Indication and Sensors - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-010-040-001 | 021-320-010 | 040 | descriptive | Positive Pressure Relief Valve - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-320-010-200-001 | 021-320-010 | 200 | procedural | Positive Pressure Relief Valve - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-010-300-001 | 021-320-010 | 300 | procedural | Positive Pressure Relief Valve - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-010-520-001 | 021-320-010 | 520 | procedural | Positive Pressure Relief Valve - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-010-720-001 | 021-320-010 | 720 | procedural | Positive Pressure Relief Valve - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-030-040-001 | 021-320-030 | 040 | descriptive | Negative Pressure Relief Valve - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-320-030-200-001 | 021-320-030 | 200 | procedural | Negative Pressure Relief Valve - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-030-300-001 | 021-320-030 | 300 | procedural | Negative Pressure Relief Valve - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-030-520-001 | 021-320-030 | 520 | procedural | Negative Pressure Relief Valve - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-320-030-720-001 | 021-320-030 | 720 | procedural | Negative Pressure Relief Valve - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-330-010-040-001 | 021-330-010 | 040 | descriptive | Cargo Pressure Equalization Valves - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-330-010-200-001 | 021-330-010 | 200 | procedural | Cargo Pressure Equalization Valves - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-330-010-300-001 | 021-330-010 | 300 | procedural | Cargo Pressure Equalization Valves - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-330-010-520-001 | 021-330-010 | 520 | procedural | Cargo Pressure Equalization Valves - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-330-010-720-001 | 021-330-010 | 720 | procedural | Cargo Pressure Equalization Valves - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-400-010-040-001 | 021-400-010 | 040 | descriptive | Heating General - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-400-010-200-001 | 021-400-010 | 200 | procedural | Heating General - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-400-010-300-001 | 021-400-010 | 300 | procedural | Heating General - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-410-010-040-001 | 021-410-010 | 040 | descriptive | Floor Heating Panels - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-410-010-200-001 | 021-410-010 | 200 | procedural | Floor Heating Panels - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-410-010-300-001 | 021-410-010 | 300 | procedural | Floor Heating Panels - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-410-010-520-001 | 021-410-010 | 520 | procedural | Floor Heating Panels - Removal | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-410-010-720-001 | 021-410-010 | 720 | procedural | Floor Heating Panels - Installation | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-410-030-034-001 | 021-410-030 | 034 | descriptive | Floor Heating Controller and Sensors - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-410-030-040-001 | 021-410-030 | 040 | descriptive | Floor Heating Controller and Sensors - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-410-030-200-001 | 021-410-030 | 200 | procedural | Floor Heating Controller and Sensors - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-410-030-300-001 | 021-410-030 | 300 | procedural | Floor Heating Controller and Sensors - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-500-010-040-001 | 021-500-010 | 040 | descriptive | Integrated Cooling General and Architecture - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-500-010-200-001 | 021-500-010 | 200 | procedural | Integrated Cooling General and Architecture - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-500-010-300-001 | 021-500-010 | 300 | procedural | Integrated Cooling General and Architecture - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-010-040-001 | 021-510-010 | 040 | descriptive | Electrically Driven Cooling Compressor - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-510-010-200-001 | 021-510-010 | 200 | procedural | Electrically Driven Cooling Compressor - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-010-520-001 | 021-510-010 | 520 | procedural | Electrically Driven Cooling Compressor - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-010-720-001 | 021-510-010 | 720 | procedural | Electrically Driven Cooling Compressor - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-030-040-001 | 021-510-030 | 040 | descriptive | Heat Exchanger Network - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-510-030-200-001 | 021-510-030 | 200 | procedural | Heat Exchanger Network - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-030-520-001 | 021-510-030 | 520 | procedural | Heat Exchanger Network - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-030-720-001 | 021-510-030 | 720 | procedural | Heat Exchanger Network - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-050-040-001 | 021-510-050 | 040 | descriptive | Working Fluid Refrigerant Loop - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-510-050-200-001 | 021-510-050 | 200 | procedural | Working Fluid Refrigerant Loop - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-050-520-001 | 021-510-050 | 520 | procedural | Working Fluid Refrigerant Loop - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-050-720-001 | 021-510-050 | 720 | procedural | Working Fluid Refrigerant Loop - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-070-040-001 | 021-510-070 | 040 | descriptive | Water Extraction and Humidity Control - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-510-070-200-001 | 021-510-070 | 200 | procedural | Water Extraction and Humidity Control - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-070-520-001 | 021-510-070 | 520 | procedural | Water Extraction and Humidity Control - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-070-720-001 | 021-510-070 | 720 | procedural | Water Extraction and Humidity Control - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-090-040-001 | 021-510-090 | 040 | descriptive | Cooling Control Sensors and Protection - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-510-090-200-001 | 021-510-090 | 200 | procedural | Cooling Control Sensors and Protection - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-090-520-001 | 021-510-090 | 520 | procedural | Cooling Control Sensors and Protection - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-510-090-720-001 | 021-510-090 | 720 | procedural | Cooling Control Sensors and Protection - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-600-010-034-001 | 021-600-010 | 034 | descriptive | Temperature Control General and Zoning - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-600-010-040-001 | 021-600-010 | 040 | descriptive | Temperature Control General and Zoning - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-600-010-200-001 | 021-600-010 | 200 | procedural | Temperature Control General and Zoning - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-600-010-300-001 | 021-600-010 | 300 | procedural | Temperature Control General and Zoning - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-610-010-034-001 | 021-610-010 | 034 | descriptive | Flight Deck Electric Reheat Trim - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-610-010-040-001 | 021-610-010 | 040 | descriptive | Flight Deck Electric Reheat Trim - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-610-010-200-001 | 021-610-010 | 200 | procedural | Flight Deck Electric Reheat Trim - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-610-010-300-001 | 021-610-010 | 300 | procedural | Flight Deck Electric Reheat Trim - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-610-030-034-001 | 021-610-030 | 034 | descriptive | Flight Deck Zone Sensors and Controller - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-610-030-040-001 | 021-610-030 | 040 | descriptive | Flight Deck Zone Sensors and Controller - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-610-030-200-001 | 021-610-030 | 200 | procedural | Flight Deck Zone Sensors and Controller - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-610-030-300-001 | 021-610-030 | 300 | procedural | Flight Deck Zone Sensors and Controller - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-620-010-034-001 | 021-620-010 | 034 | descriptive | Cabin Zone Electric Reheat Trim - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-620-010-040-001 | 021-620-010 | 040 | descriptive | Cabin Zone Electric Reheat Trim - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-620-010-200-001 | 021-620-010 | 200 | procedural | Cabin Zone Electric Reheat Trim - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-620-010-300-001 | 021-620-010 | 300 | procedural | Cabin Zone Electric Reheat Trim - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-620-030-034-001 | 021-620-030 | 034 | descriptive | Cabin Zone Sensors and Controller - Technical data | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-620-030-040-001 | 021-620-030 | 040 | descriptive | Cabin Zone Sensors and Controller - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-620-030-200-001 | 021-620-030 | 200 | procedural | Cabin Zone Sensors and Controller - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-620-030-300-001 | 021-620-030 | 300 | procedural | Cabin Zone Sensors and Controller - Scheduled maintenance | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-010-040-001 | 021-900-010 | 040 | descriptive | Energy Source Waste Heat Recovery - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-900-010-200-001 | 021-900-010 | 200 | procedural | Energy Source Waste Heat Recovery - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-010-520-001 | 021-900-010 | 520 | procedural | Energy Source Waste Heat Recovery - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-010-720-001 | 021-900-010 | 720 | procedural | Energy Source Waste Heat Recovery - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-030-040-001 | 021-900-030 | 040 | descriptive | Cryogenic Cold Sink Utilization - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-900-030-200-001 | 021-900-030 | 200 | procedural | Cryogenic Cold Sink Utilization - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-030-520-001 | 021-900-030 | 520 | procedural | Cryogenic Cold Sink Utilization - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-030-720-001 | 021-900-030 | 720 | procedural | Cryogenic Cold Sink Utilization - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-050-040-001 | 021-900-050 | 040 | descriptive | ECS Thermal Management System Coupling - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-900-050-200-001 | 021-900-050 | 200 | procedural | ECS Thermal Management System Coupling - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-050-520-001 | 021-900-050 | 520 | procedural | ECS Thermal Management System Coupling - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-050-720-001 | 021-900-050 | 720 | procedural | ECS Thermal Management System Coupling - Install | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-070-040-001 | 021-900-070 | 040 | descriptive | Bleedless Air Supply Interface - Description | AUTHORED | PMC-EWTW-AMM, PMC-EWTW-SDS |
+| DMREQ-021-900-070-200-001 | 021-900-070 | 200 | procedural | Bleedless Air Supply Interface - Servicing | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-070-520-001 | 021-900-070 | 520 | procedural | Bleedless Air Supply Interface - Remove | AUTHORED | PMC-EWTW-AMM |
+| DMREQ-021-900-070-720-001 | 021-900-070 | 720 | procedural | Bleedless Air Supply Interface - Install | AUTHORED | PMC-EWTW-AMM |

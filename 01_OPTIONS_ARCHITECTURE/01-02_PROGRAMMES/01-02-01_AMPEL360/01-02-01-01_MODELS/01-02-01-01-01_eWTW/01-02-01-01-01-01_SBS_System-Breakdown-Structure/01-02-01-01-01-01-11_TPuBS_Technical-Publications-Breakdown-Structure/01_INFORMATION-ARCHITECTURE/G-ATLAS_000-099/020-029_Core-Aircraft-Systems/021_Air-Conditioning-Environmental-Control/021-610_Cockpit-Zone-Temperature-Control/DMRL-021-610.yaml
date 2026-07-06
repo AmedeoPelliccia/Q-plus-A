@@ -1,0 +1,17 @@
+# DMRL-021-610.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-610"
+  title: "Cockpit Zone Temperature Control"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-610-010"
+    title: "Flight Deck Electric Reheat Trim"
+    dmrl: "021-610-010_Flight-Deck-Electric-Reheat-Trim/DMRL-021-610-010.yaml"
+    dataModuleRequirements: 4
+  - code: "021-610-030"
+    title: "Flight Deck Zone Sensors and Controller"
+    dmrl: "021-610-030_Flight-Deck-Zone-Sensors-and-Controller/DMRL-021-610-030.yaml"
+    dataModuleRequirements: 4

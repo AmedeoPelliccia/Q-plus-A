@@ -1,0 +1,17 @@
+# DMRL-021-210.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-210"
+  title: "Cockpit Distribution"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-210-010"
+    title: "Flight Deck Supply Ducting"
+    dmrl: "021-210-010_Flight-Deck-Supply-Ducting/DMRL-021-210-010.yaml"
+    dataModuleRequirements: 3
+  - code: "021-210-030"
+    title: "Flight Deck Outlets and Diffusers"
+    dmrl: "021-210-030_Flight-Deck-Outlets-and-Diffusers/DMRL-021-210-030.yaml"
+    dataModuleRequirements: 5

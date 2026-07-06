@@ -1,0 +1,17 @@
+# DMRL-021-280.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-280"
+  title: "Miscellaneous Equipment and Chiller Ventilation"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-280-010"
+    title: "Equipment Cooling Ventilation"
+    dmrl: "021-280-010_Equipment-Cooling-Ventilation/DMRL-021-280-010.yaml"
+    dataModuleRequirements: 3
+  - code: "021-280-030"
+    title: "Galley Chiller Ventilation"
+    dmrl: "021-280-030_Galley-Chiller-Ventilation/DMRL-021-280-030.yaml"
+    dataModuleRequirements: 3

@@ -1,0 +1,29 @@
+# DMRL-021-510.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-510"
+  title: "Environmental Cooling Unit Electric"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-510-010"
+    title: "Electrically Driven Cooling Compressor"
+    dmrl: "021-510-010_Electrically-Driven-Cooling-Compressor/DMRL-021-510-010.yaml"
+    dataModuleRequirements: 4
+  - code: "021-510-030"
+    title: "Heat Exchanger Network"
+    dmrl: "021-510-030_Heat-Exchanger-Network/DMRL-021-510-030.yaml"
+    dataModuleRequirements: 4
+  - code: "021-510-050"
+    title: "Working Fluid Refrigerant Loop"
+    dmrl: "021-510-050_Working-Fluid-Refrigerant-Loop/DMRL-021-510-050.yaml"
+    dataModuleRequirements: 4
+  - code: "021-510-070"
+    title: "Water Extraction and Humidity Control"
+    dmrl: "021-510-070_Water-Extraction-and-Humidity-Control/DMRL-021-510-070.yaml"
+    dataModuleRequirements: 4
+  - code: "021-510-090"
+    title: "Cooling Control Sensors and Protection"
+    dmrl: "021-510-090_Cooling-Control-Sensors-and-Protection/DMRL-021-510-090.yaml"
+    dataModuleRequirements: 4

@@ -1,0 +1,101 @@
+# DMRL-021.yaml — Data Module Requirements List (chapter roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021"
+  title: "Air Conditioning Environmental Control"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-000"
+    title: "General"
+    dmrl: "021-000_General/DMRL-021-000.yaml"
+    dataModuleRequirements: 3
+  - code: "021-200"
+    title: "Distribution"
+    dmrl: "021-200_Distribution/DMRL-021-200.yaml"
+    dataModuleRequirements: 7
+  - code: "021-210"
+    title: "Cockpit Distribution"
+    dmrl: "021-210_Cockpit-Distribution/DMRL-021-210.yaml"
+    dataModuleRequirements: 8
+  - code: "021-220"
+    title: "Passenger Cabin Distribution"
+    dmrl: "021-220_Passenger-Cabin-Distribution/DMRL-021-220.yaml"
+    dataModuleRequirements: 13
+  - code: "021-230"
+    title: "Gasper"
+    dmrl: "021-230_Gasper/DMRL-021-230.yaml"
+    dataModuleRequirements: 10
+  - code: "021-240"
+    title: "Recirculation"
+    dmrl: "021-240_Recirculation/DMRL-021-240.yaml"
+    dataModuleRequirements: 15
+  - code: "021-250"
+    title: "Ram Air Ventilation"
+    dmrl: "021-250_Ram-Air-Ventilation/DMRL-021-250.yaml"
+    dataModuleRequirements: 13
+  - code: "021-260"
+    title: "Avionics Compartment Ventilation"
+    dmrl: "021-260_Avionics-Compartment-Ventilation/DMRL-021-260.yaml"
+    dataModuleRequirements: 12
+  - code: "021-270"
+    title: "Cargo Compartment Ventilation"
+    dmrl: "021-270_Cargo-Compartment-Ventilation/DMRL-021-270.yaml"
+    dataModuleRequirements: 8
+  - code: "021-280"
+    title: "Miscellaneous Equipment and Chiller Ventilation"
+    dmrl: "021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/DMRL-021-280.yaml"
+    dataModuleRequirements: 6
+  - code: "021-290"
+    title: "Low Pressure Ground Supply"
+    dmrl: "021-290_Low-Pressure-Ground-Supply/DMRL-021-290.yaml"
+    dataModuleRequirements: 10
+  - code: "021-300"
+    title: "Pressurization Control"
+    dmrl: "021-300_Pressurization-Control/DMRL-021-300.yaml"
+    dataModuleRequirements: 3
+  - code: "021-310"
+    title: "Pressurization Control and Indication"
+    dmrl: "021-310_Pressurization-Control-and-Indication/DMRL-021-310.yaml"
+    dataModuleRequirements: 13
+  - code: "021-320"
+    title: "Cabin Pressure Relief"
+    dmrl: "021-320_Cabin-Pressure-Relief/DMRL-021-320.yaml"
+    dataModuleRequirements: 10
+  - code: "021-330"
+    title: "Cargo Compartment Pressure Equalization"
+    dmrl: "021-330_Cargo-Compartment-Pressure-Equalization/DMRL-021-330.yaml"
+    dataModuleRequirements: 5
+  - code: "021-400"
+    title: "Heating"
+    dmrl: "021-400_Heating/DMRL-021-400.yaml"
+    dataModuleRequirements: 3
+  - code: "021-410"
+    title: "Floor Panel Heating"
+    dmrl: "021-410_Floor-Panel-Heating/DMRL-021-410.yaml"
+    dataModuleRequirements: 9
+  - code: "021-500"
+    title: "Environmental Cooling Electric Integrated"
+    dmrl: "021-500_Environmental-Cooling-Electric-Integrated/DMRL-021-500.yaml"
+    dataModuleRequirements: 3
+  - code: "021-510"
+    title: "Environmental Cooling Unit Electric"
+    dmrl: "021-510_Environmental-Cooling-Unit-Electric/DMRL-021-510.yaml"
+    dataModuleRequirements: 20
+  - code: "021-600"
+    title: "Temperature Control"
+    dmrl: "021-600_Temperature-Control/DMRL-021-600.yaml"
+    dataModuleRequirements: 4
+  - code: "021-610"
+    title: "Cockpit Zone Temperature Control"
+    dmrl: "021-610_Cockpit-Zone-Temperature-Control/DMRL-021-610.yaml"
+    dataModuleRequirements: 8
+  - code: "021-620"
+    title: "Passenger Cabin Zone Temperature Control"
+    dmrl: "021-620_Passenger-Cabin-Zone-Temperature-Control/DMRL-021-620.yaml"
+    dataModuleRequirements: 8
+  - code: "021-900"
+    title: "Energy System Thermal Integration"
+    dmrl: "021-900_Energy-System-Thermal-Integration/DMRL-021-900.yaml"
+    dataModuleRequirements: 16

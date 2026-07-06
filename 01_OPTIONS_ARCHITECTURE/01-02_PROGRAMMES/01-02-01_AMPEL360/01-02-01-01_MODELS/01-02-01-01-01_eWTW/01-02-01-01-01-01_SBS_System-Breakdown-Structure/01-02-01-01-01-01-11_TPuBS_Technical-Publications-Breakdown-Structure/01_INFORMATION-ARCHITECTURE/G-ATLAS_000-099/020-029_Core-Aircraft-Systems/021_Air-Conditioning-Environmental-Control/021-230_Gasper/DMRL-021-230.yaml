@@ -1,0 +1,17 @@
+# DMRL-021-230.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-230"
+  title: "Gasper"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-230-010"
+    title: "Gasper Fan"
+    dmrl: "021-230-010_Gasper-Fan/DMRL-021-230-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-230-030"
+    title: "Gasper Outlets and Ducting"
+    dmrl: "021-230-030_Gasper-Outlets-and-Ducting/DMRL-021-230-030.yaml"
+    dataModuleRequirements: 5

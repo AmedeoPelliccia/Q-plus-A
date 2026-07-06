@@ -1,0 +1,55 @@
+# DMRL-021-510-090.yaml — Data Module Requirements List (node level)
+# Declares which Data Modules must exist for this G-ATLAS node.
+# Publication membership is metadata (publicationTargets), never folder structure.
+
+node:
+  code: "021-510-090"
+  title: "Cooling-Control-Sensors-and-Protection"
+  nodeType: "information-authoring-node"
+
+dataModuleRequirements:
+
+  - requirementId: "DMREQ-021-510-090-040-001"
+    infoCode: "040"
+    title: "Cooling Control Sensors and Protection - Description"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-51-09-00A-040A-A"
+        file: "040_Description/040A_EFF-ALL/DMC-EWTW-A-21-51-09-00A-040A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-510-090-200-001"
+    infoCode: "200"
+    title: "Cooling Control Sensors and Protection - Servicing"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-51-09-00A-200A-A"
+        file: "200_Servicing/200A_EFF-ALL/DMC-EWTW-A-21-51-09-00A-200A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-510-090-520-001"
+    infoCode: "520"
+    title: "Cooling Control Sensors and Protection - Remove"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-51-09-00A-520A-A"
+        file: "520_Remove/520A_EFF-ALL/DMC-EWTW-A-21-51-09-00A-520A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-510-090-720-001"
+    infoCode: "720"
+    title: "Cooling Control Sensors and Protection - Install"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-51-09-00A-720A-A"
+        file: "720_Install/720A_EFF-ALL/DMC-EWTW-A-21-51-09-00A-720A-A_001-00_en-GB.xml"

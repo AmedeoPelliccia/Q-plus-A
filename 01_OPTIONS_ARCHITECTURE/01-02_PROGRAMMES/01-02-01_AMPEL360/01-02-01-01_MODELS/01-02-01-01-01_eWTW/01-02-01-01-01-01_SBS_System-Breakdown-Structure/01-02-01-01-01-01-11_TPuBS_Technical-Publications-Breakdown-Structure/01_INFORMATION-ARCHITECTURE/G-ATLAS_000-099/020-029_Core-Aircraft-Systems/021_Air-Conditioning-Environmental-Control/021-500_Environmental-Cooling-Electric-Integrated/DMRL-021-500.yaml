@@ -1,0 +1,13 @@
+# DMRL-021-500.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-500"
+  title: "Environmental Cooling Electric Integrated"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-500-010"
+    title: "Integrated Cooling General and Architecture"
+    dmrl: "021-500-010_Integrated-Cooling-General-and-Architecture/DMRL-021-500-010.yaml"
+    dataModuleRequirements: 3

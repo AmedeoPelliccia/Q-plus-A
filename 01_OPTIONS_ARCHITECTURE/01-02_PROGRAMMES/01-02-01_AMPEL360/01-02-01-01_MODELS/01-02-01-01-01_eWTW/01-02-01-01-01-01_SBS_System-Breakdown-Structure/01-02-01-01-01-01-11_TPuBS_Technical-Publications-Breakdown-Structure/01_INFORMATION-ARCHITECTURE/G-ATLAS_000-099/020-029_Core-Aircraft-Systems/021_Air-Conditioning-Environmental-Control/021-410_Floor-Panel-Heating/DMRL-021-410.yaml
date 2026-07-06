@@ -1,0 +1,17 @@
+# DMRL-021-410.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-410"
+  title: "Floor Panel Heating"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-410-010"
+    title: "Floor Heating Panels"
+    dmrl: "021-410-010_Floor-Heating-Panels/DMRL-021-410-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-410-030"
+    title: "Floor Heating Controller and Sensors"
+    dmrl: "021-410-030_Floor-Heating-Controller-and-Sensors/DMRL-021-410-030.yaml"
+    dataModuleRequirements: 4

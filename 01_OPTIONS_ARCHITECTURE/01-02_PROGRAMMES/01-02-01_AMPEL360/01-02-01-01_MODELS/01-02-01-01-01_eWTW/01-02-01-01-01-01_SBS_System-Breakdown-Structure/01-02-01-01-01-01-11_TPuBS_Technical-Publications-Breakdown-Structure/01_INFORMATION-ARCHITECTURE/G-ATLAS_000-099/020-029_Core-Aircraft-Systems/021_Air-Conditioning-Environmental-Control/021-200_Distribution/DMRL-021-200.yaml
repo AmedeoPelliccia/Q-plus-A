@@ -1,0 +1,17 @@
+# DMRL-021-200.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-200"
+  title: "Distribution"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-200-010"
+    title: "Distribution Ducting Architecture"
+    dmrl: "021-200-010_Distribution-Ducting-Architecture/DMRL-021-200-010.yaml"
+    dataModuleRequirements: 3
+  - code: "021-200-030"
+    title: "Distribution Control and Balancing"
+    dmrl: "021-200-030_Distribution-Control-and-Balancing/DMRL-021-200-030.yaml"
+    dataModuleRequirements: 4

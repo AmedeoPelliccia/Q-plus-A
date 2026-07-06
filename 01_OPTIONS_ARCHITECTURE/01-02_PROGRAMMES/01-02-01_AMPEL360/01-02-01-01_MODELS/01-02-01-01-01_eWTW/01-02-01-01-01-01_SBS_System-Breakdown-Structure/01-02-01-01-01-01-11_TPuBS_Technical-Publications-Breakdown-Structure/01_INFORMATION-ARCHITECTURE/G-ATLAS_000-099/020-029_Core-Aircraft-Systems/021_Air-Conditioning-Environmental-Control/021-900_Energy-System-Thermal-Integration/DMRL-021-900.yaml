@@ -1,0 +1,25 @@
+# DMRL-021-900.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-900"
+  title: "Energy System Thermal Integration"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-900-010"
+    title: "Energy Source Waste Heat Recovery"
+    dmrl: "021-900-010_Energy-Source-Waste-Heat-Recovery/DMRL-021-900-010.yaml"
+    dataModuleRequirements: 4
+  - code: "021-900-030"
+    title: "Cryogenic Cold Sink Utilization"
+    dmrl: "021-900-030_Cryogenic-Cold-Sink-Utilization/DMRL-021-900-030.yaml"
+    dataModuleRequirements: 4
+  - code: "021-900-050"
+    title: "ECS Thermal Management System Coupling"
+    dmrl: "021-900-050_ECS-Thermal-Management-System-Coupling/DMRL-021-900-050.yaml"
+    dataModuleRequirements: 4
+  - code: "021-900-070"
+    title: "Bleedless Air Supply Interface"
+    dmrl: "021-900-070_Bleedless-Air-Supply-Interface/DMRL-021-900-070.yaml"
+    dataModuleRequirements: 4

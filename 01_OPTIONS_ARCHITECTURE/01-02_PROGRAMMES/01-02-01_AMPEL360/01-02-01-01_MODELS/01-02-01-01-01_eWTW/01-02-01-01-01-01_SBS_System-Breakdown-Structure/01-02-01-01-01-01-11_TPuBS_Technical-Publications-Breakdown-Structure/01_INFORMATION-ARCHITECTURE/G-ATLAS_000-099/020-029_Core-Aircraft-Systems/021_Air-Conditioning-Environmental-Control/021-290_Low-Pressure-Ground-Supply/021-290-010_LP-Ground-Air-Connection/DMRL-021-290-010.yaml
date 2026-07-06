@@ -1,0 +1,66 @@
+# DMRL-021-290-010.yaml — Data Module Requirements List (node level)
+# Declares which Data Modules must exist for this G-ATLAS node.
+# Publication membership is metadata (publicationTargets), never folder structure.
+
+node:
+  code: "021-290-010"
+  title: "LP-Ground-Air-Connection"
+  nodeType: "information-authoring-node"
+
+dataModuleRequirements:
+
+  - requirementId: "DMREQ-021-290-010-040-001"
+    infoCode: "040"
+    title: "LP Ground Air Connection - Description"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-29-01-00A-040A-A"
+        file: "DM/DMC-EWTW-A-21-29-01-00A-040A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-290-010-200-001"
+    infoCode: "200"
+    title: "LP Ground Air Connection - Servicing"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-29-01-00A-200A-A"
+        file: "DM/DMC-EWTW-A-21-29-01-00A-200A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-290-010-300-001"
+    infoCode: "300"
+    title: "LP Ground Air Connection - Scheduled maintenance"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-29-01-00A-300A-A"
+        file: "DM/DMC-EWTW-A-21-29-01-00A-300A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-290-010-520-001"
+    infoCode: "520"
+    title: "LP Ground Air Connection - Removal"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-29-01-00A-520A-A"
+        file: "DM/DMC-EWTW-A-21-29-01-00A-520A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-290-010-720-001"
+    infoCode: "720"
+    title: "LP Ground Air Connection - Installation"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-29-01-00A-720A-A"
+        file: "DM/DMC-EWTW-A-21-29-01-00A-720A-A_001-00_en-GB.xml"

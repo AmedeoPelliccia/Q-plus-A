@@ -1,0 +1,45 @@
+# DMRL-003-900.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "003-900"
+  title: "Energy Replenishment Ground Infrastructure"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "003-900-010"
+    title: "Ground Charging Connection Interface"
+    dmrl: "003-900-010_Ground-Charging-Connection-Interface/DMRL-003-900-010.yaml"
+    dataModuleRequirements: 5
+  - code: "003-900-020"
+    title: "Ground Charging Source and Supply"
+    dmrl: "003-900-020_Ground-Charging-Source-and-Supply/DMRL-003-900-020.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-030"
+    title: "Charging Process Control and Sequencing"
+    dmrl: "003-900-030_Charging-Process-Control-and-Sequencing/DMRL-003-900-030.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-040"
+    title: "Charging Safety Isolation Grounding and Bonding"
+    dmrl: "003-900-040_Charging-Safety-Isolation-Grounding-and-Bonding/DMRL-003-900-040.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-050"
+    title: "Charging Communication Protocol"
+    dmrl: "003-900-050_Charging-Communication-Protocol/DMRL-003-900-050.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-060"
+    title: "Battery Thermal Pre Conditioning During Charging"
+    dmrl: "003-900-060_Battery-Thermal-Pre-Conditioning-During-Charging/DMRL-003-900-060.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-070"
+    title: "Charge Metering and Energy Transfer Verification"
+    dmrl: "003-900-070_Charge-Metering-and-Energy-Transfer-Verification/DMRL-003-900-070.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-080"
+    title: "Charging Infrastructure Compatibility and Interface Standards"
+    dmrl: "003-900-080_Charging-Infrastructure-Compatibility-and-Interface-Standards/DMRL-003-900-080.yaml"
+    dataModuleRequirements: 0
+  - code: "003-900-090"
+    title: "Abnormal Charging and Emergency Disconnect"
+    dmrl: "003-900-090_Abnormal-Charging-and-Emergency-Disconnect/DMRL-003-900-090.yaml"
+    dataModuleRequirements: 0

@@ -1,0 +1,13 @@
+# DMRL-021-000.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-000"
+  title: "General"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-000-010"
+    title: "ECS General and Zoning"
+    dmrl: "021-000-010_ECS-General-and-Zoning/DMRL-021-000-010.yaml"
+    dataModuleRequirements: 3
