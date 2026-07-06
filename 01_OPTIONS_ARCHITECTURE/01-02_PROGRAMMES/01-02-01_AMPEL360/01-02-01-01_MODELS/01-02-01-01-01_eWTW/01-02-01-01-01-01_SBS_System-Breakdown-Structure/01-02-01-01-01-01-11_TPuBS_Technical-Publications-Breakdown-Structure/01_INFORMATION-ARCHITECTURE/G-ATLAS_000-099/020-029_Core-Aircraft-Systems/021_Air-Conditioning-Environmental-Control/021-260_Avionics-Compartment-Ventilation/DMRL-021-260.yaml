@@ -1,0 +1,21 @@
+# DMRL-021-260.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-260"
+  title: "Avionics Compartment Ventilation"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-260-010"
+    title: "Avionics Cooling Fan"
+    dmrl: "021-260-010_Avionics-Cooling-Fan/DMRL-021-260-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-260-030"
+    title: "Avionics Cooling Ducting and Exhaust"
+    dmrl: "021-260-030_Avionics-Cooling-Ducting-and-Exhaust/DMRL-021-260-030.yaml"
+    dataModuleRequirements: 3
+  - code: "021-260-050"
+    title: "Avionics Cooling Control and Override"
+    dmrl: "021-260-050_Avionics-Cooling-Control-and-Override/DMRL-021-260-050.yaml"
+    dataModuleRequirements: 4

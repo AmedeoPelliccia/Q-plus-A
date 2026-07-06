@@ -1,0 +1,21 @@
+# DMRL-021-240.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-240"
+  title: "Recirculation"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-240-010"
+    title: "Recirculation Fan"
+    dmrl: "021-240-010_Recirculation-Fan/DMRL-021-240-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-240-030"
+    title: "Recirculation Filter HEPA"
+    dmrl: "021-240-030_Recirculation-Filter-HEPA/DMRL-021-240-030.yaml"
+    dataModuleRequirements: 5
+  - code: "021-240-050"
+    title: "Recirculation Ducting and Check Valves"
+    dmrl: "021-240-050_Recirculation-Ducting-and-Check-Valves/DMRL-021-240-050.yaml"
+    dataModuleRequirements: 5

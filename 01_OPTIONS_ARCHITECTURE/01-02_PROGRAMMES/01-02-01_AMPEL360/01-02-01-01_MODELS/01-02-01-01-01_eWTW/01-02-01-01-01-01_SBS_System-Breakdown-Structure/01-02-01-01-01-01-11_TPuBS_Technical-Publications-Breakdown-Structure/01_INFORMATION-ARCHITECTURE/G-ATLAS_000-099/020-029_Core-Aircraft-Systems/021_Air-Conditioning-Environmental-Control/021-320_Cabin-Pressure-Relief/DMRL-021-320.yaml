@@ -1,0 +1,17 @@
+# DMRL-021-320.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-320"
+  title: "Cabin Pressure Relief"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-320-010"
+    title: "Positive Pressure Relief Valve"
+    dmrl: "021-320-010_Positive-Pressure-Relief-Valve/DMRL-021-320-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-320-030"
+    title: "Negative Pressure Relief Valve"
+    dmrl: "021-320-030_Negative-Pressure-Relief-Valve/DMRL-021-320-030.yaml"
+    dataModuleRequirements: 5

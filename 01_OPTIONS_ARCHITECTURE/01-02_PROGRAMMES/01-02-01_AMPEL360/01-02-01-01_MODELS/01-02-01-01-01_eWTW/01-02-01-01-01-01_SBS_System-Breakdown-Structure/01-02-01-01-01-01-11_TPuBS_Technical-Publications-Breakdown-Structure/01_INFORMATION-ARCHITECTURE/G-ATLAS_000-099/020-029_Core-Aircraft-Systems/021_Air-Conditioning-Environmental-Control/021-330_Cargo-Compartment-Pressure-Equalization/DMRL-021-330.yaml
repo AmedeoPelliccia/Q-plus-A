@@ -1,0 +1,13 @@
+# DMRL-021-330.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-330"
+  title: "Cargo Compartment Pressure Equalization"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-330-010"
+    title: "Cargo Pressure Equalization Valves"
+    dmrl: "021-330-010_Cargo-Pressure-Equalization-Valves/DMRL-021-330-010.yaml"
+    dataModuleRequirements: 5

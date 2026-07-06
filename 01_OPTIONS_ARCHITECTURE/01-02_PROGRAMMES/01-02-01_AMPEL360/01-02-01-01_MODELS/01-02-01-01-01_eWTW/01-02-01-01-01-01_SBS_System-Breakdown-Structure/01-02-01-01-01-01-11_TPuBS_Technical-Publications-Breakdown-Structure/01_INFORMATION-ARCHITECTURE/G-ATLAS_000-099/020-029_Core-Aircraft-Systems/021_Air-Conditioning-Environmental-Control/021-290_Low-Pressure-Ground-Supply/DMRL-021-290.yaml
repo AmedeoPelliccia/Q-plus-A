@@ -1,0 +1,17 @@
+# DMRL-021-290.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-290"
+  title: "Low Pressure Ground Supply"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-290-010"
+    title: "LP Ground Air Connection"
+    dmrl: "021-290-010_LP-Ground-Air-Connection/DMRL-021-290-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-290-030"
+    title: "Ground Supply Check Valve"
+    dmrl: "021-290-030_Ground-Supply-Check-Valve/DMRL-021-290-030.yaml"
+    dataModuleRequirements: 5

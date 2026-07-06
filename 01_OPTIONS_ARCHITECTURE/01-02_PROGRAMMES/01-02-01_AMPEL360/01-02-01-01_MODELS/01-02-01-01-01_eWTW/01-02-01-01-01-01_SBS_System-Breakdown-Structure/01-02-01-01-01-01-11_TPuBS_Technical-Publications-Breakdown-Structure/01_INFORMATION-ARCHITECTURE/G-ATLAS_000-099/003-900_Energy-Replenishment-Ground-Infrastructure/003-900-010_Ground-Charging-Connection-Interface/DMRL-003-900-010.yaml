@@ -1,0 +1,67 @@
+# DMRL-003-900-010.yaml — Data Module Requirements List (node level)
+# Declares which Data Modules must exist for this G-ATLAS node.
+# Publication membership is metadata (publicationTargets), never folder structure.
+
+node:
+  code: "003-900-010"
+  title: "Ground-Charging-Connection-Interface"
+  nodeType: "information-authoring-node"
+
+dataModuleRequirements:
+
+  - requirementId: "DMREQ-003-900-010-034-001"
+    infoCode: "034"
+    title: "Ground Charging Connection Interface - Technical data"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-03-90-01-00A-034A-A"
+        file: "DM/DMC-EWTW-A-03-90-01-00A-034A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-003-900-010-040-001"
+    infoCode: "040"
+    title: "Ground Charging Connection Interface - Description"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-03-90-01-00A-040A-A"
+        file: "DM/DMC-EWTW-A-03-90-01-00A-040A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-003-900-010-420-001"
+    infoCode: "420"
+    title: "Ground Charging Connection Interface - Fault isolation"
+    schemaType: "fault"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-03-90-01-00A-420A-A"
+        file: "DM/DMC-EWTW-A-03-90-01-00A-420A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-003-900-010-720-001"
+    infoCode: "720"
+    title: "Ground Charging Connection Interface - Installation"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-03-90-01-00A-720A-A"
+        file: "DM/DMC-EWTW-A-03-90-01-00A-720A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-003-900-010-730-001"
+    infoCode: "730"
+    title: "Ground Charging Connection Interface - Test and check"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-ECHM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-03-90-01-00A-730A-A"
+        file: "DM/DMC-EWTW-A-03-90-01-00A-730A-A_001-00_en-GB.xml"

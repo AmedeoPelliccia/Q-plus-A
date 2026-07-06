@@ -1,0 +1,25 @@
+# PMC-EWTW-AMM.yaml — Publication configuration (selection rules)
+# The AMM is a controlled composition of the common DM pool in
+# 01_INFORMATION-ARCHITECTURE; it references DMs, it never stores them.
+
+publication:
+  pmc: "PMC-EWTW-AMM"
+  dtd: "AMM"
+  title: "Aircraft Maintenance Manual"
+  class: "STD"
+  model: eWTW
+  mic: EWTW
+  side: PUB
+  standard: "S1000D Issue 4.2"
+
+selection:
+  publicationTarget: "PMC-EWTW-AMM"   # DMRL rows whose publicationTargets contain this PMC
+  informationArchitecture: "../../01_INFORMATION-ARCHITECTURE"
+  atlasScope:
+    bands:
+      - "G-ATLAS_000-099"
+
+publicationModules:
+  - "PM-EWTW-AMM-021_AIR-CONDITIONING.yaml"
+
+rule: "PM references DMs by DMC; it never holds DM content (linked, not stored)."

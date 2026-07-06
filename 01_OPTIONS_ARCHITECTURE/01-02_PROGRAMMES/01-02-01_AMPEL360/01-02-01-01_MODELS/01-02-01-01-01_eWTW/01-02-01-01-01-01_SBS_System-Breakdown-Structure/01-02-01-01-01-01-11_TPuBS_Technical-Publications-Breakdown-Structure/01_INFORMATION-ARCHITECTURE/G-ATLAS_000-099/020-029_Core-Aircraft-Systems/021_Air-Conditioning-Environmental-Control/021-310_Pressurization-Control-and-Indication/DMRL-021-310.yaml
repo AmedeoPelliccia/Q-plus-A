@@ -1,0 +1,21 @@
+# DMRL-021-310.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-310"
+  title: "Pressurization Control and Indication"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-310-010"
+    title: "Outflow Valve and Actuator"
+    dmrl: "021-310-010_Outflow-Valve-and-Actuator/DMRL-021-310-010.yaml"
+    dataModuleRequirements: 5
+  - code: "021-310-030"
+    title: "Cabin Pressure Controller"
+    dmrl: "021-310-030_Cabin-Pressure-Controller/DMRL-021-310-030.yaml"
+    dataModuleRequirements: 4
+  - code: "021-310-050"
+    title: "Pressurization Indication and Sensors"
+    dmrl: "021-310-050_Pressurization-Indication-and-Sensors/DMRL-021-310-050.yaml"
+    dataModuleRequirements: 4

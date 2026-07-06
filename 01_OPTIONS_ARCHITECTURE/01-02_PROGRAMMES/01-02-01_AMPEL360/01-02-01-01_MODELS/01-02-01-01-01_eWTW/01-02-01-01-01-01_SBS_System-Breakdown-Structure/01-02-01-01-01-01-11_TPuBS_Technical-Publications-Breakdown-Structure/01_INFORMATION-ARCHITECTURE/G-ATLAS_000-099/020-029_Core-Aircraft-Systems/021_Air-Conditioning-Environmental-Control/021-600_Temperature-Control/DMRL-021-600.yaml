@@ -1,0 +1,13 @@
+# DMRL-021-600.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-600"
+  title: "Temperature Control"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-600-010"
+    title: "Temperature Control General and Zoning"
+    dmrl: "021-600-010_Temperature-Control-General-and-Zoning/DMRL-021-600-010.yaml"
+    dataModuleRequirements: 4

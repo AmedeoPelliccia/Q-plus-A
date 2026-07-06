@@ -1,0 +1,13 @@
+# DMRL-021-400.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-400"
+  title: "Heating"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-400-010"
+    title: "Heating General"
+    dmrl: "021-400-010_Heating-General/DMRL-021-400-010.yaml"
+    dataModuleRequirements: 3

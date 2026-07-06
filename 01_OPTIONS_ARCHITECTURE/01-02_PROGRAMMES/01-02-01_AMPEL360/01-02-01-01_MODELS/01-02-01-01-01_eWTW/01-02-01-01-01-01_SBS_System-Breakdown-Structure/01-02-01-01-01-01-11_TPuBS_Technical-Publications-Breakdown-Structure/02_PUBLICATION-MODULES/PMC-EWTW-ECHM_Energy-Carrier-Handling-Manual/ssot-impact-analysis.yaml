@@ -1,0 +1,76 @@
+# Stage 1 — SSOT Impact Analysis for PMC-EWTW-ECHM
+# The ONLY file that reads the SSOT.
+# Generates subjects/tree/DMC/applicability downstream.
+# Rule: one_way — reads SSOT only; never writes back (SSOT -> PUB)
+
+ssot_impact_analysis:
+  pmc: PMC-EWTW-ECHM
+  manual: Energy-Carrier Handling Manual
+  class: green-delta
+  method: "Select SSOT (Q+ATLANTIDE) nodes whose content is in-scope for ground handling of the energy carrier."
+
+  ssot_sources:
+
+    # Band: 000-099_G-ATLAS
+    - node: "012-900"
+      band: "000-099 G-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/012-900_Energy-Replenishment-and-Conditioning"
+      title: Energy Replenishment and Conditioning
+      relevance: primary
+
+    - node: "003-900"
+      band: "000-099 G-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure"
+      title: Energy-Replenishment Ground Infrastructure
+      relevance: primary
+
+    - node: "010-900"
+      band: "000-099 G-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/010-900_Energy-State-Preservation-During-Storage"
+      title: Energy-State Preservation During Storage
+      relevance: secondary
+
+    - node: "011-900"
+      band: "000-099 G-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/011-900_Energy-Carrier-Hazard-Placards"
+      title: Energy-Carrier Hazard Placards
+      relevance: secondary
+
+    - node: "020-900"
+      band: "000-099 G-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-900_High-Energy-Standard-Practices"
+      title: High-Energy Standard Practices
+      relevance: secondary
+
+    - node: "070-079"
+      band: "000-099 G-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/070-079_Eco-Tech-and-Hybrid-Electric-Propulsion"
+      title: Eco-Tech & Hybrid-Electric Propulsion
+      relevance: source
+
+    # Band: 400-499_EPTA (cross-band)
+    - node: "400-499"
+      band: "EPTA (cross-band)"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/EPTA_400-499"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/EPTA_400-499/400-499_Energy-and-Propulsion-Technology"
+      title: Energy & Propulsion Technology
+      relevance: cross-ref
+
+    # Band: 500-599_AMTA (cross-band)
+    - node: "500-599"
+      band: "AMTA (cross-band)"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/AMTA_500-599"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/AMTA_500-599/500-599_Materials-energy-storage"
+      title: Materials (energy-storage)
+      relevance: cross-ref
+
+  one_way: "reads SSOT only; never writes back (SSOT -> PUB)"
+  generates: [subjects, tree-numbering, dmc-allocations, applicability]
+  status: baseline
+  version: "1.0"

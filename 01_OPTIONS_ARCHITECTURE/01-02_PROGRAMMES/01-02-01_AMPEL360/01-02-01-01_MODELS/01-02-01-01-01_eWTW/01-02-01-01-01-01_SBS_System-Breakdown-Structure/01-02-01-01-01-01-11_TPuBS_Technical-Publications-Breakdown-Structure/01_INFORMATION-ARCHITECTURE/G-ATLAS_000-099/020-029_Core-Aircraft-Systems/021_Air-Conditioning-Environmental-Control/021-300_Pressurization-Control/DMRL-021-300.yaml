@@ -1,0 +1,13 @@
+# DMRL-021-300.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-300"
+  title: "Pressurization Control"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-300-010"
+    title: "Pressurization General and Schedule"
+    dmrl: "021-300-010_Pressurization-General-and-Schedule/DMRL-021-300-010.yaml"
+    dataModuleRequirements: 3

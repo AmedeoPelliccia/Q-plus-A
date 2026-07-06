@@ -1,0 +1,21 @@
+# DMRL-021-220.yaml — Data Module Requirements List (section roll-up)
+# Aggregates the DMRLs of the child nodes; generated from local node DMRLs.
+
+node:
+  code: "021-220"
+  title: "Passenger Cabin Distribution"
+  nodeType: "information-rollup-node"
+
+children:
+  - code: "021-220-010"
+    title: "Cabin Supply Riser Ducts"
+    dmrl: "021-220-010_Cabin-Supply-Riser-Ducts/DMRL-021-220-010.yaml"
+    dataModuleRequirements: 3
+  - code: "021-220-030"
+    title: "Cabin Outlets and Diffusers"
+    dmrl: "021-220-030_Cabin-Outlets-and-Diffusers/DMRL-021-220-030.yaml"
+    dataModuleRequirements: 5
+  - code: "021-220-050"
+    title: "Overhead Distribution Manifold"
+    dmrl: "021-220-050_Overhead-Distribution-Manifold/DMRL-021-220-050.yaml"
+    dataModuleRequirements: 5

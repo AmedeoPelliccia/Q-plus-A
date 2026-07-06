@@ -1,0 +1,56 @@
+# DMRL-021-310-050.yaml — Data Module Requirements List (node level)
+# Declares which Data Modules must exist for this G-ATLAS node.
+# Publication membership is metadata (publicationTargets), never folder structure.
+
+node:
+  code: "021-310-050"
+  title: "Pressurization-Indication-and-Sensors"
+  nodeType: "information-authoring-node"
+
+dataModuleRequirements:
+
+  - requirementId: "DMREQ-021-310-050-034-001"
+    infoCode: "034"
+    title: "Pressurization Indication and Sensors - Technical data"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-31-05-00A-034A-A"
+        file: "DM/DMC-EWTW-A-21-31-05-00A-034A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-310-050-040-001"
+    infoCode: "040"
+    title: "Pressurization Indication and Sensors - Description"
+    schemaType: "descriptive"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+      - "PMC-EWTW-SDS"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-31-05-00A-040A-A"
+        file: "DM/DMC-EWTW-A-21-31-05-00A-040A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-310-050-200-001"
+    infoCode: "200"
+    title: "Pressurization Indication and Sensors - Servicing"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-31-05-00A-200A-A"
+        file: "DM/DMC-EWTW-A-21-31-05-00A-200A-A_001-00_en-GB.xml"
+
+  - requirementId: "DMREQ-021-310-050-300-001"
+    infoCode: "300"
+    title: "Pressurization Indication and Sensors - Scheduled maintenance"
+    schemaType: "procedural"
+    publicationTargets:
+      - "PMC-EWTW-AMM"
+    status: "AUTHORED"
+    dataModules:
+      - dmc: "DMC-EWTW-A-21-31-05-00A-300A-A"
+        file: "DM/DMC-EWTW-A-21-31-05-00A-300A-A_001-00_en-GB.xml"

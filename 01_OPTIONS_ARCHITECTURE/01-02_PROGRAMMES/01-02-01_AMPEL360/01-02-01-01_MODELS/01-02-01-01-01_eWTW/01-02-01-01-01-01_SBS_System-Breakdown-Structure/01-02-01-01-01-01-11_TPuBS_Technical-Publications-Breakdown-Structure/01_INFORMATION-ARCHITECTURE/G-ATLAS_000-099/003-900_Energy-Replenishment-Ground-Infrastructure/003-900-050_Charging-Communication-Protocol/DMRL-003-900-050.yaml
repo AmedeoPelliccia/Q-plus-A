@@ -1,0 +1,11 @@
+# DMRL-003-900-050.yaml — Data Module Requirements List (node level)
+# Declares which Data Modules must exist for this G-ATLAS node.
+# Publication membership is metadata (publicationTargets), never folder structure.
+
+node:
+  code: "003-900-050"
+  title: "Charging-Communication-Protocol"
+  nodeType: "placeholder-node"
+
+# No own information requirements declared yet.
+dataModuleRequirements: []
