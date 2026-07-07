@@ -1,4 +1,4 @@
-# Q-plus-A — Index# Q+A — Open Aerospace Engineering Architecture
+# Q+A — Open Aerospace Engineering Architecture
 
 **From structured engineering intent to models, simulations, evidence and physical product definition.**
 
@@ -54,7 +54,7 @@ S  Standards
 
 ### Q+ATLANTIDE architecture bands
 
-**Q+ATLANTIDE** (Quantum + Aerospace Top Level Architectures and Novel Technologies Identification *(and Integration)* in  Data Ecosystem) is the controlled architecture-taxonomy of Q+. Its `Q+ATLANTIDE1000` schema organizes all technology domains into ten controlled bands:
+**Q+ATLANTIDE** (Quantum + Aerospace Top Level Architectures and Novel Technologies Identification *(and integration)* in Data Ecosystem) is the controlled architecture-taxonomy of Q+. Its `Q+ATLANTIDE1000` schema organizes all technology domains into ten controlled bands:
 
 | Range | Code | Controlled meaning |
 |---:|---|---|
@@ -64,7 +64,7 @@ S  Standards
 | `300–399` | [`DTCEC`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/300-399_DTCEC/) | Digital Twin, Cloud, Edge and AI Computing |
 | `400–499` | [`EPTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/400-499_EPTA/) | Energy and Propulsion Technology Architecture |
 | `500–599` | [`AMTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/500-599_AMTA/) | Advanced Materials Technology Architecture |
-| `600–699` | [`OGATA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/600-699_OGATA/) | Operational Ground Automation Technology Architecture |
+| `600–699` | [`OGATA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/600-699_OGATA/) | On-Ground Automation Technology Architecture |
 | `700–799` | [`ATACV`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/700-799_ATACV/) | Air Traffic and Aerial City Vehicles |
 | `800–899` | [`CYB`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/800-899_CYB/) | Cybersecurity Architecture |
 | `900–999` | [`QCSAA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/900-999_QCSAA/) | Quantum Computing and Sentient Agency Architecture |
@@ -74,15 +74,17 @@ S  Standards
 The AMPEL360 programme currently structures four models — **eWTW**, **BWB-Q100**, **MRTT-Q300**, **Q10** — each governed through a System Breakdown Structure (SBS) family of coordinated engineering views:
 
 ```text
-PBS    Product Breakdown Structure
-FBS    Functional Breakdown Structure
-WBS    Work Breakdown Structure
-CBS    Cost Breakdown Structure
-RBS    Risk Breakdown Structure
-LBS    Logistic Breakdown Structure
-EBS    Evidence Breakdown Structure
-IBS    Interface and Installation Breakdown Structure
-TPuBS  Technical Publications Breakdown Structure
+01  PBS    Product Breakdown Structure
+02  FBS    Functional Breakdown Structure
+03  WBS    Work Breakdown Structure
+04  CBS    Cost Breakdown Structure
+05  RBS    Risk Breakdown Structure
+06  LBS    Logistic Breakdown Structure
+07  EBS    Evidence Breakdown Structure
+08  IBS    Interface and Installation Breakdown Structure
+09  ReqBS  Requirements Breakdown Structure
+10  TPMS   Technical Performance Measurement Structure
+11  TPuBS  Technical Publications Breakdown Structure
 ```
 
 These views converge on a consistent product definition rather than evolving as disconnected taxonomies.
@@ -164,7 +166,7 @@ Open and reproducible toolchains are especially welcome.
 
 ### 3. Systems and interface engineering
 
-Requirements; functional decomposition; interface-control definitions; installation constraints; mass-property and energy budgets; data-flow definitions; failure modes; safety assumptions; verification methods; system-to-structure allocation; traceability across PBS, FBS, IBS, RBS and EBS nodes.
+Requirements; functional decomposition; interface-control definitions; installation constraints; mass-property and energy budgets; data-flow definitions; failure modes; safety assumptions; verification methods; system-to-structure allocation; traceability across PBS, FBS, ReqBS, TPMS, IBS, RBS and EBS nodes.
 
 ### 4. Technical publications and engineering data
 
@@ -244,11 +246,11 @@ A plot or screenshot without model assumptions and source data is not sufficient
 
 ## Contribution workflow
 
-1. **Select an engineering node.** Navigate the programme, model and breakdown structures and identify a component, assembly, system or unresolved engineering question. Start from the nearest authoritative node rather than creating a parallel structure.
-2. **Check existing content.** Review the node README, YAML metadata, registers, parent assemblies, interfaces, existing issues and related artefacts.
-3. **Declare the intended contribution.** Open an issue describing the selected node, the proposed artefact, the engineering purpose, expected inputs and outputs, software or methods, and known assumptions. For exploratory work, open a draft pull request early.
-4. **Produce a traceable artefact.** Keep source files, assumptions, generated results and explanatory documentation together. Generated images and reports should remain reproducible from the authoritative source model.
-5. **Submit a pull request** explaining what was added or changed, which controlled node owns it, what engineering problem it addresses, which assumptions remain open, how the result was checked, and what should happen next.
+> [!IMPORTANT]
+> Before starting a work package, read [CONTRIBUTING.md](CONTRIBUTING.md).
+> All CAD, assembly, simulation and data-module contributions require an **approved allocation issue**: propose the object and its controlled location, obtain approval from the architecture authority, then act as engineering steward of the work package.
+
+In short: select the nearest authoritative node → check existing content and metadata → open a `[WORK PACKAGE]` issue proposing artefact and location → on approval, produce a traceable artefact → submit a pull request referencing the approved issue.
 
 ---
 
@@ -337,6 +339,10 @@ A formal licence and a `CONTRIBUTING.md` with contributor terms are planned gove
 ## How to participate
 
 Open an engineering issue; propose a product-node realization; submit a CAD or simulation model; review assumptions; validate calculations; improve interface definitions; add technical-publication content; identify architecture inconsistencies; propose a reproducible engineering workflow; submit a pull request.
+
+The repository already provides the addresses. The next task is to provide the engineering.
+
+> **Main objective: transform every meaningful product node from a planned identifier into a traceable package of geometry, behaviour, interfaces, analysis and evidence.**
 
 The repository already provides the addresses. The next task is to provide the engineering.
 
