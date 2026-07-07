@@ -1,305 +1,45 @@
-# Q-plus-A — Index
+# Q-plus-A — Index# Q+A — Open Aerospace Engineering Architecture
 
-## 0. Root
+**From structured engineering intent to models, simulations, evidence and physical product definition.**
 
-* [`.github/`](.github/)
-* [`README.md`](README.md)
-* [`00_MODEL-DIGITAL-CONSTITUTION/`](00_MODEL-DIGITAL-CONSTITUTION/)
-* [`01_OPTIONS_ARCHITECTURE/`](01_OPTIONS_ARCHITECTURE/)
+Q+A is a collaborative aerospace and advanced-systems engineering repository built around controlled product structures, deterministic identifiers, technical-information governance and lifecycle traceability. It is the working repository of the **Q+** initiative and hosts the **Q+ATLANTIDE** architecture taxonomy, the **OPTIONS** enterprise architecture, and the programme breakdown structures of the **AMPEL360**, **GAIA-AIR**, **GAIA-SPACE** and **ROBBBO-T** programmes.
 
----
+The repository currently provides an increasingly detailed **engineering skeleton**:
 
-# 00 — Model Digital Constitution
+* programme and product architectures;
+* system and product breakdown structures;
+* controlled part-number spaces;
+* assembly and component nodes;
+* technical-publication structures (S1000D / CSDB-ready);
+* configuration and lifecycle concepts;
+* interface, evidence and certification placeholders;
+* governance rules for future engineering content.
 
-## 00_MODEL-DIGITAL-CONSTITUTION
+What it does **not** yet contain at the same level of maturity is the complete physical engineering definition behind those structures.
 
-* `README.md`
-* `MODEL_DIGITAL_CONSTITUTION.md`
-* `controlled-vocabulary.yaml`
-* `change-control.md`
-* `validation-rules.md`
+> **The repository is not a designed aircraft. It is a governed engineering address space that must now be populated with geometry, models, simulations, analyses and evidence.**
 
-### 00-01 — Preamble
+That is where collaboration is needed.
 
-* [`00-01_PREAMBLE/`](00_MODEL-DIGITAL-CONSTITUTION/00-01_PREAMBLE/)
-
-### 00-02 — Articles
-
-* [`00-02_ARTICLES/`](00_MODEL-DIGITAL-CONSTITUTION/00-02_ARTICLES/)
-
-### 00-03 — Governance Bodies
-
-* [`00-03_GOVERNANCE-BODIES/`](00_MODEL-DIGITAL-CONSTITUTION/00-03_GOVERNANCE-BODIES/)
-
-### 00-04 — Amendment Procedure
-
-* [`00-04_AMENDMENT-PROCEDURE/`](00_MODEL-DIGITAL-CONSTITUTION/00-04_AMENDMENT-PROCEDURE/)
-
-### 00-05 — Ratification and Evidence
-
-* [`00-05_RATIFICATION-AND-EVIDENCE/`](00_MODEL-DIGITAL-CONSTITUTION/00-05_RATIFICATION-AND-EVIDENCE/)
+> [!IMPORTANT]
+> **Q+A is actively looking for contributors with experience in CAD, CAE, engineering simulation, systems engineering and aerospace product development.**
+>
+> The immediate objective is to turn structured product nodes and planned part numbers into traceable engineering artefacts.
 
 ---
 
-# 01 — OPTIONS Architecture
-
----
-
-## 01-01 — Organizations
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/
-```
-
-### 01-01-01 — Q-Divisions
-
-Technical and scientific capability domains.
-
-* [`01-01-01-01_Q-AIR/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-01_Q-AIR/)
-* [`01-01-01-02_Q-SPACE/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-02_Q-SPACE/)
-* [`01-01-01-03_Q-GREENTECH/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-03_Q-GREENTECH/)
-* [`01-01-01-04_Q-STRUCTURES/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-04_Q-STRUCTURES/)
-* [`01-01-01-05_Q-DATAGOV/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-05_Q-DATAGOV/)
-* [`01-01-01-06_Q-HPC/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-06_Q-HPC/)
-* [`01-01-01-07_Q-HORIZON/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-07_Q-HORIZON/)
-* [`01-01-01-08_Q-MECHANICS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-08_Q-MECHANICS/)
-* [`01-01-01-09_Q-GROUND/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-09_Q-GROUND/)
-* [`01-01-01-10_Q-INDUSTRY/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-10_Q-INDUSTRY/)
-* [`01-01-01-11_Q-SCIRES/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-11_Q-SCIRES/)
-* [`01-01-01-12_Q-HUESCORT-SCIRES-OPEN/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01-12_Q-HUESCORT-SCIRES-OPEN/)
-
-### 01-01-02 — Q-ORB
-
-Enterprise governance and support functions.
-
-* [`01-01-02-01_Q-FINANCE/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-01_Q-FINANCE/)
-* [`01-01-02-02_Q-HR/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-02_Q-HR/)
-* [`01-01-02-03_Q-CSR/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-03_Q-CSR/)
-* [`01-01-02-04_Q-LEGAL/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-04_Q-LEGAL/)
-* [`01-01-02-05_Q-PMO/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-05_Q-PMO/)
-* [`01-01-02-06_Q-RISK/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-06_Q-RISK/)
-* [`01-01-02-07_Q-GOV/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-07_Q-GOV/)
-* [`01-01-02-08_Q-ESG/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-08_Q-ESG/)
-* [`01-01-02-09_Q-DEI/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02-09_Q-DEI/)
-
-### 01-01-03 — Partners and Suppliers
-
-* [`01-01-03_PARTNERS-AND-SUPPLIERS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-03_PARTNERS-AND-SUPPLIERS/)
-
-### 01-01-04 — Authorities and Regulators
-
-* [`01-01-04_AUTHORITIES-AND-REGULATORS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-04_AUTHORITIES-AND-REGULATORS/)
-
----
-
-## 01-02 — Programmes
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/
-```
-
-### 01-02-01 — AMPEL360
-
-* `README.md`
-* [`01-02-01-01_MODELS/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01_MODELS/)
-* [`01-02-01-02_CERTIFICATION/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-02_CERTIFICATION/)
-* [`01-02-01-03_LIFECYCLE-GATES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-03_LIFECYCLE-GATES/)
-* [`01-02-01-04_IMPACT-STUDIES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-04_IMPACT-STUDIES/)
-
-#### 01-02-01-01 — AMPEL360 MODELS
-
-##### 01-02-01-01-01 — eWTW
-
-* `README.md`
-* [`01-02-01-01-01-01_SBS_System-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01_SBS_System-Breakdown-Structure/)
-
-Controlled breakdown structures:
-
-* [`01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/)
-* [`01-02-01-01-01-01-02_FBS_Functional-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-02_FBS_Functional-Breakdown-Structure/)
-* [`01-02-01-01-01-01-03_WBS_Work-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-03_WBS_Work-Breakdown-Structure/)
-* [`01-02-01-01-01-01-04_CBS_Cost-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-04_CBS_Cost-Breakdown-Structure/)
-* [`01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/)
-* [`01-02-01-01-01-01-06_LBS_Logistic-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-06_LBS_Logistic-Breakdown-Structure/)
-* [`01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/)
-* [`01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/)
-
-##### 01-02-01-01-02 — BWB-Q100
-
-* `README.md`
-* [`01-02-01-01-02-01_SBS_System-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01_SBS_System-Breakdown-Structure/)
-
-Controlled breakdown structures:
-
-* [`01-02-01-01-02-01-01_PBS_Product-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-01_PBS_Product-Breakdown-Structure/)
-* [`01-02-01-01-02-01-02_FBS_Functional-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-02_FBS_Functional-Breakdown-Structure/)
-* [`01-02-01-01-02-01-03_WBS_Work-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-03_WBS_Work-Breakdown-Structure/)
-* [`01-02-01-01-02-01-04_CBS_Cost-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-04_CBS_Cost-Breakdown-Structure/)
-* [`01-02-01-01-02-01-05_RBS_Risk-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-05_RBS_Risk-Breakdown-Structure/)
-* [`01-02-01-01-02-01-06_LBS_Logistic-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-06_LBS_Logistic-Breakdown-Structure/)
-* [`01-02-01-01-02-01-07_EBS_Evidence-Breakdown-Structure/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-02-01-07_EBS_Evidence-Breakdown-Structure/)
-
-##### 01-02-01-01-03 — MRTT-Q300
-
-* [`01-02-01-01-03_MRTT-Q300/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-03_MRTT-Q300/)
-
-##### 01-02-01-01-04 — Q10
-
-* [`01-02-01-01-04_Q10/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01-01-04_Q10/)
-
-### 01-02-02 — GAIA-AIR
-
-* `README.md`
-* [`01-02-02-01_PRODUCTS/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-02-01_PRODUCTS/)
-* [`01-02-02-02_CERTIFICATION/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-02-02_CERTIFICATION/)
-* [`01-02-02-03_LIFECYCLE-GATES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-02-03_LIFECYCLE-GATES/)
-* [`01-02-02-04_IMPACT-STUDIES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-02-04_IMPACT-STUDIES/)
-
-### 01-02-03 — GAIA-SPACE
-
-* `README.md`
-* [`01-02-03-01_PRODUCTS/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-03-01_PRODUCTS/)
-* [`01-02-03-02_CERTIFICATION/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-03-02_CERTIFICATION/)
-* [`01-02-03-03_LIFECYCLE-GATES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-03-03_LIFECYCLE-GATES/)
-* [`01-02-03-04_IMPACT-STUDIES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-03-04_IMPACT-STUDIES/)
-
-### 01-02-04 — ROBBBO-T
-
-* `README.md`
-* [`01-02-04-01_PRODUCTS/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-04-01_PRODUCTS/)
-* [`01-02-04-02_CERTIFICATION/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-04-02_CERTIFICATION/)
-* [`01-02-04-03_LIFECYCLE-GATES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-04-03_LIFECYCLE-GATES/)
-* [`01-02-04-04_IMPACT-STUDIES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-04-04_IMPACT-STUDIES/)
-
----
-
-## 01-03 — Technologies
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/
-```
-
-### 01-03-01 — Q+ATLANTIDE
-
-Node README: [`01-03-01_Q+ATLANTIDE/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/)
-
-Architecture bands:
-
-* [`000-099_G-ATLAS/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/)
-* [`100-199_STA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/100-199_STA/)
-* [`200-299_DTTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/200-299_DTTA/)
-* [`300-399_DTCEC/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/300-399_DTCEC/)
-* [`400-499_EPTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/400-499_EPTA/)
-* [`500-599_AMTA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/500-599_AMTA/)
-* [`600-699_OGATA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/600-699_OGATA/)
-* [`700-799_ATACV/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/700-799_ATACV/)
-* [`800-899_CYB/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/800-899_CYB/)
-* [`900-999_QCSAA/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/900-999_QCSAA/)
-
----
-
-## 01-04 — Infrastructures
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/
-```
-
-* [`01-04-01_AIRPORTS-AND-FALS/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-01_AIRPORTS-AND-FALS/)
-* [`01-04-02_VERTIPORTS/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-02_VERTIPORTS/)
-* [`01-04-03_SPACEPORTS-AND-LAUNCHERS/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-03_SPACEPORTS-AND-LAUNCHERS/)
-* [`01-04-04_MAINTENANCE-HANGARS/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-04_MAINTENANCE-HANGARS/)
-* [`01-04-05_FINAL-ASSEMBLY-LINES/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-05_FINAL-ASSEMBLY-LINES/)
-* [`01-04-06_HYDROGEN-AND-ENERGY-CHAINS/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-06_HYDROGEN-AND-ENERGY-CHAINS/)
-* [`01-04-07_TEST-AND-INTEGRATION-FACILITIES/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-07_TEST-AND-INTEGRATION-FACILITIES/)
-* [`01-04-08_DATA-CENTRES-AND-COMPUTE/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-08_DATA-CENTRES-AND-COMPUTE/)
-* [`01-04-09_GROUND-SUPPORT-AND-LOGISTICS/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/01-04-09_GROUND-SUPPORT-AND-LOGISTICS/)
-
----
-
-## 01-05 — Operations
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/
-```
-
-* [`01-05-01_FLIGHT-AND-MISSION-OPS/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/01-05-01_FLIGHT-AND-MISSION-OPS/)
-* [`01-05-02_MAINTENANCE-AND-SUPPORT/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/01-05-02_MAINTENANCE-AND-SUPPORT/)
-* [`01-05-03_CONTINUING-AIRWORTHINESS/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/01-05-03_CONTINUING-AIRWORTHINESS/)
-* [`01-05-04_SERVICES-AND-CUSTOMER-SUPPORT/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/01-05-04_SERVICES-AND-CUSTOMER-SUPPORT/)
-* [`01-05-05_GROUND-AND-SPACEPORT-OPERATIONS/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/01-05-05_GROUND-AND-SPACEPORT-OPERATIONS/)
-* [`01-05-06_RETIREMENT-AND-CIRCULARITY/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/01-05-06_RETIREMENT-AND-CIRCULARITY/)
-
----
-
-## 01-06 — Neural Networks
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/
-```
-
-* [`01-06-01_DETERMINISTIC-AI/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/01-06-01_DETERMINISTIC-AI/)
-* [`01-06-02_SYNTHETIC-DATA/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/01-06-02_SYNTHETIC-DATA/)
-* [`01-06-03_NBT-GATES-AND-GOVERNANCE/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/01-06-03_NBT-GATES-AND-GOVERNANCE/)
-* [`01-06-04_OPTIMIZATION-MODELS/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/01-06-04_OPTIMIZATION-MODELS/)
-* [`01-06-05_SAFETY-PREDICTION-AND-ASSURANCE/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/01-06-05_SAFETY-PREDICTION-AND-ASSURANCE/)
-* [`01-06-06_CERTIFICATION-AWARE-AI/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/01-06-06_CERTIFICATION-AWARE-AI/)
-
----
-
-## 01-07 — Standards
-
-Path:
-
-```text
-01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/
-```
-
-### 01-07-01 — IDEALE-ESG
-
-* [`01-07-01-01_I-Information/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-01_I-Information/)
-* [`01-07-01-02_D-Defense/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-02_D-Defense/)
-* [`01-07-01-03_E-Energy-and-Propulsion/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-03_E-Energy-and-Propulsion/)
-* [`01-07-01-04_A-Aerospace/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-04_A-Aerospace/)
-* [`01-07-01-05_L-Logistics/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-05_L-Logistics/)
-* [`01-07-01-06_E-Economics/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-06_E-Economics/)
-* [`01-07-01-07_ESG-Environmental-Social-and-Governance/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-01-07_ESG-Environmental-Social-and-Governance/)
-
-### 01-07-02 — Technical Publication
-
-* [`01-07-02-01_S1000D/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-02-01_S1000D/)
-* [`01-07-02-02_ATA-iSpec-2200/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-02-02_ATA-iSpec-2200/)
-* [`01-07-02-03_ASD-STE100/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-02-03_ASD-STE100/)
-
-### 01-07-03 — Safety and Certification
-
-* [`01-07-03-01_ARP4754A/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-03-01_ARP4754A/)
-* [`01-07-03-02_DO-178C/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-03-02_DO-178C/)
-* [`01-07-03-03_DO-254/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-03-03_DO-254/)
-* [`01-07-03-04_CS-25-and-Special-Conditions/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-03-04_CS-25-and-Special-Conditions/)
-
-### 01-07-04 — Data and Interoperability
-
-* [`01-07-04-01_CSDB-and-DMC/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-04-01_CSDB-and-DMC/)
-* [`01-07-04-02_DIGITAL-PRODUCT-PASSPORT/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-04-02_DIGITAL-PRODUCT-PASSPORT/)
-* [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/)
-
----
-
-# Glossary of Terms and Acronyms
-
-## OPTIONS
+## Repository map
+
+| Area | Path | Content |
+|---|---|---|
+| Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](00_MODEL-DIGITAL-CONSTITUTION/) | Governance principles, controlled vocabulary, change control, validation rules |
+| **O** — Organizations | [`01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/) | Q-Divisions, Q-ORB enterprise functions, partners, authorities |
+| **P** — Programmes | [`01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/) | AMPEL360, GAIA-AIR, GAIA-SPACE, ROBBBO-T |
+| **T** — Technologies | [`01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/) | Q+ATLANTIDE architecture bands (see register below) |
+| **I** — Infrastructures | [`01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/) | Airports/FALs, vertiports, spaceports, hangars, energy chains, test facilities |
+| **O** — Operations | [`01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/`](01_OPTIONS_ARCHITECTURE/01-05_OPERATIONS/) | Flight/mission ops, maintenance, continuing airworthiness, retirement and circularity |
+| **N** — Neural Networks | [`01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/`](01_OPTIONS_ARCHITECTURE/01-06_NEURAL-NETWORKS/) | Deterministic AI, synthetic data, NBT gates, certification-aware AI |
+| **S** — Standards | [`01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/`](01_OPTIONS_ARCHITECTURE/01-07_STANDARDS/) | IDEALE-ESG, S1000D / ATA iSpec 2200 / ASD-STE100, ARP4754A / DO-178C / DO-254 / CS-25, CSDB-DMC, Digital Product Passport, evidence and provenance |
 
 ```text
 OPTIONS =
@@ -312,103 +52,292 @@ N  Neural Networks
 S  Standards
 ```
 
-## Q+ATLANTIDE
+### Q+ATLANTIDE architecture bands
+
+**Q+ATLANTIDE** (Quantum + Aerospace Top Level Architectures and Novel Technologies Identification *(and Integration)* in  Data Ecosystem) is the controlled architecture-taxonomy of Q+. Its `Q+ATLANTIDE1000` schema organizes all technology domains into ten controlled bands:
+
+| Range | Code | Controlled meaning |
+|---:|---|---|
+| `000–099` | [`G-ATLAS`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/) | Green Aircraft Top-Level Architecture Schema/System |
+| `100–199` | [`STA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/100-199_STA/) | Space Technology Architecture |
+| `200–299` | [`DTTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/200-299_DTTA/) | Defence Technology and Tactical Architecture |
+| `300–399` | [`DTCEC`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/300-399_DTCEC/) | Digital Twin, Cloud, Edge and AI Computing |
+| `400–499` | [`EPTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/400-499_EPTA/) | Energy and Propulsion Technology Architecture |
+| `500–599` | [`AMTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/500-599_AMTA/) | Advanced Materials Technology Architecture |
+| `600–699` | [`OGATA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/600-699_OGATA/) | Operational Ground Automation Technology Architecture |
+| `700–799` | [`ATACV`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/700-799_ATACV/) | Air Traffic and Aerial City Vehicles |
+| `800–899` | [`CYB`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/800-899_CYB/) | Cybersecurity Architecture |
+| `900–999` | [`QCSAA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/900-999_QCSAA/) | Quantum Computing and Sentient Agency Architecture |
+
+### Programme models and breakdown structures
+
+The AMPEL360 programme currently structures four models — **eWTW**, **BWB-Q100**, **MRTT-Q300**, **Q10** — each governed through a System Breakdown Structure (SBS) family of coordinated engineering views:
 
 ```text
-Q+ATLANTIDE =
-Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem
+PBS    Product Breakdown Structure
+FBS    Functional Breakdown Structure
+WBS    Work Breakdown Structure
+CBS    Cost Breakdown Structure
+RBS    Risk Breakdown Structure
+LBS    Logistic Breakdown Structure
+EBS    Evidence Breakdown Structure
+IBS    Interface and Installation Breakdown Structure
+TPuBS  Technical Publications Breakdown Structure
 ```
 
-**Q+ATLANTIDE** is the controlled architecture-taxonomy and technical-knowledge ecosystem used to identify, classify, govern, trace, and relate aerospace, space, defence, digital, energy, material, infrastructure, cybersecurity, quantum, and emerging-technology architectures across the full lifecycle.
+These views converge on a consistent product definition rather than evolving as disconnected taxonomies.
 
-`Q+ATLANTIDE` is not a single technology and not a programme. It is the controlled **technology and architecture identification ecosystem** of Q+.
+### Identification grammar
 
-```yaml
-q_atlantide:
-  full_name: "Quantum + Aerospace Top Level Architectures and Novel Technologies Identification and Data Ecosystem"
-  short_name: "Q+ATLANTIDE"
-  schema_name: "Q+ATLANTIDE1000"
-  schema_range: "000–999"
-  role: "controlled architecture-taxonomy and technical-knowledge ecosystem"
-  physical_location: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/"
-  q_atlantide1000_is_folder: false
-  q_atlantide1000_role: "controlled 000–999 identification schema / register"
-```
-
-### Element Distinction
-
-| Element | Meaning |
-| --- | --- |
-| `Q+` | Public mark / organizational umbrella. |
-| `Q+ATLANTIDE` | Controlled architecture-taxonomy and technical-knowledge ecosystem. |
-| `Q+ATLANTIDE1000` | Controlled `000–999` identification schema/register; not a physical folder unless explicitly created. |
-| `G-ATLAS` | `000–099` Green Aircraft Top-Level Architecture Schema/System. |
-| `STA` | `100–199` Space Technology Architecture. |
-| `DTTA` | `200–299` Defence Technology and Tactical Architecture. |
-| `DTCEC` | `300–399` Digital Twin, Cloud, Edge and AI Computing. |
-| `EPTA` | `400–499` Energy and Propulsion Technology Architecture. |
-| `AMTA` | `500–599` Advanced Materials Technology Architecture. |
-| `OGATA` | `600–699` Operational Ground Automation Technology Architecture. |
-| `ATACV` | `700–799` Air Traffic and Aerial City Vehicles. |
-| `CYB` | `800–899` Cybersecurity Architecture. |
-| `QCSAA` | `900–999` Quantum Computing and Sentient Agency Architecture. |
-
-### Q+ATLANTIDE1000 Architecture Bands
-
-`Q+ATLANTIDE1000` is organized into ten controlled architecture bands from `000` to `999`. Each band identifies a major architecture domain within the Q+ technical-knowledge ecosystem.
-
-| Range | Code | Controlled Meaning | Scope |
-| ---: | --- | --- | --- |
-| `000–099` | `G-ATLAS` | **Green Aircraft Top-Level Architecture Schema/System** | New commercial aircraft architectures, aircraft systems, structures, propulsion, avionics, S1000D/CSDB mapping, type-specific expansion, and aircraft lifecycle traceability. |
-| `100–199` | `STA` | **Space Technology Architecture** | Spacecraft, launchers, orbital systems, space propulsion, space structures, mission systems, space operations, and orbital infrastructure. |
-| `200–299` | `DTTA` | **Defence Technology and Tactical Architecture** | Defence systems, controlled non-operational armament classification, tactical architecture boundaries, interoperability, safety, export-control, and assurance. |
-| `300–399` | `DTCEC` | **Digital Twin, Cloud, Edge and AI Computing** | Digital twins, cloud/edge systems, AI/ML platforms, simulation environments, data pipelines, compute governance, and lifecycle evidence. |
-| `400–499` | `EPTA` | **Energy and Propulsion Technology Architecture** | Energy systems, hydrogen, batteries, fuel cells, hybrid-electric propulsion, thermal management, power distribution, and sustainable propulsion architectures. |
-| `500–599` | `AMTA` | **Advanced Materials Technology Architecture** | Materials, composites, bio-materials, nano-materials, coatings, structural materials, process qualification, and material lifecycle traceability. |
-| `600–699` | `OGATA` | **Operational Ground Automation Technology Architecture** | Ground automation, robotics, airport/spaceport automation, GSE, logistics automation, maintenance automation, and industrial support systems. |
-| `700–799` | `ATACV` | **Air Traffic and Aerial City Vehicles** | Urban air mobility, aerial city systems, eVTOL, vertiport interfaces, mobility corridors, aerial infrastructure, air traffic management, and city-airspace integration. |
-| `800–899` | `CYB` | **Cybersecurity Architecture** | Cybersecurity, post-quantum security, secure systems, identity, access control, threat modelling, resilience, and cyber-assurance. |
-| `900–999` | `QCSAA` | **Quantum Computing and Sentient Agency Architecture** | Quantum computing, quantum sensing, quantum communication, agency models, quantum-classical bridges, QSN, and controlled sentient/agentic system governance. |
+One deterministic grammar connects taxonomy, product structure, part numbers and technical publications, 1:1 by number:
 
 ```text
-Q+ATLANTIDE      = architecture-taxonomy and technical-knowledge ecosystem
-Q+ATLANTIDE1000  = controlled 000–999 identification schema/register
-G-ATLAS          = 000–099 green aircraft architecture band
-STA              = 100–199 space technology architecture band
-DTTA             = 200–299 defence technology and tactical architecture band
-DTCEC            = 300–399 digital twin, cloud, edge and AI computing band
-EPTA             = 400–499 energy and propulsion technology architecture band
-AMTA             = 500–599 advanced materials technology architecture band
-OGATA            = 600–699 operational ground automation technology architecture band
-ATACV            = 700–799 air traffic and aerial city vehicles band
-CYB              = 800–899 cybersecurity architecture band
-QCSAA            = 900–999 quantum computing and sentient agency architecture band
+G-ATLAS taxonomy node          053-100-040   Radome and Diverters Attach Structure
+eWTW PBS subject               eWTW-PBS-053-100-040
+Controlled part number         EWTW-531004-020  (items x10; +1..+9 variants/constituents)
+S1000D data module (planned)   DMC ... 53-10-04 ...
+Illustration (ICN master)      publication-neutral SVG under the owning node
 ```
 
-`Q+ATLANTIDE1000` is a schema/register, not a physical folder unless explicitly created. The physical folders under `01-03-01_Q+ATLANTIDE/` are the architecture-band implementation folders:
+Folder identity is the single source of truth; YAML metadata mirrors it. `AAA` is not a valid identifier anywhere in the architecture (No-AAA rule).
+
+---
+
+## Current engineering focus
+
+The most developed product architecture is the **AMPEL360 eWTW** model:
+
+* **Fuselage PBS chapter 053** — realized in G-ATLAS grammar (`053-000` … `053-900`): ten sections, ~60 subjects, ~340 controlled part numbers from radome attach to the energy-carrier bay, including LH/RH variants and constituents. Status: PLANNED identifiers with a realized exemplar (radome and nose-cone attach structure).
+* **ECS / ATA 021 technical publications** — information-centric TPuBS nodes (`021-000-010` general and zoning, `021-200-010` distribution ducting) with node-local DMRLs, publication-neutral S1000D ICN vector masters, metadata sidecars and a deterministic rendition stamper.
+* **Deterministic generators** — chapter scaffolds and registers are produced by idempotent Python realizers committed alongside the structures they generate; manifests are regenerated from the same data, never hand-edited.
+* **Energy-carrier and hydrogen concepts** — structural integration provisions (`053-900`), pack-bay and belly-fairing architecture, electric ECS (bleedless, E-pack based).
+
+The PBS structure is now detailed enough to host top assemblies, subassemblies, parts, constituents, LH/RH variants, installation provisions, interface objects and engineering evidence. The next stage is to populate those controlled addresses with meaningful engineering content.
+
+---
+
+## A product node is an engineering contract
+
+A folder or part number in this repository is not merely a directory. It is an engineering contract that progressively defines:
+
+* what the object is;
+* where it belongs;
+* what it interfaces with;
+* what function it supports;
+* what assumptions govern it;
+* what artefacts define it;
+* what evidence validates it;
+* what configuration and effectivity apply to it.
+
+A planned part number does not imply that a manufactured component exists. It establishes a controlled identity under which the component can be designed, analysed, reviewed and matured.
+
+---
+
+## Contributors wanted
+
+### 1. CAD and product definition
+
+The highest-priority need is controlled CAD artefacts for existing PBS and part-number nodes.
+
+Relevant skills: parametric part modelling; surface and solid modelling; aerospace structural design; assembly modelling; interface and installation definition; composite and metallic structural concepts; tubing, ducting and systems routing; equipment installation; lightweight design; technical drawing production; design-for-manufacturing assessment.
+
+Typical tools: FreeCAD, CATIA, Siemens NX, SolidWorks, Fusion, Onshape, OpenCASCADE-based workflows, Blender (non-authoritative visualization), or any tool exporting neutral engineering formats.
+
+Native CAD files are welcome, but contributions should preferably include neutral exchange formats:
 
 ```text
-000-099_G-ATLAS/
-100-199_STA/
-200-299_DTTA/
-300-399_DTCEC/
-400-499_EPTA/
-500-599_AMTA/
-600-699_OGATA/
-700-799_ATACV/
-800-899_CYB/
-900-999_QCSAA/
+STEP (preferred for exchangeable 3D product geometry)
+IGES · STL · OBJ · DXF · SVG · PDF
 ```
 
-## IDEALE-ESG
+### 2. CAE and simulation
+
+The repository needs simulation models that test whether proposed components, assemblies and systems are physically credible.
+
+* **Structural** — FEA, static strength, buckling, modal, fatigue assumptions, crash and emergency load paths, local attachment and fitting analysis, pressure-vessel and pressure-boundary analysis.
+* **Aerodynamics and fluids** — external aerodynamics, internal airflow, ECS duct flow, ventilation, pressure losses, thermal-fluid coupling, hydrogen and cryogenic behaviour, venting and drainage, fairing assessment.
+* **Thermal** — thermal networks, heat transfer, insulation performance, cryogenic heat leak, equipment cooling, cabin environmental behaviour, battery and fuel-cell thermal management.
+* **Electrical and energy systems** — power-flow models, high-voltage distribution, fuel-cell and battery behaviour, electric propulsion loads, energy-management logic, fault and degraded modes.
+* **Multiphysics and mission level** — coupled structural-thermal, propulsion-airframe interaction, mass and energy budgets, flight performance, turnaround simulation, reliability and maintainability.
+
+Open and reproducible toolchains are especially welcome.
+
+### 3. Systems and interface engineering
+
+Requirements; functional decomposition; interface-control definitions; installation constraints; mass-property and energy budgets; data-flow definitions; failure modes; safety assumptions; verification methods; system-to-structure allocation; traceability across PBS, FBS, IBS, RBS and EBS nodes.
+
+### 4. Technical publications and engineering data
+
+S1000D; ATA iSpec 2200; CSDB architecture; data modules; illustrated parts data; maintenance concepts; assembly and installation instructions; inspection requirements; material and process specifications; Digital Product Passports; configuration records; engineering evidence; technical illustrations.
+
+Engineering content must remain connected to the product or system node that owns it.
+
+---
+
+## Contribution package
+
+A CAD or simulation contribution should be placed under, or explicitly linked to, the relevant product node:
 
 ```text
-IDEALE-ESG =
-I    Information
-D    Defense
-E    Energy & Propulsion
-A    Aerospace
-L    Logistics
-E    Economics
-ESG  Environmental, Social and Governance
+<controlled-product-node>/
+├── README.md
+├── CAD/
+│   ├── SOURCE/
+│   ├── STEP/
+│   ├── MESH/
+│   └── PREVIEW/
+├── DRAWINGS/
+├── ANALYSIS/
+│   ├── assumptions.md
+│   ├── load-cases.yaml
+│   ├── boundary-conditions.yaml
+│   └── calculations/
+├── SIMULATION/
+│   ├── model/
+│   ├── solver/
+│   ├── results/
+│   └── report.md
+├── INTERFACES/
+└── EVIDENCE/
 ```
+
+The exact structure may vary by discipline and maturity level.
+
+<details>
+<summary><strong>Minimum information for a CAD contribution</strong></summary>
+
+* owning PBS or part-number node;
+* modelled object;
+* CAD software and version;
+* units and coordinate system;
+* principal dimensions;
+* assumed materials;
+* reference interfaces;
+* design assumptions and known limitations;
+* source-file format and available neutral exports;
+* contributor and revision information.
+
+</details>
+
+<details>
+<summary><strong>Minimum information for a simulation contribution</strong></summary>
+
+* engineering question being evaluated;
+* analysed product or system node;
+* assumptions and geometry source;
+* material properties;
+* initial and boundary conditions;
+* load cases;
+* mesh or numerical discretization;
+* solver and solver version;
+* convergence criteria;
+* input and output files;
+* interpretation of results;
+* limitations and unresolved uncertainties;
+* reproducibility instructions.
+
+A plot or screenshot without model assumptions and source data is not sufficient engineering evidence.
+
+</details>
+
+---
+
+## Contribution workflow
+
+1. **Select an engineering node.** Navigate the programme, model and breakdown structures and identify a component, assembly, system or unresolved engineering question. Start from the nearest authoritative node rather than creating a parallel structure.
+2. **Check existing content.** Review the node README, YAML metadata, registers, parent assemblies, interfaces, existing issues and related artefacts.
+3. **Declare the intended contribution.** Open an issue describing the selected node, the proposed artefact, the engineering purpose, expected inputs and outputs, software or methods, and known assumptions. For exploratory work, open a draft pull request early.
+4. **Produce a traceable artefact.** Keep source files, assumptions, generated results and explanatory documentation together. Generated images and reports should remain reproducible from the authoritative source model.
+5. **Submit a pull request** explaining what was added or changed, which controlled node owns it, what engineering problem it addresses, which assumptions remain open, how the result was checked, and what should happen next.
+
+---
+
+## Good first engineering contributions
+
+Each of these maps to a controlled address that already exists:
+
+* a simplified parametric **radome attach-ring** concept — `eWTW-PBS-053-100-040` (`EWTW-531004-011`);
+* a **forward pressure bulkhead** preliminary FE model — `053-800-010`;
+* a **skin-panel and stringer bay** arrangement — `053-500` / `053-600`;
+* a **passenger floor beam** — `053-700-020`; a **seat-track** section — `053-700-060`;
+* an **NLG bay walls** structural concept — `053-100-020`;
+* a **wing-to-fuselage fairing** surface model — `053-200-020`;
+* an **ECS duct pressure-loss** model — TPuBS node `021-200-010` (ICN-EWTW-021200010);
+* an **energy-carrier bay crash load path** study — `053-900-020`;
+* a **cryogenic tank support** model (BWB-Q100 hydrogen concepts);
+* a **mass-property estimate** linked to any PBS node.
+
+A contribution does not need to represent a final design. It must clearly distinguish:
+
+```text
+known · assumed · calculated · simulated · estimated · unresolved
+```
+
+---
+
+## Engineering maturity
+
+Q+A contains material at different maturity levels. Repository presence does **not** imply that an artefact is validated, optimized, certified, airworthy, production-ready, approved by a design organization, or accepted by an aviation authority.
+
+Every contribution should declare its status:
+
+```text
+CONCEPT · PLANNED · DRAFT · IN-WORK · REVIEWED · VERIFIED · VALIDATED · RELEASED · SUPERSEDED
+```
+
+Certification claims require explicit evidence and must not be inferred from nomenclature, directory position or document formatting.
+
+---
+
+## Repository principles
+
+* **Traceability over presentation.** A modest but reproducible contribution outweighs an impressive visualization without assumptions, sources or ownership.
+* **Folder identity as SSOT.** The controlled folder identity is authoritative for the node, part number or engineering object; metadata and artefacts mirror it.
+* **Evidence over assertion.** Engineering claims are supported by calculations, simulations, test data, references or clearly declared assumptions.
+* **Deterministic structure.** Identifiers and locations remain stable, interpretable and machine-processable; scaffolds and registers are generated by committed, idempotent tools.
+* **Progressive maturity.** Conceptual work is welcome when its maturity and uncertainty are explicit.
+* **Interoperability.** Prefer open, documented, exchangeable formats alongside proprietary native formats.
+* **No-AAA rule.** `AAA` is not a valid domain, architecture, interface or taxonomy element anywhere in the repository.
+
+---
+
+## What must not be contributed
+
+Do not upload:
+
+* employer-confidential information;
+* proprietary Airbus, supplier or customer data;
+* export-controlled technical data;
+* classified or restricted information;
+* copyrighted CAD models without redistribution rights;
+* leaked documentation;
+* personal data;
+* unlicensed third-party assets;
+* results presented as validated when they are not;
+* files whose origin or permissions cannot be established.
+
+Contributors are responsible for ensuring that their work can legally be shared.
+
+---
+
+## Independent research status
+
+Q+A is an independent engineering architecture and research initiative. It is **not** an approved aircraft design, an authorized design organization, a certification programme, or an official publication of Airbus, Capgemini, EASA, FAA or any other employer, manufacturer or authority. References to aerospace standards, manufacturers, certification frameworks and technical domains are used for research, architecture and interoperability purposes only.
+
+---
+
+## Licensing
+
+**No repository-wide licence is published yet.** Under default copyright rules, the public visibility of this repository does not by itself grant rights of commercial reuse, redistribution or relicensing; until an explicit `LICENSE` and contribution policy are added, treat content as all-rights-reserved and open an issue to discuss intended use.
+
+A formal licence and a `CONTRIBUTING.md` with contributor terms are planned governance actions. Contributors should identify the licensing status of externally sourced material and contribute only work they are authorized to share.
+
+---
+
+## How to participate
+
+Open an engineering issue; propose a product-node realization; submit a CAD or simulation model; review assumptions; validate calculations; improve interface definitions; add technical-publication content; identify architecture inconsistencies; propose a reproducible engineering workflow; submit a pull request.
+
+The repository already provides the addresses. The next task is to provide the engineering.
+
+> **Main objective: transform every meaningful product node from a planned identifier into a traceable package of geometry, behaviour, interfaces, analysis and evidence.**
