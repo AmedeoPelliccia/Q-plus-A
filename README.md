@@ -33,7 +33,7 @@ That is where collaboration is needed.
 | Area | Path | Content |
 |---|---|---|
 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](00_MODEL-DIGITAL-CONSTITUTION/) | Governance principles, controlled vocabulary, change control, validation rules |
-| **O** — Organizations | [`01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/) | Q-Divisions, Q-ORB enterprise functions, partners, authorities |
+| **O** — Organizations | [`01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/) | Technical and enterprise divisions, team registry |
 | **P** — Programmes | [`01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/`](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/) | AMPEL360, GAIA-AIR, GAIA-SPACE, ROBBBO-T |
 | **T** — Technologies | [`01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/) | Q+ATLANTIDE architecture bands (see register below) |
 | **I** — Infrastructures | [`01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/`](01_OPTIONS_ARCHITECTURE/01-04_INFRASTRUCTURES/) | Airports/FALs, vertiports, spaceports, hangars, energy chains, test facilities |
@@ -50,6 +50,38 @@ I  Infrastructures
 O  Operations
 N  Neural Networks
 S  Standards
+```
+
+### Organizational structure
+
+```text
+01-01_ORGANIZATIONS
+├── 01-01-01_TECHNICAL-DIVISIONS
+│   ├── 01-01-01-01_Q-AIR
+│   ├── 01-01-01-02_Q-SPACE
+│   ├── 01-01-01-03_Q-GREENTECH
+│   ├── 01-01-01-04_Q-STRUCTURES
+│   ├── 01-01-01-05_Q-DATAGOV
+│   ├── 01-01-01-06_Q-HPC
+│   ├── 01-01-01-07_Q-HORIZON
+│   ├── 01-01-01-08_Q-MECHANICS
+│   ├── 01-01-01-09_Q-GROUND
+│   ├── 01-01-01-10_Q-INDUSTRY
+│   └── 01-01-01-11_Q-SCIRES
+├── 01-01-02_ENTERPRISE-DIVISIONS
+│   ├── 01-01-02-01_Q-FINANCE
+│   ├── 01-01-02-02_Q-HR
+│   ├── 01-01-02-03_Q-CSR
+│   ├── 01-01-02-04_Q-LEGAL
+│   ├── 01-01-02-05_Q-PMO
+│   ├── 01-01-02-06_Q-RISK
+│   ├── 01-01-02-07_Q-GOV
+│   ├── 01-01-02-08_Q-ESG
+│   ├── 01-01-02-09_Q-DEI
+│   ├── 01-01-02-10_PROCUREMENT-AND-SUPPLIERS
+│   └── 01-01-02-11_AUTHORITIES-AND-REGULATORS-INTERFACES
+├── TEAM-MEMBERS.csv
+└── TEAM-MEMBERS.md
 ```
 
 ### Q+ATLANTIDE architecture bands
@@ -335,6 +367,17 @@ Q+A is an independent engineering architecture and research initiative. It is **
 A formal licence and a `CONTRIBUTING.md` with contributor terms are planned governance actions. Contributors should identify the licensing status of externally sourced material and contribute only work they are authorized to share.
 
 ---
+
+## Join the Q+A engineering community
+
+Contributors may register in a Q+A technical or enterprise division through an approved GitHub issue.
+
+See:
+
+- [Contribution governance](CONTRIBUTING.md)
+- [Q+A team registry](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-MEMBERS.md)
+- [Technical divisions](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01_TECHNICAL-DIVISIONS/)
+- [Enterprise divisions](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02_ENTERPRISE-DIVISIONS/)
 
 ## How to participate
 
