@@ -1,0 +1,16 @@
+# Part record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+part:
+  pn: "EWTW-534004-011"
+  nomenclature: "PANEL-FAIRING-RUDDER-ROOT-LH"
+  csn: "534004"
+  item: "011"
+  type: "part"
+  role: "variant"
+  parentAssembly: "EWTW-534004-010"
+  applicability:
+    model: "eWTW"
+    effectivity:
+      - "ALL"
+  status: "PLANNED"

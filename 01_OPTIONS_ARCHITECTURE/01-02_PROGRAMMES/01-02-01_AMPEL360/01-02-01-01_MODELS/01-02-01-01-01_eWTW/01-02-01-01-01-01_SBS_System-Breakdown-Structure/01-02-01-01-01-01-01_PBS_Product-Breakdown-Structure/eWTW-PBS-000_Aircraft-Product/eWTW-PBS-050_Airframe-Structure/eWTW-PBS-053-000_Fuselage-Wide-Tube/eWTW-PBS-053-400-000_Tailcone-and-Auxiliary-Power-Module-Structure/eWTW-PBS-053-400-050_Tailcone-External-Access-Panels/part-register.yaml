@@ -1,0 +1,16 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-534005-000"
+    nomenclature: "SET-ACCESS-PANELS-TAILCONE"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-400-050"
+  - pn: "EWTW-534005-010"
+    nomenclature: "PANEL-ACCESS-APM-SET"
+    role: "item"
+    parentAssembly: "EWTW-534005-000"
+  - pn: "EWTW-534005-020"
+    nomenclature: "SURROUND-PANEL-CUTOUT-SET"
+    role: "item"
+    parentAssembly: "EWTW-534005-000"

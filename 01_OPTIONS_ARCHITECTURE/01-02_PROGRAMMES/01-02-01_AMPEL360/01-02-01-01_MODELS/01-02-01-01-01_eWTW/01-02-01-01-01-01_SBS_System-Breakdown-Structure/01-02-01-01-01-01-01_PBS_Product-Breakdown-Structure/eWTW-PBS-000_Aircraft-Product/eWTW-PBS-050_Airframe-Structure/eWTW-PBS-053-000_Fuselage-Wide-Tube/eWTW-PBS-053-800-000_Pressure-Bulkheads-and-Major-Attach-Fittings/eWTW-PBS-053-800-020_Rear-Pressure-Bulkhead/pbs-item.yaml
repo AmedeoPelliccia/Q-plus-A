@@ -1,0 +1,12 @@
+pbs_item:
+  id: eWTW-PBS-053-800-020
+  title: Rear Pressure Bulkhead
+  level: subject
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-800-000
+  model: eWTW
+  side: SSOT
+  scope: "Rear Pressure Bulkhead - G-ATLAS 053-800-020 subject scope; folder name is SSOT."
+  status: scaffold
+  version: "1.0"

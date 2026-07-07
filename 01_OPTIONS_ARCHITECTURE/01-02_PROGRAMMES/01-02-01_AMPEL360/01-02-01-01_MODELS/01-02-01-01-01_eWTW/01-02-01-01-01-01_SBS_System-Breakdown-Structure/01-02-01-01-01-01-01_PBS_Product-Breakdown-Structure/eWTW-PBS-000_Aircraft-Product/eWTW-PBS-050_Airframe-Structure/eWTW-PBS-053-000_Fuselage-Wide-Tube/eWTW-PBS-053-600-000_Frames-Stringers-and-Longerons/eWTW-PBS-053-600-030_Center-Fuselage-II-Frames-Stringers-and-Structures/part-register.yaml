@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-536003-000"
+    nomenclature: "SET-FRAME-STRINGER-CENTER-II"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-600-030"
+  - pn: "EWTW-536003-010"
+    nomenclature: "FRAME-TYPICAL-CII-SET"
+    role: "item"
+    parentAssembly: "EWTW-536003-000"
+  - pn: "EWTW-536003-020"
+    nomenclature: "STRINGER-SET-CII"
+    role: "item"
+    parentAssembly: "EWTW-536003-000"
+  - pn: "EWTW-536003-030"
+    nomenclature: "CLIP-AND-TIE-SET-CII"
+    role: "item"
+    parentAssembly: "EWTW-536003-000"

@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-534003-000"
+    nomenclature: "STRUCTURE-APM-FIREWALL"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-400-030"
+  - pn: "EWTW-534003-010"
+    nomenclature: "BULKHEAD-APM-CONTAINMENT-FIREWALL"
+    role: "item"
+    parentAssembly: "EWTW-534003-000"
+  - pn: "EWTW-534003-020"
+    nomenclature: "SHIELD-THERMAL-SET"
+    role: "item"
+    parentAssembly: "EWTW-534003-000"
+  - pn: "EWTW-534003-030"
+    nomenclature: "SEAL-FIREWALL-PENETRATION-SET"
+    role: "item"
+    parentAssembly: "EWTW-534003-000"

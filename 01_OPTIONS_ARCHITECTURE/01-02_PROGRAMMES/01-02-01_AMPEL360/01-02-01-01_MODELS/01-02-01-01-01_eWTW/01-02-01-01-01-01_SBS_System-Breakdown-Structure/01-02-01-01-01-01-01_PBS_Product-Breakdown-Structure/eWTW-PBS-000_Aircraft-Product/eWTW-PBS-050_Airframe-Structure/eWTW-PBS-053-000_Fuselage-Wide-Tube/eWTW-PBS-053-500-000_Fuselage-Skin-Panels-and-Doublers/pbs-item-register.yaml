@@ -1,0 +1,34 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-500-010"
+    csn: "535001"
+    title: "Forward Fuselage Skin"
+    gAtlas: "053-500-010"
+    realized: true
+  - id: "eWTW-PBS-053-500-020"
+    csn: "535002"
+    title: "Center Fuselage I Skin"
+    gAtlas: "053-500-020"
+    realized: true
+  - id: "eWTW-PBS-053-500-030"
+    csn: "535003"
+    title: "Center Fuselage II Skin"
+    gAtlas: "053-500-030"
+    realized: true
+  - id: "eWTW-PBS-053-500-040"
+    csn: "535004"
+    title: "Center Fuselage III Skin"
+    gAtlas: "053-500-040"
+    realized: true
+  - id: "eWTW-PBS-053-500-050"
+    csn: "535005"
+    title: "Rear Fuselage Skin"
+    gAtlas: "053-500-050"
+    realized: true
+  - id: "eWTW-PBS-053-500-060"
+    csn: "535006"
+    title: "Tailcone Skin"
+    gAtlas: "053-500-060"
+    realized: true

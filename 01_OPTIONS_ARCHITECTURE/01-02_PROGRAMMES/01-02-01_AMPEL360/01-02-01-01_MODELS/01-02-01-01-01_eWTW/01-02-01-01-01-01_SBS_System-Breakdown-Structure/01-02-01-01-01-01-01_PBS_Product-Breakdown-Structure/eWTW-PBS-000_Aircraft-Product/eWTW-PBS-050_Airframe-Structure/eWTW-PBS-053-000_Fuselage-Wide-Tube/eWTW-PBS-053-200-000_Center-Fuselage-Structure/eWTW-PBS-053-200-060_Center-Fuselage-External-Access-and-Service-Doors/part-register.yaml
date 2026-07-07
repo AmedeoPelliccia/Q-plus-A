@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-532006-000"
+    nomenclature: "SET-ACCESS-AND-SERVICE-DOORS-CENTER"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-200-060"
+  - pn: "EWTW-532006-010"
+    nomenclature: "PANEL-ACCESS-BELLY-SET"
+    role: "item"
+    parentAssembly: "EWTW-532006-000"
+  - pn: "EWTW-532006-020"
+    nomenclature: "SURROUND-SERVICE-DOOR-SMALL-SET"
+    role: "item"
+    parentAssembly: "EWTW-532006-000"
+  - pn: "EWTW-532006-030"
+    nomenclature: "PANEL-ACCESS-FAIRING-SET"
+    role: "item"
+    parentAssembly: "EWTW-532006-000"

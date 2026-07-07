@@ -1,0 +1,24 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-538004-000"
+    nomenclature: "SET-PAX-AND-SERVICE-DOOR-FITTINGS"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-800-040"
+  - pn: "EWTW-538004-010"
+    nomenclature: "FITTING-PAX-DOOR-HINGE-SET"
+    role: "item"
+    parentAssembly: "EWTW-538004-000"
+  - pn: "EWTW-538004-020"
+    nomenclature: "FITTING-PAX-DOOR-STOP-SET"
+    role: "item"
+    parentAssembly: "EWTW-538004-000"
+  - pn: "EWTW-538004-030"
+    nomenclature: "PLATE-LATCH-PAX-DOOR-SET"
+    role: "item"
+    parentAssembly: "EWTW-538004-000"
+  - pn: "EWTW-538004-040"
+    nomenclature: "FITTING-SERVICE-DOOR-SET"
+    role: "item"
+    parentAssembly: "EWTW-538004-000"

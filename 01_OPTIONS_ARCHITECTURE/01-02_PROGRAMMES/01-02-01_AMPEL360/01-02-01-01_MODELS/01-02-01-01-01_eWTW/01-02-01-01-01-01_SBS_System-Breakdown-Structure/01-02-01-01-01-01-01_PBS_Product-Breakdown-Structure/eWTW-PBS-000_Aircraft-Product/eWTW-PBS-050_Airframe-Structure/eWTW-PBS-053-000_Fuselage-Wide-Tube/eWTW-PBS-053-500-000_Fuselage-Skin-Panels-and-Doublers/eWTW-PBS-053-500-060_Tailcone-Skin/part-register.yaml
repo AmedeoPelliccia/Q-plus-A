@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-535006-000"
+    nomenclature: "SET-SKIN-TAILCONE"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-500-060"
+  - pn: "EWTW-535006-010"
+    nomenclature: "PANEL-SKIN-TAILCONE-UPPER"
+    role: "item"
+    parentAssembly: "EWTW-535006-000"
+  - pn: "EWTW-535006-020"
+    nomenclature: "PANEL-SKIN-TAILCONE-LOWER"
+    role: "item"
+    parentAssembly: "EWTW-535006-000"
+  - pn: "EWTW-535006-030"
+    nomenclature: "DOUBLER-CUTOUT-SET-TAILCONE"
+    role: "item"
+    parentAssembly: "EWTW-535006-000"

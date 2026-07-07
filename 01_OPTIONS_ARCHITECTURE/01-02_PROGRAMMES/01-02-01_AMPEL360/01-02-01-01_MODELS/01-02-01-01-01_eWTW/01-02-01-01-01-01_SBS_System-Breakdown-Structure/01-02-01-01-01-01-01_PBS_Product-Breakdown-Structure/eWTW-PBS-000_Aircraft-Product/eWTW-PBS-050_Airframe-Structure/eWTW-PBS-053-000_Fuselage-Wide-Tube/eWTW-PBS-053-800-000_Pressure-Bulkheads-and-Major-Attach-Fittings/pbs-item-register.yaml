@@ -1,0 +1,44 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-800-010"
+    csn: "538001"
+    title: "Forward Pressure Bulkhead"
+    gAtlas: "053-800-010"
+    realized: true
+  - id: "eWTW-PBS-053-800-020"
+    csn: "538002"
+    title: "Rear Pressure Bulkhead"
+    gAtlas: "053-800-020"
+    realized: true
+  - id: "eWTW-PBS-053-800-030"
+    csn: "538003"
+    title: "Forward Fuselage Landing Gear Fittings"
+    gAtlas: "053-800-030"
+    realized: true
+  - id: "eWTW-PBS-053-800-040"
+    csn: "538004"
+    title: "Passenger and Service Door Frame Fittings and Plates"
+    gAtlas: "053-800-040"
+    realized: true
+  - id: "eWTW-PBS-053-800-050"
+    csn: "538005"
+    title: "Cargo and Baggage Door Frame Fittings and Plates"
+    gAtlas: "053-800-050"
+    realized: true
+  - id: "eWTW-PBS-053-800-060"
+    csn: "538006"
+    title: "Fuselage Plug Frame Fittings"
+    gAtlas: "053-800-060"
+    realized: true
+  - id: "eWTW-PBS-053-800-070"
+    csn: "538007"
+    title: "Rear Fuselage to Stabilizer Attach Fittings"
+    gAtlas: "053-800-070"
+    realized: true
+  - id: "eWTW-PBS-053-800-080"
+    csn: "538008"
+    title: "Door Sills"
+    gAtlas: "053-800-080"
+    realized: true

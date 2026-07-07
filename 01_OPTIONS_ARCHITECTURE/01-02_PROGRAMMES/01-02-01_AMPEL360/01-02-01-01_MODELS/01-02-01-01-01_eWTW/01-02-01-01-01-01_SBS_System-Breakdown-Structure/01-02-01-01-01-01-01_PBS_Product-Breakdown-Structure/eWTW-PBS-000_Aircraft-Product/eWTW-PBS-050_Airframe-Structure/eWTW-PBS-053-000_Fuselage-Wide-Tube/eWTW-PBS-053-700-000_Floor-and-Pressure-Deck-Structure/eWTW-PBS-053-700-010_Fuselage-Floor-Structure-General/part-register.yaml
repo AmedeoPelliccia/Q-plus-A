@@ -1,0 +1,16 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-537001-000"
+    nomenclature: "SET-FLOOR-STRUCTURE-GENERAL"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-700-010"
+  - pn: "EWTW-537001-010"
+    nomenclature: "FITTING-FLOOR-ATTACH-STANDARD"
+    role: "item"
+    parentAssembly: "EWTW-537001-000"
+  - pn: "EWTW-537001-020"
+    nomenclature: "GRID-FLOOR-TYPICAL-ARRANGEMENT"
+    role: "item"
+    parentAssembly: "EWTW-537001-000"

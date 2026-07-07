@@ -1,0 +1,29 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-400-010"
+    csn: "534001"
+    title: "Tailcone Zone General"
+    gAtlas: "053-400-010"
+    realized: true
+  - id: "eWTW-PBS-053-400-020"
+    csn: "534002"
+    title: "Auxiliary Power Module Mounts and Support Struts"
+    gAtlas: "053-400-020"
+    realized: true
+  - id: "eWTW-PBS-053-400-030"
+    csn: "534003"
+    title: "Auxiliary Power Module Firewall and Thermal Provisions"
+    gAtlas: "053-400-030"
+    realized: true
+  - id: "eWTW-PBS-053-400-040"
+    csn: "534004"
+    title: "Rudder Root Aft Fairing"
+    gAtlas: "053-400-040"
+    realized: true
+  - id: "eWTW-PBS-053-400-050"
+    csn: "534005"
+    title: "Tailcone External Access Panels"
+    gAtlas: "053-400-050"
+    realized: true

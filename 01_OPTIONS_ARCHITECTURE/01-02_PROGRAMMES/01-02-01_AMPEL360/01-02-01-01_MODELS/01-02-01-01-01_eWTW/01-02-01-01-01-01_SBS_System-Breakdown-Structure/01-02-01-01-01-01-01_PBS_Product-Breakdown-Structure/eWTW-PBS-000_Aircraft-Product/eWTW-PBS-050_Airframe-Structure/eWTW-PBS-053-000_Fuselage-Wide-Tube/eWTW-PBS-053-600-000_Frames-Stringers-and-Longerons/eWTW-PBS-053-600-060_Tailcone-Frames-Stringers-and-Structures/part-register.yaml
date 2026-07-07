@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-536006-000"
+    nomenclature: "SET-FRAME-STRINGER-TAILCONE"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-600-060"
+  - pn: "EWTW-536006-010"
+    nomenclature: "FRAME-TAILCONE-SET"
+    role: "item"
+    parentAssembly: "EWTW-536006-000"
+  - pn: "EWTW-536006-020"
+    nomenclature: "LONGERON-TAILCONE-SET"
+    role: "item"
+    parentAssembly: "EWTW-536006-000"
+  - pn: "EWTW-536006-030"
+    nomenclature: "CLIP-SET-TAILCONE"
+    role: "item"
+    parentAssembly: "EWTW-536006-000"

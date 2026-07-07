@@ -1,0 +1,16 @@
+# Part record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+part:
+  pn: "EWTW-535001-000"
+  nomenclature: "SET-SKIN-FORWARD"
+  csn: "535001"
+  item: "000"
+  type: "assembly"
+  role: "top-assembly"
+  parentAssembly: "eWTW-PBS-053-500-010"
+  applicability:
+    model: "eWTW"
+    effectivity:
+      - "ALL"
+  status: "PLANNED"

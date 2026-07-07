@@ -1,0 +1,16 @@
+# Part record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+part:
+  pn: "EWTW-539005-020"
+  nomenclature: "PANEL-FOOTPRINT-CLOSURE-SET"
+  csn: "539005"
+  item: "020"
+  type: "part"
+  role: "item"
+  parentAssembly: "EWTW-539005-000"
+  applicability:
+    model: "eWTW"
+    effectivity:
+      - "ALL"
+  status: "PLANNED"

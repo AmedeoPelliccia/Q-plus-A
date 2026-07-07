@@ -1,0 +1,12 @@
+pbs_item:
+  id: eWTW-PBS-053-600-050
+  title: Rear Fuselage Frames Stringers and Structures
+  level: subject
+  layer: "STD"
+  owner: Q-STRUCTURES
+  parent: eWTW-PBS-053-600-000
+  model: eWTW
+  side: SSOT
+  scope: "Rear Fuselage Frames Stringers and Structures - G-ATLAS 053-600-050 subject scope; folder name is SSOT."
+  status: scaffold
+  version: "1.0"
