@@ -1,0 +1,49 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-600-010"
+    csn: "536001"
+    title: "Forward Fuselage Frames Stringers and Structures"
+    gAtlas: "053-600-010"
+    realized: true
+  - id: "eWTW-PBS-053-600-020"
+    csn: "536002"
+    title: "Center Fuselage I Frames Stringers and Structures"
+    gAtlas: "053-600-020"
+    realized: true
+  - id: "eWTW-PBS-053-600-030"
+    csn: "536003"
+    title: "Center Fuselage II Frames Stringers and Structures"
+    gAtlas: "053-600-030"
+    realized: true
+  - id: "eWTW-PBS-053-600-040"
+    csn: "536004"
+    title: "Center Fuselage III Frames Stringers and Structures"
+    gAtlas: "053-600-040"
+    realized: true
+  - id: "eWTW-PBS-053-600-050"
+    csn: "536005"
+    title: "Rear Fuselage Frames Stringers and Structures"
+    gAtlas: "053-600-050"
+    realized: true
+  - id: "eWTW-PBS-053-600-060"
+    csn: "536006"
+    title: "Tailcone Frames Stringers and Structures"
+    gAtlas: "053-600-060"
+    realized: true
+  - id: "eWTW-PBS-053-600-070"
+    csn: "536007"
+    title: "Window Formers and Surrounding Structure"
+    gAtlas: "053-600-070"
+    realized: true
+  - id: "eWTW-PBS-053-600-080"
+    csn: "536008"
+    title: "Door Surrounding Structure"
+    gAtlas: "053-600-080"
+    realized: true
+  - id: "eWTW-PBS-053-600-090"
+    csn: "536009"
+    title: "Keel Beam Structure"
+    gAtlas: "053-600-090"
+    realized: true

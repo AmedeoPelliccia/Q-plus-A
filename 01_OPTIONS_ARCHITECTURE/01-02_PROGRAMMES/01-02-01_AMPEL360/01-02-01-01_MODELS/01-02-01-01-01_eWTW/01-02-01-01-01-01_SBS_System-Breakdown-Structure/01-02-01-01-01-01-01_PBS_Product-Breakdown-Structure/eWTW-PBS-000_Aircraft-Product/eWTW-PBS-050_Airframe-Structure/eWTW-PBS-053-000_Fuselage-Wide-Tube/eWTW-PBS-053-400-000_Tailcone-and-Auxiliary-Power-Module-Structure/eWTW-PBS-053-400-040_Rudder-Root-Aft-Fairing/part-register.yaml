@@ -1,0 +1,24 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-534004-000"
+    nomenclature: "STRUCTURE-RUDDER-ROOT-FAIRING"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-400-040"
+  - pn: "EWTW-534004-010"
+    nomenclature: "PANEL-FAIRING-RUDDER-ROOT"
+    role: "assembly"
+    parentAssembly: "EWTW-534004-000"
+  - pn: "EWTW-534004-011"
+    nomenclature: "PANEL-FAIRING-RUDDER-ROOT-LH"
+    role: "variant"
+    parentAssembly: "EWTW-534004-010"
+  - pn: "EWTW-534004-012"
+    nomenclature: "PANEL-FAIRING-RUDDER-ROOT-RH"
+    role: "variant"
+    parentAssembly: "EWTW-534004-010"
+  - pn: "EWTW-534004-020"
+    nomenclature: "SEAL-FAIRING-SET"
+    role: "item"
+    parentAssembly: "EWTW-534004-000"

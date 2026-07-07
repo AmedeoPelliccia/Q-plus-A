@@ -1,0 +1,28 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-537006-000"
+    nomenclature: "SET-SEAT-TRACKS"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-700-060"
+  - pn: "EWTW-537006-010"
+    nomenclature: "TRACK-SEAT-PASSENGER"
+    role: "assembly"
+    parentAssembly: "EWTW-537006-000"
+  - pn: "EWTW-537006-011"
+    nomenclature: "TRACK-SEAT-PASSENGER-LH"
+    role: "variant"
+    parentAssembly: "EWTW-537006-010"
+  - pn: "EWTW-537006-012"
+    nomenclature: "TRACK-SEAT-PASSENGER-RH"
+    role: "variant"
+    parentAssembly: "EWTW-537006-010"
+  - pn: "EWTW-537006-020"
+    nomenclature: "TRACK-SEAT-ATTENDANT"
+    role: "item"
+    parentAssembly: "EWTW-537006-000"
+  - pn: "EWTW-537006-030"
+    nomenclature: "FITTING-SEAT-TRACK-END-SET"
+    role: "item"
+    parentAssembly: "EWTW-537006-000"

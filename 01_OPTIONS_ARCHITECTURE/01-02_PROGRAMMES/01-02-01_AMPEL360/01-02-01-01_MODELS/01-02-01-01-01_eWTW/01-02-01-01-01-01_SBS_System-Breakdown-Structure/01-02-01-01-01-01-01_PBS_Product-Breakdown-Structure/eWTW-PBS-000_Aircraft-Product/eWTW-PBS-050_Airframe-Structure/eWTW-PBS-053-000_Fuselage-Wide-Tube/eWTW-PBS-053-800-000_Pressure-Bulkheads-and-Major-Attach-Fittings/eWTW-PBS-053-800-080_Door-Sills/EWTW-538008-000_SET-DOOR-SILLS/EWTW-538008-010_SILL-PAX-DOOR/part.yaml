@@ -1,0 +1,16 @@
+# Part record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+part:
+  pn: "EWTW-538008-010"
+  nomenclature: "SILL-PAX-DOOR"
+  csn: "538008"
+  item: "010"
+  type: "assembly"
+  role: "assembly"
+  parentAssembly: "EWTW-538008-000"
+  applicability:
+    model: "eWTW"
+    effectivity:
+      - "ALL"
+  status: "PLANNED"

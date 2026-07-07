@@ -1,0 +1,16 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-534001-000"
+    nomenclature: "STRUCTURE-TAILCONE-ZONE"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-400-010"
+  - pn: "EWTW-534001-010"
+    nomenclature: "BULKHEAD-TAILCONE-CLOSURE"
+    role: "item"
+    parentAssembly: "EWTW-534001-000"
+  - pn: "EWTW-534001-020"
+    nomenclature: "PROVISION-TAIL-NAV-LIGHT-MOUNT"
+    role: "item"
+    parentAssembly: "EWTW-534001-000"

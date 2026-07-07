@@ -1,8 +1,0 @@
-# Assembly station record
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated: 2026-07-06 - realize_PBS-053_chapter.py - No-AAA compliant
-assemblyStation:
-  id: "AS-EWTW-531103"
-  csn: "531103"
-  scope: "Assembly and integration station - Venting Drainage and Thermal Provisions"
-  status: "PLANNED"

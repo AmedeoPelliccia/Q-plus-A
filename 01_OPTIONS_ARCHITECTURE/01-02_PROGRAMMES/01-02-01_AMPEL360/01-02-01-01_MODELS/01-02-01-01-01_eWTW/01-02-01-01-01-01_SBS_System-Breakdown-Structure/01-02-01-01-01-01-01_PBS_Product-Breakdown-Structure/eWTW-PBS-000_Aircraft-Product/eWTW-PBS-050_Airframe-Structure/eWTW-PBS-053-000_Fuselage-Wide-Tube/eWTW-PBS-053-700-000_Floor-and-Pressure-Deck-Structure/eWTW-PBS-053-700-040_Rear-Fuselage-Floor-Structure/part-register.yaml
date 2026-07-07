@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-537004-000"
+    nomenclature: "STRUCTURE-FLOOR-REAR"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-700-040"
+  - pn: "EWTW-537004-010"
+    nomenclature: "BEAM-FLOOR-TRANSVERSE-REAR-SET"
+    role: "item"
+    parentAssembly: "EWTW-537004-000"
+  - pn: "EWTW-537004-020"
+    nomenclature: "INTERCOSTAL-FLOOR-REAR-SET"
+    role: "item"
+    parentAssembly: "EWTW-537004-000"
+  - pn: "EWTW-537004-030"
+    nomenclature: "SUPPORT-FLOOR-BULK-CARGO"
+    role: "item"
+    parentAssembly: "EWTW-537004-000"

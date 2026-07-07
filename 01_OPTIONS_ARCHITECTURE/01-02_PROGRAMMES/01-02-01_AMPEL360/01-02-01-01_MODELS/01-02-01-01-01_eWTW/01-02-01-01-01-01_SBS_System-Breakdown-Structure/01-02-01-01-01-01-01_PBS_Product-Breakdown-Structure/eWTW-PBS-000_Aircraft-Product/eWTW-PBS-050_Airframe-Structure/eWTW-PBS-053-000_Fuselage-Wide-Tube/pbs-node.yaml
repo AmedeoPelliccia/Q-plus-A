@@ -1,17 +1,14 @@
-pbs_node:
-  id: eWTW-PBS-053-000
-  title: Fuselage Wide-Tube
-  type: chapter
-  g_atlas: "053"
-  ata_origin: "53"
-  config: WTW (Wide Tube Wing)
-  grammar: "0CC-SS0-UU0 (x10 hierarchical; -000 = general at each level)"
-  parent: eWTW-PBS-050
-  model: eWTW
-  side: SSOT
-  member: "-01_PBS"
-  owner: Q-STRUCTURES
-  green_overlay: Q-GREENTECH
-  sections: 12
-  status: realized
-  version: "2.0"
+# PBS node record (chapter)
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+node:
+  id: "eWTW-PBS-053-000"
+  title: "Fuselage Wide-Tube"
+  level: "chapter"
+  gAtlas: "053"
+  ataOrigin: "53"
+  config: "WTW (Wide Tube Wing)"
+  grammar: "0CC-SSS-UU0 (G-ATLAS x100 sections; subjects x10; -000 = general)"
+  parent: "eWTW-PBS-050"
+  sections: 10
+  status: "PLANNED"

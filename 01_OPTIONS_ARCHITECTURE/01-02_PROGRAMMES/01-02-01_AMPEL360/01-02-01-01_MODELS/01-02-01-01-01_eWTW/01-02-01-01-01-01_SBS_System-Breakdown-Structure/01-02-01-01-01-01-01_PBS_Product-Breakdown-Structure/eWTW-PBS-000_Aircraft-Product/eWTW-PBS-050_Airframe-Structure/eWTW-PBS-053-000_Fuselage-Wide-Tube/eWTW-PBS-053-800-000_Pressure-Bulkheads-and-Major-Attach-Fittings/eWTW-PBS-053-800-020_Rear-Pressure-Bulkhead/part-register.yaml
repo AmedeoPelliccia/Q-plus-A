@@ -1,0 +1,24 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-538002-000"
+    nomenclature: "STRUCTURE-REAR-PRESSURE-BULKHEAD"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-800-020"
+  - pn: "EWTW-538002-010"
+    nomenclature: "DOME-BULKHEAD-REAR"
+    role: "item"
+    parentAssembly: "EWTW-538002-000"
+  - pn: "EWTW-538002-020"
+    nomenclature: "STIFFENER-MERIDIAN-REAR-SET"
+    role: "item"
+    parentAssembly: "EWTW-538002-000"
+  - pn: "EWTW-538002-030"
+    nomenclature: "RING-PERIPHERAL-ATTACH-REAR"
+    role: "item"
+    parentAssembly: "EWTW-538002-000"
+  - pn: "EWTW-538002-040"
+    nomenclature: "FITTING-PENETRATION-SEALED-REAR-SET"
+    role: "item"
+    parentAssembly: "EWTW-538002-000"

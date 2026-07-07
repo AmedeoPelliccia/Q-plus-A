@@ -1,0 +1,8 @@
+# Assembly station record
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+assemblyStation:
+  id: "AS-EWTW-530003"
+  csn: "530003"
+  scope: "Assembly and integration station - Fuselage External Access Doors and Panels General"
+  status: "PLANNED"

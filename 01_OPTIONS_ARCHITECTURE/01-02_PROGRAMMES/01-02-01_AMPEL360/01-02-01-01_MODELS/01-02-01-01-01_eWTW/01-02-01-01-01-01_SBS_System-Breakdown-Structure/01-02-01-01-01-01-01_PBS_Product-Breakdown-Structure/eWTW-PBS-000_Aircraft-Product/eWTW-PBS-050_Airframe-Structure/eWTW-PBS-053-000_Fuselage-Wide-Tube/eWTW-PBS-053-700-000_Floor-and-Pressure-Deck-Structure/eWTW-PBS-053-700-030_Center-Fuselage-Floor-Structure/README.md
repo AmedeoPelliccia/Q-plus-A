@@ -1,0 +1,20 @@
+# eWTW-PBS-053-700-030 - Center Fuselage Floor Structure
+
+CSN `537003` - grammar `EWTW-537003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-700-030`.
+
+## Items
+
+- `EWTW-537003-000` STRUCTURE-FLOOR-CENTER
+- `EWTW-537003-010` BEAM-FLOOR-TRANSVERSE-CENTER-SET
+- `EWTW-537003-020` INTERCOSTAL-FLOOR-CENTER-SET
+- `EWTW-537003-030` DECK-PRESSURE-MLG-WHEELWELL
+  - `EWTW-537003-031` DECK-PRESSURE-MLG-WHEELWELL-LH
+  - `EWTW-537003-032` DECK-PRESSURE-MLG-WHEELWELL-RH
+- `EWTW-537003-040` DECK-PRESSURE-OVER-WINGBOX
+- `EWTW-537003-050` SEAL-PRESSURE-DECK-CENTER-SET
+
+## Notes
+
+- Owns the MLG wheelwell and over-wingbox pressure decks (Class B delta 1). Wheelwell walls and sealing: 053-200-030.
+
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant

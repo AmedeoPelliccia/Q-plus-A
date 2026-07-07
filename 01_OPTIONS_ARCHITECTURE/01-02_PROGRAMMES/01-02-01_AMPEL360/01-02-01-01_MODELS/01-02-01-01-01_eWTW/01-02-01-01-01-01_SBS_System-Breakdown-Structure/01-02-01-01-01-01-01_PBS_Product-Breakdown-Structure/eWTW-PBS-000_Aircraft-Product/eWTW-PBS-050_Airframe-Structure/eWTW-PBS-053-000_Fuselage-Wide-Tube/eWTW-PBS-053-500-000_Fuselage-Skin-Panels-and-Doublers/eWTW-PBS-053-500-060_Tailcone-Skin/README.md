@@ -1,0 +1,12 @@
+# eWTW-PBS-053-500-060 - Tailcone Skin
+
+CSN `535006` - grammar `EWTW-535006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-500-060`.
+
+## Items
+
+- `EWTW-535006-000` SET-SKIN-TAILCONE
+- `EWTW-535006-010` PANEL-SKIN-TAILCONE-UPPER
+- `EWTW-535006-020` PANEL-SKIN-TAILCONE-LOWER
+- `EWTW-535006-030` DOUBLER-CUTOUT-SET-TAILCONE
+
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant

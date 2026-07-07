@@ -1,0 +1,24 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-537005-000"
+    nomenclature: "SET-FLOOR-PANELS"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-700-050"
+  - pn: "EWTW-537005-010"
+    nomenclature: "PANEL-FLOOR-PASSENGER-STANDARD"
+    role: "item"
+    parentAssembly: "EWTW-537005-000"
+  - pn: "EWTW-537005-020"
+    nomenclature: "PANEL-FLOOR-GALLEY-WET-AREA"
+    role: "item"
+    parentAssembly: "EWTW-537005-000"
+  - pn: "EWTW-537005-030"
+    nomenclature: "PANEL-FLOOR-CARGO"
+    role: "item"
+    parentAssembly: "EWTW-537005-000"
+  - pn: "EWTW-537005-040"
+    nomenclature: "PANEL-FLOOR-ACCESS-QUICK-RELEASE"
+    role: "item"
+    parentAssembly: "EWTW-537005-000"

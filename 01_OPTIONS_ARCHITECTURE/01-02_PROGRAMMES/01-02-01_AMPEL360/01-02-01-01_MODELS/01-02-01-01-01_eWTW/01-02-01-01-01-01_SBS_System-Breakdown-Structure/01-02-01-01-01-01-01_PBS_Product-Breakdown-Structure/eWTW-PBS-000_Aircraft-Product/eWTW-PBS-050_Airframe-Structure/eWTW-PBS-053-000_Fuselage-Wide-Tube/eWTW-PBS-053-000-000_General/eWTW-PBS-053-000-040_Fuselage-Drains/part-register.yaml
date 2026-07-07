@@ -1,0 +1,20 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-530004-000"
+    nomenclature: "SET-FUSELAGE-DRAINS"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-000-040"
+  - pn: "EWTW-530004-010"
+    nomenclature: "MAST-DRAIN"
+    role: "item"
+    parentAssembly: "EWTW-530004-000"
+  - pn: "EWTW-530004-020"
+    nomenclature: "VALVE-DRAIN-SET"
+    role: "item"
+    parentAssembly: "EWTW-530004-000"
+  - pn: "EWTW-530004-030"
+    nomenclature: "PATH-DRAIN-BILGE-SET"
+    role: "item"
+    parentAssembly: "EWTW-530004-000"

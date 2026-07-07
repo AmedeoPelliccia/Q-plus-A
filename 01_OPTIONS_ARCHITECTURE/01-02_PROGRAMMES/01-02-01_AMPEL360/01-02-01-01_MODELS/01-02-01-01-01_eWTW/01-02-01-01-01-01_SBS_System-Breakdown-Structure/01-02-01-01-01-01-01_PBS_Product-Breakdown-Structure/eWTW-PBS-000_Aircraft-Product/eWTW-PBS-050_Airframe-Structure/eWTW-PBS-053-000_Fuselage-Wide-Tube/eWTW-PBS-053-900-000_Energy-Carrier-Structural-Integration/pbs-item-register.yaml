@@ -1,0 +1,29 @@
+# PBS item register (section) - subjects, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+subjects:
+  - id: "eWTW-PBS-053-900-010"
+    csn: "539001"
+    title: "Energy Carrier Bay Structure"
+    gAtlas: "053-900-010"
+    realized: true
+  - id: "eWTW-PBS-053-900-020"
+    csn: "539002"
+    title: "Energy Carrier Crash Protection and Containment Interface"
+    gAtlas: "053-900-020"
+    realized: true
+  - id: "eWTW-PBS-053-900-030"
+    csn: "539003"
+    title: "Energy Carrier Mount and Attach Fittings"
+    gAtlas: "053-900-030"
+    realized: true
+  - id: "eWTW-PBS-053-900-040"
+    csn: "539004"
+    title: "Electric Energy Maintenance Compartment Structure"
+    gAtlas: "053-900-040"
+    realized: true
+  - id: "eWTW-PBS-053-900-050"
+    csn: "539005"
+    title: "Vacated Auxiliary Fuel Tank Compartment Footprint"
+    gAtlas: "053-900-050"
+    realized: true

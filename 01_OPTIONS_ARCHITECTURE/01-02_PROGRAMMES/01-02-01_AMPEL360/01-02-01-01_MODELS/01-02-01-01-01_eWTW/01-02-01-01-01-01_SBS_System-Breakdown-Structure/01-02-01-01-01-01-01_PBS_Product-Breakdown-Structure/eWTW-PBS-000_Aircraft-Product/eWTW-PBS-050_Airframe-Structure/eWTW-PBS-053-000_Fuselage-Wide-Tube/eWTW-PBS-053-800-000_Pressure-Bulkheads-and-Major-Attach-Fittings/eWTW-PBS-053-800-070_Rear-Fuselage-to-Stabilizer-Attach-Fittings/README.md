@@ -1,0 +1,19 @@
+# eWTW-PBS-053-800-070 - Rear Fuselage to Stabilizer Attach Fittings
+
+CSN `538007` - grammar `EWTW-538007-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-800-070`.
+
+## Items
+
+- `EWTW-538007-000` SET-STABILIZER-ATTACH-FITTINGS
+- `EWTW-538007-010` FITTING-THS-PIVOT
+  - `EWTW-538007-011` FITTING-THS-PIVOT-LH
+  - `EWTW-538007-012` FITTING-THS-PIVOT-RH
+- `EWTW-538007-020` FITTING-THS-ACTUATOR-SUPPORT
+- `EWTW-538007-030` FITTING-FIN-FRONT-SPAR-ATTACH
+- `EWTW-538007-040` FITTING-FIN-REAR-SPAR-ATTACH
+
+## Notes
+
+- Empennage-side structure: ATA 055. Reinforced frames: 053-600-050.
+
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant

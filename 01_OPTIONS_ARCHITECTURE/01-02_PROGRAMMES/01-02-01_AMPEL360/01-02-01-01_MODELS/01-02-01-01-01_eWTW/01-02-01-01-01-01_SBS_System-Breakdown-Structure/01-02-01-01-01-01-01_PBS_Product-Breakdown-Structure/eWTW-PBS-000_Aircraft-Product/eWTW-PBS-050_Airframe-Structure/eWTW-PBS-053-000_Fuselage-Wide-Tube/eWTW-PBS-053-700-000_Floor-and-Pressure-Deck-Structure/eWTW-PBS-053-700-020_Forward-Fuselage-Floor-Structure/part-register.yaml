@@ -1,0 +1,24 @@
+# Part register (subject) - ordered, generated
+# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+parts:
+  - pn: "EWTW-537002-000"
+    nomenclature: "STRUCTURE-FLOOR-FWD"
+    role: "top-assembly"
+    parentAssembly: "eWTW-PBS-053-700-020"
+  - pn: "EWTW-537002-010"
+    nomenclature: "BEAM-FLOOR-TRANSVERSE-FWD-SET"
+    role: "item"
+    parentAssembly: "EWTW-537002-000"
+  - pn: "EWTW-537002-020"
+    nomenclature: "INTERCOSTAL-FLOOR-FWD-SET"
+    role: "item"
+    parentAssembly: "EWTW-537002-000"
+  - pn: "EWTW-537002-030"
+    nomenclature: "DECK-PRESSURE-NLG-BAY"
+    role: "item"
+    parentAssembly: "EWTW-537002-000"
+  - pn: "EWTW-537002-040"
+    nomenclature: "SEAL-PRESSURE-DECK-NLG-PERIMETER"
+    role: "item"
+    parentAssembly: "EWTW-537002-000"
