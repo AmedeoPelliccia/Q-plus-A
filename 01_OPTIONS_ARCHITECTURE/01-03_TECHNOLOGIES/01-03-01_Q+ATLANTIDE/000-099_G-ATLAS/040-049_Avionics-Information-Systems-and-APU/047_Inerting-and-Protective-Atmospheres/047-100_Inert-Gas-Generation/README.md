@@ -1,0 +1,7 @@
+# 047-100 — Inert Gas Generation
+
+G-ATLAS node `047-100` · level: section · applicability: **hBWB baseline; eWTW pending ruling**.
+
+Onboard inert-gas generation units and their service provisions.
+
+Generated 2026-07-09 · realize_G-ATLAS-040-049.py v1.0.0 · No-AAA compliant
