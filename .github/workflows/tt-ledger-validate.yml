@@ -6,6 +6,9 @@ on:
     paths:
       - "**/01-01-02-01-01_Teknia-Token/TT-LEDGER/**"
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
