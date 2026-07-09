@@ -33,4 +33,4 @@ Scope doctrine: 050 owns compartments as **fitted volumes** — linings, fire ba
 
 - `050-400` Unassigned — RESERVED: reserved per classic grammar.
 
-Generated 2026-07-09 · realize_G-ATLAS-050.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant
+Generated 2026-07-09 · realize_G-ATLAS-050.py v1.0.0 · register regenerated from the realizer data, never hand-edited · 
