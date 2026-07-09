@@ -1,135 +1,56 @@
-#!/usr/bin/env python3
-"""build_balances.py — derive per-member balances from the emissions SSOT.
-
-Usage:
-    python3 build_balances.py [--root .] [--check]
-
-Writes TT-LEDGER/derived/balances.yaml and TT-LEDGER/derived/balances.md.
-Both outputs are GENERATED — never hand-edit. Deterministic ordering
-(memberId ascending). With --check, regenerates to memory and diffs against
-the committed derived files; exits 1 if they are stale.
-
-No-AAA compliant.
-"""
-
-import argparse
+"""Pytest tests for build_balances.py — --check semantics and determinism."""
 import sys
 from pathlib import Path
 
-import yaml
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import build_balances  # noqa: E402
 
-GENERATED_HEADER = "# GENERATED — never hand-edit\n"
-
-
-def load_yaml(path):
-    with open(path, "r", encoding="utf-8") as fh:
-        return yaml.safe_load(fh)
-
-
-def compute_balances(emissions):
-    balances = {}
-    for row in emissions or []:
-        member = str(row.get("memberId"))
-        pool = str(row.get("poolId"))
-        amount = row.get("amount") or 0
-        raw_date = str(row.get("date"))
-        entry = balances.setdefault(
-            member, {"total": 0, "pools": {}, "lastEmissionDate": ""})
-        entry["total"] += amount
-        entry["pools"][pool] = entry["pools"].get(pool, 0) + amount
-        if raw_date > entry["lastEmissionDate"]:
-            entry["lastEmissionDate"] = raw_date
-    return balances
+H = "b" * 64
+EMISSIONS = f"""\
+emissions:
+  - {{id: "EM-0001", memberId: "Alice", poolId: "POOL-A", workPackage: "WP: #1",
+     amount: 7, event: "ACCEPTED", evidenceHash: "{H}", date: "2026-07-01"}}
+  - {{id: "EM-0002", memberId: "Alice", poolId: "POOL-B", workPackage: "WP: #2",
+     amount: 3, event: "ACCEPTED", evidenceHash: "{H}", date: "2026-07-09"}}
+  - {{id: "EM-0003", memberId: "Bob", poolId: "POOL-A", workPackage: "WP: #3",
+     amount: 5, event: "ACCEPTED", evidenceHash: "{H}", date: "2026-07-05"}}
+"""
 
 
-def render_yaml(balances):
-    members = []
-    for member in sorted(balances):
-        entry = balances[member]
-        members.append({
-            "memberId": member,
-            "total": entry["total"],
-            "pools": {pid: entry["pools"][pid] for pid in sorted(entry["pools"])},
-            "lastEmissionDate": entry["lastEmissionDate"],
-        })
-    body = yaml.safe_dump(
-        {"balances": members}, sort_keys=False, default_flow_style=False)
-    return GENERATED_HEADER + "# Derived from TT-LEDGER/emissions.yaml\n" + body
+def make_node(tmp_path, emissions=EMISSIONS):
+    node = tmp_path / "node"
+    (node / "TT-LEDGER").mkdir(parents=True)
+    (node / "TT-LEDGER" / "emissions.yaml").write_text(emissions, "utf-8")
+    return node
 
 
-def render_md(balances):
-    lines = [
-        "<!-- GENERATED — never hand-edit -->",
-        "",
-        "# Teknia Token balances (derived)",
-        "",
-        "| memberId | total TT | per-pool breakdown | last emission date |",
-        "| --- | --- | --- | --- |",
-    ]
-    if not balances:
-        lines.append("| _none_ | 0 | — | — |")
-    for member in sorted(balances):
-        entry = balances[member]
-        breakdown = "; ".join(
-            "%s: %d" % (pid, entry["pools"][pid])
-            for pid in sorted(entry["pools"])) or "—"
-        lines.append("| %s | %d | %s | %s |" % (
-            member, entry["total"], breakdown,
-            entry["lastEmissionDate"] or "—"))
-    lines += ["", "No-AAA compliant.", ""]
-    return "\n".join(lines)
+def test_generate_then_check_ok_then_stale(tmp_path, capsys):
+    node = make_node(tmp_path)
+    assert build_balances.main(["--root", str(node)]) == 0
+    assert build_balances.main(["--root", str(node), "--check"]) == 0
+    y = node / "TT-LEDGER" / "derived" / "balances.yaml"
+    y.write_text(y.read_text("utf-8") + "# tamper\n", "utf-8")
+    assert build_balances.main(["--root", str(node), "--check"]) == 1
+    assert "STALE" in capsys.readouterr().out
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--root", default=str(Path(__file__).resolve().parent.parent),
-        help="Teknia-Token node root containing TT-LEDGER/")
-    parser.add_argument(
-        "--check", action="store_true",
-        help="verify committed derived files are up to date; do not write")
-    parser.add_argument(
-        "--dry-run", action="store_true",
-        help="print outputs without writing")
-    args = parser.parse_args(argv)
-
-    root = Path(args.root)
-    emissions_path = root / "TT-LEDGER" / "emissions.yaml"
-    derived_dir = root / "TT-LEDGER" / "derived"
-    yaml_path = derived_dir / "balances.yaml"
-    md_path = derived_dir / "balances.md"
-
-    doc = load_yaml(emissions_path) or {}
-    balances = compute_balances(doc.get("emissions"))
-    yaml_out = render_yaml(balances)
-    md_out = render_md(balances)
-
-    if args.check:
-        stale = []
-        for path, expected in ((yaml_path, yaml_out), (md_path, md_out)):
-            actual = path.read_text(encoding="utf-8") if path.is_file() else None
-            if actual != expected:
-                stale.append(str(path))
-        if stale:
-            print("STALE derived files (regenerate with build_balances.py):")
-            for path in stale:
-                print("  %s" % path)
-            return 1
-        print("derived balances up to date")
-        return 0
-
-    if args.dry_run:
-        print(yaml_out)
-        print(md_out)
-        return 0
-
-    derived_dir.mkdir(parents=True, exist_ok=True)
-    yaml_path.write_text(yaml_out, encoding="utf-8")
-    md_path.write_text(md_out, encoding="utf-8")
-    print("wrote %s" % yaml_path)
-    print("wrote %s" % md_path)
-    return 0
+def test_check_fails_when_derived_missing(tmp_path, capsys):
+    node = make_node(tmp_path)
+    assert build_balances.main(["--root", str(node), "--check"]) == 1
+    assert "MISSING" in capsys.readouterr().out
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+def test_totals_ordering_and_none_date_guard(tmp_path):
+    bad = EMISSIONS + (
+        '  - {id: "EM-0004", memberId: "Alice", poolId: "POOL-A",\n'
+        '     workPackage: "WP: #4", amount: 2, event: "ACCEPTED",\n'
+        f'     evidenceHash: "{H}"}}\n')  # no date: must not become "None"
+    node = make_node(tmp_path, bad)
+    assert build_balances.main(["--root", str(node)]) == 0
+    text = (node / "TT-LEDGER" / "derived" / "balances.yaml").read_text("utf-8")
+    import yaml as _y
+    data = _y.safe_load(text.split("\n", 2)[2])
+    alice, bob = data["balances"][0], data["balances"][1]
+    assert alice["memberId"] == "Alice" and alice["total"] == 12
+    assert alice["lastEmissionDate"] == "2026-07-09"   # not "None"
+    assert bob["memberId"] == "Bob" and bob["total"] == 5
