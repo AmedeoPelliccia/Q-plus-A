@@ -1,0 +1,13 @@
+# AUTHORED SSOT — Teknia Token emissions ledger.
+# One row per settled emission; appended via PR; CI-validated.
+# No-AAA compliant.
+emissions: []
+# row schema:
+#  - id: "EM-0001"                 # sequential, unique
+#    memberId: "GitHubUsername"    # must exist in TEAM-REGISTER.csv
+#    poolId: "POOL-..."            # must exist in pools.yaml, status OPEN
+#    workPackage: "WP: #<issue>"   # approved [WORK PACKAGE] issue reference
+#    amount: 0                     # integer TT (decimals = 0)
+#    event: "ACCEPTED"             # one of EVENTS
+#    evidenceHash: "<64-hex sha256 of commit or artifact>"
+#    date: "YYYY-MM-DD"

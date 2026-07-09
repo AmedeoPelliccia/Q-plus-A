@@ -1,0 +1,22 @@
+# AUTHORED SSOT — Teknia Token pools ledger.
+# Balances are derived (TT-LEDGER/derived/), never hand-edited.
+# No-AAA compliant.
+pools:
+  - id: "POOL-GENESIS-ARCHITECTURE"
+    title: "Retroactive founding architecture work"
+    amount: 0            # TBD by governance before first genesis WP
+    reserved: true
+    status: "PROPOSED"   # PROPOSED | OPEN | CLOSED
+    reviewerPoolId: "POOL-REVIEW-GENESIS"
+  - id: "POOL-REVIEW-GENESIS"
+    title: "Independent review of genesis work packages"
+    amount: 0
+    reserved: true
+    status: "PROPOSED"
+    reviewerPoolId: null
+  - id: "POOL-HT-EWTW-531004-CAD"
+    title: "Hack-Tender: radome attach structure CAD (EWTW-531004)"
+    amount: 0
+    reserved: true
+    status: "PROPOSED"
+    reviewerPoolId: null   # to assign before OPEN
