@@ -1,65 +1,90 @@
-# Teknia Token (TT) — Stage-0/Stage-1 Node
+# Teknia Token (TT)
 
-## 1. Identity
+**Q-FINANCE node `01-01-02-01-01_Teknia-Token` — protocol, ledger SSOT and tooling of the Teknia Token.**
 
-- **Canonical name:** Teknia Token
-- **Ticker:** TT
-- **Definition:** TT is a **unit of verified technical contribution** within the Q+A
-  programme. It quantifies accepted, evidence-anchored engineering work. It is not a
-  financial instrument and carries no convertibility, redemption or value promise at
-  Stage 0/1.
-- **Alias note:** `TEK-TOK` is an internal colloquial alias — not for public branding
-  (trademark clearance pending, gate G6). Do not use it in file, class or token names.
+## Identity
 
-## 2. What lives here vs the external token repository
+**Teknia Token (TT)** is the unit of **verified technical contribution** of the Q+ engineering ecosystem. TT are integer units (no decimals): workload points quoted ex ante map 1:1 to whole tokens. Every unit traces to an approved work package and a sha256 evidence hash — no evidence, no emission. At the current stage TT is **non-transferable** and is not offered, priced, redeemed or traded; it is an accounting unit for governed contribution settlement, not an investment product.
 
-This node contains the **contribution-ledger protocol and tooling only**:
+*"TEK-TOK" is an internal colloquial alias only — not for public branding (trademark clearance pending, gate G6).*
 
-| Here (this node) | External repository `teknia-token` |
-| --- | --- |
-| `TT-PROTOCOL.md` (Stage-0 economic-operational protocol) | Smart contracts |
-| `TT-LEDGER/pools.yaml`, `TT-LEDGER/emissions.yaml` (authored SSOT) | Deploy scripts |
-| Deterministic validation, balance and Merkle-anchoring tools | On-chain artifacts |
+## What lives here — and what lives in TEKNIA-TOKENS
 
-- External repository link: `TBD` (placeholder — `teknia-token`)
-- `pinned-commit:` TBD
+| Here (authoritative) | External repo [`TEKNIA-TOKENS`](https://github.com/AmedeoPelliccia/TEKNIA-TOKENS) |
+|---|---|
+| TT-PROTOCOL (quotation, pools, settlement rules) | Smart contracts (`TekniaTokenV0`, `TekniaLedgerAnchor`) |
+| Ledger SSOT (`pools.yaml`, `emissions.yaml`) | Foundry tests and testnet deployment |
+| Validation, derivation and anchoring tools | Gated release structure (`releases/v0.1 … v1.0`) |
+| Anchor evidence log (`anchors.log`) | Audits (when gate G5 opens) |
 
-Smart contracts, deploy scripts and anything on-chain live in the separate
-`teknia-token` repository and must not be created here.
+`pinned-commit: TBD` — updated at every release that cross-references the two repositories.
 
-## 3. Stage table
+The coupling is **cryptographic, not filesystem**: each row of `anchors.log` (`utc, merkle_root, emissions_sha256, ledger_ref`) is directly replayable on-chain via `TekniaLedgerAnchor.anchor(merkleRoot, ledgerSha256, ledgerRef)`.
 
-| Stage | Scope | Location | Gate(s) |
-| --- | --- | --- | --- |
-| Stage 0 | Protocol (`TT-PROTOCOL.md`) | This node | — |
-| Stage 1 | Contribution ledger (SSOT YAML + CI validation + derived balances) | This node | — |
-| Stage 2 | Testnet artifact | External repo `teknia-token` | G1–G5 |
-| Stage 3 | Gated public release | External repo `teknia-token` | G1–G6 |
+## Node map
 
-Gates:
+```text
+01-01-02-01-01_Teknia-Token/
+├── README.md                                   this file
+├── TT-PROTOCOL.md                              Stage-0 normative protocol
+├── GQAOA-QFIN-TT-REL-001_...Roadmap.md         staged release roadmap and gates
+├── TT-LEDGER/
+│   ├── pools.yaml                              authored SSOT — tender pools
+│   ├── emissions.yaml                          authored SSOT — settled emissions
+│   ├── anchors.log                             APPEND-ONLY evidence log (never edited,
+│   │                                           never regenerated — outside derived/)
+│   └── derived/                                GENERATED views — never hand-edited
+│       ├── balances.yaml
+│       └── balances.md
+└── tools/
+    ├── validate_ledger.py                      CI gate — schema, budgets, identities
+    ├── build_balances.py                       derives balances (+ --check freshness)
+    ├── build_merkle_root.py                    Merkle root + --anchor evidence rows
+    └── tests/                                  pytest suite (16 tests)
+```
 
-- **G1** — legal entity
-- **G2** — MiCA classification memo
-- **G3** — tax/labor framing
-- **G4** — AML posture
-- **G5** — audit
-- **G6** — trademark clearance
+## Stages and gates
 
-## 4. How an emission happens
+| Stage | Where | Content |
+|---|---|---|
+| **0 — Protocol** | this node | TT-PROTOCOL frozen: ex-ante quotation, pools, reviewer separation |
+| **1 — Ledger** | this node | Non-transferable ledger units; CI-validated emissions; anchoring |
+| **2 — Testnet artifact** | TEKNIA-TOKENS | Contracts + tests deployed on testnet; mirror mints replay the ledger |
+| **3 — Public release** | TEKNIA-TOKENS | **GATED** — opens only when G1–G6 are all closed |
 
-1. An approved `[WORK PACKAGE]` issue exists (see `CONTRIBUTING.md` §work packages).
-2. The work package reaches the `ACCEPTED` lifecycle event after independent review.
-3. A row is appended to `TT-LEDGER/emissions.yaml` via pull request, carrying the
-   evidence hash (sha256 of the commit or artifact).
-4. CI validation (`tools/validate_ledger.py --strict`) verifies the row against the
-   authored pools SSOT.
-5. Derived balances are regenerated by `tools/build_balances.py` under
-   `TT-LEDGER/derived/` (generated, never hand-edited).
+Gates: **G1** issuing legal entity with counsel · **G2** MiCA classification memo and authority touchpoints · **G3** tax/labor framing of contributor settlement · **G4** AML/KYC posture if transferable · **G5** independent smart-contract audit · **G6** trademark clearance of the public name.
 
-## 5. Pointers
+## How an emission happens
 
-- Protocol: [`TT-PROTOCOL.md`](./TT-PROTOCOL.md)
-- Work-package process: `CONTRIBUTING.md` §work packages (repository root)
+1. The contributor is **registered** in `TEAM-REGISTER.csv` (enrolment per `CONTRIBUTING.md` §2.1) — registration is a settlement precondition, enforced by CI.
+2. A `[WORK PACKAGE]` issue is approved; its pool is **reserved ex ante** with the published quotation `Q = H × C × S × R` (irrevocable once assigned).
+3. The work is delivered with evidence; acceptance review is remunerated from a **separate reviewer pool** (anti-capture).
+4. The issue reaches **`ACCEPTED`**.
+5. A pull request appends one row to `emissions.yaml`: `id, memberId, poolId, workPackage, amount, event, evidenceHash (sha256), date`.
+6. CI validates (`validate_ledger.py --strict`) and checks derived freshness (`build_balances.py --check`).
+7. Balances regenerate under `derived/`; periodically `build_merkle_root.py --anchor` appends an evidence row to `anchors.log` for on-chain replay.
 
----
-No-AAA compliant.
+## Tooling contract
+
+All tools share one contract: `--root` is **this node directory** (CI passes `--root "$TT_NODE"`); `main(argv)` returns an int; all findings are collected, never early-exited.
+
+```text
+validate_ledger.py  [--root .] [--strict] [--register PATH]
+    exit 1 on violations; --strict promotes warnings to violations
+    (including a missing team register — no silent green checks)
+
+build_balances.py   [--root .] [--check | --dry-run]
+    regenerates derived/ deterministically; commit regenerated derived
+    files together with ledger changes or --check fails in CI
+
+build_merkle_root.py [--root .] [--anchor] [--ref REF]
+    prints the canonical Merkle root (EMPTY_ROOT sentinel on empty ledger);
+    --anchor appends to anchors.log with duplicate guard, UTC timestamp
+    and ledger_ref (defaults to the short git commit)
+```
+
+Run the suite: `python3 -m pytest tools/tests` — validator messages are contractual API: they change only together with the tests.
+
+## Governance pointers
+
+Normative protocol: [`TT-PROTOCOL.md`](TT-PROTOCOL.md) · Roadmap and gates: [`GQAOA-QFIN-TT-REL-001`](GQAOA-QFIN-TT-REL-001_Teknia-Token-Release-Roadmap.md) · Work-package process: repository [`CONTRIBUTING.md`](../../../../../CONTRIBUTING.md) §1–3 · Founder/genesis work follows the same process from the GENESIS pool — no undocumented allocations.
