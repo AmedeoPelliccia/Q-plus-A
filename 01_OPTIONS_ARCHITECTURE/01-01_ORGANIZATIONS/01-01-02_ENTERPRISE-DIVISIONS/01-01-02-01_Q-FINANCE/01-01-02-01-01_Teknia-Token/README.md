@@ -88,3 +88,15 @@ Run the suite: `python3 -m pytest tools/tests` — validator messages are contra
 ## Governance pointers
 
 Normative protocol: [`TT-PROTOCOL.md`](TT-PROTOCOL.md) · Roadmap and gates: [`GQAOA-QFIN-TT-REL-001`](GQAOA-QFIN-TT-REL-001_Teknia-Token-Release-Roadmap.md) · Work-package process: repository [`CONTRIBUTING.md`](../../../../../CONTRIBUTING.md) §1–3 · Founder/genesis work follows the same process from the GENESIS pool — no undocumented allocations.
+
+## Instance governance roles (Stage 1)
+
+| Role | Holder |
+|---|---|
+| Architecture authority / governance | AmedeoPelliccia |
+| Emitter (ledger) | AmedeoPelliccia |
+| Anchorer | AmedeoPelliccia |
+| Independent reviewer | OPEN — see the TT-REVIEW-GENESIS work package |
+
+Single-operator bootstrap is declared explicitly; the reviewer seat is an open
+tender, not a self-review.

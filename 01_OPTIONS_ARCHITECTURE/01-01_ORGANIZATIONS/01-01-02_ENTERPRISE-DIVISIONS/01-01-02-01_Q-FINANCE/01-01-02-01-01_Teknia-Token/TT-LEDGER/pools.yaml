@@ -4,19 +4,19 @@
 pools:
   - id: "POOL-GENESIS-ARCHITECTURE"
     title: "Retroactive founding architecture work"
-    amount: 0            # TBD by governance before first genesis WP
+    amount: 500
     reserved: true
-    status: "PROPOSED"   # PROPOSED | OPEN | CLOSED
+    status: "OPEN"
     reviewerPoolId: "POOL-REVIEW-GENESIS"
   - id: "POOL-REVIEW-GENESIS"
     title: "Independent review of genesis work packages"
-    amount: 0
+    amount: 100
     reserved: true
-    status: "PROPOSED"
+    status: "OPEN"
     reviewerPoolId: null
   - id: "POOL-HT-EWTW-531004-CAD"
     title: "Hack-Tender: radome attach structure CAD (EWTW-531004)"
     amount: 0
     reserved: true
     status: "PROPOSED"
-    reviewerPoolId: null   # to assign before OPEN
+    reviewerPoolId: null
