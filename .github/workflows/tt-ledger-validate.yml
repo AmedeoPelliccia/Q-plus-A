@@ -1,0 +1,43 @@
+name: tt-ledger-validate
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/01-01-02-01-01_Teknia-Token/**"
+      - "01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-REGISTER.csv"
+      - ".github/workflows/tt-ledger-validate.yml"
+  pull_request:
+    paths:
+      - "**/01-01-02-01-01_Teknia-Token/**"
+      - "01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-REGISTER.csv"
+      - ".github/workflows/tt-ledger-validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tt-ledger-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TT_NODE: 01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02_ENTERPRISE-DIVISIONS/01-01-02-01_Q-FINANCE/01-01-02-01-01_Teknia-Token
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install "pyyaml==6.*" "pytest==8.*"
+      - name: Ensure team register present            # guard: no silent warn-downgrade
+        run: test -f 01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-REGISTER.csv
+      - name: Validate ledger (strict)
+        run: python3 "$TT_NODE/tools/validate_ledger.py" --strict --root .
+      - name: Check derived balances are current
+        run: python3 "$TT_NODE/tools/build_balances.py" --check --root .
+      - name: Run tool tests
+        run: pytest "$TT_NODE/tools/tests"
