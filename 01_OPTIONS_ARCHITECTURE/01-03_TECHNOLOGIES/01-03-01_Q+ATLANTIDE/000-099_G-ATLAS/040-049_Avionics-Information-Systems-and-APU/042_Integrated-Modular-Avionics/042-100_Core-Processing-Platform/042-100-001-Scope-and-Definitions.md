@@ -1,6 +1,6 @@
 # 042-100-001 — Scope and Definitions
 
-**Node:** 042-100_Core-Processing-Platform · **Applicability:** eWTW+hBWB
+**Node:** 042-100_Core-Processing-Platform 
 
 - Cabinet: the installed enclosure providing slots, backplane, power distribution and cooling paths for processing modules.
 - Core Processing Module (CPM): a replaceable computing unit providing processing, memory and network end-system resources to hosted partitions.
