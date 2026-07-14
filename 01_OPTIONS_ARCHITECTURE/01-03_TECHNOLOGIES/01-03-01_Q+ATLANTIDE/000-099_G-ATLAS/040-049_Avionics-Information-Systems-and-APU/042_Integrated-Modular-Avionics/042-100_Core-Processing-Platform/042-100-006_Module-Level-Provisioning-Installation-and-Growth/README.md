@@ -1,6 +1,6 @@
 # 042-100-006 — Module Level Provisioning Installation and Growth
 
-**Node:** 042-100_Core-Processing-Platform 
+**Node:** 042-100_Core-Processing-Platform · **Subject:** 006
 
 - Module provisioning: slot assignment, keying/coding against wrong insertion, and configuration identification per installed module.
 - Data loading and configuration reporting interface with 045; the platform provides the loadable-item identification discipline.
