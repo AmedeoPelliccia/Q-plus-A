@@ -1,4 +1,5 @@
 # 030-900-010 — Electrothermal Anti-Ice Power Architecture
 
-**Node:** `030-900` Bleedless / Energy-Integrated Ice Protection · **Subject:** `030-900-010`
-**ATA:** — · **Layer:** G-subject · **Owner:** Q-AIR / Q-GREENTECH
+**Node:** 030-900_Bleedless-Energy-Integrated-Ice-Protection · **Subject:** 010
+
+- Electrothermal anti-ice power architecture that replaces engine bleed; powered from the HVDC band (REF 024-900).
