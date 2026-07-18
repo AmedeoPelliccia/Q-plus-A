@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-007
+document_id: S-ATLAS-000-000-007
 title: "000-000-007 — Document Control and Configuration"
 node: 000-000
 item: "007"
@@ -44,7 +44,7 @@ ief_anchor:
 
 ## 1. Purpose
 
-This item defines how G-ATLAS content (nodes, items, and indices) is version-controlled, change-controlled, and configuration-managed under the **SSOT+PUB** doctrine.
+This item defines how S-ATLAS content (nodes, items, and indices) is version-controlled, change-controlled, and configuration-managed under the **SSOT+PUB** doctrine.
 
 ---
 
@@ -52,7 +52,7 @@ This item defines how G-ATLAS content (nodes, items, and indices) is version-con
 
 | Layer | Name | Who controls it | What it contains |
 |---|---|---|---|
-| **SSOT** | Single Source of Truth | Q-DATAGOV | All G-ATLAS standard nodes and items (this repository) |
+| **SSOT** | Single Source of Truth | Q-DATAGOV | All S-ATLAS standard nodes and items (this repository) |
 | **PUB** | Programme publication | Programme (e.g. eWTW, hBWB) | S1000D data modules derived from SSOT via impact study |
 
 Only Q-DATAGOV may modify SSOT content. A programme may never modify an SSOT file; it creates its own PUB (CSDB) entries.
@@ -166,7 +166,7 @@ flowchart TD
 
 | Term / Acronym | Definition |
 |---|---|
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository. |
 | **PUB** | Programme publication — S1000D CSDB derived from SSOT via impact study. |
 | **SSOT+PUB** | Two-layer architecture: SSOT standard + PUB programme instances. |
 | **CR** | Change Request — formal document raising a proposed modification to a baselined item. |
@@ -176,10 +176,10 @@ flowchart TD
 | **LC-A** | First Q+ATLANTIDE lifecycle stage: Conceptual Design. |
 | **LC-letter stage** | Q+ATLANTIDE lifecycle maturity phase (LC-A … LC-N). |
 | **REV-A_RELEASED** | Release gate closing LC-A stage. |
-| **Q-DATAGOV** | Q-Division responsible for G-ATLAS content governance. |
+| **Q-DATAGOV** | Q-Division responsible for S-ATLAS content governance. |
 | **CSDB** | Common Source DataBase — S1000D document store. |
 | **DMC** | Data Module Code — S1000D identifier for a programme data module. |
-| **Impact study** | Documented programme process mapping G-ATLAS nodes to programme DMCs. |
+| **Impact study** | Documented programme process mapping S-ATLAS nodes to programme DMCs. |
 | **major / minor / patch** | Semantic versioning components (structural / content / editorial). |
 
 ---
@@ -196,4 +196,4 @@ flowchart TD
 
 ---
 
-*Document footprint: G-ATLAS-000-000-007 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-007 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

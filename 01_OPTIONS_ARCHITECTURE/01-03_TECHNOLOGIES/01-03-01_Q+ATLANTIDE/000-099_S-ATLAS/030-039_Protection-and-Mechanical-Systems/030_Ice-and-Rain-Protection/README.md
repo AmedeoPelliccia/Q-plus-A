@@ -1,7 +1,7 @@
 # 030 — Ice and Rain Protection
 
 **Chapter:** `030` ⇄ ATA **30**
-**Master range:** `030-039_Protection-and-Mechanical-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `030-039_Protection-and-Mechanical-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `030-100` ⚡, `030-110` ⚡, `030-200` ⚡, `030-210` ⚡, `030-900`) · **Status:** agnostic standard (SSOT)
 
 The function — keep surfaces and probes ice-free — carries; the *source* of two systems diverges. Wing thermal anti-icing (`030-100`) and propulsion-module inlet anti-icing (`030-200`) are conventionally bleed-air; with no engine bleed they become ⚡ electrothermal, powered from the HVDC bus, and all bleed hardware drops to footprint. Pitot/static/AOA heating, windshield/door heating, water-line freeze protection, and ice detection are already electric and carry (STD). Thermal integration / bleedless content is captured by the green delta `030-900`. See the master-range [`README.md`](../README.md) for the full node register, doctrine, and heritage footprint.

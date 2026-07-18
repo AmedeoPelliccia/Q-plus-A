@@ -1,6 +1,6 @@
 # 020-900 — High-Energy / Green Standard Practices
 
-**Node:** `020-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `020-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `020_Standard-Maintenance-Practices` · **Layer:** STD-G
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH
 

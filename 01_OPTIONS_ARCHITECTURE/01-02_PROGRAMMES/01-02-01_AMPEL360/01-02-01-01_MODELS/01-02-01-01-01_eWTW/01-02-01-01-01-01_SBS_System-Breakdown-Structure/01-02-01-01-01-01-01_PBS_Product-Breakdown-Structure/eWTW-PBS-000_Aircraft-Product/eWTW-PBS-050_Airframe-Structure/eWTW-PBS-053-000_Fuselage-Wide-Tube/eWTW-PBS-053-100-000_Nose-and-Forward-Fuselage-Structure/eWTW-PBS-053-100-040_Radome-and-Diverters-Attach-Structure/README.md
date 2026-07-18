@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-040 - Radome and Diverters Attach Structure
 
-CSN `531004` - grammar `EWTW-531004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-100-040`.
+CSN `531004` - grammar `EWTW-531004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-040`.
 
 ## Items
 

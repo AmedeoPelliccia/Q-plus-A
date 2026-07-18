@@ -1,6 +1,6 @@
 # 031-900 — Energy-System Indicating and Recording
 
-**Node:** `031-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `031-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `031_Indicating-and-Recording-Systems` · **Layer:** STD-G
 **Owner:** Q-AIR · **Data owner:** Q-DATAGOV · **Green overlay:** Q-GREENTECH
 

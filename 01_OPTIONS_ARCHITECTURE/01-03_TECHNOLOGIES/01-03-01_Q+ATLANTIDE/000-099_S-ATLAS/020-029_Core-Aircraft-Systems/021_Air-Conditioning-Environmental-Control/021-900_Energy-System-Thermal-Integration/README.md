@@ -1,6 +1,6 @@
 # 021-900 — Energy-System Thermal Integration
 
-**Node:** `021-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `021-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `021_Air-Conditioning-Environmental-Control` · **Layer:** STD-G
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH
 

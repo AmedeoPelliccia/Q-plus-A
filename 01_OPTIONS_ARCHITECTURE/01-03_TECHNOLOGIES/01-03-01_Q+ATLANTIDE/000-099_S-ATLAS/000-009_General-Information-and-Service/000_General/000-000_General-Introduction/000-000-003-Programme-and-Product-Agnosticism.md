@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-003
+document_id: S-ATLAS-000-000-003
 title: "000-000-003 — Programme and Product Agnosticism"
 node: 000-000
 item: "003"
@@ -35,7 +35,7 @@ date: "2026-06-05"
 
 ## 1. The Neutral-Standard Principle
 
-G-ATLAS is **agnostic by design**. No node, item, or definition in the standard assumes a specific energy carrier, airframe geometry, propulsion architecture, or programme identity. Every slot is defined in terms of **function, limit, zone, or interval** — not in terms of a specific technology realising it.
+S-ATLAS is **agnostic by design**. No node, item, or definition in the standard assumes a specific energy carrier, airframe geometry, propulsion architecture, or programme identity. Every slot is defined in terms of **function, limit, zone, or interval** — not in terms of a specific technology realising it.
 
 This principle is constitutional. It is not a preference that a programme may override.
 
@@ -45,9 +45,9 @@ This principle is constitutional. It is not a preference that a programme may ov
 
 ### 2.1 Function Slots, Not Technology Slots
 
-A G-ATLAS node defines *what* a function is and *what* must be documented about it. It does not define *how* the function is realised. Examples:
+A S-ATLAS node defines *what* a function is and *what* must be documented about it. It does not define *how* the function is realised. Examples:
 
-| G-ATLAS slot (agnostic) | eWTW binding | hBWB binding |
+| S-ATLAS slot (agnostic) | eWTW binding | hBWB binding |
 |---|---|---|
 | `000-900` — Sustainability, lifecycle & DPP framing | Battery-electric DPP; LC-letter lifecycle accounting | Hydrogen DPP; well-to-wake H₂ lifecycle |
 | `004-900` — Energy-carrier & storage airworthiness limits | Battery + power-electronics limits (CS-23/25 + SC) | Cryo-tank + fuel-cell stack limits (novel SC) |
@@ -55,19 +55,19 @@ A G-ATLAS node defines *what* a function is and *what* must be documented about 
 
 ### 2.2 Programme Binding via Impact Study
 
-A programme **binds** each G-ATLAS slot to its real technology through an **impact study**. The impact study is stored in the programme's `01-02-XX-04_IMPACT-STUDIES/` folder. It maps:
+A programme **binds** each S-ATLAS slot to its real technology through an **impact study**. The impact study is stored in the programme's `01-02-XX-04_IMPACT-STUDIES/` folder. It maps:
 
 ```text
-G-ATLAS node/item  ──(impact study)──►  Programme DMC
+S-ATLAS node/item  ──(impact study)──►  Programme DMC
                                         Programme-specific engineering value
                                         Applicable certification basis
 ```
 
-The G-ATLAS SSOT does not change when a binding is made. Only the programme's PUB (CSDB) changes.
+The S-ATLAS SSOT does not change when a binding is made. Only the programme's PUB (CSDB) changes.
 
 ### 2.3 Delta Nodes for Novel Functions
 
-Where ATA has no equivalent function slot, G-ATLAS defines an **agnostic delta node** (`00X-900`). These nodes are explicitly labelled `[G]` (green-architecture delta). They are part of the standard; programmes bind them exactly as they bind any other node.
+Where ATA has no equivalent function slot, S-ATLAS defines an **agnostic delta node** (`00X-900`). These nodes are explicitly labelled `[G]` (green-architecture delta). They are part of the standard; programmes bind them exactly as they bind any other node.
 
 ---
 
@@ -103,7 +103,7 @@ The standard is identical for all three. Only the bindings differ.
 ```mermaid
 graph LR
     subgraph "SSOT — Agnostic Standard"
-        NODE["G-ATLAS Node/Item<br/>(function slot — no technology assumed)"]
+        NODE["S-ATLAS Node/Item<br/>(function slot — no technology assumed)"]
     end
 
     subgraph "Impact Studies (per programme)"
@@ -138,10 +138,10 @@ graph LR
 | Term / Acronym | Definition |
 |---|---|
 | **Agnostic** | No programme- or product-specific assumption; valid for any energy carrier and geometry. |
-| **Function slot** | A G-ATLAS node/item defined in terms of function, limit, zone, or interval — not technology. |
-| **Delta node** | G-ATLAS node with suffix `-900`; covers novel functions with no ATA equivalent; tagged `[G]`. |
-| **Impact study** | Documented process mapping G-ATLAS nodes to programme-specific DMCs and engineering values. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository; not modified by programmes. |
+| **Function slot** | A S-ATLAS node/item defined in terms of function, limit, zone, or interval — not technology. |
+| **Delta node** | S-ATLAS node with suffix `-900`; covers novel functions with no ATA equivalent; tagged `[G]`. |
+| **Impact study** | Documented process mapping S-ATLAS nodes to programme-specific DMCs and engineering values. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository; not modified by programmes. |
 | **PUB** | Programme publication — S1000D CSDB instance reflecting programme-specific bindings. |
 | **CSDB** | Common Source DataBase — S1000D document store for programme data modules. |
 | **DMC** | Data Module Code — S1000D identifier for a programme data module. |
@@ -161,11 +161,11 @@ graph LR
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
 | R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional basis for the agnosticism principle |
-| R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Structure standard G-ATLAS mirrors with function-slot agnosticism |
+| R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Structure standard S-ATLAS mirrors with function-slot agnosticism |
 | R3 | EASA CS-25 | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Airworthiness basis for large-aircraft programmes (example binding) |
 | R4 | Document Control item 007 | [`000-000-007-Document-Control-and-Configuration.md`](000-000-007-Document-Control-and-Configuration.md) | Change request process for agnosticism-violation defects |
 | R5 | Impact Studies folder (eWTW example) | [`01-02-01-04_IMPACT-STUDIES/`](../../../../../../01-02-01-04_IMPACT-STUDIES/) | Example of a programme binding store |
 
 ---
 
-*Document footprint: G-ATLAS-000-000-003 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-003 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

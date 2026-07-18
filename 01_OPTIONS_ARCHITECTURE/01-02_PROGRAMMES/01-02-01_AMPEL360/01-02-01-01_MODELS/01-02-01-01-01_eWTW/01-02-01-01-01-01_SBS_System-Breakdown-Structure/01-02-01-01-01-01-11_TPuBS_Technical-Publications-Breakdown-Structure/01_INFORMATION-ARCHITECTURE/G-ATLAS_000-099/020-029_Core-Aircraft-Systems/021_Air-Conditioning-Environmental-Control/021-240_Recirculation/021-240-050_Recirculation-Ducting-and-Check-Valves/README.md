@@ -34,7 +34,7 @@ TPuBS container for the **Recirculation Ducting and Check Valves** subject of ch
 
 ## DMC allocation
 
-SNS (`systemCode 21 · subSystem 2 · subSubSystem 4 · assy 05`) is **derived** from the G-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
+SNS (`systemCode 21 · subSystem 2 · subSubSystem 4 · assy 05`) is **derived** from the S-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
 
 | Short handle | Full DMC (provisional) | Info | Type |
 |---|---|---|---|

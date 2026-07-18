@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-008
+document_id: S-ATLAS-000-000-008
 title: "000-000-008 — Traceability and Evidence Index"
 node: 000-000
 item: "008"
@@ -49,7 +49,7 @@ This item is the **traceability and evidence index** for node `000-000`. It reco
 
 ## 2. Traceability Structure
 
-Each G-ATLAS item has a four-link traceability chain:
+Each S-ATLAS item has a four-link traceability chain:
 
 ```text
 Item (SSOT)
@@ -109,7 +109,7 @@ Anchors marked `<sha256: TBS>` indicate the item is approved in content but awai
 
 | Upstream artefact | Location | Relevance |
 |---|---|---|
-| Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for G-ATLAS |
+| Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for S-ATLAS |
 | SSOT+PUB doctrine | [`000-000-007`](000-000-007-Document-Control-and-Configuration.md) | Change-control and publication rules |
 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | Evidence anchoring scheme |
 | ATA 100 / iSpec 2200 | [`01-07-02-02_ATA-iSpec-2200/`](../../../../../../01-07-02-02_ATA-iSpec-2200/) | Numbering and structure reference |
@@ -121,7 +121,7 @@ Anchors marked `<sha256: TBS>` indicate the item is approved in content but awai
 
 ```mermaid
 graph TD
-    ITEM["🗒️ G-ATLAS Item (SSOT)<br/>e.g. 000-000-001-Scope-and-Definitions.md"]
+    ITEM["🗒️ S-ATLAS Item (SSOT)<br/>e.g. 000-000-001-Scope-and-Definitions.md"]
     MDC["⚖️ Parent Requirement<br/>(Model Digital Constitution)"]
     STD["📖 Applicable Standard<br/>(ATA chapter / CS-25 / S1000D)"]
     IEF["🔐 IEF Evidence Anchor<br/>SHA-256 hash at baseline"]
@@ -148,8 +148,8 @@ graph TD
 | **DMC** | Data Module Code — S1000D identifier for a programme data module. |
 | **IEF** | Integrity Evidence Framework — evidence anchoring scheme using SHA-256 hashes. |
 | **SHA-256** | Cryptographic hash algorithm; creates a tamper-evident content fingerprint. |
-| **MDC** | Model Digital Constitution — constitutional parent of all G-ATLAS governance. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **MDC** | Model Digital Constitution — constitutional parent of all S-ATLAS governance. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository. |
 | **PUB** | Programme publication — S1000D CSDB derived from SSOT via impact study. |
 | **CSDB** | Common Source DataBase — S1000D document store for programme data modules. |
 | **SNS** | System/Sub-system/Subject — S1000D code component. |
@@ -157,8 +157,8 @@ graph TD
 | **TBS** | To Be Stamped — indicator that a SHA-256 anchor is pending formal baseline ceremony. |
 | **Traceability chain** | Four-link structure: Item → parent requirement → applicable standard → evidence → DMC. |
 | **Baseline** | Formally approved; under change control; SHA-256 anchor stamped. |
-| **Q-DATAGOV** | Q-Division responsible for G-ATLAS content governance and IEF stamping. |
-| **Impact study** | Documented programme process mapping G-ATLAS nodes to programme DMCs. |
+| **Q-DATAGOV** | Q-Division responsible for S-ATLAS content governance and IEF stamping. |
+| **Impact study** | Documented programme process mapping S-ATLAS nodes to programme DMCs. |
 | **ATA** | Air Transport Association — publisher of ATA 100 / iSpec 2200. |
 
 ---
@@ -175,4 +175,4 @@ graph TD
 
 ---
 
-*Document footprint: G-ATLAS-000-000-008 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-008 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

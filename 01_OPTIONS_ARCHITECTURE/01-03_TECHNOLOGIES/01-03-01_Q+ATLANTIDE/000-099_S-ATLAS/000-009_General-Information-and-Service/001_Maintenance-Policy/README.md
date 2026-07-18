@@ -1,7 +1,7 @@
 # 001 — Maintenance Policy
 
 **Chapter:** `001` ⇄ ATA **01**
-**Master range:** `000-009_General-Information-and-Service` · **Band:** `000-099_G-ATLAS`
+**Master range:** `000-009_General-Information-and-Service` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-DATAGOV · **Status:** agnostic standard (SSOT)
 
 Physical chapter folder wrapping the `001-Y00` section-nodes. `001-000` carries the chapter-general content; `001-900` is the agnostic green-architecture delta (Q-GREENTECH overlay). See the master-range [`README.md`](../README.md) for the full node register and conventions.

@@ -34,7 +34,7 @@ TPuBS container for the **Flight Deck Supply Ducting** subject of chapter `021-2
 
 ## DMC allocation
 
-SNS (`systemCode 21 · subSystem 2 · subSubSystem 1 · assy 01`) is **derived** from the G-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
+SNS (`systemCode 21 · subSystem 2 · subSubSystem 1 · assy 01`) is **derived** from the S-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
 
 | Short handle | Full DMC (provisional) | Info | Type |
 |---|---|---|---|

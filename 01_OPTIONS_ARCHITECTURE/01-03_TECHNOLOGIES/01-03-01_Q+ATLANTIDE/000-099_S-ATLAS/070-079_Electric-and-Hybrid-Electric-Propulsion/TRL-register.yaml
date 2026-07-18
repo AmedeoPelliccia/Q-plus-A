@@ -3,7 +3,7 @@
 trl_register:
   architecture_code: "ATLAS"
   master_range: "000-099"
-  code_range: "070-079_Eco-Tech-and-Hybrid-Electric-Propulsion"
+  code_range: "070-079_Electric-and-Hybrid-Electric-Propulsion"
   architecture_name: "Aircraft Top Level Architecture Schema/System"
   status: "draft"
   assessments: []

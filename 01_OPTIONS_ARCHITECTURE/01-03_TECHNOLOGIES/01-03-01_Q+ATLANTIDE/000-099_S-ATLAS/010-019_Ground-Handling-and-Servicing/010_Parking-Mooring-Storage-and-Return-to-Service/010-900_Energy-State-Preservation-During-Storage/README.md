@@ -1,6 +1,6 @@
 # 010-900 — Energy-State Preservation During Storage
 
-**Node:** `010-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `010-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `010_Parking-Mooring-Storage-and-Return-to-Service` · **Layer:** STD-G
 **Owner:** Q-GROUND · **Green overlay:** Q-GREENTECH
 

@@ -17,7 +17,7 @@ trl_master_range_register:
     - architecture_code: "ATLAS"
       master_range: "000-099"
       architecture_name: "Aircraft Top Level Architecture Schema/System"
-      register_path: "../000-099_G-ATLAS/"
+      register_path: "../000-099_S-ATLAS/"
     - architecture_code: "STA"
       master_range: "100-199"
       architecture_name: "Space Technology Architecture"

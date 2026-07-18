@@ -1,11 +1,11 @@
 # 000–009 — General Information and Service
 
-**G-ATLAS Master Range Index / Technology Breakdown Tree**
+**S-ATLAS Master Range Index / Technology Breakdown Tree**
 
 > **Canonical path**
-> `01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/000-009_General-Information-and-Service/`
+> `01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/000-009_General-Information-and-Service/`
 >
-> **Band:** `000–099` — **G-ATLAS** (Green Aircraft Top-Level Architecture Schema)
+> **Band:** `000–099` — **S-ATLAS** (Sustainable Aviation Top-Level Architecture Schema)
 > **Master Range:** `000–009` — General Information and Service *(first of ten master ranges in the band)*
 > **Standards mirror:** ATA 100 / iSpec 2200, chapters **00–09**
 > **Status:** programme- and product-**agnostic** standard
@@ -16,16 +16,16 @@
 
 ## 1. Agnosticism Principle *(the governing rule of this standard)*
 
-G-ATLAS names **functions, limits, zones, and intervals** in architecture-neutral terms. It never assumes a specific energy carrier or airframe geometry. A **programme** then **binds** each generic slot to its real technology through an impact study.
+S-ATLAS names **functions, limits, zones, and intervals** in architecture-neutral terms. It never assumes a specific energy carrier or airframe geometry. A **programme** then **binds** each generic slot to its real technology through an impact study.
 
 ```text
-G-ATLAS (standard)              Programme (instantiation)
+S-ATLAS (standard)              Programme (instantiation)
 "energy-carrier storage   ─────► eWTW  : traction-battery packs + power electronics
  airworthiness limits"          hBWB  : cryogenic LH₂ tank + fuel-cell stack
                                 other : NH₃, SAF, hybrid, … (per architecture)
 ```
 
-The standard **must fit all of them unchanged**. Where ATA has no equivalent (energy storage, novel geometry, replenishment, DPP), G-ATLAS adds an **agnostic delta node** at `00X-900` — see §6.
+The standard **must fit all of them unchanged**. Where ATA has no equivalent (energy storage, novel geometry, replenishment, DPP), S-ATLAS adds an **agnostic delta node** at `00X-900` — see §6.
 
 **No-AAA Rule applies.** `AAA` is not a valid node, section, item, or designation.
 
@@ -179,7 +179,7 @@ A node's **`-000`** code section is its chapter-general / overview node (ATA `0X
 | `009-200` | 09-20 | Taxiing Procedures & Limits | Q-GROUND | |
 | `009-900` | — ‡ | Electrified & Energy-Carrier Ground-Movement Delta | Q-GREENTECH | ● |
 
-> † **Chapters 00–03**: ATA 100 reserves these for the operator and does not standardize their sections; the `0X-Y0` codes here are **G-ATLAS-defined** within that band.
+> † **Chapters 00–03**: ATA 100 reserves these for the operator and does not standardize their sections; the `0X-Y0` codes here are **S-ATLAS-defined** within that band.
 > ‡ **`00X-900`**: agnostic **green-architecture delta** — no ATA equivalent; bound per programme (§6).
 > All `-900` nodes carry the **Q-GREENTECH** overlay in addition to the chapter owner.
 
@@ -243,7 +243,7 @@ The `000-009` standard is **identical** for all three; only the bindings differ.
 `000-009` is the **standard (SSOT)**. A programme consumes it via an impact study mapping applicable nodes/items into its **CSDB (PUB)**.
 
 ```text
-G-ATLAS node/item            ──(impact study)──►   Programme DMC
+S-ATLAS node/item            ──(impact study)──►   Programme DMC
 00X-Y00/<node>-<item>                              DMC-<PROGRAMME>-<node>-<item>
 ```
 
@@ -258,7 +258,7 @@ G-ATLAS node/item            ──(impact study)──►   Programme DMC
 
 | Concern | Assignment |
 |---|---|
-| Band | `000–099` G-ATLAS |
+| Band | `000–099` S-ATLAS |
 | Master range | `000–009` General Information and Service |
 | DEGF | Inherits **DEGF v1.0** eleven mandatory inheritance traits from the band |
 | Lifecycle | Governed across **LC01–LC14**; ALS (`004-x`) and Time Limits (`005-x`) are gate-critical |
@@ -286,8 +286,8 @@ G-ATLAS node/item            ──(impact study)──►   Programme DMC
 ```yaml
 Last.MarkedDown:
   architecture: Q+ATLANTIDE1000
-  band: 000-099_G-ATLAS
-  band_meaning: Green Aircraft Top-Level Architecture Schema
+  band: 000-099_S-ATLAS
+  band_meaning: Sustainable Aviation Top-Level Architecture Schema
   master_range: 000-009_General-Information-and-Service
   standards_mirror: ATA 100 / iSpec 2200 chapters 00-09
   node_model: chapter folder (00X) -> node = code section (00X-Y00) ⇄ ATA chapter-section (0X-Y0)

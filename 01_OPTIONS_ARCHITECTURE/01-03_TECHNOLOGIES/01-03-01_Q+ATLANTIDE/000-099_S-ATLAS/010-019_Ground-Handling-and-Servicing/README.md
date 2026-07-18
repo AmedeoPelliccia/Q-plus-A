@@ -1,12 +1,12 @@
 ---
 node: 010-019
-title: Ground Handling and Servicing — G-ATLAS Green-Native Breakdown
-band: 000-099_G-ATLAS
+title: Ground Handling and Servicing — S-ATLAS Green-Native Breakdown
+band: 000-099_S-ATLAS
 master_range: 010-019
 view: green-native (canonical)
 heritage_crosswalk: "010-019_ATA-Aligned-Breakdown.md (conventional-primary, v2.0)"
 principle: "Divergence nodes carry the green energy-architecture binding; the conventional ATA content is demoted to the heritage footprint (footnotes)."
-numbering_map: "ATA CC-SS-UU  →  G-ATLAS 0CC-SS0-UU0"
+numbering_map: "ATA CC-SS-UU  →  S-ATLAS 0CC-SS0-UU0"
 owner: Q-GROUND
 green_overlay: Q-GREENTECH
 governance: [DEGF-v1.0, LC-A..LC-N, No-AAA, SSOT+PUB]
@@ -14,9 +14,9 @@ status: baseline
 version: "3.0"
 ---
 
-# 010-019 — Ground Handling and Servicing · G-ATLAS Green-Native Breakdown
+# 010-019 — Ground Handling and Servicing · S-ATLAS Green-Native Breakdown
 
-The canonical G-ATLAS view. Where a conventional aircraft would service kerosene, engine oil, and accessory lubricants, this schema services the **energy carrier**, **propulsion-module lubricants/coolant**, and **thermal-management fluids** instead. The conventional binding is preserved as a **heritage footprint** in the footnotes, cross-walked to the Embraer ATA reference — never lost, but no longer primary.
+The canonical S-ATLAS view. Where a conventional aircraft would service kerosene, engine oil, and accessory lubricants, this schema services the **energy carrier**, **propulsion-module lubricants/coolant**, and **thermal-management fluids** instead. The conventional binding is preserved as a **heritage footprint** in the footnotes, cross-walked to the Embraer ATA reference — never lost, but no longer primary.
 
 ---
 
@@ -63,7 +63,7 @@ Substituted (⚡): `011-250-010`, `011-260-010`, `012-110`, `012-130`. Promoted 
 ## 2. Numbering Map
 
 ```text
-ATA   CC - SS - UU      →   G-ATLAS  0CC - SS0 - UU0
+ATA   CC - SS - UU      →   S-ATLAS  0CC - SS0 - UU0
 chapter left-pad · section ×10 · unit/subject ×10 · 900-lane = green
 ```
 
@@ -73,7 +73,7 @@ chapter left-pad · section ×10 · unit/subject ×10 · 900-lane = green
 
 Energy-neutral throughout; the only green addition is the storage energy-state delta.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `010-000` | 10-00 | General | STD |
 | `010-100` | 10-10 | Parking and Storage | STD |
@@ -93,7 +93,7 @@ Energy-neutral throughout; the only green addition is the storage energy-state d
 
 Placard *locations* are unchanged; the energy-system placards (⚡) are substituted, and the energy-carrier hazard delta is first-class.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `011-000` | 11-00 | General | STD |
 | `011-100` | 11-10 | Exterior Colour Schemes and Markings | STD |
@@ -128,7 +128,7 @@ Placard *locations* are unchanged; the energy-system placards (⚡) are substitu
 
 The heart of the substitution. `012-110` (energy-carrier servicing) replaces fuel servicing; `012-130` (lubricant &amp; thermal-fluid) replaces oil servicing; `012-900` carries novel ground-energy operations with no ATA equivalent.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `012-000` | 12-00 | General | STD |
 | `012-100` | 12-10 | Replenishing | STD |
@@ -196,7 +196,7 @@ Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA** a
 
 The conventional kerosene binding the green rows replace — retained for provenance and cross-walk, cited to the reference.[^ref]
 
-[^ref]: Embraer, *ATA Breakdown — EMB 170/175/190/195 and Lineage 1000*, chapters 10–12 (uploaded reference). Conventional bindings below are transcribed from it for heritage cross-walk only; they are **not** part of the green-native G-ATLAS standard.
+[^ref]: Embraer, *ATA Breakdown — EMB 170/175/190/195 and Lineage 1000*, chapters 10–12 (uploaded reference). Conventional bindings below are transcribed from it for heritage cross-walk only; they are **not** part of the green-native S-ATLAS standard.
 
 [^c-1125]: **Conventional `11-25-01` — Wing fuel system placards.** Markings for the wing fuel tank system. Superseded green-native by wing energy-system placards (high-voltage battery-bay for eWTW, cryogenic/H₂ for hBWB).
 

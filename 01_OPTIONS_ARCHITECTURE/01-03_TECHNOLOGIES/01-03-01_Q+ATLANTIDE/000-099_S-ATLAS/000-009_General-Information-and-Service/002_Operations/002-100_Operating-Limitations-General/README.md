@@ -3,7 +3,7 @@
 **Node (code section):** `002-100` ⇄ ATA **02-10**
 **Chapter:** `002` ⇄ ATA 02 — Operations
 **Master range:** `000-009_General-Information-and-Service`
-**Band:** `000-099_G-ATLAS`
+**Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR
 **Status:** agnostic standard (SSOT)
 

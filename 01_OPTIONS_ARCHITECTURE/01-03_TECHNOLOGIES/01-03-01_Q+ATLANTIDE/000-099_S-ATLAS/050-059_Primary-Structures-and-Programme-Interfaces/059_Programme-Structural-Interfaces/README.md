@@ -1,8 +1,8 @@
 ---
 chapter: "059"
 title: Programme Structural Interfaces
-ata: "G-ATLAS"
-band: 000-099_G-ATLAS
+ata: "S-ATLAS"
+band: 000-099_S-ATLAS
 master_range: 050-059
 side: SSOT
 owner: Q-STRUCTURES
@@ -14,8 +14,8 @@ version: "1.0"
 
 # 059 - Programme Structural Interfaces
 
-**G-ATLAS** | Green-native treatment:
+**S-ATLAS** | Green-native treatment:
 
 Structural mounting/integration interfaces to programmes; STD with green where energy-carrier / propulsion structural interfaces occur.
 
-> Green deltas live in the `059-900` lane. Terminology per G-ATLAS-NORM-TERM-001 (fuel -> energy carrier; engine/APU -> propulsion / auxiliary-power module).
+> Green deltas live in the `059-900` lane. Terminology per S-ATLAS-NORM-TERM-001 (fuel -> energy carrier; engine/APU -> propulsion / auxiliary-power module).

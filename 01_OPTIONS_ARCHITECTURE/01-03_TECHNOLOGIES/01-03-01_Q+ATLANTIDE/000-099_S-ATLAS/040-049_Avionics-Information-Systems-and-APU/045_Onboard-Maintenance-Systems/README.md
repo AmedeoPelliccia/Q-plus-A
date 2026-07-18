@@ -1,6 +1,6 @@
 # 045 — Onboard Maintenance Systems
 
-G-ATLAS chapter `045` · applicability: **eWTW+hBWB**.
+S-ATLAS chapter `045` · applicability: **eWTW+hBWB**.
 
 Central maintenance evolved to onboard maintenance with condition monitoring, prognostics and maintenance-data governance.
 
@@ -15,4 +15,4 @@ Central maintenance evolved to onboard maintenance with condition monitoring, pr
 | `045-400` | Maintenance Data Interfaces and Reporting | eWTW+hBWB |
 | `045-900` | Maintenance Data Governance | eWTW+hBWB |
 
-Generated 2026-07-09 · realize_G-ATLAS-040-049.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant
+Generated 2026-07-09 · realize_S-ATLAS-040-049.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant

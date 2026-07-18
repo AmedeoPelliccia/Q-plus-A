@@ -1,6 +1,6 @@
 # 012-900 — Energy Conditioning and Smart-Replenishment Operations
 
-**Node:** `012-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `012-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `012_Servicing` · **Layer:** STD-G
 **Owner:** Q-GROUND · **Green overlay:** Q-GREENTECH
 

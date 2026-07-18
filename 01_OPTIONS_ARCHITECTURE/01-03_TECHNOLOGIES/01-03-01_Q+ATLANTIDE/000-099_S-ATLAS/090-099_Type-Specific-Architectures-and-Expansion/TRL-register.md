@@ -1,4 +1,4 @@
-# TRL Register — 000-099_ATLAS / 090-099_Type-Specific-Programmes-and-Expansion
+# TRL Register — 000-099_ATLAS / 090-099_Type-Specific-Architectures-and-Expansion
 
 ## 1. Architecture Band
 
@@ -6,7 +6,7 @@
 | ----------------- | --------------------------- |
 | Architecture code | `ATLAS`                 |
 | Master range      | `000-099`               |
-| Code range        | `090-099_Type-Specific-Programmes-and-Expansion`                |
+| Code range        | `090-099_Type-Specific-Architectures-and-Expansion`                |
 | Architecture name | Aircraft Top Level Architecture Schema/System                     |
 | Scope             | Code range within ATLAS.                    |
 

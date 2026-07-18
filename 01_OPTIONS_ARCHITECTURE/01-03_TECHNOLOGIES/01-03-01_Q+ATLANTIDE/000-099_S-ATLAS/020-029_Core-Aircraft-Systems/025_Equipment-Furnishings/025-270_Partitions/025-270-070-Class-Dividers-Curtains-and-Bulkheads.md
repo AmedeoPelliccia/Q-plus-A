@@ -5,4 +5,4 @@
 
 Includes `025-270-120` aft LH **accessible-lavatory (PRM)** curtain.[^term-prm]
 
-[^term-prm]: **Terminology normalized — G-ATLAS-NORM-TERM-001.** Heritage reference labels this item "Aft LH Handicapped Lavatory Curtain" (ATA 25-27-12). G-ATLAS adopts "accessible / Persons with Reduced Mobility (PRM)" per EASA/IATA usage. Original term retained for cross-walk only.
+[^term-prm]: **Terminology normalized — S-ATLAS-NORM-TERM-001.** Heritage reference labels this item "Aft LH Handicapped Lavatory Curtain" (ATA 25-27-12). S-ATLAS adopts "accessible / Persons with Reduced Mobility (PRM)" per EASA/IATA usage. Original term retained for cross-walk only.

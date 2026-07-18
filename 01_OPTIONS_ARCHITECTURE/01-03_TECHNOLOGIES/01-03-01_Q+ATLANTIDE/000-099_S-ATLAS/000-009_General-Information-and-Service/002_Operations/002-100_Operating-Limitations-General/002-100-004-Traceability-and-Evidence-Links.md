@@ -9,7 +9,7 @@
 Records the SSOT→PUB mapping and impact-study links for this node.
 
 ```text
-G-ATLAS node/item            ──(impact study)──►   Programme DMC
+S-ATLAS node/item            ──(impact study)──►   Programme DMC
 002-100/002-100-004                                DMC-<PROGRAMME>-002-100-004
 ```
 

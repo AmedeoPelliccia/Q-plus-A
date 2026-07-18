@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-006
+document_id: S-ATLAS-000-000-006
 title: "000-000-006 — Standards Alignment: ATA 100 / iSpec 2200 / S1000D"
 node: 000-000
 item: "006"
@@ -24,7 +24,7 @@ date: "2026-06-05"
 - [2. ATA 100 Alignment](#2-ata-100-alignment)
   - [2.1 Chapter Mirror](#21-chapter-mirror)
   - [2.2 Section Mirror](#22-section-mirror)
-  - [2.3 What G-ATLAS Adds](#23-what-g-atlas-adds)
+  - [2.3 What S-ATLAS Adds](#23-what-g-atlas-adds)
   - [2.4 Chapters Reserved by ATA for Operators](#24-chapters-reserved-by-ata-for-operators)
 - [3. iSpec 2200 Alignment](#3-ispec-2200-alignment)
 - [4. S1000D Alignment](#4-s1000d-alignment)
@@ -40,7 +40,7 @@ date: "2026-06-05"
 
 ## 1. Purpose of This Item
 
-This item documents how G-ATLAS aligns to, extends, and differs from the three principal technical publication and architecture standards used in aerospace: **ATA 100**, **iSpec 2200**, and **S1000D**.
+This item documents how S-ATLAS aligns to, extends, and differs from the three principal technical publication and architecture standards used in aerospace: **ATA 100**, **iSpec 2200**, and **S1000D**.
 
 ---
 
@@ -48,9 +48,9 @@ This item documents how G-ATLAS aligns to, extends, and differs from the three p
 
 ### 2.1 Chapter Mirror
 
-G-ATLAS mirrors ATA 100 chapter numbering across its first nine bands (`000–099` through `800–899`). Each G-ATLAS chapter `00X` corresponds directly to ATA chapter `0X`.
+S-ATLAS mirrors ATA 100 chapter numbering across its first nine bands (`000–099` through `800–899`). Each S-ATLAS chapter `00X` corresponds directly to ATA chapter `0X`.
 
-| G-ATLAS chapter | ATA chapter | Title |
+| S-ATLAS chapter | ATA chapter | Title |
 |---|---|---|
 | `000` | ATA 00 | General / Introduction |
 | `001` | ATA 01 | Maintenance Policy |
@@ -60,15 +60,15 @@ G-ATLAS mirrors ATA 100 chapter numbering across its first nine bands (`000–09
 
 ### 2.2 Section Mirror
 
-G-ATLAS section numbers are ATA section numbers scaled by ×10 (three-digit suffix). This preserves full bijective mapping while allowing item codes beyond 99.
+S-ATLAS section numbers are ATA section numbers scaled by ×10 (three-digit suffix). This preserves full bijective mapping while allowing item codes beyond 99.
 
-| ATA section | G-ATLAS node |
+| ATA section | S-ATLAS node |
 |---|---|
 | ATA 00-00 | `000-000` |
 | ATA 05-10 | `005-100` |
 | ATA 05-50 | `005-500` |
 
-### 2.3 What G-ATLAS Adds
+### 2.3 What S-ATLAS Adds
 
 ATA 100 does not define architecture content for:
 - Novel energy carriers (batteries, cryogenic hydrogen, ammonia, fuel cells)
@@ -76,11 +76,11 @@ ATA 100 does not define architecture content for:
 - Lifecycle-phase sustainability accounting (LC-letter stages LC-A through LC-N)
 - Post-retirement nature-sustainment
 
-G-ATLAS adds **agnostic delta nodes** (`00X-900`) for each of these. These nodes are formally labelled `[G]` and have no ATA equivalent.
+S-ATLAS adds **agnostic delta nodes** (`00X-900`) for each of these. These nodes are formally labelled `[G]` and have no ATA equivalent.
 
 ### 2.4 Chapters Reserved by ATA for Operators
 
-ATA chapters 00–03 are reserved by ATA 100 for operator use; ATA does not standardise their sections. G-ATLAS defines sections within these chapters as **G-ATLAS-defined** (not ATA standard). They are marked `†` in the node register.
+ATA chapters 00–03 are reserved by ATA 100 for operator use; ATA does not standardise their sections. S-ATLAS defines sections within these chapters as **S-ATLAS-defined** (not ATA standard). They are marked `†` in the node register.
 
 ---
 
@@ -88,13 +88,13 @@ ATA chapters 00–03 are reserved by ATA 100 for operator use; ATA does not stan
 
 iSpec 2200 (ATA) extends ATA 100 with structured authoring rules, module types, and publication specifications for S1000D-compatible content.
 
-G-ATLAS aligns to iSpec 2200 by:
+S-ATLAS aligns to iSpec 2200 by:
 
 1. Using the ATA/iSpec 2200 chapter–section–subject numbering as the basis for node and item identifiers.
 2. Structuring items as **data-module-equivalent content units**, each with a defined purpose, owner, and evidence anchor.
 3. Ensuring every item has a natural mapping to an S1000D System/Sub-system/Subject (SNS) code.
 
-G-ATLAS does **not** prescribe iSpec 2200 mark-up tags within markdown files; mark-up is applied at PUB (CSDB) stage by the programme toolchain.
+S-ATLAS does **not** prescribe iSpec 2200 mark-up tags within markdown files; mark-up is applied at PUB (CSDB) stage by the programme toolchain.
 
 ---
 
@@ -102,7 +102,7 @@ G-ATLAS does **not** prescribe iSpec 2200 mark-up tags within markdown files; ma
 
 ### 4.1 Data Module Codes
 
-Each G-ATLAS item maps to a Data Module Code (DMC) in the programme CSDB. The canonical short form is:
+Each S-ATLAS item maps to a Data Module Code (DMC) in the programme CSDB. The canonical short form is:
 
 ```text
 DMC-<PROGRAMME>-<node>-<item>
@@ -116,12 +116,12 @@ Full S1000D Issue 4.2 DMC format adds Model Identification Code (MIC), System/Su
 
 ### 4.2 Issue Alignment
 
-G-ATLAS is aligned to **S1000D Issue 4.2** as the baseline. Later issues may be adopted by individual programmes without requiring amendment to the SSOT, provided the SNS mapping remains valid.
+S-ATLAS is aligned to **S1000D Issue 4.2** as the baseline. Later issues may be adopted by individual programmes without requiring amendment to the SSOT, provided the SNS mapping remains valid.
 
 ### 4.3 CSDB and SSOT+PUB
 
 ```text
-G-ATLAS SSOT (this repository)
+S-ATLAS SSOT (this repository)
     └── impact study (programme)
         └── Programme CSDB / PUB (S1000D data modules)
 ```
@@ -135,11 +135,11 @@ The SSOT is not itself an S1000D CSDB. It is the upstream source that programmes
 ```text
 ICAO Annex 8 / CS-25 / Special Conditions   (regulatory, supreme for airworthiness)
     └── ATA 100 / iSpec 2200                 (documentation structure standard)
-        └── G-ATLAS (SSOT)                   (agnostic architecture standard — this data set)
+        └── S-ATLAS (SSOT)                   (agnostic architecture standard — this data set)
             └── Programme CSDB (PUB)         (programme-specific instantiation, S1000D)
 ```
 
-G-ATLAS sits between iSpec 2200 and the programme CSDB. It does not override regulatory standards; it provides the architectural framework within which programme documentation is organised.
+S-ATLAS sits between iSpec 2200 and the programme CSDB. It does not override regulatory standards; it provides the architectural framework within which programme documentation is organised.
 
 ---
 
@@ -149,7 +149,7 @@ G-ATLAS sits between iSpec 2200 and the programme CSDB. It does not override reg
 graph TD
     REG["🏛️ ICAO Annex 8 / CS-25 / Special Conditions<br/>(Regulatory — supreme for airworthiness)"]
     ATA["📖 ATA 100 / iSpec 2200<br/>(Documentation structure standard)"]
-    GATLAS["📐 G-ATLAS SSOT<br/>(Agnostic architecture standard)"]
+    GATLAS["📐 S-ATLAS SSOT<br/>(Agnostic architecture standard)"]
     PUB["📦 Programme CSDB / PUB<br/>(S1000D data modules — programme-specific)"]
 
     REG -->|"airworthiness requirements"| ATA
@@ -175,15 +175,15 @@ graph TD
 | **MIC** | Model Identification Code — S1000D DMC component identifying the aircraft model. |
 | **SNS** | System/Sub-system/Subject — S1000D code component aligning to ATA chapter-section-subject. |
 | **CSDB** | Common Source DataBase — S1000D-compliant programme document store. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository. |
 | **PUB** | Programme publication — S1000D CSDB instance derived from SSOT via impact study. |
 | **SSOT+PUB** | Two-layer publication architecture: SSOT standard + PUB programme instances. |
-| **Delta node** | G-ATLAS node with suffix `-900`; tagged `[G]`; no ATA equivalent. |
+| **Delta node** | S-ATLAS node with suffix `-900`; tagged `[G]`; no ATA equivalent. |
 | **DPP** | Digital Product Passport — lifecycle sustainability data record. |
 | **LC-letter stage** | Q+ATLANTIDE lifecycle maturity phase (LC-A … LC-N). |
 | **ICAO** | International Civil Aviation Organization — publisher of Annex 8 (Airworthiness). |
 | **CS-25** | EASA Certification Specifications for Large Aeroplanes. |
-| **Bijective mapping** | One-to-one correspondence between ATA section numbers and G-ATLAS node suffixes. |
+| **Bijective mapping** | One-to-one correspondence between ATA section numbers and S-ATLAS node suffixes. |
 
 ---
 
@@ -191,7 +191,7 @@ graph TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Primary documentation structure standard G-ATLAS mirrors |
+| R1 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Primary documentation structure standard S-ATLAS mirrors |
 | R2 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Data module, CSDB, DMC, and SNS rules |
 | R3 | ICAO Annex 8 — Airworthiness of Aircraft | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Regulatory ceiling above all documentation standards |
 | R4 | EASA CS-25 Large Aeroplanes | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Primary certification basis for large aircraft programmes |
@@ -199,4 +199,4 @@ graph TD
 
 ---
 
-*Document footprint: G-ATLAS-000-000-006 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-006 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

@@ -1,6 +1,6 @@
 # 028-900 — Energy-Carrier Management
 
-**Node:** `028-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `028-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `028_Energy-Carrier-Storage-and-Distribution` · **Layer:** STD-G
 **Owner:** Q-GREENTECH · **Green overlay:** Q-GREENTECH
 **Safety-critical:** yes — couples to `026-900` (energy-system fire protection)

@@ -8,7 +8,7 @@ level: aircraft
 programme: AMPEL360
 product: eWTW
 side: SSOT
-maps: "function → PBS + G-ATLAS-SNS"
+maps: "function → PBS + S-ATLAS-SNS"
 files:
   - allocation-matrix.yaml
   - allocation-coverage.yaml
@@ -22,7 +22,7 @@ version: "1.0"
 
 # eWTW-FBS-00 · ALLOCATION
 
-The **aircraft-level allocation** for the eWTW functional architecture: the formal record that binds each of the thirteen aircraft-level functions to the physical product (**PBS**) and to the taxonomy (**G-ATLAS SNS**).
+The **aircraft-level allocation** for the eWTW functional architecture: the formal record that binds each of the thirteen aircraft-level functions to the physical product (**PBS**) and to the taxonomy (**S-ATLAS SNS**).
 
 ---
 
@@ -47,11 +47,11 @@ The **aircraft-level allocation** for the eWTW functional architecture: the form
 |---|---|
 | **Allocation** | The act of binding a function to the physical item(s) that perform it and the taxonomy that classifies it. |
 | **realized_by** | Allocation relation: a function is *realized by* one or more PBS items; conversely a PBS item *realizes* one or more functions. |
-| **classified_under** | Allocation relation: a function is *classified under* one or more G-ATLAS SNS chapters. |
+| **classified_under** | Allocation relation: a function is *classified under* one or more S-ATLAS SNS chapters. |
 | **FBS** | Functional Breakdown Structure — the source of the functions being allocated. |
 | **PBS** | Product Breakdown Structure — the physical target of allocation. |
-| **G-ATLAS** | Green Aircraft Top-Level Architecture Schema; the SNS taxonomy target of allocation. |
-| **SNS** | Standard Numbering System — the chapter grammar (`0CC` ⇄ ATA CC) used by G-ATLAS. |
+| **S-ATLAS** | Sustainable Aviation Top-Level Architecture Schema; the SNS taxonomy target of allocation. |
+| **SNS** | Standard Numbering System — the chapter grammar (`0CC` ⇄ ATA CC) used by S-ATLAS. |
 | **DAL** | Development Assurance Level — criticality (A–E), determined by each function's FHA, not by allocation. |
 | **FHA** | Functional Hazard Assessment — establishes the DAL referenced here. |
 | **Orphan** | A function with no allocation, or a PBS item realizing no function; both are coverage defects. |
@@ -68,7 +68,7 @@ The **aircraft-level allocation** for the eWTW functional architecture: the form
 
 This folder holds the allocation records for the FBS root node. Allocation is the bridge that keeps the three views of the system mutually consistent: the **functional** view (what the aircraft does), the **physical** view (what it is), and the **taxonomic** view (how it is classified). Without an explicit allocation, functions and products drift apart and traceability is lost.
 
-At this — the aircraft — level, the allocation is **coarse**: the thirteen aircraft-level functions map to major PBS assemblies and to G-ATLAS chapters. Finer allocation is performed in the `ALLOCATION/` folder of each lower function node.
+At this — the aircraft — level, the allocation is **coarse**: the thirteen aircraft-level functions map to major PBS assemblies and to S-ATLAS chapters. Finer allocation is performed in the `ALLOCATION/` folder of each lower function node.
 
 ---
 
@@ -84,7 +84,7 @@ flowchart LR
     subgraph PH["Physical · PBS"]
       P["PBS item(s)"]
     end
-    subgraph TX["Taxonomy · G-ATLAS SNS"]
+    subgraph TX["Taxonomy · S-ATLAS SNS"]
       G["chapter(s)"]
     end
     F -->|"realized_by"| P
@@ -100,7 +100,7 @@ This realizes the **requirement/function allocation** step of the ARP4754B devel
 
 | File | Contents |
 |---|---|
-| `allocation-matrix.yaml` | The master matrix — every aircraft-level function → PBS items + G-ATLAS chapters, with relation type and FHA reference. |
+| `allocation-matrix.yaml` | The master matrix — every aircraft-level function → PBS items + S-ATLAS chapters, with relation type and FHA reference. |
 | `allocation-coverage.yaml` | Bidirectional coverage: orphan functions, orphan PBS areas, and shared allocations. |
 
 ---
@@ -109,7 +109,7 @@ This realizes the **requirement/function allocation** step of the ARP4754B devel
 
 The full machine-readable matrix is in `allocation-matrix.yaml`. Summary:
 
-| FBS function | realized_by (PBS area) | classified_under (G-ATLAS) |
+| FBS function | realized_by (PBS area) | classified_under (S-ATLAS) |
 |---|---|---|
 | `FBS-10` Lift & Aerodynamics | Airframe — lifting surfaces (`eWTW-PBS-10`) | `057` Wings, `055` Stabilizers |
 | `FBS-20` Propulsion | Propulsion assembly | `070-079` Eco/Hybrid-Electric Propulsion |
@@ -145,7 +145,7 @@ flowchart LR
 |---|---|---|
 | `realized_by` | function → PBS | the physical item(s) that perform the function |
 | `realizes` | PBS → function | inverse; a product may realize several functions |
-| `classified_under` | function → G-ATLAS | the SNS chapter(s) the function maps to |
+| `classified_under` | function → S-ATLAS | the SNS chapter(s) the function maps to |
 | `allocation_type` | — | `full` (one item), `distributed` (across items), `shared` (item serves many functions) |
 
 Criticality (**DAL**) is deliberately **not** an allocation property — it is determined by each function's FHA and only *referenced* here via `fha_ref`. This keeps the allocation matrix a pure mapping and avoids duplicating safety state.
@@ -181,7 +181,7 @@ This allocation inherits **DEGF v1.0** (eleven mandatory traits), is governed ac
 1. SAE International — *ARP4754B: Guidelines for Development of Civil Aircraft and Systems* (Dec 2023), requirement/function allocation. <https://www.sae.org/standards/content/arp4754b/>
 2. SAE International — *ARP4761A: Guidelines and Methods for Conducting the Safety Assessment Process* (Dec 2023), FHA and DAL. <https://www.sae.org/standards/content/arp4761a/>
 3. INCOSE — *Systems Engineering Handbook*, functional-to-physical allocation. <https://www.incose.org/>
-4. ATA / Airlines for America — *iSpec 2200: Information Standards for Aviation Maintenance* (SNS basis for G-ATLAS). <https://publications.airlines.org/>
+4. ATA / Airlines for America — *iSpec 2200: Information Standards for Aviation Maintenance* (SNS basis for S-ATLAS). <https://publications.airlines.org/>
 
 <!-- Footprint: footnote definitions -->
 

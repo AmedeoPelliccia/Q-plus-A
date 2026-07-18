@@ -1,7 +1,7 @@
 # 011 — Placards and Markings
 
 **Chapter:** `011` ⇄ ATA **11**
-**Master range:** `010-019_Ground-Handling-and-Servicing` · **Band:** `000-099_G-ATLAS`
+**Master range:** `010-019_Ground-Handling-and-Servicing` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-GROUND · **Green overlay:** Q-GREENTECH (nodes `011-250-010` ⚡, `011-260-010` ⚡, `011-900`) · **Status:** agnostic standard (SSOT)
 
 Placard *locations* are unchanged; the energy-system placards are substituted (⚡), and the energy-carrier hazard delta is first-class. See the master-range [`README.md`](../README.md) for the full node register and conventions.

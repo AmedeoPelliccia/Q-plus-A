@@ -1,6 +1,6 @@
 # eWTW-PBS-053-300-000 - Aft Fuselage Structure
 
-Section node mirroring G-ATLAS `053-300_Aft-Fuselage-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node mirroring S-ATLAS `053-300_Aft-Fuselage-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 

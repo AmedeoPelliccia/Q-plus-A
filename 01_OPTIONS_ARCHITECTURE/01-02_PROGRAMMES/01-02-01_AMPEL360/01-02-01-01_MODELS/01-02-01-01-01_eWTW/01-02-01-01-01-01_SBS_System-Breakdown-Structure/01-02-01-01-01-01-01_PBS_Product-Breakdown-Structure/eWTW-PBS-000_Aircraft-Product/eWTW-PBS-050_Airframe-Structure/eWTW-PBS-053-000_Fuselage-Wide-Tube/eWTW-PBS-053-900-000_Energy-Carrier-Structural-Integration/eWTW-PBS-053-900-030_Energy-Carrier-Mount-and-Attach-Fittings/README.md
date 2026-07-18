@@ -1,6 +1,6 @@
 # eWTW-PBS-053-900-030 - Energy Carrier Mount and Attach Fittings
 
-CSN `539003` - grammar `EWTW-539003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-900-030`.
+CSN `539003` - grammar `EWTW-539003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-900-030`.
 
 ## Items
 

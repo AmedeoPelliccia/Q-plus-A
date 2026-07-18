@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-004
+document_id: S-ATLAS-000-000-004
 title: "000-000-004 — How to Use This Architecture and Data Set"
 node: 000-000
 item: "004"
@@ -22,7 +22,7 @@ date: "2026-06-05"
 
 - [1. Who This Is For](#1-who-this-is-for)
 - [2. Repository Navigation](#2-repository-navigation)
-  - [2.1 Root Path to G-ATLAS](#21-root-path-to-g-atlas)
+  - [2.1 Root Path to S-ATLAS](#21-root-path-to-g-atlas)
   - [2.2 Key Index Files](#22-key-index-files)
 - [3. Tags and Labels](#3-tags-and-labels)
 - [4. Reading Order](#4-reading-order)
@@ -50,13 +50,13 @@ date: "2026-06-05"
 
 ## 2. Repository Navigation
 
-### 2.1 Root Path to G-ATLAS
+### 2.1 Root Path to S-ATLAS
 
 ```text
 01_OPTIONS_ARCHITECTURE/
 └── 01-03_TECHNOLOGIES/
     └── 01-03-01_Q+ATLANTIDE/
-        └── 000-099_G-ATLAS/              ← band index
+        └── 000-099_S-ATLAS/              ← band index
             └── 000-009_General-Information-and-Service/   ← master range index
                 └── 000_General/          ← chapter folder
                     └── 000-000_General-Introduction/      ← this node
@@ -66,7 +66,7 @@ date: "2026-06-05"
 
 | File | Purpose |
 |---|---|
-| [`000-099_G-ATLAS/README.md`](../../../../../README.md) | Band overview, governance framework, all master ranges |
+| [`000-099_S-ATLAS/README.md`](../../../../../README.md) | Band overview, governance framework, all master ranges |
 | [`000-009_.../README.md`](../../README.md) | Node register, numbering rules, green-delta table |
 | [`000_General/README.md`](../README.md) | Chapter-level navigation |
 | [`000-000_.../README.md`](README.md) | Node item set, governance, navigation |
@@ -124,7 +124,7 @@ Items carry the following navigation tags in their front matter:
 | Item file | `<node>-<item>-<Title>.md` | `000-000-001-Scope-and-Definitions.md` |
 | Delta node | suffix `-900`, tagged `[G]` | `000-900` |
 | ATA mirror | `00X-Y00 ⇄ ATA 0X-Y0` | `000-000 ⇄ ATA 00-00` |
-| Section scaling | ATA `Y0` → G-ATLAS `Y00` (×10) | `05-50 → 005-500` |
+| Section scaling | ATA `Y0` → S-ATLAS `Y00` (×10) | `05-50 → 005-500` |
 | Retired term | ~~code range~~ → **master range** | — |
 
 ---
@@ -158,18 +158,18 @@ flowchart TD
 
 | Term / Acronym | Definition |
 |---|---|
-| **G-ATLAS** | Green Aircraft Top-Level Architecture Schema. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **S-ATLAS** | Sustainable Aviation Top-Level Architecture Schema. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository. |
 | **CSDB** | Common Source DataBase — S1000D document store for programme data modules. |
 | **DMC** | Data Module Code — S1000D identifier for a programme data module. |
-| **Impact study** | Documented process mapping G-ATLAS nodes to programme-specific DMCs. |
+| **Impact study** | Documented process mapping S-ATLAS nodes to programme-specific DMCs. |
 | **SHA-256** | Cryptographic hash used for tamper-evident content anchoring (IEF). |
-| **Q-DATAGOV** | Q-Division responsible for G-ATLAS content governance. |
+| **Q-DATAGOV** | Q-Division responsible for S-ATLAS content governance. |
 | **Agnostic** | No programme- or product-specific assumption. |
 | **Baseline** | Formally approved; under change control. |
-| **Delta node** | G-ATLAS node with suffix `-900`; tagged `[G]`; no ATA equivalent. |
+| **Delta node** | S-ATLAS node with suffix `-900`; tagged `[G]`; no ATA equivalent. |
 | **Master range** | Ten-chapter block within a band (e.g. `000–009`). |
-| **Band** | Top-level G-ATLAS numbering block (e.g. `000–099`). |
+| **Band** | Top-level S-ATLAS numbering block (e.g. `000–099`). |
 | **ATA** | Air Transport Association — publisher of ATA 100 / iSpec 2200. |
 
 ---
@@ -178,7 +178,7 @@ flowchart TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | G-ATLAS Band README | [`000-099_G-ATLAS/README.md`](../../../../../README.md) | Band-level orientation and master-range register |
+| R1 | S-ATLAS Band README | [`000-099_S-ATLAS/README.md`](../../../../../README.md) | Band-level orientation and master-range register |
 | R2 | Master Range README | [`000-009_.../README.md`](../../README.md) | Node register and green-delta table |
 | R3 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Numbering conventions and structure standard |
 | R4 | S1000D Issue 4.2 | <https://www.s1000d.net/> | CSDB, DMC, and data module rules |
@@ -186,4 +186,4 @@ flowchart TD
 
 ---
 
-*Document footprint: G-ATLAS-000-000-004 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-004 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

@@ -2,7 +2,7 @@
 chapter: "052"
 title: Doors
 ata: "ATA 52"
-band: 000-099_G-ATLAS
+band: 000-099_S-ATLAS
 master_range: 050-059
 side: SSOT
 owner: Q-STRUCTURES
@@ -18,4 +18,4 @@ version: "1.0"
 
 STD. Green delta 052-900: energy-carrier bay access panels and service doors.
 
-> Green deltas live in the `052-900` lane. Terminology per G-ATLAS-NORM-TERM-001 (fuel -> energy carrier; engine/APU -> propulsion / auxiliary-power module).
+> Green deltas live in the `052-900` lane. Terminology per S-ATLAS-NORM-TERM-001 (fuel -> energy carrier; engine/APU -> propulsion / auxiliary-power module).

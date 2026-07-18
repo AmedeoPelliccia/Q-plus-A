@@ -1,7 +1,7 @@
 # 023 — Communications
 
 **Chapter:** `023` ⇄ ATA **23**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Status:** agnostic standard (SSOT)
 
 Energy-neutral throughout — carries forward **whole**. No substitution, no green delta. Radios, antennas, SATCOM, datalink, audio, and static dischargers are indifferent to the energy architecture. Quantum communication is a separate band (`900-999 QCSAA`), not a green delta here. See the master-range [`README.md`](../README.md) for conventions.

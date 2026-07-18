@@ -2,7 +2,7 @@
 chapter: "053"
 title: Fuselage
 ata: "53"
-band: 000-099_G-ATLAS
+band: 000-099_S-ATLAS
 master_range: 050-059
 side: SSOT
 owner: Q-STRUCTURES
@@ -33,4 +33,4 @@ version: "2.0"
 | [`053-800`](./053-800_Pressure-Bulkheads-and-Major-Attach-Fittings/) | Pressure Bulkheads and Major Attach Fittings | 8 | STD |
 | [`053-900`](./053-900_Energy-Carrier-Structural-Integration/) | Energy Carrier Structural Integration | 5 | STD-G ∅ |
 
-> See `053-Embraer-Crosswalk.yaml` and `053-Section-Subject-Distribution.md` for the full Embraer -> G-ATLAS mapping.
+> See `053-Embraer-Crosswalk.yaml` and `053-Section-Subject-Distribution.md` for the full Embraer -> S-ATLAS mapping.

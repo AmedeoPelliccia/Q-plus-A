@@ -1,6 +1,6 @@
 # 053 Fuselage - Section/Subject Distribution (Embraer-inspired)
 
-Redistribution of the Embraer 170/175/190/195 & Lineage 1000 ATA ch.53 breakdown into the G-ATLAS `053` sections. Element sections gather repeating elements by zone; zone sections gather zone-unique features; `053-900` is the green delta.
+Redistribution of the Embraer 170/175/190/195 & Lineage 1000 ATA ch.53 breakdown into the S-ATLAS `053` sections. Element sections gather repeating elements by zone; zone sections gather zone-unique features; `053-900` is the green delta.
 
 ### `053-000` General
 

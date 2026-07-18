@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-200-000
   model: eWTW
   side: SSOT
-  scope: "Antenna Provisions and Reinforcements - G-ATLAS 053-200-040 subject scope; folder name is SSOT."
+  scope: "Antenna Provisions and Reinforcements - S-ATLAS 053-200-040 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

@@ -1,6 +1,6 @@
 # 021 — Air Conditioning & Environmental Control
 
-**Chapter node** of `PMC-EWTW-AMM` (Aircraft Maintenance Manual), G-ATLAS master range
+**Chapter node** of `PMC-EWTW-AMM` (Aircraft Maintenance Manual), S-ATLAS master range
 `020-029_Core-Aircraft-Systems`, programme eWTW (AMPEL360), doctrine **green-native**, owner **Q-AIR**.
 
 This chapter holds the TPuBS directory nodes for air conditioning and environmental control.

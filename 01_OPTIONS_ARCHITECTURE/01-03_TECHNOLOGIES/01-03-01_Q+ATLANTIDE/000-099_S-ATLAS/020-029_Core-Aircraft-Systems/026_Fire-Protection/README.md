@@ -1,13 +1,13 @@
 # 026 — Fire Protection
 
 **Chapter:** `026` ⇄ ATA **26**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `026-110` ⚡, `026-120` ⚡, `026-210` ⚡, `026-220` ⚡, `026-900` [G]) · **Status:** agnostic standard (SSOT)
 **Version:** 1.0 · **Heritage:** ATA breakdown, Embraer 170/175/190/195 and Lineage 1000 (chapter 26)
 
 Fire protection has two distinct green divergences. **Detection:** smoke/overheat in cabin, lavatory, cargo, recirculation bay, landing-gear bay, and e-racks are energy-neutral and carry forward. Engine/APU detection is normalized ⚡ to propulsion-module / auxiliary-power-module overheat detection. **Extinguishing:** cargo/portable/lavatory/monument extinguishing carry forward; engine/APU extinguishing is normalized ⚡ and the agent diverges (gaseous Halon-type agents do not suppress lithium thermal runaway). **Green delta `026-900`** adds the energy-system fire tier — battery thermal runaway, hydrogen fire, HV arc-fault — with no ATA equivalent; flagged safety-critical. See the master-range [`README.md`](../README.md) for conventions.
 
-**Numbering map:** `ATA CC-SS-UU → G-ATLAS 0CC-SS0-UU0` (e.g. `26-21-03 → 026-210-030`)
+**Numbering map:** `ATA CC-SS-UU → S-ATLAS 0CC-SS0-UU0` (e.g. `26-21-03 → 026-210-030`)
 
 ## Section-nodes
 

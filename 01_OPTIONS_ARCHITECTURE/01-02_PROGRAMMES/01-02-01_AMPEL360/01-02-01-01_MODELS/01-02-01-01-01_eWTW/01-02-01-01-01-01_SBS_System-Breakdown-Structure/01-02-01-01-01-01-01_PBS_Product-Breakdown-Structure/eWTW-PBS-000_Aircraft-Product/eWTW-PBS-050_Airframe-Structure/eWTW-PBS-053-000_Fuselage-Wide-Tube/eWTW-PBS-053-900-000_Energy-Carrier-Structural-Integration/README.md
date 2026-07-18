@@ -1,6 +1,6 @@
 # eWTW-PBS-053-900-000 - Energy Carrier Structural Integration
 
-Section node mirroring G-ATLAS `053-900_Energy-Carrier-Structural-Integration` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node mirroring S-ATLAS `053-900_Energy-Carrier-Structural-Integration` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 

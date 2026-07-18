@@ -1,6 +1,6 @@
 # 025-900 — Sustainable Materials, Circularity & Cabin Efficiency
 
-**Node:** `025-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `025-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `025_Equipment-Furnishings` · **Layer:** STD-G
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH
 **Material authority:** AMTA band `500-599` / Q-STRUCTURES

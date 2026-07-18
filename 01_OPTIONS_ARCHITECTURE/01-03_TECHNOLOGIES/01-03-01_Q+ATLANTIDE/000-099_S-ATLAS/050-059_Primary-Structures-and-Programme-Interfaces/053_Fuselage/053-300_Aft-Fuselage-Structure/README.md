@@ -2,7 +2,7 @@
 section: "053-300"
 title: Aft Fuselage Structure
 chapter: "053"
-band: 000-099_G-ATLAS
+band: 000-099_S-ATLAS
 side: SSOT
 owner: Q-STRUCTURES
 doctrine: green-native

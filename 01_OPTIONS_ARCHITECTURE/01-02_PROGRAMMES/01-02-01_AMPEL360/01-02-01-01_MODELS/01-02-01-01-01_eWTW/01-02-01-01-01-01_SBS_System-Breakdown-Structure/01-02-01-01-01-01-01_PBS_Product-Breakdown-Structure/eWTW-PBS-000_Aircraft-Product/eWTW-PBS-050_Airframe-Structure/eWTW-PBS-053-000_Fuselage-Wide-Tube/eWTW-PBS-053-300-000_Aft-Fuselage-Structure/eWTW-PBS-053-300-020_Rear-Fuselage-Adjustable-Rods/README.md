@@ -1,6 +1,6 @@
 # eWTW-PBS-053-300-020 - Rear Fuselage Adjustable Rods
 
-CSN `533002` - grammar `EWTW-533002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-300-020`.
+CSN `533002` - grammar `EWTW-533002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-300-020`.
 
 ## Items
 

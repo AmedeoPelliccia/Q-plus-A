@@ -1,13 +1,13 @@
 # 027 — Flight Controls
 
 **Chapter:** `027` ⇄ ATA **27**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `027-120` ⚡, `027-220` ⚡, `027-320` ⚡, `027-620` ⚡, `027-650` ⚡, `027-680` ⚡, `027-900` [G]) · **Status:** agnostic standard (SSOT)
 **Version:** 1.0 · **Heritage:** ATA breakdown, Embraer 170/175/190/195 and Lineage 1000 (chapter 27)
 
 Flight controls carry surfaces, mechanical components, sensors, trim, stall protection, fly-by-wire electronics, and flap/slat mechanics forward unchanged (energy-neutral). The six hydraulic-actuation sections are substituted ⚡ by agnostic **powered actuation** nodes (programme binds hydraulic or EHA/EMA). **Green delta `027-900`** adds the more-electric EHA/EMA architecture; actuator power is drawn from the HVDC bus in `024-900`. See the master-range [`README.md`](../README.md) for conventions.
 
-**Numbering map:** `ATA CC-SS-UU → G-ATLAS 0CC-SS0-UU0` (e.g. `27-32-02 → 027-320-020`)
+**Numbering map:** `ATA CC-SS-UU → S-ATLAS 0CC-SS0-UU0` (e.g. `27-32-02 → 027-320-020`)
 
 ## Section-nodes
 

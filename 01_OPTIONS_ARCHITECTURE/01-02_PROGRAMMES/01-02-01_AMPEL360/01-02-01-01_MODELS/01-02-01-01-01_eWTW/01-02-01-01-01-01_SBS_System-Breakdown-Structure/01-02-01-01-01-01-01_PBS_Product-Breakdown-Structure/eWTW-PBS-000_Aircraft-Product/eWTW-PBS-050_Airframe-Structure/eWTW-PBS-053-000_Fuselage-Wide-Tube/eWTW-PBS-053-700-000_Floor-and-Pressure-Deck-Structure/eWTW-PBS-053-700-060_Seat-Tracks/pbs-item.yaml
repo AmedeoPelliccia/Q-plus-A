@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-700-000
   model: eWTW
   side: SSOT
-  scope: "Seat Tracks - G-ATLAS 053-700-060 subject scope; folder name is SSOT."
+  scope: "Seat Tracks - S-ATLAS 053-700-060 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

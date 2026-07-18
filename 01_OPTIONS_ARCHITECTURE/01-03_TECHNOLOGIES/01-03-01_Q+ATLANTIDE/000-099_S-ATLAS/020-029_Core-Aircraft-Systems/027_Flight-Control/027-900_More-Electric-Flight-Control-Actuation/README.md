@@ -1,6 +1,6 @@
 # 027-900 — More-Electric Flight-Control Actuation
 
-**Node:** `027-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `027-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `027_Flight-Control` · **Layer:** STD-G
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH
 **Cross-band:** `024-900` (HVDC systems-power architecture — actuator power supply)

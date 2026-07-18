@@ -1,6 +1,6 @@
 # eWTW-PBS-053-800-000 - Pressure Bulkheads and Major Attach Fittings
 
-Section node mirroring G-ATLAS `053-800_Pressure-Bulkheads-and-Major-Attach-Fittings` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node mirroring S-ATLAS `053-800_Pressure-Bulkheads-and-Major-Attach-Fittings` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 

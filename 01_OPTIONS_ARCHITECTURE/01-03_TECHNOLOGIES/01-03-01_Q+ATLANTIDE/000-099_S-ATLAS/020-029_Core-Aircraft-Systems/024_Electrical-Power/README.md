@@ -1,7 +1,7 @@
 # 024 — Electrical Power
 
 **Chapter:** `024` ⇄ ATA **24**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `024-200` ⚡, `024-210` ⚡, `024-220` ⚡, `024-900`) · **Status:** agnostic standard (SSOT)
 
 Inverted to green-native. Substituted ⚡: **AC Generation → Primary Power Generation** (`024-200`), **Generator Drive (IDG) → Generation-Source Drive & Conditioning** (`024-210`, IDG fully footprinted), **APU AC Generation → Auxiliary Power Generation** (`024-220`). Green delta `024-900` adds the **HVDC systems-power architecture & power electronics**. Distribution, breakers, batteries, external power, converters/inverters, and outlets carry forward. The propulsion HVDC bus and traction inverters are **not** here — they live in the propulsion band `070-079`. See the master-range [`README.md`](../README.md) for the full node register and conventions.

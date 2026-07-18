@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-001
+document_id: S-ATLAS-000-000-001
 title: "000-000-001 — Scope and Definitions"
 node: 000-000
 item: "001"
@@ -38,11 +38,11 @@ date: "2026-06-05"
 
 ### 1.1 What Is Covered
 
-This item defines the scope of **master range `000–009` General Information and Service** and the controlled vocabulary used throughout that range and, by reference, throughout all of G-ATLAS band `000–099`.
+This item defines the scope of **master range `000–009` General Information and Service** and the controlled vocabulary used throughout that range and, by reference, throughout all of S-ATLAS band `000–099`.
 
 The scope includes:
 
-- The architectural standard layer (SSOT): G-ATLAS nodes, items, and their governance.
+- The architectural standard layer (SSOT): S-ATLAS nodes, items, and their governance.
 - The programme publication layer (PUB): CSDB instances derived from the SSOT via impact studies.
 - The lifecycle governance model (Q+ATLANTIDE LC-letter stages, LC-A through LC-N) as it applies to nodes in this master range.
 - The traceability linkage from items to requirements, evidence, and DMCs.
@@ -61,10 +61,10 @@ The scope includes:
 
 | Term | Definition |
 |---|---|
-| **Band** | The top-level numbering block of G-ATLAS. Band `000–099` is G-ATLAS. |
+| **Band** | The top-level numbering block of S-ATLAS. Band `000–099` is S-ATLAS. |
 | **Master range** | A ten-chapter block within a band (e.g. `000–009`). Equivalent to a group of ATA chapters. |
 | **Chapter** | A physical folder within a master range, numbering one ATA chapter (e.g. `000_General` ⇄ ATA 00). |
-| **Node (code section)** | The primary addressable unit of G-ATLAS content; maps to an ATA chapter-section (e.g. `000-000` ⇄ ATA 00-00). |
+| **Node (code section)** | The primary addressable unit of S-ATLAS content; maps to an ATA chapter-section (e.g. `000-000` ⇄ ATA 00-00). |
 | **Item (subject)** | A single markdown file inside a node; maps to an ATA subject (e.g. item `001` ⇄ ATA 00-00-01). |
 | **Delta node** | A node with suffix `-900`, covering topics with no ATA equivalent (energy-carrier specifics, DPP, sustainability). |
 
@@ -72,11 +72,11 @@ The scope includes:
 
 | Term | Definition |
 |---|---|
-| **SSOT** | Single Source of Truth. The authoritative G-ATLAS repository. Programmes may not modify it; they only publish derived instances. |
+| **SSOT** | Single Source of Truth. The authoritative S-ATLAS repository. Programmes may not modify it; they only publish derived instances. |
 | **PUB** | Programme publication. A CSDB instance derived from SSOT by impact study, containing programme-applicable DMCs. |
-| **DMC** | Data Module Code. An S1000D identifier assigned to a PUB instance of a G-ATLAS item. |
+| **DMC** | Data Module Code. An S1000D identifier assigned to a PUB instance of a S-ATLAS item. |
 | **CSDB** | Common Source DataBase. The S1000D-compliant storage for programme data modules. |
-| **Impact study** | The documented process by which a programme determines which G-ATLAS nodes/items apply, and maps them to DMCs. |
+| **Impact study** | The documented process by which a programme determines which S-ATLAS nodes/items apply, and maps them to DMCs. |
 | **LC-letter stage** | A product/CAD maturity phase in the Q+ATLANTIDE lifecycle model (LC-A Conceptual Design … LC-N Nature Sustainment), each closed by a `REV-<LC>_RELEASED` gate. |
 
 ### 2.3 Doctrine Terms
@@ -102,7 +102,7 @@ The scope includes:
 ```mermaid
 graph LR
     subgraph "IN SCOPE — SSOT Layer"
-        S1["G-ATLAS nodes &amp; items"]
+        S1["S-ATLAS nodes &amp; items"]
         S2["Numbering conventions"]
         S3["Governance &amp; lifecycle rules"]
         S4["Evidence &amp; traceability framework"]
@@ -117,7 +117,7 @@ graph LR
         O5["Software config / detailed design"]
     end
 
-    SSOT["G-ATLAS SSOT<br/>(this standard)"] --> S1 & S2 & S3 & S4 & S5
+    SSOT["S-ATLAS SSOT<br/>(this standard)"] --> S1 & S2 & S3 & S4 & S5
     PROG["Programme CSDB (PUB)"] --> O1 & O2 & O3 & O4 & O5
     SSOT -->|"impact study"| PROG
 
@@ -131,17 +131,17 @@ graph LR
 
 | Term / Acronym | Definition |
 |---|---|
-| **Band** | Top-level numbering block of G-ATLAS (e.g. `000–099`). |
+| **Band** | Top-level numbering block of S-ATLAS (e.g. `000–099`). |
 | **Master range** | Ten-chapter block within a band (e.g. `000–009`). |
 | **Chapter** | Physical folder within a master range corresponding to one ATA chapter. |
-| **Node** | Primary addressable G-ATLAS unit; maps to an ATA chapter-section. |
+| **Node** | Primary addressable S-ATLAS unit; maps to an ATA chapter-section. |
 | **Item** | Single markdown file inside a node; maps to an ATA subject. |
 | **Delta node** | Node with suffix `-900`; covers topics with no ATA equivalent. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS standard repository. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS standard repository. |
 | **PUB** | Programme publication — S1000D CSDB instance derived from SSOT. |
 | **CSDB** | Common Source DataBase — S1000D-compliant programme document store. |
 | **DMC** | Data Module Code — S1000D identifier for a programme data module. |
-| **Impact study** | Documented process mapping G-ATLAS nodes to programme DMCs. |
+| **Impact study** | Documented process mapping S-ATLAS nodes to programme DMCs. |
 | **LC-letter stage** | Q+ATLANTIDE lifecycle maturity phase (LC-A … LC-N). |
 | **SSOT+PUB** | Two-layer publication architecture: SSOT standard + PUB programme instances. |
 | **Agnostic** | No programme- or product-specific assumption. |
@@ -158,7 +158,7 @@ graph LR
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for G-ATLAS; parent of all governance rules |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for S-ATLAS; parent of all governance rules |
 | R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Numbering and structure reference for bands, master ranges, chapters |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | DMC, CSDB, and data module rules |
 | R4 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | Evidence anchoring and SHA-256 stamping rules |
@@ -166,4 +166,4 @@ graph LR
 
 ---
 
-*Document footprint: G-ATLAS-000-000-001 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-001 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

@@ -1,6 +1,6 @@
 # 026-900 — Energy-System Fire Protection
 
-**Node:** `026-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `026-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `026_Fire-Protection` · **Layer:** STD-G
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH
 **Safety classification:** safety-critical

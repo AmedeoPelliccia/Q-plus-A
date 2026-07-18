@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-002
+document_id: S-ATLAS-000-000-002
 title: "000-000-002 — Purpose and Mission"
 node: 000-000
 item: "002"
@@ -36,7 +36,7 @@ date: "2026-06-05"
 
 ## 1. Mission Statement
 
-G-ATLAS exists to provide a **single, programme-neutral, certification-ready architectural standard** for green aviation systems — one that any programme may instantiate without modifying the standard itself, and that any authority, auditor, or integrator can read as a stable reference independent of product decisions.
+S-ATLAS exists to provide a **single, programme-neutral, certification-ready architectural standard** for green aviation systems — one that any programme may instantiate without modifying the standard itself, and that any authority, auditor, or integrator can read as a stable reference independent of product decisions.
 
 ---
 
@@ -46,7 +46,7 @@ G-ATLAS exists to provide a **single, programme-neutral, certification-ready arc
 
 ATA 100 / iSpec 2200 was designed for conventional aircraft. It does not define architecture slots for novel energy carriers (batteries, cryogenic hydrogen, ammonia, fuel cells), for Digital Product Passports, or for sustainability accounting across the full lifecycle.
 
-G-ATLAS fills this gap by:
+S-ATLAS fills this gap by:
 
 1. Mirroring ATA chapter–section–subject numbering so existing toolchains and workforce training remain valid.
 2. Adding **agnostic delta nodes** (`00X-900`) for functions that ATA has no equivalent for.
@@ -62,7 +62,7 @@ A single standard that all Q+ATLANTIDE programmes share means:
 
 ### 2.3 Support Certification Readiness
 
-Every G-ATLAS item is structured so that a programme can, at any lifecycle gate from LC-A (Conceptual Design) onwards, demonstrate:
+Every S-ATLAS item is structured so that a programme can, at any lifecycle gate from LC-A (Conceptual Design) onwards, demonstrate:
 
 - Which standard node/item the content derives from.
 - Which requirement the item satisfies.
@@ -72,7 +72,7 @@ Every G-ATLAS item is structured so that a programme can, at any lifecycle gate 
 
 ### 2.4 Maintain Governance Integrity
 
-G-ATLAS is governed under the **SSOT+PUB** doctrine. This ensures the standard cannot be silently modified by a programme, and that all changes go through controlled amendment.
+S-ATLAS is governed under the **SSOT+PUB** doctrine. This ensures the standard cannot be silently modified by a programme, and that all changes go through controlled amendment.
 
 ---
 
@@ -90,7 +90,7 @@ G-ATLAS is governed under the **SSOT+PUB** doctrine. This ensures the standard c
 
 ## 4. Relationship to the Model Digital Constitution
 
-G-ATLAS is constituted power under the **Model Digital Constitution** (`00_MODEL-DIGITAL-CONSTITUTION`). It may not override constitutional values (Safety First, Traceability, Certification Readiness, Sustainability by Design, Technical Sovereignty, Democratic Enterprise Governance, Realistic Ambition). Any G-ATLAS node that conflicts with the Constitution is the defect to be corrected.
+S-ATLAS is constituted power under the **Model Digital Constitution** (`00_MODEL-DIGITAL-CONSTITUTION`). It may not override constitutional values (Safety First, Traceability, Certification Readiness, Sustainability by Design, Technical Sovereignty, Democratic Enterprise Governance, Realistic Ambition). Any S-ATLAS node that conflicts with the Constitution is the defect to be corrected.
 
 ---
 
@@ -99,7 +99,7 @@ G-ATLAS is constituted power under the **Model Digital Constitution** (`00_MODEL
 ```mermaid
 graph TD
     MDC["⚖️ Model Digital Constitution<br/>(Supreme constitutional authority)"]
-    GATLAS["📐 G-ATLAS SSOT<br/>(Constituted standard — agnostic architecture)"]
+    GATLAS["📐 S-ATLAS SSOT<br/>(Constituted standard — agnostic architecture)"]
     PUB["📦 Programme CSDB / PUB<br/>(Programme-specific publication)"]
     REG["🏛️ ICAO / EASA / FAA<br/>(Regulatory ceiling)"]
 
@@ -119,14 +119,14 @@ graph TD
 
 | Term / Acronym | Definition |
 |---|---|
-| **G-ATLAS** | Green Aircraft Top-Level Architecture Schema. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository. |
+| **S-ATLAS** | Sustainable Aviation Top-Level Architecture Schema. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository. |
 | **PUB** | Programme publication — S1000D CSDB derived from SSOT via impact study. |
 | **SSOT+PUB** | Two-layer architecture: SSOT standard + PUB programme instances. |
-| **MDC** | Model Digital Constitution — constitutional authority for G-ATLAS. |
+| **MDC** | Model Digital Constitution — constitutional authority for S-ATLAS. |
 | **DMC** | Data Module Code — S1000D identifier for a programme data module. |
 | **LC-A** | First Q+ATLANTIDE lifecycle stage: Conceptual Design. |
-| **Delta node** | G-ATLAS node with suffix `-900`; no ATA equivalent; tagged `[G]`. |
+| **Delta node** | S-ATLAS node with suffix `-900`; no ATA equivalent; tagged `[G]`. |
 | **ATA** | Air Transport Association — publisher of ATA 100 / iSpec 2200. |
 | **iSpec 2200** | ATA specification extending ATA 100 with structured authoring rules. |
 | **DPP** | Digital Product Passport — lifecycle sustainability data record. |
@@ -139,8 +139,8 @@ graph TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional ceiling; source of G-ATLAS governance values |
-| R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Documentation structure standard G-ATLAS mirrors and extends |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional ceiling; source of S-ATLAS governance values |
+| R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Documentation structure standard S-ATLAS mirrors and extends |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Publication standard for programme CSDB / PUB instances |
 | R4 | ICAO Annex 8 — Airworthiness | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Regulatory authority above all documentation standards |
 | R5 | EASA CS-25 | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Primary certification basis for large aircraft programmes |
@@ -148,4 +148,4 @@ graph TD
 
 ---
 
-*Document footprint: G-ATLAS-000-000-002 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-002 · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

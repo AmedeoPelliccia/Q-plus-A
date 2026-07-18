@@ -1,5 +1,5 @@
 ---
-document_id: G-ATLAS-000-000-README
+document_id: S-ATLAS-000-000-README
 title: "000-000 — General Introduction: Node README"
 node: 000-000
 ata_ref: 00-00
@@ -14,12 +14,12 @@ date: "2026-06-05"
 
 # 000-000 — General / Introduction
 
-**G-ATLAS Node (Code Section) — Node README**
+**S-ATLAS Node (Code Section) — Node README**
 
 > **Canonical path**
-> `01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/000-009_General-Information-and-Service/000_General/000-000_General-Introduction/`
+> `01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/000-009_General-Information-and-Service/000_General/000-000_General-Introduction/`
 >
-> **Band:** `000–099` G-ATLAS (Green Aircraft Top-Level Architecture Schema)
+> **Band:** `000–099` S-ATLAS (Sustainable Aviation Top-Level Architecture Schema)
 > **Master range:** `000–009` General Information and Service
 > **Chapter:** `000` ⇄ ATA 00 (General)
 > **Node / code section:** `000-000` ⇄ **ATA 00-00**
@@ -40,7 +40,7 @@ date: "2026-06-05"
 
 ## Item Set
 
-This node is the **orientation entry point** for the entire G-ATLAS data set. It tells a reader what the schema is, why it exists, how it is numbered, how it relates to ATA 100 / iSpec 2200, how it is controlled, and how every item ties back to evidence — **without assuming any energy carrier or airframe geometry**.
+This node is the **orientation entry point** for the entire S-ATLAS data set. It tells a reader what the schema is, why it exists, how it is numbered, how it relates to ATA 100 / iSpec 2200, how it is controlled, and how every item ties back to evidence — **without assuming any energy carrier or airframe geometry**.
 
 | Item | File | ATA ref | Purpose |
 |---|---|---|---|
@@ -90,7 +90,7 @@ Governed under the **SSOT+PUB** doctrine. Lifecycle stages follow the Q+ATLANTID
 |---|---|
 | [`000_General/README.md`](../README.md) | [`000-100_Applicability-and-Effectivity/`](../000-100_Applicability-and-Effectivity/) |
 | [`000-009_General-Information-and-Service/README.md`](../../README.md) | [`000-200_Identification-and-Designation/`](../000-200_Identification-and-Designation/) |
-| [`000-099_G-ATLAS/`](../../../../../) | [`000-300_Vocabulary-Units-and-Reference-Frames/`](../000-300_Vocabulary-Units-and-Reference-Frames/) |
+| [`000-099_S-ATLAS/`](../../../../../) | [`000-300_Vocabulary-Units-and-Reference-Frames/`](../000-300_Vocabulary-Units-and-Reference-Frames/) |
 
 ---
 
@@ -98,18 +98,18 @@ Governed under the **SSOT+PUB** doctrine. Lifecycle stages follow the Q+ATLANTID
 
 | Term / Acronym | Definition |
 |---|---|
-| **G-ATLAS** | Green Aircraft Top-Level Architecture Schema — agnostic architecture standard for aviation systems. |
-| **SSOT** | Single Source of Truth — the authoritative G-ATLAS repository; programmes may not modify it. |
+| **S-ATLAS** | Sustainable Aviation Top-Level Architecture Schema — agnostic architecture standard for aviation systems. |
+| **SSOT** | Single Source of Truth — the authoritative S-ATLAS repository; programmes may not modify it. |
 | **PUB** | Programme publication — an S1000D CSDB instance derived from SSOT via impact study. |
 | **SSOT+PUB** | Two-layer publication architecture: SSOT (this standard) and PUB (programme CSDB). |
-| **Node** | Primary addressable unit of G-ATLAS; maps to an ATA chapter-section (e.g. `000-000` ⇄ ATA 00-00). |
+| **Node** | Primary addressable unit of S-ATLAS; maps to an ATA chapter-section (e.g. `000-000` ⇄ ATA 00-00). |
 | **Item** | A single markdown file inside a node; maps to an ATA subject. |
-| **Band** | Top-level numbering block. Band `000–099` is G-ATLAS. |
+| **Band** | Top-level numbering block. Band `000–099` is S-ATLAS. |
 | **Master range** | A ten-chapter block within a band (e.g. `000–009`). |
 | **ATA** | Air Transport Association numbering standard (ATA 100 / iSpec 2200). |
-| **DMC** | Data Module Code — an S1000D identifier assigned to a PUB instance of a G-ATLAS item. |
+| **DMC** | Data Module Code — an S1000D identifier assigned to a PUB instance of a S-ATLAS item. |
 | **CSDB** | Common Source DataBase — S1000D-compliant storage for programme data modules. |
-| **Q-DATAGOV** | The Q-Division responsible for G-ATLAS content governance. |
+| **Q-DATAGOV** | The Q-Division responsible for S-ATLAS content governance. |
 | **LC-letter stage** | Q+ATLANTIDE lifecycle maturity phase (LC-A Conceptual Design … LC-N Nature Sustainment). |
 | **IEF** | Integrity Evidence Framework — the evidence anchoring scheme using SHA-256 hashes. |
 | **Agnostic** | Content attribute: no programme- or product-specific assumption. |
@@ -120,12 +120,12 @@ Governed under the **SSOT+PUB** doctrine. Lifecycle stages follow the Q+ATLANTID
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for all G-ATLAS content |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for all S-ATLAS content |
 | R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Chapter–section–subject numbering basis |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Data module and DMC rules |
 | R4 | ICAO Annex 8 — Airworthiness of Aircraft | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Supreme airworthiness regulatory reference |
-| R5 | G-ATLAS Band README | [`000-099_G-ATLAS/README.md`](../../../../../README.md) | Band governance, all master ranges |
+| R5 | S-ATLAS Band README | [`000-099_S-ATLAS/README.md`](../../../../../README.md) | Band governance, all master ranges |
 
 ---
 
-*Document footprint: G-ATLAS-000-000-README · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*
+*Document footprint: S-ATLAS-000-000-README · v0.1.0 · 2026-06-05 · Owner: Q-DATAGOV · Status: baseline · SHA-256: TBS*

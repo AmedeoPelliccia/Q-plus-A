@@ -1,6 +1,6 @@
 # 051-140 — Nondestructive Inspection Standards
 
-G-ATLAS node `051-140` · level: subsystem · applicability: **eWTW+hBWB**.
+S-ATLAS node `051-140` · level: subsystem · applicability: **eWTW+hBWB**.
 
 NDI method standards for metallic and composite structure: ultrasonic, thermographic, bond-line inspection, cryo-exposed zone inspection.
 
@@ -8,4 +8,4 @@ NDI method standards for metallic and composite structure: ultrasonic, thermogra
 
 - Cryo-exposed zone inspection applies to hBWB hydrogen-adjacent structure.
 
-Generated 2026-07-09 · realize_G-ATLAS-051.py v1.0.0 · No-AAA compliant
+Generated 2026-07-09 · realize_S-ATLAS-051.py v1.0.0 · No-AAA compliant

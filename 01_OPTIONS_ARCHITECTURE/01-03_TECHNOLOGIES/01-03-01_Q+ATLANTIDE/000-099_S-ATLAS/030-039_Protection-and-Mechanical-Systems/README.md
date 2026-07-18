@@ -1,19 +1,19 @@
 ---
 node: 030-039
-title: Protection and Mechanical Systems — G-ATLAS Green-Native Breakdown (030, 031)
-band: 000-099_G-ATLAS
+title: Protection and Mechanical Systems — S-ATLAS Green-Native Breakdown (030, 031)
+band: 000-099_S-ATLAS
 master_range: 030-039
-ssot_path: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/030-039_Protection-and-Mechanical-Systems"
+ssot_path: "01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/030-039_Protection-and-Mechanical-Systems"
 nodes_in_this_file: ["030 Ice and Rain Protection", "031 Indicating and Recording Systems"]
 view: green-native (canonical)
 heritage_source: "ATA breakdown, Embraer 170/175/190/195 and Lineage 1000 (chapters 30 Ice and Rain Protection, 31 Indicating/Recording Systems)"
 principle: "030: bleed-air anti-ice -> electrothermal (⚡), the band's sharpest bleed divergence; rest already-electric (carries). 031: avionics/information, carries whole + green delta for energy-system indicating/recording."
-numbering_map: "ATA CC-SS-UU  →  G-ATLAS 0CC-SS0-UU0"
+numbering_map: "ATA CC-SS-UU  →  S-ATLAS 0CC-SS0-UU0"
 owner_030: Q-AIR
 owner_031: Q-AIR
 data_owner_031_900: Q-DATAGOV
 green_overlay: Q-GREENTECH
-governance: [DEGF-v1.0, LC-A..LC-N, No-AAA, SSOT+PUB, G-ATLAS-NORM-TERM-001]
+governance: [DEGF-v1.0, LC-A..LC-N, No-AAA, SSOT+PUB, S-ATLAS-NORM-TERM-001]
 status: baseline
 version: "1.0"
 ---
@@ -44,8 +44,8 @@ Two chapters at opposite ends of the green divergence. **030** carries the band'
 |---|---|
 | **Anti-ice (thermal)** | Ice prevention by heating a surface; conventionally bleed-air, green-native electrothermal. |
 | **Electrothermal** | Anti-ice/de-ice by electric heating elements (bleedless). |
-| **Propulsion module** | Agnostic term for the engine/powerplant (G-ATLAS-NORM-TERM-001). |
-| **CAS** | Crew Alerting System — vendor-neutral term for EICAS-class crew messages (G-ATLAS-NORM-TERM-001). |
+| **Propulsion module** | Agnostic term for the engine/powerplant (S-ATLAS-NORM-TERM-001). |
+| **CAS** | Crew Alerting System — vendor-neutral term for EICAS-class crew messages (S-ATLAS-NORM-TERM-001). |
 | **DPP** | Digital Product Passport — lifecycle health/parameter record. |
 | **STD / ⚡ / ◇ / STD-G** | carries · substitution · green overlay on a carrying section · green delta. |
 
@@ -61,7 +61,7 @@ Two chapters at opposite ends of the green divergence. **030** carries the band'
 ## 2. Numbering Map
 
 ```text
-ATA   CC - SS - UU      →   G-ATLAS  0CC - SS0 - UU0
+ATA   CC - SS - UU      →   S-ATLAS  0CC - SS0 - UU0
 e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 ```
 
@@ -69,7 +69,7 @@ e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 
 ## 3. Chapter 030 — Ice and Rain Protection
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `030-000` | 30-00 | **General — Ice and Rain Protection** | STD |
 | `030-100` ⚡ | 30-10 | **Airfoil Anti-Ice** (was wing thermal, bleed)[^c-3010] | ⚡ |
@@ -105,7 +105,7 @@ e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 
 ## 4. Chapter 031 — Indicating and Recording Systems
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `031-000` | 31-00 | **General — Indicating/Recording** | STD |
 | `031-100` | 31-10 | **Instrument and Control Panels** | STD |
@@ -153,7 +153,7 @@ e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 
 ## 6. Governance
 
-Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **G-ATLAS-NORM-TERM-001** (engine → propulsion module; EICAS → CAS). Owners: **030 → Q-AIR**, **031 → Q-AIR** with **Q-DATAGOV** for the `031-900` recording/DPP delta; green overlay **Q-GREENTECH**. Electrothermal anti-ice power (`030-900-010`) and the green CAS infrastructure (`031-900-050`) couple to safety-critical chapters and carry that flag.
+Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **S-ATLAS-NORM-TERM-001** (engine → propulsion module; EICAS → CAS). Owners: **030 → Q-AIR**, **031 → Q-AIR** with **Q-DATAGOV** for the `031-900` recording/DPP delta; green overlay **Q-GREENTECH**. Electrothermal anti-ice power (`030-900-010`) and the green CAS infrastructure (`031-900-050`) couple to safety-critical chapters and carry that flag.
 
 ---
 

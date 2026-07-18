@@ -1,6 +1,6 @@
 # 046 — Information Systems
 
-G-ATLAS chapter `046` · applicability: **eWTW+hBWB**.
+S-ATLAS chapter `046` · applicability: **eWTW+hBWB**.
 
 Open-world information systems, air-ground exchange and security domains.
 
@@ -16,4 +16,4 @@ Open-world information systems, air-ground exchange and security domains.
 | `046-500` | Security Domains and Gateways | eWTW+hBWB |
 | `046-900` | Information Governance and Evidence | eWTW+hBWB |
 
-Generated 2026-07-09 · realize_G-ATLAS-040-049.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant
+Generated 2026-07-09 · realize_S-ATLAS-040-049.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant

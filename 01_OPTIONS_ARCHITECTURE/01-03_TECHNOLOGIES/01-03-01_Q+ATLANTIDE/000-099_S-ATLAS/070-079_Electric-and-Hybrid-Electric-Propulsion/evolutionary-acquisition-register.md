@@ -1,4 +1,4 @@
-# Evolutionary Acquisition Register — 000-099_ATLAS / 070-079_Eco-Tech-and-Hybrid-Electric-Propulsion
+# Evolutionary Acquisition Register — 000-099_ATLAS / 070-079_Electric-and-Hybrid-Electric-Propulsion
 
 ## 1. Architecture Band
 
@@ -6,7 +6,7 @@
 | ----------------- | --------------------------- |
 | Architecture code | `ATLAS`                 |
 | Master range      | `000-099`               |
-| Code range        | `070-079_Eco-Tech-and-Hybrid-Electric-Propulsion`                |
+| Code range        | `070-079_Electric-and-Hybrid-Electric-Propulsion`                |
 | Architecture name | Aircraft Top Level Architecture Schema/System                     |
 | Scope             | Code range within ATLAS.                    |
 

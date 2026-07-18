@@ -1,7 +1,7 @@
 # 005 — Time Limits / Maintenance Checks
 
 **Chapter:** `005` ⇄ ATA **05**
-**Master range:** `000-009_General-Information-and-Service` · **Band:** `000-099_G-ATLAS`
+**Master range:** `000-009_General-Information-and-Service` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-DATAGOV · **Status:** agnostic standard (SSOT)
 
 Physical chapter folder wrapping the `005-Y00` section-nodes. `005-000` carries the chapter-general content; `005-900` is the agnostic green-architecture delta (Q-GREENTECH overlay). See the master-range [`README.md`](../README.md) for the full node register and conventions.

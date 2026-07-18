@@ -21,9 +21,9 @@ version: "1.0"
 
 This subject is an **assembly station** (AMPEL360-PBS-PN-CM-001): the single
 point where identity switches from *taxonomy code* to *part number*. Above the
-station: G-ATLAS codes. Below: part numbers.
+station: S-ATLAS codes. Below: part numbers.
 
-**Handshake** - `realizes: 053-010-010` (G-ATLAS)  <->  `top_assembly: EWTW-530101-000` (P/N),
+**Handshake** - `realizes: 053-010-010` (S-ATLAS)  <->  `top_assembly: EWTW-530101-000` (P/N),
 recorded in [`station.yaml`](./station.yaml).
 
 ## Part-number grammar

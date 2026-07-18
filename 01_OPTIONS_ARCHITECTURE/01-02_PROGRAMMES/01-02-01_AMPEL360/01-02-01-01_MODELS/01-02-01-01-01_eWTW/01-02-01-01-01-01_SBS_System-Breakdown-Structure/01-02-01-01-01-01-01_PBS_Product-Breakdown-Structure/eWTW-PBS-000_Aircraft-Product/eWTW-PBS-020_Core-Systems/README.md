@@ -1,6 +1,6 @@
 # eWTW-PBS-020 — Core Systems
 
-Product group = G-ATLAS band `020`. Chapters:
+Product group = S-ATLAS band `020`. Chapters:
 
 - [`eWTW-PBS-021-000`](eWTW-PBS-021-000_Air-Conditioning-and-Environmental-Control) — Air Conditioning and Environmental Control
 - [`eWTW-PBS-022-000`](eWTW-PBS-022-000_Auto-Flight) — Auto Flight

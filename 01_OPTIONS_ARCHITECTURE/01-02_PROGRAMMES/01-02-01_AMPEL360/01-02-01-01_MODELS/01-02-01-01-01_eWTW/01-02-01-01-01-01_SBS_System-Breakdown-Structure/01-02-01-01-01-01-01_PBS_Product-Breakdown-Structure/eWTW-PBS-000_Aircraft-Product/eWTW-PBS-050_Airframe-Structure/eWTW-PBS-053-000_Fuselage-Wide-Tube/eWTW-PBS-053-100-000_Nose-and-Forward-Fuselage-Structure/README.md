@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-000 - Nose and Forward Fuselage Structure
 
-Section node mirroring G-ATLAS `053-100_Nose-and-Forward-Fuselage-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node mirroring S-ATLAS `053-100_Nose-and-Forward-Fuselage-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 

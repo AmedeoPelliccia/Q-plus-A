@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-800-000
   model: eWTW
   side: SSOT
-  scope: "Cargo and Baggage Door Frame Fittings and Plates - G-ATLAS 053-800-050 subject scope; folder name is SSOT."
+  scope: "Cargo and Baggage Door Frame Fittings and Plates - S-ATLAS 053-800-050 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

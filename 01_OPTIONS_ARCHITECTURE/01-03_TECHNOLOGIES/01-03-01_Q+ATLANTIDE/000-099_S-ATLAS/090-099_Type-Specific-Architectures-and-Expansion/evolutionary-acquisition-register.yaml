@@ -3,7 +3,7 @@
 evolutionary_acquisition_register:
   architecture_code: "ATLAS"
   master_range: "000-099"
-  code_range: "090-099_Type-Specific-Programmes-and-Expansion"
+  code_range: "090-099_Type-Specific-Architectures-and-Expansion"
   architecture_name: "Aircraft Top Level Architecture Schema/System"
   status: "draft"
   core_blocks: []

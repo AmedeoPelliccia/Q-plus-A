@@ -1,13 +1,13 @@
 # 025 — Equipment / Furnishings
 
 **Chapter:** `025` ⇄ ATA **25**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `025-360` ◇, `025-370` ◇, `025-800` ◇, `025-810` ◇, `025-820` ◇, `025-830` ◇, `025-850` ◇, `025-860` ◇, `025-900` [G]) · **Status:** agnostic standard (SSOT)
 **Version:** 2.0 · **Heritage:** ATA breakdown, Embraer 170/175/190/195 and Lineage 1000 (chapter 25)
 
-Furnishings are energy-neutral and carry forward whole (no ⚡ substitution). The green dimension is an additive overlay (`025-900`). Two subject layers exist: **STD** (generic — any transport aircraft) and **PRG** (programme-bound, type-specific). Terminology normalized per **G-ATLAS-NORM-TERM-001**: "HANDICAPPED" → "accessible / Persons with Reduced Mobility (PRM)". See the master-range [`README.md`](../README.md) for conventions.
+Furnishings are energy-neutral and carry forward whole (no ⚡ substitution). The green dimension is an additive overlay (`025-900`). Two subject layers exist: **STD** (generic — any transport aircraft) and **PRG** (programme-bound, type-specific). Terminology normalized per **S-ATLAS-NORM-TERM-001**: "HANDICAPPED" → "accessible / Persons with Reduced Mobility (PRM)". See the master-range [`README.md`](../README.md) for conventions.
 
-**Numbering map:** `ATA CC-SS-UU → G-ATLAS 0CC-SS0-UU0` (e.g. `25-43-02 → 025-430-020`)
+**Numbering map:** `ATA CC-SS-UU → S-ATLAS 0CC-SS0-UU0` (e.g. `25-43-02 → 025-430-020`)
 
 ## Section-nodes
 

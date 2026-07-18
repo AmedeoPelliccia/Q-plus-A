@@ -1,7 +1,7 @@
 # 020 — Standard Maintenance Practices
 
 **Chapter:** `020` ⇄ ATA **20**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (node `020-900`) · **Status:** agnostic standard (SSOT)
 
 Energy-neutral throughout; the only green addition is the high-energy / HV / cryogenic standard-practices delta (`020-900`). See the master-range [`README.md`](../README.md) for the full node register and conventions.

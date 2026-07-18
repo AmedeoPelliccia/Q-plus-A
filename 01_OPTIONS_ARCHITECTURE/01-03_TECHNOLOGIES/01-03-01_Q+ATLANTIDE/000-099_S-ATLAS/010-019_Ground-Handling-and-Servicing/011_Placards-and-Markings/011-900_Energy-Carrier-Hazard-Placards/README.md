@@ -1,6 +1,6 @@
 # 011-900 — Energy-Carrier Hazard Placards
 
-**Node:** `011-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `011-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `011_Placards-and-Markings` · **Layer:** STD-G
 **Owner:** Q-GROUND · **Green overlay:** Q-GREENTECH
 

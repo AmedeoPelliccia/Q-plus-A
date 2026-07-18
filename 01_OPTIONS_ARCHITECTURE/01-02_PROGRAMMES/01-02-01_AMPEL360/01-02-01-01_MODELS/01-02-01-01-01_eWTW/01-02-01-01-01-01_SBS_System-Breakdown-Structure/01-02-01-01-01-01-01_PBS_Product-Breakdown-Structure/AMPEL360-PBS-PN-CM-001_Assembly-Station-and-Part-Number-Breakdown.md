@@ -13,7 +13,7 @@ version: "1.0"
 # AMPEL360-PBS-PN-CM-001 — Assembly Station & Part-Number Breakdown
 
 Defines how a PBS **subject** node (`0CC-SS0-UU0`) transitions into the physical
-**part-number tree**. This is the handshake between the G-ATLAS functional
+**part-number tree**. This is the handshake between the S-ATLAS functional
 taxonomy (above) and the as-designed product configuration (below).
 
 ## 1. Assembly station
@@ -21,7 +21,7 @@ taxonomy (above) and the as-designed product configuration (below).
 A PBS subject node is the **assembly station**: the single point where identity
 switches from *taxonomy code* to *part number*. The station holds exactly one
 **top assembly** plus a `station.yaml` recording the handshake
-(`realizes: <taxonomy-id>` ↔ `top_assembly: <PN>`). Above the station: G-ATLAS
+(`realizes: <taxonomy-id>` ↔ `top_assembly: <PN>`). Above the station: S-ATLAS
 codes. Below: part numbers.
 
 ## 2. Part-number grammar
@@ -32,7 +32,7 @@ EWTW-<CSN>-<VAR>[-<VAR>…]
 
 - `EWTW` — model identity code (MIC); changes per MODEL.
 - `CSN` — 6-digit compact system number = ATA-equivalent of the station's
-  G-ATLAS code (`053-010-010` → `530101`). This is the conserved **root**.
+  S-ATLAS code (`053-010-010` → `530101`). This is the conserved **root**.
 - `VAR` — find/variant group, ×10 (`000` = the assembly itself; `010`, `020`…
   its components; nest deeper by appending another ×10 group). The root
   `EWTW-<CSN>` is conserved down the entire tree.

@@ -1,6 +1,6 @@
 # eWTW-PBS-053-700-060 - Seat Tracks
 
-CSN `537006` - grammar `EWTW-537006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-700-060`.
+CSN `537006` - grammar `EWTW-537006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-700-060`.
 
 ## Items
 

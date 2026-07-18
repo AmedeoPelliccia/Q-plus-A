@@ -1,4 +1,4 @@
-# Upgradeability Register — 000-099_ATLAS / 060-069_Traditional-Propulsion
+# Upgradeability Register — 000-099_ATLAS / 060-069_Sustainable-Energy-Carrier-Combustion-Propulsion
 
 ## 1. Architecture Band
 
@@ -6,7 +6,7 @@
 | ----------------- | --------------------------- |
 | Architecture code | `ATLAS`                 |
 | Master range      | `000-099`               |
-| Code range        | `060-069_Traditional-Propulsion`                |
+| Code range        | `060-069_Sustainable-Energy-Carrier-Combustion-Propulsion`                |
 | Architecture name | Aircraft Top Level Architecture Schema/System                     |
 | Scope             | Code range within ATLAS.                    |
 

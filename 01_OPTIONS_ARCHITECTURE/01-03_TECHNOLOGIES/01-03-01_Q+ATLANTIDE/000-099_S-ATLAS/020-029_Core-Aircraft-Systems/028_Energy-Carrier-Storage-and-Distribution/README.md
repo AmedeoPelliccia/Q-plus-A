@@ -1,13 +1,13 @@
 # 028 — Energy-Carrier Storage and Distribution
 
 **Chapter:** `028` ⇄ ATA **28**
-**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_G-ATLAS`
+**Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-GREENTECH · **Green overlay:** Q-GREENTECH (all sections ⚡ except `028-250`, `028-420`) · **Status:** agnostic standard (SSOT)
 **Version:** 1.0 · **Heritage:** ATA breakdown, Embraer 170/175/190/195 and Lineage 1000 (chapter 28 Fuel)
 
 This chapter is a **near-total substitution**: the functional skeleton of ATA 28 (Storage / Distribution / Indicating) is retained and re-expressed in energy-carrier-agnostic terms. Every fuel-specific section is substituted ⚡. Green delta `028-900` carries genuinely novel content with no fuel analogue: cell/module management, state-of-health monitoring, cryogenic boil-off control, charge/discharge protection, and thermal management interface. The conventional liquid-hydrocarbon fuel system is demoted to the heritage footprint. See the master-range [`README.md`](../README.md) and the companion breakdown [`028-029_Green-Native-Breakdown.md`](../028-029_Green-Native-Breakdown.md) for full context and numbering conventions.
 
-**Numbering map:** `ATA CC-SS-UU → G-ATLAS 0CC-SS0-UU0` (e.g. `28-23-03 → 028-230-030`)
+**Numbering map:** `ATA CC-SS-UU → S-ATLAS 0CC-SS0-UU0` (e.g. `28-23-03 → 028-230-030`)
 
 ## Section-nodes
 

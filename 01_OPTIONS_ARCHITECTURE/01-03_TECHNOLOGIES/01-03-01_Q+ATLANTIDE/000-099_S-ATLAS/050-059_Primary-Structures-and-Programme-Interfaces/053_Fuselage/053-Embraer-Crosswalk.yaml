@@ -1,7 +1,7 @@
 embraer_to_gatlas_crosswalk:
   chapter: "53"
   source: "Embraer 170/175/190/195 & Lineage 1000 ATA Breakdown"
-  target_band: 000-099_G-ATLAS
+  target_band: 000-099_S-ATLAS
   mappings:
     - {embraer: "53-00-00", gatlas: 053-000-010, title: "Fuselage General"}
     - {embraer: "53-00-20", gatlas: 053-000-020, title: "Fuselage Protective Films and Tapes"}

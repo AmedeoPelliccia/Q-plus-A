@@ -1,6 +1,6 @@
 # eWTW-PBS-053-300-030 - Tail Bumper
 
-CSN `533003` - grammar `EWTW-533003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-300-030`.
+CSN `533003` - grammar `EWTW-533003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-300-030`.
 
 ## Items
 

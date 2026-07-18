@@ -1,6 +1,6 @@
 # 042 — Integrated Modular Avionics
 
-G-ATLAS chapter `042` · applicability: **eWTW+hBWB**.
+S-ATLAS chapter `042` · applicability: **eWTW+hBWB**.
 
 Shared computing platform hosting avionics functions under partitioning guarantees. Hosted applications belong to their functional chapters; the platform, network and partitioning governance live here.
 
@@ -15,4 +15,4 @@ Shared computing platform hosting avionics functions under partitioning guarante
 | `042-400` | Hosted Function Partitioning and Configuration | eWTW+hBWB |
 | `042-900` | Platform Health and Resource Management | eWTW+hBWB |
 
-Generated 2026-07-09 · realize_G-ATLAS-040-049.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant
+Generated 2026-07-09 · realize_S-ATLAS-040-049.py v1.0.0 · register regenerated from the realizer data, never hand-edited · No-AAA compliant

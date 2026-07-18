@@ -1,6 +1,6 @@
 # eWTW-PBS-053-000-030 - Fuselage External Access Doors and Panels General
 
-CSN `530003` - grammar `EWTW-530003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-000-030`.
+CSN `530003` - grammar `EWTW-530003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-000-030`.
 
 ## Items
 

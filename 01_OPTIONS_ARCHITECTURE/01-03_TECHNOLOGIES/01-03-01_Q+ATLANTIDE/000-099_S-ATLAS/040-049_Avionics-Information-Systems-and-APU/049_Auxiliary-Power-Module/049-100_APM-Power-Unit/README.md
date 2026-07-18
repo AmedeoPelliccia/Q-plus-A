@@ -1,6 +1,6 @@
 # 049-100 — APM Power Unit
 
-G-ATLAS node `049-100` · level: section · applicability: **eWTW+hBWB**.
+S-ATLAS node `049-100` · level: section · applicability: **eWTW+hBWB**.
 
 The power-generating core: fuel-cell stack assembly (hBWB) or battery-converter module (eWTW).
 
@@ -8,4 +8,4 @@ The power-generating core: fuel-cell stack assembly (hBWB) or battery-converter 
 
 - Replaces the conventional gas-turbine power section and its engine subsections in full.
 
-Generated 2026-07-09 · realize_G-ATLAS-040-049.py v1.0.0 · No-AAA compliant
+Generated 2026-07-09 · realize_S-ATLAS-040-049.py v1.0.0 · No-AAA compliant

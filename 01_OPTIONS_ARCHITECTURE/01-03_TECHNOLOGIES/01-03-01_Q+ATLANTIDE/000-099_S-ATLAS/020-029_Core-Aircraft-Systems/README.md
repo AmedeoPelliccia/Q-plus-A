@@ -1,23 +1,23 @@
 ---
 node: 020-029
-title: Core Aircraft Systems — G-ATLAS Green-Native Breakdown (020–027) [see companion 028-029]
-band: 000-099_G-ATLAS
+title: Core Aircraft Systems — S-ATLAS Green-Native Breakdown (020–027) [see companion 028-029]
+band: 000-099_S-ATLAS
 master_range: 020-029
 nodes_in_this_file: ["020 Standard Maintenance Practices", "021 Air Conditioning / Environmental Control", "022 Auto Flight", "023 Communications", "024 Electrical Power", "026 Fire Protection", "027 Flight Control"]
 view: green-native (canonical)
 heritage_source: "ATA breakdown, Embraer 170/175/190/195 and Lineage 1000 (chapters 20–24, 26–27)"
 principle: "Energy-neutral sections carry forward; divergence nodes carry the green binding; conventional content is demoted to the heritage footprint (footnotes)."
-numbering_map: "ATA CC-SS-UU  →  G-ATLAS 0CC-SS0-UU0"
+numbering_map: "ATA CC-SS-UU  →  S-ATLAS 0CC-SS0-UU0"
 owner: Q-AIR
 green_overlay: Q-GREENTECH
-governance: [LC-A..LC-N, No-AAA, SSOT+PUB, G-ATLAS-NORM-TERM-001]
+governance: [LC-A..LC-N, No-AAA, SSOT+PUB, S-ATLAS-NORM-TERM-001]
 status: baseline
 version: "1.1"
 ---
 
 # 020-029 — Core Aircraft Systems · Green-Native Breakdown (020–027)
 
-Seven nodes of the Core Aircraft Systems range, normalized from the Embraer ATA reference into the green-native G-ATLAS form. **Chapters 028 and 029** (the two deepest substitutions: Fuel → Energy-Carrier Storage and Distribution; Hydraulic Power → Actuation and Utility Power) are covered in the companion document [`028-029_Green-Native-Breakdown.md`](028-029_Green-Native-Breakdown.md), which completes the full 020-029 master range. **Chapter 020** (Standard Maintenance Practices) is energy-neutral and carries forward whole, with an additive green delta for high-energy practices. **Chapter 021** (Air Conditioning / ECS) substitutes the conventional bleed-air air-cycle cooling pack with an electrically-driven, energy-integrated cooling architecture; the conventional pack is retained as heritage footprint. **Chapter 022** (Auto Flight) carries forward with one light substitution — Auto Throttle renamed to source-agnostic Autothrust. **Chapter 023** (Communications) carries forward whole. **Chapter 024** (Electrical Power) is the most divergent core system: the conventional engine-driven, AC-primary architecture is inverted to an HVDC-primary, fuel-cell/battery/regenerative one, and the engine IDG is fully footprinted. **Chapter 026** (Fire Protection) normalizes engine/APU detection and extinguishing to propulsion-module/auxiliary-power-module terms; the agent diverges for electric propulsion (gaseous agents do not suppress lithium thermal runaway); green delta `026-900` adds energy-system fire (battery thermal runaway, hydrogen fire, HV arc-fault) — safety-critical. **Chapter 027** (Flight Controls) carries surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/slat forward; the six hydraulic-actuation sections are substituted by agnostic powered actuation; green delta `027-900` adds the more-electric EHA/EMA architecture.
+Seven nodes of the Core Aircraft Systems range, normalized from the Embraer ATA reference into the green-native S-ATLAS form. **Chapters 028 and 029** (the two deepest substitutions: Fuel → Energy-Carrier Storage and Distribution; Hydraulic Power → Actuation and Utility Power) are covered in the companion document [`028-029_Green-Native-Breakdown.md`](028-029_Green-Native-Breakdown.md), which completes the full 020-029 master range. **Chapter 020** (Standard Maintenance Practices) is energy-neutral and carries forward whole, with an additive green delta for high-energy practices. **Chapter 021** (Air Conditioning / ECS) substitutes the conventional bleed-air air-cycle cooling pack with an electrically-driven, energy-integrated cooling architecture; the conventional pack is retained as heritage footprint. **Chapter 022** (Auto Flight) carries forward with one light substitution — Auto Throttle renamed to source-agnostic Autothrust. **Chapter 023** (Communications) carries forward whole. **Chapter 024** (Electrical Power) is the most divergent core system: the conventional engine-driven, AC-primary architecture is inverted to an HVDC-primary, fuel-cell/battery/regenerative one, and the engine IDG is fully footprinted. **Chapter 026** (Fire Protection) normalizes engine/APU detection and extinguishing to propulsion-module/auxiliary-power-module terms; the agent diverges for electric propulsion (gaseous agents do not suppress lithium thermal runaway); green delta `026-900` adds energy-system fire (battery thermal runaway, hydrogen fire, HV arc-fault) — safety-critical. **Chapter 027** (Flight Controls) carries surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/slat forward; the six hydraulic-actuation sections are substituted by agnostic powered actuation; green delta `027-900` adds the more-electric EHA/EMA architecture.
 
 ---
 
@@ -81,7 +81,7 @@ Seven nodes of the Core Aircraft Systems range, normalized from the Embraer ATA 
 ## 2. Numbering Map
 
 ```text
-ATA   CC - SS - UU      →   G-ATLAS  0CC - SS0 - UU0
+ATA   CC - SS - UU      →   S-ATLAS  0CC - SS0 - UU0
 chapter left-pad · section ×10 · unit/subject ×10 · 900-lane = green
 e.g.  21-51-05  →  021-510-050
 ```
@@ -92,7 +92,7 @@ e.g.  21-51-05  →  021-510-050
 
 Energy-neutral throughout. Owner Q-AIR; EWIS overlay applies.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `020-000` | 20-00 | General — Standard Practices, Airframe | STD |
 | `020-010` | 20-01 | Wire and cable identification — description | STD |
@@ -129,7 +129,7 @@ Energy-neutral throughout. Owner Q-AIR; EWIS overlay applies.
 
 Distribution / ventilation / pressurization / temperature control carry forward; cooling ⚡ is substituted; thermal integration is a first-class green delta.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `021-000` | 21-00 | General — Air Conditioning (incl. AMS controller modules) | STD |
 | `021-200` | 21-20 | Distribution — main ducts, check valves, air-mix H-duct | STD |
@@ -168,7 +168,7 @@ Distribution / ventilation / pressurization / temperature control carry forward;
 
 ## 5. Chapter 022 — Auto Flight
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `022-000` | 22-00 | General — Auto Flight | STD |
 | `022-100` | 22-10 | Autopilot | STD |
@@ -183,7 +183,7 @@ Distribution / ventilation / pressurization / temperature control carry forward;
 
 Energy-neutral throughout — carries forward whole. No substitution, no green delta.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `023-000` | 23-00 | General — Communications | STD |
 | `023-010` | 23-01 | Communication antennas | STD |
@@ -210,7 +210,7 @@ Energy-neutral throughout — carries forward whole. No substitution, no green d
 
 Section skeleton retained; generation ⚡ substituted; HVDC architecture as a first-class green delta. Distribution / breakers / outlets carry forward.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `024-000` | 24-00 | General — Electrical Power (control panel, breakers, relay supports, multi-system harnesses) | STD |
 | `024-010` | 24-01 | Multi-system harness | STD |
@@ -259,7 +259,7 @@ Section skeleton retained; generation ⚡ substituted; HVDC architecture as a fi
 
 Detection (cabin, lavatory, cargo, recirculation bay, landing-gear bay, e-racks) and extinguishing (cargo, portable, lavatory, monument) carry forward; engine/APU nodes ⚡ substituted; energy-system fire a first-class safety-critical green delta.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `026-000` | 26-00 | General — Fire Protection (+ system test switch) | STD |
 | `026-100` | 26-10 | Fire / smoke detection — detector panel, sonoalert audible-signal device | STD |
@@ -293,7 +293,7 @@ Detection (cabin, lavatory, cargo, recirculation bay, landing-gear bay, e-racks)
 
 Surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/slat carry forward; hydraulic-actuation sections ⚡ substituted by agnostic powered actuation; more-electric EHA/EMA architecture as a first-class green delta.
 
-| G-ATLAS | ATA | Title | Layer |
+| S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `027-000` | 27-00 | General — Flight Controls (+ electrical harness, FLT CTRL fault) | STD |
 | `027-030` | 27-03 | Flight-controls electrical system — FCM, primary actuator-control electronics, trim panel, fly-by-wire backup battery, FCS power/backup relays | STD |
@@ -370,7 +370,7 @@ The bleed-air *source* a conventional ECS depends on (ATA 36 Pneumatic) has no g
 
 ## 11. Governance
 
-Inherits **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **G-ATLAS-NORM-TERM-001** (engine/APU → propulsion-module/auxiliary-power-module). STD/STD-G nodes are the SSOT standard; programme carriers (§10) project into the programme CSDB (PUB). Owner **Q-AIR**; green overlay **Q-GREENTECH**. Cross-references the propulsion band `070-079` for traction HVDC, main energy storage, and energy-bay fire isolation. `026-900` is flagged safety-critical.
+Inherits **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **S-ATLAS-NORM-TERM-001** (engine/APU → propulsion-module/auxiliary-power-module). STD/STD-G nodes are the SSOT standard; programme carriers (§10) project into the programme CSDB (PUB). Owner **Q-AIR**; green overlay **Q-GREENTECH**. Cross-references the propulsion band `070-079` for traction HVDC, main energy storage, and energy-bay fire isolation. `026-900` is flagged safety-critical.
 
 ---
 
@@ -384,7 +384,7 @@ Inherits **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **G-ATLAS-NOR
 
 ## Conventional Heritage Footprint
 
-[^ref]: Embraer, *ATA Breakdown — EMB 170/175/190/195 and Lineage 1000*, chapters 20–24, 26–27 (uploaded reference). Conventional bindings are transcribed for heritage cross-walk only and are **not** part of the green-native G-ATLAS standard.
+[^ref]: Embraer, *ATA Breakdown — EMB 170/175/190/195 and Lineage 1000*, chapters 20–24, 26–27 (uploaded reference). Conventional bindings are transcribed for heritage cross-walk only and are **not** part of the green-native S-ATLAS standard.
 
 [^c-2150]: **Conventional `21-50` — Cooling.** The conventional cooling source is engine **bleed air** processed by an air-cycle pack. Superseded green-native by electrically-driven / energy-integrated environmental cooling.
 

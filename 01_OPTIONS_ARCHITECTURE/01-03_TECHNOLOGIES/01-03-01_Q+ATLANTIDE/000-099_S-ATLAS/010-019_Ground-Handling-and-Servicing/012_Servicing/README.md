@@ -1,7 +1,7 @@
 # 012 — Servicing
 
 **Chapter:** `012` ⇄ ATA **12**
-**Master range:** `010-019_Ground-Handling-and-Servicing` · **Band:** `000-099_G-ATLAS`
+**Master range:** `010-019_Ground-Handling-and-Servicing` · **Band:** `000-099_S-ATLAS`
 **Owner:** Q-GROUND · **Green overlay:** Q-GREENTECH (nodes `012-110` ⚡, `012-130` ⚡, `012-900`) · **Status:** agnostic standard (SSOT)
 
 The heart of the substitution. `012-110` (energy-carrier servicing) replaces fuel servicing; `012-130` (lubricant & thermal-fluid) replaces oil servicing; `012-900` carries novel ground-energy operations with no ATA equivalent. See the master-range [`README.md`](../README.md) for the full node register and conventions.

@@ -1,6 +1,6 @@
 # eWTW-PBS-053-400-000 - Tailcone and Auxiliary Power Module Structure
 
-Section node mirroring G-ATLAS `053-400_Tailcone-and-Auxiliary-Power-Module-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node mirroring S-ATLAS `053-400_Tailcone-and-Auxiliary-Power-Module-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 

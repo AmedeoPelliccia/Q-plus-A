@@ -2,7 +2,7 @@
 artifact: 021 TPuBS Node Tree
 chapter: "021"
 title: Air Conditioning & Environmental Control — TPuBS Node Tree
-home: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/"
+home: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/"
 pmc: PMC-EWTW-AMM
 convention: AMPEL360-AMM-INFOCODE-CM-001
 doctrine: green-native
@@ -147,4 +147,4 @@ Each DM carries `<applic>` matching its range, so an IETP filtered to a given MS
 1. `AMPEL360-AMM-INFOCODE-CM-001` — info-code / effectivity-variant convention.
 2. S1000D Issue 4.2 — DM, DMC, info codes, applicability.
 3. eWTW SSOT PBS — `eWTW-PBS-60-20_Environmental-Control-System-ECS-Electric` (under `01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-60_Mechanical-and-Utility-Systems/`).
-4. G-ATLAS SSOT — chapter 021 (green-native).
+4. S-ATLAS SSOT — chapter 021 (green-native).

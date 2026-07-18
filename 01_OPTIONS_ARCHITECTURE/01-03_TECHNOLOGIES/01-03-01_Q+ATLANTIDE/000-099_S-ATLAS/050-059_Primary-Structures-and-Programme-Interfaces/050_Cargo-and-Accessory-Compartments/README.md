@@ -1,6 +1,6 @@
 # 050 — Cargo and Accessory Compartments
 
-Green Aircraft Top-Level Architecture Schema (G-ATLAS) chapter for cargo and accessory compartments on the AMPEL360 next-generation models **eWTW** (electric Wide-Tube-and-Wing) and **hBWB** (hydrogen Blended-Wing-Body).
+Sustainable Aviation Top-Level Architecture Schema (S-ATLAS) chapter for cargo and accessory compartments on the AMPEL360 next-generation models **eWTW** (electric Wide-Tube-and-Wing) and **hBWB** (hydrogen Blended-Wing-Body).
 
 Scope doctrine: 050 owns compartments as **fitted volumes** — linings, fire barriers, partitions, nets, loading provisions, insulation and compartment-level monitoring provisions. Compartment structure is 053 (floors 053-700, door surrounds 053-600-080, energy-carrier bay 053-900); fire/smoke detection and suppression are 026; compartment ventilation and isolation are 021; protective atmospheres are 047. On hBWB the lower-deck compartment set is remapped to embedded centerbody bays by zone ruling. Section grammar is ATA-section x10 (`050-XY0`).
 
@@ -33,4 +33,4 @@ Scope doctrine: 050 owns compartments as **fitted volumes** — linings, fire ba
 
 - `050-400` Unassigned — RESERVED: reserved per classic grammar.
 
-Generated 2026-07-09 · realize_G-ATLAS-050.py v1.0.0 · register regenerated from the realizer data, never hand-edited · 
+Generated 2026-07-09 · realize_S-ATLAS-050.py v1.0.0 · register regenerated from the realizer data, never hand-edited · 

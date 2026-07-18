@@ -2,7 +2,7 @@
 section: "053-800"
 title: Pressure Bulkheads and Major Attach Fittings
 chapter: "053"
-band: 000-099_G-ATLAS
+band: 000-099_S-ATLAS
 side: SSOT
 owner: Q-STRUCTURES
 doctrine: green-native

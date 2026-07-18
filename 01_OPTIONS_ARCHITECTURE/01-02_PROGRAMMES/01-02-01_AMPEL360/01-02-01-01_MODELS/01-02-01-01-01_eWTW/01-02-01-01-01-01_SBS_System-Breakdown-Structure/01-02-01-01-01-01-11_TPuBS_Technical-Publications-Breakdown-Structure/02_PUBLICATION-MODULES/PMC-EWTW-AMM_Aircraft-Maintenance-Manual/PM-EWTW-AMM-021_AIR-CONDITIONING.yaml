@@ -1,7 +1,7 @@
 # PM-EWTW-AMM-021 — Publication Module: ATA 021 Air Conditioning
 # Editorial projection of the common DM pool for the AMM.
 # Generated/regenerable from the DMRL rows that satisfy:
-#   publicationTargets contains PMC-EWTW-AMM  AND  G-ATLAS chapter = 021
+#   publicationTargets contains PMC-EWTW-AMM  AND  S-ATLAS chapter = 021
 
 publicationModule:
   pmc: "PMC-EWTW-AMM"
@@ -11,9 +11,9 @@ publicationModule:
 selection:
   publicationTarget: "PMC-EWTW-AMM"
   atlasScope:
-    band: "G-ATLAS_000-099"
+    band: "S-ATLAS_000-099"
     chapter: "021"
-  dmrlSource: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/DMRL-021.yaml"
+  dmrlSource: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/DMRL-021.yaml"
 
 structure:
   - node: "021-000"

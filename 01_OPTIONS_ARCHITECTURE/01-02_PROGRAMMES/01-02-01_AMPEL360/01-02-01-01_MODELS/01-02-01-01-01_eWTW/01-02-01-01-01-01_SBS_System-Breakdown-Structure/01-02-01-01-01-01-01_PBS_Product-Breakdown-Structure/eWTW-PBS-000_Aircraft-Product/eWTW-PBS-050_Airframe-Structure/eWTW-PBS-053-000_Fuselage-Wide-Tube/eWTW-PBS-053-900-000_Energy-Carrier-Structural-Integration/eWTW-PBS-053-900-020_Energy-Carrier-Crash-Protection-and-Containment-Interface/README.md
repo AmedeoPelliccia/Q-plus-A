@@ -1,6 +1,6 @@
 # eWTW-PBS-053-900-020 - Energy Carrier Crash Protection and Containment Interface
 
-CSN `539002` - grammar `EWTW-539002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-900-020`.
+CSN `539002` - grammar `EWTW-539002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-900-020`.
 
 ## Items
 

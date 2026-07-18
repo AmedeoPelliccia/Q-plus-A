@@ -2,7 +2,7 @@
 section: "053-700"
 title: Floor and Pressure Deck Structure
 chapter: "053"
-band: 000-099_G-ATLAS
+band: 000-099_S-ATLAS
 side: SSOT
 owner: Q-STRUCTURES
 doctrine: green-native

@@ -34,7 +34,7 @@ TPuBS container for the **Flight Deck Electric Reheat Trim** subject of chapter 
 
 ## DMC allocation
 
-SNS (`systemCode 21 · subSystem 6 · subSubSystem 1 · assy 01`) is **derived** from the G-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
+SNS (`systemCode 21 · subSystem 6 · subSubSystem 1 · assy 01`) is **derived** from the S-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
 
 | Short handle | Full DMC (provisional) | Info | Type |
 |---|---|---|---|

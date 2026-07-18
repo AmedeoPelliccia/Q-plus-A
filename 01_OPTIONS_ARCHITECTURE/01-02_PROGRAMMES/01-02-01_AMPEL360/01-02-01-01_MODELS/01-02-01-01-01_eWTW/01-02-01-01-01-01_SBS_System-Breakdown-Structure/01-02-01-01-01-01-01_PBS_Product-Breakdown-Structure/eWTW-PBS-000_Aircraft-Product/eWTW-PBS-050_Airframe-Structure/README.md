@@ -1,6 +1,6 @@
 # eWTW-PBS-050 — Airframe Structure
 
-Product group = G-ATLAS band `050`. Chapters:
+Product group = S-ATLAS band `050`. Chapters:
 
 - [`eWTW-PBS-051-000`](eWTW-PBS-051-000_Standard-Practices-Structures) — Standard Practices Structures
 - [`eWTW-PBS-052-000`](eWTW-PBS-052-000_Doors) — Doors

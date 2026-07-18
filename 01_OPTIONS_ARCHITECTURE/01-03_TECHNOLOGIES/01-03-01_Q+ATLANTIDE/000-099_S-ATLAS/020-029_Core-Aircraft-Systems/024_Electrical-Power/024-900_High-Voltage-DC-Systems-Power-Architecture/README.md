@@ -1,6 +1,6 @@
 # 024-900 — High-Voltage DC Systems-Power Architecture & Power Electronics
 
-**Node:** `024-900` ⇄ ATA **—** (G-ATLAS green delta)
+**Node:** `024-900` ⇄ ATA **—** (S-ATLAS green delta)
 **Chapter:** `024_Electrical-Power` · **Layer:** STD-G
 **Owner:** Q-AIR · **Green overlay:** Q-GREENTECH
 

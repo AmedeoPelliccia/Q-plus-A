@@ -10,4 +10,4 @@
 - [`025-420-020-Aft-LH-Lavatory.md`](025-420-020-Aft-LH-Lavatory.md) — Aft LH lavatory (ATA 25-42-02) | STD
 - [`025-420-030-Aft-LH-Accessible-Lavatory-PRM.md`](025-420-030-Aft-LH-Accessible-Lavatory-PRM.md) — Aft LH accessible lavatory (PRM)[^term-prm] (ATA 25-42-03) | STD
 
-[^term-prm]: **Terminology normalized — G-ATLAS-NORM-TERM-001.** Heritage reference labels this item "Aft LH Handicapped Lavatory" (ATA 25-42-03). G-ATLAS adopts "accessible / Persons with Reduced Mobility (PRM)" per EASA/IATA usage. Original term retained for cross-walk only.
+[^term-prm]: **Terminology normalized — S-ATLAS-NORM-TERM-001.** Heritage reference labels this item "Aft LH Handicapped Lavatory" (ATA 25-42-03). S-ATLAS adopts "accessible / Persons with Reduced Mobility (PRM)" per EASA/IATA usage. Original term retained for cross-walk only.

@@ -17,7 +17,7 @@ level1_functions: 13
 numbering: "eWTW-FBS-NN0 (×10 per level)"
 methodology: ARP4754B function development
 safety_artifact: FHA (ARP4761A)
-allocates_to: [PBS, G-ATLAS-SNS]
+allocates_to: [PBS, S-ATLAS-SNS]
 governance: [DEGF-v1.0, LC-A..LC-N, No-AAA, SSOT+PUB]
 owner: Q-AIR
 status: baseline
@@ -58,14 +58,14 @@ The root node of the **Functional Breakdown Structure** for the AMPEL360 **eWTW*
 | **FBS** | Functional Breakdown Structure — decomposition of the system by **function** (this structure). |
 | **FFBD** | Functional Flow Block Diagram — ordered/behavioural view of how functions execute. |
 | **FHA** | Functional Hazard Assessment — function-based safety analysis that classifies failure-condition severity and drives DAL. |
-| **G-ATLAS** | Green Aircraft Top-Level Architecture Schema — the `000-099` band of `Q+ATLANTIDE1000`; the SNS taxonomy functions are classified under. |
-| **iSpec 2200** | ATA *Information Standards for Aviation Maintenance*; the chapter/section numbering G-ATLAS mirrors.[^ispec2200] |
+| **S-ATLAS** | Sustainable Aviation Top-Level Architecture Schema — the `000-099` band of `Q+ATLANTIDE1000`; the SNS taxonomy functions are classified under. |
+| **iSpec 2200** | ATA *Information Standards for Aviation Maintenance*; the chapter/section numbering S-ATLAS mirrors.[^ispec2200] |
 | **LC-A … LC-N** | The letter-coded **engineering lifecycle** axis (LC-A = Concept-Design, through LC-N); SSOT-side content matures through these stages. Supersedes the deprecated LC01–LC14 numbering. |
 | **N²** | N-squared diagram — matrix capturing functional/interface couplings between N elements. |
 | **PBS** | Product Breakdown Structure — decomposition of the system by **physical product**; the allocation target of the FBS. |
 | **PUB** | Publication side of the SSOT+PUB doctrine; realized in the TPuBS. |
 | **SBS** | System Breakdown Structure — the umbrella holding PBS, FBS, and the other breakdown views. |
-| **SNS** | Standard Numbering System — the chapter/section grammar used by ATA/S1000D and mirrored by G-ATLAS. |
+| **SNS** | Standard Numbering System — the chapter/section grammar used by ATA/S1000D and mirrored by S-ATLAS. |
 | **SSOT** | Single Source of Truth — authoritative source content; PBS and FBS are SSOT-side. |
 | **TPuBS** | Technical Publications Breakdown Structure — the S1000D/CSDB publication projection (PUB side).[^s1000d] |
 
@@ -132,7 +132,7 @@ Functions decompose top-down using a `×10` numbering grammar — `eWTW-FBS-20` 
 - `FFBD/` — the functional flow / behavioural view;
 - `N2/` — the functional interface matrix;
 - `FHA/` — the functional hazard assessment;
-- `ALLOCATION/` — the mapping to PBS items and G-ATLAS chapters;
+- `ALLOCATION/` — the mapping to PBS items and S-ATLAS chapters;
 - `SSOT/` — the source-of-truth manifest.
 
 This mirrors the systems-engineering practice of separating functional architecture from physical architecture and binding the two by allocation.[^incose]
@@ -161,7 +161,7 @@ This flow is captured formally in each function's `FFBD/`, and the couplings sho
 
 ## 6. Allocation to Product and Taxonomy
 
-Allocation is the bridge from the functional world to the physical and taxonomic worlds. A function is *performed by* one or more PBS items and is *classified under* one or more G-ATLAS chapters.
+Allocation is the bridge from the functional world to the physical and taxonomic worlds. A function is *performed by* one or more PBS items and is *classified under* one or more S-ATLAS chapters.
 
 ```mermaid
 flowchart LR
@@ -171,14 +171,14 @@ flowchart LR
     subgraph PH["Physical · PBS"]
       P1["Propulsion assembly"]
     end
-    subgraph TX["Taxonomy · G-ATLAS SNS"]
+    subgraph TX["Taxonomy · S-ATLAS SNS"]
       G1["070-079 · Eco / Hybrid-Electric Propulsion"]
     end
     F20 -->|"allocated to"| P1
     F20 -->|"classified under"| G1
 ```
 
-The complete function-to-product-to-taxonomy table is maintained in the FBS folder breakdown and in each node's `ALLOCATION/` folder. Allocation is the formal record that keeps the FBS, PBS, and G-ATLAS taxonomy mutually consistent.
+The complete function-to-product-to-taxonomy table is maintained in the FBS folder breakdown and in each node's `ALLOCATION/` folder. Allocation is the formal record that keeps the FBS, PBS, and S-ATLAS taxonomy mutually consistent.
 
 ---
 

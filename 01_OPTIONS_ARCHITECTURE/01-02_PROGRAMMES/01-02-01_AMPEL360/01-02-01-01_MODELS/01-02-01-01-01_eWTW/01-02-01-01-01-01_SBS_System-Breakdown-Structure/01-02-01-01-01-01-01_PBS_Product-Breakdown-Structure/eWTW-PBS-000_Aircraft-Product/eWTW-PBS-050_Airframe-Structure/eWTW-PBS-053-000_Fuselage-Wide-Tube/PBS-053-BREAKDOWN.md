@@ -1,8 +1,8 @@
-# PBS-053 Chapter Breakdown - eWTW Fuselage Wide-Tube (G-ATLAS-coherent)
+# PBS-053 Chapter Breakdown - eWTW Fuselage Wide-Tube (S-ATLAS-coherent)
 
 Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant - grammar AMPEL360-PBS-PN-CM-001 (CSN `EWTW-53SU-III`; S = section hundreds+tens, U = subject tens; items x10; +1..+9 children).
 
-Sections and subjects are 1:1 with the G-ATLAS 053 register (PBS code = SSOT taxonomy code = AMM SNS code). SUPERSEDES the x10-section draft manifest (realize_PBS-053_chapter.py, v1). Standards families (splices, cutout doublers, clips, lugs) are chapter 051 scope and are not realized here; production joins are zone-general splice hardware plus assembly stations.
+Sections and subjects are 1:1 with the S-ATLAS 053 register (PBS code = SSOT taxonomy code = AMM SNS code). SUPERSEDES the x10-section draft manifest (realize_PBS-053_chapter.py, v1). Standards families (splices, cutout doublers, clips, lugs) are chapter 051 scope and are not realized here; production joins are zone-general splice hardware plus assembly stations.
 
 ## 053-000-000 General
 
@@ -412,7 +412,7 @@ Sections and subjects are 1:1 with the G-ATLAS 053 register (PBS code = SSOT tax
   - `EWTW-536009-051` FITTING-KEEL-END-FWD
   - `EWTW-536009-052` FITTING-KEEL-END-AFT
 
-> PROPOSED G-ATLAS EXTENSION - not in the current 053-600 register; requires taxonomy ruling. Delete this subject entry to drop it.
+> PROPOSED S-ATLAS EXTENSION - not in the current 053-600 register; requires taxonomy ruling. Delete this subject entry to drop it.
 
 ## 053-700-000 Floor and Pressure Deck Structure
 

@@ -90,7 +90,7 @@ S  Standards
 
 | Range | Code | Controlled meaning |
 |---:|---|---|
-| `000–099` | [`G-ATLAS`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_G-ATLAS/) | Green Aircraft Top-Level Architecture Schema/System |
+| `000–099` | [`S-ATLAS`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/) | Sustainable Aviation Top-Level Architecture Schema |
 | `100–199` | [`STA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/100-199_STA/) | Space Technology Architecture |
 | `200–299` | [`DTTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/200-299_DTTA/) | Defence Technology and Tactical Architecture |
 | `300–399` | [`DTCEC`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/300-399_DTCEC/) | Digital Twin, Cloud, Edge and AI Computing |
@@ -126,7 +126,7 @@ These views converge on a consistent product definition rather than evolving as 
 One deterministic grammar connects taxonomy, product structure, part numbers and technical publications, 1:1 by number:
 
 ```text
-G-ATLAS taxonomy node          053-100-040   Radome and Diverters Attach Structure
+S-ATLAS taxonomy node          053-100-040   Radome and Diverters Attach Structure
 eWTW PBS subject               eWTW-PBS-053-100-040
 Controlled part number         EWTW-531004-020  (items x10; +1..+9 variants/constituents)
 S1000D data module (planned)   DMC ... 53-10-04 ...
@@ -141,7 +141,7 @@ Folder identity is the single source of truth; YAML metadata mirrors it. `AAA` i
 
 The most developed product architecture is the **AMPEL360 eWTW** model:
 
-* **Fuselage PBS chapter 053** — realized in G-ATLAS grammar (`053-000` … `053-900`): ten sections, ~60 subjects, ~340 controlled part numbers from radome attach to the energy-carrier bay, including LH/RH variants and constituents. Status: PLANNED identifiers with a realized exemplar (radome and nose-cone attach structure).
+* **Fuselage PBS chapter 053** — realized in S-ATLAS grammar (`053-000` … `053-900`): ten sections, ~60 subjects, ~340 controlled part numbers from radome attach to the energy-carrier bay, including LH/RH variants and constituents. Status: PLANNED identifiers with a realized exemplar (radome and nose-cone attach structure).
 * **ECS / ATA 021 technical publications** — information-centric TPuBS nodes (`021-000-010` general and zoning, `021-200-010` distribution ducting) with node-local DMRLs, publication-neutral S1000D ICN vector masters, metadata sidecars and a deterministic rendition stamper.
 * **Deterministic generators** — chapter scaffolds and registers are produced by idempotent Python realizers committed alongside the structures they generate; manifests are regenerated from the same data, never hand-edited.
 * **Energy-carrier and hydrogen concepts** — structural integration provisions (`053-900`), pack-bay and belly-fairing architecture, electric ECS (bleedless, E-pack based).

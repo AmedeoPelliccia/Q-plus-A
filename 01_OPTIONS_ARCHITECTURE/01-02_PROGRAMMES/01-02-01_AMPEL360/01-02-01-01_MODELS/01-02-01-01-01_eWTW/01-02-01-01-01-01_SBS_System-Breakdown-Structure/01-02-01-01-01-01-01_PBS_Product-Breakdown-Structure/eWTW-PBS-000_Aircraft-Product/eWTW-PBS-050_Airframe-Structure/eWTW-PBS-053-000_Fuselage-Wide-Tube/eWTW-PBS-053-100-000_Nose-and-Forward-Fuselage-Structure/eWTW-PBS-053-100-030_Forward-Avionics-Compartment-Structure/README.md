@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-030 - Forward Avionics Compartment Structure
 
-CSN `531003` - grammar `EWTW-531003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-100-030`.
+CSN `531003` - grammar `EWTW-531003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-030`.
 
 ## Items
 
