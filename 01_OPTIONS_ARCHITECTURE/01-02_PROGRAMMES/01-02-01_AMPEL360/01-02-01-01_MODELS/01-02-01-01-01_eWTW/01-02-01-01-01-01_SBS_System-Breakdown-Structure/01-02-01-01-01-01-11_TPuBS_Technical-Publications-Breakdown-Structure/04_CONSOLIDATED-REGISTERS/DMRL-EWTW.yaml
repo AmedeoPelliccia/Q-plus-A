@@ -21,7 +21,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-03-90-01-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
 
   - requirementId: "DMREQ-003-900-010-040-001"
     node: "003-900-010"
@@ -34,7 +34,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-03-90-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
 
   - requirementId: "DMREQ-003-900-010-420-001"
     node: "003-900-010"
@@ -46,7 +46,7 @@ dataModuleRequirements:
       - "PMC-EWTW-ECHM"
     dataModules:
       - "DMC-EWTW-A-03-90-01-00A-420A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
 
   - requirementId: "DMREQ-003-900-010-720-001"
     node: "003-900-010"
@@ -58,7 +58,7 @@ dataModuleRequirements:
       - "PMC-EWTW-ECHM"
     dataModules:
       - "DMC-EWTW-A-03-90-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
 
   - requirementId: "DMREQ-003-900-010-730-001"
     node: "003-900-010"
@@ -70,7 +70,7 @@ dataModuleRequirements:
       - "PMC-EWTW-ECHM"
     dataModules:
       - "DMC-EWTW-A-03-90-01-00A-730A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface"
 
   - requirementId: "DMREQ-021-000-010-040-001"
     node: "021-000-010"
@@ -83,7 +83,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-00-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
 
   - requirementId: "DMREQ-021-000-010-200-001"
     node: "021-000-010"
@@ -95,7 +95,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-00-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
 
   - requirementId: "DMREQ-021-000-010-300-001"
     node: "021-000-010"
@@ -107,7 +107,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-00-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning"
 
   - requirementId: "DMREQ-021-200-010-040-001"
     node: "021-200-010"
@@ -120,7 +120,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-20-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
 
   - requirementId: "DMREQ-021-200-010-200-001"
     node: "021-200-010"
@@ -132,7 +132,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-20-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
 
   - requirementId: "DMREQ-021-200-010-300-001"
     node: "021-200-010"
@@ -144,7 +144,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-20-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-010_Distribution-Ducting-Architecture"
 
   - requirementId: "DMREQ-021-200-030-034-001"
     node: "021-200-030"
@@ -157,7 +157,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-20-03-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
 
   - requirementId: "DMREQ-021-200-030-040-001"
     node: "021-200-030"
@@ -170,7 +170,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-20-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
 
   - requirementId: "DMREQ-021-200-030-200-001"
     node: "021-200-030"
@@ -182,7 +182,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-20-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
 
   - requirementId: "DMREQ-021-200-030-300-001"
     node: "021-200-030"
@@ -194,7 +194,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-20-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-200_Distribution/021-200-030_Distribution-Control-and-Balancing"
 
   - requirementId: "DMREQ-021-210-010-040-001"
     node: "021-210-010"
@@ -207,7 +207,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-21-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
 
   - requirementId: "DMREQ-021-210-010-200-001"
     node: "021-210-010"
@@ -219,7 +219,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-21-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
 
   - requirementId: "DMREQ-021-210-010-300-001"
     node: "021-210-010"
@@ -231,7 +231,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-21-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-010_Flight-Deck-Supply-Ducting"
 
   - requirementId: "DMREQ-021-210-030-040-001"
     node: "021-210-030"
@@ -244,7 +244,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-21-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-210-030-200-001"
     node: "021-210-030"
@@ -256,7 +256,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-21-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-210-030-300-001"
     node: "021-210-030"
@@ -268,7 +268,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-21-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-210-030-520-001"
     node: "021-210-030"
@@ -280,7 +280,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-21-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-210-030-720-001"
     node: "021-210-030"
@@ -292,7 +292,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-21-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-210_Cockpit-Distribution/021-210-030_Flight-Deck-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-220-010-040-001"
     node: "021-220-010"
@@ -305,7 +305,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-22-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
 
   - requirementId: "DMREQ-021-220-010-200-001"
     node: "021-220-010"
@@ -317,7 +317,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
 
   - requirementId: "DMREQ-021-220-010-300-001"
     node: "021-220-010"
@@ -329,7 +329,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-010_Cabin-Supply-Riser-Ducts"
 
   - requirementId: "DMREQ-021-220-030-040-001"
     node: "021-220-030"
@@ -342,7 +342,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-22-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-220-030-200-001"
     node: "021-220-030"
@@ -354,7 +354,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-220-030-300-001"
     node: "021-220-030"
@@ -366,7 +366,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-220-030-520-001"
     node: "021-220-030"
@@ -378,7 +378,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-220-030-720-001"
     node: "021-220-030"
@@ -390,7 +390,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-030_Cabin-Outlets-and-Diffusers"
 
   - requirementId: "DMREQ-021-220-050-040-001"
     node: "021-220-050"
@@ -403,7 +403,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-22-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
 
   - requirementId: "DMREQ-021-220-050-200-001"
     node: "021-220-050"
@@ -415,7 +415,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
 
   - requirementId: "DMREQ-021-220-050-300-001"
     node: "021-220-050"
@@ -427,7 +427,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-05-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
 
   - requirementId: "DMREQ-021-220-050-520-001"
     node: "021-220-050"
@@ -439,7 +439,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-05-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
 
   - requirementId: "DMREQ-021-220-050-720-001"
     node: "021-220-050"
@@ -451,7 +451,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-22-05-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-220_Passenger-Cabin-Distribution/021-220-050_Overhead-Distribution-Manifold"
 
   - requirementId: "DMREQ-021-230-010-040-001"
     node: "021-230-010"
@@ -464,7 +464,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-23-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
 
   - requirementId: "DMREQ-021-230-010-200-001"
     node: "021-230-010"
@@ -476,7 +476,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
 
   - requirementId: "DMREQ-021-230-010-300-001"
     node: "021-230-010"
@@ -488,7 +488,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
 
   - requirementId: "DMREQ-021-230-010-520-001"
     node: "021-230-010"
@@ -500,7 +500,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
 
   - requirementId: "DMREQ-021-230-010-720-001"
     node: "021-230-010"
@@ -512,7 +512,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-010_Gasper-Fan"
 
   - requirementId: "DMREQ-021-230-030-040-001"
     node: "021-230-030"
@@ -525,7 +525,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-23-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
 
   - requirementId: "DMREQ-021-230-030-200-001"
     node: "021-230-030"
@@ -537,7 +537,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
 
   - requirementId: "DMREQ-021-230-030-300-001"
     node: "021-230-030"
@@ -549,7 +549,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
 
   - requirementId: "DMREQ-021-230-030-520-001"
     node: "021-230-030"
@@ -561,7 +561,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
 
   - requirementId: "DMREQ-021-230-030-720-001"
     node: "021-230-030"
@@ -573,7 +573,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-23-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-230_Gasper/021-230-030_Gasper-Outlets-and-Ducting"
 
   - requirementId: "DMREQ-021-240-010-040-001"
     node: "021-240-010"
@@ -586,7 +586,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-24-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
 
   - requirementId: "DMREQ-021-240-010-200-001"
     node: "021-240-010"
@@ -598,7 +598,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
 
   - requirementId: "DMREQ-021-240-010-300-001"
     node: "021-240-010"
@@ -610,7 +610,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
 
   - requirementId: "DMREQ-021-240-010-520-001"
     node: "021-240-010"
@@ -622,7 +622,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
 
   - requirementId: "DMREQ-021-240-010-720-001"
     node: "021-240-010"
@@ -634,7 +634,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-010_Recirculation-Fan"
 
   - requirementId: "DMREQ-021-240-030-040-001"
     node: "021-240-030"
@@ -647,7 +647,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-24-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
 
   - requirementId: "DMREQ-021-240-030-200-001"
     node: "021-240-030"
@@ -659,7 +659,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
 
   - requirementId: "DMREQ-021-240-030-300-001"
     node: "021-240-030"
@@ -671,7 +671,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
 
   - requirementId: "DMREQ-021-240-030-520-001"
     node: "021-240-030"
@@ -683,7 +683,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
 
   - requirementId: "DMREQ-021-240-030-720-001"
     node: "021-240-030"
@@ -695,7 +695,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-030_Recirculation-Filter-HEPA"
 
   - requirementId: "DMREQ-021-240-050-040-001"
     node: "021-240-050"
@@ -708,7 +708,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-24-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
 
   - requirementId: "DMREQ-021-240-050-200-001"
     node: "021-240-050"
@@ -720,7 +720,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
 
   - requirementId: "DMREQ-021-240-050-300-001"
     node: "021-240-050"
@@ -732,7 +732,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-05-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
 
   - requirementId: "DMREQ-021-240-050-520-001"
     node: "021-240-050"
@@ -744,7 +744,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-05-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
 
   - requirementId: "DMREQ-021-240-050-720-001"
     node: "021-240-050"
@@ -756,7 +756,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-24-05-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-240_Recirculation/021-240-050_Recirculation-Ducting-and-Check-Valves"
 
   - requirementId: "DMREQ-021-250-010-040-001"
     node: "021-250-010"
@@ -769,7 +769,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-25-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
 
   - requirementId: "DMREQ-021-250-010-200-001"
     node: "021-250-010"
@@ -781,7 +781,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
 
   - requirementId: "DMREQ-021-250-010-300-001"
     node: "021-250-010"
@@ -793,7 +793,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
 
   - requirementId: "DMREQ-021-250-010-520-001"
     node: "021-250-010"
@@ -805,7 +805,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
 
   - requirementId: "DMREQ-021-250-010-720-001"
     node: "021-250-010"
@@ -817,7 +817,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-010_Ram-Air-Inlet-and-Scoop"
 
   - requirementId: "DMREQ-021-250-030-040-001"
     node: "021-250-030"
@@ -830,7 +830,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-25-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-250-030-200-001"
     node: "021-250-030"
@@ -842,7 +842,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-250-030-300-001"
     node: "021-250-030"
@@ -854,7 +854,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-250-030-520-001"
     node: "021-250-030"
@@ -866,7 +866,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-250-030-720-001"
     node: "021-250-030"
@@ -878,7 +878,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-030_Ram-Air-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-250-050-040-001"
     node: "021-250-050"
@@ -891,7 +891,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-25-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
 
   - requirementId: "DMREQ-021-250-050-200-001"
     node: "021-250-050"
@@ -903,7 +903,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
 
   - requirementId: "DMREQ-021-250-050-300-001"
     node: "021-250-050"
@@ -915,7 +915,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-25-05-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-250_Ram-Air-Ventilation/021-250-050_Ram-Air-Ducting"
 
   - requirementId: "DMREQ-021-260-010-040-001"
     node: "021-260-010"
@@ -928,7 +928,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-26-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
 
   - requirementId: "DMREQ-021-260-010-200-001"
     node: "021-260-010"
@@ -940,7 +940,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
 
   - requirementId: "DMREQ-021-260-010-300-001"
     node: "021-260-010"
@@ -952,7 +952,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
 
   - requirementId: "DMREQ-021-260-010-520-001"
     node: "021-260-010"
@@ -964,7 +964,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
 
   - requirementId: "DMREQ-021-260-010-720-001"
     node: "021-260-010"
@@ -976,7 +976,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-010_Avionics-Cooling-Fan"
 
   - requirementId: "DMREQ-021-260-030-040-001"
     node: "021-260-030"
@@ -989,7 +989,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-26-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
 
   - requirementId: "DMREQ-021-260-030-200-001"
     node: "021-260-030"
@@ -1001,7 +1001,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
 
   - requirementId: "DMREQ-021-260-030-300-001"
     node: "021-260-030"
@@ -1013,7 +1013,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-030_Avionics-Cooling-Ducting-and-Exhaust"
 
   - requirementId: "DMREQ-021-260-050-034-001"
     node: "021-260-050"
@@ -1026,7 +1026,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-26-05-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
 
   - requirementId: "DMREQ-021-260-050-040-001"
     node: "021-260-050"
@@ -1039,7 +1039,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-26-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
 
   - requirementId: "DMREQ-021-260-050-200-001"
     node: "021-260-050"
@@ -1051,7 +1051,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
 
   - requirementId: "DMREQ-021-260-050-300-001"
     node: "021-260-050"
@@ -1063,7 +1063,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-26-05-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-260_Avionics-Compartment-Ventilation/021-260-050_Avionics-Cooling-Control-and-Override"
 
   - requirementId: "DMREQ-021-270-010-040-001"
     node: "021-270-010"
@@ -1076,7 +1076,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-27-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
 
   - requirementId: "DMREQ-021-270-010-200-001"
     node: "021-270-010"
@@ -1088,7 +1088,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-27-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
 
   - requirementId: "DMREQ-021-270-010-300-001"
     node: "021-270-010"
@@ -1100,7 +1100,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-27-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
 
   - requirementId: "DMREQ-021-270-010-520-001"
     node: "021-270-010"
@@ -1112,7 +1112,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-27-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
 
   - requirementId: "DMREQ-021-270-010-720-001"
     node: "021-270-010"
@@ -1124,7 +1124,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-27-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-010_Cargo-Ventilation-Fan"
 
   - requirementId: "DMREQ-021-270-030-040-001"
     node: "021-270-030"
@@ -1137,7 +1137,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-27-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
 
   - requirementId: "DMREQ-021-270-030-200-001"
     node: "021-270-030"
@@ -1149,7 +1149,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-27-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
 
   - requirementId: "DMREQ-021-270-030-300-001"
     node: "021-270-030"
@@ -1161,7 +1161,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-27-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-270_Cargo-Compartment-Ventilation/021-270-030_Cargo-Ventilation-Ducting"
 
   - requirementId: "DMREQ-021-280-010-040-001"
     node: "021-280-010"
@@ -1174,7 +1174,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-28-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
 
   - requirementId: "DMREQ-021-280-010-200-001"
     node: "021-280-010"
@@ -1186,7 +1186,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-28-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
 
   - requirementId: "DMREQ-021-280-010-300-001"
     node: "021-280-010"
@@ -1198,7 +1198,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-28-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-010_Equipment-Cooling-Ventilation"
 
   - requirementId: "DMREQ-021-280-030-040-001"
     node: "021-280-030"
@@ -1211,7 +1211,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-28-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
 
   - requirementId: "DMREQ-021-280-030-200-001"
     node: "021-280-030"
@@ -1223,7 +1223,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-28-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
 
   - requirementId: "DMREQ-021-280-030-300-001"
     node: "021-280-030"
@@ -1235,7 +1235,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-28-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-280_Miscellaneous-Equipment-and-Chiller-Ventilation/021-280-030_Galley-Chiller-Ventilation"
 
   - requirementId: "DMREQ-021-290-010-040-001"
     node: "021-290-010"
@@ -1248,7 +1248,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-29-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
 
   - requirementId: "DMREQ-021-290-010-200-001"
     node: "021-290-010"
@@ -1260,7 +1260,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
 
   - requirementId: "DMREQ-021-290-010-300-001"
     node: "021-290-010"
@@ -1272,7 +1272,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
 
   - requirementId: "DMREQ-021-290-010-520-001"
     node: "021-290-010"
@@ -1284,7 +1284,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
 
   - requirementId: "DMREQ-021-290-010-720-001"
     node: "021-290-010"
@@ -1296,7 +1296,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-010_LP-Ground-Air-Connection"
 
   - requirementId: "DMREQ-021-290-030-040-001"
     node: "021-290-030"
@@ -1309,7 +1309,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-29-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
 
   - requirementId: "DMREQ-021-290-030-200-001"
     node: "021-290-030"
@@ -1321,7 +1321,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
 
   - requirementId: "DMREQ-021-290-030-300-001"
     node: "021-290-030"
@@ -1333,7 +1333,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
 
   - requirementId: "DMREQ-021-290-030-520-001"
     node: "021-290-030"
@@ -1345,7 +1345,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
 
   - requirementId: "DMREQ-021-290-030-720-001"
     node: "021-290-030"
@@ -1357,7 +1357,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-29-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-290_Low-Pressure-Ground-Supply/021-290-030_Ground-Supply-Check-Valve"
 
   - requirementId: "DMREQ-021-300-010-040-001"
     node: "021-300-010"
@@ -1370,7 +1370,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-30-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
 
   - requirementId: "DMREQ-021-300-010-200-001"
     node: "021-300-010"
@@ -1382,7 +1382,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-30-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
 
   - requirementId: "DMREQ-021-300-010-300-001"
     node: "021-300-010"
@@ -1394,7 +1394,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-30-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-300_Pressurization-Control/021-300-010_Pressurization-General-and-Schedule"
 
   - requirementId: "DMREQ-021-310-010-040-001"
     node: "021-310-010"
@@ -1407,7 +1407,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-31-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-310-010-200-001"
     node: "021-310-010"
@@ -1419,7 +1419,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-310-010-300-001"
     node: "021-310-010"
@@ -1431,7 +1431,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-310-010-520-001"
     node: "021-310-010"
@@ -1443,7 +1443,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-310-010-720-001"
     node: "021-310-010"
@@ -1455,7 +1455,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-010_Outflow-Valve-and-Actuator"
 
   - requirementId: "DMREQ-021-310-030-034-001"
     node: "021-310-030"
@@ -1468,7 +1468,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-31-03-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
 
   - requirementId: "DMREQ-021-310-030-040-001"
     node: "021-310-030"
@@ -1481,7 +1481,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-31-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
 
   - requirementId: "DMREQ-021-310-030-200-001"
     node: "021-310-030"
@@ -1493,7 +1493,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
 
   - requirementId: "DMREQ-021-310-030-300-001"
     node: "021-310-030"
@@ -1505,7 +1505,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-030_Cabin-Pressure-Controller"
 
   - requirementId: "DMREQ-021-310-050-034-001"
     node: "021-310-050"
@@ -1518,7 +1518,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-31-05-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
 
   - requirementId: "DMREQ-021-310-050-040-001"
     node: "021-310-050"
@@ -1531,7 +1531,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-31-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
 
   - requirementId: "DMREQ-021-310-050-200-001"
     node: "021-310-050"
@@ -1543,7 +1543,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
 
   - requirementId: "DMREQ-021-310-050-300-001"
     node: "021-310-050"
@@ -1555,7 +1555,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-31-05-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-310_Pressurization-Control-and-Indication/021-310-050_Pressurization-Indication-and-Sensors"
 
   - requirementId: "DMREQ-021-320-010-040-001"
     node: "021-320-010"
@@ -1568,7 +1568,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-32-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-010-200-001"
     node: "021-320-010"
@@ -1580,7 +1580,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-010-300-001"
     node: "021-320-010"
@@ -1592,7 +1592,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-010-520-001"
     node: "021-320-010"
@@ -1604,7 +1604,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-010-720-001"
     node: "021-320-010"
@@ -1616,7 +1616,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-010_Positive-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-030-040-001"
     node: "021-320-030"
@@ -1629,7 +1629,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-32-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-030-200-001"
     node: "021-320-030"
@@ -1641,7 +1641,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-030-300-001"
     node: "021-320-030"
@@ -1653,7 +1653,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-030-520-001"
     node: "021-320-030"
@@ -1665,7 +1665,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-320-030-720-001"
     node: "021-320-030"
@@ -1677,7 +1677,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-32-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-320_Cabin-Pressure-Relief/021-320-030_Negative-Pressure-Relief-Valve"
 
   - requirementId: "DMREQ-021-330-010-040-001"
     node: "021-330-010"
@@ -1690,7 +1690,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-33-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
 
   - requirementId: "DMREQ-021-330-010-200-001"
     node: "021-330-010"
@@ -1702,7 +1702,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-33-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
 
   - requirementId: "DMREQ-021-330-010-300-001"
     node: "021-330-010"
@@ -1714,7 +1714,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-33-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
 
   - requirementId: "DMREQ-021-330-010-520-001"
     node: "021-330-010"
@@ -1726,7 +1726,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-33-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
 
   - requirementId: "DMREQ-021-330-010-720-001"
     node: "021-330-010"
@@ -1738,7 +1738,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-33-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-330_Cargo-Compartment-Pressure-Equalization/021-330-010_Cargo-Pressure-Equalization-Valves"
 
   - requirementId: "DMREQ-021-400-010-040-001"
     node: "021-400-010"
@@ -1751,7 +1751,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-40-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
 
   - requirementId: "DMREQ-021-400-010-200-001"
     node: "021-400-010"
@@ -1763,7 +1763,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-40-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
 
   - requirementId: "DMREQ-021-400-010-300-001"
     node: "021-400-010"
@@ -1775,7 +1775,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-40-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-400_Heating/021-400-010_Heating-General"
 
   - requirementId: "DMREQ-021-410-010-040-001"
     node: "021-410-010"
@@ -1788,7 +1788,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-41-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
 
   - requirementId: "DMREQ-021-410-010-200-001"
     node: "021-410-010"
@@ -1800,7 +1800,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-41-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
 
   - requirementId: "DMREQ-021-410-010-300-001"
     node: "021-410-010"
@@ -1812,7 +1812,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-41-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
 
   - requirementId: "DMREQ-021-410-010-520-001"
     node: "021-410-010"
@@ -1824,7 +1824,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-41-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
 
   - requirementId: "DMREQ-021-410-010-720-001"
     node: "021-410-010"
@@ -1836,7 +1836,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-41-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-010_Floor-Heating-Panels"
 
   - requirementId: "DMREQ-021-410-030-034-001"
     node: "021-410-030"
@@ -1849,7 +1849,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-41-03-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
 
   - requirementId: "DMREQ-021-410-030-040-001"
     node: "021-410-030"
@@ -1862,7 +1862,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-41-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
 
   - requirementId: "DMREQ-021-410-030-200-001"
     node: "021-410-030"
@@ -1874,7 +1874,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-41-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
 
   - requirementId: "DMREQ-021-410-030-300-001"
     node: "021-410-030"
@@ -1886,7 +1886,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-41-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-410_Floor-Panel-Heating/021-410-030_Floor-Heating-Controller-and-Sensors"
 
   - requirementId: "DMREQ-021-500-010-040-001"
     node: "021-500-010"
@@ -1899,7 +1899,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-50-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
 
   - requirementId: "DMREQ-021-500-010-200-001"
     node: "021-500-010"
@@ -1911,7 +1911,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-50-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
 
   - requirementId: "DMREQ-021-500-010-300-001"
     node: "021-500-010"
@@ -1923,7 +1923,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-50-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-500_Environmental-Cooling-Electric-Integrated/021-500-010_Integrated-Cooling-General-and-Architecture"
 
   - requirementId: "DMREQ-021-510-010-040-001"
     node: "021-510-010"
@@ -1937,7 +1937,7 @@ dataModuleRequirements:
     dataModules:
       - "DMC-EWTW-A-21-51-01-00A-040A-A"
       - "DMC-EWTW-A-21-51-01-00A-040B-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
 
   - requirementId: "DMREQ-021-510-010-200-001"
     node: "021-510-010"
@@ -1949,7 +1949,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
 
   - requirementId: "DMREQ-021-510-010-520-001"
     node: "021-510-010"
@@ -1962,7 +1962,7 @@ dataModuleRequirements:
     dataModules:
       - "DMC-EWTW-A-21-51-01-00A-520A-A"
       - "DMC-EWTW-A-21-51-01-00A-520B-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
 
   - requirementId: "DMREQ-021-510-010-720-001"
     node: "021-510-010"
@@ -1975,7 +1975,7 @@ dataModuleRequirements:
     dataModules:
       - "DMC-EWTW-A-21-51-01-00A-720A-A"
       - "DMC-EWTW-A-21-51-01-00A-720B-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-010_Electrically-Driven-Cooling-Compressor"
 
   - requirementId: "DMREQ-021-510-030-040-001"
     node: "021-510-030"
@@ -1988,7 +1988,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-51-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
 
   - requirementId: "DMREQ-021-510-030-200-001"
     node: "021-510-030"
@@ -2000,7 +2000,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
 
   - requirementId: "DMREQ-021-510-030-520-001"
     node: "021-510-030"
@@ -2012,7 +2012,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
 
   - requirementId: "DMREQ-021-510-030-720-001"
     node: "021-510-030"
@@ -2024,7 +2024,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-030_Heat-Exchanger-Network"
 
   - requirementId: "DMREQ-021-510-050-040-001"
     node: "021-510-050"
@@ -2037,7 +2037,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-51-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
 
   - requirementId: "DMREQ-021-510-050-200-001"
     node: "021-510-050"
@@ -2049,7 +2049,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
 
   - requirementId: "DMREQ-021-510-050-520-001"
     node: "021-510-050"
@@ -2061,7 +2061,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-05-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
 
   - requirementId: "DMREQ-021-510-050-720-001"
     node: "021-510-050"
@@ -2073,7 +2073,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-05-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-050_Working-Fluid-Refrigerant-Loop"
 
   - requirementId: "DMREQ-021-510-070-040-001"
     node: "021-510-070"
@@ -2086,7 +2086,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-51-07-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
 
   - requirementId: "DMREQ-021-510-070-200-001"
     node: "021-510-070"
@@ -2098,7 +2098,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-07-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
 
   - requirementId: "DMREQ-021-510-070-520-001"
     node: "021-510-070"
@@ -2110,7 +2110,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-07-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
 
   - requirementId: "DMREQ-021-510-070-720-001"
     node: "021-510-070"
@@ -2122,7 +2122,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-07-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-070_Water-Extraction-and-Humidity-Control"
 
   - requirementId: "DMREQ-021-510-090-040-001"
     node: "021-510-090"
@@ -2135,7 +2135,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-51-09-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
 
   - requirementId: "DMREQ-021-510-090-200-001"
     node: "021-510-090"
@@ -2147,7 +2147,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-09-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
 
   - requirementId: "DMREQ-021-510-090-520-001"
     node: "021-510-090"
@@ -2159,7 +2159,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-09-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
 
   - requirementId: "DMREQ-021-510-090-720-001"
     node: "021-510-090"
@@ -2171,7 +2171,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-51-09-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/021-510-090_Cooling-Control-Sensors-and-Protection"
 
   - requirementId: "DMREQ-021-600-010-034-001"
     node: "021-600-010"
@@ -2184,7 +2184,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-60-01-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
 
   - requirementId: "DMREQ-021-600-010-040-001"
     node: "021-600-010"
@@ -2197,7 +2197,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-60-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
 
   - requirementId: "DMREQ-021-600-010-200-001"
     node: "021-600-010"
@@ -2209,7 +2209,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-60-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
 
   - requirementId: "DMREQ-021-600-010-300-001"
     node: "021-600-010"
@@ -2221,7 +2221,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-60-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-600_Temperature-Control/021-600-010_Temperature-Control-General-and-Zoning"
 
   - requirementId: "DMREQ-021-610-010-034-001"
     node: "021-610-010"
@@ -2234,7 +2234,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-61-01-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-610-010-040-001"
     node: "021-610-010"
@@ -2247,7 +2247,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-61-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-610-010-200-001"
     node: "021-610-010"
@@ -2259,7 +2259,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-61-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-610-010-300-001"
     node: "021-610-010"
@@ -2271,7 +2271,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-61-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-010_Flight-Deck-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-610-030-034-001"
     node: "021-610-030"
@@ -2284,7 +2284,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-61-03-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-610-030-040-001"
     node: "021-610-030"
@@ -2297,7 +2297,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-61-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-610-030-200-001"
     node: "021-610-030"
@@ -2309,7 +2309,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-61-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-610-030-300-001"
     node: "021-610-030"
@@ -2321,7 +2321,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-61-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-610_Cockpit-Zone-Temperature-Control/021-610-030_Flight-Deck-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-620-010-034-001"
     node: "021-620-010"
@@ -2334,7 +2334,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-62-01-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-620-010-040-001"
     node: "021-620-010"
@@ -2347,7 +2347,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-62-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-620-010-200-001"
     node: "021-620-010"
@@ -2359,7 +2359,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-62-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-620-010-300-001"
     node: "021-620-010"
@@ -2371,7 +2371,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-62-01-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-010_Cabin-Zone-Electric-Reheat-Trim"
 
   - requirementId: "DMREQ-021-620-030-034-001"
     node: "021-620-030"
@@ -2384,7 +2384,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-62-03-00A-034A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-620-030-040-001"
     node: "021-620-030"
@@ -2397,7 +2397,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-62-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-620-030-200-001"
     node: "021-620-030"
@@ -2409,7 +2409,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-62-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-620-030-300-001"
     node: "021-620-030"
@@ -2421,7 +2421,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-62-03-00A-300A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-620_Passenger-Cabin-Zone-Temperature-Control/021-620-030_Cabin-Zone-Sensors-and-Controller"
 
   - requirementId: "DMREQ-021-900-010-040-001"
     node: "021-900-010"
@@ -2434,7 +2434,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-90-01-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
 
   - requirementId: "DMREQ-021-900-010-200-001"
     node: "021-900-010"
@@ -2446,7 +2446,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-01-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
 
   - requirementId: "DMREQ-021-900-010-520-001"
     node: "021-900-010"
@@ -2458,7 +2458,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-01-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
 
   - requirementId: "DMREQ-021-900-010-720-001"
     node: "021-900-010"
@@ -2470,7 +2470,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-01-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-010_Energy-Source-Waste-Heat-Recovery"
 
   - requirementId: "DMREQ-021-900-030-040-001"
     node: "021-900-030"
@@ -2483,7 +2483,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-90-03-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
 
   - requirementId: "DMREQ-021-900-030-200-001"
     node: "021-900-030"
@@ -2495,7 +2495,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-03-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
 
   - requirementId: "DMREQ-021-900-030-520-001"
     node: "021-900-030"
@@ -2507,7 +2507,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-03-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
 
   - requirementId: "DMREQ-021-900-030-720-001"
     node: "021-900-030"
@@ -2519,7 +2519,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-03-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-030_Cryogenic-Cold-Sink-Utilization"
 
   - requirementId: "DMREQ-021-900-050-040-001"
     node: "021-900-050"
@@ -2532,7 +2532,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-90-05-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
 
   - requirementId: "DMREQ-021-900-050-200-001"
     node: "021-900-050"
@@ -2544,7 +2544,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-05-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
 
   - requirementId: "DMREQ-021-900-050-520-001"
     node: "021-900-050"
@@ -2556,7 +2556,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-05-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
 
   - requirementId: "DMREQ-021-900-050-720-001"
     node: "021-900-050"
@@ -2568,7 +2568,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-05-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-050_ECS-Thermal-Management-System-Coupling"
 
   - requirementId: "DMREQ-021-900-070-040-001"
     node: "021-900-070"
@@ -2581,7 +2581,7 @@ dataModuleRequirements:
       - "PMC-EWTW-SDS"
     dataModules:
       - "DMC-EWTW-A-21-90-07-00A-040A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
 
   - requirementId: "DMREQ-021-900-070-200-001"
     node: "021-900-070"
@@ -2593,7 +2593,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-07-00A-200A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
 
   - requirementId: "DMREQ-021-900-070-520-001"
     node: "021-900-070"
@@ -2605,7 +2605,7 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-07-00A-520A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
 
   - requirementId: "DMREQ-021-900-070-720-001"
     node: "021-900-070"
@@ -2617,4 +2617,4 @@ dataModuleRequirements:
       - "PMC-EWTW-AMM"
     dataModules:
       - "DMC-EWTW-A-21-90-07-00A-720A-A"
-    nodePath: "01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"
+    nodePath: "01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-900_Energy-System-Thermal-Integration/021-900-070_Bleedless-Air-Supply-Interface"

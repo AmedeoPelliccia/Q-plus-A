@@ -1,12 +1,12 @@
 ---
 pbs: eWTW
-scheme: G-ATLAS ×10 (v2.0)
+scheme: S-ATLAS ×10 (v2.0)
 status: baseline
 ---
 
 # eWTW-PBS-000 — Aircraft Product
 
-PBS riformata, allineata G-ATLAS/ATA ×10: `eWTW-PBS-<band>` group, `eWTW-PBS-<0CC>-<SS0>` chapter. PBS id == G-ATLAS subject id.
+PBS riformata, allineata S-ATLAS/ATA ×10: `eWTW-PBS-<band>` group, `eWTW-PBS-<0CC>-<SS0>` chapter. PBS id == S-ATLAS subject id.
 
 ## Groups
 

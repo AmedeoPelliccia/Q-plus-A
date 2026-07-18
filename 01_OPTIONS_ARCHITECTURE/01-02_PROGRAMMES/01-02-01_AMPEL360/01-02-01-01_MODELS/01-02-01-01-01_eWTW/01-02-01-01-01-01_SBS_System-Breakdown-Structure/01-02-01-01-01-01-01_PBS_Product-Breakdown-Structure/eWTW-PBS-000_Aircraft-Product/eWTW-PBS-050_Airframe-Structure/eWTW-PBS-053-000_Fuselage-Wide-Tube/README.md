@@ -4,7 +4,7 @@ title: Fuselage Wide-Tube
 g_atlas: "053"
 ata_origin: "53"
 config: WTW (Wide Tube Wing)
-grammar: "0CC-SSS-UU0 (G-ATLAS x100 sections; subjects x10; -000 = general)"
+grammar: "0CC-SSS-UU0 (S-ATLAS x100 sections; subjects x10; -000 = general)"
 model: eWTW
 side: SSOT
 member: "-01_PBS"
@@ -18,13 +18,13 @@ version: "3.0"
 # eWTW-PBS-053-000 - Fuselage Wide-Tube
 
 Product node for the primary fuselage structure of the eWTW (WTW - Wide Tube Wing
-configuration). Mirrors G-ATLAS `053` (ATA 53) 1:1 - PBS code = SSOT taxonomy
+configuration). Mirrors S-ATLAS `053` (ATA 53) 1:1 - PBS code = SSOT taxonomy
 code = AMM SNS code. SSOT-side; the AMM / SRM (PUB) consume it one-way via
 `ssot-ref.yaml`.
 
 ## Numbering
 
-`0CC-SSS-UU0` per the G-ATLAS 053 register: sections are ATA-section x10 codes
+`0CC-SSS-UU0` per the S-ATLAS 053 register: sections are ATA-section x10 codes
 rendered as 3-digit hundreds fields (`053-000`, `053-100` .. `053-900`);
 subjects populate the final triplet x10 (`053-SSS-UU0`). The former x10 section
 grammar (`053-010` .. `053-110`) is SUPERSEDED - see `PBS-053-BREAKDOWN.md`
@@ -88,7 +88,7 @@ doublers, clips/ties, lugs) and repair practices -> `051`.
 
 [`eWTW-PBS-053-010-000`](eWTW-PBS-053-010-000_Forward-Fuselage-Section) is the
 retained legacy hand-built x10 tree hosting the realized exemplar
-`eWTW-PBS-053-010-010` (CSN `530101`). Its G-ATLAS identity is
+`eWTW-PBS-053-010-010` (CSN `530101`). Its S-ATLAS identity is
 `053-100-040_Radome-and-Diverters-Attach-Structure` (CSN `531004`); PN map
 `EWTW-530101-xxx -> EWTW-531004-xxx`, items and nomenclatures 1:1. Retire it
 after executing the exemplar migration (ruling 5).
@@ -124,13 +124,13 @@ one defining section and two overlays:
   integration) and `053-700-000` Floor and Pressure Deck Structure (bay
   support + crash).
 
-Terminology per **G-ATLAS-NORM-TERM-001**: engine/APU -> auxiliary-power module
+Terminology per **S-ATLAS-NORM-TERM-001**: engine/APU -> auxiliary-power module
 (mounts/firewall in `053-400-000`).
 
 ## References
 
 [^ata53]: ATA 100 / iSpec 2200 - Chapter 53 *Fuselage* (heritage scope reference).
-[^gatlas]: G-ATLAS `050-059 / 053_Fuselage` register (section/subject SSOT this chapter mirrors 1:1).
-[^carrier]: G-ATLAS `028` Energy-Carrier-Storage (battery packs and their limits).
-[^fire]: G-ATLAS `026-900` Fire Protection (energy-carrier thermal/fire containment).
-[^sp]: G-ATLAS `051` Standard-Practices-Structures (standards families, fasteners, repair allowables).
+[^gatlas]: S-ATLAS `050-059 / 053_Fuselage` register (section/subject SSOT this chapter mirrors 1:1).
+[^carrier]: S-ATLAS `028` Energy-Carrier-Storage (battery packs and their limits).
+[^fire]: S-ATLAS `026-900` Fire Protection (energy-carrier thermal/fire containment).
+[^sp]: S-ATLAS `051` Standard-Practices-Structures (standards families, fasteners, repair allowables).

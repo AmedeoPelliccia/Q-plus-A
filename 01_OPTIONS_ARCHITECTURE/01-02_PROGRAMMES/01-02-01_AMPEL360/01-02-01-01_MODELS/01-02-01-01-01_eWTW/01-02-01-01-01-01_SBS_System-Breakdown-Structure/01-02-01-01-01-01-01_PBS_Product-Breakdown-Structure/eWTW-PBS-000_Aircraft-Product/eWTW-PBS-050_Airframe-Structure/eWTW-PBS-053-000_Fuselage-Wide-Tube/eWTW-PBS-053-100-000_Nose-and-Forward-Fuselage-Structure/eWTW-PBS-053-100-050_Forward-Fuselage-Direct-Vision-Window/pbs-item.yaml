@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-100-000
   model: eWTW
   side: SSOT
-  scope: "Forward Fuselage Direct Vision Window - G-ATLAS 053-100-050 subject scope; folder name is SSOT."
+  scope: "Forward Fuselage Direct Vision Window - S-ATLAS 053-100-050 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

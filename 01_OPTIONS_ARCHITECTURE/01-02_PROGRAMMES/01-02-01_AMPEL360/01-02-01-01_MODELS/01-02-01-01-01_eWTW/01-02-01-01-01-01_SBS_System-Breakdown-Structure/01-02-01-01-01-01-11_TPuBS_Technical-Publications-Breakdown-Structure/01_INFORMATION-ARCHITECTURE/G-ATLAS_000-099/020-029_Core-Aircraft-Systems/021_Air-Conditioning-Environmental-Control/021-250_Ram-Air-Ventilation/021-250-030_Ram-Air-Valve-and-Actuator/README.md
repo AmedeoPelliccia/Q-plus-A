@@ -34,7 +34,7 @@ TPuBS container for the **Ram Air Valve and Actuator** subject of chapter `021-2
 
 ## DMC allocation
 
-SNS (`systemCode 21 · subSystem 2 · subSubSystem 5 · assy 03`) is **derived** from the G-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
+SNS (`systemCode 21 · subSystem 2 · subSubSystem 5 · assy 03`) is **derived** from the S-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
 
 | Short handle | Full DMC (provisional) | Info | Type |
 |---|---|---|---|

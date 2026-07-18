@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-010 - Forward Fuselage Zone General
 
-CSN `531001` - grammar `EWTW-531001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-100-010`.
+CSN `531001` - grammar `EWTW-531001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-010`.
 
 ## Items
 

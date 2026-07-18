@@ -1,6 +1,6 @@
 # eWTW-PBS-053-500-040 - Center Fuselage III Skin
 
-CSN `535004` - grammar `EWTW-535004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-500-040`.
+CSN `535004` - grammar `EWTW-535004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-500-040`.
 
 ## Items
 

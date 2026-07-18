@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-400-000
   model: eWTW
   side: SSOT
-  scope: "Tailcone External Access Panels - G-ATLAS 053-400-050 subject scope; folder name is SSOT."
+  scope: "Tailcone External Access Panels - S-ATLAS 053-400-050 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

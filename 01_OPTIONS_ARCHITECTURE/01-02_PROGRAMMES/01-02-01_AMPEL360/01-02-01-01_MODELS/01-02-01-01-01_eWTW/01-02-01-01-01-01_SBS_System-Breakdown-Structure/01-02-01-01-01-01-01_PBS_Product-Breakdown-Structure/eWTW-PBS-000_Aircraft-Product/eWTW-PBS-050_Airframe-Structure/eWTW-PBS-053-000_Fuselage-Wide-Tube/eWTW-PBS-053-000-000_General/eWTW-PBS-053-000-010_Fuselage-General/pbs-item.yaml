@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-000-000
   model: eWTW
   side: SSOT
-  scope: "Fuselage General - G-ATLAS 053-000-010 subject scope; folder name is SSOT."
+  scope: "Fuselage General - S-ATLAS 053-000-010 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

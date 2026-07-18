@@ -1,6 +1,6 @@
 # eWTW-PBS-053-800-010 - Forward Pressure Bulkhead
 
-CSN `538001` - grammar `EWTW-538001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-800-010`.
+CSN `538001` - grammar `EWTW-538001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-800-010`.
 
 ## Items
 

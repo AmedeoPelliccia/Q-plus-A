@@ -24,7 +24,7 @@ PM references DMs by DMC; it never holds DM content (linked, not stored).
 
 * publication identity and configuration (`publication-baseline.yaml`, `pm.xml`);
 * editorial structure / PM sequence (`PM-<PMC>-<chapter>_*.yaml`);
-* selection rules (`PMC-<code>.yaml` — which G-ATLAS scope and info codes to pull);
+* selection rules (`PMC-<code>.yaml` — which S-ATLAS scope and info codes to pull);
 * applicability (`applicability.yaml`);
 * DM reference index (`dm-reference-index.yaml`);
 * release baseline, front matter, delivery configuration.
@@ -33,23 +33,23 @@ A PM can be generated automatically from the DMRL rows that satisfy its
 selection rules, e.g. for the AMM ATA 021 module:
 
 ```text
-publicationTargets contains PMC-EWTW-AMM  AND  G-ATLAS chapter = 021
+publicationTargets contains PMC-EWTW-AMM  AND  S-ATLAS chapter = 021
 ```
 
 ## Not every node needs every manual
 
 The DM ↔ publication matrix is many-to-many and lives in DMRL metadata
 (`publicationTargets`), not in the filesystem. No per-manual folders exist
-under information nodes, and no G-ATLAS copies exist under PMCs.
+under information nodes, and no S-ATLAS copies exist under PMCs.
 
-## G-ATLAS is the allocation backbone, not a mandatory TOC
+## S-ATLAS is the allocation backbone, not a mandatory TOC
 
-AMM, SDS, FIM and IPC largely follow the ATA/G-ATLAS breakdown. MPD, MMEL,
+AMM, SDS, FIM and IPC largely follow the ATA/S-ATLAS breakdown. MPD, MMEL,
 SB, CMM and DPP publications follow their own editorial axes (task/interval,
 dispatch item, effectivity/modification, component/part number,
-asset/lifecycle). The G-ATLAS link is preserved through the DM references:
+asset/lifecycle). The S-ATLAS link is preserved through the DM references:
 
 ```text
-G-ATLAS = semantic allocation backbone
+S-ATLAS = semantic allocation backbone
 Publication Module = purpose-specific projection
 ```

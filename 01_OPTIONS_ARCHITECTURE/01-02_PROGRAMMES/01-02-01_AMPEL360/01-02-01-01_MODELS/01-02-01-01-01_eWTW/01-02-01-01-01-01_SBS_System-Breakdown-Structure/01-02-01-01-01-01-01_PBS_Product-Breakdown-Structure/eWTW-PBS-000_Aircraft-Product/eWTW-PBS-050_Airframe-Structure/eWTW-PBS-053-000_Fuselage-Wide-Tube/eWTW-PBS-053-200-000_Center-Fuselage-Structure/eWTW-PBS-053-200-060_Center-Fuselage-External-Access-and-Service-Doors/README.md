@@ -1,6 +1,6 @@
 # eWTW-PBS-053-200-060 - Center Fuselage External Access and Service Doors
 
-CSN `532006` - grammar `EWTW-532006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-200-060`.
+CSN `532006` - grammar `EWTW-532006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-200-060`.
 
 ## Items
 

@@ -1,6 +1,6 @@
 # eWTW-PBS-053-800-050 - Cargo and Baggage Door Frame Fittings and Plates
 
-CSN `538005` - grammar `EWTW-538005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-800-050`.
+CSN `538005` - grammar `EWTW-538005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-800-050`.
 
 ## Items
 

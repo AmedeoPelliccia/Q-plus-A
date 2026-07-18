@@ -1,5 +1,5 @@
 # DMRL-021-510-050.yaml — Data Module Requirements List (node level)
-# Declares which Data Modules must exist for this G-ATLAS node.
+# Declares which Data Modules must exist for this S-ATLAS node.
 # Publication membership is metadata (publicationTargets), never folder structure.
 
 node:

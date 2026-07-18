@@ -1,6 +1,6 @@
 # eWTW-PBS-053-500-000 - Fuselage Skin Panels and Doublers
 
-Section node mirroring G-ATLAS `053-500_Fuselage-Skin-Panels-and-Doublers` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node mirroring S-ATLAS `053-500_Fuselage-Skin-Panels-and-Doublers` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 

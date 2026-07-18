@@ -17,7 +17,7 @@ selection:
   informationArchitecture: "../../01_INFORMATION-ARCHITECTURE"
   atlasScope:
     bands:
-      - "G-ATLAS_000-099"
+      - "S-ATLAS_000-099"
 
 publicationModules:
   - "PM-EWTW-AMM-021_AIR-CONDITIONING.yaml"

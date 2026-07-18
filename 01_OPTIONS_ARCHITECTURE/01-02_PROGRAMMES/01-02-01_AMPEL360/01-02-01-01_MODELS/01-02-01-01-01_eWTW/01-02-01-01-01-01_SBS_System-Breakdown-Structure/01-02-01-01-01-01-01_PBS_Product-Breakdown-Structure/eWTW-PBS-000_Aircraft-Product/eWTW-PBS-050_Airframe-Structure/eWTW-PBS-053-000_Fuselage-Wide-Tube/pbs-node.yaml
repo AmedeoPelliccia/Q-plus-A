@@ -8,7 +8,7 @@ node:
   gAtlas: "053"
   ataOrigin: "53"
   config: "WTW (Wide Tube Wing)"
-  grammar: "0CC-SSS-UU0 (G-ATLAS x100 sections; subjects x10; -000 = general)"
+  grammar: "0CC-SSS-UU0 (S-ATLAS x100 sections; subjects x10; -000 = general)"
   parent: "eWTW-PBS-050"
   sections: 10
   status: "PLANNED"

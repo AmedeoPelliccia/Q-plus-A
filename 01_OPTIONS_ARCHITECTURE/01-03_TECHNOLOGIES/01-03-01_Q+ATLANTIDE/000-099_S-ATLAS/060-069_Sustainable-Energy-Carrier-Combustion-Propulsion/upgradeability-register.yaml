@@ -1,0 +1,11 @@
+# Upgradeability register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+upgradeability_register:
+  architecture_code: "ATLAS"
+  master_range: "000-099"
+  code_range: "060-069_Sustainable-Energy-Carrier-Combustion-Propulsion"
+  architecture_name: "Aircraft Top Level Architecture Schema/System"
+  status: "draft"
+  baseline_technologies: []
+  alternative_technologies: []
+  upgrade_revision_cycles: []

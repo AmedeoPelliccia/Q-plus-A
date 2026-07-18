@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-200-000
   model: eWTW
   side: SSOT
-  scope: "Wing to Fuselage Fairing - G-ATLAS 053-200-020 subject scope; folder name is SSOT."
+  scope: "Wing to Fuselage Fairing - S-ATLAS 053-200-020 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

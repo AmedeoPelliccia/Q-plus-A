@@ -19,7 +19,7 @@ version: "1.0"
 # eWTW-PBS-053-010-000 - Forward Fuselage Section
 
 Section node for the nose zone (Section 41) of the eWTW fuselage. Section general
-of G-ATLAS `053-010`; parent chapter `053-000`. SSOT-side; the AMM / SRM (PUB)
+of S-ATLAS `053-010`; parent chapter `053-000`. SSOT-side; the AMM / SRM (PUB)
 consume it one-way via `ssot-ref.yaml`.
 
 ## Numbering
@@ -100,10 +100,10 @@ STD.
 ## References
 
 [^ata53]: ATA 100 / iSpec 2200 - Chapter 53 *Fuselage*, nose / Section 41 (heritage scope reference).
-[^radar]: G-ATLAS `034` Navigation (weather-radar antenna behind the radome).
-[^win]: G-ATLAS `056` Windows (windshield transparencies).
-[^ice]: G-ATLAS `030` Ice-and-Rain-Protection (windshield / radome heating).
-[^gear]: G-ATLAS `032` Landing Gear (nose-gear system in the bay owned here).
+[^radar]: S-ATLAS `034` Navigation (weather-radar antenna behind the radome).
+[^win]: S-ATLAS `056` Windows (windshield transparencies).
+[^ice]: S-ATLAS `030` Ice-and-Rain-Protection (windshield / radome heating).
+[^gear]: S-ATLAS `032` Landing Gear (nose-gear system in the bay owned here).
 
 <!--
 Last.MarkedDown: eWTW PBS 053-010-000 realized - forward fuselage (nose/Sec 41) subjects 053-010-010..070; all STD (energy-neutral zone); only green touchpoint is E/E-bay equipment interface, structure STD

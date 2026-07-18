@@ -11,46 +11,46 @@ ssot_impact_analysis:
 
   ssot_sources:
 
-    # Band: 000-099_G-ATLAS
+    # Band: 000-099_S-ATLAS
     - node: "012-900"
-      band: "000-099 G-ATLAS"
-      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
-      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/012-900_Energy-Replenishment-and-Conditioning"
+      band: "000-099 S-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/012-900_Energy-Replenishment-and-Conditioning"
       title: Energy Replenishment and Conditioning
       relevance: primary
 
     - node: "003-900"
-      band: "000-099 G-ATLAS"
-      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
-      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure"
+      band: "000-099 S-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure"
       title: Energy-Replenishment Ground Infrastructure
       relevance: primary
 
     - node: "010-900"
-      band: "000-099 G-ATLAS"
-      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
-      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/010-900_Energy-State-Preservation-During-Storage"
+      band: "000-099 S-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/010-900_Energy-State-Preservation-During-Storage"
       title: Energy-State Preservation During Storage
       relevance: secondary
 
     - node: "011-900"
-      band: "000-099 G-ATLAS"
-      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
-      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/011-900_Energy-Carrier-Hazard-Placards"
+      band: "000-099 S-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/011-900_Energy-Carrier-Hazard-Placards"
       title: Energy-Carrier Hazard Placards
       relevance: secondary
 
     - node: "020-900"
-      band: "000-099 G-ATLAS"
-      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
-      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/020-900_High-Energy-Standard-Practices"
+      band: "000-099 S-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-900_High-Energy-Standard-Practices"
       title: High-Energy Standard Practices
       relevance: secondary
 
     - node: "070-079"
-      band: "000-099 G-ATLAS"
-      band_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099"
-      node_dir: "../../01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/070-079_Eco-Tech-and-Hybrid-Electric-Propulsion"
+      band: "000-099 S-ATLAS"
+      band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/070-079_Electric-and-Hybrid-Electric-Propulsion"
       title: Eco-Tech & Hybrid-Electric Propulsion
       relevance: source
 

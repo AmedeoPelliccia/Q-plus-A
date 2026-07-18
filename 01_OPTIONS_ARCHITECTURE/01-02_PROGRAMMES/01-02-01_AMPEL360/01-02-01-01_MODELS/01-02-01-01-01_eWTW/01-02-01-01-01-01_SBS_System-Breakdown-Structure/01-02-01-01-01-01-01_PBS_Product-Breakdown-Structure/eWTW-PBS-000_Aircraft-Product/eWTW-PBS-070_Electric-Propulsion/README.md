@@ -1,6 +1,6 @@
 # eWTW-PBS-070 — Electric Propulsion
 
-Product group = G-ATLAS band `070`. Chapters:
+Product group = S-ATLAS band `070`. Chapters:
 
 - [`eWTW-PBS-071-000`](eWTW-PBS-071-000_Propulsion-Module-Installation) — Propulsion Module Installation
 - [`eWTW-PBS-073-000`](eWTW-PBS-073-000_Energy-Delivery-to-Propulsion) — Energy Delivery to Propulsion

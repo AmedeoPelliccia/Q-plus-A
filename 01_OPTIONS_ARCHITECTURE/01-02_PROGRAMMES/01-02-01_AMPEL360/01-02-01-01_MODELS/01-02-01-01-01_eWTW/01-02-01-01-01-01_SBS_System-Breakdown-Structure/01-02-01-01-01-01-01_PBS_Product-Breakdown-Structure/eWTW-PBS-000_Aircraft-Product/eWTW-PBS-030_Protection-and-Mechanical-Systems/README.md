@@ -1,6 +1,6 @@
 # eWTW-PBS-030 — Protection and Mechanical Systems
 
-Product group = G-ATLAS band `030`. Chapters:
+Product group = S-ATLAS band `030`. Chapters:
 
 - [`eWTW-PBS-030-000`](eWTW-PBS-030-000_Ice-and-Rain-Protection) — Ice and Rain Protection
 - [`eWTW-PBS-031-000`](eWTW-PBS-031-000_Indicating-and-Recording) — Indicating and Recording

@@ -57,7 +57,7 @@ Every work package begins with an issue.
 [WORK PACKAGE] <controlled node or part number> — <short contribution title>
 ```
 
-**Examples** (G-ATLAS-coherent addresses):
+**Examples** (S-ATLAS-coherent addresses):
 
 ```text
 [WORK PACKAGE] EWTW-538001-010 — Forward pressure bulkhead web CAD model
@@ -149,7 +149,7 @@ Physical product artefacts belong under the relevant PBS part-number node, **alo
 Publication artefacts belong under the owning **information node** in `01_INFORMATION-ARCHITECTURE`:
 
 ```text
-<G-ATLAS information node>/
+<S-ATLAS information node>/
 ├── DMRL-<node>.yaml     (node SSOT: required DMs, publicationTargets, ICN links)
 ├── DM/                  (S1000D data modules)
 └── ICN/

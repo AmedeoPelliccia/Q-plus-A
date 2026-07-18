@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-800-000
   model: eWTW
   side: SSOT
-  scope: "Rear Fuselage to Stabilizer Attach Fittings - G-ATLAS 053-800-070 subject scope; folder name is SSOT."
+  scope: "Rear Fuselage to Stabilizer Attach Fittings - S-ATLAS 053-800-070 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

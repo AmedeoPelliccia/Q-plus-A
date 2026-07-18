@@ -1,12 +1,12 @@
 ---
 node: 003-900
 title: Energy-Replenishment Ground Infrastructure — ECHM Subjects Breakdown
-path: "…/01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/"
+path: "…/01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/"
 pmc: PMC-EWTW-ECHM
 model: eWTW
 mic: EWTW
 side: PUB
-ssot_source: "G-ATLAS 003-900 (agnostic, SSOT) — Support chapter green delta"
+ssot_source: "S-ATLAS 003-900 (agnostic, SSOT) — Support chapter green delta"
 projection: "eWTW electric/charging binding (H2 not applicable — see hBWB sibling)"
 feeds_tree: [ECHM-10, ECHM-40, ECHM-60]
 owner: Q-GREENTECH
@@ -89,4 +89,4 @@ All subjects bind to **eWTW** (electrical-charge carrier). The hydrogen/cryogeni
 ## References
 
 1. S1000D — *International Specification for Technical Publications* (DM, DMC, info codes; baseline Issue 4.2). [https://s1000d.org/](https://s1000d.org/)
-2. G-ATLAS SSOT — node `003-900` (Support chapter green delta), agnostic source.
+2. S-ATLAS SSOT — node `003-900` (Support chapter green delta), agnostic source.

@@ -34,7 +34,7 @@ TPuBS container for the **Equipment Cooling Ventilation** subject of chapter `02
 
 ## DMC allocation
 
-SNS (`systemCode 21 · subSystem 2 · subSubSystem 8 · assy 01`) is **derived** from the G-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
+SNS (`systemCode 21 · subSystem 2 · subSubSystem 8 · assy 01`) is **derived** from the S-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`.
 
 | Short handle | Full DMC (provisional) | Info | Type |
 |---|---|---|---|

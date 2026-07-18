@@ -1,6 +1,6 @@
 # Aircraft-level functional allocation matrix
 # Node: eWTW-FBS-00 (Aircraft Functions)
-# Maps: function -> PBS items (realized_by) + G-ATLAS chapters (classified_under)
+# Maps: function -> PBS items (realized_by) + S-ATLAS chapters (classified_under)
 # Note: pbs_code: TBD binds to actual PBS top-level codes once fixed.
 
 allocation_matrix:

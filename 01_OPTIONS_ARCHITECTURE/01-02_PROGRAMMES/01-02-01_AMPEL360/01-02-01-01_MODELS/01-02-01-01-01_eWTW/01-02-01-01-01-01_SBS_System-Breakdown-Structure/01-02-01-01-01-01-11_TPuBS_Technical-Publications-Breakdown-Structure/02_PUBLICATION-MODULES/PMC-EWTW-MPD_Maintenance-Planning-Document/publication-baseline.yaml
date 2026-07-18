@@ -11,7 +11,7 @@ publication:
   mic: EWTW
   side: PUB
   standard: S1000D Issue 4.2
-  band: 000-099_G-ATLAS
+  band: 000-099_S-ATLAS
   g_atlas_scope: "005 + 000-099"
 
 baseline:

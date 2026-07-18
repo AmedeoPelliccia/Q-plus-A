@@ -24,6 +24,6 @@ every DMRL, Data Module and Publication Module must satisfy.
 
 ## Governing principle
 
-> G-ATLAS determines where information semantically belongs; the DMRL
+> S-ATLAS determines where information semantically belongs; the DMRL
 > determines which Data Modules must exist; the Publication Modules determine
 > in which publications, and in which order, those Data Modules are presented.

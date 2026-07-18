@@ -12,14 +12,14 @@ status: baseline
 
 The **single canonical instance** of the Q+ATLANTIDE taxonomy for the eWTW
 technical information. This layer is the CSDB-side common Data Module pool:
-every Data Module is authored **once**, under the G-ATLAS/SNS node where it
+every Data Module is authored **once**, under the S-ATLAS/SNS node where it
 semantically belongs, and is then *referenced* — never copied — by the
 Publication Modules in `../02_PUBLICATION-MODULES/`.
 
 ```text
 eWTW product / model
         ↓
-G-ATLAS / SNS  (this layer — semantic allocation backbone)
+S-ATLAS / SNS  (this layer — semantic allocation backbone)
         ↓
 information nodes (0CC-SS0-UU0 subject packages)
         ↓
@@ -36,7 +36,7 @@ AMM, FIM, SDS, IPC, FCOM, …
 
 | Band | Content |
 |---|---|
-| `G-ATLAS_000-099/` | Aircraft-level G-ATLAS breakdown (decade bands → chapters → sections → subjects). |
+| `S-ATLAS_000-099/` | Aircraft-level S-ATLAS breakdown (decade bands → chapters → sections → subjects). |
 | `EPTA_400-499/` | Energy and Propulsion Technology band. |
 | `AMTA_500-599/` | Advanced Materials band (energy storage materials). |
 
@@ -57,7 +57,7 @@ structure:
 absence of a publicationTarget  =  the Data Module does not enter that publication
 ```
 
-One G-ATLAS node → many DM requirements/InfoCodes → many Data Modules → many
+One S-ATLAS node → many DM requirements/InfoCodes → many Data Modules → many
 Publication Modules. There is deliberately **no** "one node = one manual" and
 **no** "one Data Module = one manual" relation.
 

@@ -21,7 +21,7 @@ Q+ATLANTIDE shall remain **programme-agnostic**. Programme-specific implementati
 01-03_TECHNOLOGIES/
 └── 01-03-01_Q+ATLANTIDE/
     ├── README.md
-    ├── 000-099_G-ATLAS/
+    ├── 000-099_S-ATLAS/
     ├── 100-199_STA/
     ├── 200-299_DTTA/
     ├── 300-399_DTCEC/
@@ -95,7 +95,7 @@ Programme
 | -------------------------------- | ----------------------------------------------------------------- | ------------------------------------: | ----------------------------------------- |
 | Q+ATLANTIDE                      | Full architecture-taxonomy ecosystem.                             |                             ecosystem | `Q+ATLANTIDE`                             |
 | Q+ATLANTIDE1000                  | Controlled `000–999` schema.                                      |                             `000–999` | `Q+ATLANTIDE1000`                         |
-| Architecture Band / Master Range | One 100-code architecture band.                                   |                             `000–099` | `000-099_G-ATLAS`                           |
+| Architecture Band / Master Range | One 100-code architecture band.                                   |                             `000–099` | `000-099_S-ATLAS`                           |
 | Code Range                       | Internal 10-code block inside a master range.                     |                             `000–009` | `000-009_General-Information-and-Service` |
 | Section                          | Two-digit section index inside the architecture band.             |                               `00–09` | `00`                                      |
 | Subject / Node Folder            | Controlled architecture node inside a code range.                 |                   `000`, `010`, `021` | `021_Air-Conditioning-and-Pressurization` |
@@ -169,7 +169,7 @@ deprecated_terms:
 
 |                            Master Range | Architecture Code | Architecture Name                                       | Primary Focus                                                                                            |
 | --------------------------------------: | ----------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [`000–099`](000-099_G-ATLAS/) | `G-ATLAS`         | Green Aircraft Top-Level Architecture Schema/System           | New commercial aircraft architectures, BWB, WTW, hybrid-electric, hydrogen, S1000D/CSDB/PLM integration. |
+| [`000–099`](000-099_S-ATLAS/) | `S-ATLAS`         | Sustainable Aviation Top-Level Architecture Schema           | New commercial aircraft architectures, BWB, WTW, hybrid-electric, hydrogen, S1000D/CSDB/PLM integration. |
 |   [`100–199`](100-199_STA/) | `STA`             | Space Technology Architecture                           | Space systems, LEO+, orbital infrastructure, interplanetary concepts.                                    |
 |  [`200–299`](200-299_DTTA/) | `DTTA`            | Defence Technology Type Architecture                    | Defence, C4ISR, resilience, electronic warfare, autonomous systems.                                      |
 | [`300–399`](300-399_DTCEC/) | `DTCEC`           | Digital Twin, Cloud, Edge and AI Architecture           | Digital twins, AI, cloud, edge, XR, blockchain, analytics.                                               |
@@ -194,10 +194,10 @@ deprecated_terms:
 |  `030–039` | Protection and Mechanical Systems           |
 |  `040–049` | Avionics, Information Systems and APU       |
 |  `050–059` | Primary Structures and Programme Interfaces |
-|  `060–069` | Traditional Propulsion                      |
-|  `070–079` | Eco-Tech and Hybrid-Electric Propulsion     |
+|  `060–069` | Sustainable Energy Carrier Combustion Propulsion|
+|  `070–079` | Electric and Hybrid-Electric Propulsion|
 |  `080–089` | Alternative and Quantum Propulsion          |
-|  `090–099` | Type-Specific Programmes and Expansion      |
+|  `090–099` | Type-Specific Architectures and Expansion|
 
 ### 10.2 STA — Space Technology Architecture
 
@@ -346,8 +346,8 @@ Correct pattern:
 
 ```text
 Q+ATLANTIDE/
-└── 000-099_G-ATLAS/
-    └── 070-079_Eco-Tech-and-Hybrid-Electric-Propulsion/
+└── 000-099_S-ATLAS/
+    └── 070-079_Electric-and-Hybrid-Electric-Propulsion/
         └── 070_Hybrid-Electric-Architecture-Overview/
             └── 070-000-General.md
 

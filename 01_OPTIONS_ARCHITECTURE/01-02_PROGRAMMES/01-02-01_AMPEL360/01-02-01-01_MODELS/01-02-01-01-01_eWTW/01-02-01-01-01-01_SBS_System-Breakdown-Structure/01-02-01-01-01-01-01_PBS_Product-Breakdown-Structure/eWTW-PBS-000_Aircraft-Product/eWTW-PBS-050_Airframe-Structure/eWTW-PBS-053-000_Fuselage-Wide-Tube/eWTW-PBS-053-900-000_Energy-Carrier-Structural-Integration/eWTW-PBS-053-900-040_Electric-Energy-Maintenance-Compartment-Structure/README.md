@@ -1,6 +1,6 @@
 # eWTW-PBS-053-900-040 - Electric Energy Maintenance Compartment Structure
 
-CSN `539004` - grammar `EWTW-539004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-900-040`.
+CSN `539004` - grammar `EWTW-539004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-900-040`.
 
 ## Items
 

@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-900-000
   model: eWTW
   side: SSOT
-  scope: "Vacated Auxiliary Fuel Tank Compartment Footprint - G-ATLAS 053-900-050 subject scope; folder name is SSOT."
+  scope: "Vacated Auxiliary Fuel Tank Compartment Footprint - S-ATLAS 053-900-050 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

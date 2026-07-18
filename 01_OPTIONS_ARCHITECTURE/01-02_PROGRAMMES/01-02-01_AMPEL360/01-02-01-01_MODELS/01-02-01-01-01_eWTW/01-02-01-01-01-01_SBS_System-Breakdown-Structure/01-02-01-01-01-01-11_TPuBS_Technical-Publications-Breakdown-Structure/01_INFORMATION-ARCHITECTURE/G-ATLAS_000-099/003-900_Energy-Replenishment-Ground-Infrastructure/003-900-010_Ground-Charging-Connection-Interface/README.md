@@ -1,7 +1,7 @@
 ---
 subject: 003-900-010
 title: Ground Charging Connection Interface — Subject Package
-path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/G-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface/"
+path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure/003-900-010_Ground-Charging-Connection-Interface/"
 pmc: PMC-EWTW-ECHM
 parent_node: 003-900
 model: eWTW
@@ -44,7 +44,7 @@ The authoritative TPuBS container for the on-aircraft charging interface: the ph
 ```text
 …/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/
   └── PMC-EWTW-ECHM_Energy-Carrier-Handling-Manual/
-      └── 000-099_G-ATLAS/
+      └── 000-099_S-ATLAS/
           └── 003-900_Energy-Replenishment-Ground-Infrastructure/
               └── 003-900-010_Ground-Charging-Connection-Interface/   ← this package
 ```
@@ -103,7 +103,7 @@ The authoritative TPuBS container for the on-aircraft charging interface: the ph
 
 ## 4. DMC Allocation
 
-SNS (`systemCode 03 · subSystem 9 · subSubSystem 0 · assy 01`) is **derived** from the G-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`. The short handle is the stable identifier.
+SNS (`systemCode 03 · subSystem 9 · subSubSystem 0 · assy 01`) is **derived** from the S-ATLAS triplet and **provisional** pending `_CSDB-CONTROL/SNS-mapping.yaml`. The short handle is the stable identifier.
 
 | Short handle | Full DMC (provisional) | Info | Type |
 |---|---|---|---|
@@ -180,4 +180,4 @@ All DMs bind to **eWTW** (electrical-charge carrier); the hydrogen/cryogenic cou
 ## References
 
 1. S1000D — *International Specification for Technical Publications*, Issue 4.2. [https://s1000d.org/](https://s1000d.org/)
-2. G-ATLAS SSOT — node `003-900`, subject `003-900-010` (agnostic source).
+2. S-ATLAS SSOT — node `003-900`, subject `003-900-010` (agnostic source).

@@ -1,6 +1,6 @@
 # eWTW-PBS-053-200-050 - Middle Avionics Compartment Structure
 
-CSN `532005` - grammar `EWTW-532005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-200-050`.
+CSN `532005` - grammar `EWTW-532005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-200-050`.
 
 ## Items
 

@@ -1,6 +1,6 @@
 # eWTW-PBS-053-700-020 - Forward Fuselage Floor Structure
 
-CSN `537002` - grammar `EWTW-537002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-700-020`.
+CSN `537002` - grammar `EWTW-537002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-700-020`.
 
 ## Items
 

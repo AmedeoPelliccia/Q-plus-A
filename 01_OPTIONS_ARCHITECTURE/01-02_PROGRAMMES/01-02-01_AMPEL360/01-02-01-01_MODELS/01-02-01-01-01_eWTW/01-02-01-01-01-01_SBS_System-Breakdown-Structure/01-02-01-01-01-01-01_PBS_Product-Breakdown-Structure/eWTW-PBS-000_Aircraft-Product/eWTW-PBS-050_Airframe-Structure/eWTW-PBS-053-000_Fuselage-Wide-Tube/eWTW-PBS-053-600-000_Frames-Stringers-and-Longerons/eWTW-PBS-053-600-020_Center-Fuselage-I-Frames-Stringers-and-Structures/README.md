@@ -1,6 +1,6 @@
 # eWTW-PBS-053-600-020 - Center Fuselage I Frames Stringers and Structures
 
-CSN `536002` - grammar `EWTW-536002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors G-ATLAS `053-600-020`.
+CSN `536002` - grammar `EWTW-536002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-600-020`.
 
 ## Items
 
