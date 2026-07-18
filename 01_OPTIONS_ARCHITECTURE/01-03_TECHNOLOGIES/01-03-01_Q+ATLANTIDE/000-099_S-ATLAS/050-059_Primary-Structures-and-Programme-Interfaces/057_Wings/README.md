@@ -11,15 +11,22 @@ Wing primary and secondary structure: root and center integration, main box, out
 ```mermaid
 flowchart LR
   subgraph SPAN["Spanwise structure"]
-    R["057-100 Root &amp;<br>Center Integration"] --&gt; B["057-200<br>Wing Main Box"] --&gt; O["057-300 Outer Wing<br>&amp; Transitions"] --&gt; T["057-400 Tips &amp;<br>Tip Devices"]
+    R["057-100 Root and<br/>Center Integration"]
+    B["057-200<br/>Wing Main Box"]
+    O["057-300 Outer Wing<br/>and Transitions"]
+    T["057-400 Tips and<br/>Tip Devices"]
+
+    R --> B --> O --> T
   end
-  LE["057-500 Leading Edge &amp;<br>LE Device Structures"] --- SPAN
-  TE["057-600 Trailing Edge &amp;<br>TE Device Structures"] --- SPAN
-  F["057-700 Attachments,<br>Joints &amp; Fittings"] --- SPAN
-  P["057-800 Systems<br>Installation Provisions"] --- SPAN
-  N["057-900 Novel Wing Architectures<br>&amp; Sustainable Technologies"] -. "applies across" .-&gt; SPAN
-  F -. "pylon/propulsor attach" .-&gt; X077["054 · 061 · 077"]
-  P -. "carrier volume boundary" .-&gt; X028["028"]
+
+  LE["057-500 Leading Edge and<br/>LE Device Structures"] --- B
+  TE["057-600 Trailing Edge and<br/>TE Device Structures"] --- B
+  F["057-700 Attachments,<br/>Joints and Fittings"] --- B
+  P["057-800 Systems<br/>Installation Provisions"] --- B
+  N["057-900 Novel Wing Architectures<br/>and Sustainable Technologies"] -. "applies across" .-> B
+
+  F -. "pylon/propulsor attachment" .-> X077["054 · 061 · 077"]
+  P -. "energy-carrier volume boundary" .-> X028["028"]
 ```
 
 ## Section register
