@@ -22,7 +22,7 @@ Structures master range (ATA 50-59), green-native. Primary structure is **STD-do
 | [`051`](./051_Standard-Practices-Structures/) | Standard Practices Structures | ATA 51 |
 | [`052`](./052_Doors/) | Doors | ATA 52 |
 | [`053`](./053_Fuselage/) | Fuselage | ATA 53 |
-| [`054`](./054_Nacelles-and-Pylons/) | Nacelles and Pylons | ATA 54 |
+| [`054`](./054_Nacelles-Pylons-and-Propulsion-Integration-Structures/) | Nacelles, Pylons and Propulsion Integration Structures | ATA 54 |
 | [`055`](./055_Stabilizers/) | Stabilizers | ATA 55 |
 | [`056`](./056_Windows/) | Windows | ATA 56 |
 | [`057`](./057_Wings/) | Wings | ATA 57 |
