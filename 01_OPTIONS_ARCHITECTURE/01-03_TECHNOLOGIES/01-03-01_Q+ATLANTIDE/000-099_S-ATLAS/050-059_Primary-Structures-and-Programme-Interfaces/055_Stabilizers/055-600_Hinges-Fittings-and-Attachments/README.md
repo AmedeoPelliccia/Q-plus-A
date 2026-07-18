@@ -14,4 +14,3 @@
 | 055-630 | <a>Trim Pivot and Attach Structure</a> |
 | 055-640 | <a>Attachment to Receiving Structure</a> |
 | 055-650 | <a>Joints Splices and Fastening</a> |
-

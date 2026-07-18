@@ -12,4 +12,3 @@
 | 055-810 | <a>Flutter and Aeroelastic Doctrine</a> |
 | 055-820 | <a>Surface Balance Doctrine</a> |
 | 055-830 | <a>Dynamic Environment and Buffet</a> |
-
