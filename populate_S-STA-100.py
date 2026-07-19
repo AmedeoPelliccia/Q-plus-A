@@ -127,7 +127,12 @@ S = {
    "register (metadata only, no normative text) gates technology "
    "sections; ISO/TC20/SC14 is the seeded backbone, ISO/TC20/SC13 with "
    "CCSDS and the ECSS E/Q/M branches join on acquisition. The band "
-   "SOURCES file records provenance per source with its usage class."),
+   "SOURCES file records provenance per source with its usage class. "
+   "Documentation-precedence doctrine is band governance anchored here "
+   "and in 103 (ISO 10789): a declared hierarchy from synthesis "
+   "documents through operational rules and procedures to source data, "
+   "so every operational statement has one authoritative home and "
+   "derived views declare their sources."),
  "800": ("Threads-and-Cross-Cutting-Indexes",
    "Threads map homes and never create them. Declared for the band: "
    "DEBRIS-AND-SUSTAINABILITY — home 108, indexed functions include "
