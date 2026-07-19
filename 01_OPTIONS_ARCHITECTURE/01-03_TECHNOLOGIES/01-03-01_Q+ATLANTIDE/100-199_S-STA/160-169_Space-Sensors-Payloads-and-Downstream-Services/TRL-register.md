@@ -1,14 +1,14 @@
-# TRL Register — 100-199_STA / 160-169_Space-Sensors-and-Payloads
+# TRL Register — 100-199_S-STA / 160-169_Space-Sensors-Payloads-and-Downstream-Services
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `160-169_Space-Sensors-and-Payloads`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `160-169_Space-Sensors-Payloads-and-Downstream-Services`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

@@ -1,14 +1,14 @@
-# Upgradeability Register — 100-199_STA / 110-119_Space-Structures-and-Materials
+# Upgradeability Register — 100-199_S-STA / 110-119_Space-Structures-Materials-and-Mechanisms
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `110-119_Space-Structures-and-Materials`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `110-119_Space-Structures-Materials-and-Mechanisms`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

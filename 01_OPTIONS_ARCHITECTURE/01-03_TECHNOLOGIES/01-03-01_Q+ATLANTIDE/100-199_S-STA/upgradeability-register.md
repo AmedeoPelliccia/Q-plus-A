@@ -1,12 +1,12 @@
-# Upgradeability Register — 100-199_STA
+# Upgradeability Register — 100-199_S-STA
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Architecture name | Space Technology Architecture                     |
+| Architecture name | Sustainable Space Technology Architecture                     |
 | Scope             | Master range (architecture band).                    |
 
 ## 2. Controlled Rules

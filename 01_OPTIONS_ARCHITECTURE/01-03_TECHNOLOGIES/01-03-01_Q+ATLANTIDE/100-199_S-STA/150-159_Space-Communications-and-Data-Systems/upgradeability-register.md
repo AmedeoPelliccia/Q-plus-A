@@ -1,14 +1,14 @@
-# Upgradeability Register — 100-199_STA / 150-159_Space-Communications
+# Upgradeability Register — 100-199_S-STA / 150-159_Space-Communications-and-Data-Systems
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `150-159_Space-Communications`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `150-159_Space-Communications-and-Data-Systems`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

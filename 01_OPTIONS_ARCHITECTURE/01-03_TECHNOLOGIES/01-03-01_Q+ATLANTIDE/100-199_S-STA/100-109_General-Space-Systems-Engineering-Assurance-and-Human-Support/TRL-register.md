@@ -1,14 +1,14 @@
-# TRL Register — 100-199_STA / 100-109_General-Space-Systems-and-Life-Support
+# TRL Register — 100-199_S-STA / 100-109_General-Space-Systems-Engineering-Assurance-and-Human-Support
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `100-109_General-Space-Systems-and-Life-Support`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `100-109_General-Space-Systems-Engineering-Assurance-and-Human-Support`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

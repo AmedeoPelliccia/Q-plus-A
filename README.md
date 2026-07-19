@@ -91,7 +91,7 @@ S  Standards
 | Range | Code | Controlled meaning |
 |---:|---|---|
 | `000–099` | [`S-ATLAS`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/) | Sustainable Aviation Top-Level Architecture Schema |
-| `100–199` | [`STA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/100-199_STA/) | Space Technology Architecture |
+| `100–199` | [`S-STA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/100-199_S-STA/) | Sustainable Space Technology Architecture |
 | `200–299` | [`DTTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/200-299_DTTA/) | Defence Technology and Tactical Architecture |
 | `300–399` | [`DTCEC`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/300-399_DTCEC/) | Digital Twin, Cloud, Edge and AI Computing |
 | `400–499` | [`EPTA`](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/400-499_EPTA/) | Energy and Propulsion Technology Architecture |

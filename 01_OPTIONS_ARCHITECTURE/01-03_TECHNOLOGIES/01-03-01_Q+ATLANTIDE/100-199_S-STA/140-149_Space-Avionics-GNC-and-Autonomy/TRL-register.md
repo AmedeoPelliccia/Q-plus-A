@@ -1,14 +1,14 @@
-# TRL Register — 100-199_STA / 140-149_Space-Avionics-and-Mission-Control
+# TRL Register — 100-199_S-STA / 140-149_Space-Avionics-GNC-and-Autonomy
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `140-149_Space-Avionics-and-Mission-Control`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `140-149_Space-Avionics-GNC-and-Autonomy`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

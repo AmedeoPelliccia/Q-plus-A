@@ -1,14 +1,14 @@
-# TRL Register — 100-199_STA / 130-139_Space-Energy-Systems
+# TRL Register — 100-199_S-STA / 130-139_Space-Power-and-Thermal-Control
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `130-139_Space-Energy-Systems`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `130-139_Space-Power-and-Thermal-Control`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

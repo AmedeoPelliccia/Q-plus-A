@@ -22,7 +22,7 @@ Q+ATLANTIDE shall remain **programme-agnostic**. Programme-specific implementati
 └── 01-03-01_Q+ATLANTIDE/
     ├── README.md
     ├── 000-099_S-ATLAS/
-    ├── 100-199_STA/
+    ├── 100-199_S-STA/
     ├── 200-299_DTTA/
     ├── 300-399_DTCEC/
     ├── 400-499_EPTA/
@@ -110,7 +110,7 @@ Programme
 | Master Range | Code    | Controlled Name                                         | Scope                                                                                                          |
 | -----------: | ------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 |    `000–099` | `ATLAS` | Aircraft Top Level Architecture Schema/System           | New commercial aircraft architectures, BWB, WTW, hybrid-electric, hydrogen, S1000D/CSDB/PLM integration.       |
-|    `100–199` | `STA`   | Space Technology Architecture                           | Space systems, spacecraft, orbital infrastructure, launch systems, in-orbit operations.                        |
+|    `100–199` | `S-STA`   | Sustainable Space Technology Architecture                           | Space systems, spacecraft, orbital infrastructure, launch systems, in-orbit operations.                        |
 |    `200–299` | `DTTA`  | Defence Technology Type Architecture                    | Defence, dual-use boundaries, C4ISR, resilience, electronic warfare, autonomous systems.                       |
 |    `300–399` | `DTCEC` | Digital Twin, Cloud, Edge and AI Architecture           | Digital twins, AI, cloud, edge, XR, blockchain, analytics, digital thread.                                     |
 |    `400–499` | `EPTA`  | Energy and Propulsion Technology Architecture           | Energy systems, storage, conversion, electric propulsion, hydrogen, advanced propulsion, thermal systems.      |
@@ -127,7 +127,7 @@ Programme
 | Acronym | Controlled Expansion                                    |
 | ------- | ------------------------------------------------------- |
 | `ATLAS` | Aircraft Top Level Architecture Schema/System           |
-| `STA`   | Space Technology Architecture                           |
+| `S-STA`   | Sustainable Space Technology Architecture                           |
 | `DTTA`  | Defence Technology Type Architecture                    |
 | `DTCEC` | Digital Twin, Cloud, Edge and AI Architecture           |
 | `EPTA`  | Energy and Propulsion Technology Architecture           |
@@ -170,7 +170,7 @@ deprecated_terms:
 |                            Master Range | Architecture Code | Architecture Name                                       | Primary Focus                                                                                            |
 | --------------------------------------: | ----------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [`000–099`](000-099_S-ATLAS/) | `S-ATLAS`         | Sustainable Aviation Top-Level Architecture Schema           | New commercial aircraft architectures, BWB, WTW, hybrid-electric, hydrogen, S1000D/CSDB/PLM integration. |
-|   [`100–199`](100-199_STA/) | `STA`             | Space Technology Architecture                           | Space systems, LEO+, orbital infrastructure, interplanetary concepts.                                    |
+|   [`100–199`](100-199_S-STA/) | `S-STA`             | Sustainable Space Technology Architecture                           | Space systems, LEO+, orbital infrastructure, interplanetary concepts.                                    |
 |  [`200–299`](200-299_DTTA/) | `DTTA`            | Defence Technology Type Architecture                    | Defence, C4ISR, resilience, electronic warfare, autonomous systems.                                      |
 | [`300–399`](300-399_DTCEC/) | `DTCEC`           | Digital Twin, Cloud, Edge and AI Architecture           | Digital twins, AI, cloud, edge, XR, blockchain, analytics.                                               |
 |  [`400–499`](400-499_EPTA/) | `EPTA`            | Energy and Propulsion Technology Architecture           | Energy, storage, conversion, electric, hydrogen, and advanced propulsion.                                |
@@ -199,20 +199,20 @@ deprecated_terms:
 |  `080–089` | Alternative and Quantum Propulsion          |
 |  `090–099` | Type-Specific Architectures and Expansion|
 
-### 10.2 STA — Space Technology Architecture
+### 10.2 S-STA — Sustainable Space Technology Architecture
 
 | Code Range | English Controlled Title                                 |
 | ---------: | -------------------------------------------------------- |
-|  `100–109` | General Space Systems and Life Support                   |
-|  `110–119` | Space Structures and Materials                           |
-|  `120–129` | Traditional and Advanced Space Propulsion                |
-|  `130–139` | Space Energy Systems                                     |
-|  `140–149` | Space Avionics and Mission Control                       |
-|  `150–159` | Space Communications                                     |
-|  `160–169` | Space Sensors and Payloads                               |
-|  `170–179` | In-Orbit Operations and Maintenance                      |
-|  `180–189` | Space Infrastructure and Logistics                       |
-|  `190–199` | Advanced Space Systems, Concepts and Future Applications |
+|  `100–109` | General Space Systems Engineering Assurance and Human Support |
+|  `110–119` | Space Structures Materials and Mechanisms                |
+|  `120–129` | Space Propulsion                                         |
+|  `130–139` | Space Power and Thermal Control                          |
+|  `140–149` | Space Avionics GNC and Autonomy                          |
+|  `150–159` | Space Communications and Data Systems                    |
+|  `160–169` | Space Sensors Payloads and Downstream Services           |
+|  `170–179` | On-Orbit Operations Servicing and Maintenance            |
+|  `180–189` | Space Ground Segment Launch and Recovery Infrastructure  |
+|  `190–199` | Space System and Vehicle Classes and Expansion           |
 
 ### 10.3 DTTA — Defence Technology Type Architecture
 

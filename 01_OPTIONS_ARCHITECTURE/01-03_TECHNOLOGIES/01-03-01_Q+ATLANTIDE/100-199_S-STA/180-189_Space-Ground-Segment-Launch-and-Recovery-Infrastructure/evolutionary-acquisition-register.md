@@ -1,14 +1,14 @@
-# Evolutionary Acquisition Register — 100-199_STA / 180-189_Space-Infrastructure-and-Logistics
+# Evolutionary Acquisition Register — 100-199_S-STA / 180-189_Space-Ground-Segment-Launch-and-Recovery-Infrastructure
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `180-189_Space-Infrastructure-and-Logistics`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `180-189_Space-Ground-Segment-Launch-and-Recovery-Infrastructure`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

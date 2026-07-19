@@ -1,10 +1,10 @@
 # Upgradeability register (programme-agnostic). See root control folder:
 # 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
 upgradeability_register:
-  architecture_code: "STA"
+  architecture_code: "S-STA"
   master_range: "100-199"
-  code_range: "170-179_In-Orbit-Operations-and-Maintenance"
-  architecture_name: "Space Technology Architecture"
+  code_range: "170-179_On-Orbit-Operations-Servicing-and-Maintenance"
+  architecture_name: "Sustainable Space Technology Architecture"
   status: "draft"
   baseline_technologies: []
   alternative_technologies: []

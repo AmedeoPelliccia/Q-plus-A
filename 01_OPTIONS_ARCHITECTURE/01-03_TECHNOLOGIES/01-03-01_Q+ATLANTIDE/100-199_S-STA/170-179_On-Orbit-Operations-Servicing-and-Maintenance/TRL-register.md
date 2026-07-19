@@ -1,14 +1,14 @@
-# TRL Register — 100-199_STA / 170-179_In-Orbit-Operations-and-Maintenance
+# TRL Register — 100-199_S-STA / 170-179_On-Orbit-Operations-Servicing-and-Maintenance
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `170-179_In-Orbit-Operations-and-Maintenance`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `170-179_On-Orbit-Operations-Servicing-and-Maintenance`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 

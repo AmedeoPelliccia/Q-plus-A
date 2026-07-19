@@ -1,14 +1,14 @@
-# TRL Register — 100-199_STA / 190-199_Advanced-Space-Systems-Concepts-and-Future-Applications
+# TRL Register — 100-199_S-STA / 190-199_Space-System-and-Vehicle-Classes-and-Expansion
 
 ## 1. Architecture Band
 
 | Field             | Value                       |
 | ----------------- | --------------------------- |
-| Architecture code | `STA`                 |
+| Architecture code | `S-STA`                 |
 | Master range      | `100-199`               |
-| Code range        | `190-199_Advanced-Space-Systems-Concepts-and-Future-Applications`                |
-| Architecture name | Space Technology Architecture                     |
-| Scope             | Code range within STA.                    |
+| Code range        | `190-199_Space-System-and-Vehicle-Classes-and-Expansion`                |
+| Architecture name | Sustainable Space Technology Architecture                     |
+| Scope             | Code range within S-STA.                    |
 
 ## 2. Controlled Rules
 
