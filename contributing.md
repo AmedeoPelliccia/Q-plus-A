@@ -283,16 +283,14 @@ Contributors must confirm in the allocation issue that they are authorized to pu
 
 ---
 
-## 16. Licensing (interim)
+## 16. Licensing
 
-A repository-wide `LICENSE` and formal contributor terms are pending. Until they are published:
+The repository uses dual licensing:
 
-* contributors retain copyright in their contributions;
-* by submitting a pull request, contributors grant the project the non-exclusive right to host, display and integrate the contribution within the repository's governed structures;
-* no broader reuse rights are granted or implied in either direction;
-* the licensing terms adopted later will be proposed to existing contributors, not imposed retroactively.
+* source code is licensed under [Apache-2.0](LICENSE);
+* the Q+ATLANTIDE taxonomy and non-code documentation are licensed under [CC BY 4.0](LICENSE-DOCUMENTATION).
 
-Identify the licensing status of any externally sourced material and contribute only work you are authorized to share.
+By submitting a contribution, contributors license it under the license applicable to its content type, unless it carries an explicit compatible license notice. Reuse of CC BY 4.0 content must credit **Amedeo Pelliccia and Q+A Contributors**, link to the license, and indicate changes; see [NOTICE](NOTICE). Identify the licensing status of any externally sourced material and contribute only work you are authorized to share.
 
 ---
 

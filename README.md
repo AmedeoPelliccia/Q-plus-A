@@ -362,9 +362,9 @@ Q+A is an independent engineering architecture and research initiative. It is **
 
 ## Licensing
 
-**No repository-wide licence is published yet.** Under default copyright rules, the public visibility of this repository does not by itself grant rights of commercial reuse, redistribution or relicensing; until an explicit `LICENSE` and contribution policy are added, treat content as all-rights-reserved and open an issue to discuss intended use.
+Source code is licensed under the [Apache License 2.0](LICENSE). The Q+ATLANTIDE taxonomy and all non-code documentation are licensed under [Creative Commons Attribution 4.0 International](LICENSE-DOCUMENTATION).
 
-A formal licence and a `CONTRIBUTING.md` with contributor terms are planned governance actions. Contributors should identify the licensing status of externally sourced material and contribute only work they are authorized to share.
+Reuse of taxonomy and documentation must credit **Amedeo Pelliccia and Q+A Contributors**, link to the CC BY 4.0 license, and state whether changes were made. See [NOTICE](NOTICE) for the requested attribution wording. Contributors must identify the licensing status of externally sourced material and contribute only work they are authorized to share.
 
 ---
 
