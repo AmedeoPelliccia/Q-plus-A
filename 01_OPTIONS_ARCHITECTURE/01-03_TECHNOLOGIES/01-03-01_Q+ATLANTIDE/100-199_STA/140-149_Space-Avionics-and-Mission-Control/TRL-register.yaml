@@ -1,9 +1,0 @@
-# TRL register (programme-agnostic). See root control folder:
-# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
-trl_register:
-  architecture_code: "STA"
-  master_range: "100-199"
-  code_range: "140-149_Space-Avionics-and-Mission-Control"
-  architecture_name: "Space Technology Architecture"
-  status: "draft"
-  assessments: []

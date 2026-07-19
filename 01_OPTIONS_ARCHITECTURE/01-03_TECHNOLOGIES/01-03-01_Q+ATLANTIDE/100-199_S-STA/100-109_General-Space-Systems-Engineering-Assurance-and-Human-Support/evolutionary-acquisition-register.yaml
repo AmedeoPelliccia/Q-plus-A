@@ -1,0 +1,12 @@
+# Evolutionary acquisition register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+evolutionary_acquisition_register:
+  architecture_code: "S-STA"
+  master_range: "100-199"
+  code_range: "100-109_General-Space-Systems-Engineering-Assurance-and-Human-Support"
+  architecture_name: "Sustainable Space Technology Architecture"
+  status: "draft"
+  core_blocks: []
+  incremental_releases: []
+  product_improvements: []
+  upgrade_branches: []

@@ -1,0 +1,9 @@
+# TRL register (programme-agnostic). See root control folder:
+# 00_TECHNOLOGY_READINESS_AND_UPGRADEABILITY/
+trl_register:
+  architecture_code: "S-STA"
+  master_range: "100-199"
+  code_range: "190-199_Space-System-and-Vehicle-Classes-and-Expansion"
+  architecture_name: "Sustainable Space Technology Architecture"
+  status: "draft"
+  assessments: []
