@@ -28,7 +28,7 @@ flowchart LR
 
 | Section | Title | Anchors |
 |---|---|---|
-| 101-000 | [General](101-000_General/) | — |
+| 101-000 | [General Information](101-000_General-Information/) | — |
 | 101-100 | [Mission Architecture Classes and Segments](101-100_Mission-Architecture-Classes-and-Segments/) | Register-derived; direct architecture source pending |
 | 101-200 | [Concept of Operations Doctrine](101-200_Concept-of-Operations-Doctrine/) | ISO 14711 |
 | 101-300 | [Mission Phases and Multi Cycle Timeline Model](101-300_Mission-Phases-and-Multi-Cycle-Timeline-Model/) | ISO 14300-1; ISO 21349 |

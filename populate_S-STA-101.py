@@ -44,7 +44,7 @@ flowchart LR
 ```"""
 
 S = {
- "000": ("General",
+ "000": ("General-Information",
    "Chapter role, derivation and the discipline-versus-execution line "
    "instanced: mission-architecture and operational-concept doctrine is "
    "owned here; operational execution, procedures and their "

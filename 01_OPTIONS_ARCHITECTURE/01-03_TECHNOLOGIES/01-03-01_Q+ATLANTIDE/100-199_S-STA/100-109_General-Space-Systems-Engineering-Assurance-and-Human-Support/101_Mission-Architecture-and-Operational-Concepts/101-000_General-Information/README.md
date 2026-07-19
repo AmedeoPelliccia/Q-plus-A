@@ -1,4 +1,4 @@
-# 101-000 — General
+# 101-000 — General Information
 
 **Chapter:** 101_Mission-Architecture-and-Operational-Concepts · **Section:** 000
 
