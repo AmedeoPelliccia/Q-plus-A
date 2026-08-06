@@ -6,6 +6,6 @@ Fitted provisions of the avionics/equipment compartments: linings, drip shields,
 
 ## Notes
 
-- Compartment structure is 053-100-030 / 053-200-050; ventilation is 021.
+- Compartment structure is 053-100-300 / 053-200-500; ventilation is 021.
 
 Generated 2026-07-09 · realize_S-ATLAS-050.py v1.0.0 · No-AAA compliant

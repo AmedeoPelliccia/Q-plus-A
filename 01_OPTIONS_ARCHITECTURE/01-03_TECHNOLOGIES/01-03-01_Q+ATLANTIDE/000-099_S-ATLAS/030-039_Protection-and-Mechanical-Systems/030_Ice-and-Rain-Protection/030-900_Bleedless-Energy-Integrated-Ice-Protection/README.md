@@ -11,10 +11,10 @@ The bleedless / energy-integrated content of ice protection: the electrothermal 
 ```mermaid
 flowchart LR
   H["024-900<br/>HVDC band"]
-  E["030-900-010<br/>Electrothermal anti-ice<br/>power architecture"]
-  W["030-900-030<br/>Waste-heat anti-icing"]
-  A["030-900-050<br/>Bleedless anti-ice<br/>air interface"]
-  C["030-900-070<br/>Integrated ice-detection<br/>and protection control"]
+  E["030-900-100<br/>Electrothermal anti-ice<br/>power architecture"]
+  W["030-900-300<br/>Waste-heat anti-icing"]
+  A["030-900-500<br/>Bleedless anti-ice<br/>air interface"]
+  C["030-900-700<br/>Integrated ice-detection<br/>and protection control"]
   T["021-900<br/>ECS thermal integration"]
   S["028-900<br/>Energy-store waste heat"]
   H --> E
@@ -28,10 +28,10 @@ flowchart LR
 
 | Subject | Title | Folder |
 |---|---|---|
-| 010 | Electrothermal Anti-Ice Power Architecture | [030-900-010](030-900-010_Electrothermal-Anti-Ice-Power-Architecture/) |
-| 030 | Waste-Heat Anti-Icing | [030-900-030](030-900-030_Waste-Heat-Anti-Icing/) |
-| 050 | Bleedless Anti-Ice Air Interface | [030-900-050](030-900-050_Bleedless-Anti-Ice-Air-Interface/) |
-| 070 | Integrated Ice-Detection and Protection Control | [030-900-070](030-900-070_Integrated-Ice-Detection-and-Protection-Control/) |
+| 100 | Electrothermal Anti-Ice Power Architecture | [030-900-100](030-900-100_Electrothermal-Anti-Ice-Power-Architecture/) |
+| 300 | Waste-Heat Anti-Icing | [030-900-300](030-900-300_Waste-Heat-Anti-Icing/) |
+| 500 | Bleedless Anti-Ice Air Interface | [030-900-500](030-900-500_Bleedless-Anti-Ice-Air-Interface/) |
+| 700 | Integrated Ice-Detection and Protection Control | [030-900-700](030-900-700_Integrated-Ice-Detection-and-Protection-Control/) |
 
 ## Boundary summary
 

@@ -6,6 +6,6 @@ Lightning strike protection (meshes, foils, diverters) and EMI shielding standar
 
 ## Notes
 
-- Diverter-strip instances live with their host structure (e.g. radome diverters 053-100-040, wing LE zones 030-110).
+- Diverter-strip instances live with their host structure (e.g. radome diverters 053-100-400, wing LE zones 030-110).
 
 Generated 2026-07-09 · realize_S-ATLAS-051.py v1.0.0 · No-AAA compliant

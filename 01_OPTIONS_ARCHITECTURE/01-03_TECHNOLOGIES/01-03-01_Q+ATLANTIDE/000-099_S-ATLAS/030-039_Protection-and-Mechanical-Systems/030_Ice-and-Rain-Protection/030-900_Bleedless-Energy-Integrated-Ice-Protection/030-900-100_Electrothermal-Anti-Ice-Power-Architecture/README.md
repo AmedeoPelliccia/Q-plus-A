@@ -1,4 +1,4 @@
-# 030-900-010 — Electrothermal Anti-Ice Power Architecture
+# 030-900-100 — Electrothermal Anti-Ice Power Architecture
 
 **Node:** 030-900_Bleedless-Energy-Integrated-Ice-Protection · **Subject:** 010
 

@@ -25,10 +25,10 @@ flowchart LR
 
 | Subject | Title | Folder |
 |---|---|---|
-| 010 | Distributed Electric Actuation Power | [029-900-010](029-900-010_Distributed-Electric-Actuation-Power/) |
-| 030 | Local EHA Hydraulic Loop | [029-900-030](029-900-030_Local-EHA-Hydraulic-Loop/) |
-| 050 | Utility Actuation Electric Power | [029-900-050](029-900-050_Utility-Actuation-Electric-Power/) |
-| 070 | Actuation Power Conditioning from HVDC | [029-900-070](029-900-070_Actuation-Power-Conditioning-from-HVDC/) |
+| 100 | Distributed Electric Actuation Power | [029-900-100](029-900-100_Distributed-Electric-Actuation-Power/) |
+| 300 | Local EHA Hydraulic Loop | [029-900-300](029-900-300_Local-EHA-Hydraulic-Loop/) |
+| 500 | Utility Actuation Electric Power | [029-900-500](029-900-500_Utility-Actuation-Electric-Power/) |
+| 700 | Actuation Power Conditioning from HVDC | [029-900-700](029-900-700_Actuation-Power-Conditioning-from-HVDC/) |
 
 ## Boundary summary
 

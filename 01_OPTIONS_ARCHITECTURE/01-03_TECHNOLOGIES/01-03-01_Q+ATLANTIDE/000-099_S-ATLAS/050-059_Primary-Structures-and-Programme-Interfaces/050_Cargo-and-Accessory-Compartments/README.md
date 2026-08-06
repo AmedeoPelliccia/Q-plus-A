@@ -2,7 +2,7 @@
 
 Sustainable Aviation Top-Level Architecture Schema (S-ATLAS) chapter for cargo and accessory compartments on the AMPEL360 next-generation models **eWTW** (electric Wide-Tube-and-Wing) and **hBWB** (hydrogen Blended-Wing-Body).
 
-Scope doctrine: 050 owns compartments as **fitted volumes** — linings, fire barriers, partitions, nets, loading provisions, insulation and compartment-level monitoring provisions. Compartment structure is 053 (floors 053-700, door surrounds 053-600-080, energy-carrier bay 053-900); fire/smoke detection and suppression are 026; compartment ventilation and isolation are 021; protective atmospheres are 047. On hBWB the lower-deck compartment set is remapped to embedded centerbody bays by zone ruling. Section grammar is ATA-section x10 (`050-XY0`).
+Scope doctrine: 050 owns compartments as **fitted volumes** — linings, fire barriers, partitions, nets, loading provisions, insulation and compartment-level monitoring provisions. Compartment structure is 053 (floors 053-700, door surrounds 053-600-800, energy-carrier bay 053-900); fire/smoke detection and suppression are 026; compartment ventilation and isolation are 021; protective atmospheres are 047. On hBWB the lower-deck compartment set is remapped to embedded centerbody bays by zone ruling. Section grammar is ATA-section x10 (`050-XY0`).
 
 ## Register
 
