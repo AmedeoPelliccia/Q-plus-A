@@ -1,4 +1,4 @@
-# 042-900-007 — Maintenance Reporting and Prognostics Boundary
+# 042-900-700 — Maintenance Reporting and Prognostics Boundary
 
 **Node:** 042-900_Platform-Health-and-Resource-Management · **Subject:** 007
 

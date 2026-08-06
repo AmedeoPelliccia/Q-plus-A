@@ -11,7 +11,7 @@ version: "0.1.0"
 date: "2026-06-05"
 ---
 
-# 000-000-003 — Programme and Product Agnosticism
+# 000-000-300 — Programme and Product Agnosticism
 
 > **Node:** `000-000` · **Item:** `003` · **ATA ref:** 00-00-03
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -80,7 +80,7 @@ An item is **not agnostic** if it:
 - Contains a programme identifier (eWTW, hBWB, …) in the normative body of the item.
 - References a specific certification special condition that is not universally applicable.
 
-Agnosticism violations are **defects** in the SSOT and must be raised as change requests under the document-control process ([`000-000-007`](000-000-007-Document-Control-and-Configuration.md)).
+Agnosticism violations are **defects** in the SSOT and must be raised as change requests under the document-control process ([`000-000-700`](../000-000-700_Document-Control-and-Configuration/)).
 
 ---
 
@@ -160,11 +160,11 @@ graph LR
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional basis for the agnosticism principle |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional basis for the agnosticism principle |
 | R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Structure standard S-ATLAS mirrors with function-slot agnosticism |
 | R3 | EASA CS-25 | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Airworthiness basis for large-aircraft programmes (example binding) |
-| R4 | Document Control item 007 | [`000-000-007-Document-Control-and-Configuration.md`](000-000-007-Document-Control-and-Configuration.md) | Change request process for agnosticism-violation defects |
-| R5 | Impact Studies folder (eWTW example) | [`01-02-01-04_IMPACT-STUDIES/`](../../../../../../01-02-01-04_IMPACT-STUDIES/) | Example of a programme binding store |
+| R4 | Document Control item 007 | [`000-000-700_Document-Control-and-Configuration/`](../000-000-700_Document-Control-and-Configuration/) | Change request process for agnosticism-violation defects |
+| R5 | Impact Studies folder (eWTW example) | [`01-02-01-04_IMPACT-STUDIES/`](../../../../../../../01-02-01-04_IMPACT-STUDIES/) | Example of a programme binding store |
 
 ---
 

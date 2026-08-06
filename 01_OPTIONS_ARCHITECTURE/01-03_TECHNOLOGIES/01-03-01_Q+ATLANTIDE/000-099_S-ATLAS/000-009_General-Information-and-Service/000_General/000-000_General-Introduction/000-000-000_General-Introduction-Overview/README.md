@@ -47,15 +47,15 @@ Node `000-000` (ATA 00-00) is the **entry point**. It exists so that any stakeho
 
 | Question | Item that answers it |
 |---|---|
-| What is S-ATLAS and what does it cover? | [`000`](000-000-000-General-Introduction-Overview.md) (this item) |
-| What terms and scope apply? | [`001`](000-000-001-Scope-and-Definitions.md) |
-| Why does this standard exist? | [`002`](000-000-002-Purpose-and-Mission.md) |
-| How is it kept neutral across programmes? | [`003`](000-000-003-Programme-and-Product-Agnosticism.md) |
-| How do I navigate and use it? | [`004`](000-000-004-How-to-Use-This-Architecture-and-Data-Set.md) |
-| How is it numbered? | [`005`](000-000-005-Numbering-and-Structure-Orientation.md) |
-| How does it relate to ATA / iSpec 2200? | [`006`](000-000-006-Standards-Alignment-ATA-iSpec-2200.md) |
-| How is it version-controlled? | [`007`](000-000-007-Document-Control-and-Configuration.md) |
-| How does each item trace to evidence? | [`008`](000-000-008-Traceability-and-Evidence-Index.md) |
+| What is S-ATLAS and what does it cover? | [`000`](../000-000-000_General-Introduction-Overview/) (this item) |
+| What terms and scope apply? | [`100`](../000-000-100_Scope-and-Definitions/) |
+| Why does this standard exist? | [`200`](../000-000-200_Purpose-and-Mission/) |
+| How is it kept neutral across programmes? | [`300`](../000-000-300_Programme-and-Product-Agnosticism/) |
+| How do I navigate and use it? | [`400`](../000-000-400_How-to-Use-This-Architecture-and-Data-Set/) |
+| How is it numbered? | [`500`](../000-000-500_Numbering-and-Structure-Orientation/) |
+| How does it relate to ATA / iSpec 2200? | [`600`](../000-000-600_Standards-Alignment-ATA-iSpec-2200/) |
+| How is it version-controlled? | [`700`](../000-000-700_Document-Control-and-Configuration/) |
+| How does each item trace to evidence? | [`800`](../000-000-800_Traceability-and-Evidence-Index/) |
 
 ---
 
@@ -160,7 +160,7 @@ flowchart LR
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority; S-ATLAS is constituted power under MDC |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority; S-ATLAS is constituted power under MDC |
 | R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Chapter–section–subject numbering basis |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Data module and DMC rules |
 | R4 | ICAO Annex 8 — Airworthiness of Aircraft | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Regulatory ceiling above all documentation standards |

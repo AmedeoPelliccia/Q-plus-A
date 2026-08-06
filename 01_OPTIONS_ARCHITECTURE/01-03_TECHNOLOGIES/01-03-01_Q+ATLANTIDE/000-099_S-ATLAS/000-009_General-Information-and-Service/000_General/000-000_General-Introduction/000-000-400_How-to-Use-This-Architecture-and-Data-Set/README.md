@@ -11,7 +11,7 @@ version: "0.1.0"
 date: "2026-06-05"
 ---
 
-# 000-000-004 — How to Use This Architecture and Data Set
+# 000-000-400 — How to Use This Architecture and Data Set
 
 > **Node:** `000-000` · **Item:** `004` · **ATA ref:** 00-00-04
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -66,10 +66,10 @@ date: "2026-06-05"
 
 | File | Purpose |
 |---|---|
-| [`000-099_S-ATLAS/README.md`](../../../../../README.md) | Band overview, governance framework, all master ranges |
-| [`000-009_.../README.md`](../../README.md) | Node register, numbering rules, green-delta table |
-| [`000_General/README.md`](../README.md) | Chapter-level navigation |
-| [`000-000_.../README.md`](README.md) | Node item set, governance, navigation |
+| [`000-099_S-ATLAS/README.md`](../../../../../../README.md) | Band overview, governance framework, all master ranges |
+| [`000-009_.../README.md`](../../../README.md) | Node register, numbering rules, green-delta table |
+| [`000_General/README.md`](../../README.md) | Chapter-level navigation |
+| [`000-000_.../README.md`](../README.md) | Node item set, governance, navigation |
 
 Start at the **master-range README** to orient yourself to a chapter, then navigate to the **node README** for the item list.
 
@@ -99,18 +99,18 @@ Items carry the following navigation tags in their front matter:
 
 ### 4.2 Programme Integrator
 
-1. Read [`000-000-003`](000-000-003-Programme-and-Product-Agnosticism.md) (agnosticism principle).
-2. Read [`000-000-006`](000-000-006-Standards-Alignment-ATA-iSpec-2200.md) (ATA / iSpec 2200 / S1000D alignment).
-3. Read [`000-000-005`](000-000-005-Numbering-and-Structure-Orientation.md) (numbering, to understand node IDs).
+1. Read [`000-000-300`](../000-000-300_Programme-and-Product-Agnosticism/) (agnosticism principle).
+2. Read [`000-000-600`](../000-000-600_Standards-Alignment-ATA-iSpec-2200/) (ATA / iSpec 2200 / S1000D alignment).
+3. Read [`000-000-500`](../000-000-500_Numbering-and-Structure-Orientation/) (numbering, to understand node IDs).
 4. Run impact study against the master-range node register (`000-009/README.md §4`).
 5. Map applicable nodes to programme DMCs.
-6. Read [`000-000-007`](000-000-007-Document-Control-and-Configuration.md) (change control) before creating CSDB entries.
-7. Read [`000-000-008`](000-000-008-Traceability-and-Evidence-Index.md) (traceability) to set up evidence links.
+6. Read [`000-000-700`](../000-000-700_Document-Control-and-Configuration/) (change control) before creating CSDB entries.
+7. Read [`000-000-800`](../000-000-800_Traceability-and-Evidence-Index/) (traceability) to set up evidence links.
 
 ### 4.3 Auditor / Certifier
 
-1. Read [`000-000-007`](000-000-007-Document-Control-and-Configuration.md) (change control, configuration status).
-2. Read [`000-000-008`](000-000-008-Traceability-and-Evidence-Index.md) (traceability and evidence index).
+1. Read [`000-000-700`](../000-000-700_Document-Control-and-Configuration/) (change control, configuration status).
+2. Read [`000-000-800`](../000-000-800_Traceability-and-Evidence-Index/) (traceability and evidence index).
 3. Navigate directly to the node in question via the node register.
 4. Verify SHA-256 anchor at baseline.
 
@@ -178,11 +178,11 @@ flowchart TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | S-ATLAS Band README | [`000-099_S-ATLAS/README.md`](../../../../../README.md) | Band-level orientation and master-range register |
-| R2 | Master Range README | [`000-009_.../README.md`](../../README.md) | Node register and green-delta table |
+| R1 | S-ATLAS Band README | [`000-099_S-ATLAS/README.md`](../../../../../../README.md) | Band-level orientation and master-range register |
+| R2 | Master Range README | [`000-009_.../README.md`](../../../README.md) | Node register and green-delta table |
 | R3 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Numbering conventions and structure standard |
 | R4 | S1000D Issue 4.2 | <https://www.s1000d.net/> | CSDB, DMC, and data module rules |
-| R5 | Document Control (item 007) | [`000-000-007-Document-Control-and-Configuration.md`](000-000-007-Document-Control-and-Configuration.md) | Change control and SSOT+PUB rules |
+| R5 | Document Control (item 007) | [`000-000-700_Document-Control-and-Configuration/`](../000-000-700_Document-Control-and-Configuration/) | Change control and SSOT+PUB rules |
 
 ---
 

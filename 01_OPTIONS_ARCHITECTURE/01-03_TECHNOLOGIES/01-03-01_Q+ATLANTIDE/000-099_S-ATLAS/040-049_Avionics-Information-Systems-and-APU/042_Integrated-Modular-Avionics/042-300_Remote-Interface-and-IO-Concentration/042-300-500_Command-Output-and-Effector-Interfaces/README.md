@@ -1,4 +1,4 @@
-# 042-300-005 — Command Output and Effector Interfaces
+# 042-300-500 — Command Output and Effector Interfaces
 
 **Node:** 042-300_Remote-Interface-and-IO-Concentration · **Subject:** 005
 

@@ -15,7 +15,7 @@ ief_anchor:
   stamped_by: Q-DATAGOV
 ---
 
-# 000-000-008 — Traceability and Evidence Index
+# 000-000-800 — Traceability and Evidence Index
 
 > **Node:** `000-000` · **Item:** `008` · **ATA ref:** 00-00-08
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -65,15 +65,15 @@ Item (SSOT)
 
 | Item | File | Parent requirement | Applicable standard | IEF anchor | DMC short-form |
 |---|---|---|---|---|---|
-| `000` | [`000-000-000-…-Overview.md`](000-000-000-General-Introduction-Overview.md) | MDC — Orientation entry point for the data set | ATA 00-00-00; iSpec 2200 §0 | `<sha256: TBS>` | `DMC-<PROG>-000-000-000` |
-| `001` | [`000-000-001-…-Definitions.md`](000-000-001-Scope-and-Definitions.md) | MDC — Scope and vocabulary control | ATA 00-00-01 | `<sha256: TBS>` | `DMC-<PROG>-000-000-001` |
-| `002` | [`000-000-002-…-Mission.md`](000-000-002-Purpose-and-Mission.md) | MDC Art. 2 — Mission and foundational values | ATA 00-00-02 | `<sha256: TBS>` | `DMC-<PROG>-000-000-002` |
-| `003` | [`000-000-003-…-Agnosticism.md`](000-000-003-Programme-and-Product-Agnosticism.md) | MDC — Agnosticism principle | ATA 00-00-03 | `<sha256: TBS>` | `DMC-<PROG>-000-000-003` |
-| `004` | [`000-000-004-…-Use.md`](000-000-004-How-to-Use-This-Architecture-and-Data-Set.md) | MDC — Navigation and usage guide | ATA 00-00-04 | `<sha256: TBS>` | `DMC-<PROG>-000-000-004` |
-| `005` | [`000-000-005-…-Numbering.md`](000-000-005-Numbering-and-Structure-Orientation.md) | MDC — Numbering convention | ATA 00-00-05; iSpec 2200 SNS rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-005` |
-| `006` | [`000-000-006-…-ATA-iSpec.md`](000-000-006-Standards-Alignment-ATA-iSpec-2200.md) | MDC — Standards alignment | ATA 100; iSpec 2200; S1000D Issue 4.2 | `<sha256: TBS>` | `DMC-<PROG>-000-000-006` |
-| `007` | [`000-000-007-…-Control.md`](000-000-007-Document-Control-and-Configuration.md) | MDC Art. 4 — Document control | SSOT+PUB doctrine; IEF | `<sha256: TBS>` | `DMC-<PROG>-000-000-007` |
-| `008` | [`000-000-008-…-Index.md`](000-000-008-Traceability-and-Evidence-Index.md) (this) | MDC — Evidence index | IEF; S1000D DMC rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-008` |
+| `000` | [`000-000-000-…-Overview.md`](../000-000-000_General-Introduction-Overview/) | MDC — Orientation entry point for the data set | ATA 00-00-00; iSpec 2200 §0 | `<sha256: TBS>` | `DMC-<PROG>-000-000-000` |
+| `001` | [`000-000-001-…-Definitions.md`](../000-000-100_Scope-and-Definitions/) | MDC — Scope and vocabulary control | ATA 00-00-01 | `<sha256: TBS>` | `DMC-<PROG>-000-000-001` |
+| `002` | [`000-000-002-…-Mission.md`](../000-000-200_Purpose-and-Mission/) | MDC Art. 2 — Mission and foundational values | ATA 00-00-02 | `<sha256: TBS>` | `DMC-<PROG>-000-000-002` |
+| `003` | [`000-000-003-…-Agnosticism.md`](../000-000-300_Programme-and-Product-Agnosticism/) | MDC — Agnosticism principle | ATA 00-00-03 | `<sha256: TBS>` | `DMC-<PROG>-000-000-003` |
+| `004` | [`000-000-004-…-Use.md`](../000-000-400_How-to-Use-This-Architecture-and-Data-Set/) | MDC — Navigation and usage guide | ATA 00-00-04 | `<sha256: TBS>` | `DMC-<PROG>-000-000-004` |
+| `005` | [`000-000-005-…-Numbering.md`](../000-000-500_Numbering-and-Structure-Orientation/) | MDC — Numbering convention | ATA 00-00-05; iSpec 2200 SNS rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-005` |
+| `006` | [`000-000-006-…-ATA-iSpec.md`](../000-000-600_Standards-Alignment-ATA-iSpec-2200/) | MDC — Standards alignment | ATA 100; iSpec 2200; S1000D Issue 4.2 | `<sha256: TBS>` | `DMC-<PROG>-000-000-006` |
+| `007` | [`000-000-007-…-Control.md`](../000-000-700_Document-Control-and-Configuration/) | MDC Art. 4 — Document control | SSOT+PUB doctrine; IEF | `<sha256: TBS>` | `DMC-<PROG>-000-000-007` |
+| `008` | [`000-000-008-…-Index.md`](../000-000-800_Traceability-and-Evidence-Index/) (this) | MDC — Evidence index | IEF; S1000D DMC rules | `<sha256: TBS>` | `DMC-<PROG>-000-000-008` |
 
 > **TBS** — To Be Stamped at formal baseline by Q-DATAGOV IEF tooling.
 > **MDC** — Model Digital Constitution (`00_MODEL-DIGITAL-CONSTITUTION/`).
@@ -109,11 +109,11 @@ Anchors marked `<sha256: TBS>` indicate the item is approved in content but awai
 
 | Upstream artefact | Location | Relevance |
 |---|---|---|
-| Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for S-ATLAS |
-| SSOT+PUB doctrine | [`000-000-007`](000-000-007-Document-Control-and-Configuration.md) | Change-control and publication rules |
-| IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | Evidence anchoring scheme |
-| ATA 100 / iSpec 2200 | [`01-07-02-02_ATA-iSpec-2200/`](../../../../../../01-07-02-02_ATA-iSpec-2200/) | Numbering and structure reference |
-| S1000D Issue 4.2 | [`01-07-02-01_S1000D/`](../../../../../../01-07-02-01_S1000D/) | Data module and DMC rules |
+| Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for S-ATLAS |
+| SSOT+PUB doctrine | [`000-000-700`](../000-000-700_Document-Control-and-Configuration/) | Change-control and publication rules |
+| IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | Evidence anchoring scheme |
+| ATA 100 / iSpec 2200 | [`01-07-02-02_ATA-iSpec-2200/`](../../../../../../../01-07-02-02_ATA-iSpec-2200/) | Numbering and structure reference |
+| S1000D Issue 4.2 | [`01-07-02-01_S1000D/`](../../../../../../../01-07-02-01_S1000D/) | Data module and DMC rules |
 
 ---
 
@@ -167,11 +167,11 @@ graph TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority — parent requirement source for all items |
-| R2 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | SHA-256 anchoring and evidence stamping protocol |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority — parent requirement source for all items |
+| R2 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | SHA-256 anchoring and evidence stamping protocol |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | DMC construction rules, SNS alignment, CSDB management |
 | R4 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Numbering structure reference for SNS alignment |
-| R5 | Document Control (item 007) | [`000-000-007-Document-Control-and-Configuration.md`](000-000-007-Document-Control-and-Configuration.md) | IEF stamping ceremony and baseline event rules |
+| R5 | Document Control (item 007) | [`000-000-700_Document-Control-and-Configuration/`](../000-000-700_Document-Control-and-Configuration/) | IEF stamping ceremony and baseline event rules |
 
 ---
 

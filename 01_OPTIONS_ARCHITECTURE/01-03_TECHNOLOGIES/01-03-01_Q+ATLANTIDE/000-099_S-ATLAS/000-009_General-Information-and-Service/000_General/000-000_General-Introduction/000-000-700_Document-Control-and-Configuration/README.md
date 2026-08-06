@@ -15,7 +15,7 @@ ief_anchor:
   stamped_by: Q-DATAGOV
 ---
 
-# 000-000-007 — Document Control and Configuration
+# 000-000-700 — Document Control and Configuration
 
 > **Node:** `000-000` · **Item:** `007` · **ATA ref:** 00-00-07
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -116,7 +116,7 @@ ief_anchor:
   stamped_by: Q-DATAGOV
 ```
 
-The anchor is recorded in the item's front matter and in the master evidence index ([`000-000-008`](000-000-008-Traceability-and-Evidence-Index.md)).
+The anchor is recorded in the item's front matter and in the master evidence index ([`000-000-800`](../000-000-800_Traceability-and-Evidence-Index/)).
 
 ---
 
@@ -188,11 +188,11 @@ flowchart TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for SSOT+PUB doctrine |
-| R2 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | SHA-256 anchoring and evidence stamping rules |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for SSOT+PUB doctrine |
+| R2 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | SHA-256 anchoring and evidence stamping rules |
 | R3 | S1000D Issue 4.2 — CSDB and change management | <https://www.s1000d.net/> | S1000D change management practices for PUB layer |
-| R4 | Traceability and Evidence Index (item 008) | [`000-000-008-Traceability-and-Evidence-Index.md`](000-000-008-Traceability-and-Evidence-Index.md) | Master evidence register where SHA-256 anchors are recorded |
-| R5 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions for lifecycle gate control |
+| R4 | Traceability and Evidence Index (item 008) | [`000-000-800_Traceability-and-Evidence-Index/`](../000-000-800_Traceability-and-Evidence-Index/) | Master evidence register where SHA-256 anchors are recorded |
+| R5 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions for lifecycle gate control |
 
 ---
 

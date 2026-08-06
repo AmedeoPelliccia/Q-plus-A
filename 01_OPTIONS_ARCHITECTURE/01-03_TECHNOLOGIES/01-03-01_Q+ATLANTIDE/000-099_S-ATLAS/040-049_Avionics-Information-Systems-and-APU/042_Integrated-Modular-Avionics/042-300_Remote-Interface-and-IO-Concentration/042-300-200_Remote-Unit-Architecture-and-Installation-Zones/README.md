@@ -1,4 +1,4 @@
-# 042-300-002 — Remote Unit Architecture and Installation Zones
+# 042-300-200 — Remote Unit Architecture and Installation Zones
 
 **Node:** 042-300_Remote-Interface-and-IO-Concentration · **Subject:** 002
 

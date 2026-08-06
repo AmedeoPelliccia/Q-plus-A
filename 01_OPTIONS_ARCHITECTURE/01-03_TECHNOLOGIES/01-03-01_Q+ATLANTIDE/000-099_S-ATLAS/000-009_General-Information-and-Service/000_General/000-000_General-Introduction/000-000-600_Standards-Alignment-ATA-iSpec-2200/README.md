@@ -11,7 +11,7 @@ version: "0.1.0"
 date: "2026-06-05"
 ---
 
-# 000-000-006 — Standards Alignment: ATA 100 / iSpec 2200 / S1000D
+# 000-000-600 — Standards Alignment: ATA 100 / iSpec 2200 / S1000D
 
 > **Node:** `000-000` · **Item:** `006` · **ATA ref:** 00-00-06
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes

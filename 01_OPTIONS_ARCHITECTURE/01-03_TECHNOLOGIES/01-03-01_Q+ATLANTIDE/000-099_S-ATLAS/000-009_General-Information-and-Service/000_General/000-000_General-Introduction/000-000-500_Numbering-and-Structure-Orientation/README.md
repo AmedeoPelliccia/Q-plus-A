@@ -11,7 +11,7 @@ version: "0.1.0"
 date: "2026-06-05"
 ---
 
-# 000-000-005 — Numbering and Structure Orientation
+# 000-000-500 — Numbering and Structure Orientation
 
 > **Node:** `000-000` · **Item:** `005` · **ATA ref:** 00-00-05
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -194,8 +194,8 @@ graph TD
 |---|---|---|---|
 | R1 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Chapter–section–subject numbering basis and section scaling reference |
 | R2 | S1000D Issue 4.2 — SNS rules | <https://www.s1000d.net/> | System/Sub-system/Subject code alignment with node and item numbering |
-| R3 | S-ATLAS Band README | [`000-099_S-ATLAS/README.md`](../../../../../README.md) | Band-level numbering overview and master-range register |
-| R4 | Master Range README | [`000-009_.../README.md`](../../README.md) | Chapter-level node register |
+| R3 | S-ATLAS Band README | [`000-099_S-ATLAS/README.md`](../../../../../../README.md) | Band-level numbering overview and master-range register |
+| R4 | Master Range README | [`000-009_.../README.md`](../../../README.md) | Chapter-level node register |
 
 ---
 

@@ -1,4 +1,4 @@
-# 042-300-006 — Configuration and Data Loading
+# 042-300-600 — Configuration and Data Loading
 
 **Node:** 042-300_Remote-Interface-and-IO-Concentration · **Subject:** 006
 

@@ -1,4 +1,4 @@
-# 042-300-007 — Built In Test and Health Reporting
+# 042-300-700 — Built In Test and Health Reporting
 
 **Node:** 042-300_Remote-Interface-and-IO-Concentration · **Subject:** 007
 

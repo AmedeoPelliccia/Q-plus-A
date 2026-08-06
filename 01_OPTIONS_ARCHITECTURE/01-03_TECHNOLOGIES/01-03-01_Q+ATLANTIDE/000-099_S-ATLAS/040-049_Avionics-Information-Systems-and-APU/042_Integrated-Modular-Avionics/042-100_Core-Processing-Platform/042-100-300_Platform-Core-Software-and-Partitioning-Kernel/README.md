@@ -1,4 +1,4 @@
-# 042-100-003 — Platform Core Software and Partitioning Kernel
+# 042-100-300 — Platform Core Software and Partitioning Kernel
 
 **Node:** 042-100_Core-Processing-Platform · **Subject:** 003
 

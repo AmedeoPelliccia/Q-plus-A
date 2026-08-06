@@ -1,4 +1,4 @@
-# 042-900-005 — Degraded Modes and Reconfiguration
+# 042-900-500 — Degraded Modes and Reconfiguration
 
 **Node:** 042-900_Platform-Health-and-Resource-Management · **Subject:** 005
 

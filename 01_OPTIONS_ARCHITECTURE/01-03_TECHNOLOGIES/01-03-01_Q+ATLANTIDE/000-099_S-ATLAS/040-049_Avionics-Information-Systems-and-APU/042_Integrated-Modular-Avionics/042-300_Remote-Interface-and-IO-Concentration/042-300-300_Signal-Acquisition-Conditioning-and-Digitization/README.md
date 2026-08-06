@@ -1,4 +1,4 @@
-# 042-300-003 — Signal Acquisition Conditioning and Digitization
+# 042-300-300 — Signal Acquisition Conditioning and Digitization
 
 **Node:** 042-300_Remote-Interface-and-IO-Concentration · **Subject:** 003
 

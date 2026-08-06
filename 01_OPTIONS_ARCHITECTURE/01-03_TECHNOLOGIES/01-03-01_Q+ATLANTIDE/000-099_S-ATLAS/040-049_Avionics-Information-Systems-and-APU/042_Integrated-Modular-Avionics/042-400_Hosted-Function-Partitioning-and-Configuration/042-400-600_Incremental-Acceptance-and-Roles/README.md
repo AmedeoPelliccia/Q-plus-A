@@ -1,4 +1,4 @@
-# 042-400-006 — Incremental Acceptance and Roles
+# 042-400-600 — Incremental Acceptance and Roles
 
 **Node:** 042-400_Hosted-Function-Partitioning-and-Configuration · **Subject:** 006
 

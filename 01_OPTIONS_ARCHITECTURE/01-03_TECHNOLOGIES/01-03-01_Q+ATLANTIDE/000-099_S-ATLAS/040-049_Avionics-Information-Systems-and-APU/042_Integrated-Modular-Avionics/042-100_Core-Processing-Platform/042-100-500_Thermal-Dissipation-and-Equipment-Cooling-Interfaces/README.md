@@ -1,4 +1,4 @@
-# 042-100-005 — Thermal Dissipation and Equipment Cooling Interfaces
+# 042-100-500 — Thermal Dissipation and Equipment Cooling Interfaces
 
 **Node:** 042-100_Core-Processing-Platform · **Subject:** 005
 

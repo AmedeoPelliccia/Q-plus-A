@@ -1,4 +1,4 @@
-# 042-200-007 — Time Distribution and Synchronization
+# 042-200-700 — Time Distribution and Synchronization
 
 **Node:** 042-200_Avionics-Data-Network · **Subject:** 007
 

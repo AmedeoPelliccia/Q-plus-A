@@ -11,7 +11,7 @@ version: "0.1.0"
 date: "2026-06-05"
 ---
 
-# 000-000-002 — Purpose and Mission
+# 000-000-200 — Purpose and Mission
 
 > **Node:** `000-000` · **Item:** `002` · **ATA ref:** 00-00-02
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -139,12 +139,12 @@ graph TD
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional ceiling; source of S-ATLAS governance values |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional ceiling; source of S-ATLAS governance values |
 | R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Documentation structure standard S-ATLAS mirrors and extends |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | Publication standard for programme CSDB / PUB instances |
 | R4 | ICAO Annex 8 — Airworthiness | <https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet/annex8.pdf> | Regulatory authority above all documentation standards |
 | R5 | EASA CS-25 | <https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes> | Primary certification basis for large aircraft programmes |
-| R6 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions referenced in §2.3 |
+| R6 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions referenced in §2.3 |
 
 ---
 

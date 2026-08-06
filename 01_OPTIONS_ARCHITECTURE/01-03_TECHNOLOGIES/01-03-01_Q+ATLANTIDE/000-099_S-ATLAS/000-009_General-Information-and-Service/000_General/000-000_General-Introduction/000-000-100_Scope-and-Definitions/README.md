@@ -11,7 +11,7 @@ version: "0.1.0"
 date: "2026-06-05"
 ---
 
-# 000-000-001 — Scope and Definitions
+# 000-000-100 — Scope and Definitions
 
 > **Node:** `000-000` · **Item:** `001` · **ATA ref:** 00-00-01
 > **Owner:** Q-DATAGOV · **Status:** baseline · **Agnostic:** yes
@@ -158,11 +158,11 @@ graph LR
 
 | # | Reference | External Link | Applicability |
 |---|---|---|---|
-| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for S-ATLAS; parent of all governance rules |
+| R1 | Model Digital Constitution | [`00_MODEL-DIGITAL-CONSTITUTION/`](../../../../../../../../../00_MODEL-DIGITAL-CONSTITUTION/) | Constitutional authority for S-ATLAS; parent of all governance rules |
 | R2 | ATA 100 / iSpec 2200 (Airlines for America) | <https://www.airlines.org/data/ispec-2200/> | Numbering and structure reference for bands, master ranges, chapters |
 | R3 | S1000D Issue 4.2 | <https://www.s1000d.net/> | DMC, CSDB, and data module rules |
-| R4 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | Evidence anchoring and SHA-256 stamping rules |
-| R5 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions (LC-A through LC-N) |
+| R4 | IEF (Integrity Evidence Framework) | [`01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/`](../../../../../../../01-07-04-03_EVIDENCE-AND-PROVENANCE-IEF/) | Evidence anchoring and SHA-256 stamping rules |
+| R5 | Q+ATLANTIDE Lifecycle Model | [`02_LIFECYCLE_MODEL/README.md`](../../../../../../../../../02_LIFECYCLE_MODEL/README.md) | LC-letter stage definitions (LC-A through LC-N) |
 
 ---
 

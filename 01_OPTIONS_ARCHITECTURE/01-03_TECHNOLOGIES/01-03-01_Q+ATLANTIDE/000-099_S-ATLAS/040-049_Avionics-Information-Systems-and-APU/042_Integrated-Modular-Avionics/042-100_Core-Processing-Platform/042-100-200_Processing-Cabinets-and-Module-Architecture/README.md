@@ -1,4 +1,4 @@
-# 042-100-002 — Processing Cabinets and Module Architecture
+# 042-100-200 — Processing Cabinets and Module Architecture
 
 **Node:** 042-100_Core-Processing-Platform · **Subject:** 002
 
