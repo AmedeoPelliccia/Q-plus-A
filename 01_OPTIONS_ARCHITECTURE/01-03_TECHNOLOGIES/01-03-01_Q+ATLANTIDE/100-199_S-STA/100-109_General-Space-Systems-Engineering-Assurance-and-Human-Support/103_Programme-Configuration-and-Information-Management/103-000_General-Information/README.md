@@ -4,4 +4,9 @@
 
 Chapter role and derivation, and the governance line instanced: management-discipline doctrine and artifact classes are owned here; actual programme structures, baselines and records are downstream. Sections cite standards-register anchors undated; a declared absence is preferred to a false anchor.
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 103-010 | [Derivation and Governance Line](103-010_Derivation-and-Governance-Line/) |
+| 103-020 | [Vocabulary Interface](103-020_Vocabulary-Interface/) |

@@ -6,4 +6,10 @@ Management products as evidence classes: management plans, breakdown-structure d
 
 **Anchoring standards (undated):** ISO 10795; ISO 21349
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 103-910 | [Management Plan Classes](103-910_Management-Plan-Classes/) |
+| 103-920 | [Baselines as Records](103-920_Baselines-as-Records/) |
+| 103-930 | [Vocabulary and Records](103-930_Vocabulary-and-Records/) |

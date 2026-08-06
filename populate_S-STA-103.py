@@ -46,118 +46,86 @@ flowchart LR
 ```"""
 
 S = {
- "000": ("General-Information",
-   "Chapter role and derivation, and the governance line instanced: "
-   "management-discipline doctrine and artifact classes are owned here; "
-   "actual programme structures, baselines and records are downstream. "
-   "Sections cite standards-register anchors undated; a declared "
-   "absence is preferred to a false anchor.",
-   ""),
- "100": ("Programme-Structuring-and-Management-Framework",
-   "The management framework of a space project as doctrine: programme "
-   "structuring, project organization classes, management-framework "
-   "definition and the phase-gate interface — the lifecycle phase model "
-   "is 101-300; the gates that punctuate it are governed here.",
-   "ISO 14300-1; ISO 23462; ISO 11893"),
- "200": ("Breakdown-Structures-and-Downstream-Mapping-Anchor",
-   "The breakdown-structure family as recognized discipline: "
-   "specification and requirements, functional, product, work, cost, "
-   "business and organizational breakdowns, with the open clause "
-   "admitting further structures — including economic and contribution-"
-   "accounting structures — that serve project success. The taxonomy is "
-   "the reference architecture onto which breakdown structures map; it "
-   "is not itself a programme breakdown. This section anchors the "
-   "downstream-mapping doctrine of both bands' interface chapters.",
-   "ISO 27026"),
- "300": ("Configuration-Management",
-   "Configuration management as discipline: configuration-item "
-   "identification classes, baseline classes, change-control doctrine "
-   "and configuration-status accounting. Requirement-change interfaces "
-   "are 102-200; the as-verified configuration evidence is 105; "
-   "baseline instances are downstream.",
-   "ISO 21886"),
- "400": ("Information-and-Documentation-Management",
-   "Information and documentation management as discipline: document "
-   "and record classes, identification and retention doctrine, and the "
-   "operationalization of the documentation-precedence doctrine — band "
-   "governance stated at 100-700, co-anchored here. Operational "
-   "documentation classes are 170; data standards and protocols are "
-   "156.",
-   "ISO 10789"),
- "500": ("Reviews-and-Gates",
-   "Review governance: review classes, authorities, entry and exit "
-   "criteria classes, gate doctrine and review records. Product "
-   "readiness and evidence sufficiency are the producing chapters' "
-   "matter (101-900, 102-900); the process, authority and gates are "
-   "owned here.",
-   "ISO 21349"),
- "600": ("Programme-Risk-Management",
-   "Programme risk as discipline: risk classes, assessment and "
-   "treatment doctrine, risk-register artifact classes. Safety, "
-   "dependability and their probabilistic analyses are 104; this "
-   "section owns programme-level risk governance.",
-   "ISO 17666"),
- "700": ("Work-Definition-and-Statements-of-Work",
-   "Work definition as discipline: statement-of-work artifact classes, "
-   "work-package definition doctrine and their relation to the work "
-   "breakdown of 103-200. Actual statements of work are downstream.",
-   "ISO 17255"),
- "800": ("Lessons-Learned-and-Knowledge-Management",
-   "Experience capture as discipline: lessons-learned classes, "
-   "knowledge retention and reuse doctrine, and the feed toward "
-   "doctrine evolution across the band. Closed-loop problem solving "
-   "and non-conformance control are 104.",
-   "ISO 16192"),
- "900": ("Management-Products-Evidence-and-Records",
-   "Management products as evidence classes: management plans, "
-   "breakdown-structure definitions, baselines-as-records, review and "
-   "risk records, and the controlled vocabulary of programme "
-   "management. Documentation precedence is consumed from 100-700 and "
-   "103-400, never redefined.",
-   "ISO 10795; ISO 21349"),
+ "000": ('General-Information',
+   'Chapter role and derivation, and the governance line instanced: management-discipline doctrine and artifact classes are owned here; actual programme structures, baselines and records are downstream. Sections cite standards-register anchors undated; a declared absence is preferred to a false anchor.',
+   '',
+   [('010', 'Derivation-and-Governance-Line', 'Discipline and classes here; structures, baselines and records downstream.'), ('020', 'Vocabulary-Interface', 'Programme-management vocabulary anchor (ISO 10795 at 103-900).')]),
+ "100": ('Programme-Structuring-and-Management-Framework',
+   'The management framework of a space project as doctrine: programme structuring, project organization classes, management-framework definition and the phase-gate interface — the lifecycle phase model is 101-300; the gates that punctuate it are governed here.',
+   'ISO 14300-1; ISO 23462; ISO 11893',
+   [('110', 'Programme-Structuring-Classes', 'Project structuring classes (ISO 14300-1).'), ('120', 'Project-Organization-Classes', 'Organization classes (ISO 11893).'), ('130', 'Management-Framework-Definition', 'Framework definition doctrine (ISO 23462).'), ('140', 'Phase-Gate-Interface', 'Gates governing the 101-300 phase model.')]),
+ "200": ('Breakdown-Structures-and-Downstream-Mapping-Anchor',
+   "The breakdown-structure family as recognized discipline: specification and requirements, functional, product, work, cost, business and organizational breakdowns, with the open clause admitting further structures — including economic and contribution-accounting structures — that serve project success. The taxonomy is the reference architecture onto which breakdown structures map; it is not itself a programme breakdown. This section anchors the downstream-mapping doctrine of both bands' interface chapters.",
+   'ISO 27026',
+   [('210', 'Breakdown-Structure-Family', 'Specification, functional, product, work, cost, business, organizational (ISO 27026).'), ('220', 'Open-Clause-and-Additional-Structures', 'Further structures — including economic and contribution-accounting — under the open clause.'), ('230', 'Taxonomy-as-Reference-Architecture', 'The taxonomy is what breakdowns map onto; not itself a programme breakdown.'), ('240', 'Interface-to-Downstream-Mapping', "Anchor of both bands' interface-chapter doctrine.")]),
+ "300": ('Configuration-Management',
+   'Configuration management as discipline: configuration-item identification classes, baseline classes, change-control doctrine and configuration-status accounting. Requirement-change interfaces are 102-200; the as-verified configuration evidence is 105; baseline instances are downstream.',
+   'ISO 21886',
+   [('310', 'Configuration-Item-Identification', 'CI identification classes (ISO 21886).'), ('320', 'Baseline-Classes', 'Baseline classes; instances downstream.'), ('330', 'Change-Control-Doctrine', 'Change control; requirement change 102-200.'), ('340', 'Configuration-Status-Accounting', 'Status accounting; as-verified evidence 105.')]),
+ "400": ('Information-and-Documentation-Management',
+   'Information and documentation management as discipline: document and record classes, identification and retention doctrine, and the operationalization of the documentation-precedence doctrine — band governance stated at 100-700, co-anchored here. Operational documentation classes are 170; data standards and protocols are 156.',
+   'ISO 10789',
+   [('410', 'Document-and-Record-Classes', 'Document and record classes (ISO 10789).'), ('420', 'Identification-and-Retention', 'Identification and retention doctrine.'), ('430', 'Precedence-Operationalization', 'Operationalizing the 100-700 precedence doctrine.')]),
+ "500": ('Reviews-and-Gates',
+   "Review governance: review classes, authorities, entry and exit criteria classes, gate doctrine and review records. Product readiness and evidence sufficiency are the producing chapters' matter (101-900, 102-900); the process, authority and gates are owned here.",
+   'ISO 21349',
+   [('510', 'Review-Classes-and-Authorities', 'Review classes and authorities (ISO 21349).'), ('520', 'Entry-and-Exit-Criteria', 'Criteria classes; readiness with producing chapters.'), ('530', 'Gate-Doctrine-and-Records', 'Gate doctrine and review records.')]),
+ "600": ('Programme-Risk-Management',
+   'Programme risk as discipline: risk classes, assessment and treatment doctrine, risk-register artifact classes. Safety, dependability and their probabilistic analyses are 104; this section owns programme-level risk governance.',
+   'ISO 17666',
+   [('610', 'Risk-Classes', 'Programme risk classes (ISO 17666).'), ('620', 'Assessment-and-Treatment', 'Assessment and treatment doctrine.'), ('630', 'Risk-Register-Class', 'Risk-register artifact class; safety analyses 104.')]),
+ "700": ('Work-Definition-and-Statements-of-Work',
+   'Work definition as discipline: statement-of-work artifact classes, work-package definition doctrine and their relation to the work breakdown of 103-200. Actual statements of work are downstream.',
+   'ISO 17255',
+   [('710', 'Statement-of-Work-Class', 'SOW artifact classes (ISO 17255).'), ('720', 'Work-Package-Definition', 'Work-package definition doctrine.'), ('730', 'Relation-to-Work-Breakdown', 'Relation to the 103-200 work breakdown.')]),
+ "800": ('Lessons-Learned-and-Knowledge-Management',
+   'Experience capture as discipline: lessons-learned classes, knowledge retention and reuse doctrine, and the feed toward doctrine evolution across the band. Closed-loop problem solving and non-conformance control are 104.',
+   'ISO 16192',
+   [('810', 'Lessons-Learned-Classes', 'Lessons-learned classes (ISO 16192).'), ('820', 'Knowledge-Retention-and-Reuse', 'Retention and reuse doctrine.'), ('830', 'Doctrine-Evolution-Feed', 'Feeding lessons into band doctrine; problem solving 104-600.')]),
+ "900": ('Management-Products-Evidence-and-Records',
+   'Management products as evidence classes: management plans, breakdown-structure definitions, baselines-as-records, review and risk records, and the controlled vocabulary of programme management. Documentation precedence is consumed from 100-700 and 103-400, never redefined.',
+   'ISO 10795; ISO 21349',
+   [('910', 'Management-Plan-Classes', 'Management plan and product classes.'), ('920', 'Baselines-as-Records', 'Baselines and records as evidence classes.'), ('930', 'Vocabulary-and-Records', 'Controlled vocabulary and record governance (ISO 10795).')]),
 }
 
-def sec_readme(code, title, body, std):
+def subj_readme(sec, sc, st, line):
+    return (f"# {CH}-{sc} — {st.replace('-',' ')}\n\n"
+            f"**Section:** {CH}-{sec} · **Subject:** {sc}\n\n- {line}\n\n"
+            f"*Subject items are downstream matter; anchors cited undated.*\n")
+
+def sec_readme(code, title, body, std, subs):
     L = [f"# {CH}-{code} — {title.replace('-',' ')}", "",
-         f"**Chapter:** {CH}_{CH_TITLE} · **Section:** {code}", "",
-         body, ""]
-    if std:
-        L += [f"**Anchoring standards (undated):** {std}", ""]
-    L += ["*Subjects are register-gated and follow per-range ratification.*", ""]
+         f"**Chapter:** {CH}_{CH_TITLE} · **Section:** {code}", "", body, ""]
+    if std: L += [f"**Anchoring standards (undated):** {std}", ""]
+    L += ["## Subjects", "", "| Subject | Title |", "|---|---|"]
+    for sc, st, _ in subs:
+        L.append(f"| {CH}-{sc} | [{st.replace('-',' ')}]({CH}-{sc}_{st}/) |")
+    L.append("")
     return "\n".join(L)
 
 def ch_readme():
     L=[];A=L.append
     A(f"# {CH}_{CH_TITLE}");A("")
-    A(f"**Band:** 100-199_S-STA · **Range:** 100-109 · **Status:** Register-derived chapter — sections cite their anchoring standards from the S-STA standards register; merge constitutes ratification of this chapter section register under S-STA-BAND-RULING v0.4 §6. Source governance: sections cite standards-register anchors where they exist; the absence of a direct anchor does not invalidate a section when its architectural need is established by the ruling, boundary analysis or multiple source classes.");A("")
+    A(f"**Band:** 100-199_S-STA · **Range:** 100-109 · **Status:** Register-derived chapter at dual grain — sections and subjects cite standards-register anchors; merge constitutes ratification of this chapter register under S-STA-BAND-RULING v0.4 §6. Source governance: a declared absence is preferred to a false anchor.");A("")
     A("## Scope");A("");A(SCOPE);A("")
     A("## Concept flow");A("");A(DIAGRAM);A("")
     A("## Section register");A("")
-    A("| Section | Title | Anchors |");A("|---|---|---|")
-    for code,(t,_,std) in S.items():
-        A(f"| {CH}-{code} | [{t.replace('-',' ')}]({CH}-{code}_{t}/) | {std if std else '—'} |")
+    A("| Section | Title | Subjects | Anchors |");A("|---|---|---|---|")
+    for code,(t,_,std,subs) in S.items():
+        A(f"| {CH}-{code} | [{t.replace('-',' ')}]({CH}-{code}_{t}/) | {len(subs)} | {std if std else '—'} |")
     A("")
     A("## Boundary summary");A("")
-    A("Management discipline and artifact classes here; actual programme "
-      "structures, baselines, registers and records are downstream — the "
-      "taxonomy holds classes, never instances. Breakdown structures: "
-      "recognized as a family at 103-200 with the open clause; the "
-      "taxonomy is the reference architecture they map onto and is not "
-      "itself a programme breakdown; the downstream-mapping doctrine of "
-      "the interface chapters anchors here. Configuration split: "
-      "discipline and classes 103-300; requirement change 102-200; "
-      "as-verified evidence 105; baseline instances downstream. "
-      "Documentation: precedence is band governance (100-700) "
-      "operationalized at 103-400; operational documentation 170; data "
-      "standards 156. Reviews: process, authorities and gates 103-500; "
-      "readiness and evidence sufficiency with the producing chapters "
-      "(101-900, 102-900). Risk: programme governance 103-600; safety, "
-      "dependability and probabilistic analyses 104. Lessons learned "
-      "103-800; closed-loop problem solving and non-conformance 104. "
-      "Phase model 101-300; gates here. Classes 190-199 constrain and "
-      "shall not duplicate management discipline.")
     A("")
     return "\n".join(L)+"\n"
+
+def build_plan(cdir):
+    plan=[(cdir/"README.md",ch_readme(),True)]
+    for code,(t,body,std,subs) in S.items():
+        sdir=cdir/f"{CH}-{code}_{t}"
+        plan.append((sdir/"README.md",sec_readme(code,t,body,std,subs),True))
+        for sc,st,line in subs:
+            plan.append((sdir/f"{CH}-{sc}_{st}"/"README.md",subj_readme(code,sc,st,line),False))
+    return plan
 
 def main(argv=None):
     p=argparse.ArgumentParser()
@@ -171,9 +139,7 @@ def main(argv=None):
     if not anchor.is_dir() and not a.bootstrap:
         p.error(f"Q+ATLANTIDE root not found under {root}; run from repo root, use --root, or pass --bootstrap.")
     cdir=root/RANGE_REL/f"{CH}_{CH_TITLE}"
-    plan=[(cdir/"README.md",ch_readme(),True)]
-    for code,(t,body,std) in S.items():
-        plan.append((cdir/f"{CH}-{code}_{t}"/"README.md",sec_readme(code,t,body,std),True))
+    plan=build_plan(cdir)
     written=skipped=0
     for fp,content,always in plan:
         exists=fp.exists(); should=(not exists) or always or a.overwrite

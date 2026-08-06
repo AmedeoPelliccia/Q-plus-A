@@ -6,4 +6,10 @@ Doctrine of initialization and commissioning: the initialization-plan class, the
 
 **Anchoring standards (undated):** ISO 10784-1/-2/-3
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 101-610 | [Initialization Plan Class](101-610_Initialization-Plan-Class/) |
+| 101-620 | [Commissioning Report Class](101-620_Commissioning-Report-Class/) |
+| 101-630 | [Recommissioning After Intervention](101-630_Recommissioning-After-Intervention/) |

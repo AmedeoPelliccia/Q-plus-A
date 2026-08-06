@@ -6,4 +6,10 @@ Information and documentation management as discipline: document and record clas
 
 **Anchoring standards (undated):** ISO 10789
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 103-410 | [Document and Record Classes](103-410_Document-and-Record-Classes/) |
+| 103-420 | [Identification and Retention](103-420_Identification-and-Retention/) |
+| 103-430 | [Precedence Operationalization](103-430_Precedence-Operationalization/) |

@@ -6,4 +6,10 @@ Work definition as discipline: statement-of-work artifact classes, work-package 
 
 **Anchoring standards (undated):** ISO 17255
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 103-710 | [Statement of Work Class](103-710_Statement-of-Work-Class/) |
+| 103-720 | [Work Package Definition](103-720_Work-Package-Definition/) |
+| 103-730 | [Relation to Work Breakdown](103-730_Relation-to-Work-Breakdown/) |

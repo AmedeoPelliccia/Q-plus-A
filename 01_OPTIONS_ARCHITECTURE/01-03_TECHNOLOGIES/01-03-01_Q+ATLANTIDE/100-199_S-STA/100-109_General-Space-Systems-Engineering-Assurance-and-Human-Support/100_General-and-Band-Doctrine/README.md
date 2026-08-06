@@ -1,10 +1,10 @@
 # 100_General-and-Band-Doctrine
 
-**Band:** 100-199_S-STA · **Range:** 100-109 · **Status:** Doctrine chapter — sections derive from ruling S-STA-BAND-RULING v0.4 (the ruling is their register); technology sections across the band remain register-gated.
+**Band:** 100-199_S-STA · **Range:** 100-109 · **Status:** Doctrine chapter — sections derive from ruling S-STA-BAND-RULING v0.4 (the ruling is their register); technology sections across the band remain register-gated. This doctrine chapter is sections-only by design: its sections are the atomic doctrine units; discipline chapters 101-109 carry dual grain.
 
 ## Scope
 
-The doctrine chapter of the S-STA band: band scope and the revisitability doctrine, the layer model and agnosticism rule including the expendable scope declaration, the range register and navigation, the lifecycle-and-intervention model, the maturity and graduation discipline, cross-band boundaries, sources and registers governance, cross-cutting threads, and the controlled vocabulary. Doctrine sections derive from ruling S-STA-BAND-RULING v0.4 — their register is the ruling; technology sections across the band remain register-gated.
+The doctrine chapter of the S-STA band: band scope and the revisitability doctrine, the layer model and agnosticism rule including the expendable scope declaration, the range register and navigation, the lifecycle-and-intervention model, the maturity and graduation discipline, cross-band boundaries, sources and registers governance, cross-cutting threads, and the controlled vocabulary. Doctrine sections derive from ruling S-STA-BAND-RULING v0.4 — their register is the ruling; technology sections across the band remain register-gated. This doctrine chapter is sections-only by design: its sections are the atomic doctrine units; discipline chapters 101-109 carry dual grain.
 
 ## Band context
 

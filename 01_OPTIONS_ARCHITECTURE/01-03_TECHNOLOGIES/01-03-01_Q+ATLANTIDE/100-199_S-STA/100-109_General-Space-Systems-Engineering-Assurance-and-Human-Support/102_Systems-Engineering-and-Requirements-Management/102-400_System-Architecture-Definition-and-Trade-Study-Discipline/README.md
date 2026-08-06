@@ -6,4 +6,10 @@ The SE side of architecture: functional and physical architecture definition pro
 
 **Anchoring standards (undated):** Register-derived; trade-study sources pending
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 102-410 | [Functional and Physical Architecture Method](102-410_Functional-and-Physical-Architecture-Method/) |
+| 102-420 | [Trade Study Method](102-420_Trade-Study-Method/) |
+| 102-430 | [Decision Record Classes](102-430_Decision-Record-Classes/) |

@@ -6,4 +6,10 @@ Programme risk as discipline: risk classes, assessment and treatment doctrine, r
 
 **Anchoring standards (undated):** ISO 17666
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 103-610 | [Risk Classes](103-610_Risk-Classes/) |
+| 103-620 | [Assessment and Treatment](103-620_Assessment-and-Treatment/) |
+| 103-630 | [Risk Register Class](103-630_Risk-Register-Class/) |

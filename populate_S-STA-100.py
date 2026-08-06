@@ -24,7 +24,7 @@ SCOPE = ("The doctrine chapter of the S-STA band: band scope and the "
          "sources and registers governance, cross-cutting threads, and the "
          "controlled vocabulary. Doctrine sections derive from ruling "
          "S-STA-BAND-RULING v0.4 — their register is the ruling; "
-         "technology sections across the band remain register-gated.")
+         "technology sections across the band remain register-gated. This doctrine chapter is sections-only by design: its sections are the atomic doctrine units; discipline chapters 101-109 carry dual grain.")
 
 DIAGRAM = """```mermaid
 flowchart LR
@@ -162,7 +162,7 @@ def sec_readme(code, title, body):
 def ch_readme():
     L=[];A=L.append
     A(f"# {CH}_{CH_TITLE}");A("")
-    A(f"**Band:** 100-199_S-STA · **Range:** 100-109 · **Status:** Doctrine chapter — sections derive from ruling S-STA-BAND-RULING v0.4 (the ruling is their register); technology sections across the band remain register-gated.");A("")
+    A(f"**Band:** 100-199_S-STA · **Range:** 100-109 · **Status:** Doctrine chapter — sections derive from ruling S-STA-BAND-RULING v0.4 (the ruling is their register); technology sections across the band remain register-gated. This doctrine chapter is sections-only by design: its sections are the atomic doctrine units; discipline chapters 101-109 carry dual grain.");A("")
     A("## Scope");A("");A(SCOPE);A("")
     A("## Band context");A("");A(DIAGRAM);A("")
     A("## Section register");A("")
@@ -202,3 +202,4 @@ def main(argv=None):
 if __name__=="__main__":
     try: sys.exit(main())
     except BrokenPipeError: sys.exit(0)
+    

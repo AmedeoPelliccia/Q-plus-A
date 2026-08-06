@@ -6,4 +6,11 @@ Configuration management as discipline: configuration-item identification classe
 
 **Anchoring standards (undated):** ISO 21886
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 103-310 | [Configuration Item Identification](103-310_Configuration-Item-Identification/) |
+| 103-320 | [Baseline Classes](103-320_Baseline-Classes/) |
+| 103-330 | [Change Control Doctrine](103-330_Change-Control-Doctrine/) |
+| 103-340 | [Configuration Status Accounting](103-340_Configuration-Status-Accounting/) |

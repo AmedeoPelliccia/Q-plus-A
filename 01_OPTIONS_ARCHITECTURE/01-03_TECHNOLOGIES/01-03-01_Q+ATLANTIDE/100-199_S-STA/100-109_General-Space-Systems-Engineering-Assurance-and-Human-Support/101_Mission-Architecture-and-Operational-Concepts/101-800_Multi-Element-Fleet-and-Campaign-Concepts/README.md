@@ -4,4 +4,10 @@
 
 Architectures of many elements: constellations, fleets, staged campaigns and shared-infrastructure concepts; fleet-level phasing and replenishment-and-replacement doctrine. Constellation classes are 192; fleet operations automation is 179.
 
-*Subjects are register-gated and follow per-range ratification.*
+## Subjects
+
+| Subject | Title |
+|---|---|
+| 101-810 | [Constellation and Fleet Concepts](101-810_Constellation-and-Fleet-Concepts/) |
+| 101-820 | [Campaign and Staged Architectures](101-820_Campaign-and-Staged-Architectures/) |
+| 101-830 | [Replenishment and Replacement](101-830_Replenishment-and-Replacement/) |
