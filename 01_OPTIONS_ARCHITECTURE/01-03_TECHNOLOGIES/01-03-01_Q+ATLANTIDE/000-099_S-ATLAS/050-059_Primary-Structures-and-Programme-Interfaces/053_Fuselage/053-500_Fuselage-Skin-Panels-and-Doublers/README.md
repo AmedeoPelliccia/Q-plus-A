@@ -17,18 +17,18 @@ Subjects (redistributed from Embraer ch.53; `-000` = section general, deeper uni
 
 | Subject | Title | Layer | Embraer origin |
 |---|---|:--:|---|
-| `053-500-010` | Forward Fuselage Skin | STD | 53-10-01 |
-| `053-500-020` | Center Fuselage I Skin | STD | 53-21-01 |
-| `053-500-030` | Center Fuselage II Skin | STD | 53-22-01 |
-| `053-500-040` | Center Fuselage III Skin | STD | 53-23-01 |
-| `053-500-050` | Rear Fuselage Skin | STD | 53-30-01 |
-| `053-500-060` | Tailcone Skin | STD | 53-31-01 |
+| `053-500-100` | Forward Fuselage Skin | STD | 53-10-01 |
+| `053-500-200` | Center Fuselage I Skin | STD | 53-21-01 |
+| `053-500-300` | Center Fuselage II Skin | STD | 53-22-01 |
+| `053-500-400` | Center Fuselage III Skin | STD | 53-23-01 |
+| `053-500-500` | Rear Fuselage Skin | STD | 53-30-01 |
+| `053-500-600` | Tailcone Skin | STD | 53-31-01 |
 
-- [`053-500-010`](./053-500-010_Forward-Fuselage-Skin/) - Forward Fuselage Skin | STD
-- [`053-500-020`](./053-500-020_Center-Fuselage-I-Skin/) - Center Fuselage I Skin | STD
-- [`053-500-030`](./053-500-030_Center-Fuselage-II-Skin/) - Center Fuselage II Skin | STD
-- [`053-500-040`](./053-500-040_Center-Fuselage-III-Skin/) - Center Fuselage III Skin | STD
-- [`053-500-050`](./053-500-050_Rear-Fuselage-Skin/) - Rear Fuselage Skin | STD
-- [`053-500-060`](./053-500-060_Tailcone-Skin/) - Tailcone Skin | STD
+- [`053-500-100`](./053-500-100_Forward-Fuselage-Skin/) - Forward Fuselage Skin | STD
+- [`053-500-200`](./053-500-200_Center-Fuselage-I-Skin/) - Center Fuselage I Skin | STD
+- [`053-500-300`](./053-500-300_Center-Fuselage-II-Skin/) - Center Fuselage II Skin | STD
+- [`053-500-400`](./053-500-400_Center-Fuselage-III-Skin/) - Center Fuselage III Skin | STD
+- [`053-500-500`](./053-500-500_Rear-Fuselage-Skin/) - Rear Fuselage Skin | STD
+- [`053-500-600`](./053-500-600_Tailcone-Skin/) - Tailcone Skin | STD
 
 > Layer: **STD** carries . **◇** green overlay . **STD-G** green delta . **∅** vacated.

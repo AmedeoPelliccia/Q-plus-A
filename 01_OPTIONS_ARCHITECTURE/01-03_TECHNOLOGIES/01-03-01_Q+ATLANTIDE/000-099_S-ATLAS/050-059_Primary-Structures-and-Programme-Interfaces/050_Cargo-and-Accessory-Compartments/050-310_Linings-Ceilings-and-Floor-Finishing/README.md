@@ -6,6 +6,6 @@ Sidewall and door linings, ceilings, protective covers and floor finishing: the 
 
 ## Notes
 
-- Liners are burnthrough/fire-barrier certified items; the door surround structure beneath is 053-600-080.
+- Liners are burnthrough/fire-barrier certified items; the door surround structure beneath is 053-600-800.
 
 Generated 2026-07-09 · realize_S-ATLAS-050.py v1.0.0 · No-AAA compliant

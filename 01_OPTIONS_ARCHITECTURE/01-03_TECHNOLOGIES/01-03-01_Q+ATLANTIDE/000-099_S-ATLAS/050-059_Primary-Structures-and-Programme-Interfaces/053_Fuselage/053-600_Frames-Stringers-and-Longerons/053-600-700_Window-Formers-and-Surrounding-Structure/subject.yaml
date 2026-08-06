@@ -1,0 +1,22 @@
+subject:
+  id: 053-600-700
+  title: Window Formers and Surrounding Structure
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-600"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-10-09"
+    - "53-10-12"
+    - "53-21-09"
+    - "53-21-12"
+    - "53-22-09"
+    - "53-22-12"
+    - "53-23-09"
+    - "53-23-12"
+  crossref_note: "cross-ref 056"
+  status: scaffold
+  version: "1.0"

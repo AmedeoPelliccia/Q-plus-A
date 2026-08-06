@@ -1,0 +1,15 @@
+subject:
+  id: 053-000-300
+  title: Fuselage External Access Doors and Panels General
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-000"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-03-00"
+  crossref_note: "zone panels distributed to 100/200/300/400"
+  status: scaffold
+  version: "1.0"

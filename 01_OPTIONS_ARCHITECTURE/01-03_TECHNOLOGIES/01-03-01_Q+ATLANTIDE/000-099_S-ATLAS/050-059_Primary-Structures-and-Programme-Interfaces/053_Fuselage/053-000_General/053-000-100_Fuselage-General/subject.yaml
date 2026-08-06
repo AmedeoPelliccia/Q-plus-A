@@ -1,0 +1,15 @@
+subject:
+  id: 053-000-100
+  title: Fuselage General
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-000"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-00-00"
+  crossref_note: ""
+  status: scaffold
+  version: "1.0"

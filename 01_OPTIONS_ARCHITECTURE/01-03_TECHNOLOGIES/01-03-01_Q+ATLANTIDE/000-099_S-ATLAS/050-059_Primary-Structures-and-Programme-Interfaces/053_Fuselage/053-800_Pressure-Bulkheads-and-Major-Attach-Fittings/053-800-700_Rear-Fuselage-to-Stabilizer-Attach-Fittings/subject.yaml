@@ -1,0 +1,17 @@
+subject:
+  id: 053-800-700
+  title: Rear Fuselage to Stabilizer Attach Fittings
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-800"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-30-83"
+    - "53-30-84"
+    - "53-30-85"
+  crossref_note: "cross-ref 055"
+  status: scaffold
+  version: "1.0"

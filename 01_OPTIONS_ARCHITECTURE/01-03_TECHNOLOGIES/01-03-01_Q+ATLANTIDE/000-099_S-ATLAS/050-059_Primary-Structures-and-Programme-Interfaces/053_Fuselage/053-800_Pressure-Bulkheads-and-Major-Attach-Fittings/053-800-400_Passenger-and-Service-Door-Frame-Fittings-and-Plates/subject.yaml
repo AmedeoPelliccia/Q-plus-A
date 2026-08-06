@@ -1,0 +1,22 @@
+subject:
+  id: 053-800-400
+  title: Passenger and Service Door Frame Fittings and Plates
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-800"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-10-21"
+    - "53-10-22"
+    - "53-10-25"
+    - "53-10-26"
+    - "53-23-21"
+    - "53-23-22"
+    - "53-23-25"
+    - "53-23-26"
+  crossref_note: "cross-ref 052"
+  status: scaffold
+  version: "1.0"

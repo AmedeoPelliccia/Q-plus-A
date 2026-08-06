@@ -24,15 +24,15 @@ flowchart LR
 | Subject | Title | Folder |
 |---|---|---|
 | 000 | Platform Health and Resource Management Overview | [042-900-000](042-900-000_Platform-Health-and-Resource-Management-Overview/) |
-| 001 | Scope and Definitions | [042-900-001](042-900-001_Scope-and-Definitions/) |
-| 002 | Health Monitoring Architecture | [042-900-002](042-900-002_Health-Monitoring-Architecture/) |
-| 003 | Fault Detection Isolation and Containment | [042-900-003](042-900-003_Fault-Detection-Isolation-and-Containment/) |
-| 004 | Resource Monitoring and Margin Surveillance | [042-900-004](042-900-004_Resource-Monitoring-and-Margin-Surveillance/) |
-| 005 | Degraded Modes and Reconfiguration | [042-900-005](042-900-005_Degraded-Modes-and-Reconfiguration/) |
-| 006 | Annunciation and Crew Interface Boundary | [042-900-006](042-900-006_Annunciation-and-Crew-Interface-Boundary/) |
-| 007 | Maintenance Reporting and Prognostics Boundary | [042-900-007](042-900-007_Maintenance-Reporting-and-Prognostics-Boundary/) |
-| 008 | Interfaces and Boundaries | [042-900-008](042-900-008_Interfaces-and-Boundaries/) |
-| 009 | Evidence and Certification Data | [042-900-009](042-900-009_Evidence-and-Certification-Data/) |
+| 100 | Scope and Definitions | [042-900-100](042-900-100_Scope-and-Definitions/) |
+| 200 | Health Monitoring Architecture | [042-900-200](042-900-200_Health-Monitoring-Architecture/) |
+| 300 | Fault Detection Isolation and Containment | [042-900-300](042-900-300_Fault-Detection-Isolation-and-Containment/) |
+| 400 | Resource Monitoring and Margin Surveillance | [042-900-400](042-900-400_Resource-Monitoring-and-Margin-Surveillance/) |
+| 500 | Degraded Modes and Reconfiguration | [042-900-500](042-900-500_Degraded-Modes-and-Reconfiguration/) |
+| 600 | Annunciation and Crew Interface Boundary | [042-900-600](042-900-600_Annunciation-and-Crew-Interface-Boundary/) |
+| 700 | Maintenance Reporting and Prognostics Boundary | [042-900-700](042-900-700_Maintenance-Reporting-and-Prognostics-Boundary/) |
+| 800 | Interfaces and Boundaries | [042-900-800](042-900-800_Interfaces-and-Boundaries/) |
+| 900 | Evidence and Certification Data | [042-900-900](042-900-900_Evidence-and-Certification-Data/) |
 
 ## Boundary summary
 

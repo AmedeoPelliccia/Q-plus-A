@@ -1,0 +1,15 @@
+subject:
+  id: 053-900-500
+  title: Vacated Auxiliary Fuel Tank Compartment Footprint
+  level: subject
+  layer: "∅"
+  chapter: "053"
+  section: "053-900"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-23-39"
+  crossref_note: "Embraer aux-fuel-tank compartment door -> VACATED for eWTW; migration footprint"
+  status: scaffold
+  version: "1.0"

@@ -94,10 +94,10 @@ e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 | `030-810` | 30-81 | Ice detector | STD |
 | `030-820` | 30-82 | Super-large-droplet ice detector | STD |
 | `030-900` | — | **Bleedless / Energy-Integrated Ice Protection** | STD-G |
-| `030-900-010` | — | Electrothermal anti-ice power architecture (from HVDC `024-900`) | G-subject |
-| `030-900-030` | — | Waste-heat anti-icing (energy-system recovery; ↔ `021-900`) | G-subject |
-| `030-900-050` | — | Bleedless anti-ice air interface (↔ `021-900-070`) | G-subject |
-| `030-900-070` | — | Integrated ice-detection and protection control | G-subject |
+| `030-900-100` | — | Electrothermal anti-ice power architecture (from HVDC `024-900`) | G-subject |
+| `030-900-300` | — | Waste-heat anti-icing (energy-system recovery; ↔ `021-900`) | G-subject |
+| `030-900-500` | — | Bleedless anti-ice air interface (↔ `021-900-070`) | G-subject |
+| `030-900-700` | — | Integrated ice-detection and protection control | G-subject |
 
 > The two ⚡ sections are the whole green story of 030. Everything else carries because it was already electric — the chapter is a clean illustration of "substitute the bleed source, leave the electric content alone."
 
@@ -143,7 +143,7 @@ e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 |---|---|---|---|
 | `030-110` Wing anti-ice | electrothermal | electrothermal mats from HVDC | electrothermal; waste-heat option from fuel cell |
 | `030-210` Propulsion-module anti-ice | electric inlet anti-ice | ducted-fan inlet electrothermal | turbine/fuel-cell inlet anti-ice |
-| `030-900-030` Waste-heat anti-icing | energy-system recovery | battery/converter waste heat | fuel-cell / cryo-loop waste heat |
+| `030-900-300` Waste-heat anti-icing | energy-system recovery | battery/converter waste heat | fuel-cell / cryo-loop waste heat |
 | `031-900-010` Energy-state indication | quantity/state | SoC/SoH pages | LH₂ mass + fuel-cell health pages |
 | `031-900-030` HV status | HV bus status | traction HVDC | fuel-cell HVDC |
 
@@ -153,7 +153,7 @@ e.g.  30-11-05  →  030-110-050   ·   31-53-00  →  031-530-000
 
 ## 6. Governance
 
-Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **S-ATLAS-NORM-TERM-001** (engine → propulsion module; EICAS → CAS). Owners: **030 → Q-AIR**, **031 → Q-AIR** with **Q-DATAGOV** for the `031-900` recording/DPP delta; green overlay **Q-GREENTECH**. Electrothermal anti-ice power (`030-900-010`) and the green CAS infrastructure (`031-900-050`) couple to safety-critical chapters and carry that flag.
+Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **S-ATLAS-NORM-TERM-001** (engine → propulsion module; EICAS → CAS). Owners: **030 → Q-AIR**, **031 → Q-AIR** with **Q-DATAGOV** for the `031-900` recording/DPP delta; green overlay **Q-GREENTECH**. Electrothermal anti-ice power (`030-900-100`) and the green CAS infrastructure (`031-900-050`) couple to safety-critical chapters and carry that flag.
 
 ---
 

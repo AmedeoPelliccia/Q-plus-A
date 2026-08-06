@@ -1,0 +1,15 @@
+subject:
+  id: 053-100-500
+  title: Forward Fuselage Direct Vision Window
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-100"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-10-77"
+  crossref_note: "glazing -> 056"
+  status: scaffold
+  version: "1.0"

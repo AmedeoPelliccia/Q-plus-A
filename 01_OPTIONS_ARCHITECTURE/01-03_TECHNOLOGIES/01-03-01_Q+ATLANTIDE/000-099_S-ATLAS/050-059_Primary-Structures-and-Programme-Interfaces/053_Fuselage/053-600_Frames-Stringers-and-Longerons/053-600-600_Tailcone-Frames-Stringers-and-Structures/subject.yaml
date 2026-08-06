@@ -1,0 +1,17 @@
+subject:
+  id: 053-600-600
+  title: Tailcone Frames Stringers and Structures
+  level: subject
+  layer: "STD"
+  chapter: "053"
+  section: "053-600"
+  owner: Q-STRUCTURES
+  model: SSOT-agnostic
+  side: SSOT
+  embraer_origin:
+    - "53-31-02"
+    - "53-31-03"
+    - "53-31-04"
+  crossref_note: ""
+  status: scaffold
+  version: "1.0"
