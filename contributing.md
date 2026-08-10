@@ -45,6 +45,31 @@ Once approved, the contributor becomes the temporary **engineering steward** of 
 
 Stewardship means responsibility for developing and documenting the contribution. It does **not** transfer ownership of the controlled identifier, nor authority to modify the surrounding architecture. A controlled part number remains part of the Q+A configuration architecture.
 
+### 2.1 Division enrolment (team registration)
+
+Contributors are encouraged to register as **team members** of one Q+ division when their first work package is approved, or at any time thereafter, by adding a row to the controlled roster:
+
+```text
+01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-REGISTER.csv
+```
+
+* **Technical Divisions** — [`01-01-01_TECHNICAL-DIVISIONS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01_TECHNICAL-DIVISIONS/): Q-AIR, Q-SPACE, Q-GREENTECH, Q-STRUCTURES, Q-DATAGOV, Q-HPC, Q-HORIZON, Q-MECHANICS, Q-GROUND, Q-INDUSTRY, Q-SCIRES (`01-01-01-01` … `01-01-01-11`).
+* **Enterprise Divisions** — [`01-01-02_ENTERPRISE-DIVISIONS/`](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02_ENTERPRISE-DIVISIONS/): Q-FINANCE, Q-HR, Q-CSR, Q-LEGAL, Q-PMO, Q-RISK, Q-GOV, Q-ESG, Q-DEI, PROCUREMENTS-AND-SUPPLIERS, AUTHORITIES-AND-REGULATORS-INTERFACES (`01-01-02-01` … `01-01-02-11`).
+
+Roster schema — the CSV is the authored SSOT; per-division Markdown tables and dashboards are **derived views, never authored**:
+
+```csv
+memberId,displayName,role,primaryDivision,supportingDivisions,disciplines,status,since
+```
+
+Rules:
+
+* one **primary** division per member; any number of supporting divisions;
+* enrolment is proposed by pull request (it may ride with the first work-package PR) and approved by the architecture authority;
+* `status` is `PROPOSED`, `ACTIVE` or `INACTIVE`; inactivity follows the same criteria as §13;
+* the register stores only information the contributor chooses to publish — a GitHub username is sufficient (the personal-data rule of §15 applies);
+* **enrolment grants no architectural authority**: allocation and stewardship remain per approved work package.
+
 ---
 
 ## 3. Issue-first allocation process
@@ -57,7 +82,7 @@ Every work package begins with an issue.
 [WORK PACKAGE] <controlled node or part number> — <short contribution title>
 ```
 
-**Examples** (S-ATLAS-coherent addresses):
+**Examples** (G-ATLAS-coherent addresses):
 
 ```text
 [WORK PACKAGE] EWTW-538001-010 — Forward pressure bulkhead web CAD model
@@ -149,7 +174,7 @@ Physical product artefacts belong under the relevant PBS part-number node, **alo
 Publication artefacts belong under the owning **information node** in `01_INFORMATION-ARCHITECTURE`:
 
 ```text
-<S-ATLAS information node>/
+<G-ATLAS information node>/
 ├── DMRL-<node>.yaml     (node SSOT: required DMs, publicationTargets, ICN links)
 ├── DM/                  (S1000D data modules)
 └── ICN/
