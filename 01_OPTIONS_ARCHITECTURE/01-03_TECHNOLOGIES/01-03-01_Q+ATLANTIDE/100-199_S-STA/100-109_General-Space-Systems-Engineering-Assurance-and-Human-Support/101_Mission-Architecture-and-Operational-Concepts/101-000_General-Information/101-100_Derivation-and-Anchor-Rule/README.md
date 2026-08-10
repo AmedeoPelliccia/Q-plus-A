@@ -1,6 +1,6 @@
 # 101-100 — Derivation and Anchor Rule
 
-**Section:** 101-000 · **Subject:** 010
+**Section:** 101-100.
 
 - Dual-grain derivation; anchors undated; declared absence over false anchors.
 
