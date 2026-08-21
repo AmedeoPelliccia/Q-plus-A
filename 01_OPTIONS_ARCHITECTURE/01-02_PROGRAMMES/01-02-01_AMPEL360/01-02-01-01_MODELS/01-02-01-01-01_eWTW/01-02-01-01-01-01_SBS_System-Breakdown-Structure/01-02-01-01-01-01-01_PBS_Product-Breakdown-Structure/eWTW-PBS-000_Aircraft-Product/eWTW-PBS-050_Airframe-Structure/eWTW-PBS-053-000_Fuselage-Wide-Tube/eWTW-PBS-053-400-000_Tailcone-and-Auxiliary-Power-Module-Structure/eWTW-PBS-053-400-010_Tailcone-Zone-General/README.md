@@ -12,4 +12,4 @@ CSN `534001` - grammar `EWTW-534001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Tailcone frames/longerons: 053-600-060; tailcone skins: 053-500-060.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

@@ -14,4 +14,4 @@ CSN `538001` - grammar `EWTW-538001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - MIGRATION: legacy eWTW-PBS-053-010-030 (CSN 530103) maps here (CSN 538001).
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

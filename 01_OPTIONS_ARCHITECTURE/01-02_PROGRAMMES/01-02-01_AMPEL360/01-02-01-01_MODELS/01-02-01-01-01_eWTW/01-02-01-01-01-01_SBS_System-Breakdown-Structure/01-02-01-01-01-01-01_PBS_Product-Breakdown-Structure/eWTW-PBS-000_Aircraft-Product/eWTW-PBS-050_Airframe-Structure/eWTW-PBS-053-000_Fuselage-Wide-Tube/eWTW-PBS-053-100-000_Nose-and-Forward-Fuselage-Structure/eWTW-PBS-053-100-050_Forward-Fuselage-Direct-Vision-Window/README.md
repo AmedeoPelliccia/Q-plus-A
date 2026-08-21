@@ -15,4 +15,4 @@ CSN `531005` - grammar `EWTW-531005-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Transparencies and mechanisms: ATA 056. Windshield formers/posts: 053-600-070.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

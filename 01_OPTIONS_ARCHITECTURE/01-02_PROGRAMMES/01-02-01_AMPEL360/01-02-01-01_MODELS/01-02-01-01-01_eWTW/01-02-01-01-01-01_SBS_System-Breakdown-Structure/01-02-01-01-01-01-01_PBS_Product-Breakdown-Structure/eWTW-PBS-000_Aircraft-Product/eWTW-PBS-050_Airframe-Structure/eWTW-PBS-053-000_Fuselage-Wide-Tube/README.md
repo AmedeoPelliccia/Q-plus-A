@@ -31,7 +31,7 @@ PBS codes are PBS-local, linked by mapping, never mirrored). SSOT-side; the AMM 
 rendered as 3-digit hundreds fields (`053-000`, `053-100` .. `053-900`);
 subjects populate the final triplet x10 (`053-SSS-UU0`). The former x10 section
 grammar (`053-010` .. `053-110`) is SUPERSEDED - see `PBS-053-BREAKDOWN.md`
-and the legacy PBS-053 generator migration map.
+and `realize_PBS-053_GATLAS.py --migration-map`.
 
 ## Index
 

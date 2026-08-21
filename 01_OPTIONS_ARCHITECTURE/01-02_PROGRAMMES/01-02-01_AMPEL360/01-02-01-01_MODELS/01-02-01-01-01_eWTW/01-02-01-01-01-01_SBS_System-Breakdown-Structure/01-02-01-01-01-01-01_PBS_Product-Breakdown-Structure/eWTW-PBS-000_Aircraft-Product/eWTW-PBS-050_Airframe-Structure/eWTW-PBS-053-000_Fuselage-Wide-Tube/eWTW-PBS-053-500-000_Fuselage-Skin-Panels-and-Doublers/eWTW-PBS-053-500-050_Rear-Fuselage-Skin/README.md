@@ -12,4 +12,4 @@ CSN `535005` - grammar `EWTW-535005-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-535005-030` PANEL-SKIN-BELLY-REAR
 - `EWTW-535005-040` DOUBLER-CUTOUT-SET-REAR
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

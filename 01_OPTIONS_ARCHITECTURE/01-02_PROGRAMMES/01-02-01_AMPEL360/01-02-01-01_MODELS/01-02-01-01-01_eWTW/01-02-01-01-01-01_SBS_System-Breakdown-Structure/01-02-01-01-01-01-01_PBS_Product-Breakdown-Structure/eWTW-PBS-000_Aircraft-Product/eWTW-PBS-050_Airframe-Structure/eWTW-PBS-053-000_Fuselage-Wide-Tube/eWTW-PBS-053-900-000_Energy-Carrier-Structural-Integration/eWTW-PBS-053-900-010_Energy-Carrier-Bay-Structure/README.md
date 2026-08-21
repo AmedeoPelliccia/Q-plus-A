@@ -16,4 +16,4 @@ CSN `539001` - grammar `EWTW-539001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Battery bay per ICN-EWTW-021000010 (053-900 references confirmed correct). Energy carrier units: ATA 024 family.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

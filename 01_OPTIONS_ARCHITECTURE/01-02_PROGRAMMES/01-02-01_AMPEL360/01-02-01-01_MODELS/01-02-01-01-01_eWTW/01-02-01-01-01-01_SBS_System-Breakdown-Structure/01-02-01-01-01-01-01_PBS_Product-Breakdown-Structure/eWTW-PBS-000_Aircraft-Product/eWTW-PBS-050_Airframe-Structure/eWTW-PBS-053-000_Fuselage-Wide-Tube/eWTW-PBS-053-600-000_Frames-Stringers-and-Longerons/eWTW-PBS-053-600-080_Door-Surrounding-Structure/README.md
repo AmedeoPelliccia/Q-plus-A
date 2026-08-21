@@ -18,4 +18,4 @@ CSN `536008` - grammar `EWTW-536008-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Door frame fittings/plates: 053-800-040/-050. Sills: 053-800-080. Door leaves: 052.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

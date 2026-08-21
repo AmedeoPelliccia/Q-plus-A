@@ -8,4 +8,4 @@ CSN `534005` - grammar `EWTW-534005-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-534005-010` PANEL-ACCESS-APM-SET
 - `EWTW-534005-020` SURROUND-PANEL-CUTOUT-SET
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

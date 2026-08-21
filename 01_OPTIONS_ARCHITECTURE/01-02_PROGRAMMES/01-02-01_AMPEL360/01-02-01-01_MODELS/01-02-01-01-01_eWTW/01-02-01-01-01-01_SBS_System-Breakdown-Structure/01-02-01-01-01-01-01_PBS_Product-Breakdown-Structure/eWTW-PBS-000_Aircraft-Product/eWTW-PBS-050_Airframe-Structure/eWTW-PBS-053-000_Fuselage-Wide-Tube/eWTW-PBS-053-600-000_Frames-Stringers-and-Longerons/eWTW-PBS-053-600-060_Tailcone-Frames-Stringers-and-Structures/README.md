@@ -9,4 +9,4 @@ CSN `536006` - grammar `EWTW-536006-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-536006-020` LONGERON-TAILCONE-SET
 - `EWTW-536006-030` CLIP-SET-TAILCONE
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

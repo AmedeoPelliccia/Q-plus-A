@@ -17,4 +17,4 @@ CSN `537003` - grammar `EWTW-537003-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Owns the MLG wheelwell and over-wingbox pressure decks (Class B delta 1). Wheelwell walls and sealing: 053-200-030.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

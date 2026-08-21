@@ -1,5 +1,5 @@
 # PBS-053 realized tree - eWTW Fuselage Wide-Tube (taxonomy-mapped)
-# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
 .
 ./.gitkeep
 ./PBS-053-BREAKDOWN.md

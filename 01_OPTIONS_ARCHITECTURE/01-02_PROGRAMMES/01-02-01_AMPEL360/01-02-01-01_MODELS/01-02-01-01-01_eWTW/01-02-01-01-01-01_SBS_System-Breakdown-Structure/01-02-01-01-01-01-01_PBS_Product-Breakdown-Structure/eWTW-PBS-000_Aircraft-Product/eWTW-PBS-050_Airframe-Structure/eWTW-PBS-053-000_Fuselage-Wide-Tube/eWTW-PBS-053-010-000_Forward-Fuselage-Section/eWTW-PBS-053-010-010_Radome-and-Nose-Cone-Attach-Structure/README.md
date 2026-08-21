@@ -2,6 +2,7 @@
 station: eWTW-PBS-053-010-010
 localCode: "053-010-010"
 realizes: "053-100-400"
+realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code conserved per CM-001 A1.1 — identity vs reference: localCode feeds CSN and the PN tree; realizes follows taxonomy evolution"
 top_assembly: EWTW-530101-000
 root: EWTW-530101
 mic: EWTW

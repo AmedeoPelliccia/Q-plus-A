@@ -22,7 +22,9 @@ A PBS subject node is the **assembly station**: the single point where identity
 switches from *taxonomy code* to *part number*. The station holds exactly one
 **top assembly** plus a `station.yaml` recording the handshake
 (`realizes: <taxonomy-id>` ↔ `top_assembly: <PN>`). Above the station: S-ATLAS
-codes. Below: part numbers.
+codes. Below: part numbers. Per Amendment A1, every record carrying `realizes`
+also carries a `realizesNote` stating identity vs reference: `localCode` feeds
+CSN and the PN tree; `realizes` follows taxonomy evolution.
 
 ## 2. Part-number grammar
 

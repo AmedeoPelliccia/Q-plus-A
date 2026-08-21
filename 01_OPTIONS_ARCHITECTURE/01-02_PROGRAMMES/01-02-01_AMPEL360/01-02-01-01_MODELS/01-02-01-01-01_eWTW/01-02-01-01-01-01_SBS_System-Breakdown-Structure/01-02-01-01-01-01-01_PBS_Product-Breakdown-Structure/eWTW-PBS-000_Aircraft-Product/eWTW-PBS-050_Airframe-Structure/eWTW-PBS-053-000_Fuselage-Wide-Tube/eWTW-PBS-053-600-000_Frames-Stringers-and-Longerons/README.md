@@ -14,4 +14,4 @@ Section node. Realizes S-ATLAS `053-600_Frames-Stringers-and-Longerons` (mapping
 - `053-600-080` - Door Surrounding Structure (5 items)
 - `053-600-090` - Keel Beam Structure (6 items)
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

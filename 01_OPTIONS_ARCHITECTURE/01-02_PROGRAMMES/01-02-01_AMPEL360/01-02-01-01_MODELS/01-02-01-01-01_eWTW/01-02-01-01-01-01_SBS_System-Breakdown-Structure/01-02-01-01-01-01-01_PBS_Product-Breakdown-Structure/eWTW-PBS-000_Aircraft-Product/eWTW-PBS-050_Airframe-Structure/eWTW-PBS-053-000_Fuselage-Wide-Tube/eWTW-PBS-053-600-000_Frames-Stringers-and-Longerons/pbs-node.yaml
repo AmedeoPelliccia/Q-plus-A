@@ -1,6 +1,6 @@
 # PBS node record (section)
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
 node:
   id: "eWTW-PBS-053-600-000"
   title: "Frames Stringers and Longerons"

@@ -11,4 +11,4 @@ Section node. Realizes S-ATLAS `053-100_Nose-and-Forward-Fuselage-Structure` (ma
 - `053-100-050` - Forward Fuselage Direct Vision Window (4 items)
 - `053-100-060` - Forward Fuselage External Access Panels (4 items)
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

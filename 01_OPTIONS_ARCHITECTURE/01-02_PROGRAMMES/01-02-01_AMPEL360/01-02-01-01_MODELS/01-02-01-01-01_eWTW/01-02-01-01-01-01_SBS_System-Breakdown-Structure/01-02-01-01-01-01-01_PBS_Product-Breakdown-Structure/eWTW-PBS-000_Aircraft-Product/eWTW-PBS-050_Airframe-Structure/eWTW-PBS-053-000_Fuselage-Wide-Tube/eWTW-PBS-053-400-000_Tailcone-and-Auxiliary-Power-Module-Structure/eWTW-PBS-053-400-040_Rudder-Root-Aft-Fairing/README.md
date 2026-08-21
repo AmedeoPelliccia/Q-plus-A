@@ -14,4 +14,4 @@ CSN `534004` - grammar `EWTW-534004-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Dorsal-fin root fairing home (053 vs 055): ruling pending.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

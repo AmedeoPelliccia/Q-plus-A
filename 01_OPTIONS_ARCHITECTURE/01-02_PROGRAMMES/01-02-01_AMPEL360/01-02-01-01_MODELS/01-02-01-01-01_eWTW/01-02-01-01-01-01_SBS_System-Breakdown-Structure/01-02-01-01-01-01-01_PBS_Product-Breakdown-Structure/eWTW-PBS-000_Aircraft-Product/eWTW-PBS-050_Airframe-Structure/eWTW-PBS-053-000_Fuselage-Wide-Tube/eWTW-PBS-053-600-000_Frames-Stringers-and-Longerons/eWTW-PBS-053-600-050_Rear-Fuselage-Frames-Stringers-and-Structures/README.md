@@ -14,4 +14,4 @@ CSN `536005` - grammar `EWTW-536005-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Stabilizer/fin attach FITTINGS: 053-800-070.
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

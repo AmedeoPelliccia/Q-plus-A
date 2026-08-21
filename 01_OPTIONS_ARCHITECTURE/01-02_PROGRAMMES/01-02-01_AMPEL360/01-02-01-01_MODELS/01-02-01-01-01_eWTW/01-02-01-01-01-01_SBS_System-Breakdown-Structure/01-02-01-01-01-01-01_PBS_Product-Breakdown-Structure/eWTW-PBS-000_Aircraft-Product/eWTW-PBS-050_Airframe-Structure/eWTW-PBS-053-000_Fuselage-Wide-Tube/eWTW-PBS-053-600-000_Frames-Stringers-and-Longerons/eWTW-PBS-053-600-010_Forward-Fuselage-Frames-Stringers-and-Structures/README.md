@@ -9,4 +9,4 @@ CSN `536001` - grammar `EWTW-536001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-536001-020` STRINGER-SET-FWD
 - `EWTW-536001-030` CLIP-AND-TIE-SET-FWD
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

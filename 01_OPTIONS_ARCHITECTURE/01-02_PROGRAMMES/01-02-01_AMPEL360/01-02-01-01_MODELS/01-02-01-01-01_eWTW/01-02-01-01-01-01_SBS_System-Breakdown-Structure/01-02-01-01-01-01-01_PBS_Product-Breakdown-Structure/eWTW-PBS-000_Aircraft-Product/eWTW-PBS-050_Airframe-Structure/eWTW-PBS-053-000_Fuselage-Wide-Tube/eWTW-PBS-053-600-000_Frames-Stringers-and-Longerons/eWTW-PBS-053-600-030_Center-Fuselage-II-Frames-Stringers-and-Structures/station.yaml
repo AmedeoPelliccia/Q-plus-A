@@ -1,10 +1,12 @@
 # Assembly station record
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
-assemblyStation:
-  id: "AS-EWTW-536003"
-  csn: "536003"
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
+station:
+  id: eWTW-PBS-053-600-030
   localCode: "053-600-030"
   realizes: "053-600-300"
+  realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code conserved per CM-001 A1.1 — identity vs reference: localCode feeds CSN and the PN tree; realizes follows taxonomy evolution"
+  csn: "536003"
   scope: "Assembly and integration station - Center Fuselage II Frames Stringers and Structures"
-  status: "PLANNED"
+  status: PLANNED
+  convention: AMPEL360-PBS-PN-CM-001 (Amendment A1)

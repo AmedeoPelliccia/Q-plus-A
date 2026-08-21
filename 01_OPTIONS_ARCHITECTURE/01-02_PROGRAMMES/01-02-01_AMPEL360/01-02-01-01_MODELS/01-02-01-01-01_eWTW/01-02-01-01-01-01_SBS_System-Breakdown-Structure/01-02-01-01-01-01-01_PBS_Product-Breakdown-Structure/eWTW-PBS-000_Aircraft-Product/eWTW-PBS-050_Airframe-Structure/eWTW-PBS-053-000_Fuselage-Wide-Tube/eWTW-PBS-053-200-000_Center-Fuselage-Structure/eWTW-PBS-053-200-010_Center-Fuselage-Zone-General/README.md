@@ -15,4 +15,4 @@ CSN `532001` - grammar `EWTW-532001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Wing-attach reinforced frames: 053-600-020. Wing-side attach lugs: ATA 057 (ruling pending on fuselage-side lug ownership).
 
-Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
