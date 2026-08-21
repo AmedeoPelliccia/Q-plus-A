@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-100-000
   model: eWTW
   side: SSOT
-  scope: "Forward Avionics Compartment Structure - S-ATLAS 053-100-030 subject scope; folder name is SSOT."
+  scope: "Forward Avionics Compartment Structure - PBS-local 053-100-030 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

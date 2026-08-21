@@ -1,6 +1,6 @@
 # eWTW-PBS-053-200-050 - Middle Avionics Compartment Structure
 
-CSN `532005` - grammar `EWTW-532005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-200-050`.
+CSN `532005` - grammar `EWTW-532005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-200-500` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-200-050` conserved).
 
 ## Items
 
@@ -9,4 +9,4 @@ CSN `532005` - grammar `EWTW-532005-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-532005-020` RAIL-EQUIPMENT-RACK-SUPPORT
 - `EWTW-532005-030` PANEL-COMPARTMENT-PARTITION
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

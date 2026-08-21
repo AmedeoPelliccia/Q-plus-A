@@ -1,6 +1,6 @@
 # eWTW-PBS-053-600-000 - Frames Stringers and Longerons
 
-Section node mirroring S-ATLAS `053-600_Frames-Stringers-and-Longerons` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-600_Frames-Stringers-and-Longerons` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -14,4 +14,4 @@ Section node mirroring S-ATLAS `053-600_Frames-Stringers-and-Longerons` 1:1 (PBS
 - `053-600-080` - Door Surrounding Structure (5 items)
 - `053-600-090` - Keel Beam Structure (6 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

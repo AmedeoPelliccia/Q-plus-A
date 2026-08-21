@@ -1,6 +1,6 @@
 # Part record
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
 part:
   pn: "EWTW-539005-030"
   nomenclature: "PLACARD-FOOTPRINT-INERT-SET"

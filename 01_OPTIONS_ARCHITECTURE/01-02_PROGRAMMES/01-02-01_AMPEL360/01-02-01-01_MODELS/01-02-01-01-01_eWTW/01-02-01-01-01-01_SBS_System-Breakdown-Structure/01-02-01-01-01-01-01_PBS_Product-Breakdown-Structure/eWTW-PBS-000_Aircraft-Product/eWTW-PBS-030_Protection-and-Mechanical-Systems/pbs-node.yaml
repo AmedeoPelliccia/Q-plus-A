@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-030
   title: Protection and Mechanical Systems
   type: group
-  g_atlas: "030"
+  taxonomyRef:
+    band: "030-039"
+    localCode: "030"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

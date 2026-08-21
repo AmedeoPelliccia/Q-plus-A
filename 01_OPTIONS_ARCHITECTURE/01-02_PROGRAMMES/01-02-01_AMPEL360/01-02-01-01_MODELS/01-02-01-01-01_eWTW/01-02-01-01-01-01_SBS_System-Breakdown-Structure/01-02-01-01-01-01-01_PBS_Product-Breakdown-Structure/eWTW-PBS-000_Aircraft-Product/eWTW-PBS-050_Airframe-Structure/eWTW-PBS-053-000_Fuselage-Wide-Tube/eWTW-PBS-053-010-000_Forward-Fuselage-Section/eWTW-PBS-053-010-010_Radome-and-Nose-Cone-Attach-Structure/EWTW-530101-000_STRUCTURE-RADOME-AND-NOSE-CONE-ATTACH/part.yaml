@@ -10,11 +10,12 @@ part:
   effectivity: EFF-BASE
   catalog_pn: ""
   interfaces:
-    - {node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
-    - {node: "053-010-030", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
-    - {node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
-    - {node: "030", item: "radome / nose de-ice", icd: ICD-053-010-010-030}
+    - {space: taxonomy, node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
+    - {space: pbs-local, station: "053-010-030", taxonomyRef: "053-800-100", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
+    - {space: taxonomy, node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
+    - {space: taxonomy, node: "030", item: "radome / nose de-ice", icd: ICD-053-010-010-030}
   realizes: 053-010-010
+  realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code conserved per CM-001 A1.1 — identity vs reference: localCode feeds CSN and the PN tree; realizes follows taxonomy evolution"
   root: EWTW-530101
   model: eWTW
   side: SSOT

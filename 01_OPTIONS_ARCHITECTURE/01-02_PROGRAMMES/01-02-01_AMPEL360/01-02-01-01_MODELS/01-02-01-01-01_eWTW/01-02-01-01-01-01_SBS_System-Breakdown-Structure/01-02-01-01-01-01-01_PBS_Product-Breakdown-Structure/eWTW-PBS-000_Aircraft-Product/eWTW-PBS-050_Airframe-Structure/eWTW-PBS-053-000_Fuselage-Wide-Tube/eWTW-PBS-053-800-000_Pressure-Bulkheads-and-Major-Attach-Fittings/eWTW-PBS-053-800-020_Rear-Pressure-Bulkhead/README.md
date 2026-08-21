@@ -1,6 +1,6 @@
 # eWTW-PBS-053-800-020 - Rear Pressure Bulkhead
 
-CSN `538002` - grammar `EWTW-538002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-800-020`.
+CSN `538002` - grammar `EWTW-538002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-800-200` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-800-020` conserved).
 
 ## Items
 
@@ -10,4 +10,4 @@ CSN `538002` - grammar `EWTW-538002-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-538002-030` RING-PERIPHERAL-ATTACH-REAR
 - `EWTW-538002-040` FITTING-PENETRATION-SEALED-REAR-SET
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

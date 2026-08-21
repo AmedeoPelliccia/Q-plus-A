@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-030-000
   title: Ice and Rain Protection
   type: chapter
-  g_atlas: "030"
+  taxonomyRef:
+    chapter: "030"
+    localCode: "030"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-030
   model: eWTW
   side: SSOT

@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-800-000
   model: eWTW
   side: SSOT
-  scope: "Forward Fuselage Landing Gear Fittings - S-ATLAS 053-800-030 subject scope; folder name is SSOT."
+  scope: "Forward Fuselage Landing Gear Fittings - PBS-local 053-800-030 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

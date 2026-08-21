@@ -1,6 +1,6 @@
 # eWTW-PBS-053-300-010 - Rear Fuselage Zone General
 
-CSN `533001` - grammar `EWTW-533001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-300-010`.
+CSN `533001` - grammar `EWTW-533001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-300-100` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-300-010` conserved).
 
 ## Items
 
@@ -16,4 +16,4 @@ CSN `533001` - grammar `EWTW-533001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Outflow valve function: ATA 021-300; structural surround only.
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

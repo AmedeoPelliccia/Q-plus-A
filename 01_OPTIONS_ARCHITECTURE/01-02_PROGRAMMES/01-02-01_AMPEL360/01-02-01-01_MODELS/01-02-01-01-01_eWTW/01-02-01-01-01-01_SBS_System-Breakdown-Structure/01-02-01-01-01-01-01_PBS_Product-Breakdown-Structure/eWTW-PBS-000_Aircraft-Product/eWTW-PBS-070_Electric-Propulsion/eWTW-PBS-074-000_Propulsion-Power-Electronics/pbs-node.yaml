@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-074-000
   title: Propulsion Power Electronics
   type: chapter
-  g_atlas: "074"
+  taxonomyRef:
+    localCode: "074"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-070
   model: eWTW
   side: SSOT

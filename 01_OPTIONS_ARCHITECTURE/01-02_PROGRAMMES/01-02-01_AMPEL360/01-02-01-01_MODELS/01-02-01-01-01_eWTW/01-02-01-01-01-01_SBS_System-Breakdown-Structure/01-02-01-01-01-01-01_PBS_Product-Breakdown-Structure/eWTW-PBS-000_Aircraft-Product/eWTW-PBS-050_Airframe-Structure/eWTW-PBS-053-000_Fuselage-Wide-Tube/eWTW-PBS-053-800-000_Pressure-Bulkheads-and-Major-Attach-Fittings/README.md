@@ -1,6 +1,6 @@
 # eWTW-PBS-053-800-000 - Pressure Bulkheads and Major Attach Fittings
 
-Section node mirroring S-ATLAS `053-800_Pressure-Bulkheads-and-Major-Attach-Fittings` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-800_Pressure-Bulkheads-and-Major-Attach-Fittings` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -13,4 +13,4 @@ Section node mirroring S-ATLAS `053-800_Pressure-Bulkheads-and-Major-Attach-Fitt
 - `053-800-070` - Rear Fuselage to Stabilizer Attach Fittings (5 items)
 - `053-800-080` - Door Sills (4 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

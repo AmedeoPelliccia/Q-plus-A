@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-070
   title: Electric Propulsion
   type: group
-  g_atlas: "070"
+  taxonomyRef:
+    band: "070-079"
+    localCode: "070"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

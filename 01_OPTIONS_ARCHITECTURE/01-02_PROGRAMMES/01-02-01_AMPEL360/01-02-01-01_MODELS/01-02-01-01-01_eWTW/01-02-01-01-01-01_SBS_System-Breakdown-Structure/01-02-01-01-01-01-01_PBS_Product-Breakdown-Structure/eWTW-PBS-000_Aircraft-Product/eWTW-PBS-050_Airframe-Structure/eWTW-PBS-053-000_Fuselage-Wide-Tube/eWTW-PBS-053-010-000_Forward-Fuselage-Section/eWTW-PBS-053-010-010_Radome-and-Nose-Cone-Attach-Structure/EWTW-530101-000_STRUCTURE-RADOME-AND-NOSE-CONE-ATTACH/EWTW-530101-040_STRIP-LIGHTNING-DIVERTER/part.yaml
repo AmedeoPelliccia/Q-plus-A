@@ -10,7 +10,7 @@ part:
   effectivity: EFF-BASE
   catalog_pn: ""
   interfaces:
-    - {node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
+    - {space: taxonomy, node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
   root: EWTW-530101
   model: eWTW
   side: SSOT

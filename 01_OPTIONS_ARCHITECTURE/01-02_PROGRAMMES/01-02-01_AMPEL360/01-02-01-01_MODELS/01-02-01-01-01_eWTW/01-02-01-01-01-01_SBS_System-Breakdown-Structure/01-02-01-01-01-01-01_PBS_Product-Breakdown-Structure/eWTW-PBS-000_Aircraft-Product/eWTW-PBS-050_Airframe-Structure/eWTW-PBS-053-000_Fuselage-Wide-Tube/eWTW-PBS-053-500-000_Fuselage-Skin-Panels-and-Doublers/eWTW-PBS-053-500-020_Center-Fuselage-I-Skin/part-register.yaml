@@ -1,6 +1,6 @@
 # Part register (subject) - ordered, generated
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
 parts:
   - pn: "EWTW-535002-000"
     nomenclature: "SET-SKIN-CENTER-I"

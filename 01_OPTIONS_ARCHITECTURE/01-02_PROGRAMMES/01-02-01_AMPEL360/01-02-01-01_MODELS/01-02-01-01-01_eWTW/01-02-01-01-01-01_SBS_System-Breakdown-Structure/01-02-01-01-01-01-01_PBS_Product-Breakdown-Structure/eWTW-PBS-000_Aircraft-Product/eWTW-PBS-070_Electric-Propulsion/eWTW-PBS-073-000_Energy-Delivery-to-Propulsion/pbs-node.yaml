@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-073-000
   title: Energy Delivery to Propulsion
   type: chapter
-  g_atlas: "073"
+  taxonomyRef:
+    localCode: "073"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-070
   model: eWTW
   side: SSOT

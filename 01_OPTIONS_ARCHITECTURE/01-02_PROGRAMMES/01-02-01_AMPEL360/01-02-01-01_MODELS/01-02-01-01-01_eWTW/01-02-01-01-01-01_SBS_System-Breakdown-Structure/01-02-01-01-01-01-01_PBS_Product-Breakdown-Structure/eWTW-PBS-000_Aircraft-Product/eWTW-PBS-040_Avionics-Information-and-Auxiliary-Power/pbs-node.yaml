@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-040
   title: Avionics Information and Auxiliary Power
   type: group
-  g_atlas: "040"
+  taxonomyRef:
+    band: "040-049"
+    localCode: "040"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

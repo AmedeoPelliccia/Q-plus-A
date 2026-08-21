@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-400-000
   model: eWTW
   side: SSOT
-  scope: "Rudder Root Aft Fairing - S-ATLAS 053-400-040 subject scope; folder name is SSOT."
+  scope: "Rudder Root Aft Fairing - PBS-local 053-400-040 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

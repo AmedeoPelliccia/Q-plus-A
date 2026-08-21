@@ -1,6 +1,6 @@
 # eWTW-PBS-053-800-010 - Forward Pressure Bulkhead
 
-CSN `538001` - grammar `EWTW-538001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-800-010`.
+CSN `538001` - grammar `EWTW-538001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-800-100` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-800-010` conserved).
 
 ## Items
 
@@ -14,4 +14,4 @@ CSN `538001` - grammar `EWTW-538001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - MIGRATION: legacy eWTW-PBS-053-010-030 (CSN 530103) maps here (CSN 538001).
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

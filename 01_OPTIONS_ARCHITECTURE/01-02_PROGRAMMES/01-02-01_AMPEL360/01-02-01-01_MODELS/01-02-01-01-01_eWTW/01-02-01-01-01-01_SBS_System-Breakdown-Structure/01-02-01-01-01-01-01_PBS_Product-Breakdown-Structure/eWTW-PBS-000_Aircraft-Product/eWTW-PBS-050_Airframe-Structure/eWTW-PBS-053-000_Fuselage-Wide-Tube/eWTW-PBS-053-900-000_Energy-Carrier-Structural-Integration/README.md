@@ -1,6 +1,6 @@
 # eWTW-PBS-053-900-000 - Energy Carrier Structural Integration
 
-Section node mirroring S-ATLAS `053-900_Energy-Carrier-Structural-Integration` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-900_Energy-Carrier-Structural-Integration` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -10,4 +10,4 @@ Section node mirroring S-ATLAS `053-900_Energy-Carrier-Structural-Integration` 1
 - `053-900-040` - Electric Energy Maintenance Compartment Structure (4 items)
 - `053-900-050` - Vacated Auxiliary Fuel Tank Compartment Footprint (4 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

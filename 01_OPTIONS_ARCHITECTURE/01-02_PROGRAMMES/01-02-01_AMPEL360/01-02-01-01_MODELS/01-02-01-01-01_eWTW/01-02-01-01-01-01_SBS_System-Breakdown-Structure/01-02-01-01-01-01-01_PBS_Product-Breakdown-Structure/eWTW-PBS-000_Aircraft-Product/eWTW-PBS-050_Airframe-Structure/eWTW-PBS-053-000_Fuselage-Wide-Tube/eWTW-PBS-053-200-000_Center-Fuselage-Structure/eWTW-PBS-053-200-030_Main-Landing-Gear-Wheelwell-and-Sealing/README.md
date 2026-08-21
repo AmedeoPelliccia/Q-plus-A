@@ -1,6 +1,6 @@
 # eWTW-PBS-053-200-030 - Main Landing Gear Wheelwell and Sealing
 
-CSN `532003` - grammar `EWTW-532003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-200-030`.
+CSN `532003` - grammar `EWTW-532003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-200-300` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-200-030` conserved).
 
 ## Items
 
@@ -17,4 +17,4 @@ CSN `532003` - grammar `EWTW-532003-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - MLG wheelwell pressure deck: 053-700-030. MLG trunnion fittings: ATA 057 if wing-mounted gear (eWTW gear config ruling pending).
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

@@ -1,6 +1,6 @@
 # eWTW-PBS-040 — Avionics Information and Auxiliary Power
 
-Product group = S-ATLAS band `040`. Chapters:
+Product group. Realizes S-ATLAS band `040-049` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Chapters:
 
 - [`eWTW-PBS-042-000`](eWTW-PBS-042-000_Integrated-Modular-Avionics) — Integrated Modular Avionics
 - [`eWTW-PBS-045-000`](eWTW-PBS-045-000_Onboard-Maintenance-System) — Onboard Maintenance System

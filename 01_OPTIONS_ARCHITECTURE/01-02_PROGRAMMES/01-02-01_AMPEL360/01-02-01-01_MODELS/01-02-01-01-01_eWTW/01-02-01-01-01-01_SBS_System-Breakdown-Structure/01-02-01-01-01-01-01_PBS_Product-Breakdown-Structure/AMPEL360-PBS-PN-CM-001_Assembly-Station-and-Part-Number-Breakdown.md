@@ -22,7 +22,11 @@ A PBS subject node is the **assembly station**: the single point where identity
 switches from *taxonomy code* to *part number*. The station holds exactly one
 **top assembly** plus a `station.yaml` recording the handshake
 (`realizes: <taxonomy-id>` ↔ `top_assembly: <PN>`). Above the station: S-ATLAS
-codes. Below: part numbers.
+codes. Below: part numbers. Per Amendment A1, every record carrying `realizes`
+also carries a `realizesNote` stating identity vs reference: `localCode` feeds
+CSN and the PN tree; `realizes` follows taxonomy evolution. Per Amendment A2,
+the station is the **Taxonomy–Product Identity Boundary (TPIB)**: the only
+point where the two identity spaces touch.
 
 ## 2. Part-number grammar
 
@@ -104,3 +108,71 @@ The station `053-010-010` (Radome & Nose Cone Attach Structure, root
 `EWTW-530101`) is realized to full depth by
 [`realize_assembly-station_053-010-010.py`](../../../../../../../../../realize_assembly-station_053-010-010.py)
 at the repository root.
+
+---
+
+## Amendment A2 — the Taxonomy–Product Identity Boundary (TPIB)
+
+**Status:** doctrinal clause of the convention (extends §1) · merge
+constitutes ratification.
+
+### A2.1 — Definition
+
+> **Taxonomy–Product Identity Boundary (TPIB).** A normative architectural
+> boundary, located at the PBS Subject Node (the assembly station), at which
+> the governing identity regime transitions from taxonomic identification to
+> configuration-controlled product identification.
+
+Invariants:
+
+```text
+for every node above the station:   Identity = Taxonomic        (S-ATLAS address space)
+for every node below the station:   Identity = Product          (PN · Revision · Effectivity)
+at the station:                     Identity = Binding(Taxonomy, Configuration)
+```
+
+The binding is recorded in `station.yaml` (`realizes` ↔ `top_assembly`) and is
+the **only** point where the two identity spaces touch.
+
+### A2.2 — Decoupling theorems
+
+```text
+PN change                does NOT imply   taxonomy change
+Taxonomic decomposition  does NOT imply   PN decomposition
+```
+
+Two identity spaces, one formally defined interface. Each side evolves under
+its own governance: the taxonomy by ruling and register; the product tree by
+configuration management.
+
+### A2.3 — Maintenance obligation (what makes the boundary normative)
+
+The binding is a **maintained joint**, not a one-time act: `realizes` must
+resolve to an existing node of the current taxonomy (A1.6,
+machine-verifiable), and a self-referential binding is non-conforming. The
+taxonomic side of the binding is versioned — `localCode` is the identity
+frozen at binding time; `realizes` is the reference that tracks taxonomy
+evolution. A boundary whose currency cannot be checked by machine is
+documentation; this one is doctrine.
+
+### A2.4 — The CSN as crossing trace
+
+The CSN is the imprint of the taxonomic identity carried into product space at
+the moment of crossing (`053-000-030 → 530003`): human-readable,
+AMM-SNS-aligned (1:1 by number, ratified), and immune to later taxonomy
+evolution (A1.2). It is the fossil record of the handover.
+
+### A2.5 — Prior-art positioning (calibrated claim)
+
+Existing standards distinguish structural, functional, occurrence and part
+identities, and some explicitly model the realization of breakdown elements by
+parts: **S3000L** (hardware element as usage-in-context, realized by one or
+more parts — the closest precedent — while declining to mandate where the
+boundary sits), **IEC 81346 / IEC 62027** (reference designation of the
+occurrence ≠ part identity, as coexisting schemes), **the FIN/PN practice**
+(functional position → installed part, a concrete implementation without a
+general theory), **STEP AP239/AP242** (the information-model building blocks).
+None establishes a unique normative boundary at which the governing identity
+regime transitions from taxonomy-based identification to part-number-based
+product identity. **The PBS Subject Node is proposed as that boundary.** No
+broader novelty is claimed.

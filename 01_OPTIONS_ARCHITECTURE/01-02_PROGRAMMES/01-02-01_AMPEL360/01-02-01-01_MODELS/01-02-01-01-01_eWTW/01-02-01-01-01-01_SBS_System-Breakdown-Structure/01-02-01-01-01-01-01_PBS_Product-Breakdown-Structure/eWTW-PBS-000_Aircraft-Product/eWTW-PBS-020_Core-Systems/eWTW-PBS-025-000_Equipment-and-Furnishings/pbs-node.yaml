@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-025-000
   title: Equipment and Furnishings
   type: chapter
-  g_atlas: "025"
+  taxonomyRef:
+    chapter: "025"
+    localCode: "025"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-020
   model: eWTW
   side: SSOT

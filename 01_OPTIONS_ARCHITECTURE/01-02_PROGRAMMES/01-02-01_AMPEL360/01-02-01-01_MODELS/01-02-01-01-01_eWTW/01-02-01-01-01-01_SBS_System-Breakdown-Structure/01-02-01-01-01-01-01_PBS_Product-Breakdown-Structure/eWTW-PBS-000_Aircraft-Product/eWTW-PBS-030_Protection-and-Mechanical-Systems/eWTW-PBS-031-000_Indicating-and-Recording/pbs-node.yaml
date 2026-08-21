@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-031-000
   title: Indicating and Recording
   type: chapter
-  g_atlas: "031"
+  taxonomyRef:
+    chapter: "031"
+    localCode: "031"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-030
   model: eWTW
   side: SSOT

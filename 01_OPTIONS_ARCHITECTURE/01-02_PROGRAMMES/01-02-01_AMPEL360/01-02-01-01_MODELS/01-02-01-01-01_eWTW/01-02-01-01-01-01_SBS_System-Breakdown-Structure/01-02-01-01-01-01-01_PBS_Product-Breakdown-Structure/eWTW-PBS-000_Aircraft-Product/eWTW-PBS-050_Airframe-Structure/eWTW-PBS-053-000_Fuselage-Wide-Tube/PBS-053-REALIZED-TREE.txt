@@ -1,5 +1,5 @@
-# PBS-053 realized tree - eWTW Fuselage Wide-Tube (G-ATLAS-coherent)
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# PBS-053 realized tree - eWTW Fuselage Wide-Tube (taxonomy-mapped)
+# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
 .
 ./.gitkeep
 ./PBS-053-BREAKDOWN.md

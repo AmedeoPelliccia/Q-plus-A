@@ -1,6 +1,6 @@
 # eWTW-PBS-053-300-020 - Rear Fuselage Adjustable Rods
 
-CSN `533002` - grammar `EWTW-533002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-300-020`.
+CSN `533002` - grammar `EWTW-533002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-300-200` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-300-020` conserved).
 
 ## Items
 
@@ -11,4 +11,4 @@ CSN `533002` - grammar `EWTW-533002-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-533002-020` FITTING-ROD-END-SET
 - `EWTW-533002-030` BRACKET-ROD-SUPPORT-SET
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

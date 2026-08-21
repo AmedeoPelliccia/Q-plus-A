@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-600-000
   model: eWTW
   side: SSOT
-  scope: "Keel Beam Structure - S-ATLAS 053-600-090 subject scope; folder name is SSOT."
+  scope: "Keel Beam Structure - PBS-local 053-600-090 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

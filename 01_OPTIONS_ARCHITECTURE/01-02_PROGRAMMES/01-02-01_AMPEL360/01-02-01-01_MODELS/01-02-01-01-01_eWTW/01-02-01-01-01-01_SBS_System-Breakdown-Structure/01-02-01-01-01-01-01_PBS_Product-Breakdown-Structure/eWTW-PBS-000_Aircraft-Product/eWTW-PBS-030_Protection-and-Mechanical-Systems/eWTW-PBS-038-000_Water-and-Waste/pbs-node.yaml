@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-038-000
   title: Water and Waste
   type: chapter
-  g_atlas: "038"
+  taxonomyRef:
+    localCode: "038"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-030
   model: eWTW
   side: SSOT

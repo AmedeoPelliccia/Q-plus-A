@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-024-000
   title: Electrical Power Distribution
   type: chapter
-  g_atlas: "024"
+  taxonomyRef:
+    chapter: "024"
+    localCode: "024"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-020
   model: eWTW
   side: SSOT

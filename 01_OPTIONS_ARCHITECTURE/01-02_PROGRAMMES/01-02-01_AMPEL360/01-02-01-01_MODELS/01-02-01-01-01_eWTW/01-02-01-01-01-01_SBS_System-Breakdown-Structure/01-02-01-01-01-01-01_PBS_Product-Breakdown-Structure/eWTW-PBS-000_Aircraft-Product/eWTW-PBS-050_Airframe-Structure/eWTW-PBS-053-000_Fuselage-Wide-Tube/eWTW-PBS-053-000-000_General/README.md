@@ -1,6 +1,6 @@
 # eWTW-PBS-053-000-000 - General
 
-Section node mirroring S-ATLAS `053-000_General` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-000_General` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -9,4 +9,4 @@ Section node mirroring S-ATLAS `053-000_General` 1:1 (PBS code = SSOT taxonomy c
 - `053-000-030` - Fuselage External Access Doors and Panels General (4 items)
 - `053-000-040` - Fuselage Drains (4 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

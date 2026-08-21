@@ -1,6 +1,8 @@
 ---
 station: eWTW-PBS-053-010-010
-realizes: 053-010-010
+localCode: "053-010-010"
+realizes: "053-100-400"
+realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code conserved per CM-001 A1.1 — identity vs reference: localCode feeds CSN and the PN tree; realizes follows taxonomy evolution"
 top_assembly: EWTW-530101-000
 root: EWTW-530101
 mic: EWTW
@@ -14,16 +16,17 @@ layer: "deepest SSOT layer (configuration items)"
 owner: Q-STRUCTURES
 doctrine: green-native
 status: realized
-version: "1.0"
+version: "1.1"
 ---
 
 # eWTW-PBS-053-010-010 - Radome & Nose Cone Attach Structure (Assembly Station)
 
 This subject is an **assembly station** (AMPEL360-PBS-PN-CM-001): the single
-point where identity switches from *taxonomy code* to *part number*. Above the
-station: S-ATLAS codes. Below: part numbers.
+point where identity switches from *PBS code* to *part number*. Above the
+station: PBS-local codes (taxonomy linked by mapping per Amendment A1). Below:
+part numbers.
 
-**Handshake** - `realizes: 053-010-010` (S-ATLAS)  <->  `top_assembly: EWTW-530101-000` (P/N),
+**Handshake** - PBS-local `053-010-010` (realizes S-ATLAS `053-100-400`)  <->  `top_assembly: EWTW-530101-000` (P/N),
 recorded in [`station.yaml`](./station.yaml).
 
 ## Part-number grammar
@@ -33,7 +36,7 @@ EWTW-530101-<VAR>[-<VAR>...]
 ```
 
 - `EWTW` model identity code (MIC).
-- `530101` compact system number = ATA-equivalent of `053-010-010` - the conserved root
+- `530101` compact system number derived from PBS-local `053-010-010` (conserved per Amendment A1.2) - the conserved root
   `EWTW-530101`.
 - `<VAR>` x10 find group: `000` the assembly itself; `010`, `020`... components;
   nest deeper by appending another x10 group. Odd/even within a group = handed
@@ -67,7 +70,7 @@ declared - see `interfaces[]` in [`station.yaml`](./station.yaml):
 | Interface | Owned by | ICD |
 |---|---|---|
 | Weather-radar antenna | `034` Navigation | `ICD-053-010-010-034` |
-| Forward pressure bulkhead | `053-010-030` | `ICD-053-010-010-053-010-030` |
+| Forward pressure bulkhead | `053-010-030` (PBS-local) | `ICD-053-010-010-053-010-030` |
 | Bonding / lightning protection | `024` | `ICD-053-010-010-024` |
 | Radome / nose de-ice | `030` Ice-and-Rain-Protection | `ICD-053-010-010-030` |
 

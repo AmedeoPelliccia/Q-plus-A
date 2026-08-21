@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-026-000
   title: Fire Protection
   type: chapter
-  g_atlas: "026"
+  taxonomyRef:
+    chapter: "026"
+    localCode: "026"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-020
   model: eWTW
   side: SSOT

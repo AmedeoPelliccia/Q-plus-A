@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-500-000
   model: eWTW
   side: SSOT
-  scope: "Center Fuselage I Skin - S-ATLAS 053-500-020 subject scope; folder name is SSOT."
+  scope: "Center Fuselage I Skin - PBS-local 053-500-020 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

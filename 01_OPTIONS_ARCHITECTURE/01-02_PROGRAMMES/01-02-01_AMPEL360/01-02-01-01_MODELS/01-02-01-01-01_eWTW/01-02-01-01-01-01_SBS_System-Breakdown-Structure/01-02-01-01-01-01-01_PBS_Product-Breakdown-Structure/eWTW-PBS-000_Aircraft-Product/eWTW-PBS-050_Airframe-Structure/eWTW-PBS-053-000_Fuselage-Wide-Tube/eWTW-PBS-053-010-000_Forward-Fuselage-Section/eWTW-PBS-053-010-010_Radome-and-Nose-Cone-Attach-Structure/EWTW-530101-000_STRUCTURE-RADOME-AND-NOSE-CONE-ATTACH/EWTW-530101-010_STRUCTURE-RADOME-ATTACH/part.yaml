@@ -10,7 +10,7 @@ part:
   effectivity: EFF-BASE
   catalog_pn: ""
   interfaces:
-    - {node: "053-010-030", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
+    - {space: pbs-local, station: "053-010-030", taxonomyRef: "053-800-100", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
   root: EWTW-530101
   model: eWTW
   side: SSOT

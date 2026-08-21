@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-020
   title: Core Systems
   type: group
-  g_atlas: "020"
+  taxonomyRef:
+    band: "020-029"
+    localCode: "020"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

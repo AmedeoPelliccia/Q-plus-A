@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-012-000
   title: Servicing Points
   type: chapter
-  g_atlas: "012"
+  taxonomyRef:
+    chapter: "012"
+    localCode: "012"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-010
   model: eWTW
   side: SSOT
