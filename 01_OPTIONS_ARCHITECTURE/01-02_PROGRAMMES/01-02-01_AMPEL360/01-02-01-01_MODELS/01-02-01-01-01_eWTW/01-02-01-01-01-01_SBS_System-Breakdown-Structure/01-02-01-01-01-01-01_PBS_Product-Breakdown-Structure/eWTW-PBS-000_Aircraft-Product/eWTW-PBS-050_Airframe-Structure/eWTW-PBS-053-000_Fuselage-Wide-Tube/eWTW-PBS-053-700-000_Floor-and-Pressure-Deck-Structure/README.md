@@ -1,6 +1,6 @@
 # eWTW-PBS-053-700-000 - Floor and Pressure Deck Structure
 
-Section node mirroring S-ATLAS `053-700_Floor-and-Pressure-Deck-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-700_Floor-and-Pressure-Deck-Structure` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -11,4 +11,4 @@ Section node mirroring S-ATLAS `053-700_Floor-and-Pressure-Deck-Structure` 1:1 (
 - `053-700-050` - Floor Panels (5 items)
 - `053-700-060` - Seat Tracks (4 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

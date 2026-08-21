@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-071-000
   title: Propulsion Module Installation
   type: chapter
-  g_atlas: "071"
+  taxonomyRef:
+    localCode: "071"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-070
   model: eWTW
   side: SSOT

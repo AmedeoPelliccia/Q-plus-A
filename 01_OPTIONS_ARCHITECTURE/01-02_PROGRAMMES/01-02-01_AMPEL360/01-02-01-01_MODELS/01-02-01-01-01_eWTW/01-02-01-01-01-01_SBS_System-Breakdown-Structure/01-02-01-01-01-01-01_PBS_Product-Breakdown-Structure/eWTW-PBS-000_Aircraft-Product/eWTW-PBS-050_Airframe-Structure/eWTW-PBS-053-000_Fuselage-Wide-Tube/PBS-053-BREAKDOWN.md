@@ -1,8 +1,8 @@
-# PBS-053 Chapter Breakdown - eWTW Fuselage Wide-Tube (S-ATLAS-coherent)
+# PBS-053 Chapter Breakdown - eWTW Fuselage Wide-Tube (S-ATLAS-mapped)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant - grammar AMPEL360-PBS-PN-CM-001 (CSN `EWTW-53SU-III`; S = section hundreds+tens, U = subject tens; items x10; +1..+9 children).
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant - grammar AMPEL360-PBS-PN-CM-001 (CSN `EWTW-53SU-III`; S = section hundreds+tens, U = subject tens; items x10; +1..+9 children).
 
-Sections and subjects are 1:1 with the S-ATLAS 053 register (PBS code = SSOT taxonomy code = AMM SNS code). SUPERSEDES the x10-section draft manifest (realize_PBS-053_chapter.py, v1). Standards families (splices, cutout doublers, clips, lugs) are chapter 051 scope and are not realized here; production joins are zone-general splice hardware plus assembly stations.
+Sections and subjects map to the S-ATLAS 053 register (PBS codes are PBS-local; taxonomy linked by mapping per AMPEL360-PBS-PN-CM-001 Amendment A1, never mirrored). SUPERSEDES the x10-section draft manifest (realize_PBS-053_chapter.py, v1). Standards families (splices, cutout doublers, clips, lugs) are chapter 051 scope and are not realized here; production joins are zone-general splice hardware plus assembly stations.
 
 ## 053-000-000 General
 
@@ -592,4 +592,4 @@ Sections and subjects are 1:1 with the S-ATLAS 053 register (PBS code = SSOT tax
 
 > Green-native: aux fuel tank deleted; footprint preserved inert.
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

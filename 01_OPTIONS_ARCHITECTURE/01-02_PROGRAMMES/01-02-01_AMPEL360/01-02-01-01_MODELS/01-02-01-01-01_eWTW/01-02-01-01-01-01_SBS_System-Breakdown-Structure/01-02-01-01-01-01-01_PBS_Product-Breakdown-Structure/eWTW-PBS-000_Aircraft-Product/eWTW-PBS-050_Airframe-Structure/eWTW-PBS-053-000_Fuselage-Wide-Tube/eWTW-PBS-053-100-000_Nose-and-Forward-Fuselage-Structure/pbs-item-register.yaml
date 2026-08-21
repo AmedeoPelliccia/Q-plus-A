@@ -1,34 +1,34 @@
 # PBS item register (section) - subjects, generated
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 subjects:
   - id: "eWTW-PBS-053-100-010"
     csn: "531001"
     title: "Forward Fuselage Zone General"
-    gAtlas: "053-100-010"
+    localCode: "053-100-010"
     realized: true
   - id: "eWTW-PBS-053-100-020"
     csn: "531002"
     title: "Nose Landing Gear Bay and Door Supports"
-    gAtlas: "053-100-020"
+    localCode: "053-100-020"
     realized: true
   - id: "eWTW-PBS-053-100-030"
     csn: "531003"
     title: "Forward Avionics Compartment Structure"
-    gAtlas: "053-100-030"
+    localCode: "053-100-030"
     realized: true
   - id: "eWTW-PBS-053-100-040"
     csn: "531004"
     title: "Radome and Diverters Attach Structure"
-    gAtlas: "053-100-040"
+    localCode: "053-100-040"
     realized: true
   - id: "eWTW-PBS-053-100-050"
     csn: "531005"
     title: "Forward Fuselage Direct Vision Window"
-    gAtlas: "053-100-050"
+    localCode: "053-100-050"
     realized: true
   - id: "eWTW-PBS-053-100-060"
     csn: "531006"
     title: "Forward Fuselage External Access Panels"
-    gAtlas: "053-100-060"
+    localCode: "053-100-060"
     realized: true

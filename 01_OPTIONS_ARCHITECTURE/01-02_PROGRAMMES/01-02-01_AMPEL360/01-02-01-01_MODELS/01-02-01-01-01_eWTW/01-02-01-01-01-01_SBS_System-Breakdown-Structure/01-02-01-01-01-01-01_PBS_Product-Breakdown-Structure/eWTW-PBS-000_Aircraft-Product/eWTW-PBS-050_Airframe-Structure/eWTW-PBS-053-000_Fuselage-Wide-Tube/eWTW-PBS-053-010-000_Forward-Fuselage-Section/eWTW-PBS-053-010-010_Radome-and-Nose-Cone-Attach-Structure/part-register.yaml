@@ -1,6 +1,7 @@
 part_register:
   station: eWTW-PBS-053-010-010
-  realizes: 053-010-010
+  localCode: "053-010-010"
+  realizes: "053-100-400"
   root: EWTW-530101
   top_assembly: EWTW-530101-000
   model: eWTW

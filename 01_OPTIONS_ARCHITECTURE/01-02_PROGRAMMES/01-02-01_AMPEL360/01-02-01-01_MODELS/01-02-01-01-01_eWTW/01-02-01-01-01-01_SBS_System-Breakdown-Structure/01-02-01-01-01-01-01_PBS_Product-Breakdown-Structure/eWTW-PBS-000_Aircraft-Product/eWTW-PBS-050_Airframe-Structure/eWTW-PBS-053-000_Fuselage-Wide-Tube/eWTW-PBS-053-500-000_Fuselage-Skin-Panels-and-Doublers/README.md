@@ -1,6 +1,6 @@
 # eWTW-PBS-053-500-000 - Fuselage Skin Panels and Doublers
 
-Section node mirroring S-ATLAS `053-500_Fuselage-Skin-Panels-and-Doublers` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-500_Fuselage-Skin-Panels-and-Doublers` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -11,4 +11,4 @@ Section node mirroring S-ATLAS `053-500_Fuselage-Skin-Panels-and-Doublers` 1:1 (
 - `053-500-050` - Rear Fuselage Skin (5 items)
 - `053-500-060` - Tailcone Skin (4 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

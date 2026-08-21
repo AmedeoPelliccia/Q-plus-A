@@ -1,44 +1,44 @@
 # PBS item register (chapter) - sections, generated
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 sections:
   - id: "eWTW-PBS-053-000-000"
     title: "General"
-    gAtlas: "053-000"
+    localCode: "053-000"
     subjects: 4
   - id: "eWTW-PBS-053-100-000"
     title: "Nose and Forward Fuselage Structure"
-    gAtlas: "053-100"
+    localCode: "053-100"
     subjects: 6
   - id: "eWTW-PBS-053-200-000"
     title: "Center Fuselage Structure"
-    gAtlas: "053-200"
+    localCode: "053-200"
     subjects: 6
   - id: "eWTW-PBS-053-300-000"
     title: "Aft Fuselage Structure"
-    gAtlas: "053-300"
+    localCode: "053-300"
     subjects: 4
   - id: "eWTW-PBS-053-400-000"
     title: "Tailcone and Auxiliary Power Module Structure"
-    gAtlas: "053-400"
+    localCode: "053-400"
     subjects: 5
   - id: "eWTW-PBS-053-500-000"
     title: "Fuselage Skin Panels and Doublers"
-    gAtlas: "053-500"
+    localCode: "053-500"
     subjects: 6
   - id: "eWTW-PBS-053-600-000"
     title: "Frames Stringers and Longerons"
-    gAtlas: "053-600"
+    localCode: "053-600"
     subjects: 9
   - id: "eWTW-PBS-053-700-000"
     title: "Floor and Pressure Deck Structure"
-    gAtlas: "053-700"
+    localCode: "053-700"
     subjects: 6
   - id: "eWTW-PBS-053-800-000"
     title: "Pressure Bulkheads and Major Attach Fittings"
-    gAtlas: "053-800"
+    localCode: "053-800"
     subjects: 8
   - id: "eWTW-PBS-053-900-000"
     title: "Energy Carrier Structural Integration"
-    gAtlas: "053-900"
+    localCode: "053-900"
     subjects: 5

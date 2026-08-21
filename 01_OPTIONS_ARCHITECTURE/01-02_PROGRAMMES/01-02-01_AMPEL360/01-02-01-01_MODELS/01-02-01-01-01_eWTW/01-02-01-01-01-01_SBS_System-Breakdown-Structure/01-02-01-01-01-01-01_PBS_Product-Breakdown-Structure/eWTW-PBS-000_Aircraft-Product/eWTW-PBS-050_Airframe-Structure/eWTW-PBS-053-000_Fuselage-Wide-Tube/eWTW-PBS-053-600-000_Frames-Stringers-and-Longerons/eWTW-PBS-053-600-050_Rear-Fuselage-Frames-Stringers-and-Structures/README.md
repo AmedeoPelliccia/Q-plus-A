@@ -1,6 +1,6 @@
 # eWTW-PBS-053-600-050 - Rear Fuselage Frames Stringers and Structures
 
-CSN `536005` - grammar `EWTW-536005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-600-050`.
+CSN `536005` - grammar `EWTW-536005-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-600-500` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-600-050` conserved).
 
 ## Items
 
@@ -14,4 +14,4 @@ CSN `536005` - grammar `EWTW-536005-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Stabilizer/fin attach FITTINGS: 053-800-070.
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

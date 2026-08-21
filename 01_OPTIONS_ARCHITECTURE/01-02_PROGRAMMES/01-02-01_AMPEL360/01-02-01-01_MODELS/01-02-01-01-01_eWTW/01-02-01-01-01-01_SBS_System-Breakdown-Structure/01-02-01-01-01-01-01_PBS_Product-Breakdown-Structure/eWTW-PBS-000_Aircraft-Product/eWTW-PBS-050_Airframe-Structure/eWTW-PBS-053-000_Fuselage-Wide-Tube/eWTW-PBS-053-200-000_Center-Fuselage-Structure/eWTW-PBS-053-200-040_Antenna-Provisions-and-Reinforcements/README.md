@@ -1,6 +1,6 @@
 # eWTW-PBS-053-200-040 - Antenna Provisions and Reinforcements
 
-CSN `532004` - grammar `EWTW-532004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-200-040`.
+CSN `532004` - grammar `EWTW-532004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-200-400` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-200-040` conserved).
 
 ## Items
 
@@ -9,4 +9,4 @@ CSN `532004` - grammar `EWTW-532004-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-532004-020` PROVISION-ANTENNA-MOUNT-SET
 - `EWTW-532004-030` PLATE-BACKING-ANTENNA-SET
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-054-000
   title: Nacelles and Pylons
   type: chapter
-  g_atlas: "054"
+  taxonomyRef:
+    chapter: "054"
+    localCode: "054"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-050
   model: eWTW
   side: SSOT

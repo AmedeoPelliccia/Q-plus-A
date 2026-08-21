@@ -1,8 +1,10 @@
 # Assembly station record
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 assemblyStation:
   id: "AS-EWTW-539005"
   csn: "539005"
+  localCode: "053-900-050"
+  realizes: "053-900-500"
   scope: "Assembly and integration station - Vacated Auxiliary Fuel Tank Compartment Footprint"
   status: "PLANNED"

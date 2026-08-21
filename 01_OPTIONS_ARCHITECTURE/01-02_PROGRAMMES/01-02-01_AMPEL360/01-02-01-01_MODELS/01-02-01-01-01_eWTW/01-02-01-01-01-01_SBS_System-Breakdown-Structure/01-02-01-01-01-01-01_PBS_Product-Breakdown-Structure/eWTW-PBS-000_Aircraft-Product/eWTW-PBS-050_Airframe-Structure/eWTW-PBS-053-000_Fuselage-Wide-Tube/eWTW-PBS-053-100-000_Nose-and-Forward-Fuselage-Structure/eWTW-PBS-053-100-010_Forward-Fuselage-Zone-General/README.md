@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-010 - Forward Fuselage Zone General
 
-CSN `531001` - grammar `EWTW-531001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-010`.
+CSN `531001` - grammar `EWTW-531001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-100-100` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-100-010` conserved).
 
 ## Items
 
@@ -15,4 +15,4 @@ CSN `531001` - grammar `EWTW-531001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Zone-general owns the AFT production join splice hardware; the join operation itself is an assembly station (station.yaml).
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

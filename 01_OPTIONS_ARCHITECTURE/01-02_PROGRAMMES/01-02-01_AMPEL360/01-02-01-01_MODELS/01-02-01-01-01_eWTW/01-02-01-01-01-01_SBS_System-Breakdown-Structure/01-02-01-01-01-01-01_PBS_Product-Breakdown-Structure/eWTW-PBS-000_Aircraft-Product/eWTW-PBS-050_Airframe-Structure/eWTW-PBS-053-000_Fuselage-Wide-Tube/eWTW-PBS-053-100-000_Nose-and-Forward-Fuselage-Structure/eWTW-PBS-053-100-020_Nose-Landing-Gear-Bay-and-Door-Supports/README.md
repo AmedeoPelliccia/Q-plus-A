@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-020 - Nose Landing Gear Bay and Door Supports
 
-CSN `531002` - grammar `EWTW-531002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-020`.
+CSN `531002` - grammar `EWTW-531002-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-100-200` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-100-020` conserved).
 
 ## Items
 
@@ -16,4 +16,4 @@ CSN `531002` - grammar `EWTW-531002-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - NLG trunnion/drag fittings: 053-800-030. NLG bay pressure deck: 053-700-020. Landing gear itself: ATA 032.
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

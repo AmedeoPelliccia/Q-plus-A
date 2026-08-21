@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-056-000
   title: Windows
   type: chapter
-  g_atlas: "056"
+  taxonomyRef:
+    chapter: "056"
+    localCode: "056"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-050
   model: eWTW
   side: SSOT

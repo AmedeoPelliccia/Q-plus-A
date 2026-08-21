@@ -1,6 +1,6 @@
 # eWTW-PBS-053-200-010 - Center Fuselage Zone General
 
-CSN `532001` - grammar `EWTW-532001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-200-010`.
+CSN `532001` - grammar `EWTW-532001-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-200-100` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-200-010` conserved).
 
 ## Items
 
@@ -15,4 +15,4 @@ CSN `532001` - grammar `EWTW-532001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Wing-attach reinforced frames: 053-600-020. Wing-side attach lugs: ATA 057 (ruling pending on fuselage-side lug ownership).
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

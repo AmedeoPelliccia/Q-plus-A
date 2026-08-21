@@ -1,8 +1,10 @@
 # Assembly station record
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 assemblyStation:
   id: "AS-EWTW-532001"
   csn: "532001"
+  localCode: "053-200-010"
+  realizes: "053-200-100"
   scope: "Assembly and integration station - Center Fuselage Zone General"
   status: "PLANNED"

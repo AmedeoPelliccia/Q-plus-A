@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-400-000
   model: eWTW
   side: SSOT
-  scope: "Tailcone Zone General - S-ATLAS 053-400-010 subject scope; folder name is SSOT."
+  scope: "Tailcone Zone General - PBS-local 053-400-010 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

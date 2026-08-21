@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-046-000
   title: Information Systems
   type: chapter
-  g_atlas: "046"
+  taxonomyRef:
+    chapter: "046"
+    localCode: "046"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-040
   model: eWTW
   side: SSOT

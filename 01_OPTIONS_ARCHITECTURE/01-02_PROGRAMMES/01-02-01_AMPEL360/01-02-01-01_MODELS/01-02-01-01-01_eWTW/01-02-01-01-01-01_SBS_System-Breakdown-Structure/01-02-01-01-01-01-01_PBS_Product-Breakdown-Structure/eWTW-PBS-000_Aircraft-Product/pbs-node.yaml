@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-000
   title: Aircraft Product
   type: product-root
-  g_atlas: "000"
+  taxonomyRef:
+    localCode: "000"
+    note: "PBS-local product root per CM-001; aggregates multiple S-ATLAS bands - taxonomy linked by mapping at chapter/section grain, never mirrored"
   parent: eWTW
   model: eWTW
   side: SSOT

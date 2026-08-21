@@ -1,6 +1,6 @@
 # eWTW-PBS-053-900-030 - Energy Carrier Mount and Attach Fittings
 
-CSN `539003` - grammar `EWTW-539003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-900-030`.
+CSN `539003` - grammar `EWTW-539003-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-900-300` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-900-030` conserved).
 
 ## Items
 
@@ -11,4 +11,4 @@ CSN `539003` - grammar `EWTW-539003-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-539003-020` FITTING-CARRIER-MOUNT-LATERAL-SET
 - `EWTW-539003-030` RAIL-CARRIER-INSTALLATION
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

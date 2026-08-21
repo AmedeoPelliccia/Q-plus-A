@@ -10,7 +10,7 @@ part:
   effectivity: EFF-BASE
   catalog_pn: ""
   interfaces:
-    - {node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
+    - {space: taxonomy, node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
   root: EWTW-530101
   model: eWTW
   side: SSOT

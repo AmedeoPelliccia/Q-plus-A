@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-036-000
   title: Pneumatic Vacated
   type: chapter
-  g_atlas: "036"
+  taxonomyRef:
+    chapter: "036"
+    localCode: "036"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-030
   model: eWTW
   side: SSOT

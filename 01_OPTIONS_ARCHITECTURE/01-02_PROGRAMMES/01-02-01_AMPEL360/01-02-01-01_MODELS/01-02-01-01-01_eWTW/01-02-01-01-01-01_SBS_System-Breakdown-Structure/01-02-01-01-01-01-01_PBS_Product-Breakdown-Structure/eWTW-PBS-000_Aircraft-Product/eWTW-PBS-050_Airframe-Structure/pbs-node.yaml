@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-050
   title: Airframe Structure
   type: group
-  g_atlas: "050"
+  taxonomyRef:
+    band: "050-059"
+    localCode: "050"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

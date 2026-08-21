@@ -1,6 +1,6 @@
 # eWTW-PBS-053-500-040 - Center Fuselage III Skin
 
-CSN `535004` - grammar `EWTW-535004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-500-040`.
+CSN `535004` - grammar `EWTW-535004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-500-400` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-500-040` conserved).
 
 ## Items
 
@@ -15,4 +15,4 @@ CSN `535004` - grammar `EWTW-535004-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
   - `EWTW-535004-042` PANEL-WINDOW-BELT-CIII-RH
 - `EWTW-535004-050` DOUBLER-CUTOUT-SET-CIII
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

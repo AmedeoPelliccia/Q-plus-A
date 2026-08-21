@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-042-000
   title: Integrated Modular Avionics
   type: chapter
-  g_atlas: "042"
+  taxonomyRef:
+    chapter: "042"
+    localCode: "042"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-040
   model: eWTW
   side: SSOT

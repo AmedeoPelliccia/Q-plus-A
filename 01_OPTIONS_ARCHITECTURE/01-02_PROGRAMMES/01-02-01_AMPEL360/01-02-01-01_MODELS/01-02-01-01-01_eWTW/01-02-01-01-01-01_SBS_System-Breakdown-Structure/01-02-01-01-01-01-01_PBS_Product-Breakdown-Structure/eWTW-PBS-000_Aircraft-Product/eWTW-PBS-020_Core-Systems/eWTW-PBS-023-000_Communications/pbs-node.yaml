@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-023-000
   title: Communications
   type: chapter
-  g_atlas: "023"
+  taxonomyRef:
+    chapter: "023"
+    localCode: "023"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-020
   model: eWTW
   side: SSOT

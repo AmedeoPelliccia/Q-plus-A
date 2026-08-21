@@ -1,8 +1,10 @@
 # Assembly station record
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 assemblyStation:
   id: "AS-EWTW-536009"
   csn: "536009"
+  localCode: "053-600-090"
+  # realizes: pending taxonomy ratification (Amendment A1 ratification table; proposed S-ATLAS extension not in the 053-600 register)
   scope: "Assembly and integration station - Keel Beam Structure"
   status: "PLANNED"

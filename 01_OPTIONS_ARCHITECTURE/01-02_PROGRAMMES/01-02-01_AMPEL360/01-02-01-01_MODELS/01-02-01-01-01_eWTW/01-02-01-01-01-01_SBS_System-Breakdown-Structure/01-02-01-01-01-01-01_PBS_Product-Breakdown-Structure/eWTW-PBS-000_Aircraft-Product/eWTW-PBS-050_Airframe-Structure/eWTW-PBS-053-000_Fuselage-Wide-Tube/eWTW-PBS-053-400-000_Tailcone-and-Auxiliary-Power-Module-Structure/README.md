@@ -1,6 +1,6 @@
 # eWTW-PBS-053-400-000 - Tailcone and Auxiliary Power Module Structure
 
-Section node mirroring S-ATLAS `053-400_Tailcone-and-Auxiliary-Power-Module-Structure` 1:1 (PBS code = SSOT taxonomy code = AMM SNS code). Folder names are SSOT; YAML mirrors.
+Section node. Realizes S-ATLAS `053-400_Tailcone-and-Auxiliary-Power-Module-Structure` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Folder names are SSOT; YAML mirrors.
 
 ## Subjects
 
@@ -10,4 +10,4 @@ Section node mirroring S-ATLAS `053-400_Tailcone-and-Auxiliary-Power-Module-Stru
 - `053-400-040` - Rudder Root Aft Fairing (3 items)
 - `053-400-050` - Tailcone External Access Panels (3 items)
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

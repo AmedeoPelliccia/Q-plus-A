@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-035-000
   title: Oxygen
   type: chapter
-  g_atlas: "035"
+  taxonomyRef:
+    chapter: "035"
+    localCode: "035"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-030
   model: eWTW
   side: SSOT

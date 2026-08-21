@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-000-000
   model: eWTW
   side: SSOT
-  scope: "Fuselage Drains - S-ATLAS 053-000-040 subject scope; folder name is SSOT."
+  scope: "Fuselage Drains - PBS-local 053-000-040 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

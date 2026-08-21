@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-060 - Forward Fuselage External Access Panels
 
-CSN `531006` - grammar `EWTW-531006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-060`.
+CSN `531006` - grammar `EWTW-531006-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-100-600` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-100-060` conserved).
 
 ## Items
 
@@ -9,4 +9,4 @@ CSN `531006` - grammar `EWTW-531006-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 - `EWTW-531006-020` PANEL-ACCESS-SERVICE-SET
 - `EWTW-531006-030` SURROUND-PANEL-CUTOUT-SET
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

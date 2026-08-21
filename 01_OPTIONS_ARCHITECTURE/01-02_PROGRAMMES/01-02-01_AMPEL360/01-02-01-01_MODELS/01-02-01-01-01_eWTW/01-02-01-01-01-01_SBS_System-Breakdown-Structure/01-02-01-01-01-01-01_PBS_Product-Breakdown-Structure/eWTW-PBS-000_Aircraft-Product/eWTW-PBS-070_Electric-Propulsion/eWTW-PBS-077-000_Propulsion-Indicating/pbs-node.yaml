@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-077-000
   title: Propulsion Indicating
   type: chapter
-  g_atlas: "077"
+  taxonomyRef:
+    localCode: "077"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-070
   model: eWTW
   side: SSOT

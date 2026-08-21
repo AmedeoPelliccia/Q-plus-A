@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-028-000
   title: Energy Carrier Storage
   type: chapter
-  g_atlas: "028"
+  taxonomyRef:
+    chapter: "028"
+    localCode: "028"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-020
   model: eWTW
   side: SSOT

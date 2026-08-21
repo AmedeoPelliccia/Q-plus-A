@@ -1,6 +1,6 @@
 # eWTW-PBS-053-100-040 - Radome and Diverters Attach Structure
 
-CSN `531004` - grammar `EWTW-531004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-100-040`.
+CSN `531004` - grammar `EWTW-531004-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-100-400` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-100-040` conserved).
 
 ## Items
 
@@ -20,4 +20,4 @@ CSN `531004` - grammar `EWTW-531004-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - MIGRATION: realized in-repo at legacy eWTW-PBS-053-010-010 with CSN 530101. New identity is CSN 531004; item numbers and nomenclatures map 1:1 (EWTW-530101-xxx -> EWTW-531004-xxx).
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

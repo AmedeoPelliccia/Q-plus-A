@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-055-000
   title: Stabilizers Empennage
   type: chapter
-  g_atlas: "055"
+  taxonomyRef:
+    chapter: "055"
+    localCode: "055"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-050
   model: eWTW
   side: SSOT

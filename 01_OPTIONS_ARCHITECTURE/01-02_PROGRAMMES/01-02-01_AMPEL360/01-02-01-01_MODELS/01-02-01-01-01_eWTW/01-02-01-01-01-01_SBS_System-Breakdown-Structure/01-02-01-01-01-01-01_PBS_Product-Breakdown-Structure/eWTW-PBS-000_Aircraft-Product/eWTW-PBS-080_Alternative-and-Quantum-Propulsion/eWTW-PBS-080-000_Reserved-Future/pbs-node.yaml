@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-080-000
   title: Reserved Future
   type: chapter
-  g_atlas: "080"
+  taxonomyRef:
+    localCode: "080"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-080
   model: eWTW
   side: SSOT

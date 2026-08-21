@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-034-000
   title: Navigation
   type: chapter
-  g_atlas: "034"
+  taxonomyRef:
+    chapter: "034"
+    localCode: "034"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-030
   model: eWTW
   side: SSOT

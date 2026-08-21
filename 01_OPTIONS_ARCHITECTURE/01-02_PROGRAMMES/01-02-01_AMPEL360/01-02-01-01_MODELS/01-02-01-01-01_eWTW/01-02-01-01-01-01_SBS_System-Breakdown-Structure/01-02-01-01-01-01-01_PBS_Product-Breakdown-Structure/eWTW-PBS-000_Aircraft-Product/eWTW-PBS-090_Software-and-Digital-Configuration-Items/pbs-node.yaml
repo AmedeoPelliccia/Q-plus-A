@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-090
   title: Software and Digital Configuration Items
   type: group
-  g_atlas: "090"
+  taxonomyRef:
+    localCode: "090"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

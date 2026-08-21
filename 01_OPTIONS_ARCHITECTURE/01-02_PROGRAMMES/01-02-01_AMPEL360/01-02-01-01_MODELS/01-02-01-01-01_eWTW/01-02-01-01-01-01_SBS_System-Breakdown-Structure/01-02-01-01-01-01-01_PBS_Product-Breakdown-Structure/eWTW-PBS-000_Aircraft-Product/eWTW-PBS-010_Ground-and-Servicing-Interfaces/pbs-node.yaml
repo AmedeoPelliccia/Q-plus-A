@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-010
   title: Ground and Servicing Interfaces
   type: group
-  g_atlas: "010"
+  taxonomyRef:
+    band: "010-019"
+    localCode: "010"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-000
   model: eWTW
   side: SSOT

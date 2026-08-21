@@ -1,6 +1,6 @@
 # eWTW-PBS-020 — Core Systems
 
-Product group = S-ATLAS band `020`. Chapters:
+Product group. Realizes S-ATLAS band `020-029` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS codes are PBS-local). Chapters:
 
 - [`eWTW-PBS-021-000`](eWTW-PBS-021-000_Air-Conditioning-and-Environmental-Control) — Air Conditioning and Environmental Control
 - [`eWTW-PBS-022-000`](eWTW-PBS-022-000_Auto-Flight) — Auto Flight

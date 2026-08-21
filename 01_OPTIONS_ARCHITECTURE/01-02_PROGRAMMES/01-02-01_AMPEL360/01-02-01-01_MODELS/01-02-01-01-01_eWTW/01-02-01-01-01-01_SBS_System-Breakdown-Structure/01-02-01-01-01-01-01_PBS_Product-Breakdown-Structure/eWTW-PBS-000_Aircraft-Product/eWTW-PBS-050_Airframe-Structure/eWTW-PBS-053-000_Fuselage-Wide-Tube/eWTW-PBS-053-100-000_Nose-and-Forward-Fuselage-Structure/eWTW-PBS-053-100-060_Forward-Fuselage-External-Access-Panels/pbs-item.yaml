@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-100-000
   model: eWTW
   side: SSOT
-  scope: "Forward Fuselage External Access Panels - S-ATLAS 053-100-060 subject scope; folder name is SSOT."
+  scope: "Forward Fuselage External Access Panels - PBS-local 053-100-060 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"

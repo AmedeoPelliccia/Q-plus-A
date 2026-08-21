@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-051-000
   title: Standard Practices Structures
   type: chapter
-  g_atlas: "051"
+  taxonomyRef:
+    chapter: "051"
+    localCode: "051"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-050
   model: eWTW
   side: SSOT

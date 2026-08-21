@@ -1,6 +1,6 @@
 # eWTW-PBS-053-600-080 - Door Surrounding Structure
 
-CSN `536008` - grammar `EWTW-536008-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Mirrors S-ATLAS `053-600-080`.
+CSN `536008` - grammar `EWTW-536008-III` per AMPEL360-PBS-PN-CM-001 (items x10; +1..+9 children as LH/RH variants or constituents). Folder names are SSOT; YAML mirrors. Realizes S-ATLAS `053-600-800` (mapping per AMPEL360-PBS-PN-CM-001 Amendment A1; PBS-local code `053-600-080` conserved).
 
 ## Items
 
@@ -18,4 +18,4 @@ CSN `536008` - grammar `EWTW-536008-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 - Door frame fittings/plates: 053-800-040/-050. Sills: 053-800-080. Door leaves: 052.
 
-Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant

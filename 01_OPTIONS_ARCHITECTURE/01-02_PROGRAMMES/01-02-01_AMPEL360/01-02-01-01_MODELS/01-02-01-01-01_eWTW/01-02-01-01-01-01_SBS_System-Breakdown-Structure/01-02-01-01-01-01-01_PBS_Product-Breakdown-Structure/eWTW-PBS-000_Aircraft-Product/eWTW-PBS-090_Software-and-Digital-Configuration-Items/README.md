@@ -1,6 +1,6 @@
 # eWTW-PBS-090 — Software and Digital Configuration Items
 
-Product group = S-ATLAS band `090`. Chapters:
+Product group (PBS-local `090`); S-ATLAS band mapping pending ratification (Amendment A1 ratification table). Chapters:
 
 - [`eWTW-PBS-090-100`](eWTW-PBS-090-100_Computer-Software-Configuration-Items) — Computer Software Configuration Items
 - [`eWTW-PBS-090-300`](eWTW-PBS-090-300_Digital-Twin-Configuration) — Digital Twin Configuration

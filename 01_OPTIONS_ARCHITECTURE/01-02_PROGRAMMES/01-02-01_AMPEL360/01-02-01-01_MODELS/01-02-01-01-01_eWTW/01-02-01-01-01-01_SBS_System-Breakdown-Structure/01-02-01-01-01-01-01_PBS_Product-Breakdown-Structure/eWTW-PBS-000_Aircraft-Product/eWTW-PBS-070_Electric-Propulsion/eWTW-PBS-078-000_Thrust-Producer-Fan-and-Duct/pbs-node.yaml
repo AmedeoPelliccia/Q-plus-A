@@ -2,7 +2,9 @@ pbs_node:
   id: eWTW-PBS-078-000
   title: Thrust Producer Fan and Duct
   type: chapter
-  g_atlas: "078"
+  taxonomyRef:
+    localCode: "078"
+    note: "PBS-local addressing per CM-001; taxonomy mapping pending ratification (Amendment A1 ratification table)"
   parent: eWTW-PBS-070
   model: eWTW
   side: SSOT

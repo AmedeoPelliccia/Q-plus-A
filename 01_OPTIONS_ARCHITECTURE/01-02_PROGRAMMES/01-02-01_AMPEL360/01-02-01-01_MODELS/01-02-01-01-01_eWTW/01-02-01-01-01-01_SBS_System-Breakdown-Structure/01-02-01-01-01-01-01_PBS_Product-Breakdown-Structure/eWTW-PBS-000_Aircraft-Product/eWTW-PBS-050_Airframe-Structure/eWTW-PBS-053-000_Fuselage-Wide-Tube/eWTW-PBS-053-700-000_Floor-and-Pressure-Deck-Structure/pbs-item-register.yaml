@@ -1,34 +1,34 @@
 # PBS item register (section) - subjects, generated
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 subjects:
   - id: "eWTW-PBS-053-700-010"
     csn: "537001"
     title: "Fuselage Floor Structure General"
-    gAtlas: "053-700-010"
+    localCode: "053-700-010"
     realized: true
   - id: "eWTW-PBS-053-700-020"
     csn: "537002"
     title: "Forward Fuselage Floor Structure"
-    gAtlas: "053-700-020"
+    localCode: "053-700-020"
     realized: true
   - id: "eWTW-PBS-053-700-030"
     csn: "537003"
     title: "Center Fuselage Floor Structure"
-    gAtlas: "053-700-030"
+    localCode: "053-700-030"
     realized: true
   - id: "eWTW-PBS-053-700-040"
     csn: "537004"
     title: "Rear Fuselage Floor Structure"
-    gAtlas: "053-700-040"
+    localCode: "053-700-040"
     realized: true
   - id: "eWTW-PBS-053-700-050"
     csn: "537005"
     title: "Floor Panels"
-    gAtlas: "053-700-050"
+    localCode: "053-700-050"
     realized: true
   - id: "eWTW-PBS-053-700-060"
     csn: "537006"
     title: "Seat Tracks"
-    gAtlas: "053-700-060"
+    localCode: "053-700-060"
     realized: true

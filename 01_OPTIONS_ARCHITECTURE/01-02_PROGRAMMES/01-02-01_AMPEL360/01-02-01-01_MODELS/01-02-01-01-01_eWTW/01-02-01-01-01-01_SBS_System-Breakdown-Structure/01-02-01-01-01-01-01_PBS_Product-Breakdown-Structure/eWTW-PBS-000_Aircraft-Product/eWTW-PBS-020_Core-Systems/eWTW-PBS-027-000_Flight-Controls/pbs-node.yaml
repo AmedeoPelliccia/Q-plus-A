@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-027-000
   title: Flight Controls
   type: chapter
-  g_atlas: "027"
+  taxonomyRef:
+    chapter: "027"
+    localCode: "027"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-020
   model: eWTW
   side: SSOT

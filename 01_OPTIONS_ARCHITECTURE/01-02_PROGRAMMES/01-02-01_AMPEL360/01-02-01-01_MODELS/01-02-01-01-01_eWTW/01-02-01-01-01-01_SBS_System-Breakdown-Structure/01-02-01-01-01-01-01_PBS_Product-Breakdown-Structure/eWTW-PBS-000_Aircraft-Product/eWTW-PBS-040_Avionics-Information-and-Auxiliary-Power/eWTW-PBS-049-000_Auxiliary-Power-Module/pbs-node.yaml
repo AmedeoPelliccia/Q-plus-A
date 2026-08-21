@@ -2,7 +2,10 @@ pbs_node:
   id: eWTW-PBS-049-000
   title: Auxiliary Power Module
   type: chapter
-  g_atlas: "049"
+  taxonomyRef:
+    chapter: "049"
+    localCode: "049"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   parent: eWTW-PBS-040
   model: eWTW
   side: SSOT

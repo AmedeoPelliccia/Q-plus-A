@@ -1,14 +1,17 @@
 # PBS node record (chapter)
 # AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS) - No-AAA compliant
+# Generated 2026-07-06 - legacy PBS-053 generator (2.0.0) - No-AAA compliant
 node:
   id: "eWTW-PBS-053-000"
   title: "Fuselage Wide-Tube"
   level: "chapter"
-  gAtlas: "053"
+  taxonomyRef:
+    chapter: "053"
+    localCode: "053"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
   ataOrigin: "53"
   config: "WTW (Wide Tube Wing)"
-  grammar: "0CC-SSS-UU0 (S-ATLAS x100 sections; subjects x10; -000 = general)"
+  grammar: "0CC-SSS-UU0 (PBS-local sections x100; subjects x10; -000 = general)"
   parent: "eWTW-PBS-050"
   sections: 10
   status: "PLANNED"

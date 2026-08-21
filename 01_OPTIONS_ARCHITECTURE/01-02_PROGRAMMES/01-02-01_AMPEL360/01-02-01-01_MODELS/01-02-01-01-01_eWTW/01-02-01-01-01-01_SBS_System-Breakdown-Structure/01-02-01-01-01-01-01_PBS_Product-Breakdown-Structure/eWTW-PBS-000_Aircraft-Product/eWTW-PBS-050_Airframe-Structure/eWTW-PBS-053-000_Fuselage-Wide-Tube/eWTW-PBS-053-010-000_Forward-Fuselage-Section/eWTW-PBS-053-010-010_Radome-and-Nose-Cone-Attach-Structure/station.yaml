@@ -1,6 +1,7 @@
 station:
   id: eWTW-PBS-053-010-010
-  realizes: 053-010-010
+  localCode: "053-010-010"
+  realizes: "053-100-400"
   top_assembly: EWTW-530101-000
   mic: EWTW
   csn: "530101"
@@ -13,10 +14,10 @@ station:
   parallels: AMPEL360-AMM-INFOCODE-CM-001
   grammar: "EWTW-<CSN>-<VAR>[-<VAR>...] (x10 find; 000 = assembly; odd/even = LH/RH)"
   interfaces:
-    - {node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
-    - {node: "053-010-030", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
-    - {node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
-    - {node: "030", item: "radome / nose de-ice", icd: ICD-053-010-010-030}
+    - {space: taxonomy, node: "034", item: "weather-radar antenna", icd: ICD-053-010-010-034}
+    - {space: pbs-local, station: "053-010-030", taxonomyRef: "053-800-100", item: "forward pressure bulkhead", icd: ICD-053-010-010-053-010-030}
+    - {space: taxonomy, node: "024", item: "bonding / lightning protection", icd: ICD-053-010-010-024}
+    - {space: taxonomy, node: "030", item: "radome / nose de-ice", icd: ICD-053-010-010-030}
   parts: 11
   status: realized
-  version: "1.0"
+  version: "1.1"

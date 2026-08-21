@@ -7,6 +7,6 @@ pbs_item:
   parent: eWTW-PBS-053-300-000
   model: eWTW
   side: SSOT
-  scope: "Rear Fuselage Zone General - S-ATLAS 053-300-010 subject scope; folder name is SSOT."
+  scope: "Rear Fuselage Zone General - PBS-local 053-300-010 subject scope; folder name is SSOT."
   status: scaffold
   version: "1.0"
