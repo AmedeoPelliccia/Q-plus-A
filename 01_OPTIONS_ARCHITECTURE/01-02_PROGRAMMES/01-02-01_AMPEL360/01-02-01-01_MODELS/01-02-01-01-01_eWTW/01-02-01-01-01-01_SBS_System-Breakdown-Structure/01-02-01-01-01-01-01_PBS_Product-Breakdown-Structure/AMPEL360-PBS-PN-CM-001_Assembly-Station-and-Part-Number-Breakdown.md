@@ -1,178 +1,172 @@
----
-convention: AMPEL360-PBS-PN-CM-001
-title: Assembly Station & Part-Number Breakdown
-parallels: AMPEL360-AMM-INFOCODE-CM-001
-model: eWTW (generalizes across MODELS)
-side: SSOT
-layer: deepest SSOT layer (configuration items)
-governance: [DEGF-v1.0, No-AAA, SSOT+PUB]
-status: baseline
-version: "1.0"
----
+# AMPEL360-PBS-PN-CM-001 — Assembly Station & Part-Number Breakdown Convention
 
-# AMPEL360-PBS-PN-CM-001 — Assembly Station & Part-Number Breakdown
-
-Defines how a PBS **subject** node (`0CC-SS0-UU0`) transitions into the physical
-**part-number tree**. This is the handshake between the S-ATLAS functional
-taxonomy (above) and the as-designed product configuration (below).
-
-## 1. Assembly station
-
-A PBS subject node is the **assembly station**: the single point where identity
-switches from *taxonomy code* to *part number*. The station holds exactly one
-**top assembly** plus a `station.yaml` recording the handshake
-(`realizes: <taxonomy-id>` ↔ `top_assembly: <PN>`). Above the station: S-ATLAS
-codes. Below: part numbers. Per Amendment A1, every record carrying `realizes`
-also carries a `realizesNote` stating identity vs reference: `localCode` feeds
-CSN and the PN tree; `realizes` follows taxonomy evolution. Per Amendment A2,
-the station is the **Taxonomy–Product Identity Boundary (TPIB)**: the only
-point where the two identity spaces touch.
-
-## 2. Part-number grammar
-
-```text
-EWTW-<CSN>-<VAR>[-<VAR>…]
-```
-
-- `EWTW` — model identity code (MIC); changes per MODEL.
-- `CSN` — 6-digit compact system number = ATA-equivalent of the station's
-  S-ATLAS code (`053-010-010` → `530101`). This is the conserved **root**.
-- `VAR` — find/variant group, ×10 (`000` = the assembly itself; `010`, `020`…
-  its components; nest deeper by appending another ×10 group). The root
-  `EWTW-<CSN>` is conserved down the entire tree.
-- Handed / config variants — odd/even within a group (`021` LH, `022` RH).
-
-The P/N tree is the ×10 grammar **continued below the station**: the only change
-at the boundary is the notation (`053-010-010` → `EWTW-530101-…`).
-
-## 3. Node folder
-
-```text
-<PN>_<NOMENCLATURE-SLUG>/
-```
-
-- `<PN>` — full part number (root + find chain).
-- `<NOMENCLATURE-SLUG>` — controlled **noun-first** item name, uppercase, comma
-  removed, spaces → hyphen (`STRUCTURE, RADOME ATTACH` → `STRUCTURE-RADOME-ATTACH`).
-- Each node folder holds `part.yaml`. The canonical `STRUCTURE, RADOME ATTACH`
-  (with comma) lives in `part.yaml`, not the folder name.
-
-## 4. part.yaml
-
-`pn` · `find` · `nomenclature` (canonical, noun-first) · `parent_pn` · `qty` ·
-`uom` · `layer` (STD/◇/STD-G) · `make_or_buy` · `effectivity` · `catalog_pn`
-(see §5) · `interfaces[]` · `realizes` (top assembly only — the station id) ·
-`status` · `version`.
-
-## 5. Part identity vs position — the one caveat
-
-The folder P/N is **positional / as-designed** (root-conserving: it says *where
-the item sits* in this assembly). A physical part **reused elsewhere** must keep
-**one** identity: record it in `catalog_pn` (opaque, unique, from the model part
-register) and **reference** it where reused — do **not** create a second folder.
-
-> Folder P/N = where it sits. `catalog_pn` = what it is. For make-once parts the
-> two coincide and `catalog_pn` is left empty.
-
-## 6. Effectivity ↔ publication
-
-A dash/variant (LH/RH, config, embodied mod) is the **product face** of the same
-effectivity carried on the **publication face** by `infoCodeVariant` in
-`AMPEL360-AMM-INFOCODE-CM-001`. A mod that forks a part (new dash) and forks a
-data-module info-code variant are two records of **one** change. The part
-register and the DM register reconcile on the mod id.
-
-## 7. Interfaces
-
-`interfaces[]` lists interfacing nodes — other part numbers **and** adjacent
-taxonomy items (e.g. `034` antenna, `053-010-030` forward pressure bulkhead,
-`024` bonding) — each with an ICD reference. The station is where cross-taxonomy
-interfaces (system ↔ structure) are declared, because it is the first node that
-sees the physical assembly.
-
-## 8. Depth
-
-Below the subject the tree nests by appending ×10 find groups until detail-part
-level. No fixed depth; `-000` remains "the assembly itself / general" at every
-level.
-
-## 9. Governance
-
-SSOT-side; the part tree is the **deepest SSOT layer** (configuration items). The
-AMM/SRM (PUB) reference it via `ssot-ref.yaml`. Owner is the station's owner
-(structures → Q-STRUCTURES). Inherits DEGF v1.0, No-AAA, SSOT+PUB.
-
-## 10. Reference realization
-
-The station `053-010-010` (Radome & Nose Cone Attach Structure, root
-`EWTW-530101`) is realized to full depth by
-[`realize_assembly-station_053-010-010.py`](../../../../../../../../../realize_assembly-station_053-010-010.py)
-at the repository root.
+**Issue 2** · Owner: Q-STRUCTURES · Authority: AM.PEL · Status: **PROPOSED — merge constitutes ratification.**
+Supersedes Issue 1 and absorbs Amendments **A1** (clauses .1–.7, .9) and **A2** (TPIB). Clause A1.8 (handedness truth) is ratified herein, the authority having adopted it in the governing exemplar.
 
 ---
 
-## Amendment A2 — the Taxonomy–Product Identity Boundary (TPIB)
+## 1. Purpose and scope
 
-**Status:** doctrinal clause of the convention (extends §1) · merge
-constitutes ratification.
+This convention governs the transition from architecture taxonomy to configuration-controlled product definition in the AMPEL360 PBS: the assembly station, the part-number grammar, node anatomy, interface identifiers, status truth and the executable verification that keeps all of it honest. It applies to every PBS branch of the eWTW model and, by adoption, to sibling models.
 
-### A2.1 — Definition
+## 2. The assembly station and the identity boundary (TPIB)
 
-> **Taxonomy–Product Identity Boundary (TPIB).** A normative architectural
-> boundary, located at the PBS Subject Node (the assembly station), at which
-> the governing identity regime transitions from taxonomic identification to
-> configuration-controlled product identification.
+> **A PBS subject node is the assembly station: the single point where identity switches from taxonomy-linked PBS code to part number.**
 
-Invariants:
+The station is the **Taxonomy–Product Identity Boundary**:
 
 ```text
-for every node above the station:   Identity = Taxonomic        (S-ATLAS address space)
-for every node below the station:   Identity = Product          (PN · Revision · Effectivity)
-at the station:                     Identity = Binding(Taxonomy, Configuration)
+above the station:   Identity = PBS-local code (taxonomy linked by mapping)
+below the station:   Identity = Product (PN · Revision · Effectivity)
+at the station:      Identity = Binding(Taxonomy, Configuration)
 ```
 
-The binding is recorded in `station.yaml` (`realizes` ↔ `top_assembly`) and is
-the **only** point where the two identity spaces touch.
+**Decoupling theorems.** A part-number change never implies a taxonomy change; taxonomic decomposition never implies part-number decomposition. Two identity spaces, one formally defined interface, each evolving under its own governance.
 
-### A2.2 — Decoupling theorems
+**Maintenance obligation.** The binding is a maintained joint, not a one-time act: `realizes:` must resolve to an existing node of the current taxonomy, is re-verified by machine (§10), and a self-referential binding is non-conforming. *A boundary whose currency cannot be checked by machine is documentation; this one is doctrine.*
+
+A station holds **exactly one** top assembly and one `station.yaml` recording the handshake `realizes ↔ top_assembly`. Above it, no node sees the physical assembly; below it, everything is physical.
+
+## 3. Identity and mapping
+
+**3.1 — Sovereign local codes.** PBS codes are programme-local, conserved identifiers — never taxonomy addresses. No PBS artifact may claim its codes *are* S-ATLAS: the prose formula is "Realizes S-ATLAS `<address>`", never "is S-ATLAS `<code>`". The taxonomy link is carried only by:
+
+```yaml
+taxonomyRef:                     # node frontmatter / pbs-node.yaml
+  chapter: "053"
+  section: "053-100"             # current taxonomy address
+  localCode: "053-010"           # conserved PBS-local code
+  note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
+```
+
+and, at station grain, by `realizes:` with its explanatory `realizesNote`.
+
+**3.2 — CSN derivation.** The compact system number derives from the **PBS-local code** and is immune to taxonomy evolution:
 
 ```text
-PN change                does NOT imply   taxonomy change
-Taxonomic decomposition  does NOT imply   PN decomposition
+053-010-010  →  CSN 530101  →  root EWTW-530101
 ```
 
-Two identity spaces, one formally defined interface. Each side evolves under
-its own governance: the taxonomy by ruling and register; the product tree by
-configuration management.
+**3.3 — The crossing trace.** The CSN is the imprint of the local identity carried into product space at the moment of crossing — human-readable, AMM-SNS-aligned (1:1 by number), the fossil record of the handover.
 
-### A2.3 — Maintenance obligation (what makes the boundary normative)
+## 4. Part-number grammar
 
-The binding is a **maintained joint**, not a one-time act: `realizes` must
-resolve to an existing node of the current taxonomy (A1.6,
-machine-verifiable), and a self-referential binding is non-conforming. The
-taxonomic side of the binding is versioned — `localCode` is the identity
-frozen at binding time; `realizes` is the reference that tracks taxonomy
-evolution. A boundary whose currency cannot be checked by machine is
-documentation; this one is doctrine.
+```text
+EWTW-<CSN>-<VAR>[-<VAR>...]
+```
 
-### A2.4 — The CSN as crossing trace
+`EWTW` model identity code (MIC) · `<CSN>` per §3.2 · `<VAR>` ×10 find group: `000` is the assembly itself (and "general" at every level); `010`, `020` … components; nest deeper by appending another ×10 group; `+1..+9` within a group are variants or constituents.
 
-The CSN is the imprint of the taxonomic identity carried into product space at
-the moment of crossing (`053-000-030 → 530003`): human-readable,
-AMM-SNS-aligned (1:1 by number, ratified), and immune to later taxonomy
-evolution (A1.2). It is the fossil record of the handover.
+**4.1 — Handedness truth (was A1.8).** Variant names describe **position or function as built**, never an inherited symmetry: odd/even encodes LH/RH **only for true mirrored pairs**; a same-side stack is UPPER/LOWER; other dispositions name what they are (FWD/AFT, INBD/OUTBD). Renaming a variant's nomenclature never changes its PN code.
 
-### A2.5 — Prior-art positioning (calibrated claim)
+**4.2 — Quantity discipline.** Find groups with enumerated children are **sets**: the group line reads `(set of N)`; unit quantities live on the leaves. Quantity rollups count leaves only — a group must never double-count its children. Leaf-only groups may carry `×N EA` directly.
 
-Existing standards distinguish structural, functional, occurrence and part
-identities, and some explicitly model the realization of breakdown elements by
-parts: **S3000L** (hardware element as usage-in-context, realized by one or
-more parts — the closest precedent — while declining to mandate where the
-boundary sits), **IEC 81346 / IEC 62027** (reference designation of the
-occurrence ≠ part identity, as coexisting schemes), **the FIN/PN practice**
-(functional position → installed part, a concrete implementation without a
-general theory), **STEP AP239/AP242** (the information-model building blocks).
-None establishes a unique normative boundary at which the governing identity
-regime transitions from taxonomy-based identification to part-number-based
-product identity. **The PBS Subject Node is proposed as that boundary.** No
-broader novelty is claimed.
+**4.3 — Worked exemplar** (station `eWTW-PBS-053-010-010`, status realized):
+
+```text
+EWTW-530101-000  STRUCTURE, RADOME AND NOSE CONE ATTACH      (×1 EA, make)
+  EWTW-530101-010  STRUCTURE, RADOME ATTACH                  (×1 EA, make)
+    EWTW-530101-011  FRAME, RADOME ATTACH RING               (×1 EA, make)
+    EWTW-530101-012  FITTING, RADOME ATTACH BACKUP           (×8 EA, make)
+  EWTW-530101-020  FITTING, RADOME HINGE                     (set of 2, buy)
+    EWTW-530101-021  FITTING, RADOME HINGE UPPER             (×1 EA, buy)
+    EWTW-530101-022  FITTING, RADOME HINGE LOWER             (×1 EA, buy)
+  EWTW-530101-030  FITTING, RADOME LATCH                     (×2 EA, buy)
+  EWTW-530101-040  STRIP, LIGHTNING DIVERTER                 (×6 EA, buy)
+  EWTW-530101-050  SEAL, RADOME PERIMETER                    (×1 EA, buy)
+  EWTW-530101-060  BRACKET, WEATHER RADAR ANTENNA MOUNT      (×1 EA, make)
+```
+
+The root `EWTW-530101` is conserved down the entire tree; only the notation changed at the boundary.
+
+## 5. Node anatomy and provenance
+
+**Folder identity is SSOT**; YAML mirrors it. Every part node carries `part.yaml`; every station carries `station.yaml` on the **single station schema**:
+
+```yaml
+station:
+  id: <PBS node id>              # never an invented serial
+  localCode: "..."               # conserved
+  realizes: "..."                # current taxonomy address, resolving, never self-referential
+  realizesNote: "..."            # the identity-vs-reference explanation, verbatim clause
+  top_assembly: EWTW-<CSN>-000
+  root: EWTW-<CSN>
+  mic: EWTW
+  csn: "<CSN>"
+  type: assembly-station
+  convention: "AMPEL360-PBS-PN-CM-001 (Issue 2)"
+  parallels: AMPEL360-AMM-INFOCODE-CM-001
+  owner: <division>
+  status: PLANNED | realized
+  interfaces: [ ... ]            # §7 schema
+  parts: <leaf+group count on disk>
+```
+
+**Provenance truth.** Generated files carry one provenance line — date · generator filename verbatim · version — and nothing else. Compliance self-claims are prohibited: conformity is demonstrated by §10, never asserted in comments. Paraphrasing a generator filename destroys provenance and is non-conforming.
+
+## 6. Identity versus position
+
+The folder P/N is **positional, as-designed** — where the item sits, root-conserving. A physical part reused elsewhere keeps **one** identity via `catalog_pn` and is referenced where reused; no second folder. For make-once parts the two coincide and `catalog_pn` is empty.
+
+## 7. Interfaces and ICD grammar
+
+The station is where cross-taxonomy interfaces (system ↔ structure) are declared — it is the first node that sees the physical assembly. Every `interfaces[]` entry declares its address space and its carrying parts:
+
+```yaml
+- icd: ICD-EWTW-530101-034
+  space: taxonomy | pbs-local
+  counterpart: "034"                 # chapter, or PBS station id
+  counterpartCsn: "530103"           # when pbs-local
+  taxonomyRef: "053-800"             # when the counterpart realizes a taxonomy element
+  item: "..."
+  carriedBy: [EWTW-530101-060]       # part numbers physically realizing the interface
+```
+
+**ICD identifier grammar:** `ICD-<MIC>-<CSN>-<counterpart>` — a **6-digit** counterpart is a PBS station (by CSN); a **3-digit** counterpart is a taxonomy chapter. *The segment length is the space discriminator*: the identifier is machine-parseable with no further convention. Concatenated 9-digit codes and undiscriminated mixed spaces are non-conforming.
+
+## 8. Status truth
+
+`status: realized` only when **every** breakdown row exists on disk; otherwise `partially-realized` with a per-row Status column derived from `pbs-item-register.yaml` (the register is SSOT; tables are views). Hyperlinks appear only on REALIZED rows — links never 404.
+
+## 9. Downstream and publications
+
+The SNS of maintenance publications aligns 1:1 by number with the PBS-local code (`530101 → 53-10-01` class). Effectivity meets publications through `infoCodeVariant` per `AMPEL360-AMM-INFOCODE-CM-001`. Publications **describe, support or evidence** the controlled product — they never redefine it; the PUB side references SSOT one-way via `ssot-ref.yaml`.
+
+## 10. Executable verification
+
+Run at repo root; every check must print its expected value. Paste outputs in any ratifying PR.
+
+```bash
+PBS="<...>/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure"
+TAX="<...>/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS"
+
+# realizes resolves, and is never self-referential
+for f in $(find "$PBS" -name station.yaml); do
+  r=$(grep -E '^\s*realizes:' "$f" | grep -oE '[0-9]{3}-[0-9]{3}-[0-9]{3}')
+  find "$TAX" -type d -name "${r}_*" | grep -q . || echo "DANGLING $r in $f"
+  grep -oE 'localCode: "'$r'"' "$f" | grep -q . && echo "SELF-REFERENTIAL in $f"
+done; echo realizes-scan-done
+
+# ICD grammar: MIC + 6-digit CSN + (3|6)-digit counterpart
+grep -rhoE 'ICD-[A-Z0-9]+-[0-9]{6}-[0-9]{3}([0-9]{3})?' "$PBS" | sort -u | head
+grep -rhoE 'ICD-[0-9-]{15,}' "$PBS" | grep -vE 'ICD-[A-Z]' | wc -l        # expect 0 (legacy concatenations)
+
+# provenance and claims
+grep -rn "No-AAA compliant" "$PBS" | wc -l                                 # expect 0
+grep -rn "compliant" --include="*.yaml" "$PBS" | wc -l                     # expect 0
+
+# schema singularity and status truth
+grep -rl '^assemblyStation:' "$PBS" | wc -l                                # expect 0
+grep -rnE '\| PLANNED \|.*\]\(' --include="README.md" "$PBS" | wc -l       # expect 0
+```
+
+## Annex A — Prior art and calibrated claim
+
+Existing standards distinguish structural, functional, occurrence and part identities, and some model the realization of breakdown elements by parts: S3000L (hardware element as usage-in-context, realized by parts — the closest precedent — while declining to fix where the boundary sits), IEC 81346 / IEC 62027 (occurrence ≠ part identity, coexisting schemes), the FIN/PN practice (a concrete implementation without a general theory), STEP AP239/AP242 (the information-model building blocks). None establishes a unique normative boundary at which the governing identity regime transitions from taxonomy-based identification to part-number-based product identity. **The PBS Subject Node is proposed as that boundary. No broader novelty is claimed.**
+
+## Change record
+
+| Issue | Content |
+|---|---|
+| 1 | Original convention: station definition, PN grammar, catalog_pn, interfaces, ×10 depth |
+| 2 | Absorbs A1.1–.7 (mapping doctrine, CSN clause, status truth, §10 checks, interface spaces, provenance truth, single station schema), A1.8 ratified (handedness truth), A1.9 (ICD grammar), A2 (TPIB, decoupling theorems, maintenance obligation, crossing trace, prior-art claim); adds quantity discipline §4.2; exemplar re-instanced on the 11-part realized station |
