@@ -1,7 +1,7 @@
 part:
   pn: EWTW-530101-022
   find: "022"
-  nomenclature: "FITTING, RADOME HINGE RH"
+  nomenclature: "FITTING, RADOME HINGE LOWER"
   parent_pn: EWTW-530101-020
   qty: 1
   uom: EA
