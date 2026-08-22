@@ -65,14 +65,17 @@ EWTW-530101-000  STRUCTURE, RADOME AND NOSE CONE ATTACH  (x1 EA, make)
 ## Interfaces
 
 The station is where cross-taxonomy interfaces (system <-> structure) are
-declared - see `interfaces[]` in [`station.yaml`](./station.yaml):
+declared - see `interfaces[]` in [`station.yaml`](./station.yaml). ICD
+identifiers follow Amendment A1.9: `ICD-<MIC>-<CSN>-<counterpart>` - a 6-digit
+counterpart is a PBS station (by CSN), a 3-digit counterpart is a taxonomy
+chapter; the length is the space discriminator.
 
-| Interface | Owned by | ICD |
-|---|---|---|
-| Weather-radar antenna | `034` Navigation | `ICD-053-010-010-034` |
-| Forward pressure bulkhead | `053-010-030` (PBS-local) | `ICD-053-010-010-053-010-030` |
-| Bonding / lightning protection | `024` | `ICD-053-010-010-024` |
-| Radome / nose de-ice | `030` Ice-and-Rain-Protection | `ICD-053-010-010-030` |
+| ICD | Counterpart (space) | Interface | Carried by |
+|---|---|---|---|
+| `ICD-EWTW-530101-034` | `034` Navigation *(taxonomy)* | weather-radar antenna: mount, bonding, connector clearance | `-060` radar bracket |
+| `ICD-EWTW-530101-530103` | `eWTW-PBS-053-010-030` *(pbs-local; taxonomyRef `053-800`)* | forward pressure bulkhead: structural joint at STA 0 | `-011` attach ring |
+| `ICD-EWTW-530101-024` | `024` Electrical *(taxonomy)* | bonding and lightning: diverter strips to airframe return path | `-040` diverters, `-011` ring |
+| `ICD-EWTW-530101-030` | `030` Ice-and-Rain *(taxonomy)* | radome / nose de-ice provisions | - |
 
 ## Identity vs position
 
