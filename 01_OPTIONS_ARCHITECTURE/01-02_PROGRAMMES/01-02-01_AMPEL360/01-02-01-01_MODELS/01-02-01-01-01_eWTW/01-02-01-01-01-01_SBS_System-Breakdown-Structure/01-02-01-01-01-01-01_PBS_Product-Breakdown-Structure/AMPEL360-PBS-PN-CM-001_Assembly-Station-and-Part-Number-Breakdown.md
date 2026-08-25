@@ -44,7 +44,7 @@ and, at station grain, by `realizes:` with its explanatory `realizesNote`.
 **3.2 — CSN derivation.** The compact system number derives from the **PBS-local code** and is immune to taxonomy evolution:
 
 ```text
-053-010-010  →  CSN 530101  →  root EWTW-530101
+053-100-040  →  CSN 531004  →  root EWTW-531004
 ```
 
 **3.3 — The crossing trace.** The CSN is the imprint of the local identity carried into product space at the moment of crossing — human-readable, AMM-SNS-aligned (1:1 by number), the fossil record of the handover.
@@ -61,23 +61,23 @@ EWTW-<CSN>-<VAR>[-<VAR>...]
 
 **4.2 — Quantity discipline.** Find groups with enumerated children are **sets**: the group line reads `(set of N)`; unit quantities live on the leaves. Quantity rollups count leaves only — a group must never double-count its children. Leaf-only groups may carry `×N EA` directly.
 
-**4.3 — Worked exemplar** (station `eWTW-PBS-053-010-010`, status realized):
+**4.3 — Worked exemplar** (station `eWTW-PBS-053-100-040`, status realized):
 
 ```text
-EWTW-530101-000  STRUCTURE, RADOME AND NOSE CONE ATTACH      (×1 EA, make)
-  EWTW-530101-010  STRUCTURE, RADOME ATTACH                  (×1 EA, make)
-    EWTW-530101-011  FRAME, RADOME ATTACH RING               (×1 EA, make)
-    EWTW-530101-012  FITTING, RADOME ATTACH BACKUP           (×8 EA, make)
-  EWTW-530101-020  FITTING, RADOME HINGE                     (set of 2, buy)
-    EWTW-530101-021  FITTING, RADOME HINGE UPPER             (×1 EA, buy)
-    EWTW-530101-022  FITTING, RADOME HINGE LOWER             (×1 EA, buy)
-  EWTW-530101-030  FITTING, RADOME LATCH                     (×2 EA, buy)
-  EWTW-530101-040  STRIP, LIGHTNING DIVERTER                 (×6 EA, buy)
-  EWTW-530101-050  SEAL, RADOME PERIMETER                    (×1 EA, buy)
-  EWTW-530101-060  BRACKET, WEATHER RADAR ANTENNA MOUNT      (×1 EA, make)
+EWTW-531004-000  STRUCTURE, RADOME AND NOSE CONE ATTACH      (×1 EA, make)
+  EWTW-531004-010  STRUCTURE, RADOME ATTACH                  (×1 EA, make)
+    EWTW-531004-011  FRAME, RADOME ATTACH RING               (×1 EA, make)
+    EWTW-531004-012  FITTING, RADOME ATTACH BACKUP           (×8 EA, make)
+  EWTW-531004-020  FITTING, RADOME HINGE                     (set of 2, buy)
+    EWTW-531004-021  FITTING, RADOME HINGE UPPER             (×1 EA, buy)
+    EWTW-531004-022  FITTING, RADOME HINGE LOWER             (×1 EA, buy)
+  EWTW-531004-030  FITTING, RADOME LATCH                     (×2 EA, buy)
+  EWTW-531004-040  STRIP, LIGHTNING DIVERTER                 (×6 EA, buy)
+  EWTW-531004-050  SEAL, RADOME PERIMETER                    (×1 EA, buy)
+  EWTW-531004-060  BRACKET, WEATHER RADAR ANTENNA MOUNT      (×1 EA, make)
 ```
 
-The root `EWTW-530101` is conserved down the entire tree; only the notation changed at the boundary.
+The root `EWTW-531004` is conserved down the entire tree; only the notation changed at the boundary.
 
 ## 5. Node anatomy and provenance
 
@@ -113,13 +113,13 @@ The folder P/N is **positional, as-designed** — where the item sits, root-cons
 The station is where cross-taxonomy interfaces (system ↔ structure) are declared — it is the first node that sees the physical assembly. Every `interfaces[]` entry declares its address space and its carrying parts:
 
 ```yaml
-- icd: ICD-EWTW-530101-034
+- icd: ICD-EWTW-531004-034
   space: taxonomy | pbs-local
   counterpart: "034"                 # chapter, or PBS station id
   counterpartCsn: "530103"           # when pbs-local
   taxonomyRef: "053-800"             # when the counterpart realizes a taxonomy element
   item: "..."
-  carriedBy: [EWTW-530101-060]       # part numbers physically realizing the interface
+  carriedBy: [EWTW-531004-060]       # part numbers physically realizing the interface
 ```
 
 **ICD identifier grammar:** `ICD-<MIC>-<CSN>-<counterpart>` — a **6-digit** counterpart is a PBS station (by CSN); a **3-digit** counterpart is a taxonomy chapter. *The segment length is the space discriminator*: the identifier is machine-parseable with no further convention. Concatenated 9-digit codes and undiscriminated mixed spaces are non-conforming.
@@ -130,7 +130,7 @@ The station is where cross-taxonomy interfaces (system ↔ structure) are declar
 
 ## 9. Downstream and publications
 
-The SNS of maintenance publications aligns 1:1 by number with the PBS-local code (`530101 → 53-10-01` class). Effectivity meets publications through `infoCodeVariant` per `AMPEL360-AMM-INFOCODE-CM-001`. Publications **describe, support or evidence** the controlled product — they never redefine it; the PUB side references SSOT one-way via `ssot-ref.yaml`.
+The SNS of maintenance publications aligns 1:1 by number with the PBS-local code (`531004 → 53-10-01` class). Effectivity meets publications through `infoCodeVariant` per `AMPEL360-AMM-INFOCODE-CM-001`. Publications **describe, support or evidence** the controlled product — they never redefine it; the PUB side references SSOT one-way via `ssot-ref.yaml`.
 
 ## 10. Executable verification
 
