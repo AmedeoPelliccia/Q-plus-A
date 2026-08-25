@@ -1,16 +1,19 @@
-# Part record
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
 # Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
+# Amended 2026-08-25 - complete_PBS-053-100.py (1.3.1)
 part:
-  pn: "EWTW-531002-012"
-  nomenclature: "WALL-NLG-BAY-SIDE-RH"
-  csn: "531002"
-  item: "012"
-  type: "part"
-  role: "variant"
-  parentAssembly: "EWTW-531002-010"
+  pn: EWTW-531002-012
+  nomenclature: WALL-NLG-BAY-SIDE-RH
+  csn: '531002'
+  item: '012'
+  type: part
+  role: constituent
+  parentAssembly: EWTW-531002-010
   applicability:
-    model: "eWTW"
+    model: eWTW
     effectivity:
-      - "ALL"
-  status: "PLANNED"
+    - ALL
+  status: PLANNED
+  qty: 1
+  uom: EA
+  make_buy: make
+  convention: AMPEL360-PBS-PN-CM-001 (Issue 2)

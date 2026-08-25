@@ -1,34 +1,29 @@
-# PBS item register (section) - subjects, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-subjects:
-  - id: "eWTW-PBS-053-100-010"
-    csn: "531001"
-    title: "Forward Fuselage Zone General"
-    localCode: "053-100-010"
-    realized: true
-  - id: "eWTW-PBS-053-100-020"
-    csn: "531002"
-    title: "Nose Landing Gear Bay and Door Supports"
-    localCode: "053-100-020"
-    realized: true
-  - id: "eWTW-PBS-053-100-030"
-    csn: "531003"
-    title: "Forward Avionics Compartment Structure"
-    localCode: "053-100-030"
-    realized: true
-  - id: "eWTW-PBS-053-100-040"
-    csn: "531004"
-    title: "Radome and Diverters Attach Structure"
-    localCode: "053-100-040"
-    realized: true
-  - id: "eWTW-PBS-053-100-050"
-    csn: "531005"
-    title: "Forward Fuselage Direct Vision Window"
-    localCode: "053-100-050"
-    realized: true
-  - id: "eWTW-PBS-053-100-060"
-    csn: "531006"
-    title: "Forward Fuselage External Access Panels"
-    localCode: "053-100-060"
-    realized: true
+# Generated 2026-08-25 - complete_PBS-053-100.py (1.3.1)
+register:
+  section: eWTW-PBS-053-100
+  derived: true
+  stations:
+  - station: eWTW-PBS-053-100-010
+    csn: '531001'
+    parts: 12
+    status: PLANNED
+  - station: eWTW-PBS-053-100-020
+    csn: '531002'
+    parts: 14
+    status: PLANNED
+  - station: eWTW-PBS-053-100-030
+    csn: '531003'
+    parts: 14
+    status: PLANNED
+  - station: eWTW-PBS-053-100-040
+    csn: '531004'
+    parts: 11
+    status: migration-controlled
+  - station: eWTW-PBS-053-100-050
+    csn: '531005'
+    parts: 12
+    status: PLANNED
+  - station: eWTW-PBS-053-100-060
+    csn: '531006'
+    parts: 7
+    status: PLANNED

@@ -1,12 +1,29 @@
-# Assembly station record
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
 # Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
+# Amended 2026-08-25 - complete_PBS-053-100.py (1.3.1)
 station:
   id: eWTW-PBS-053-100-020
-  localCode: "053-100-020"
-  realizes: "053-100-200"
-  realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code conserved per CM-001 A1.1 — identity vs reference: localCode feeds CSN and the PN tree; realizes follows taxonomy evolution"
-  csn: "531002"
-  scope: "Assembly and integration station - Nose Landing Gear Bay and Door Supports"
+  localCode: 053-100-020
+  realizes: 053-100-200
+  realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code\
+    \ conserved per CM-001 A1.1 \u2014 identity vs reference: localCode feeds CSN\
+    \ and the PN tree; realizes follows taxonomy evolution"
+  csn: '531002'
+  scope: Assembly and integration station - Nose Landing Gear Bay and Door Supports
   status: PLANNED
-  convention: AMPEL360-PBS-PN-CM-001 (Amendment A1)
+  convention: AMPEL360-PBS-PN-CM-001 (Issue 2)
+  type: assembly-station
+  parallels: AMPEL360-AMM-INFOCODE-CM-001
+  parts: 14
+  interfaces:
+  - icd: ICD-EWTW-531002-538003
+    space: pbs-local
+    counterpart: eWTW-PBS-053-800-030
+    counterpartCsn: '538003'
+    taxonomyRef: 053-800-300
+    item: NLG trunnion and drag-strut fittings - bay structure receives, 053-800-030
+      owns
+    carriedBy:
+    - EWTW-531002-011
+    - EWTW-531002-012
+    - EWTW-531002-021
+  version: '1.2'

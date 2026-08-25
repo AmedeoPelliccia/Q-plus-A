@@ -1,20 +1,72 @@
-# Part register (subject) - ordered, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-parts:
-  - pn: "EWTW-531006-000"
-    nomenclature: "SET-ACCESS-PANELS-FWD"
-    role: "top-assembly"
-    parentAssembly: "eWTW-PBS-053-100-060"
-  - pn: "EWTW-531006-010"
-    nomenclature: "PANEL-ACCESS-EQUIPMENT-BAY"
-    role: "item"
-    parentAssembly: "EWTW-531006-000"
-  - pn: "EWTW-531006-020"
-    nomenclature: "PANEL-ACCESS-SERVICE-SET"
-    role: "item"
-    parentAssembly: "EWTW-531006-000"
-  - pn: "EWTW-531006-030"
-    nomenclature: "SURROUND-PANEL-CUTOUT-SET"
-    role: "item"
-    parentAssembly: "EWTW-531006-000"
+# Generated 2026-08-25 - complete_PBS-053-100.py (1.3.1)
+register:
+  station: eWTW-PBS-053-100-060
+  csn: '531006'
+  derived: true
+  parts:
+  - pn: EWTW-531006-000
+    nomenclature: SET-ACCESS-PANELS-FWD
+    role: assembly
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-531006-010
+    nomenclature: PANEL-ACCESS-EQUIPMENT-BAY
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-531006-011
+    nomenclature: PANEL-EE-BAY-MAIN
+    role: leaf
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-531006-020
+    nomenclature: PANEL-ACCESS-SERVICE-SET
+    role: installation
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+    references:
+    - pn: EWTW-530003-041
+      qty: 6
+      uom: EA
+    - pn: EWTW-530003-042
+      qty: 4
+      uom: EA
+  - pn: EWTW-531006-030
+    nomenclature: SURROUND-PANEL-CUTOUT-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-531006-031
+    nomenclature: FRAME-CUTOUT-REINFORCED
+    role: leaf
+    qty: 10
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-531006-040
+    nomenclature: STANDARD-PANEL-HARDWARE-INSTALLATION
+    role: installation
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+    references:
+    - pn: EWTW-530003-011
+      qty: 24
+      uom: EA
+    - pn: EWTW-530003-021
+      qty: 12
+      uom: EA
+    - pn: EWTW-530003-031
+      qty: 1
+      uom: AR
