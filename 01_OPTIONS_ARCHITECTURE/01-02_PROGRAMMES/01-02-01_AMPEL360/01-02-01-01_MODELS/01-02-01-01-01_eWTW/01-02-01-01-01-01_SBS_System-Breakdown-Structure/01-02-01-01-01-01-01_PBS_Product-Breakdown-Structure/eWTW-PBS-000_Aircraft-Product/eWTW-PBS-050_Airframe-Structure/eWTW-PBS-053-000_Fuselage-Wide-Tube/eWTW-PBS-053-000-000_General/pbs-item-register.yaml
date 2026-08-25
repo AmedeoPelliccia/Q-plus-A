@@ -1,24 +1,21 @@
-# PBS item register (section) - subjects, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-subjects:
-  - id: "eWTW-PBS-053-000-010"
-    csn: "530001"
-    title: "Fuselage General"
-    localCode: "053-000-010"
-    realized: true
-  - id: "eWTW-PBS-053-000-020"
-    csn: "530002"
-    title: "Fuselage Protective Films and Tapes"
-    localCode: "053-000-020"
-    realized: true
-  - id: "eWTW-PBS-053-000-030"
-    csn: "530003"
-    title: "Fuselage External Access Doors and Panels General"
-    localCode: "053-000-030"
-    realized: true
-  - id: "eWTW-PBS-053-000-040"
-    csn: "530004"
-    title: "Fuselage Drains"
-    localCode: "053-000-040"
-    realized: true
+# Generated 2026-08-25 - complete_PBS-053-000.py (1.1.0)
+register:
+  section: eWTW-PBS-053-000
+  derived: true
+  stations:
+  - station: eWTW-PBS-053-000-010
+    csn: '530001'
+    parts: 15
+    status: PLANNED
+  - station: eWTW-PBS-053-000-020
+    csn: '530002'
+    parts: 8
+    status: PLANNED
+  - station: eWTW-PBS-053-000-030
+    csn: '530003'
+    parts: 16
+    status: PLANNED
+  - station: eWTW-PBS-053-000-040
+    csn: '530004'
+    parts: 14
+    status: PLANNED

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # =============================================================================
-# complete_PBS-053-000.py  (1.1.0)
+# complete_PBS-053-000.py  (1.1.1)
 # Depth Pass 1 - section eWTW-PBS-053-000 (General): adds missing PN nodes per
 # the ratified spec below, and corrects existing files in place:
 #   - part.yaml      : enrich to Issue-2 schema (role/qty/uom/make_buy) - never
@@ -23,8 +23,8 @@ except ImportError:
     print("pyyaml required: pip install pyyaml --break-system-packages"); sys.exit(2)
 
 TODAY = datetime.date.today().isoformat()
-PROV  = f"# Amended {TODAY} - complete_PBS-053-000.py (1.1.0)"
-GEN   = f"# Generated {TODAY} - complete_PBS-053-000.py (1.1.0)"
+PROV  = f"# Amended {TODAY} - complete_PBS-053-000.py (1.1.1)"
+GEN   = f"# Generated {TODAY} - complete_PBS-053-000.py (1.1.1)"
 
 # ---------------------------------------------------------------- target spec
 # (station csn, station folder, [(item, parent_item|None, nomenclature, role, qty, uom, mb)])
@@ -148,7 +148,8 @@ def main():
             py = d / "part.yaml"
             target = {
                 "pn": pn_of[it], "nomenclature": nom, "csn": csn, "item": it,
-                "type": "part", "role": role, "qty": qty, "uom": uom,
+                "type": ("assembly" if role in ("assembly","set") else "part"),
+                "role": role, "qty": qty, "uom": uom,
                 "make_buy": mb,
                 "parentAssembly": (pn_of[par] if par else None),
                 "applicability": {"model": "eWTW", "effectivity": ["ALL"]},
@@ -166,7 +167,7 @@ def main():
                 else:
                     merged = dict(cur)
                     nom_rt[it] = cur.get("nomenclature", nom_rt[it])
-                    for k in ("role","qty","uom","make_buy","convention"):
+                    for k in ("type","role","qty","uom","make_buy","convention"):
                         merged[k] = target[k]
                     merged.setdefault("applicability", target["applicability"])
                     merged.setdefault("status", "PLANNED")
@@ -193,6 +194,7 @@ def main():
             doc = load(sy); s = doc.get("station", doc) or {}
             s.setdefault("type","assembly-station")
             s.setdefault("parallels","AMPEL360-AMM-INFOCODE-CM-001")
+            s["realizes"] = REALIZES[csn]
             s.setdefault("realizesNote","current S-ATLAS address; PBS-local code conserved per CM-001 A1.1")
             s["convention"] = "AMPEL360-PBS-PN-CM-001 (Issue 2)"
             s["parts"] = len(list(sta.rglob("part.yaml"))) + (0 if not W else 0)

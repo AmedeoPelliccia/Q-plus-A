@@ -1,20 +1,62 @@
-# Part register (subject) - ordered, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-parts:
-  - pn: "EWTW-530002-000"
-    nomenclature: "SET-PROTECTIVE-FILMS-AND-TAPES"
-    role: "top-assembly"
-    parentAssembly: "eWTW-PBS-053-000-020"
-  - pn: "EWTW-530002-010"
-    nomenclature: "FILM-EROSION-PROTECTION-SET"
-    role: "item"
-    parentAssembly: "EWTW-530002-000"
-  - pn: "EWTW-530002-020"
-    nomenclature: "TAPE-AERO-SEAL-SET"
-    role: "item"
-    parentAssembly: "EWTW-530002-000"
-  - pn: "EWTW-530002-030"
-    nomenclature: "FILM-ANTI-CHAFE-SET"
-    role: "item"
-    parentAssembly: "EWTW-530002-000"
+# Generated 2026-08-25 - complete_PBS-053-000.py (1.1.0)
+register:
+  station: eWTW-PBS-053-000-020
+  csn: '530002'
+  derived: true
+  parts:
+  - pn: EWTW-530002-000
+    nomenclature: SET-PROTECTIVE-FILMS-AND-TAPES
+    role: assembly
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530002-010
+    nomenclature: FILM-EROSION-PROTECTION-SET
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530002-020
+    nomenclature: TAPE-AERO-SEAL-SET
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530002-030
+    nomenclature: FILM-ANTI-CHAFE-SET
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530002-040
+    nomenclature: FILM, WALKWAY ANTI-SKID
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530002-050
+    nomenclature: TAPE, MOISTURE BARRIER
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530002-060
+    nomenclature: FILM, DIELECTRIC ISOLATION
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530002-070
+    nomenclature: TAPE, EDGE AND SEAM PROTECTION
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED

@@ -1,16 +1,111 @@
-# Part register (subject) - ordered, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-parts:
-  - pn: "EWTW-530001-000"
-    nomenclature: "STRUCTURE-FUSELAGE-GENERAL"
-    role: "top-assembly"
-    parentAssembly: "eWTW-PBS-053-000-010"
-  - pn: "EWTW-530001-010"
-    nomenclature: "MARKING-AND-PLACARD-PROVISION-SET"
-    role: "item"
-    parentAssembly: "EWTW-530001-000"
-  - pn: "EWTW-530001-020"
-    nomenclature: "BONDING-AND-GROUNDING-PROVISION-SET"
-    role: "item"
-    parentAssembly: "EWTW-530001-000"
+# Generated 2026-08-25 - complete_PBS-053-000.py (1.1.0)
+register:
+  station: eWTW-PBS-053-000-010
+  csn: '530001'
+  derived: true
+  parts:
+  - pn: EWTW-530001-000
+    nomenclature: STRUCTURE-FUSELAGE-GENERAL
+    role: assembly
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530001-010
+    nomenclature: MARKING-AND-PLACARD-PROVISION-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-011
+    nomenclature: STENCIL SET, SERVICE AND RESCUE MARKINGS
+    role: leaf
+    qty: 1
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-012
+    nomenclature: PLATE, DATA AND REGISTRATION
+    role: leaf
+    qty: 2
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-013
+    nomenclature: MARKER, ZONAL STATION REFERENCE
+    role: leaf
+    qty: 24
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-020
+    nomenclature: BONDING-AND-GROUNDING-PROVISION-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-021
+    nomenclature: JUMPER, BONDING STANDARD
+    role: leaf
+    qty: 40
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-022
+    nomenclature: STUD, GROUNDING RECEPTACLE
+    role: leaf
+    qty: 12
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-023
+    nomenclature: STRAP, STATIC DISCHARGER PROVISION
+    role: leaf
+    qty: 8
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-030
+    nomenclature: FINISH-AND-COATING-PROVISION-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-031
+    nomenclature: COATING SYSTEM, EXTERIOR BASE
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-032
+    nomenclature: COATING, EROSION PROTECTION LOCAL
+    role: leaf
+    qty: 1
+    uom: AR
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-040
+    nomenclature: DATUM-AND-ALIGNMENT-PROVISION-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530001-041
+    nomenclature: TARGET, OPTICAL ALIGNMENT
+    role: leaf
+    qty: 6
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530001-042
+    nomenclature: PLATE, REFERENCE DATUM
+    role: leaf
+    qty: 4
+    uom: EA
+    make_buy: make
+    status: PLANNED

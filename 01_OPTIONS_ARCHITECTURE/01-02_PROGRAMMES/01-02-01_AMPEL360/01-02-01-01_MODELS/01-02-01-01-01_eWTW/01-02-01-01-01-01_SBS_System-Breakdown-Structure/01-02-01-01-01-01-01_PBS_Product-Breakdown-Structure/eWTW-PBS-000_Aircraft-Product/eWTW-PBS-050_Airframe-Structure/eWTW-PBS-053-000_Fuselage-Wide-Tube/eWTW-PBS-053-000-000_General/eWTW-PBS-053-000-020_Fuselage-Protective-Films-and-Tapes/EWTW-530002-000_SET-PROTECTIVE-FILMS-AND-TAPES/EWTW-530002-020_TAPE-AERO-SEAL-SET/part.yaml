@@ -1,16 +1,19 @@
-# Part record
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
 # Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
+# Amended 2026-08-25 - complete_PBS-053-000.py (1.1.0)
 part:
-  pn: "EWTW-530002-020"
-  nomenclature: "TAPE-AERO-SEAL-SET"
-  csn: "530002"
-  item: "020"
-  type: "part"
-  role: "item"
-  parentAssembly: "EWTW-530002-000"
+  pn: EWTW-530002-020
+  nomenclature: TAPE-AERO-SEAL-SET
+  csn: '530002'
+  item: '020'
+  type: part
+  role: leaf
+  parentAssembly: EWTW-530002-000
   applicability:
-    model: "eWTW"
+    model: eWTW
     effectivity:
-      - "ALL"
-  status: "PLANNED"
+    - ALL
+  status: PLANNED
+  qty: 1
+  uom: AR
+  make_buy: buy
+  convention: AMPEL360-PBS-PN-CM-001 (Issue 2)

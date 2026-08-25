@@ -1,20 +1,104 @@
-# Part register (subject) - ordered, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-parts:
-  - pn: "EWTW-530004-000"
-    nomenclature: "SET-FUSELAGE-DRAINS"
-    role: "top-assembly"
-    parentAssembly: "eWTW-PBS-053-000-040"
-  - pn: "EWTW-530004-010"
-    nomenclature: "MAST-DRAIN"
-    role: "item"
-    parentAssembly: "EWTW-530004-000"
-  - pn: "EWTW-530004-020"
-    nomenclature: "VALVE-DRAIN-SET"
-    role: "item"
-    parentAssembly: "EWTW-530004-000"
-  - pn: "EWTW-530004-030"
-    nomenclature: "PATH-DRAIN-BILGE-SET"
-    role: "item"
-    parentAssembly: "EWTW-530004-000"
+# Generated 2026-08-25 - complete_PBS-053-000.py (1.1.0)
+register:
+  station: eWTW-PBS-053-000-040
+  csn: '530004'
+  derived: true
+  parts:
+  - pn: EWTW-530004-000
+    nomenclature: SET-FUSELAGE-DRAINS
+    role: assembly
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-010
+    nomenclature: MAST-DRAIN
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-011
+    nomenclature: MAST, DRAIN AFT
+    role: leaf
+    qty: 2
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-012
+    nomenclature: SEAL, MAST BASE
+    role: leaf
+    qty: 2
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530004-020
+    nomenclature: VALVE-DRAIN-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530004-021
+    nomenclature: VALVE, DRAIN FLAPPER
+    role: leaf
+    qty: 10
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530004-022
+    nomenclature: GROMMET, DRAIN PATH
+    role: leaf
+    qty: 24
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530004-030
+    nomenclature: PATH-DRAIN-BILGE-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-031
+    nomenclature: CHANNEL, BILGE DRAIN
+    role: leaf
+    qty: 8
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-032
+    nomenclature: DAM, MOISTURE CONTROL
+    role: leaf
+    qty: 12
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-040
+    nomenclature: PLUG-AND-CAP-PROVISION-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530004-041
+    nomenclature: PLUG, DRAIN SERVICE
+    role: leaf
+    qty: 6
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-530004-050
+    nomenclature: OUTLET, DRAIN OVERBOARD
+    role: leaf
+    qty: 8
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-530004-060
+    nomenclature: GUARD AND SCREEN, DRAIN
+    role: leaf
+    qty: 8
+    uom: EA
+    make_buy: buy
+    status: PLANNED
