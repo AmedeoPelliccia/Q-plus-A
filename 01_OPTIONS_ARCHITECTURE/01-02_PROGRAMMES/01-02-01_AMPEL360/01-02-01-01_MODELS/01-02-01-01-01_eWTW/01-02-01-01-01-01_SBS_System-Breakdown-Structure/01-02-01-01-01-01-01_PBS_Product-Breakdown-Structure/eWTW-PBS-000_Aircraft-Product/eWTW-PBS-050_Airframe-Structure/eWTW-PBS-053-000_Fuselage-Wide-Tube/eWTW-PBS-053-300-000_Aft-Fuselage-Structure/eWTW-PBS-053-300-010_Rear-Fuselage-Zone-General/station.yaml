@@ -1,12 +1,44 @@
-# Assembly station record
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
 # Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
+# Amended 2026-08-31 - complete_PBS-053-300.py (1.3.1)
 station:
   id: eWTW-PBS-053-300-010
-  localCode: "053-300-010"
-  realizes: "053-300-100"
-  realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code conserved per CM-001 A1.1 — identity vs reference: localCode feeds CSN and the PN tree; realizes follows taxonomy evolution"
-  csn: "533001"
-  scope: "Assembly and integration station - Rear Fuselage Zone General"
+  localCode: 053-300-010
+  realizes: 053-300-100
+  realizesNote: "current S-ATLAS address (post hundreds migration); PBS-local code\
+    \ conserved per CM-001 A1.1 \u2014 identity vs reference: localCode feeds CSN\
+    \ and the PN tree; realizes follows taxonomy evolution"
+  csn: '533001'
+  scope: Assembly and integration station - Rear Fuselage Zone General
   status: PLANNED
-  convention: AMPEL360-PBS-PN-CM-001 (Amendment A1)
+  convention: AMPEL360-PBS-PN-CM-001 (Issue 2)
+  type: assembly-station
+  parallels: AMPEL360-AMM-INFOCODE-CM-001
+  parts: 15
+  interfaces:
+  - icd: ICD-EWTW-533001-538002
+    space: pbs-local
+    counterpart: eWTW-PBS-053-800-020
+    counterpartCsn: '538002'
+    taxonomyRef: 053-800-200
+    item: rear pressure bulkhead - rear zone structure receives, 053-800-020 owns
+      (zone-level joint; load path not yet demonstrated)
+    carriedBy:
+    - EWTW-533001-000
+  - icd: ICD-EWTW-533001-534001
+    space: pbs-local
+    counterpart: eWTW-PBS-053-400-010
+    counterpartCsn: '534001'
+    taxonomyRef: 053-400-100
+    item: aft-to-tailcone production join
+    carriedBy:
+    - EWTW-533001-010
+    - EWTW-533001-020
+  - icd: ICD-EWTW-533001-021
+    space: taxonomy
+    counterpart: '021'
+    item: outflow valve - structural surround here, valve and function ATA 021
+    carriedBy:
+    - EWTW-533001-040
+    - EWTW-533001-041
+    - EWTW-533001-042
+  version: '1.2'

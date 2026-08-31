@@ -1,24 +1,21 @@
-# PBS item register (section) - subjects, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-subjects:
-  - id: "eWTW-PBS-053-300-010"
-    csn: "533001"
-    title: "Rear Fuselage Zone General"
-    localCode: "053-300-010"
-    realized: true
-  - id: "eWTW-PBS-053-300-020"
-    csn: "533002"
-    title: "Rear Fuselage Adjustable Rods"
-    localCode: "053-300-020"
-    realized: true
-  - id: "eWTW-PBS-053-300-030"
-    csn: "533003"
-    title: "Tail Bumper"
-    localCode: "053-300-030"
-    realized: true
-  - id: "eWTW-PBS-053-300-040"
-    csn: "533004"
-    title: "Rear Fuselage External Access Panels"
-    localCode: "053-300-040"
-    realized: true
+# Generated 2026-08-31 - complete_PBS-053-300.py (1.3.1)
+register:
+  section: eWTW-PBS-053-300
+  derived: true
+  stations:
+  - station: eWTW-PBS-053-300-010
+    csn: '533001'
+    parts: 15
+    status: PLANNED
+  - station: eWTW-PBS-053-300-020
+    csn: '533002'
+    parts: 12
+    status: PLANNED
+  - station: eWTW-PBS-053-300-030
+    csn: '533003'
+    parts: 10
+    status: PLANNED
+  - station: eWTW-PBS-053-300-040
+    csn: '533004'
+    parts: 10
+    status: PLANNED

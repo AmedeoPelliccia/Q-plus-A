@@ -1,32 +1,111 @@
-# Part register (subject) - ordered, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-parts:
-  - pn: "EWTW-533001-000"
-    nomenclature: "STRUCTURE-REAR-FUSELAGE-ZONE"
-    role: "top-assembly"
-    parentAssembly: "eWTW-PBS-053-300-010"
-  - pn: "EWTW-533001-010"
-    nomenclature: "SPLICE-RING-AFT-TO-TAILCONE-JOIN"
-    role: "assembly"
-    parentAssembly: "EWTW-533001-000"
-  - pn: "EWTW-533001-011"
-    nomenclature: "SPLICE-RING-SEGMENT-UPPER"
-    role: "constituent"
-    parentAssembly: "EWTW-533001-010"
-  - pn: "EWTW-533001-012"
-    nomenclature: "SPLICE-RING-SEGMENT-LOWER"
-    role: "constituent"
-    parentAssembly: "EWTW-533001-010"
-  - pn: "EWTW-533001-020"
-    nomenclature: "FITTING-JOIN-INDEXING"
-    role: "item"
-    parentAssembly: "EWTW-533001-000"
-  - pn: "EWTW-533001-030"
-    nomenclature: "SUPPORT-SYSTEMS-RUN-SET"
-    role: "item"
-    parentAssembly: "EWTW-533001-000"
-  - pn: "EWTW-533001-040"
-    nomenclature: "SURROUND-OUTFLOW-VALVE"
-    role: "item"
-    parentAssembly: "EWTW-533001-000"
+# Generated 2026-08-31 - complete_PBS-053-300.py (1.3.1)
+register:
+  station: eWTW-PBS-053-300-010
+  csn: '533001'
+  derived: true
+  parts:
+  - pn: EWTW-533001-000
+    nomenclature: STRUCTURE-REAR-FUSELAGE-ZONE
+    role: assembly
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-010
+    nomenclature: SPLICE-RING-AFT-TO-TAILCONE-JOIN
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-011
+    nomenclature: SPLICE-RING-SEGMENT-UPPER
+    role: constituent
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-012
+    nomenclature: SPLICE-RING-SEGMENT-LOWER
+    role: constituent
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-013
+    nomenclature: SPLICE-RING-SEGMENT-SIDE-LH
+    role: constituent
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-014
+    nomenclature: SPLICE-RING-SEGMENT-SIDE-RH
+    role: constituent
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-020
+    nomenclature: FITTING-JOIN-INDEXING
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-021
+    nomenclature: PIN-INDEXING-JOIN
+    role: leaf
+    qty: 8
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-533001-030
+    nomenclature: SUPPORT-SYSTEMS-RUN-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-031
+    nomenclature: BRACKET-SYSTEMS-RUN
+    role: leaf
+    qty: 12
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-040
+    nomenclature: SURROUND-OUTFLOW-VALVE
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-041
+    nomenclature: DOUBLER-OUTFLOW-VALVE-CUTOUT
+    role: leaf
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-042
+    nomenclature: FRAME-SURROUND-OUTFLOW-VALVE
+    role: leaf
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-050
+    nomenclature: PROVISION-NDT-ACCESS-JOIN-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533001-051
+    nomenclature: PLUG-INSPECTION-JOIN
+    role: leaf
+    qty: 12
+    uom: EA
+    make_buy: buy
+    status: PLANNED

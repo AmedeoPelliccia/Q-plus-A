@@ -1,28 +1,90 @@
-# Part register (subject) - ordered, generated
-# AMPEL360-PBS-PN-CM-001 - schema reconstructed by generator; folder name is SSOT, this file mirrors it
-# Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
-parts:
-  - pn: "EWTW-533002-000"
-    nomenclature: "SET-ADJUSTABLE-RODS-REAR"
-    role: "top-assembly"
-    parentAssembly: "eWTW-PBS-053-300-020"
-  - pn: "EWTW-533002-010"
-    nomenclature: "ROD-ADJUSTABLE"
-    role: "assembly"
-    parentAssembly: "EWTW-533002-000"
-  - pn: "EWTW-533002-011"
-    nomenclature: "ROD-ADJUSTABLE-LH"
-    role: "variant"
-    parentAssembly: "EWTW-533002-010"
-  - pn: "EWTW-533002-012"
-    nomenclature: "ROD-ADJUSTABLE-RH"
-    role: "variant"
-    parentAssembly: "EWTW-533002-010"
-  - pn: "EWTW-533002-020"
-    nomenclature: "FITTING-ROD-END-SET"
-    role: "item"
-    parentAssembly: "EWTW-533002-000"
-  - pn: "EWTW-533002-030"
-    nomenclature: "BRACKET-ROD-SUPPORT-SET"
-    role: "item"
-    parentAssembly: "EWTW-533002-000"
+# Generated 2026-08-31 - complete_PBS-053-300.py (1.3.1)
+register:
+  station: eWTW-PBS-053-300-020
+  csn: '533002'
+  derived: true
+  parts:
+  - pn: EWTW-533002-000
+    nomenclature: SET-ADJUSTABLE-RODS-REAR
+    role: assembly
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-010
+    nomenclature: ROD-ADJUSTABLE
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-011
+    nomenclature: ROD-ADJUSTABLE-LH
+    role: constituent
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-012
+    nomenclature: ROD-ADJUSTABLE-RH
+    role: constituent
+    qty: 1
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-020
+    nomenclature: FITTING-ROD-END-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-533002-021
+    nomenclature: ROD-END-SPHERICAL
+    role: leaf
+    qty: 4
+    uom: EA
+    make_buy: buy
+    status: PLANNED
+  - pn: EWTW-533002-022
+    nomenclature: FITTING-ROD-END-CLEVIS
+    role: leaf
+    qty: 4
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-030
+    nomenclature: BRACKET-ROD-SUPPORT-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-031
+    nomenclature: BRACKET-ROD-SUPPORT-UPPER
+    role: leaf
+    qty: 2
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-032
+    nomenclature: BRACKET-ROD-SUPPORT-LOWER
+    role: leaf
+    qty: 2
+    uom: EA
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-040
+    nomenclature: PROVISION-ROD-ADJUSTMENT-ACCESS-SET
+    role: set
+    qty: 1
+    uom: SET
+    make_buy: make
+    status: PLANNED
+  - pn: EWTW-533002-041
+    nomenclature: PLUG-ACCESS-ADJUSTMENT
+    role: leaf
+    qty: 2
+    uom: EA
+    make_buy: buy
+    status: PLANNED
