@@ -1,0 +1,72 @@
+# AI-assisted generative CAD execution record
+# Generated automatically by ewtw_533001_concept.py.
+# Do not edit after generation.
+
+run:
+  schema: "AMPEL360-AI-GENERATION-RUN-RECORD/1.0"
+
+  id: "EWTW-533001-000-C-20260906T101215Z"
+  timestamp-utc: "2026-09-06T10:12:15Z"
+
+  product:
+    pn: "EWTW-533001-000"
+    nomenclature: "STRUCTURE-REAR-FUSELAGE-ZONE"
+    maturity: "CONCEPT"
+
+  prompt:
+    file: "3d-model_EWTW-533001-000_revC.md"
+    revision: "C"
+    sha256: "<measured-from-prompt-on-disk>"
+
+  ai:
+    model: "GLM 5.3 (Z.ai)"
+    declaration-source: "human"
+    model-string-verbatim: true
+
+  generator:
+    file: "ewtw_533001_concept.py"
+    version: "v0.2.0-concept"
+    sha256: "<measured-from-source-on-disk>"
+
+  execution:
+    python-version: "<measured>"
+    cadquery-version: "<measured>"
+    platform: "<measured>"
+    parameters-override: {}
+
+  repository:
+    commit: "<git-HEAD-if-available>"
+    branch: "<git-branch-if-available>"
+    dirty: <true|false>
+
+  artifacts:
+    - role: "neutral-cad"
+      file: "CAD/exchange/EWTW-533001-000_concept.step"
+      format: "STEP"
+      requested-schema: "AP242"
+      actual-schema: "<measured>"
+      units: "mm"
+      bytes: <measured>
+      sha256: "<measured>"
+
+    - role: "3d-preview"
+      file: "CAD/preview/EWTW-533001-000_concept.glb"
+      format: "GLB"
+      units: "mm"
+      ghost-context: true
+      bytes: <measured>
+      sha256: "<measured>"
+
+    - role: "verification-evidence"
+      file: "evidence/EWTW-533001-000_concept_verification.txt"
+      format: "text/plain"
+      bytes: <measured>
+      sha256: "<measured>"
+
+  verification:
+    pass: <n>
+    fail: 0
+    warn: <n>
+    info: <n>
+    exit-code: 0
+    result: "PASS"
