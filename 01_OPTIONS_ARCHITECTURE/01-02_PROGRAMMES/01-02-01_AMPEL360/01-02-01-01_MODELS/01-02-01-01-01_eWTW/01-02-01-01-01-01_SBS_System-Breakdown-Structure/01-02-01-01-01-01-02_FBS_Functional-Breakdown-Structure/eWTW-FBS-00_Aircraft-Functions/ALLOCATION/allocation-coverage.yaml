@@ -1,46 +1,92 @@
-# Bidirectional coverage check for the aircraft-level allocation
-# Node: eWTW-FBS-00
-
+# Generated 2026-09-06 - GitHub Copilot - SBS rework under CM-002
 allocation_coverage:
   node: eWTW-FBS-00
-  checked_against:
-    fbs: eWTW-FBS-00 (13 aircraft-level functions)
-    pbs: eWTW-PBS top-level (partial — codes TBD)
-
-  function_coverage:
-    functions_total: 13
-    functions_allocated: 13
-    orphan_functions: []        # every function is allocated — OK
-
-  shared_allocations:
-    - pbs_area: Avionics-platform
-      shared_by: [eWTW-FBS-80, eWTW-FBS-90, eWTW-FBS-130]
-      note: "Single avionics platform realizes nav/comm, information integration, and health monitoring."
-    - pbs_area: Airframe
-      shared_by: [eWTW-FBS-10, eWTW-FBS-50]
-      note: "Lifting surfaces (FBS-10) and structural integrity (FBS-50) both realized by the airframe."
-
-  pbs_coverage:
-    note: >
-      Reverse check (every PBS top-level item realizes >= 1 function) is pending
-      confirmation of the PBS top-level codes. PBS areas with pbs_code: TBD must be
-      bound before orphan-PBS detection can complete.
-    orphan_pbs_areas: pending_pbs_code_binding
-
-  taxonomy_coverage:
-    gatlas_chapters_referenced:
-      ["009","010","021","022","023","024","025","026","027","030","032","034",
-       "035","036","042","044","045","046","050-059","055","057","070-079",
-       "004-900","005-900"]
-    note: "Green-delta nodes (004-900, 005-900) are referenced by energy and safety functions."
-
-  open_items:
-    - "Bind all pbs_code: TBD to actual PBS top-level codes."
-    - "Complete reverse orphan-PBS check after binding."
-    - "Confirm DAL per function from each FBS-*/FHA."
-
-  governance:
-    inherits: DEGF-v1.0
-    lifecycle: LC-A..LC-N
-    rules: [No-AAA, SSOT+PUB]
-  status: baseline
+  derived: true
+  source: functional-allocation-matrix.yaml
+  method: per function - count of allocation entries; each referenced pbs_code or part number checked
+    to resolve to a directory on disk under the SBS; pbs_code TBD counted separately (not resolvable by
+    design - chapter not realized yet)
+  functions_total: 13
+  functions_with_concrete_ids: 5
+  functions_tbd_only: 8
+  total_unresolved_ids: 0
+  functions:
+  - function: eWTW-FBS-10
+    allocations: 1
+    pbs_ids_referenced: 1
+    pn_ids_referenced: 0
+    tbd_entries: 0
+    all_referenced_ids_resolve: true
+  - function: eWTW-FBS-20
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-30
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-40
+    allocations: 2
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 2
+    tbd_entries: 1
+    all_referenced_ids_resolve: true
+  - function: eWTW-FBS-50
+    allocations: 1
+    pbs_ids_referenced: 18
+    pn_ids_referenced: 0
+    tbd_entries: 0
+    all_referenced_ids_resolve: true
+  - function: eWTW-FBS-60
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-70
+    allocations: 2
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 3
+    tbd_entries: 1
+    all_referenced_ids_resolve: true
+  - function: eWTW-FBS-80
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-90
+    allocations: 2
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 2
+    tbd_entries: 1
+    all_referenced_ids_resolve: true
+  - function: eWTW-FBS-100
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-110
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-120
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  - function: eWTW-FBS-130
+    allocations: 1
+    pbs_ids_referenced: 0
+    pn_ids_referenced: 0
+    tbd_entries: 1
+    all_referenced_ids_resolve: null
+  status: derived

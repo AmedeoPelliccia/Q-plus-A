@@ -111,11 +111,11 @@ The full machine-readable matrix is in `allocation-matrix.yaml`. Summary:
 
 | FBS function | realized_by (PBS area) | classified_under (S-ATLAS) |
 |---|---|---|
-| `FBS-10` Lift & Aerodynamics | Airframe — lifting surfaces (`eWTW-PBS-10`) | `057` Wings, `055` Stabilizers |
+| `FBS-10` Lift & Aerodynamics | Airframe — lifting surfaces (`eWTW-PBS-050`) | `057` Wings, `055` Stabilizers |
 | `FBS-20` Propulsion | Propulsion assembly | `070-079` Eco/Hybrid-Electric Propulsion |
 | `FBS-30` Energy | Energy storage assembly | `004-900`/`005-900` energy limits (EPTA cross-band) |
 | `FBS-40` Electrical Power | Electrical system | `024` Electrical Power |
-| `FBS-50` Structure | Airframe structure (`eWTW-PBS-10`) | `050-059` Estructuras |
+| `FBS-50` Structure | Airframe structure (`eWTW-PBS-050`) | `050-059` Estructuras |
 | `FBS-60` Flight Control | Flight-control system | `027` Flight Controls, `022` Auto Flight |
 | `FBS-70` Environment & Protection | ECS / protection | `021` Air Conditioning, `030` Ice & Rain, `036` Pneumatic |
 | `FBS-80` Nav / Comm / Surveillance | Avionics platform | `023` Communications, `034` Navigation |
@@ -135,7 +135,7 @@ flowchart LR
     F20 -. criticality .-> H["FHA → DAL<br/>(FBS-20/FHA)"]
 ```
 
-> **PBS codes:** `eWTW-PBS-10` (Airframe) is confirmed from the PBS structure; the remaining PBS-area codes are descriptive and **bind to the actual PBS top-level codes** once that breakdown is fixed (marked `pbs_code: TBD` in the matrix).
+> **PBS codes:** `eWTW-PBS-050` (Airframe Structure) is confirmed from the PBS structure; the remaining PBS-area codes are descriptive and **bind to the actual PBS top-level codes** once that breakdown is fixed (marked `pbs_code: TBD` in the matrix).
 
 ---
 
