@@ -1,0 +1,75 @@
+# Generated 2026-09-06 - GitHub Copilot - SBS rework under CM-002
+# EBS evidence index - a derived, path-addressed index over **/evidence/ and the
+# governance record (CM-001 C1.5: evidence lives with the node that produced it;
+# the EBS references it, never relocates it).
+# Per AMPEL360-SBS-ID-CM-002 SS3 the EBS has no id space of its own: rows are
+# path-addressed and carry subject: (a part number or an act id).
+# Row schema: class, subject, path (relative to the SBS root; null when the act
+# text is not on disk), status, note (optional), citedBy (optional).
+
+evidence_index:
+  id: eWTW-EBS-EVIDENCE-INDEX
+  derived: true
+  classes:
+    - ratified-act-or-convention
+    - migration-or-completion-record
+    - verification-report
+    - analysis-or-test-record   # future
+    - pse-register              # future
+
+rows:
+  - class: verification-report
+    subject: EWTW-533001-000
+    path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+    status: on-disk
+
+  - class: migration-or-completion-record
+    subject: EWTW-533001-000
+    path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/Prompts/Run-record.yaml
+    status: on-disk
+    note: >
+      Pre-C1.5 spelling (Prompts/Run-record.yaml); the file is invalid YAML on
+      main (illegal escape in a double-quoted scalar, line 26). The correction
+      and the rename to prompts/run-record.yaml are precondition P0 of the
+      governing brief and sit inside the PBS area, outside this index's scope.
+
+  - class: ratified-act-or-convention
+    subject: AMPEL360-PBS-PN-CM-001 (Issue 2)
+    path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
+    status: on-disk
+
+  - class: ratified-act-or-convention
+    subject: AMPEL360-SBS-ID-CM-002
+    path: AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md
+    status: on-disk
+
+  - class: ratified-act-or-convention
+    subject: C1.1
+    path: null
+    status: cited-only
+
+  - class: ratified-act-or-convention
+    subject: C1.2
+    path: null
+    status: cited-only
+    citedBy:
+      - 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-100-000_Nose-and-Forward-Fuselage-Structure/README.md
+      - 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/README.md
+      - 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-040_Rear-Fuselage-External-Access-Panels/README.md
+
+  - class: ratified-act-or-convention
+    subject: C1.3
+    path: null
+    status: cited-only
+
+  - class: ratified-act-or-convention
+    subject: C1.4
+    path: null
+    status: cited-only
+
+  - class: ratified-act-or-convention
+    subject: C1.5
+    path: null
+    status: cited-only
+    citedBy:
+      - AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md
