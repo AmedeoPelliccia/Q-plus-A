@@ -1,0 +1,92 @@
+==============================================================================
+ EWTW-533001-000  STRUCTURE, REAR FUSELAGE ZONE  --  concept verification
+ AMPEL360 eWTW | X aft+ / Y left+ / Z up+ | mm | origin = JP on centreline
+ provenance: 2026-09-06T17:45:57Z | EWTW-533001-000_concept.py | v0.2.1-concept
+ maturity: CONCEPT -- all dimensions are declared envelope assumptions
+==============================================================================
+ declared envelope (to be superseded by ratified eWTW frame data):
+        ghost_x_fwd        = -4500.0
+        ghost_x_aft        = 0.0
+        ring_od            = 2200.0
+        ring_web_h         = 120.0
+        ring_flange_w      = 60.0
+        n_pins             = 8
+        bracket_pitch      = 700.0
+        n_brackets_row     = 6
+        ov_x               = -1200.0
+        cutout_axial       = 480.0
+        cutout_circ        = 320.0
+        n_plugs            = 12
+
+== A | part-count truth (registry vs declared topology) ==
+[PASS] count BUTT-STRAP-SEGMENT-JOIN: expected 4 | actual 4
+[PASS] count EWTW-533001-011: expected 1 | actual 1
+[PASS] count EWTW-533001-012: expected 1 | actual 1
+[PASS] count EWTW-533001-013: expected 1 | actual 1
+[PASS] count EWTW-533001-014: expected 1 | actual 1
+[PASS] count EWTW-533001-020: expected 8 | actual 8
+[PASS] count EWTW-533001-021: expected 8 | actual 8
+[PASS] count EWTW-533001-031: expected 12 | actual 12
+[PASS] count EWTW-533001-041: expected 1 | actual 1
+[PASS] count EWTW-533001-042: expected 1 | actual 1
+[PASS] count EWTW-533001-051: expected 12 | actual 12
+[PASS] total leaf bodies: expected 50 | actual 50
+
+== B | assembly tree truth ==
+[PASS] set sub-assembly ids: expected ['EWTW-533001-010', 'EWTW-533001-020', 'EWTW-533001-030', 'EWTW-533001-040', 'EWTW-533001-050'] | actual ['EWTW-533001-010', 'EWTW-533001-020', 'EWTW-533001-030', 'EWTW-533001-040', 'EWTW-533001-050']
+[PASS] unique instance names: expected 50 | actual 50
+
+== C | topology truth ==
+[PASS] bracket row closes on pitch (mm): expected 0.0 | actual 0.0
+[INFO] bracket stations (mm): expected [-4200 .. -700] step 700 | actual [-4200 .. -700] step 700
+[PASS] pin-to-butt min separation >= 1 deg (declared 22.5): expected True | actual True
+[INFO] pin phases (deg): expected 22.5 + k*45 | actual [22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5]
+[INFO] plug seats straddling butt joints (I-2, flagged): expected 4 | actual 4
+[INFO] ring cross-section (I-1): expected OD 2200 / band t 5 / flanges 60+60 / land 30 / web h 120 | actual OD 2200 / band t 5 / flanges 60+60 / land 30 / web h 120
+
+== D | interference truth (assembly bodies only; ghost excluded) ==
+        OVERLAP EWTW-533001-031#11 X EWTW-533001-041 = 34856.8 mm3
+[FAIL] hard interferences (> 1 mm3): expected 0 | actual 1
+[INFO] boolean pairs evaluated: expected bbox-overlapping pairs | actual 54
+
+== E | neutral-file truth ==
+[PASS] STEP on disk: expected True | actual True
+[PASS] STEP non-empty: expected True | actual True
+[PASS] GLB on disk: expected True | actual True
+[PASS] GLB magic: expected glTF | actual glTF
+[INFO] ghost present in GLB preview: expected True | actual True
+[WARN] STEP FILE_SCHEMA carries AP242 (writer fallback; geometry unaffected): expected True | actual False
+[PASS] STEP name coverage (missing): expected [] | actual []
+[PASS] ghost excluded from STEP: expected True | actual True
+
+== F | volume rollup (concept geometry, mm3) ==
+        EWTW-533001-010          27622316.0
+        EWTW-533001-020            306887.5
+        EWTW-533001-030            418281.8
+        EWTW-533001-040           1223976.1
+        EWTW-533001-050            178711.0
+        TOTAL                    29750172.4
+
+== G | builder warnings ==
+        bracket @ X=-1400, row 215deg: dodged 215.0 -> 224.8 deg (I-7)
+
+== H | interpretation notes I-1 .. I-14 ==
+        I-1  Ring cross-section: spec numbers are over-constrained (60+5+60 = 125 ≠ 150). Modeled as a continuous 5 mm outer band over the full 150 mm axial; the two flanges are the 60 mm band portions each side of a 30 mm central land at JP; the land deepens by the 120 mm radial web. 5 mm = band gauge; 30 mm land derived (150 − 2×60).
+        I-2  Plug seats at 15°+30°k place 4 of 12 plugs on segment butt joints (45/135/225/315). Modeled as specified; each seat straddles the butt (both adjacent segments carry a half-seat). Flagged for design review.
+        I-3  Indexing bosses modeled as discrete bodies faying to the aft-flange face at x=+75 (one body per PN rule); in production they are machined integrally with the segments. Pin axis at flange mid-radius r≈1097.5; pin tips stand ~5.5 mm proud of ring OD to engage receiving holes in the tailcone splice (provision, not modeled). Pin 60 mm: 25 mm engaged, 35 mm protruding.
+        I-4  Frame section 40 mm in-plane × 30 mm radial standoff (spec order ambiguous).
+        I-5  Doubler outer corners R60 (unspecified in spec).
+        I-6  Rivet pattern: Ø6, even spacing ≈30.2 mm (perimeter ≈1874 mm, 30 mm nominal), on the contour offset 60 mm from the cutout — clear of the 40 mm frame footprint and the 80 mm doubler edge.
+        I-7  RH bracket row (215°) nominally intersects the doubler envelope at station X=−1400. With bracket_dodge=1 that bracket is displaced circumferentially to clear (topology preserved: 12 brackets, two rows). Set bracket_dodge=0 to keep nominal positions.
+        I-8  Bracket feet modeled flat and tangent to the conical shell (≤0.35 mm local embed); conformal feet TBD.
+        I-9  Ring forward flange nominally overlaps the ghost shell over the last ~56 mm before JP (≤2.3 mm depth) — production joggle not modeled; ghost is context only.
+        I-10 Ghost is preview-only (GLB), excluded from STEP; concentric conical frustum, no upsweep (optional in spec, not implemented).
+        I-11 Multi-instance bodies carry an instance tag (e.g. EWTW-533001-051#07) — the tag is not part of the PN; set instance_tag='none' for exact duplicate PN names.
+        I-12 Butt straps carry no PN (spec row has none); named BUTT-STRAP-SEGMENT-JOIN#NN. PN allocation pending per programme governance.
+        I-13 Butt-strap arc width 100 mm (spec gives axial 30 × t 3 only).
+        I-14 Threads and press-fits idealized (smooth bores); fastener holes in the ring land / flanges not modeled (joint fastener design not specified at this maturity).
+
+==============================================================================
+ 22 PASS | 1 FAIL | 1 WARN | 6 INFO | runtime 125.6 s
+ topology preserved: 4-segment ring | 8 indexing pins | 12 brackets in two rows | one lower-RH cutout | 12 NDT plugs
+==============================================================================
