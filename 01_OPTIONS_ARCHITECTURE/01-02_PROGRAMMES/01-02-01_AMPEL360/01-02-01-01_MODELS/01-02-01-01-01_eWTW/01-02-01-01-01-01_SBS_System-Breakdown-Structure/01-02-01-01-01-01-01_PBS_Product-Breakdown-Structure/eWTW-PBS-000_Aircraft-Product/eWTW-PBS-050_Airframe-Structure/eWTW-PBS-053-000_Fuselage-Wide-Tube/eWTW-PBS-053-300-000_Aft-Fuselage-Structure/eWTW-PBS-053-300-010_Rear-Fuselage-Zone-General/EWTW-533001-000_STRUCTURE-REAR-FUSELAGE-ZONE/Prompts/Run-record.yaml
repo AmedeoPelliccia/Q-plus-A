@@ -1,12 +1,11 @@
 # AI-assisted generative CAD execution record
-# Generated automatically by ewtw_533001_concept.py.
-# Do not edit after generation.
-
+# Generated automatically by EWTW-533001-000_concept.py. Do not edit after generation.
+# (publish-gate.py recomputes every hash; a hand edit can only break it.)
 run:
   schema: "AMPEL360-AI-GENERATION-RUN-RECORD/1.0"
 
-  id: "EWTW-533001-000-C-20260906T101215Z"
-  timestamp-utc: "2026-09-06T10:12:15Z"
+  id: "EWTW-533001-000-C-20260906T174802Z"
+  timestamp-utc: "2026-09-06T17:48:03Z"
 
   product:
     pn: "EWTW-533001-000"
@@ -16,7 +15,7 @@ run:
   prompt:
     file: "3d-model_EWTW-533001-000_revC.md"
     revision: "C"
-    sha256: "<measured-from-prompt-on-disk>"
+    sha256: "unavailable"
 
   ai:
     model: "GLM 5.3 (Z.ai)"
@@ -24,49 +23,47 @@ run:
     model-string-verbatim: true
 
   generator:
-    file: "ewtw_533001_concept.py"
-    version: "v0.2.0-concept"
-    sha256: "<measured-from-source-on-disk>"
+    file: "Users\amate\EWTW-533001-000_concept.py"
+    version: "v0.2.1-concept"
+    sha256: "fc32c5cf6188ae2cdc0636863267dec446bc47eb7edea5c53b1cd03ffc19bc3d"
 
   execution:
-    python-version: "<measured>"
-    cadquery-version: "<measured>"
-    platform: "<measured>"
+    python-version: "3.13.2"
+    cadquery-version: "2.8.0"
+    platform: "Windows-11-10.0.26220-SP0"
     parameters-override: {}
 
   repository:
-    commit: "<git-HEAD-if-available>"
-    branch: "<git-branch-if-available>"
-    dirty: <true|false>
+    commit: "unavailable"
+    branch: "unavailable"
+    dirty: null
 
   artifacts:
+    - role: "verification-evidence"
+      file: "evidence\EWTW-533001-000_concept_verification.txt"
+      format: "text/plain"
+      bytes: 6817
+      sha256: "a6cdb51c731513689f7a3539106e6e8214bddabe9fe02088526a50d18c3b9abc"
     - role: "neutral-cad"
-      file: "CAD/exchange/EWTW-533001-000_concept.step"
+      file: "CAD\exchange\EWTW-533001-000_concept.step"
       format: "STEP"
       requested-schema: "AP242"
-      actual-schema: "<measured>"
+      actual-schema: "('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'"
       units: "mm"
-      bytes: <measured>
-      sha256: "<measured>"
-
+      bytes: 3207108
+      sha256: "fa81994c01e24f4b68e205245beb578a8e37ed9849760d33feda6e83f350cbf8"
     - role: "3d-preview"
-      file: "CAD/preview/EWTW-533001-000_concept.glb"
+      file: "CAD\preview\EWTW-533001-000_concept.glb"
       format: "GLB"
       units: "mm"
       ghost-context: true
-      bytes: <measured>
-      sha256: "<measured>"
-
-    - role: "verification-evidence"
-      file: "evidence/EWTW-533001-000_concept_verification.txt"
-      format: "text/plain"
-      bytes: <measured>
-      sha256: "<measured>"
+      bytes: 3408116
+      sha256: "1924fc168fc1ecc754c794ebf1b20626a140e78992625728c372cbf7276f4e3a"
 
   verification:
-    pass: <n>
-    fail: 0
-    warn: <n>
-    info: <n>
-    exit-code: 0
-    result: "PASS"
+    pass: 22
+    fail: 1
+    warn: 1
+    info: 6
+    exit-code: 1
+    result: "FAIL"
