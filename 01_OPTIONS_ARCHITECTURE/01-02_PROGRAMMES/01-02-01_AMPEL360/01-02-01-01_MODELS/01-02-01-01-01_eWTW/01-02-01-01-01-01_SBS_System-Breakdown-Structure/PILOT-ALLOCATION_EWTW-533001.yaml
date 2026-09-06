@@ -1,0 +1,28 @@
+# Generated 2026-09-06 - GitHub Copilot - SBS rework under CM-002
+# Pilot allocation record for station eWTW-PBS-053-300-010 (CSN 533001).
+# Precondition file of the SBS rework brief; absent on the base branch, so it is
+# committed here with exactly the allocations stated in the brief - nothing more.
+# References are ids only (CM-002 SS4.4): attributes stay in part.yaml.
+
+pilot_allocation:
+  record: PILOT-ALLOCATION_EWTW-533001
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  station: eWTW-PBS-053-300-010
+  csn: "533001"
+  supporting_allocations:
+    - function: eWTW-FBS-70
+      allocation_type: supporting
+      parts:
+        - EWTW-533001-040
+        - EWTW-533001-041
+        - EWTW-533001-042
+    - function: eWTW-FBS-40
+      allocation_type: supporting
+      parts:
+        - EWTW-533001-030
+        - EWTW-533001-031
+    - function: eWTW-FBS-90
+      allocation_type: supporting
+      parts:
+        - EWTW-533001-030
+        - EWTW-533001-031

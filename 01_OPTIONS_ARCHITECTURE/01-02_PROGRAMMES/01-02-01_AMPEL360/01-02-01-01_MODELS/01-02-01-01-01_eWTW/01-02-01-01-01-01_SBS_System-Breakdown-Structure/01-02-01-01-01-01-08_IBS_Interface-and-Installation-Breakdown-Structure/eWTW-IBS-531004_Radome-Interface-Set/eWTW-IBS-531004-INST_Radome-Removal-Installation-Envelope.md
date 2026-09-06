@@ -1,11 +1,11 @@
 ---
-document_id: AMPEL360-eWTW-IBS-10-10-10-10-40
-title: "eWTW · IBS-10-10-10-10-40 — Radome Removal/Installation Envelope"
-ibs_id: eWTW-IBS-10-10-10-10-40
-parent: eWTW-IBS-10-10-10-10
+document_id: AMPEL360-eWTW-IBS-531004-INST
+title: "eWTW · IBS-531004-INST — Radome Removal/Installation Envelope"
+ibs_id: eWTW-IBS-531004-INST
+parent: eWTW-IBS-531004
 item_type: interface_record
 interface_class: installation_envelope
-serves_pbs: eWTW-PBS-10-10-10-10-10
+serves_pbs: eWTW-PBS-053-100-040
 status: draft
 effectivity:
   product: eWTW
@@ -14,9 +14,9 @@ effectivity:
   status: active
 ---
 
-# eWTW · IBS-10-10-10-10-40 — Radome Removal/Installation Envelope
+# eWTW · IBS-531004-INST — Radome Removal/Installation Envelope
 
-- **Serves PBS element:** `eWTW-PBS-10-10-10-10-10` (Radome)
+- **Serves PBS element:** `eWTW-PBS-053-100-040` (Radome and Diverters Attach Structure)
 - **Interface class:** Access / removal clearance — installation boundary
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
@@ -26,7 +26,7 @@ Controls the **physical boundary** for removing and installing the radome for ra
 
 | Attribute | Value |
 |---|---|
-| Removal motion | Hinge-swing / detach (see attachment record `…-10`) |
+| Removal motion | Hinge-swing / detach (see attachment record `…-538001`) |
 | Access envelope | TBD swept volume for radome + technician access |
 | Removal clearance | TBD clearance to nose cap, diverters and adjacent fairings |
 | No-step / no-tool zones | TBD around RF window and diverter lands |
@@ -35,7 +35,7 @@ Controls the **physical boundary** for removing and installing the radome for ra
 ## Constraints
 
 - The envelope shall allow **repeated** removal/installation without degrading RF, sealing, or bonding performance.
-- Removal clearance shall not violate the tolerance/datum stack of `…-50` on re-installation.
+- Removal clearance shall not violate the tolerance/datum stack of `…-TOL` on re-installation.
 
 ## References
 

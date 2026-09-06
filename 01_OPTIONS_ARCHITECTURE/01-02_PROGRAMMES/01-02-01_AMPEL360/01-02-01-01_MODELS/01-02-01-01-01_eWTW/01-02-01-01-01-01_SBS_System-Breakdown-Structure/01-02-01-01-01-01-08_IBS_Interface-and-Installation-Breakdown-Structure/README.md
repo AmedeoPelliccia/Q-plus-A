@@ -40,7 +40,11 @@ Physical interface hardware is therefore represented **in both** structures: the
 
 ## Numbering convention
 
-The IBS uses a **semantic interface identifier** (`eWTW-IBS-NN[-NN…]`), not the folder ordinal chain — mirroring the PBS "semantic ID, ordinals for sort only" rule. An interface set is keyed to the PBS element it serves (for example `eWTW-IBS-10-10-10-10` mirrors the radome's parent PBS node `eWTW-PBS-10-10-10-10`), so PBS ↔ IBS adjacency is read directly from the identifier.
+Governed by **`AMPEL360-SBS-ID-CM-002` §3**. The IBS id space is **derived**:
+
+> | **IBS** | derived | `eWTW-IBS-<CSN>-<counterpart>` = the ICD id (A1.9) | is the id | 1:1 with a declared interface |
+
+An interface dossier carries the CSN of the station that declares it plus the counterpart field — a counterpart CSN (`eWTW-IBS-531004-538001`), or a taxonomy chapter when the other side is a system chapter, not a product node (`eWTW-IBS-531004-034`). **Station-scoped dossiers** — removal/installation envelopes and tolerance-and-datum stacks that belong to a station as a whole — carry the station CSN with a reserved alphabetic suffix instead of a counterpart: `eWTW-IBS-<CSN>-INST` and `eWTW-IBS-<CSN>-TOL`. Derived ids are regenerated, never typed (CM-002 §4.2): if a CSN changes under a ratified act, the dossier ids regenerate with it.
 
 ---
 
@@ -62,37 +66,37 @@ sbs_decomposition_rule:
 
 ## Worked example — Radome
 
-The physical radome and its installed hardware live in the PBS:
+The physical radome and its installed hardware live in the PBS, as the part-number tree of the station that assembles them:
 
 ```text
 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/
-└── eWTW-PBS-00_Aircraft-Product/
-    └── eWTW-PBS-10_Airframe-Structure/
-        └── eWTW-PBS-10-10_Fuselage-Wide-Tube/
-            └── eWTW-PBS-10-10-10_Forward-Fuselage-Section/
-                └── eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/
-                    ├── eWTW-PBS-10-10-10-10-10_Radome/
-                    ├── eWTW-PBS-10-10-10-10-20_Radome-Backup-Bulkhead/
-                    ├── eWTW-PBS-10-10-10-10-30_Nose-Cap-and-Forward-Fairing/
-                    └── eWTW-PBS-10-10-10-10-40_Lightning-Diverter-Provisions/
+└── eWTW-PBS-000_Aircraft-Product/
+    └── eWTW-PBS-050_Airframe-Structure/
+        └── eWTW-PBS-053-000_Fuselage-Wide-Tube/
+            ├── eWTW-PBS-053-100-000_Nose-and-Forward-Fuselage-Structure/
+            │   └── eWTW-PBS-053-100-040_Radome-and-Diverters-Attach-Structure/   ← station, CSN 531004
+            │       └── part numbers EWTW-531004-000 … EWTW-531004-021, -030, -040
+            └── … sections eWTW-PBS-053-200-000 … eWTW-PBS-053-900-000
 ```
 
 The interfaces, envelopes and datums that *connect* the radome to its neighbours live here, in the IBS:
 
 ```text
 01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/
-└── eWTW-IBS-10-10-10-10_Radome-Interface-Set/
-    ├── eWTW-IBS-10-10-10-10-10_Radome-to-Backup-Bulkhead.md
-    ├── eWTW-IBS-10-10-10-10-20_Radome-to-WXR.md
-    ├── eWTW-IBS-10-10-10-10-30_Radome-to-LPS.md
-    ├── eWTW-IBS-10-10-10-10-40_Radome-Removal-Installation-Envelope.md
-    └── eWTW-IBS-10-10-10-10-50_Radome-Tolerance-and-Datum-Stack.md
+└── eWTW-IBS-531004_Radome-Interface-Set/
+    ├── eWTW-IBS-531004-538001_Radome-to-Forward-Pressure-Bulkhead.md
+    ├── eWTW-IBS-531004-034_Radome-to-Weather-Radar.md
+    ├── eWTW-IBS-531004-024_Radome-to-Lightning-Protection.md
+    ├── eWTW-IBS-531004-INST_Radome-Removal-Installation-Envelope.md
+    └── eWTW-IBS-531004-TOL_Radome-Tolerance-and-Datum-Stack.md
 ```
 
-The radome's attachment/hinge/latch and bonding hardware are **owned by the radome in the PBS** (constituents of `eWTW-PBS-10-10-10-10-10`); the IBS records control the *interface they realize*, not the parts themselves.
+The radome's attachment/hinge/latch and bonding hardware are **owned by the radome station in the PBS** (part numbers such as `EWTW-531004-021` under `eWTW-PBS-053-100-040`); the IBS records control the *interface they realize*, not the parts themselves.
 
 ---
 
 ## Index
 
-- [`eWTW-IBS-10-10-10-10_Radome-Interface-Set/`](eWTW-IBS-10-10-10-10_Radome-Interface-Set/) — radome interface and installation records.
+- [`eWTW-IBS-531004_Radome-Interface-Set/`](eWTW-IBS-531004_Radome-Interface-Set/) — radome interface and installation records.
+- [`eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/`](eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/) — rear-fuselage-zone interface records (pilot, stubs).
+- [`ICD-REGISTER.yaml`](ICD-REGISTER.yaml) — register of every interface declared in the PBS `station.yaml` files.
