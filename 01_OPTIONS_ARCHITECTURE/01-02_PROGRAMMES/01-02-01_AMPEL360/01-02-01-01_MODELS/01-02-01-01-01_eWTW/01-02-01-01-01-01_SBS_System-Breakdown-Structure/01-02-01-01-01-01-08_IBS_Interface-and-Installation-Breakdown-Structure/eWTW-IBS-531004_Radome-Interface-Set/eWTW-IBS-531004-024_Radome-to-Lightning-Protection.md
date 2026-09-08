@@ -1,12 +1,13 @@
 ---
-document_id: AMPEL360-eWTW-IBS-10-10-10-10-30
-title: "eWTW · IBS-10-10-10-10-30 — Radome to Lightning Protection (LPS)"
-ibs_id: eWTW-IBS-10-10-10-10-30
-parent: eWTW-IBS-10-10-10-10
+document_id: AMPEL360-eWTW-IBS-531004-024
+title: "eWTW · IBS-531004-024 — Radome to Lightning Protection"
+ibs_id: eWTW-IBS-531004-024
+parent: eWTW-IBS-531004
 item_type: interface_record
 interface_class: lightning_bonding
-side_a: eWTW-PBS-10-10-10-10-10
-side_b: eWTW-PBS-40-40
+side_a: eWTW-PBS-053-100-040
+side_b: "024"
+side_b_space: taxonomy
 status: draft
 effectivity:
   product: eWTW
@@ -15,10 +16,10 @@ effectivity:
   status: active
 ---
 
-# eWTW · IBS-10-10-10-10-30 — Radome to Lightning Protection (LPS)
+# eWTW · IBS-531004-024 — Radome to Lightning Protection
 
-- **Side A:** `eWTW-PBS-10-10-10-10-10` (Radome)
-- **Side B:** `eWTW-PBS-40-40` (Lightning Protection System — referenced, not owned)
+- **Side A:** `eWTW-PBS-053-100-040` (Radome and Diverters Attach Structure)
+- **Side B:** taxonomy chapter `024` (bonding and lightning protection — referenced, not owned)
 - **Interface class:** Bonded diverter / lightning provision
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
@@ -28,7 +29,7 @@ Controls the bonded interface between the radome and the lightning-protection sy
 
 | Attribute | Value |
 |---|---|
-| Diverter strips | Owned by LPS (`eWTW-PBS-40-40`) — referenced, not radome-owned |
+| Diverter strips | Carried by the station (PN `EWTW-531004-040`); the protection function is owned by taxonomy chapter `024` — referenced |
 | Radome provision | Bonding pads / diverter routing land — radome-owned provision |
 | Zone | Forward nose, lightning Zone 1A |
 | Bonding resistance | TBD continuity to airframe ground |
@@ -41,5 +42,5 @@ Controls the bonded interface between the radome and the lightning-protection sy
 
 ## References
 
-- PBS radome element — [`../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md`](../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md)
+- PBS radome station — [`../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-100-000_Nose-and-Forward-Fuselage-Structure/eWTW-PBS-053-100-040_Radome-and-Diverters-Attach-Structure/README.md`](../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-100-000_Nose-and-Forward-Fuselage-Structure/eWTW-PBS-053-100-040_Radome-and-Diverters-Attach-Structure/README.md)
 - Interface set index — [`README.md`](README.md)

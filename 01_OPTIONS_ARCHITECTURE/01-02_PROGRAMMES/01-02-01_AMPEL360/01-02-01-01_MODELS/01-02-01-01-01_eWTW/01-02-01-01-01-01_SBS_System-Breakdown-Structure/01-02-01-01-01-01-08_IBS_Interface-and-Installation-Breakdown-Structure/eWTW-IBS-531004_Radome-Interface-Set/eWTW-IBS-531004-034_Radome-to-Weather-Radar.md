@@ -1,12 +1,13 @@
 ---
-document_id: AMPEL360-eWTW-IBS-10-10-10-10-20
-title: "eWTW · IBS-10-10-10-10-20 — Radome to Weather Radar (WXR)"
-ibs_id: eWTW-IBS-10-10-10-10-20
-parent: eWTW-IBS-10-10-10-10
+document_id: AMPEL360-eWTW-IBS-531004-034
+title: "eWTW · IBS-531004-034 — Radome to Weather Radar"
+ibs_id: eWTW-IBS-531004-034
+parent: eWTW-IBS-531004
 item_type: interface_record
 interface_class: rf_and_access
-side_a: eWTW-PBS-10-10-10-10-10
-side_b: eWTW-PBS-50-30/40
+side_a: eWTW-PBS-053-100-040
+side_b: "034"
+side_b_space: taxonomy
 status: draft
 effectivity:
   product: eWTW
@@ -15,10 +16,10 @@ effectivity:
   status: active
 ---
 
-# eWTW · IBS-10-10-10-10-20 — Radome to Weather Radar (WXR)
+# eWTW · IBS-531004-034 — Radome to Weather Radar
 
-- **Side A:** `eWTW-PBS-10-10-10-10-10` (Radome)
-- **Side B:** `eWTW-PBS-50-30/40` (Weather-radar antenna — referenced, not owned)
+- **Side A:** `eWTW-PBS-053-100-040` (Radome and Diverters Attach Structure)
+- **Side B:** taxonomy chapter `034` (Weather-radar antenna — referenced, not owned)
 - **Interface class:** RF window + access envelope + clearance
 - **Effectivity:** eWTW · baseline · MSN-001..050 · active
 
@@ -28,7 +29,7 @@ Controls the radio-frequency window and physical clearance between the radome an
 
 | Attribute | Value |
 |---|---|
-| RF specification source | WXR system (`eWTW-PBS-50-30/40`) — referenced |
+| RF specification source | WXR system (taxonomy chapter `034`) — referenced |
 | Transmission loss / boresight budget | TBD (allocated from radar performance) |
 | Antenna sweep envelope | TBD scan volume + clearance to radome inner wall |
 | Access envelope | TBD clearance for antenna installation/removal |
@@ -41,5 +42,5 @@ Controls the radio-frequency window and physical clearance between the radome an
 
 ## References
 
-- PBS radome element — [`../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md`](../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-00_Aircraft-Product/eWTW-PBS-10_Airframe-Structure/eWTW-PBS-10-10_Fuselage-Wide-Tube/eWTW-PBS-10-10-10_Forward-Fuselage-Section/eWTW-PBS-10-10-10-10_Nose-Structure-and-Radome-Backup/eWTW-PBS-10-10-10-10-10_Radome/README.md)
+- PBS radome station — [`../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-100-000_Nose-and-Forward-Fuselage-Structure/eWTW-PBS-053-100-040_Radome-and-Diverters-Attach-Structure/README.md`](../../01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-100-000_Nose-and-Forward-Fuselage-Structure/eWTW-PBS-053-100-040_Radome-and-Diverters-Attach-Structure/README.md)
 - Interface set index — [`README.md`](README.md)

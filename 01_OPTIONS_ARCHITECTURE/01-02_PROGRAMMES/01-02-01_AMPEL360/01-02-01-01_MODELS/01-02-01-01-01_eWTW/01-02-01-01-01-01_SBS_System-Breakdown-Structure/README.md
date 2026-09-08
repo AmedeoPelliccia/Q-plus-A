@@ -10,7 +10,7 @@ architecture_layer: "01_OPTIONS_ARCHITECTURE"
 parent_path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW"
 node_path: "01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure"
 status: "DRAFT"
-version: "0.1.0"
+version: "0.2.0"
 classification: "open-technical-architecture"
 lifecycle_phase: "LC01 Concept Definition"
 owner: "AEROSPACEMODEL / AMPEL360"
@@ -38,6 +38,24 @@ The SBS is the controlled decomposition layer used to organize the aircraft prod
 This structure is intended to support deterministic architecture development, certification-oriented traceability, technical-publication readiness, and future S1000D / CSDB mapping.
 
 > **Revisioned breakdown principle.** The SBS owns the breakdown *family* and may define generic architecture patterns. The authoritative engineering truth for a physical product item — its `ReqBS / CBS / RBS / IBS / EBS` state — is recorded **per PBS item revision** (`REV-X`), because requirements and configuration evolve across revisions. LC folders control lifecycle maturity gates, not the internal breakdown truth.
+
+### 1.1 Federation doctrine
+
+The SBS is **a federation of breakdown structures over a single identity system**: a structure never duplicates another's identities, it references them; cross-structure views are derived. The identity system is the PBS (assembly stations, CSNs and part numbers under `AMPEL360-PBS-PN-CM-001`); how every other structure identifies its own objects and references the PBS — derived id when the correspondence is one-to-one, sovereign id with a typed reference when it is many-to-many — is governed by [`AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md`](AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md).
+
+| Structure | Id space (derived \| sovereign \| none) | References PBS by | Maturity |
+|---|---|---|---|
+| PBS | sovereign (the identity system itself) | — | realized (chapter 053) |
+| FBS | sovereign | `realized_by:` | active |
+| WBS | sovereign | `delivers:` | active |
+| CBS | derived (recurring) · sovereign (non-recurring) | is the id · `incurredBy:` | stub |
+| RBS | sovereign | `affects:` | stub |
+| LBS | derived | is the id | stub |
+| EBS | none (derived index) | `subject:` | index |
+| IBS | derived | is the id | active (pilot) |
+| ReqBS | sovereign | `allocatedTo:` + `satisfies:` | stub |
+| TPMS | derived (product) · sovereign (programme) | is the id · `scope:` | stub |
+| TPuBS | derived by standard (S1000D DMC) | SNS + `ssot-ref.yaml` | active |
 
 ---
 

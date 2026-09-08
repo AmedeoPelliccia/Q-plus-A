@@ -1,0 +1,82 @@
+# Generated 2026-09-06 - GitHub Copilot - SBS rework under CM-002
+# Register of every interface declared in the PBS station.yaml files.
+# Derived view (CM-002 SS3: IBS id space is derived; the ICD id is the dossier id).
+# Schema per row: icd, space, counterpart, counterpartCsn, taxonomyRef, declaredBy, dossier.
+# Rows with declaration: pending-migration-act reflect station eWTW-PBS-053-100-040 (radome),
+# which declares no interfaces block on main - its migration act has not been applied.
+# For those rows icd is left blank rather than inventing declarations.
+
+register:
+  id: eWTW-IBS-ICD-REGISTER
+  derived: true
+  source: "PBS station.yaml interfaces blocks (declared) + migrate_PBS-053-010.py (pending)"
+  convention: "AMPEL360-SBS-ID-CM-002"
+
+rows:
+  - icd: ICD-EWTW-531002-538003
+    space: pbs-local
+    counterpart: eWTW-PBS-053-800-030
+    counterpartCsn: "538003"
+    taxonomyRef: "053-800-300"
+    declaredBy: eWTW-PBS-053-100-020
+    dossier: null
+
+  - icd: ICD-EWTW-533001-538002
+    space: pbs-local
+    counterpart: eWTW-PBS-053-800-020
+    counterpartCsn: "538002"
+    taxonomyRef: "053-800-200"
+    declaredBy: eWTW-PBS-053-300-010
+    dossier: eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/eWTW-IBS-533001-538002_Rear-Pressure-Bulkhead-Joint.md
+
+  - icd: ICD-EWTW-533001-534001
+    space: pbs-local
+    counterpart: eWTW-PBS-053-400-010
+    counterpartCsn: "534001"
+    taxonomyRef: "053-400-100"
+    declaredBy: eWTW-PBS-053-300-010
+    dossier: eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/eWTW-IBS-533001-534001_Aft-to-Tailcone-Production-Join.md
+
+  - icd: ICD-EWTW-533001-021
+    space: taxonomy
+    counterpart: "021"
+    counterpartCsn: null
+    taxonomyRef: null
+    declaredBy: eWTW-PBS-053-300-010
+    dossier: eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/eWTW-IBS-533001-021_Outflow-Valve-Structural-Surround.md
+
+  - icd: ""
+    declaration: pending-migration-act
+    space: taxonomy
+    counterpart: "034"
+    counterpartCsn: null
+    taxonomyRef: null
+    declaredBy: eWTW-PBS-053-100-040
+    dossier: eWTW-IBS-531004_Radome-Interface-Set/eWTW-IBS-531004-034_Radome-to-Weather-Radar.md
+
+  - icd: ""
+    declaration: pending-migration-act
+    space: pbs-local
+    counterpart: eWTW-PBS-053-800-010
+    counterpartCsn: "538001"
+    taxonomyRef: "053-800-100"
+    declaredBy: eWTW-PBS-053-100-040
+    dossier: eWTW-IBS-531004_Radome-Interface-Set/eWTW-IBS-531004-538001_Radome-to-Forward-Pressure-Bulkhead.md
+
+  - icd: ""
+    declaration: pending-migration-act
+    space: taxonomy
+    counterpart: "024"
+    counterpartCsn: null
+    taxonomyRef: null
+    declaredBy: eWTW-PBS-053-100-040
+    dossier: eWTW-IBS-531004_Radome-Interface-Set/eWTW-IBS-531004-024_Radome-to-Lightning-Protection.md
+
+  - icd: ""
+    declaration: pending-migration-act
+    space: taxonomy
+    counterpart: "030"
+    counterpartCsn: null
+    taxonomyRef: null
+    declaredBy: eWTW-PBS-053-100-040
+    dossier: null

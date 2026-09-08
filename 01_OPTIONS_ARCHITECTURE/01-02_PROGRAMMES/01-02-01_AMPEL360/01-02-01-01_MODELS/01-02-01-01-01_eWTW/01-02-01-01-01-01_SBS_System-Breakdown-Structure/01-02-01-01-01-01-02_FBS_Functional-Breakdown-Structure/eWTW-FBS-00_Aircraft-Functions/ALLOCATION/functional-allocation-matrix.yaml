@@ -9,14 +9,14 @@ allocation_matrix:
   programme: AMPEL360
   product: eWTW
   side: SSOT
-  relation_types: [realized_by, classified_under]
+  relation_types: [realized_by, classified_under, supported_by]
 
   allocations:
 
     - function: eWTW-FBS-10
       title: Provide Lift and Aerodynamic Performance
       realized_by:
-        - { pbs_area: Airframe-lifting-surfaces, pbs_code: eWTW-PBS-10 }
+        - { pbs_area: Airframe-lifting-surfaces, pbs_code: eWTW-PBS-050 }
       classified_under: ["057", "055"]
       allocation_type: distributed
       fha_ref: eWTW-FBS-10/FHA
@@ -48,7 +48,25 @@ allocation_matrix:
     - function: eWTW-FBS-50
       title: Provide Structural Integrity
       realized_by:
-        - { pbs_area: Airframe-structure, pbs_code: eWTW-PBS-10 }
+        - { pbs_area: Airframe-structure, pbs_code: eWTW-PBS-050 }
+        # Station grain - realized fuselage sections (chapter 053), ids only:
+        - { pbs_code: eWTW-PBS-053-000-010 }
+        - { pbs_code: eWTW-PBS-053-100-010 }
+        - { pbs_code: eWTW-PBS-053-100-020 }
+        - { pbs_code: eWTW-PBS-053-100-030 }
+        - { pbs_code: eWTW-PBS-053-100-040 }
+        - { pbs_code: eWTW-PBS-053-100-050 }
+        - { pbs_code: eWTW-PBS-053-100-060 }
+        - { pbs_code: eWTW-PBS-053-200-010 }
+        - { pbs_code: eWTW-PBS-053-200-020 }
+        - { pbs_code: eWTW-PBS-053-200-030 }
+        - { pbs_code: eWTW-PBS-053-200-040 }
+        - { pbs_code: eWTW-PBS-053-200-050 }
+        - { pbs_code: eWTW-PBS-053-200-060 }
+        - { pbs_code: eWTW-PBS-053-300-010 }
+        - { pbs_code: eWTW-PBS-053-300-020 }
+        - { pbs_code: eWTW-PBS-053-300-030 }
+        - { pbs_code: eWTW-PBS-053-300-040 }
       classified_under: ["050-059"]
       allocation_type: full
       fha_ref: eWTW-FBS-50/FHA
@@ -119,6 +137,29 @@ allocation_matrix:
       allocation_type: shared
       shared_with: [eWTW-FBS-80, eWTW-FBS-90]
       fha_ref: eWTW-FBS-130/FHA
+
+    # Supporting allocations from PILOT-ALLOCATION_EWTW-533001.yaml:
+    # structural provisions in the rear-fuselage zone that support non-structural
+    # functions. Part-number references; the functions' own realizations stay TBD.
+
+    - function: eWTW-FBS-70
+      allocation_type: supporting
+      supported_by:
+        - EWTW-533001-040
+        - EWTW-533001-041
+        - EWTW-533001-042
+
+    - function: eWTW-FBS-40
+      allocation_type: supporting
+      supported_by:
+        - EWTW-533001-030
+        - EWTW-533001-031
+
+    - function: eWTW-FBS-90
+      allocation_type: supporting
+      supported_by:
+        - EWTW-533001-030
+        - EWTW-533001-031
 
   governance:
     inherits: DEGF-v1.0
