@@ -28,4 +28,4 @@ The workstream opens when the first make/buy decision is recorded against a real
 
 ## Status
 
-**STUB — no depth authored.**
+**PILOT — recurring cost objects emitted, no figures.** [`COST-OBJECT-REGISTER.yaml`](COST-OBJECT-REGISTER.yaml) derives one `eWTW-CBS-533001-<item>` object per make/buy item of station `eWTW-PBS-053-300-010`. Every `cost:` is null until the owning authority records one.

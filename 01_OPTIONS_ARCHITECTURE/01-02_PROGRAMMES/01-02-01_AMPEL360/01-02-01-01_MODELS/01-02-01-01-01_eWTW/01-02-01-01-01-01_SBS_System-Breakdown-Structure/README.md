@@ -48,13 +48,13 @@ The SBS is **a federation of breakdown structures over a single identity system*
 | PBS | sovereign (the identity system itself) | — | realized (chapter 053) |
 | FBS | sovereign | `realized_by:` | active |
 | WBS | sovereign | `delivers:` | active |
-| CBS | derived (recurring) · sovereign (non-recurring) | is the id · `incurredBy:` | stub |
-| RBS | sovereign | `affects:` | stub |
+| CBS | derived (recurring) · sovereign (non-recurring) | is the id · `incurredBy:` | pilot (objects, no figures) |
+| RBS | sovereign | `affects:` | pilot |
 | LBS | derived | is the id | stub |
 | EBS | none (derived index) | `subject:` | index |
 | IBS | derived | is the id | active (pilot) |
-| ReqBS | sovereign | `allocatedTo:` + `satisfies:` | stub |
-| TPMS | derived (product) · sovereign (programme) | is the id · `scope:` | stub |
+| ReqBS | sovereign | `allocatedTo:` + `satisfies:` | stub (candidates) |
+| TPMS | derived (product) · sovereign (programme) | is the id · `scope:` | pilot |
 | TPuBS | derived by standard (S1000D DMC) | SNS + `ssot-ref.yaml` | active |
 
 ---

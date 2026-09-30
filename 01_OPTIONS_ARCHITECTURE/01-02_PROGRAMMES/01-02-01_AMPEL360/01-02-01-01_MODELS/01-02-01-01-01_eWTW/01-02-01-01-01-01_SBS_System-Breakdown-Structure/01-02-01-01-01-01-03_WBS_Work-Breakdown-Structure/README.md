@@ -371,6 +371,8 @@ flowchart LR
 | `110` Technical Data & Publications | the TPuBS data modules (PUB projection of the product) |
 | `140` Sustainability & Lifecycle | DPP records; circularity evidence |
 
+**Station crosswalks.** Per-station `delivers:` rows (CM-002 §3) live beside this README, one file per station: [`WBS-CROSSWALK_EWTW-533001.yaml`](WBS-CROSSWALK_EWTW-533001.yaml) (rear-fuselage zone, `eWTW-PBS-053-300-010`).
+
 ---
 
 ## 8. Work-Package Node Content

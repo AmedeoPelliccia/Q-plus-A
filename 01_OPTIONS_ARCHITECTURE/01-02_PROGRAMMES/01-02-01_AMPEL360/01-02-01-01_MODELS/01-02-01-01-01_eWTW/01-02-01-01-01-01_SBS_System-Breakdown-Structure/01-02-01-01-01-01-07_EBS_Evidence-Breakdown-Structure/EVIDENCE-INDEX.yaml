@@ -14,7 +14,7 @@ evidence_index:
     - ratified-act-or-convention
     - migration-or-completion-record
     - verification-report
-    - analysis-or-test-record   # future
+    - analysis-or-test-record
     - pse-register              # future
 
 rows:
@@ -73,3 +73,26 @@ rows:
     status: cited-only
     citedBy:
       - AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md
+
+  - class: analysis-or-test-record
+    subject: EWTW-533001-000
+    path: null
+    status: cited-only
+    note: >
+      LC-001 structural analysis record (analysis/structural/LC-001/analysis.yaml);
+      produced after PR #58 in the staged pilot layout, not on main. Carries
+      findings A-533001-02 (R-533001-05) and A-533001-03 (ReqBS candidate).
+    citedBy:
+      - PILOT-ALLOCATION_EWTW-533001.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/RISK-REGISTER.yaml
+      - 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/REQUIREMENT-CANDIDATES.yaml
+
+  - class: analysis-or-test-record
+    subject: EWTW-533001-000
+    path: null
+    status: cited-only
+    note: >
+      LC-001 pre-solver content binding records (analysis/structural/LC-001/
+      declaration.yaml + run-record.yaml, C1.6); staged pilot layout, not on main.
+    citedBy:
+      - PILOT-ALLOCATION_EWTW-533001.yaml

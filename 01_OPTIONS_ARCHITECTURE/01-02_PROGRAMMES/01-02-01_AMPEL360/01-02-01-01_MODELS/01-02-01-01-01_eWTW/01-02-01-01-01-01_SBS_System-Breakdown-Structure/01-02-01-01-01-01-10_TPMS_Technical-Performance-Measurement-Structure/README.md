@@ -28,4 +28,4 @@ The workstream opens when the first measure is levied with a planned value and a
 
 ## Status
 
-**STUB — no depth authored.**
+**PILOT — first product measures recorded.** [`TPM-REGISTER.yaml`](TPM-REGISTER.yaml) carries `TPM-533001-MASS`, `-PARTS` and `-INTERF`, each read from committed evidence with the sha256 of its source. Targets are null except where the authority levied one (`-INTERF`, target 0).

@@ -27,4 +27,4 @@ The workstream opens when the first requirement is formally levied on a realized
 
 ## Status
 
-**STUB — no depth authored.**
+**STUB — candidates only.** [`REQUIREMENT-CANDIDATES.yaml`](REQUIREMENT-CANDIDATES.yaml) lists five candidates for station `eWTW-PBS-053-300-010` with their `allocatedTo:` and verification method. No requirement is authored: ids and wording await the authoring act (open gate of `BL-053-300-010-A2`).

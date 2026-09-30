@@ -27,4 +27,4 @@ The workstream opens when the first risk is formally raised against a realized i
 
 ## Status
 
-**STUB — no depth authored.**
+**PILOT — register opened.** [`RISK-REGISTER.yaml`](RISK-REGISTER.yaml) carries `R-533001-01..05`, raised by the owning authority in `PILOT-ALLOCATION_EWTW-533001.yaml` (revision 2), each bound through `affects:`. Likelihood, severity and owner stay null until assessed.
