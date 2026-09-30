@@ -136,6 +136,36 @@ A folder or part number here is not merely a directory. It progressively defines
 
 ---
 
+## Architecture delta — conventional airliner vs AMPEL360 hydrogen-electric
+
+What changes when the energy carrier and the powertrain change, system by system — and where each change lands in the [S-ATLAS](01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/) taxonomy. The taxonomy already anticipates the transition: chapter `028` is *Energy-Carrier* storage and distribution rather than fuel, `029` is *Actuation and Utility Power* rather than hydraulics, `049` is an *Auxiliary Power Module* rather than a turbine APU, and the whole `070–079` range covers electric and fuel-cell propulsion.
+
+**Reference architecture assumed in this table:** liquid hydrogen as energy carrier · PEM fuel-cell generation · battery buffering for start, transients and peaks · all-electric propulsion · bleedless environmental control. Alternatives exist and have their own taxonomy homes — hydrogen combustion in turbines (`063`), fuel-cell and turbine hybrids with turbogenerators (`068`), superconducting and cryo-electric propulsion exploiting the cold of LH₂ (`085`). This is the fleet-level reference, not a model decision: applicability is declared per model — the cryogenic LH₂ concept is carried by **BWB-Q100**; for **eWTW** the only system-level change declared so far is the electric, bleedless ECS, while energy carrier, propulsion chain and electrical sources remain open decisions (see the [eWTW model README](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/README.md)).
+
+**Delta:** `=` unchanged in function · `~` modified (integration, sizing, power source) · `+` extended (new sub-systems alongside the existing ones) · `⇄` replaced.
+
+| # | System | S-ATLAS | Conventional airliner | AMPEL360 hydrogen-electric concept | Δ |
+|---|---|---|---|---|:-:|
+| 1 | Airframe | `051–059` | Fuselage, wings, empennage, primary and secondary structure, engine attachments, doors | Structural functions unchanged; new housings and supports for LH₂ tanks, battery installation, propulsor and heat-exchanger integration; tank placement (aft fuselage, forward, or pods) drives the centre of gravity (`054`, `058`, `053-900`) | ~ |
+| 2 | Energy-carrier storage and delivery | `028` · `064` · `047` · `012` | Wing-integrated tanks, pumps, filters, valves, transfer, venting, quantity gauging, refuelling | Insulated cryogenic tanks — LH₂ needs roughly four times the volume of kerosene for the same energy, which moves storage out of the wing; pressure and boil-off management, including on the ground and through long turnarounds; LH₂ feed, vaporisation and GH₂ regulation, isolation valves, dedicated refuelling interfaces | ⇄ |
+| 3 | Propulsion | `061–069` → `071–077` | Fan, compressors, combustor, turbines, shafts, bearings, lubrication, nozzle, FADEC | Inverters, electric motors, shafts, bearings, optional gearboxes, propellers or fans, propulsor controllers; **power generation is separate from the thrust-producing unit** | ⇄ |
+| 4 | Electrical generation and storage | `024` · `068` → `074` · `075` | Engine-driven generators, APU generator, start and service batteries | PEM stacks with balance-of-plant, converters, propulsion batteries with BMS; batteries cover start, transients and peaks — any reserve function must be sized explicitly | ⇄ |
+| 5 | Electrical distribution | `024` + `076` · `079` | AC/DC networks, transformer-rectifiers, busbars, harnesses, protection, essential loads | Adds a propulsion power network, generally high-voltage DC: buses, DC/DC converters, contactors, fault protection, insulation monitoring — multi-megawatt HVDC raises insulation, arcing and protection questions new to certification; service networks remain | + |
+| 6 | Thermal management | `021` · `065` → `078` | Oil, accessory, avionics and cabin-system cooling; heat exchangers, ventilation | Loops for stacks, batteries, inverters and motors: pumps, coolants, radiators, ram-air control. **Cooling capacity becomes a limit on available propulsive power**, radiator area costs drag, and stack waste heat can serve to vaporise the LH₂ | + |
+| 7 | Flight controls | `027` · `022` | Flight computers, sensors, actuators, primary surfaces, flaps, slats, spoilers | Functions unchanged. Differential thrust may be coordinated **if** distributed propulsion is chosen — not a consequence of hydrogen | = |
+| 8 | Actuation and utility power | `029` | Engine-driven and electric pumps, reservoirs, accumulators, lines, servo-valves | Possible electric pumps, electro-hydrostatic or electromechanical actuators. Hydraulics may remain: electric propulsion does not require their removal | ~ |
+| 9 | Pneumatics, air conditioning, pressurisation | `021` · `036` | Compressor bleed, ducting, valves, packs, recirculation, cabin pressure control | Electric compressors for cabin services (E-pack, bleedless). The fuel-cell air supply is a circuit distinct from the cabin's (`075`) | ⇄ |
+| 10 | Ice and rain protection | `030` | Bleed-air thermal anti-ice, electrically heated probes and windshield, wipers | Greater reliance on electrical heating or dedicated solutions; ice protection enters the power budget together with propulsion | ~ |
+| 11 | Landing gear, braking, steering | `032` | Legs, retraction, wheels, brakes, anti-skid, nose-wheel steering | Functionally equivalent; sizing, position and actuator power source follow mass, centre of gravity and geometry | = |
+| 12 | Avionics and flight management | `022` · `023` · `031` · `034` · `042` · `046` | Navigation, communications, surveillance, autopilot, FMS, instruments, alerting | Same sub-systems, plus integrated energy management (`071`) and indications of available H₂, battery state, stack power and thermal limits | + |
+| 13 | Cabin, cargo, equipment | `025` · `033` · `035` · `044` · `050` | Seats, furnishings, lighting, oxygen, water and waste, entertainment, holds, evacuation | Functions unchanged; available volume, layout and power supply may change with the integration of the energy systems | = |
+| 14 | Protection and emergency | `026` · `047` + `079` | Fire and smoke detection, extinguishing, fuel isolation, emergency power | Adds H₂ leak detection, dedicated ventilation and isolation, electrical protection, battery thermal-runaway management; essential power needs its own continuity architecture | + |
+| 15 | Auxiliary power and maintenance | `049` · `045` · `012` | APU, ground power, batteries, possible RAT, diagnostics and built-in test | Possible fuel-cell auxiliary units, dedicated batteries, electrical ground power; diagnostics extend to stack degradation, battery health, electrical insulation and cryogenic integrity | ~ |
+
+Two readings matter more than any single row. **Rows 3–6 are one system, not four:** generation, storage, distribution and cooling are coupled, and the heat that can be rejected sets the power that can be used. **Several changes are options, not consequences** — distributed propulsion (7), the removal of hydraulics (8) and the size of battery reserves (4) are architecture decisions to be taken and recorded, not implied by the choice of hydrogen.
+
+---
+
 ## Contributors wanted
 
 ### 1. CAD and product definition
