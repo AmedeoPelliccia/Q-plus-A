@@ -1,0 +1,23 @@
+# Integrated baseline - second sequence. BL-053-300-010-A1 is SUPERSEDED (CM-003 section 3):
+# its FBS member changed state after PR #58, so the proposed set no longer describes the station.
+baseline:
+  schema: "AMPEL360-BASELINE-RECORD/1.0"
+  id: BL-053-300-010-A2
+  supersedes: BL-053-300-010-A1
+  scope: eWTW-PBS-053-300-010
+  stage: LCS-A
+  status: PROPOSED
+  assumptions:
+    - "energy-carrier placement not aft of the rear pressure bulkhead (open eWTW decision) - the baseline is invalidated if that changes"
+  gate_criteria:
+    - {view: PBS,   criterion: "node identity bound and concept geometry present",   met: true,  evidence: "station.yaml; geometry of record committed"}
+    - {view: FBS,   criterion: "functions allocated to the station",                  met: true,  evidence: "functional-allocation-matrix.yaml: FBS-50 at station grain + FBS-70/40/90 supporting", changed_since_A1: true}
+    - {view: IBS,   criterion: "interfaces declared with resolvable counterparts",    met: true,  evidence: "ICD-REGISTER 3 rows; dossiers under ICD-aligned ids"}
+    - {view: TPMS,  criterion: "first performance estimates recorded",               met: true,  evidence: "TPM-533001-MASS 80.3 kg on the geometry of record"}
+    - {view: RBS,   criterion: "risk register opened for the scope",                 met: true,  evidence: "R-533001-01..05"}
+    - {view: EBS,   criterion: "concept evidence indexed",                           met: true,  evidence: "verification report indexed; LC-001 records to be added"}
+    - {view: ReqBS, criterion: "initial requirements baseline",                      met: false, evidence: null, blocker: "five candidates, none authored - engineering act"}
+  criteria_met: "6 / 7"
+  releasable: false
+  what_is_missing: ["ReqBS initial set"]
+  release_decision: {act: null, date: null, authority: null}

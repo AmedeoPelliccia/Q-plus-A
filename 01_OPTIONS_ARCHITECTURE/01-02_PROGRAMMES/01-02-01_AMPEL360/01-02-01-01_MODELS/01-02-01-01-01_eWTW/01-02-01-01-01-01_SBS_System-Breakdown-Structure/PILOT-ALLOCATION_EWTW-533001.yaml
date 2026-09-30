@@ -1,28 +1,83 @@
-# Generated 2026-09-06 - GitHub Copilot - SBS rework under CM-002
-# Pilot allocation record for station eWTW-PBS-053-300-010 (CSN 533001).
-# Precondition file of the SBS rework brief; absent on the base branch, so it is
-# committed here with exactly the allocations stated in the brief - nothing more.
-# References are ids only (CM-002 SS4.4): attributes stay in part.yaml.
-
-pilot_allocation:
-  record: PILOT-ALLOCATION_EWTW-533001
-  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+# EWTW-533001 - allocation of station production across the SBS federation - REVISION 2
+# Re-measured against main @ 4e921122 (PR #58 merged) and the work done since revision 1.
+# References only; no identity is duplicated here (CM-002).
+allocation:
   station: eWTW-PBS-053-300-010
   csn: "533001"
-  supporting_allocations:
-    - function: eWTW-FBS-70
-      allocation_type: supporting
-      parts:
-        - EWTW-533001-040
-        - EWTW-533001-041
-        - EWTW-533001-042
-    - function: eWTW-FBS-40
-      allocation_type: supporting
-      parts:
-        - EWTW-533001-030
-        - EWTW-533001-031
-    - function: eWTW-FBS-90
-      allocation_type: supporting
-      parts:
-        - EWTW-533001-030
-        - EWTW-533001-031
+  realizes: "053-300-100"
+  revision: 2
+  supersedes: "revision 1 (2026-09-06)"
+  id_convention: "AMPEL360-SBS-ID-CM-002 - on main"
+  lifecycle_convention: "AMPEL360-SBS-LC-CM-003 - PROPOSED; notation ruling open"
+  geometry_of_record: "LCS-A/CAD/source/EWTW-533001-000_concept.py - the class-based generator committed in the repository (not the sandbox generator used in revision 1)"
+
+  FBS:
+    status: realized-on-main
+    closes: "finding F-1 - the ghost chapter code is repointed to eWTW-PBS-050"
+    rows:
+      - {function: eWTW-FBS-50, allocation_type: full, realized_by: eWTW-PBS-053-300-010, grain: station}
+      - {function: eWTW-FBS-70, allocation_type: supporting, realized_by: [EWTW-533001-040, EWTW-533001-041, EWTW-533001-042]}
+      - {function: eWTW-FBS-40, allocation_type: supporting, realized_by: [EWTW-533001-030, EWTW-533001-031]}
+      - {function: eWTW-FBS-90, allocation_type: supporting, realized_by: [EWTW-533001-030, EWTW-533001-031]}
+
+  IBS:
+    status: realized-on-main (dossier bodies PLANNED)
+    closes: "finding F-4 - dossier id = ICD id, placeholder chain retired"
+    register: "ICD-REGISTER.yaml - 3 rows for 533001"
+    dossiers:
+      - {id: eWTW-IBS-533001-538002, joint: "rear pressure bulkhead - zone-level", counterpart: eWTW-PBS-053-800-020, body: PLANNED}
+      - {id: eWTW-IBS-533001-534001, joint: "aft-to-tailcone production join", counterpart: eWTW-PBS-053-400-010, body: PLANNED}
+      - {id: eWTW-IBS-533001-021, joint: "outflow-valve structural surround", counterpart: "ATA 021", body: PLANNED}
+    remaining: "engineering prose - envelope, tolerance and datum stack, removal and installation, fastener and seal specification, load-path status"
+
+  EBS:
+    status: partially-realized
+    on_main: [verification report (LCS-A candidate), migration-or-completion record]
+    not_yet_indexed:
+      - {artifact: "analysis/structural/LC-001/analysis.yaml", reason: "produced after PR #58; lives in the staged pilot layout"}
+      - {artifact: "analysis/structural/LC-001/declaration.yaml + run-record.yaml", reason: "pre-solver content binding records (C1.6)"}
+    pending: "authority field on every row - supplied by apply_pr2_locally.sh"
+
+  TPMS:
+    status: charter-on-main, measures not emitted
+    measures:
+      - id: TPM-533001-MASS
+        current_value_kg: 80.3
+        previous_value_kg: 80.1
+        change: "re-based on the geometry of record; splice ring unchanged at 74.6 kg (92.8 %), surround 3.3 kg against 3.0 kg"
+        basis: "volume rollup of the committed generator x 2.70e-6 kg/mm3 (aluminium class, assumed)"
+        requirement: "the record must carry the source sha256 of the geometry it was computed on"
+      - {id: TPM-533001-PARTS, current_value: 15}
+      - {id: TPM-533001-INTERF, current_value: 0, target: 0}
+
+  RBS:
+    status: charter-on-main, register not emitted
+    risks:
+      - {id: R-533001-01, item: "rear pressure bulkhead joint declared at zone level; load path not demonstrated", unchanged: true}
+      - {id: R-533001-02, item: "butt-strap NDT coverage: plug seats deliberately clear of the butt joints", unchanged: true}
+      - {id: R-533001-03, item: "production-join tolerance and indexing scheme unproven", unchanged: true}
+      - {id: R-533001-04, item: "outflow-valve cutout in a fatigue-sensitive region", unchanged: true}
+      - id: R-533001-05
+        new: true
+        item: "unfilleted re-entrant step at the land-to-band transition: a stress concentration the concept CAD cannot resolve, fatigue-relevant"
+        evidence: "LC-001 finding A-533001-02; the peak is non-convergent by construction - 43.9 MPa and 56.7 MPa on two geometries of the same design at the same mesh"
+        mitigation: "fillet in the next CAD revision, then re-run LC-001"
+
+  ReqBS:
+    status: absent - the only remaining LCS-A blocker
+    candidates:
+      - {req: "pressure-boundary integrity at the outflow-valve penetration", allocated_to: [EWTW-533001-041, EWTW-533001-042], verification: analysis+test}
+      - {req: "damage tolerance of the production splice (PSE candidate)", allocated_to: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014], verification: analysis+test}
+      - {req: "NDT accessibility of the join and its straps", allocated_to: [EWTW-533001-050, EWTW-533001-051], verification: inspection-demonstration, links: R-533001-02}
+      - {req: "systems-run support load capability", allocated_to: [EWTW-533001-031], verification: analysis}
+      - {req: "stability of the band under compressive bending", allocated_to: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014], verification: analysis, new: true, source: "LC-001 finding A-533001-03 - axial strength does not govern; stability, bearing and fatigue must be examined (LC-002)"}
+
+  WBS: {status: "not started on main - crosswalk to eWTW-WBS-20-40 / 20-30 / 30-30 / 100-30 / 110-20 still to be written"}
+  CBS: {status: "charter on main; cost objects derivable from part.yaml make/buy, not emitted"}
+  LBS: {status: "charter on main; provisioning classes derivable, not emitted"}
+  TPuBS: {status: "not started - STRUCTURE-class infocode seed (0xx/3xx/6xx) awaits the F2 register"}
+
+  external_dependencies:
+    - dependency: "eWTW energy-carrier placement - an open model decision (eWTW README)"
+      why: "an aft-fuselage carrier would change the loads across the aft-to-tailcone join and the systems-run provisions (-030/-031); every baseline of this station must name the assumption under which it holds"
+      trigger: "CM-003 section 3 - re-examination when the decision is taken"
