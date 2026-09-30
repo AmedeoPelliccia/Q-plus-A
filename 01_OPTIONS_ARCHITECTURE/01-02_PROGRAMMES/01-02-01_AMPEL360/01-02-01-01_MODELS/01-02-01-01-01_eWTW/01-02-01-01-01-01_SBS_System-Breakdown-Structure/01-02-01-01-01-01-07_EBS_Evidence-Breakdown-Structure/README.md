@@ -17,4 +17,4 @@ Per **`AMPEL360-SBS-ID-CM-002` §3 the EBS has no id space of its own** — its 
 
 ## Index
 
-- [`EVIDENCE-INDEX.yaml`](EVIDENCE-INDEX.yaml) — the row schema and every evidence row discoverable today.
+- [`EVIDENCE-INDEX.yaml`](EVIDENCE-INDEX.yaml) — the row schema and every evidence row discoverable today. A row whose artefact has been produced but not yet committed is marked `status: pending-commit` and carries the `action:` that resolves it; it becomes `on-disk` when the artefact is committed into its node.

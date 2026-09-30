@@ -1,15 +1,64 @@
-# EWTW-533001 - allocation of station production across the SBS federation - REVISION 2
-# Re-measured against main @ 4e921122 (PR #58 merged) and the work done since revision 1.
-# References only; no identity is duplicated here (CM-002).
+# EWTW-533001 - allocation of station production across the SBS federation - REVISION 3
+# Generated 2026-09-30 - GitHub Copilot - EWTW-533001 allocation revision 3 (PR #60 review)
+# Restated against the geometry of record: the generator committed in the node
+# (v0.2.1-concept, spec v1 - bracket rows at 145/215 deg, plug seats at 15 + 30k deg) and
+# its committed verification report. Revision 2 was computed on a sandbox generator
+# implementing spec v2; three of its statements do not hold on the committed geometry and
+# are corrected here (geometry_of_record, TPM-533001-INTERF, R-533001-02), each keeping the
+# revision-2 wording under history:.
+# References only; no identity is duplicated here (CM-002). Paths are relative to the SBS root.
 allocation:
   station: eWTW-PBS-053-300-010
   csn: "533001"
   realizes: "053-300-100"
-  revision: 2
-  supersedes: "revision 1 (2026-09-06)"
+  revision: 3
+  supersedes:
+    - revision: 2
+      date: "2026-09-30"
+      commit: 6d0b5714
+      note: "PR #60 branch; not merged as a separate revision - its corrected statements are kept under history: below"
+    - revision: 1
+      date: "2026-09-06"
+      file: PILOT-ALLOCATION_EWTW-533001_rev1.yaml
+      commit: 546c84a4
   id_convention: "AMPEL360-SBS-ID-CM-002 - on main"
-  lifecycle_convention: "AMPEL360-SBS-LC-CM-003 - PROPOSED; notation ruling open"
-  geometry_of_record: "LCS-A/CAD/source/EWTW-533001-000_concept.py - the class-based generator committed in the repository (not the sandbox generator used in revision 1)"
+  lifecycle_convention: "AMPEL360-SBS-LC-CM-003 - PROPOSED, not on main; notation ruling open"
+  geometry_of_record:
+    file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/CAD/source/EWTW-533001-000_concept.py
+    version: v0.2.1-concept
+    spec: "v1 - bracket rows at 145/215 deg (+-35 deg from Z-), NDT plug seats at 15 + 30k deg"
+    verification_report:
+      file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+      result: "22 PASS | 1 FAIL | 1 WARN - fails its own interference check (section D); 4 of 12 plug seats straddle the segment butt joints (section C, I-2)"
+    history:
+      - revision: 2
+        stated: "LCS-A/CAD/source/EWTW-533001-000_concept.py - the class-based generator committed in the repository (not the sandbox generator used in revision 1)"
+        correction: "no LCS-A/ directory exists on main - stage folders are not migrated; the generator lives in the node"
+
+  realized_in_this_revision:
+    pr: 60
+    emitted:
+      - view: WBS
+        file: 01-02-01-01-01-01-03_WBS_Work-Breakdown-Structure/WBS-CROSSWALK_EWTW-533001.yaml
+        content: "crosswalk to eWTW-WBS-20-40 / 20-30 / 30-30 / 100-30 / 110-20 through delivers:"
+      - view: CBS
+        file: 01-02-01-01-01-01-04_CBS_Cost-Breakdown-Structure/COST-OBJECTS_EWTW-533001.yaml
+        content: "15 cost objects classified by part.yaml role, plus a gap row for the butt straps; no figures"
+      - view: RBS
+        file: 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/RISKS_EWTW-533001.yaml
+        content: "R-533001-01..06; likelihood, severity and owner null"
+      - view: TPMS
+        file: 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/TPM_EWTW-533001.yaml
+        content: "TPM-533001-MASS, -PARTS, -INTERF read from the verification report of the geometry of record"
+      - view: ReqBS
+        file: 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/REQUIREMENT-CANDIDATES_EWTW-533001.yaml
+        content: "five candidates, no id and no wording"
+      - view: EBS
+        file: 01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/EVIDENCE-INDEX.yaml
+        content: "two LC-001 rows, status pending-commit"
+      - view: baseline
+        file: BASELINE-RECORD_BL-053-300-010-A2.yaml
+        content: "integrated baseline A2, PROPOSED, with open items"
 
   FBS:
     status: realized-on-main
@@ -32,48 +81,73 @@ allocation:
 
   EBS:
     status: partially-realized
-    on_main: [verification report (LCS-A candidate), migration-or-completion record]
-    not_yet_indexed:
-      - {artifact: "analysis/structural/LC-001/analysis.yaml", reason: "produced after PR #58; lives in the staged pilot layout"}
-      - {artifact: "analysis/structural/LC-001/declaration.yaml + run-record.yaml", reason: "pre-solver content binding records (C1.6)"}
+    on_main: [verification report of the geometry of record, migration-or-completion record (invalid YAML on main - precondition P0)]
+    pending_commit:
+      - {artifact: "analysis/structural/LC-001/analysis.yaml", reason: "produced after PR #58; lives in the staged pilot layout", action: "commit the LC-001 analysis package into the node"}
+      - {artifact: "analysis/structural/LC-001/declaration.yaml + run-record.yaml", reason: "pre-solver content binding records (C1.6)", action: "commit the LC-001 analysis package into the node"}
     pending: "authority field on every row - supplied by apply_pr2_locally.sh"
 
   TPMS:
-    status: charter-on-main, measures not emitted
+    status: measures emitted
     measures:
       - id: TPM-533001-MASS
         current_value_kg: 80.3
         previous_value_kg: 80.1
         change: "re-based on the geometry of record; splice ring unchanged at 74.6 kg (92.8 %), surround 3.3 kg against 3.0 kg"
-        basis: "volume rollup of the committed generator x 2.70e-6 kg/mm3 (aluminium class, assumed)"
-        requirement: "the record must carry the source sha256 of the geometry it was computed on"
+        basis: "volume rollup of the committed generator (verification report section F) x 2.70e-6 kg/mm3 (aluminium class, assumed)"
+        requirement: "the record must carry the source sha256 of the geometry it was computed on - carried in TPM_EWTW-533001.yaml"
       - {id: TPM-533001-PARTS, current_value: 15}
-      - {id: TPM-533001-INTERF, current_value: 0, target: 0}
+      - id: TPM-533001-INTERF
+        current_value: 1
+        target: 0
+        basis: "verification report section D - OVERLAP EWTW-533001-031#11 x EWTW-533001-041 = 34856.8 mm3"
+        history:
+          - {revision: 2, current_value: 0, correction: "the committed report of the geometry of record measures 1"}
 
   RBS:
-    status: charter-on-main, register not emitted
+    status: register emitted
     risks:
       - {id: R-533001-01, item: "rear pressure bulkhead joint declared at zone level; load path not demonstrated", unchanged: true}
-      - {id: R-533001-02, item: "butt-strap NDT coverage: plug seats deliberately clear of the butt joints", unchanged: true}
+      - id: R-533001-02
+        restated: true
+        item: "split NDT plug seat across two segment ends: on the geometry of record 4 of 12 plug seats straddle the segment butt joints (45/135/225/315 deg) - edge distance, seat integrity and sealing at the butt"
+        affects: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014, EWTW-533001-051]
+        evidence: "geometry of record, interpretation note I-2; verification report section C (plug seats straddling butt joints = 4)"
+        history:
+          - {revision: 2, item: "butt-strap NDT coverage: plug seats deliberately clear of the butt joints", affects: [EWTW-533001-010, EWTW-533001-050, EWTW-533001-051], correction: "not clear on the committed geometry - 4 of 12 seats straddle the butts"}
       - {id: R-533001-03, item: "production-join tolerance and indexing scheme unproven", unchanged: true}
       - {id: R-533001-04, item: "outflow-valve cutout in a fatigue-sensitive region", unchanged: true}
       - id: R-533001-05
-        new: true
         item: "unfilleted re-entrant step at the land-to-band transition: a stress concentration the concept CAD cannot resolve, fatigue-relevant"
         evidence: "LC-001 finding A-533001-02; the peak is non-convergent by construction - 43.9 MPa and 56.7 MPa on two geometries of the same design at the same mesh"
         mitigation: "fillet in the next CAD revision, then re-run LC-001"
+      - id: R-533001-06
+        new: true
+        item: "the geometry of record fails its own interference check: bracket EWTW-533001-031 #11 overlaps doubler EWTW-533001-041 by 34856.8 mm3 despite the I-7 dodge"
+        affects: [EWTW-533001-031, EWTW-533001-041]
+        evidence: "verification report section D"
+        mitigation: "CAD revision, then re-run the verification"
 
   ReqBS:
-    status: absent - the only remaining LCS-A blocker
+    status: "candidates listed, none authored - the only open gate of BL-053-300-010-A2"
     candidates:
       - {req: "pressure-boundary integrity at the outflow-valve penetration", allocated_to: [EWTW-533001-041, EWTW-533001-042], verification: analysis+test}
       - {req: "damage tolerance of the production splice (PSE candidate)", allocated_to: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014], verification: analysis+test}
       - {req: "NDT accessibility of the join and its straps", allocated_to: [EWTW-533001-050, EWTW-533001-051], verification: inspection-demonstration, links: R-533001-02}
       - {req: "systems-run support load capability", allocated_to: [EWTW-533001-031], verification: analysis}
-      - {req: "stability of the band under compressive bending", allocated_to: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014], verification: analysis, new: true, source: "LC-001 finding A-533001-03 - axial strength does not govern; stability, bearing and fatigue must be examined (LC-002)"}
+      - {req: "stability of the band under compressive bending", allocated_to: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014], verification: analysis, source: "LC-001 finding A-533001-03 - axial strength does not govern; stability, bearing and fatigue must be examined (LC-002)"}
+    history:
+      - {revision: 2, status: "absent - the only remaining LCS-A blocker"}
 
-  WBS: {status: "not started on main - crosswalk to eWTW-WBS-20-40 / 20-30 / 30-30 / 100-30 / 110-20 still to be written"}
-  CBS: {status: "charter on main; cost objects derivable from part.yaml make/buy, not emitted"}
+  WBS:
+    status: crosswalk emitted
+    history:
+      - {revision: 2, status: "not started on main - crosswalk to eWTW-WBS-20-40 / 20-30 / 30-30 / 100-30 / 110-20 still to be written"}
+  CBS:
+    status: "cost objects emitted, classified by part.yaml role; no figures"
+    gap: "four butt straps (BUTT-STRAP-SEGMENT-JOIN#NN) carry no part number yet (I-12)"
+    history:
+      - {revision: 2, status: "charter on main; cost objects derivable from part.yaml make/buy, not emitted"}
   LBS: {status: "charter on main; provisioning classes derivable, not emitted"}
   TPuBS: {status: "not started - STRUCTURE-class infocode seed (0xx/3xx/6xx) awaits the F2 register"}
 

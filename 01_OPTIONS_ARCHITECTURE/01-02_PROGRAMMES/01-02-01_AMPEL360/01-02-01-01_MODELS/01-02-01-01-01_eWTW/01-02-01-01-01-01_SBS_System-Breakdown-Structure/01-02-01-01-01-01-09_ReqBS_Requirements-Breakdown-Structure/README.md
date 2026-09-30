@@ -27,4 +27,8 @@ The workstream opens when the first requirement is formally levied on a realized
 
 ## Status
 
-**STUB — candidates only.** [`REQUIREMENT-CANDIDATES.yaml`](REQUIREMENT-CANDIDATES.yaml) lists five candidates for station `eWTW-PBS-053-300-010` with their `allocatedTo:` and verification method. No requirement is authored: ids and wording await the authoring act (open gate of `BL-053-300-010-A2`).
+**STUB — candidates only.** Candidates carry their `allocatedTo:` and verification method. No requirement is authored: ids and wording await the authoring act.
+
+**Station files.** One file per station, beside this README:
+
+- [`REQUIREMENT-CANDIDATES_EWTW-533001.yaml`](REQUIREMENT-CANDIDATES_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: five candidates (open gate of `BL-053-300-010-A2`).

@@ -1,0 +1,60 @@
+# Generated 2026-09-30 - GitHub Copilot - EWTW-533001 allocation revision 3
+# CBS cost objects of station eWTW-PBS-053-300-010 - one file per station. Recurring-side
+# cost objects are derived views, one per part number: eWTW-CBS-<CSN>-<item> (CM-002 SS3),
+# regenerated from the part-number tree, never typed (SS4.2). A cost object holds no
+# product attribute - role, make/buy and quantity are read from part.yaml (SS4.4).
+# class: follows the part.yaml role of the subject - terminal parts (leaf, constituent)
+# are recurring; sets are rollup; the top assembly is assembly (its integration labour
+# only). A rollup or assembly object is never summed with its children (CM-001 SS4.2):
+# a rollup carries no cost of its own, and the station total counts each terminal once.
+# No cost figure is authored: cost stays null until the owning authority records one.
+# Non-recurring objects (eWTW-CBS-<WBS id>) are not emitted.
+# Paths are relative to the SBS root.
+
+station_cost_objects:
+  id: eWTW-CBS-OBJECTS-533001
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  quantity_discipline: AMPEL360-PBS-PN-CM-001 (Issue 2) SS4.2
+  station: eWTW-PBS-053-300-010
+  derived: true
+  source: PILOT-ALLOCATION_EWTW-533001.yaml
+  derived_from:
+    path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/part-register.yaml
+  class_by_role:
+    leaf: recurring
+    constituent: recurring
+    set: rollup
+    assembly: assembly
+
+cost_objects:
+  - {id: eWTW-CBS-533001-000, subject: EWTW-533001-000, class: assembly, scope: "integration labour of the zone assembly only - children excluded", cost: null}
+
+  - {id: eWTW-CBS-533001-010, subject: EWTW-533001-010, class: rollup, rolls_up: [eWTW-CBS-533001-011, eWTW-CBS-533001-012, eWTW-CBS-533001-013, eWTW-CBS-533001-014], incomplete: "butt straps without part number - see gap row", cost: null}
+  - {id: eWTW-CBS-533001-011, subject: EWTW-533001-011, class: recurring, cost: null}
+  - {id: eWTW-CBS-533001-012, subject: EWTW-533001-012, class: recurring, cost: null}
+  - {id: eWTW-CBS-533001-013, subject: EWTW-533001-013, class: recurring, cost: null}
+  - {id: eWTW-CBS-533001-014, subject: EWTW-533001-014, class: recurring, cost: null}
+
+  - {id: eWTW-CBS-533001-020, subject: EWTW-533001-020, class: rollup, rolls_up: [eWTW-CBS-533001-021], cost: null}
+  - {id: eWTW-CBS-533001-021, subject: EWTW-533001-021, class: recurring, cost: null}
+
+  - {id: eWTW-CBS-533001-030, subject: EWTW-533001-030, class: rollup, rolls_up: [eWTW-CBS-533001-031], cost: null}
+  - {id: eWTW-CBS-533001-031, subject: EWTW-533001-031, class: recurring, cost: null}
+
+  - {id: eWTW-CBS-533001-040, subject: EWTW-533001-040, class: rollup, rolls_up: [eWTW-CBS-533001-041, eWTW-CBS-533001-042], cost: null}
+  - {id: eWTW-CBS-533001-041, subject: EWTW-533001-041, class: recurring, cost: null}
+  - {id: eWTW-CBS-533001-042, subject: EWTW-533001-042, class: recurring, cost: null}
+
+  - {id: eWTW-CBS-533001-050, subject: EWTW-533001-050, class: rollup, rolls_up: [eWTW-CBS-533001-051], cost: null}
+  - {id: eWTW-CBS-533001-051, subject: EWTW-533001-051, class: recurring, cost: null}
+
+  - id: null
+    subject: null
+    class: gap
+    parent: EWTW-533001-010
+    bodies: "BUTT-STRAP-SEGMENT-JOIN#NN - the four segment butt straps of the splice ring"
+    gap: "no part number yet (geometry of record, interpretation note I-12 - PN allocation pending per programme governance); no derived cost object can exist until one is allocated"
+    evidence:
+      file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+      section: "A | part-count truth (count BUTT-STRAP-SEGMENT-JOIN = 4); H | I-12"
+    cost: null
