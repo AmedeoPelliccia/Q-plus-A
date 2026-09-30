@@ -1,0 +1,39 @@
+# Integrated baseline - second sequence. BL-053-300-010-A1 is SUPERSEDED (CM-003 section 3):
+# its FBS member changed state after PR #58, so the proposed set no longer describes the station.
+# Governance note: the governing convention AMPEL360-SBS-LC-CM-003 is PROPOSED and not on
+# main, and BL-053-300-010-A1 was a proposal that was never committed. This record is a
+# proposal under a proposed convention; it sits at the SBS root until CM-003 lands and
+# moves to BASELINES/ then.
+baseline:
+  schema: "AMPEL360-BASELINE-RECORD/1.0"
+  id: BL-053-300-010-A2
+  supersedes: BL-053-300-010-A1
+  scope: eWTW-PBS-053-300-010
+  stage: LCS-A
+  status: PROPOSED
+  assumptions:
+    - "energy-carrier placement not aft of the rear pressure bulkhead (open eWTW decision) - the baseline is invalidated if that changes"
+  gate_criteria:
+    - {view: PBS,   criterion: "node identity bound and concept geometry present",   met: true,  evidence: "station.yaml; geometry of record committed"}
+    - {view: FBS,   criterion: "functions allocated to the station",                  met: true,  evidence: "functional-allocation-matrix.yaml: FBS-50 at station grain + FBS-70/40/90 supporting", changed_since_A1: true}
+    - {view: IBS,   criterion: "interfaces declared with resolvable counterparts",    met: true,  evidence: "ICD-REGISTER 3 rows; dossiers under ICD-aligned ids"}
+    - {view: TPMS,  criterion: "first performance estimates recorded",               met: true,  evidence: "TPM-533001-MASS 80.3 kg on the geometry of record"}
+    - {view: RBS,   criterion: "risk register opened for the scope",                 met: true,  evidence: "R-533001-01..06 (RISKS_EWTW-533001.yaml)"}
+    - {view: EBS,   criterion: "concept evidence indexed",                           met: true,  evidence: "verification report indexed; LC-001 rows pending-commit"}
+    - {view: ReqBS, criterion: "initial requirements baseline",                      met: false, evidence: null, blocker: "five candidates, none authored - engineering act"}
+  criteria_met: "6 / 7"
+  releasable: false
+  what_is_missing: ["ReqBS initial set"]
+  open_items:
+    - item: "the geometry of record fails its own interference check - bracket EWTW-533001-031 #11 overlaps doubler EWTW-533001-041 by 34856.8 mm3 (22 PASS | 1 FAIL | 1 WARN)"
+      measure: TPM-533001-INTERF
+      risk: R-533001-06
+      evidence:
+        file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+        section: "D | interference truth"
+      closes_when: "a CAD revision of the geometry of record is re-verified with 0 hard interferences"
+    - item: "the station run-record is invalid YAML (illegal escape in a double-quoted scalar, line 26) - pre-existing on main, not introduced by this baseline"
+      evidence:
+        file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/Prompts/Run-record.yaml
+      closes_when: "precondition P0 is applied in the PBS area - YAML corrected and the C1.5 lowercase rename to prompts/run-record.yaml"
+  release_decision: {act: null, date: null, authority: null}

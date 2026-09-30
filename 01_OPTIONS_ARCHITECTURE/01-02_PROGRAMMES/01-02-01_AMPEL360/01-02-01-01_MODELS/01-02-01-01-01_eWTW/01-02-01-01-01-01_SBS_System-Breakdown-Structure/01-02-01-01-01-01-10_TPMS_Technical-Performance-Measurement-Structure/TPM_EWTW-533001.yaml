@@ -1,0 +1,71 @@
+# Generated 2026-09-30 - GitHub Copilot - EWTW-533001 allocation revision 3
+# TPMS measures of station eWTW-PBS-053-300-010 - one file per station. Product measures
+# carry the derived id TPM-<CSN>-<MEASURE> (CM-002 SS3). Every current value is read from
+# evidence on disk and carries the sha256 of the source it was computed on; no value
+# restates part.yaml (CM-002 SS4.4). A target is recorded only where the owning authority
+# levied one; otherwise it stays null.
+# Paths are relative to the SBS root.
+
+station_tpm:
+  id: eWTW-TPMS-TPM-533001
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  station: eWTW-PBS-053-300-010
+  source: PILOT-ALLOCATION_EWTW-533001.yaml
+  geometry_of_record:
+    file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/CAD/source/EWTW-533001-000_concept.py
+    version: v0.2.1-concept
+    spec: "v1 - bracket rows at 145/215 deg, NDT plug seats at 15 + 30k deg"
+    sha256_as_run: fc32c5cf6188ae2cdc0636863267dec446bc47eb7edea5c53b1cd03ffc19bc3d
+    sha256_git_blob: 3ab4db3a850a04eb948c4f3e6f399a8e0d04942e1712f0b5b55595b955cf19c3
+    sha256_note: "as-run = the value in the run-record (CRLF line endings, no final newline); git blob = the committed LF form; same content"
+  verification_report:
+    file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+    sha256_as_run: a6cdb51c731513689f7a3539106e6e8214bddabe9fe02088526a50d18c3b9abc
+    sha256_git_blob: a9876e57ad650c73657941b4361561e15066d7bf569b25fd1943149867348612
+    result: "22 PASS | 1 FAIL | 1 WARN"
+
+measures:
+  - id: TPM-533001-MASS
+    subject: eWTW-PBS-053-300-010
+    quantity: concept structural mass of EWTW-533001-000
+    unit: kg
+    current_value: 80.3
+    previous_value: 80.1
+    target: null
+    threshold: null
+    basis: "volume rollup of the geometry of record (29750172.4 mm3, verification report section F) x 2.70e-6 kg/mm3 (aluminium class, assumed)"
+    breakdown_kg:
+      EWTW-533001-010: 74.6
+      EWTW-533001-020: 0.8
+      EWTW-533001-030: 1.1
+      EWTW-533001-040: 3.3
+      EWTW-533001-050: 0.5
+    change: "re-based on the geometry of record; splice ring unchanged at 74.6 kg (92.8 %), surround 3.3 kg against 3.0 kg"
+    status: estimate
+
+  - id: TPM-533001-PARTS
+    subject: eWTW-PBS-053-300-010
+    quantity: part numbers under the station
+    unit: count
+    current_value: 15
+    target: null
+    threshold: null
+    basis: "part.yaml nodes under EWTW-533001-000 (derived register below); 50 leaf bodies in the geometry of record (verification report section C)"
+    register:
+      path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/part-register.yaml
+    status: measured
+
+  - id: TPM-533001-INTERF
+    subject: eWTW-PBS-053-300-010
+    quantity: hard interferences between assembly bodies (> 1 mm3, ghost excluded)
+    unit: count
+    current_value: 1
+    target: 0
+    threshold: null
+    basis: "verification report section D - OVERLAP EWTW-533001-031#11 x EWTW-533001-041 = 34856.8 mm3"
+    risk: R-533001-06
+    status: measured - target not met
+    history:
+      - revision: 2
+        stated_value: 0
+        correction: "the committed report of the geometry of record measures 1; allocation revision 3 records 1. Open until a re-run on a revised geometry of record measures 0."

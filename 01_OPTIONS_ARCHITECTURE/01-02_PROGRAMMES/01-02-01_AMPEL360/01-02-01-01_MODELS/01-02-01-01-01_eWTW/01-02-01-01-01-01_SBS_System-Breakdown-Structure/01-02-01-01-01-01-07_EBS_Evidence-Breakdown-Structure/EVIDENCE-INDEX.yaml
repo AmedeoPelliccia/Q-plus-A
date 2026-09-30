@@ -5,7 +5,11 @@
 # Per AMPEL360-SBS-ID-CM-002 SS3 the EBS has no id space of its own: rows are
 # path-addressed and carry subject: (a part number or an act id).
 # Row schema: class, subject, path (relative to the SBS root; null when the act
-# text is not on disk), status, note (optional), citedBy (optional).
+# text is not on disk), status, note (optional), citedBy (optional), action (required
+# when status is pending-commit).
+# Status: on-disk | cited-only (an act cited by id, text not on disk) | pending-commit
+# (an artefact produced but not yet committed; the row carries the action that resolves
+# it and becomes on-disk when the artefact is committed into its node).
 
 evidence_index:
   id: eWTW-EBS-EVIDENCE-INDEX
@@ -14,7 +18,7 @@ evidence_index:
     - ratified-act-or-convention
     - migration-or-completion-record
     - verification-report
-    - analysis-or-test-record   # future
+    - analysis-or-test-record
     - pse-register              # future
 
 rows:
@@ -73,3 +77,28 @@ rows:
     status: cited-only
     citedBy:
       - AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md
+
+  - class: analysis-or-test-record
+    subject: EWTW-533001-000
+    path: null
+    status: pending-commit
+    action: "commit the LC-001 analysis package into node EWTW-533001-000 (analysis/structural/LC-001/); the row then becomes on-disk with its path"
+    note: >
+      LC-001 structural analysis record (analysis/structural/LC-001/analysis.yaml);
+      produced after PR #58 in the staged pilot layout, not on main. Carries
+      findings A-533001-02 (R-533001-05) and A-533001-03 (ReqBS candidate).
+    citedBy:
+      - PILOT-ALLOCATION_EWTW-533001.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/RISKS_EWTW-533001.yaml
+      - 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/REQUIREMENT-CANDIDATES_EWTW-533001.yaml
+
+  - class: analysis-or-test-record
+    subject: EWTW-533001-000
+    path: null
+    status: pending-commit
+    action: "commit the LC-001 analysis package into node EWTW-533001-000 (analysis/structural/LC-001/); the row then becomes on-disk with its path"
+    note: >
+      LC-001 pre-solver content binding records (analysis/structural/LC-001/
+      declaration.yaml + run-record.yaml, C1.6); staged pilot layout, not on main.
+    citedBy:
+      - PILOT-ALLOCATION_EWTW-533001.yaml

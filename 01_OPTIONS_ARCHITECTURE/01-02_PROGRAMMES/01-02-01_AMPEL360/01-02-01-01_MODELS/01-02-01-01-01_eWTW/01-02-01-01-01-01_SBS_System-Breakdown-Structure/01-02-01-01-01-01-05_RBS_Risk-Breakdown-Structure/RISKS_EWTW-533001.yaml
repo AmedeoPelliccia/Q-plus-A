@@ -1,0 +1,97 @@
+# Generated 2026-09-30 - GitHub Copilot - EWTW-533001 allocation revision 3
+# RBS risks of station eWTW-PBS-053-300-010 - one file per station. Sovereign ids
+# (CM-002 SS3): R-<CSN>-<seq> while a risk is confined to one station, else R-<seq>.
+# The binding field is affects: (PBS node ids or part numbers, each resolvable on disk -
+# CM-002 SS4.1). Risks are recorded as raised by the owning authority in the allocation
+# record and stated against the geometry of record (the generator committed in the node
+# and its verification report); likelihood, severity and owner stay null until assessed -
+# no score is invented here.
+# Paths are relative to the SBS root.
+
+station_risks:
+  id: eWTW-RBS-RISKS-533001
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  station: eWTW-PBS-053-300-010
+  source: PILOT-ALLOCATION_EWTW-533001.yaml
+
+risks:
+  - id: R-533001-01
+    item: "rear pressure bulkhead joint declared at zone level; load path not demonstrated"
+    affects: [EWTW-533001-000]
+    via: ICD-EWTW-533001-538002
+    dossier: 01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/eWTW-IBS-533001-538002_Rear-Pressure-Bulkhead-Joint.md
+    raised: allocation revision 1, unchanged in revisions 2 and 3
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: OPEN
+
+  - id: R-533001-02
+    item: "split NDT plug seat across two segment ends: on the geometry of record 4 of 12 plug seats straddle the segment butt joints (45/135/225/315 deg) - edge distance, seat integrity and sealing at the butt"
+    affects: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014, EWTW-533001-051]
+    evidence_note: "geometry of record, interpretation note I-2 (each straddling seat is cut half in each adjacent segment); verification report section C: plug seats straddling butt joints = 4"
+    evidence:
+      file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+      section: "C | topology truth; H | I-2"
+    raised: allocation revision 1; restated in revision 3 against the geometry of record
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: OPEN
+    history:
+      - revision: 2
+        item: "butt-strap NDT coverage: plug seats deliberately clear of the butt joints"
+        affects: [EWTW-533001-010, EWTW-533001-050, EWTW-533001-051]
+        superseded_because: "on the committed geometry the plug seats are not clear of the butts - 4 of 12 straddle them; the risk is the split seat, not strap inaccessibility"
+
+  - id: R-533001-03
+    item: "production-join tolerance and indexing scheme unproven"
+    affects: [EWTW-533001-010, EWTW-533001-020, EWTW-533001-021]
+    via: ICD-EWTW-533001-534001
+    dossier: 01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/eWTW-IBS-533001-534001_Aft-to-Tailcone-Production-Join.md
+    raised: allocation revision 1, unchanged in revisions 2 and 3
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: OPEN
+
+  - id: R-533001-04
+    item: "outflow-valve cutout in a fatigue-sensitive region"
+    affects: [EWTW-533001-040, EWTW-533001-041, EWTW-533001-042]
+    via: ICD-EWTW-533001-021
+    dossier: 01-02-01-01-01-01-08_IBS_Interface-and-Installation-Breakdown-Structure/eWTW-IBS-533001_Rear-Fuselage-Zone-Interface-Set/eWTW-IBS-533001-021_Outflow-Valve-Structural-Surround.md
+    raised: allocation revision 1, unchanged in revisions 2 and 3
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: OPEN
+
+  - id: R-533001-05
+    item: "unfilleted re-entrant step at the land-to-band transition: a stress concentration the concept CAD cannot resolve, fatigue-relevant"
+    affects: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014]
+    finding: "LC-001 finding A-533001-02; the peak is non-convergent by construction - 43.9 MPa and 56.7 MPa on two geometries of the same design at the same mesh"
+    finding_record: "LC-001 analysis records - pending-commit, not on main (see EVIDENCE-INDEX.yaml)"
+    raised: allocation revision 2 (new)
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: "fillet in the next CAD revision, then re-run LC-001"
+    status: OPEN
+
+  - id: R-533001-06
+    item: "the geometry of record fails its own interference check: bracket EWTW-533001-031 #11 overlaps doubler EWTW-533001-041 by 34856.8 mm3 despite the I-7 dodge"
+    affects: [EWTW-533001-031, EWTW-533001-041]
+    measure: TPM-533001-INTERF
+    evidence:
+      file: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+      section: "D | interference truth"
+    raised: allocation revision 3 (new)
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: "CAD revision of the geometry of record, then re-run its verification"
+    status: OPEN

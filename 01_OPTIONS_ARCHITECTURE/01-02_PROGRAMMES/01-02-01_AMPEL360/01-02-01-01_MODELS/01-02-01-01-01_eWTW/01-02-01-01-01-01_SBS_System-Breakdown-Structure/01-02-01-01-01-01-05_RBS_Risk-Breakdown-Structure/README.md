@@ -27,4 +27,8 @@ The workstream opens when the first risk is formally raised against a realized i
 
 ## Status
 
-**STUB — no depth authored.**
+**PILOT — risks opened.** Risks are raised by the owning authority in the station allocation record, stated against the geometry of record and bound through `affects:`. Likelihood, severity and owner stay null until assessed.
+
+**Station files.** One file per station, beside this README:
+
+- [`RISKS_EWTW-533001.yaml`](RISKS_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: `R-533001-01..06` (`PILOT-ALLOCATION_EWTW-533001.yaml`, revision 3).

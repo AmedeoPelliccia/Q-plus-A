@@ -28,4 +28,8 @@ The workstream opens when the first measure is levied with a planned value and a
 
 ## Status
 
-**STUB — no depth authored.**
+**PILOT — first product measures recorded.** Each measure is read from committed evidence with the sha256 of its source; the geometry of record and its verification report are named per station. Targets are null except where the authority levied one.
+
+**Station files.** One file per station, beside this README:
+
+- [`TPM_EWTW-533001.yaml`](TPM_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: `TPM-533001-MASS`, `-PARTS` and `-INTERF` (current 1, target 0 — the geometry of record fails its own interference check).

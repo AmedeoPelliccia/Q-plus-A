@@ -28,4 +28,8 @@ The workstream opens when the first make/buy decision is recorded against a real
 
 ## Status
 
-**STUB — no depth authored.**
+**PILOT — cost objects emitted, no figures.** Every `cost:` is null until the owning authority records one. Each object is classified by the `role` in its `part.yaml`: terminal parts (`leaf`, `constituent`) are `recurring`; sets are `rollup` and the top assembly is `assembly` (integration labour only) — neither is ever summed with its children (CM-001 §4.2). Parts that exist in the geometry but carry no part number yet appear as explicit gap rows.
+
+**Station files.** One file per station, beside this README:
+
+- [`COST-OBJECTS_EWTW-533001.yaml`](COST-OBJECTS_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: 15 objects `eWTW-CBS-533001-<item>` and one gap row (the four butt straps, no part number yet).

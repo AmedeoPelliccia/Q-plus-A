@@ -1,0 +1,57 @@
+# Generated 2026-09-30 - GitHub Copilot - EWTW-533001 allocation revision 2
+# WBS crosswalk for station eWTW-PBS-053-300-010. Work packages keep their sovereign ids
+# and bind to the product through delivers: (CM-002 SS3). The work-package nodes are not
+# modified; this file is the crosswalk the allocation record lists as missing.
+# Artifact paths are relative to the SBS root and exist on disk.
+
+wbs_crosswalk:
+  id: eWTW-WBS-CROSSWALK-533001
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  station: eWTW-PBS-053-300-010
+  source: PILOT-ALLOCATION_EWTW-533001.yaml
+
+rows:
+  - work_package: eWTW-WBS-20-40
+    title: CAD/PLM and Geometry Configuration
+    delivers: [EWTW-533001-000]
+    deliverable: "configuration of the geometry of record - generator, neutral exchange and preview under one run-record"
+    artifacts:
+      - path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/CAD/source/EWTW-533001-000_concept.py
+      - path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/CAD/exchange/EWTW-533001-000_concept.step
+      - path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/CAD/Preview/EWTW-533001-000_concept.glb
+    status: in-work
+
+  - work_package: eWTW-WBS-20-30
+    title: Configuration and Data Management
+    delivers: [eWTW-PBS-053-300-010]
+    deliverable: "station identity and configuration records - station, part register, allocation record, integrated baseline"
+    artifacts:
+      - path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/station.yaml
+      - path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/part-register.yaml
+      - path: PILOT-ALLOCATION_EWTW-533001.yaml
+      - path: BASELINE-RECORD_BL-053-300-010-A2.yaml
+    status: in-work
+
+  - work_package: eWTW-WBS-30-30
+    title: Vehicle Configuration, Integration and Digital Mock-Up (DMU)
+    delivers: [EWTW-533001-000]
+    deliverable: "DMU integration of the station - interference truth (TPM-533001-INTERF)"
+    artifacts:
+      - path: 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/eWTW-PBS-000_Aircraft-Product/eWTW-PBS-050_Airframe-Structure/eWTW-PBS-053-000_Fuselage-Wide-Tube/eWTW-PBS-053-300-000_Aft-Fuselage-Structure/eWTW-PBS-053-300-010_Rear-Fuselage-Zone-General/EWTW-533001-000_STRUCTURE-REAR-FUSELAGE-ZONE/evidence/EWTW-533001-000_concept_verification.txt
+    status: in-work - 1 hard interference open
+
+  - work_package: eWTW-WBS-100-30
+    title: Type Certification Data Package
+    delivers: [eWTW-PBS-053-300-010]
+    deliverable: "type-certification data for the station"
+    artifacts: []
+    status: not-started
+    blocked_by: "ReqBS initial set (open gate of BL-053-300-010-A2)"
+
+  - work_package: eWTW-WBS-110-20
+    title: Data Module Authoring
+    delivers: [eWTW-PBS-053-300-010]
+    deliverable: "STRUCTURE-class data modules for the station (TPuBS)"
+    artifacts: []
+    status: not-started
+    blocked_by: "F2 register - STRUCTURE-class infocode seed (0xx/3xx/6xx)"

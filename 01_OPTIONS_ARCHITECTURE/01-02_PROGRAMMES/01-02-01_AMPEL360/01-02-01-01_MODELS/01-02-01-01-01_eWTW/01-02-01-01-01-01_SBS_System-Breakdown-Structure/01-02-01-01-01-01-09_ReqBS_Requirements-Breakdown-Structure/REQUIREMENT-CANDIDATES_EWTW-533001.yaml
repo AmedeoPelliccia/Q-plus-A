@@ -1,0 +1,55 @@
+# Generated 2026-09-30 - GitHub Copilot - EWTW-533001 allocation revision 3
+# ReqBS candidates of station eWTW-PBS-053-300-010 - one file per station. These are
+# CANDIDATES, not requirements: no REQ-<level>-<seq> id is assigned and no requirement
+# wording is authored here - both belong to the authoring act (ReqBS charter, Trigger).
+# The rows carry the subject, the allocation (allocatedTo:, CM-002 SS3) and the
+# verification method as stated in the allocation record; satisfies: stays null until
+# authored.
+# This list is the open ReqBS gate of BL-053-300-010-A2.
+
+station_requirement_candidates:
+  id: eWTW-ReqBS-CANDIDATES-533001
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  station: eWTW-PBS-053-300-010
+  source: PILOT-ALLOCATION_EWTW-533001.yaml
+  baseline_gate: BASELINE-RECORD_BL-053-300-010-A2.yaml
+  status: CANDIDATE - none authored
+
+candidates:
+  - subject: "pressure-boundary integrity at the outflow-valve penetration"
+    allocatedTo: [EWTW-533001-041, EWTW-533001-042]
+    verification: analysis+test
+    satisfies: null
+    id: null
+    text: null
+
+  - subject: "damage tolerance of the production splice (PSE candidate)"
+    allocatedTo: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014]
+    verification: analysis+test
+    satisfies: null
+    id: null
+    text: null
+
+  - subject: "NDT accessibility of the join and its straps"
+    allocatedTo: [EWTW-533001-050, EWTW-533001-051]
+    verification: inspection-demonstration
+    links: R-533001-02
+    satisfies: null
+    id: null
+    text: null
+
+  - subject: "systems-run support load capability"
+    allocatedTo: [EWTW-533001-031]
+    verification: analysis
+    satisfies: null
+    id: null
+    text: null
+
+  - subject: "stability of the band under compressive bending"
+    allocatedTo: [EWTW-533001-011, EWTW-533001-012, EWTW-533001-013, EWTW-533001-014]
+    verification: analysis
+    origin: "LC-001 finding A-533001-03 - axial strength does not govern; stability, bearing and fatigue must be examined (LC-002)"
+    new_in: allocation revision 2
+    satisfies: null
+    id: null
+    text: null

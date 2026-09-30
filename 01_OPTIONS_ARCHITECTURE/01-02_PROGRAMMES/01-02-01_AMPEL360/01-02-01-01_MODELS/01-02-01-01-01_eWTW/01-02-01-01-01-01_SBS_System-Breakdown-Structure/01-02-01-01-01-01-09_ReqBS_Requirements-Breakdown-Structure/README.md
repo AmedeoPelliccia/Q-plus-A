@@ -27,4 +27,8 @@ The workstream opens when the first requirement is formally levied on a realized
 
 ## Status
 
-**STUB — no depth authored.**
+**STUB — candidates only.** Candidates carry their `allocatedTo:` and verification method. No requirement is authored: ids and wording await the authoring act.
+
+**Station files.** One file per station, beside this README:
+
+- [`REQUIREMENT-CANDIDATES_EWTW-533001.yaml`](REQUIREMENT-CANDIDATES_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: five candidates (open gate of `BL-053-300-010-A2`).
