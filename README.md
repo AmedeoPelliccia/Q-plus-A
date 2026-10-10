@@ -1,5 +1,8 @@
 # Q+A — Open Aerospace Engineering Architecture
 
+![Uploading image.png…]()
+
+
 **From structured engineering intent to models, simulations, evidence and physical product definition.**
 
 Q+A is a collaborative aerospace and advanced-systems engineering repository built around controlled product structures, deterministic identifiers, technical-information governance and lifecycle traceability. It is the working repository of the **Q+** initiative and hosts the **Q+ATLANTIDE** architecture taxonomy, the **OPTIONS** enterprise architecture, and the programme breakdown structures of the **AMPEL360**, **GAIA-AIR**, **GAIA-SPACE** and **ROBBBO-T** programmes.
