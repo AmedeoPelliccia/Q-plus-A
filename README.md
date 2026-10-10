@@ -1,6 +1,6 @@
 # Q+A — Open Aerospace Engineering Architecture
 
-![Uploading image.png…]()
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/cbb5f478-c733-4508-ae82-c9ad4fef13da" />
 
 
 **From structured engineering intent to models, simulations, evidence and physical product definition.**
