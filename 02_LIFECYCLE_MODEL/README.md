@@ -247,6 +247,8 @@ publication_content_class_rule:
     that class's gate, and its status states its class truthfully.
 ```
 
+The classes are alternatives, not stages. A `P0` shell becomes `P1` or `P2` directly, at that class's own gate. `P1` instructions remain deliverables of `LC-F` / `LC-G` and never turn into `P2` content, although experience gained with them may inform the validation of `P2` procedures.
+
 **Where the P2 gate falls.** Not at TRL 9 (actual system proven through successful mission operations): operational and maintenance content must exist before the operation it governs. For a type-certificated product the instructions for continued airworthiness are a certification deliverable — sufficient instructions must be available at design approval, and any remainder only under a programme that completes them before entry into service. The P2 gate of maintenance publications therefore falls within `LC-J`–`LC-K`, ahead of `LC-L` operations.
 
 *Informative references:* 14 CFR 25.1529 — instructions for continued airworthiness may be incomplete at type certification if a programme ensures their completion before delivery of the first aeroplane or issue of a standard certificate of airworthiness, whichever is later; EASA Certification Memorandum CM-ICA-001 Issue 01 (2017), *Completeness and Timely Availability of Instructions for Continued Airworthiness*.
@@ -718,7 +720,8 @@ flowchart LR
         G -->|"not yet"| D
     end
     G -->|"met"| X["Exit decision recorded<br/>release · insertion · new cycle · stop"]
-    X --> B["Released product<br/>baseline of the scope"]
+    G -->|"unattainable or<br/>objective changed"| X
+    X -->|"release or insertion"| B["Released product<br/>baseline of the scope"]
     B --> P2["P2 — released operational and<br/>maintenance content · LC-L / LC-M"]
     P0["P0 — publication architecture<br/>from LC-A · no prescriptive content"] -.-> P2
     T -.-> P1["P1 — experimental instructions<br/>article-bound · limit of use"]
