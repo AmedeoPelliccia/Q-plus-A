@@ -52,7 +52,7 @@ REV-<LETTER><n>      = iteration n of that stage's deliverable set
 
 The lifecycle has two distinct regimes:
 
-**Staged initialization (sequential).** A stage's deliverable layer is first initialized only after the upstream layer reaches a usable released baseline. The first `REV-B0` exists only after `REV-A_RELEASED`; the first operations manual `REV-L0` exists only once there is a released design/certification baseline to document. Publication *architecture* — DMRL, business rules, identifiers, publication structure — is not manual content and is not bound by this rule; publication deliverables are classed by content in §2.4.
+**Staged initialization (sequential).** A stage's deliverable layer is first initialized only after the upstream layer reaches a usable released baseline. The first `REV-B0` exists only after `REV-A_RELEASED`; the first operations manual `REV-L0` exists only once there is a released design/certification baseline to document. Publication *architecture* — DMRL, business rules, identifiers, publication structure — is not manual content and is not bound by this rule; publication deliverables are classed by content in §2.4. Development articles of a scoped maturation cycle initialize `LC-F` on the controlled path of `QPLUS-LC-ARTICLE-SCOPE-001` (§2.3), not after an `LC-E` release.
 
 **Concurrent evolution (decoupled).** Once initialized, **every layer iterates independently**. Iteration in one layer does not, by itself, create iterations in any other layer:
 
@@ -207,10 +207,16 @@ article_scope_rule:
     per scope. A scoped maturation cycle (§13.1) may place development
     articles of its own scope — breadboard, brassboard, prototype, test rig —
     into CH before any programme-level physical article exists. Such articles
-    and their test records are LC-F deliverables of that scope. The G5
-    placement of each article is authorized by the LC-phase authority for
-    that scope alone, and does not change the C-GROWTH conformance mode
-    declared for the rest of the programme.
+    and their test records are LC-F deliverables of that scope, and they
+    initialize LC-F for the scope on a controlled path of their own rather
+    than after an LC-E release: the definition the article embodies is
+    released at the layer that defines it; the article's configuration is
+    identified; test objectives and correlation thresholds are declared
+    before execution; the hazards of the trial itself are assessed and
+    controlled; and its P1 instructions carry a limit of use. G5 placement
+    of each article is then authorized by the LC-phase authority for that
+    scope alone, and does not change the C-GROWTH conformance mode declared
+    for the rest of the programme.
 ```
 
 **Findings coupling.** C-GROWTH CR dispositions and feedback packages produce findings in the classes of §6 (`F-INFO` / `F-WARN` / `F-BLOCK` / `F-DEFER`), raised against the REV of the layer in which the revolution ran. Open `F-BLOCK` findings block that layer's `*_RELEASED`.
@@ -224,8 +230,8 @@ Planning publications early is sound; prescribing actions on a product that is s
 | Class | Content | May proceed | Carried as |
 |---|---|---|---|
 | `P0` Publication architecture | DMRL, business rules, SNS and data-module codes, publication-module structure, illustration planning, publication plan; data-module shells with no prescriptive content | From `LC-A` | TPuBS architecture records, controlled by issue — not `REV-Lx` / `REV-Mx` |
-| `P1` Experimental instructions | Instructions to build, install, operate, test or maintain a development or qualification article | Only for an authorized experimental configuration, with an explicit limit of use | Deliverables of the layer whose article they serve: `LC-F` (development), `LC-G` (qualification) |
-| `P2` Released operational and maintenance content | Manuals; descriptive and procedural data modules for operational use | When the pinned source set consists of released product baselines applicable to the configuration served, and each procedure has been verified and validated for its intended use | `LC-L` / `LC-M` deliverables, `REV-Lx` / `REV-Mx` |
+| `P1` Experimental instructions | Instructions to build, install, operate, test or maintain a development or qualification article | Only for an authorized experimental configuration, verified against it — procedures also validated — before use, with an explicit limit of use | Deliverables of the layer whose article they serve: `LC-F` (development), `LC-G` (qualification) |
+| `P2` Released operational and maintenance content | Manuals; descriptive and procedural data modules for operational use | When the pinned source set consists of released product baselines applicable to the configuration served, all content has been verified against those sources, and each procedure has also been validated for its intended use | `LC-L` / `LC-M` deliverables, `REV-Lx` / `REV-Mx` |
 
 ```yaml
 publication_content_class_rule:
@@ -238,16 +244,21 @@ publication_content_class_rule:
     limit, value, warning or caution), and is never the authority for a
     product statement: the link runs from product to publication only. P1
     experimental instructions exist only for an authorized experimental
-    configuration; they name the article and configuration they apply to
-    and carry an explicit limit of use. P2 content is released only when
-    its pinned source set (QPLUS-LC-SSOT-PIN-001) consists of released
-    product baselines applicable to the configuration it serves, and each
-    procedure has been verified and validated for its intended use. A
+    configuration; they name the article and configuration they apply to,
+    carry an explicit limit of use, and are verified against that article
+    and configuration, with their procedures validated, before use. P2
+    content is released only when its pinned source set
+    (QPLUS-LC-SSOT-PIN-001) consists of released product baselines
+    applicable to the configuration it serves, all of it — descriptive as
+    well as procedural — has been verified against those sources, and each
+    procedure has also been validated for its intended use. A
     data-module shell may exist as P0; it becomes P1 or P2 only by passing
     that class's gate, and its status states its class truthfully.
 ```
 
 The classes are alternatives, not stages. A `P0` shell becomes `P1` or `P2` directly, at that class's own gate. `P1` instructions remain deliverables of `LC-F` / `LC-G` and never turn into `P2` content, although experience gained with them may inform the validation of `P2` procedures.
+
+The classes govern technical publications — TPuBS items. Engineering and certification records — compliance reports, certification plans, type-design data — are deliverables of their own layers (for example `LC-J`) under release gates, not publications. Authority-approved operational and maintenance publications, such as the flight manual or the airworthiness limitations, are `P2`.
 
 **Where the P2 gate falls.** Not at TRL 9 (actual system proven through successful mission operations): operational and maintenance content must exist before the operation it governs. For a type-certificated product the instructions for continued airworthiness are a certification deliverable — sufficient instructions must be available at design approval, and any remainder only under a programme that completes them before entry into service. The P2 gate of maintenance publications therefore falls within `LC-J`–`LC-K`, ahead of `LC-L` operations.
 
@@ -264,8 +275,8 @@ This model adopts the AGES definitions below (AGES `GLOSSARY.md` and `architectu
 | Artefact revision | A change to tracked digital artefacts, e.g. a commit — not by itself an evolution transition | A `REV` iteration, a commit, a C-GROWTH revolution, a maturation-cycle pass |
 | Candidate change | A proposed modification; it may be rejected, blocked, revised, withdrawn, validated but not authorised, and so on | A proposed baseline; an upgrade branch (§15); a maturation cycle before its exit decision (§13.1) |
 | Controlled trial | Bounded experimentation under its own explicit, traceable authority | G5 placement of a development article for one scope (§2.3), with `P1` instructions (§2.4) |
-| Ratification | The event through which a verified configuration becomes the canonical successor baseline and opens a new age | The recorded release decision — act, date, authority — of a baseline whose membership is pinned |
-| Age | Ageₙ = [ratify(Bₙ), ratify(Bₙ₊₁)) | The interval during which a released baseline of a scope remains canonical |
+| Ratification | The event through which a verified configuration becomes the canonical successor baseline and opens a new age | The recorded release decision — act, date, authority — of a scope's integrated baseline, by the authority designated for the scope, with its membership pinned |
+| Age | Ageₙ = [ratify(Bₙ), ratify(Bₙ₊₁)) | The interval during which a ratified baseline remains canonical, per scope and effectivity |
 | Ratified transition history 𝒯₀:ₙ | Part of identity | The chain of release decisions and `supersedes` links of a scope |
 | Effectivity · invariants · provenance | E_f · ℐₙ · Pₙ | Applicability; the invariants declared with a baseline; pinned source sets, run records and content hashes |
 
@@ -274,16 +285,30 @@ age_rule:
   id: QPLUS-LC-AGE-001
   name: "Age Rule (AGES binding)"
   rule: >
-    For each baseline scope, an age is the interval during which a ratified
-    baseline remains canonical: Age_n = [ratify(B_n), ratify(B_n+1)), as
-    defined by AGES. Ratification is the recorded release decision — act,
-    date, authority — of a baseline whose members are bound by immutable
-    reference (commit and content hash), whose effectivity and invariants
-    are declared, and which names the baseline it supersedes. REV
-    iterations, commits, C-GROWTH revolutions and maturation-cycle passes
-    occur within an age and do not by themselves open one. A ratified
-    concept baseline may govern an age of research; its use as a source of
-    P2 content still requires the P2 gate (§2.4).
+    Ages are kept per baseline scope and effectivity. An age is the interval
+    during which a ratified baseline remains canonical: Age_n =
+    [ratify(B_n), ratify(B_n+1)), as defined by AGES. The baseline that
+    opens an age is the integrated baseline of its scope: it binds the
+    released revisions of its member layers and views by immutable
+    reference (commit and content hash), declares its effectivity and
+    invariants, and names the baseline it supersedes — except the first
+    baseline of a scope, whose ratification is the scope's genesis.
+    Ratification is the recorded release decision — act, date, authority —
+    of the ratification authority designated for the scope. For a given
+    scope and effectivity at most one baseline is canonical at a time:
+    ratifications are serialized, and a ratification is valid only if the
+    baseline it supersedes is the one canonical at that moment. A layer's
+    *_RELEASED revision is a member of a baseline and does not by itself
+    open an age; whether it requires a new ratification is decided by the
+    impact assessment of §2.1–§2.2, and a change to identity-relevant
+    configuration (design, airworthiness limitations, invariants,
+    effectivity) requires one. Nested scopes keep their own ages, and a
+    parent baseline pins the child baselines it includes. Before genesis a
+    scope has no canonical baseline and no age: its work forms the
+    candidate history of its first baseline. REV iterations, commits,
+    C-GROWTH revolutions and maturation-cycle passes do not by themselves
+    open an age. A ratified concept baseline may govern an age of research;
+    its use as a source of P2 content still requires the P2 gate (§2.4).
 
 evolutionary_memory_rule:
   id: QPLUS-LC-MEMORY-001
@@ -301,6 +326,8 @@ evolutionary_memory_rule:
     record cites the memory it relies on, including any superseded
     assumption or negative result that bears on it.
 ```
+
+AGES leaves concurrent scope-specific ages and inheritance between scopes as open questions (AGES `models/temporal-model.md`; `architecture/README.md` §13). The scope, effectivity and composition provisions of `QPLUS-LC-AGE-001` are the Q-plus-A answer for its products, consistent with the AGES temporal model — every instant after genesis belongs to exactly one age per effectivity scope.
 
 Reconstructable is not the same as reversible. A physical embodiment may not be undone: AGES-CPS distinguishes rollback, compensation, safe-state transition, containment and recovery baselines, and the reversibility class of a change is declared with it. Publications sit on ages through their pinned sources: a `P2` publication's pinned source set identifies the age it describes, and when a new age opens its disposition follows the impact assessment of §2.1–§2.2.
 
@@ -734,7 +761,9 @@ maturation_cycle_rule:
   rule: >
     A partial lifecycle cycle that repeats over a subset of layers to mature
     one scope shall be declared by a maturation cycle record before its
-    first revision. The record names the scope, the layers involved, the
+    first revision, under an identifier allocated through the scope's cycle
+    register — unique per scope and never reused. The record names the
+    scope, the layers involved, the
     critical technology elements with their entry and target TRL, the
     evidence each target requires under the TRL control layer, the exit
     criteria, and the decision the exit will support. Revisions inside the
@@ -754,9 +783,9 @@ Minimum maturation cycle record:
 
 ```yaml
 maturation_cycle_record:
-  cycle_id: "<SCOPE>-MC-<NN>"                  # e.g. EPACK-MC-01
+  cycle_id: "<SCOPE>-MC-<NN>"                  # e.g. EPACK-MC-01; allocated through the scope's cycle register, never reused
   scope: "<PBS id, part number or Q+ATLANTIDE technology node>"
-  branch: "<product baseline | upgrade id per §15>"
+  branch: "<product baseline | technology maturation | upgrade id per §15>"
   layers_involved: ["LC-A", "LC-B", "LC-D", "LC-F"]
   critical_technology_elements:
     - element: "<technology>"
@@ -772,7 +801,7 @@ maturation_cycle_record:
   exit_decision: {decision: null, date: null, authority: null}
 ```
 
-Future technologies run their maturation cycles on their own upgrade branch (§14–§15); insertion into a product baseline follows `QATL-TICC-001` and `QATL-UPGRADE-REV-CYCLE-001`. Documentation follows its own revisions and pinned sources (§2.1–§2.2): a design iteration inside a maturation cycle triggers a documentation impact assessment, never an automatic manual revision.
+Before it reaches its insertion TRL, a future technology matures in cycles scoped to the technology itself (branch `technology maturation`); programme-specific maturity claims carry effectivity, as the TRL control layer requires (`QATL-TRL-PROGRAMME-001`). The upgrade branch of §14–§15 starts only when the target TRL is reached: it pins the maturation evidence as source data, and insertion into a product baseline follows `QATL-TICC-001` and `QATL-UPGRADE-REV-CYCLE-001`. TRL makes a technology eligible; LC/REV maturity makes it installable. Documentation follows its own revisions and pinned sources (§2.1–§2.2): a design iteration inside a maturation cycle triggers a documentation impact assessment, never an automatic manual revision.
 
 ### 13.2 Decision-Relative Maturity
 
@@ -789,9 +818,13 @@ decision_maturity_rule:
     baseline, release of a preliminary-design baseline, G5 placement of an
     article in CH, insertion into a product baseline, first flight, and
     release of P2 publications. A decision taken below its declared
-    threshold records the deficit as an assumption, with the condition that
-    invalidates it, or as an accepted F-DEFER finding. A provisional TRL is
-    never an authorization.
+    threshold requires a waiver recorded by the accountable decision
+    authority, stating the deficit, its rationale, the condition that would
+    invalidate it, the associated risk record (RBS), and the limits —
+    effectivity and duration — within which the decision holds. An
+    assumption or an F-DEFER finding documents a deficit; it never waives
+    one. A threshold that implements a regulatory requirement cannot be
+    waived by the programme. A provisional TRL is never an authorization.
 ```
 
 | Decision | What it requires (illustrative — each programme declares its own thresholds) |
@@ -1041,11 +1074,11 @@ radome_upgrade_candidate_example:
 18. Every layer may initiate C-GROWTH revolutions and work packages from layer-local inputs, independent of upstream or downstream activity (`QPLUS-LC-CG-INIT-001`).
 19. C-GROWTH conformance while no physical article exists shall be declared CT-bounded, with G5/G6 activation planned at the first physical article of each scope (default: `LC-F` deliverables; `QPLUS-LC-ARTICLE-SCOPE-001`).
 20. TRL promotion claims shall be evidence-based per `QATL-TRL-EVIDENCE-001`; schedule–evidence divergence shall be recorded in the RBS.
-21. A partial cycle that repeats over a subset of layers to mature one scope shall be declared by a maturation cycle record — scope, layers, entry and target TRL, required evidence, exit criteria — and shall end only by a recorded exit decision (`QPLUS-LC-MATCYCLE-001`).
-22. Maturity thresholds shall be declared per decision; a decision taken below its threshold records the deficit, and a provisional TRL never authorizes (`QPLUS-LC-DECISION-MATURITY-001`).
-23. Physical-article availability shall be declared per scope; development articles of a maturation cycle are `LC-F` deliverables of that scope (`QPLUS-LC-ARTICLE-SCOPE-001`).
-24. Every publication artefact shall declare a content class; prescriptive content is released only through the `P2` gate (`QPLUS-LC-PUBCLASS-001`).
-25. For each baseline scope, ages are bounded by ratifications; revisions, commits, revolutions and maturation-cycle passes occur within an age and do not open one (`QPLUS-LC-AGE-001`).
+21. A partial cycle that repeats over a subset of layers to mature one scope shall be declared by a maturation cycle record — with an identifier unique per scope, scope, layers, entry and target TRL, required evidence, exit criteria — and shall end only by a recorded exit decision (`QPLUS-LC-MATCYCLE-001`).
+22. Maturity thresholds shall be declared per decision. A decision below its threshold requires a waiver recorded by the accountable decision authority; assumptions and `F-DEFER` findings document deficits but never waive them; regulatory thresholds cannot be waived by the programme; a provisional TRL never authorizes (`QPLUS-LC-DECISION-MATURITY-001`).
+23. Physical-article availability shall be declared per scope; development articles of a maturation cycle are `LC-F` deliverables of that scope, initialized on their own controlled path rather than after an `LC-E` release (`QPLUS-LC-ARTICLE-SCOPE-001`).
+24. Every technical publication shall declare a content class. `P1` instructions are verified, and their procedures validated, before use; `P2` content is verified in full and its procedures validated before release (`QPLUS-LC-PUBCLASS-001`).
+25. Ages are kept per baseline scope and effectivity. Only the integrated baseline of a scope opens an age; at most one baseline is canonical per scope and effectivity; ratifications are serialized; the first ratification is the scope's genesis (`QPLUS-LC-AGE-001`).
 26. Evolutionary memory shall remain verifiable and usable: superseded baselines reconstructable, final statuses of candidates kept, negative results retained, corrections superseding and never overwriting, ratification records never erased; content that may not be republished is retained by reference and hash (`QPLUS-LC-MEMORY-001`).
 
 ---
@@ -1107,4 +1140,4 @@ Companion controlled document in this folder:
 | `0.5.0` | 2026-06-11 | C-GROWTH binding (rev E): bound `Q+A-METHOD-CGROWTH-SPEC-001` as the controlled intra-stage execution method; gate family separation (G1–G6 vs `*_RELEASED`); CH availability mapped per LC stage; findings coupling; `cgrowth_execution_record` metadata; `QATL-TRL-EVIDENCE-001`. |
 | `0.6.0` | 2026-06-11 | **Critical structural correction (rev F)**: LC stages redefined as deliverable layers with anchored REV letters (`QPLUS-LC-REVLETTER-001`); iteration numbers decoupled across layers (`QPLUS-LC-DECOUPLE-001`) — a REV-C3 design iteration does not force REV-Lx/REV-Mx documentation iterations, and documentation may iterate (service bulletins, structure improvements) with design SSOT unchanged; SSOT source-data pinning made the sole cross-layer coupling mechanism (`QPLUS-LC-SSOT-PIN-001`, `pinned_source_set` metadata); release gate rule reframed (first initialization sequential, thereafter independent iteration); every layer may initiate C-GROWTH revolutions and work packages from layer-local inputs (`QPLUS-LC-CG-INIT-001`); feedback-package routing across layers defined; decoupled-iteration radome example added (§18.1); governance rules renumbered and extended (1–20). |
 | `0.6.1` | 2026-06-11 | TPuBS added to the SBS breakdown family (rev G): `TPuBS_Technical-Publications-Breakdown-Structure` registered in §11 as the breakdown home of the documentation layers (`REV-Lx`/`REV-Mx` publication items: PMCs, subject nodes, DMs, infocodes); TPuBS items revise on layer-local counters and carry their `pinned_source_set` records at TPuBS level per `QPLUS-LC-SSOT-PIN-001`; `SBS-REV-BREAKDOWN-001` extended accordingly (replacing the informal "publication references" wording); governance rule 10 and closure statement updated. |
-| `0.7.0` | 2026-10-12 | Partial maturation cycles (rev H): scoped maturation cycles over a subset of layers with entry and target TRL, required evidence, exit criteria and a recorded exit decision (§13.1, `QPLUS-LC-MATCYCLE-001`, `maturation_cycle_record`); decision-relative maturity thresholds (§13.2, `QPLUS-LC-DECISION-MATURITY-001`); physical-article availability declared per scope, with development articles as `LC-F` deliverables (§2.3, §3, `QPLUS-LC-ARTICLE-SCOPE-001`); publication content classes `P0` architecture / `P1` experimental instructions / `P2` released content, with the `P2` gate placed before operational use rather than at TRL 9 (§2.4, `QPLUS-LC-PUBCLASS-001`); AGES binding (§2.5): ages bounded by ratified baselines (`QPLUS-LC-AGE-001`) and evolutionary memory (`QPLUS-LC-MEMORY-001`), with the repository as an AGES underlying record system and a correspondence table to AGES concepts; §2.1 and §11 aligned; governance rule 19 amended and 21–26 added. No section renumbered. |
+| `0.7.0` | 2026-10-12 | Partial maturation cycles (rev H): scoped maturation cycles over a subset of layers with entry and target TRL, required evidence, exit criteria and a recorded exit decision (§13.1, `QPLUS-LC-MATCYCLE-001`, `maturation_cycle_record`); decision-relative maturity thresholds (§13.2, `QPLUS-LC-DECISION-MATURITY-001`); physical-article availability declared per scope, with development articles as `LC-F` deliverables (§2.3, §3, `QPLUS-LC-ARTICLE-SCOPE-001`); publication content classes `P0` architecture / `P1` experimental instructions / `P2` released content, with the `P2` gate placed before operational use rather than at TRL 9 (§2.4, `QPLUS-LC-PUBCLASS-001`); AGES binding (§2.5): ages bounded by ratified baselines (`QPLUS-LC-AGE-001`) and evolutionary memory (`QPLUS-LC-MEMORY-001`), with the repository as an AGES underlying record system and a correspondence table to AGES concepts; §2.1 and §11 aligned; governance rule 19 amended and 21–26 added. Incorporates the review of PR #62: waivers for below-threshold decisions; verification of all `P1` and `P2` content; a controlled `LC-F` initialization path for development articles; genesis, serialized ratification and integrated baselines as the only age openers, per scope and effectivity; technology-scoped maturation before the upgrade branch; unique cycle identifiers; content classes limited to technical publications. No section renumbered. |
