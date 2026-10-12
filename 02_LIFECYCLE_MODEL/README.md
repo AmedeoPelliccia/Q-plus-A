@@ -6,8 +6,8 @@ path: 02_LIFECYCLE_MODEL/README.md
 register: Q-plus
 architecture: OPTIONS_ARCHITECTURE
 status: draft
-version: "0.6.1"
-revision: G
+version: "0.7.0"
+revision: H
 classification: open-governance-baseline
 owner: AEROSPACEMODEL / Q-plus
 lifecycle_model: "LC-letter deliverable-layer maturity model (anchored letters, decoupled iteration)"
@@ -30,6 +30,8 @@ Version `0.5.0` bound the **C-GROWTH execution method** (`Q+A-METHOD-CGROWTH-SPE
 
 Version `0.6.0` applies a **critical structural correction**: LC stages are **deliverable layers**, each with its REV letter **anchored**; iteration numbers are **decoupled** across layers; cross-layer consistency is maintained exclusively by **SSOT source-data pinning**; and **every stage may initiate its own C-GROWTH revolutions and work packages independently** of upstream stage activity. See §2.
 
+Version `0.7.0` makes **partial maturation cycles** explicit. A product that is to incorporate future technologies does not mature uniformly: one scope — an E-pack, a tank, an inverter — may pass several times through concept, design, analysis and test while the rest of the product holds more mature baselines. The version adds the **scoped maturation cycle** (§13.1), **decision-relative maturity thresholds** (§13.2), **physical-article availability per scope** (§2.3), and **publication content classes** (§2.4), which separate publication planning, which may start at concept, from prescriptive manual content, which may not.
+
 It retains the single LC-letter lifecycle axis (no enterprise LC01–LC14 axis). The only orthogonal overlay is TRL (technology maturity), which is distinct from LC-letter (deliverable maturity) by design — see §13.
 
 ---
@@ -50,7 +52,7 @@ REV-<LETTER><n>      = iteration n of that stage's deliverable set
 
 The lifecycle has two distinct regimes:
 
-**Staged initialization (sequential).** A stage's deliverable layer is first initialized only after the upstream layer reaches a usable released baseline. The first `REV-B0` exists only after `REV-A_RELEASED`; the first operations manual `REV-L0` exists only once there is a released design/certification baseline to document.
+**Staged initialization (sequential).** A stage's deliverable layer is first initialized only after the upstream layer reaches a usable released baseline. The first `REV-B0` exists only after `REV-A_RELEASED`; the first operations manual `REV-L0` exists only once there is a released design/certification baseline to document. Publication *architecture* — DMRL, business rules, identifiers, publication structure — is not manual content and is not bound by this rule; publication deliverables are classed by content in §2.4.
 
 **Concurrent evolution (decoupled).** Once initialized, **every layer iterates independently**. Iteration in one layer does not, by itself, create iterations in any other layer:
 
@@ -184,9 +186,9 @@ cgrowth_binding_rule:
 | `G1–G6` | Loop transitions inside a revolution (per layer) | Per C-GROWTH gate matrix | `Q+A-METHOD-CGROWTH-SPEC-001` §5 |
 | `*_RELEASED` | Layer baseline release | Per §5 of this README | This README |
 
-The single deliberate coupling point is **G5 (CT→CH)**: placing an artefact on hardware requires both C-GROWTH test coverage and lifecycle authorization, because physical-article availability is a property of the programme state, not of the method.
+The single deliberate coupling point is **G5 (CT→CH)**: placing an artefact on hardware requires both C-GROWTH test coverage and lifecycle authorization, because physical-article availability is a property of the programme state, declared per scope (`QPLUS-LC-ARTICLE-SCOPE-001`), not of the method.
 
-**CH availability.** The CH loop activates only where physical articles exist. Physical-article availability is a **programme-level state** consumed by all layers:
+**CH availability.** The CH loop activates only where physical articles exist. Physical-article availability is declared **per scope**. The table gives the programme-level default, consumed by all layers; a scoped maturation cycle (§13.1) may make development articles of its own scope available earlier:
 
 | Programme state | C-GROWTH conformance mode | CH instantiation |
 |---|---|---|
@@ -196,9 +198,58 @@ The single deliberate coupling point is **G5 (CT→CH)**: placing an artefact on
 | In service (`LC-L`/`LC-M` layers active) | Full C-GROWTH, terminal CH | The in-service vehicle as its own correlation instrument; feedback packages route to design and documentation layers |
 | Retirement (`LC-N` layer) | CH closes | Teardown evidence as final feedback packages into circularity records |
 
+```yaml
+article_scope_rule:
+  id: QPLUS-LC-ARTICLE-SCOPE-001
+  name: "Physical-Article Availability per Scope"
+  rule: >
+    Physical-article availability, and with it CH instantiation, is declared
+    per scope. A scoped maturation cycle (§13.1) may place development
+    articles of its own scope — breadboard, brassboard, prototype, test rig —
+    into CH before any programme-level physical article exists. Such articles
+    and their test records are LC-F deliverables of that scope. The G5
+    placement of each article is authorized by the LC-phase authority for
+    that scope alone, and does not change the C-GROWTH conformance mode
+    declared for the rest of the programme.
+```
+
 **Findings coupling.** C-GROWTH CR dispositions and feedback packages produce findings in the classes of §6 (`F-INFO` / `F-WARN` / `F-BLOCK` / `F-DEFER`), raised against the REV of the layer in which the revolution ran. Open `F-BLOCK` findings block that layer's `*_RELEASED`.
 
 **Upgrade branches.** C-GROWTH applies identically to upgrade branches (§14–§15): an upgrade branch starting at `<ITEM>-UPG-<NNN>-REV-A0` initializes its own layer set and runs its own revolutions; its records attach to the upgrade-specific REV identifiers.
+
+### 2.4 Publication Content Classes
+
+Planning publications early is sound; prescribing actions on a product that is still hypothetical is not. Every publication artefact therefore declares a **content class**, and each class has its own gate:
+
+| Class | Content | May proceed | Carried as |
+|---|---|---|---|
+| `P0` Publication architecture | DMRL, business rules, SNS and data-module codes, publication-module structure, illustration planning, publication plan; data-module shells with no prescriptive content | From `LC-A` | TPuBS architecture records, controlled by issue — not `REV-Lx` / `REV-Mx` |
+| `P1` Experimental instructions | Instructions to build, install, operate, test or maintain a development or qualification article | Only for an authorized experimental configuration, with an explicit limit of use | Deliverables of the layer whose article they serve: `LC-F` (development), `LC-G` (qualification) |
+| `P2` Released operational and maintenance content | Manuals; descriptive and procedural data modules for operational use | When the pinned source set consists of released product baselines applicable to the configuration served, and each procedure has been verified and validated for its intended use | `LC-L` / `LC-M` deliverables, `REV-Lx` / `REV-Mx` |
+
+```yaml
+publication_content_class_rule:
+  id: QPLUS-LC-PUBCLASS-001
+  name: "Publication Content Classes and Gates"
+  rule: >
+    Every publication artefact declares one content class. P0 publication
+    architecture may be created and iterated from LC-A onward; it plans
+    publications, carries no prescriptive content (no procedural step,
+    limit, value, warning or caution), and is never the authority for a
+    product statement: the link runs from product to publication only. P1
+    experimental instructions exist only for an authorized experimental
+    configuration; they name the article and configuration they apply to
+    and carry an explicit limit of use. P2 content is released only when
+    its pinned source set (QPLUS-LC-SSOT-PIN-001) consists of released
+    product baselines applicable to the configuration it serves, and each
+    procedure has been verified and validated for its intended use. A
+    data-module shell may exist as P0; it becomes P1 or P2 only by passing
+    that class's gate, and its status states its class truthfully.
+```
+
+**Where the P2 gate falls.** Not at TRL 9 (actual system proven through successful mission operations): operational and maintenance content must exist before the operation it governs. For a type-certificated product the instructions for continued airworthiness are a certification deliverable — sufficient instructions must be available at design approval, and any remainder only under a programme that completes them before entry into service. The P2 gate of maintenance publications therefore falls within `LC-J`–`LC-K`, ahead of `LC-L` operations.
+
+*Informative references:* 14 CFR 25.1529 — instructions for continued airworthiness may be incomplete at type certification if a programme ensures their completion before delivery of the first aeroplane or issue of a standard certificate of airworthiness, whichever is later; EASA Certification Memorandum CM-ICA-001 Issue 01 (2017), *Completeness and Timely Availability of Instructions for Continued Airworthiness*.
 
 ---
 
@@ -213,7 +264,7 @@ Each stage is a **deliverable layer**. The "Scope" column describes the delivera
 | `LC-C` | Detailed Design | Detailed CAD/product definition, material stack, BOM/CAD consistency, drawing preparation, detailed `ReqBS/IBS/CBS/RBS/EBS/TPMS` alignment. | `REV-C_RELEASED` |
 | `LC-D` | Analysis / Verification Design | Analysis-ready geometry, verification setup, simulation models, test logic, requirements verification planning. | `REV-D_RELEASED` |
 | `LC-E` | Release Candidate / Engineering Definition | Engineering release candidate before physical mock-up, qualification, or certification use. | `REV-E_RELEASED` |
-| `LC-F` | PMA — Physical Mock-Up Article and Wind Tunnel | Physical mock-up, installation mock-up, aerodynamic mock-up, wind-tunnel preparation. | `REV-F_RELEASED` |
+| `LC-F` | PMA — Physical Mock-Up Article and Wind Tunnel | Physical mock-up, installation mock-up, aerodynamic mock-up, wind-tunnel preparation; development test articles of scoped maturation cycles — breadboard, brassboard, prototype, test rig (§2.3, §13.1). | `REV-F_RELEASED` |
 | `LC-G` | Qualification | Qualification test article, qualification evidence, test reports, compliance-relevant records. | `REV-G_RELEASED` |
 | `LC-H` | Hardware & Software Embodiment | Hardware embodiment, digital configuration, software/data integration, product-data binding. | `REV-H_RELEASED` |
 | `LC-I` | Installation and Interface | Installation closure, interface maturity, aircraft or system integration readiness. | `REV-I_RELEASED` |
@@ -489,7 +540,7 @@ SBS_System-Breakdown-Structure/
 
 The SBS defines the breakdown family. The PBS defines the physical item. Each `PBS REV-X` defines the authoritative state of its associated revision-specific breakdowns.
 
-The **TPuBS** structures the technical-publications deliverable set (PMCs, subject nodes, DMs, infocodes) per programme. It is the breakdown home of the documentation layers (`LC-L`/`LC-M` deliverables, `REV-Lx`/`REV-Mx`): publication REVs are TPuBS items, and their `pinned_source_set` records (`QPLUS-LC-SSOT-PIN-001`) are carried at TPuBS level — making the TPuBS the place where the decoupled documentation layers declare which PBS/design revisions they sit on.
+The **TPuBS** structures the technical-publications deliverable set (PMCs, subject nodes, DMs, infocodes) per programme. It is the breakdown home of the documentation layers (`LC-L`/`LC-M` deliverables, `REV-Lx`/`REV-Mx`): publication REVs are TPuBS items, and their `pinned_source_set` records (`QPLUS-LC-SSOT-PIN-001`) are carried at TPuBS level — making the TPuBS the place where the decoupled documentation layers declare which PBS/design revisions they sit on. It also holds the publication architecture (class `P0`, §2.4), controlled by issue rather than by layer REVs, and may hold experimental instructions (class `P1`) for the articles of `LC-F` and `LC-G`.
 
 ```yaml
 revisioned_breakdown_structure_rule:
@@ -601,6 +652,102 @@ technology_insertion_rule:
     compatibility assessment, evidence delta analysis, lifecycle insertion
     gate definition, and configuration-control approval.
 ```
+
+### 13.1 Scoped Maturation Cycles
+
+Products that are to incorporate future technologies do not mature uniformly. One scope — a technology element, component or subsystem, such as an E-pack, a tank or an inverter — may pass several times through concept, design, analysis and test while the rest of the product holds more mature baselines. The model represents this as a **scoped maturation cycle**: a declared, bounded sequence of passes over a subset of layers, with a maturity objective and exit criteria.
+
+A maturation cycle is not a layer and has no REV letter. Its work is done as ordinary revisions of the layers it involves — anchored letters, decoupled numbers, C-GROWTH revolutions executing one layer at a time. The cycle record binds those revisions to an objective and records the exit decision.
+
+```mermaid
+flowchart LR
+    subgraph MC["Scoped maturation cycle — one scope, e.g. an E-pack"]
+        D["Concept, design and analysis<br/>revisions · LC-A … LC-D"] --> T["Development articles and tests<br/>LC-F of the scope · CH active"]
+        T --> G{"Exit criteria met?"}
+        G -->|"not yet"| D
+    end
+    G -->|"met"| X["Exit decision recorded<br/>release · insertion · new cycle · stop"]
+    X --> B["Released product<br/>baseline of the scope"]
+    B --> P2["P2 — released operational and<br/>maintenance content · LC-L / LC-M"]
+    P0["P0 — publication architecture<br/>from LC-A · no prescriptive content"] -.-> P2
+    T -.-> P1["P1 — experimental instructions<br/>article-bound · limit of use"]
+```
+
+```yaml
+maturation_cycle_rule:
+  id: QPLUS-LC-MATCYCLE-001
+  name: "Scoped Maturation Cycle Rule"
+  rule: >
+    A partial lifecycle cycle that repeats over a subset of layers to mature
+    one scope shall be declared by a maturation cycle record before its
+    first revision. The record names the scope, the layers involved, the
+    critical technology elements with their entry and target TRL, the
+    evidence each target requires under the TRL control layer, the exit
+    criteria, and the decision the exit will support. Revisions inside the
+    cycle follow the ordinary layer rules (QPLUS-LC-REVLETTER-001,
+    QPLUS-LC-DECOUPLE-001, QPLUS-LC-SSOT-PIN-001). Iterating CAD and
+    simulation does not raise TRL: from TRL 4 upward, hardware maturity
+    requires test evidence on physical articles in the environment the level
+    names (QATL-TRL-EVIDENCE-001; Q+A-METHOD-CGROWTH-SPEC-001 §1.5).
+    Reaching the target TRL does not by itself demonstrate integration,
+    installation compatibility, safety or compliance; each is an exit
+    criterion of its own where the decision needs it. A cycle ends only by
+    a recorded exit decision: release, insertion, a new cycle with a revised
+    objective, or stop.
+```
+
+Minimum maturation cycle record:
+
+```yaml
+maturation_cycle_record:
+  cycle_id: "<SCOPE>-MC-<NN>"                  # e.g. EPACK-MC-01
+  scope: "<PBS id, part number or Q+ATLANTIDE technology node>"
+  branch: "<product baseline | upgrade id per §15>"
+  layers_involved: ["LC-A", "LC-B", "LC-D", "LC-F"]
+  critical_technology_elements:
+    - element: "<technology>"
+      qatl_node: "<Q+ATLANTIDE node>"
+      trl_entry: "TRL-3"
+      trl_target: "TRL-5"
+      evidence_required: "<per TRL-evidence-requirements, e.g. test results in a relevant environment>"
+      articles: ["<breadboard | brassboard | prototype id>"]
+  integration_criteria: []                     # interface, installation and safety evidence the decision needs
+  exit_criteria: []                            # measurable, declared before the first pass
+  decision_supported: "<scope REV-x_RELEASED | insertion | G5 placement | stop>"
+  passes: []                                   # one entry per pass: revisions produced, evidence added, verdict
+  exit_decision: {decision: null, date: null, authority: null}
+```
+
+Future technologies run their maturation cycles on their own upgrade branch (§14–§15); insertion into a product baseline follows `QATL-TICC-001` and `QATL-UPGRADE-REV-CYCLE-001`. Documentation follows its own revisions and pinned sources (§2.1–§2.2): a design iteration inside a maturation cycle triggers a documentation impact assessment, never an automatic manual revision.
+
+### 13.2 Decision-Relative Maturity
+
+Maturity thresholds are not universal; they depend on the decision being authorized. A concept may legitimately be released with immature technology and recorded assumptions; inserting the same technology into a product baseline requires much more.
+
+```yaml
+decision_maturity_rule:
+  id: QPLUS-LC-DECISION-MATURITY-001
+  name: "Decision-Relative Maturity Thresholds"
+  rule: >
+    Each programme shall declare, per decision, the maturity it requires of
+    each critical technology element and of the integration the decision
+    depends on. The declaration covers at least: release of a concept
+    baseline, release of a preliminary-design baseline, G5 placement of an
+    article in CH, insertion into a product baseline, first flight, and
+    release of P2 publications. A decision taken below its declared
+    threshold records the deficit as an assumption, with the condition that
+    invalidates it, or as an accepted F-DEFER finding. A provisional TRL is
+    never an authorization.
+```
+
+| Decision | What it requires (illustrative — each programme declares its own thresholds) |
+|---|---|
+| `REV-A_RELEASED` of a scope | Concept feasibility; immature elements allowed, with their TRL and assumptions recorded |
+| `REV-B_RELEASED` of a scope | Critical technology elements at the programme's preliminary-design threshold, or an approved maturation cycle with a fallback |
+| G5 placement of an article | Article configuration identified; test objectives and correlation thresholds declared before execution |
+| Insertion into a product baseline | Target TRL reached on evidence; interface compatibility, evidence delta and configuration-control approval (`QATL-TICC-001`) |
+| First flight | Flight-clearance evidence for the configuration flown |
+| Release of `P2` publications | Released, applicable product sources; procedures verified and validated (§2.4) |
 
 ---
 
@@ -838,8 +985,12 @@ radome_upgrade_candidate_example:
 16. The root `02_LIFECYCLE_MODEL/README.md` is the controlling lifecycle reference for Q-plus-A unless superseded by a higher governance document.
 17. C-GROWTH (`Q+A-METHOD-CGROWTH-SPEC-001`) is the controlled execution method; every revolution executes within exactly one layer, its gate records (G1–G6) attach to that layer's REV, and G-gates never substitute for `*_RELEASED` gates (`QPLUS-LC-CGROWTH-001`).
 18. Every layer may initiate C-GROWTH revolutions and work packages from layer-local inputs, independent of upstream or downstream activity (`QPLUS-LC-CG-INIT-001`).
-19. C-GROWTH conformance while no physical article exists shall be declared CT-bounded, with G5/G6 activation planned at the first physical article (default: `LC-F` deliverables).
+19. C-GROWTH conformance while no physical article exists shall be declared CT-bounded, with G5/G6 activation planned at the first physical article of each scope (default: `LC-F` deliverables; `QPLUS-LC-ARTICLE-SCOPE-001`).
 20. TRL promotion claims shall be evidence-based per `QATL-TRL-EVIDENCE-001`; schedule–evidence divergence shall be recorded in the RBS.
+21. A partial cycle that repeats over a subset of layers to mature one scope shall be declared by a maturation cycle record — scope, layers, entry and target TRL, required evidence, exit criteria — and shall end only by a recorded exit decision (`QPLUS-LC-MATCYCLE-001`).
+22. Maturity thresholds shall be declared per decision; a decision taken below its threshold records the deficit, and a provisional TRL never authorizes (`QPLUS-LC-DECISION-MATURITY-001`).
+23. Physical-article availability shall be declared per scope; development articles of a maturation cycle are `LC-F` deliverables of that scope (`QPLUS-LC-ARTICLE-SCOPE-001`).
+24. Every publication artefact shall declare a content class; prescriptive content is released only through the `P2` gate (`QPLUS-LC-PUBCLASS-001`).
 
 ---
 
@@ -862,6 +1013,15 @@ TRL maturity (orthogonal overlay; evidence-based promotion)
 upgradeability
 evolutionary acquisition blocks
 upgrade branch baselines
+```
+
+Version `0.7.0` adds:
+
+```text
+scoped maturation cycles (partial cycles over a subset of layers, per scope, to a maturity objective)
+decision-relative maturity thresholds
+physical-article availability per scope (development articles as LC-F deliverables)
+publication content classes P0 / P1 / P2 and their gates
 ```
 
 It shall be referenced by product-specific lifecycle records such as:
@@ -890,3 +1050,4 @@ Companion controlled document in this folder:
 | `0.5.0` | 2026-06-11 | C-GROWTH binding (rev E): bound `Q+A-METHOD-CGROWTH-SPEC-001` as the controlled intra-stage execution method; gate family separation (G1–G6 vs `*_RELEASED`); CH availability mapped per LC stage; findings coupling; `cgrowth_execution_record` metadata; `QATL-TRL-EVIDENCE-001`. |
 | `0.6.0` | 2026-06-11 | **Critical structural correction (rev F)**: LC stages redefined as deliverable layers with anchored REV letters (`QPLUS-LC-REVLETTER-001`); iteration numbers decoupled across layers (`QPLUS-LC-DECOUPLE-001`) — a REV-C3 design iteration does not force REV-Lx/REV-Mx documentation iterations, and documentation may iterate (service bulletins, structure improvements) with design SSOT unchanged; SSOT source-data pinning made the sole cross-layer coupling mechanism (`QPLUS-LC-SSOT-PIN-001`, `pinned_source_set` metadata); release gate rule reframed (first initialization sequential, thereafter independent iteration); every layer may initiate C-GROWTH revolutions and work packages from layer-local inputs (`QPLUS-LC-CG-INIT-001`); feedback-package routing across layers defined; decoupled-iteration radome example added (§18.1); governance rules renumbered and extended (1–20). |
 | `0.6.1` | 2026-06-11 | TPuBS added to the SBS breakdown family (rev G): `TPuBS_Technical-Publications-Breakdown-Structure` registered in §11 as the breakdown home of the documentation layers (`REV-Lx`/`REV-Mx` publication items: PMCs, subject nodes, DMs, infocodes); TPuBS items revise on layer-local counters and carry their `pinned_source_set` records at TPuBS level per `QPLUS-LC-SSOT-PIN-001`; `SBS-REV-BREAKDOWN-001` extended accordingly (replacing the informal "publication references" wording); governance rule 10 and closure statement updated. |
+| `0.7.0` | 2026-10-12 | Partial maturation cycles (rev H): scoped maturation cycles over a subset of layers with entry and target TRL, required evidence, exit criteria and a recorded exit decision (§13.1, `QPLUS-LC-MATCYCLE-001`, `maturation_cycle_record`); decision-relative maturity thresholds (§13.2, `QPLUS-LC-DECISION-MATURITY-001`); physical-article availability declared per scope, with development articles as `LC-F` deliverables (§2.3, §3, `QPLUS-LC-ARTICLE-SCOPE-001`); publication content classes `P0` architecture / `P1` experimental instructions / `P2` released content, with the `P2` gate placed before operational use rather than at TRL 9 (§2.4, `QPLUS-LC-PUBCLASS-001`); §2.1 and §11 aligned; governance rules 19 amended and 21–24 added. No section renumbered. |
