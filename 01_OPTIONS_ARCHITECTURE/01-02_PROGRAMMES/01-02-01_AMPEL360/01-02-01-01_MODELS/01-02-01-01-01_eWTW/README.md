@@ -5,6 +5,9 @@ standard_scope: governance
 
 # AMPEL360 eWTW — Electric Wide Tube and Wing
 
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/e6c8aae1-54c0-4926-9f8f-33ab7517c78a" />
+
+
 > The AMPEL360 model of the advanced tube-and-wing class: an airliner of about 100 passengers on an electric / hybrid-electric candidate architecture, defined as one identity system seen through eleven breakdown views.
 
 | Field | Value |
@@ -16,10 +19,10 @@ standard_scope: governance
 | Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
 | Propulsion posture | Electric / hybrid-electric candidate architecture; the chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.2.0 |
-| Date | 2026-10-12 |
+| Version | 0.2.2 |
+| Date | 2026-10-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
-| Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.6.1 rev. G — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
+| Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.0 rev. H — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
 
 The eWTW's breakdown structures live under [`SBS`][SBS] — a federation of views over one identity system. The fleet-level comparison between a conventional airliner and the AMPEL360 hydrogen-electric reference architecture is in the [root README][ROOT-DELTA]; this page states what of that reference the eWTW has **decided**, what it must **integrate** and what it leaves **open** — and where the model stands: what exists on disk, at which lifecycle stage, and which statements elsewhere in the repository still disagree with this page.
@@ -182,24 +185,28 @@ Recorded as pending in the PBS; each decides where a scope lives.
 | Item | Statement |
 |---|---|
 | Controlling model | The constitutional **LC-letter** lifecycle, `LC-A` to `LC-N` |
-| Canonical registry | [`02_LIFECYCLE_MODEL/README.md`][LCM] — **v0.6.1, revision G, status draft** (verified 2026-10-12) |
+| Canonical registry | [`02_LIFECYCLE_MODEL/README.md`][LCM] — **v0.7.0, revision H, status draft** (verified 2026-10-13); v0.7.1 pending |
 | Stage of this model | `LC-A` Conceptual Design. Nothing is released: no `REV-A_RELEASED` exists for any eWTW scope |
 | `LC01`–`LC14` tokens | Not used — the registry excludes that axis. The SBS README still carries `LC01` ([F05](#9-findings)) |
-| Integrated baselines | One, proposed: [`BL-053-300-010-A2`][BL-A2] |
+| Integrated baselines | One: [`BL-053-300-010-A2`][BL-A2] — `PROPOSED`, `releasable: false` |
 | Stage folders | Pattern `CAD-REVDIR-001` (registry §7) is recommended; its application to SBS artefacts, and the notation of baselines, are proposed in `AMPEL360-SBS-LC-CM-003`, which is not on `main` (`KNOT-EWTW-LCM-001`). No stage directories exist yet |
 
 ### Baseline `BL-053-300-010-A2`
 
-Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Gate criteria met **6 of 7** — PBS, FBS, IBS, TPMS, RBS, EBS; the ReqBS initial set is missing. Open items: the geometry of record fails its own interference check ([`TPM-533001-INTERF`][TPM-533001], risk [`R-533001-06`][RISKS-533001]), and the station run-record is invalid YAML. Release decision: none recorded.
+Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Status `PROPOSED`, `releasable: false`; release decision: none recorded.
 
-A baseline is a set of exact revisions together with its gate criteria. Advancing an artefact makes a gate satisfiable; release is a decision that refers to that set — the principle proposed in CM-003.
+- **Gate criteria.** Six of seven are recorded as met, and all six are documentary or allocation criteria: identity bound and concept geometry present (PBS), functions allocated (FBS), interfaces declared (IBS), first estimates recorded (TPMS), risk register opened (RBS), evidence indexed (EBS). They record that artefacts exist and are allocated, not that they are adequate. The seventh, the ReqBS initial set, is missing.
+- **Membership.** The record names its members by file path and evidence string; it does not pin them to exact revisions or content hashes. A baseline is a set of exact revisions together with its gate criteria — advancing an artefact makes a gate satisfiable; release is a decision that refers to that set (the principle proposed in CM-003). A2 cannot be released until that set is pinned.
+- **Open items.** A measured interference: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³ ([`TPM-533001-INTERF`][TPM-533001], risk [`R-533001-06`][RISKS-533001]). The station run-record is invalid YAML. Separately, the verification report flags four NDT plug seats on segment butt joints as INFO for design review ([F11](#9-findings)).
 
 ### Path to the first release
 
-1. Apply precondition P0 in the PBS area: the run-record parses and the validator passes ([F08](#9-findings)).
+1. Repair the run-record at its source: fix the generator's YAML serialization, regenerate the record with the repaired generator, and keep the invalid record as superseded evidence; the validator then passes ([F08](#9-findings)).
 2. Author the ReqBS initial set for the station; its five [requirement candidates][REQ-533001] are the starting point.
-3. Close the interference with a geometry revision and re-measure `TPM-533001-INTERF` ([F09](#9-findings)).
-4. Record the release decision — act, date, authority — in the baseline record: `REV-A_RELEASED` for the scope.
+3. Remove the interference with a geometry revision, re-verified with zero hard interferences ([F09](#9-findings)).
+4. Disposition the plug seats against the applicable requirements: redesign, justified acceptance, or an explicitly accepted deferral ([F11](#9-findings)).
+5. Pin the membership — every member artefact at an exact revision, commit and content hash — and record the resulting configuration with its closure evidence, so that the release act is a ratification and not only an authorisation (`QPLUS-LC-RATIFY-001`, registry v0.7.1, pending).
+6. Record the release decision — act, date, authority — in the baseline record: `REV-A_RELEASED` for the scope.
 
 Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criterion of A2, but its findings feed `R-533001-05` and a ReqBS candidate, so it belongs before step 2.
 
@@ -220,7 +227,7 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 
 | Document or tool | Governs | On `main` |
 |---|---|---|
-| [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 | The assembly station and identity boundary, part-number grammar, handedness and quantity discipline, interface identifiers, executable verification | Yes — merge constitutes ratification |
+| [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 | The assembly station and identity boundary, part-number grammar, handedness and quantity discipline, interface identifiers, executable verification | Yes — merge constitutes ratification; the §9 example needs correcting ([F12](#9-findings)) |
 | CM-001 Clarification C1 (C1.1–C1.7) | Roles, installation references, migration locks, zonal versus product-class ownership, artefact co-location, analysis records, stage folders | **No** — cited by clause in 8 SBS files; the EBS lists it as cited only ([F10](#9-findings)) |
 | [`AMPEL360-SBS-ID-CM-002`][CM-002] | Cross-structure identification: derived ids for 1:1 views, sovereign ids with typed references for n:m views, no id space for the EBS | Yes |
 | `AMPEL360-SBS-LC-CM-003` | Artefact lifecycle in the SBS; integrated baselines `BL-<scope>-<stage><seq>` | **No** — proposed; notation ruling open (`KNOT-EWTW-LCM-001`) |
@@ -241,11 +248,13 @@ Places where the repository says two things, or points at something superseded. 
 | F03 | `F-DEFER` | Eleven PBS chapters record no taxonomy mapping and point to an "Amendment A1 ratification table" that Issue 2 absorbed. The `070` group's PBS-local titles follow a powerplant-style order that S-ATLAS does not; water and waste (`038`) has no S-ATLAS chapter to map to; PBS notes cite `ATA` chapters instead of S-ATLAS addresses | `taxonomyRef` without `chapter` in `038`, `071`, `073`, `074`, `076`, `077`, `078`, `080`, `090-100`, `090-300`, `090-500` | Mapping recorded per CM-001 §3.1 — mandatory before any station is realized under these chapters |
 | F04 | `F-WARN` | 46 of 59 station records are still the generator-reconstructed Amendment A1 form | Depth passes applied to `053-000`, `053-100` (except the locked radome station `-040`) and `053-300`; the `053-200` engine plans 40 new nodes (41 → 81) and is not applied | Depth passes `053-200 … 053-900` — `053-200` once `KNOT-EWTW-MLG-001` is ruled or its note amended |
 | F05 | `F-WARN` | Three lifecycle notations | SBS README §6 and §9 say `LC01 Concept Definition`, and §9–§10 still describe an empty SBS; the baseline record says `LCS-A`; the registry names the first stage *Conceptual Design* in §3 and `LC-A_Concept-Design` in §7 | `KNOT-EWTW-LCM-001` ruled; SBS README §6, §9 and §10 rewritten |
-| F06 | `F-WARN` | The registry's worked example names the radome by retired identifiers | Registry §18: `eWTW-PBS-10-10-10-10-10`, `PN-eWTW-5310-0001`; current identity `eWTW-PBS-053-100-040` · `EWTW-531004-000`. The validator scans the SBS only, so this escapes it | §18 re-instanced on current identifiers |
+| F06 | `F-WARN` | The registry's worked example names the radome by retired identifiers | Registry §18: `eWTW-PBS-10-10-10-10-10`, `PN-eWTW-5310-0001`. The example concerns the radome shell, which has no PBS identity yet; station `eWTW-PBS-053-100-040` (`EWTW-531004-000`) is the attach structure, not the shell. The validator scans the SBS only, so this escapes it | Registry v0.7.1 merged — §18 qualified as a historical example, retired identifiers recorded |
 | F07 | `F-WARN` | An FBS function names a solution where the decision is open, and the energy function is classified away from its homes | `eWTW-FBS-30-10` *Store-Electrical-Energy*; `eWTW-FBS-30` classified under `004-900` and `005-900` (airworthiness limitations, inspection intervals) rather than `028`, `074`, `075` | Name made solution-neutral with its identifier conserved and classification corrected — or `KNOT-EWTW-NRG-001` closed |
-| F08 | `F-BLOCK` | The pilot station's run-record is invalid YAML | `Prompts/Run-record.yaml` in `EWTW-533001-000` — the validator's only failing check | Precondition P0 applied in the PBS area — an author act |
-| F09 | `F-BLOCK` | The geometry of record fails its own interference check | `TPM-533001-INTERF` = 1 against a target of 0; `R-533001-06`; the verification report also finds 4 of 12 inspection-plug seats straddling the segment butt joints | A geometry revision that closes both, re-measured |
+| F08 | `F-BLOCK` | The pilot station's run-record is invalid YAML, and the cause is in its generator: `_y()` neutralises only double quotes — it swaps them for single quotes — and never escapes backslashes, so the backslashes of a Windows path reach a double-quoted YAML scalar raw (`\E` is an illegal escape). The recorded path is also a local one, not repository-relative | `Prompts/Run-record.yaml` in `EWTW-533001-000`, line 26 (blob `efada71f73bb` at `279bb700`) — the validator's only failing check; `_y()` in `CAD/source/EWTW-533001-000_concept.py`, `v0.2.1-concept` | Serialization repaired in the generator — escaped, or emitted by a YAML library, with repository-relative POSIX paths; a new run-record produced by the repaired generator, naming its version and hash; the invalid record superseded, not edited, and cited by blob hash; the C1.5 lowercase rename. Correcting the YAML by hand would leave the defect reproducible |
+| F09 | `F-BLOCK` | The geometry of record fails its own interference check — a measured failure | Verification report §D: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³; `TPM-533001-INTERF` = 1 against a target of 0; `R-533001-06` | A geometry revision re-verified with zero hard interferences |
 | F10 | `F-WARN` | Records produced but not committed | CM-001 Clarification C1; the LC-001 structural analysis package — *cited only* and *pending commit* in the [EBS index][EBS-IDX] | Committed into their homes; the EBS rows become *on disk* |
+| F11 | `F-WARN` | Four of twelve NDT plug seats straddle the segment butt joints. The report models them as specified and records them as INFO, flagged for design review; they need a disposition of their own, separate from F09 | Verification report §C and note I-2: seats at 15° + 30°k fall on the butts at 45°, 135°, 225° and 315° | Dispositioned against the applicable requirements — redesign, justified acceptance, or an explicitly accepted deferral (`F-DEFER`) |
+| F12 | `F-WARN` | CM-001 §9 illustrates its 1:1 SNS rule with `531004 → 53-10-01`; the rule itself, applied to the station derivation `053-100-040` → CSN `531004`, gives `53-10-04` | CM-001 Issue 2 §9; station `eWTW-PBS-053-100-040`, CSN `531004`. No data module on `main` carries either value yet. The taxonomy's `embraer_origin` fields use `53-10-0x` in another numbering — there `53-10-01` is the forward fuselage skin — so the wrong example also invites a false match | Correction recorded in the governing convention: §9 reads `531004 → 53-10-04`, entered in the CM-001 change record |
 
 ---
 
@@ -274,6 +283,8 @@ Every identifier, taxonomy address and link on this page was resolved against `m
 |---|---|---|
 | 0.1.0 | 2026-09-30 | Declared, integrated, open; system decomposition; SBS crosswalk (`e6117aee`) |
 | 0.2.0 | 2026-10-12 | Metadata and contents; status at a glance; declarations completed (five `053-900` stations, vacated auxiliary fuel tank, tailcone APM provisions, E-pack taxonomy home); FBS column; registered interfaces in the crosswalk; open KNOTs; lifecycle and the path to first release; exemplars; governing documents; findings F01–F10; verification commands |
+| 0.2.1 | 2026-10-12 | Review refinements: A2 qualified — documentary and allocation criteria, `PROPOSED`, `releasable: false`, membership not pinned; geometry findings separated — F09 measured interference, F11 plug seats for disposition; F08 closed at the generator; F12 against CM-001 §9; path to first release extended to six steps |
+| 0.2.2 | 2026-10-13 | Registry re-pinned to Lifecycle Model v0.7.0 (`KNOT-EWTW-LCM-001`); F06 corrected — §18 concerns the radome shell, which has no PBS identity, while `053-100-040` is the attach structure; first-release step 5 aligned with ratification on closure evidence (`QPLUS-LC-RATIFY-001`, registry v0.7.1 pending) |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
