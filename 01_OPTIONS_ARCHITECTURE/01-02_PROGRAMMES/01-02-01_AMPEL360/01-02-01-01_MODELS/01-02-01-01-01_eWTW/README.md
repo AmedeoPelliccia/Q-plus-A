@@ -5,6 +5,9 @@ standard_scope: governance
 
 # AMPEL360 eWTW — Electric Wide Tube and Wing
 
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/e6c8aae1-54c0-4926-9f8f-33ab7517c78a" />
+
+
 > The AMPEL360 model of the advanced tube-and-wing class: an airliner of about 100 passengers on an electric / hybrid-electric candidate architecture, defined as one identity system seen through eleven breakdown views.
 
 | Field | Value |
