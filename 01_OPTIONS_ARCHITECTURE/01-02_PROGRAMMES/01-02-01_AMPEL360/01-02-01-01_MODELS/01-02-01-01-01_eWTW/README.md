@@ -17,12 +17,12 @@ standard_scope: governance
 | Programme | AMPEL360 |
 | Class | Advanced tube-and-wing — S-ATLAS [`092`][S-092] |
 | Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
-| Propulsion posture | Electric / hybrid-electric candidate architecture; the chain itself is open (`KNOT-EWTW-PRP-001`) |
+| Propulsion posture | All-electric, or hybrid-electric with conventional fuel; no hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.2.2 |
-| Date | 2026-10-13 |
+| Version | 0.3.0 |
+| Date | 2026-11-07 |
 | Owner | Amedeo Pelliccia — GQAOA |
-| Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.0 rev. H — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
+| Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
 
 The eWTW's breakdown structures live under [`SBS`][SBS] — a federation of views over one identity system. The fleet-level comparison between a conventional airliner and the AMPEL360 hydrogen-electric reference architecture is in the [root README][ROOT-DELTA]; this page states what of that reference the eWTW has **decided**, what it must **integrate** and what it leaves **open** — and where the model stands: what exists on disk, at which lifecycle stage, and which statements elsewhere in the repository still disagree with this page.
@@ -49,11 +49,11 @@ Nothing here is a design baseline. A planned part number establishes a controlle
 
 ## 1. Status at a glance
 
-Derived from `main` at `279bb700`, 2026-10-12.
+Derived from `main` at `279bb700`, 2026-10-12, and unchanged at `e212e121`, 2026-11-07: no SBS record has changed in between, only READMEs.
 
 | View | On `main` |
 |---|---|
-| PBS | 8 groups, 41 chapters. Chapter [`053`][PBS-053]: 10 sections, **59 assembly stations, 431 part nodes**, every station `PLANNED`; 13 station records on the Issue 2 schema, 46 still in the Amendment A1 form ([F04](#9-findings)). The other 40 chapters are scaffolds |
+| PBS | 8 groups, 41 chapters. Chapter [`053`][PBS-053]: 10 sections, **59 assembly stations, 431 part nodes**, every station `PLANNED`; 13 station records declare the Issue 2 schema, none carrying it in full ([F15](#9-findings)), and 46 the Amendment A1 form ([F04](#9-findings)). The other 40 chapters are scaffolds |
 | FBS | 13 top-level functions, 74 function nodes; an [allocation matrix][FAM] that allocates 17 stations of `053-000 … 053-300` to `eWTW-FBS-50` at station grain |
 | WBS | 117 work nodes; a crosswalk for `EWTW-533001` |
 | CBS · RBS · TPMS | For `EWTW-533001`: 16 cost-object rows, no figures · 6 risks `R-533001-01 … 06` · 3 measures — mass 80.3 kg (estimate), part count, interference (target not met) |
@@ -70,6 +70,7 @@ Derived from `main` at `279bb700`, 2026-10-12.
 
 **Declared so far:**
 
+- the scope (architecture authority, 2026-11-07): **all-electric, or hybrid-electric with conventional fuel**. No hydrogen is carried; liquid hydrogen is allocated to the [BWB-Q100][BWB];
 - the fuselage PBS `053` — ten sections `053-000 … 053-900`, identifiers `PLANNED`;
 - the energy-carrier structural provisions `053-900` — bay structure (`053-900-010`), crash protection and containment interface (`053-900-020`), mount and attach fittings (`053-900-030`) and the electric-energy maintenance compartment (`053-900-040`), with load overlays in `053-200` (bay integration) and `053-700` (bay support and crash);
 - no auxiliary fuel tank: its footprint is preserved inert (`053-900-050`);
@@ -79,7 +80,7 @@ Derived from `main` at `279bb700`, 2026-10-12.
 
 **The one system-level change already identifiable** is the transfer of the ECS power source from the engine's pneumatic domain to the electrical domain. It couples E-pack sizing to generation, distribution, protection and heat rejection — before any propulsion decision is taken.
 
-**Open decisions**, which together gate the preliminary-design baseline: the energy carrier · the propulsion chain · the electrical sources · the role of energy storage · the architecture of essential power — registered as KNOTs in [§5](#5-open-knots). The structure of the energy-carrier bay does not determine its content: cryogenic tanks, conventional tanks and batteries would each require a different realisation. Several pages on `main` still call it a battery bay ([F01](#9-findings)).
+**Open decisions**, which together gate the preliminary-design baseline: the energy carrier · the propulsion chain · the electrical sources · the role of energy storage · the architecture of essential power — registered as KNOTs in [§5](#5-open-knots). The structure of the energy-carrier bay does not determine its content: batteries and conventional fuel tanks would each require a different realisation; cryogenic tanks are out of scope. Several pages on `main` still call it a battery bay ([F01](#9-findings)).
 
 ---
 
@@ -93,10 +94,10 @@ The S-ATLAS column gives taxonomy homes. PBS codes are PBS-local (CM-001 §3.1) 
 |---|---|---|---|---|:-:|
 | 1 | Airframe | `051–059` | `50` · `10` | Fuselage, wings, empennage, propulsor attachments, doors, floors, compartments, fairings, equipment supports. Energy-carrier provisions, E-pack installation, penetrations, access and mass distribution | D·I |
 | 2 | Energy-carrier storage and delivery | `028` · `064` | `30` | Carrier containment, supports, charging or refuelling interfaces, gauging, isolation, links to consumers. The bay that receives the carrier is declared (`053-900`); the carrier is not | O |
-| 3 | Propulsion | `061–069` · `071–077` | `20` | Propulsive units, installation, power transmission, control and monitoring. If electric: inverters, motors, optional gearboxes, propellers or fans; if hybrid with a thermal machine, its sub-systems too — the PBS skeleton has no group for one yet | O |
-| 4 | Electrical generation and storage | `024` · `068` · `074` · `075` | `30` · `40` | Main sources, conversion, storage, start, energy management. The E-pack creates a significant demand; **it does not determine the kind of generation or the role of batteries** | I·O |
+| 3 | Propulsion | `061–069` · `071–074` · `076–077` | `20` | Propulsive units, installation, power transmission, control and monitoring. If electric: inverters, motors, optional gearboxes, propellers or fans; if hybrid, the thermal machine on conventional fuel and its sub-systems too — the PBS skeleton has no group for one yet | O |
+| 4 | Electrical generation and storage | `024` · `068` · `074` | `30` · `40` | Main sources, conversion, storage, start, energy management; fuel cells (`075`) left the option set with hydrogen. The E-pack creates a significant demand; **it does not determine the kind of generation or the role of batteries** | I·O |
 | 5 | Electrical distribution | `024` · `076` · `079` | `40` | Buses, switchgear, converters, protection, harnesses, segregation, essential supplies. E-pack supplies and protection must be allocated now; a propulsion HV network only if the propulsion chain requires it | I·O |
-| 6 | Thermal management | `021` · `078` | `70-40` · `20-40` · `30-30` | Equipment cooling, heat exchangers, ventilation, liquid loops, air inlets and outlets — integrated with the E-pack installation; stack and propulsion-battery loops conditional on their presence | I·O |
+| 6 | Thermal management | `021` · `078` | `70-40` · `20-40` · `30-30` | Equipment cooling, heat exchangers, ventilation, liquid loops, air inlets and outlets — integrated with the E-pack installation; propulsion-battery and thermal-machine loops conditional on their presence | I·O |
 | 7 | Flight controls | `027` · `022` | `60` | Computers, sensors, primary and secondary surfaces, actuators. No model-specific change declared; differential thrust only if distributed propulsion is chosen | O |
 | 8 | Actuation and utility power | `029` | `60-50` · `110-20` | Pumps, accumulators, actuators, hydraulic lines, possible EHA and EMA. The electric ECS does not decide the fate of hydraulics — technology allocated function by function | O |
 | 9 | ECS, pressurisation, pneumatics | `021` · `036` | `70-10` · `70-20` | E-packs (`021-510`), electric compressors, air treatment, distribution, recirculation, thermal regulation, cabin pressure. **Bleedless ECS declared**; pack bay in the belly fairing; any other pneumatic consumer is treated separately | D |
@@ -104,7 +105,7 @@ The S-ATLAS column gives taxonomy homes. PBS codes are PBS-local (CM-001 §3.1) 
 | 11 | Landing gear, braking, steering | `032` | `110` · `50-40` | Legs, retraction, wheels, brakes, anti-skid, steering, doors, structural interfaces. Bay and fitting structure defines an integration scope, not the gear design: NLG bay `053-100-020` with NLG fittings `053-800-030`, MLG wheelwell `053-200-030`. The MLG configuration is open (`KNOT-EWTW-MLG-001`) | I·O |
 | 12 | Avionics and flight management | `022` · `023` · `031` · `034` · `042` · `046` | `80` · `90` | Navigation, communication, surveillance, guidance, instruments, alerting, systems management; E-pack control and indication now, energy management once the sources are chosen | I·O |
 | 13 | Cabin, cargo, equipment | `025` · `033` · `035` · `044` · `050` | `100` | Furnishings, seats, floors, lighting, oxygen, water and waste, holds, evacuation; interfaces with air distribution. Floor structure (`053-700-010 … -050`) and seat tracks (`053-700-060`) carry planned part trees; water and waste has no S-ATLAS chapter yet ([F03](#9-findings)) | I |
-| 14 | Protection and emergency | `026` · `047` · `079` | `120` | Fire and smoke detection, source isolation, electrical protection, continuity of essential functions. **H₂ leak detection if hydrogen is present; thermal-propagation management if relevant batteries are present** | O |
+| 14 | Protection and emergency | `026` · `047` · `079` | `120` | Fire and smoke detection, source isolation, electrical protection, continuity of essential functions. **Thermal-propagation management if propulsion batteries are present; fire protection of the thermal machine and its fuel in the hybrid branch** | O |
 | 15 | Auxiliary power and ground services | `049` · `012` | `40-50` · `110-40` | External power, auxiliary sources, start, emergency supplies, service interfaces — sized against E-pack demand and the energy configuration. Tailcone mounts and firewall are declared (`053-400-020`, `-030`); the name *Auxiliary Power Module* does not determine its technology | I·O |
 | 16 | Diagnostics and maintenance support | `045` | `130` | Monitoring, built-in test, fault recording, access, test points, support equipment — extending to the E-packs and to whatever equipment is selected; TPuBS follows its configuration and effectivity | I |
 
@@ -137,11 +138,13 @@ Uncertainty is managed with the KNOT/KNU method, as in the sibling model [MRTT-Q
 
 These are LC-B deliverables — *major configuration decisions* in the [lifecycle model][LCM] §3. Each is taken, or explicitly deferred with its rationale, before `REV-B_RELEASED` of any scope it affects. LC-A work proceeds under recorded assumptions, and each assumption names the KNOT that would invalidate it.
 
+**Scope narrowed on 2026-11-07** by the architecture authority: the eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen; liquid hydrogen is allocated to the [BWB-Q100][BWB]. `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are narrowed to that scope and stay open within it.
+
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|
-| `KNOT-EWTW-NRG-001` | Energy carrier: cryogenic hydrogen, a liquid carrier in conventional tanks, batteries — or a combination? | 2 · 4 · 6 · 14, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]). Coupled: `KNOT-MRTT-CMA-001` assumes an LH₂ baseline for commonality with the eWTW family | `STK_SE` |
-| `KNOT-EWTW-PRP-001` | Propulsion chain: all-electric, or hybrid-electric with a thermal machine; distributed or not? | 3 · 5 · 6 · 7 | The PBS skeleton holds an electric group ([`070`][PBS-070]) only | `STK_SE` |
-| `KNOT-EWTW-SRC-001` | Electrical sources: fuel cells (`075`), turbogenerators (`068`), batteries (`074`) — alone or combined? | 4 · 5 · 15 | — | `STK_SE` |
+| `KNOT-EWTW-NRG-001` | Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope | 2 · 4 · 6 · 14, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]). `KNOT-MRTT-CMA-001` targets commonality with the eWTW family under an LH₂ baseline — a premise the eWTW no longer offers; to be revisited in the [MRTT-Q300][MRTT] model | `STK_SE` |
+| `KNOT-EWTW-PRP-001` | Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not? | 3 · 5 · 6 · 7 | The PBS skeleton holds an electric group ([`070`][PBS-070]) only | `STK_SE` |
+| `KNOT-EWTW-SRC-001` | Electrical sources: turbogenerators (`068`), batteries (`074`) — alone or combined? Fuel cells (`075`) left the option set with hydrogen | 4 · 5 · 15 | — | `STK_SE` |
 | `KNOT-EWTW-STO-001` | Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only? | 4 · 6 · 14 | — | `STK_SE` |
 | `KNOT-EWTW-ESS-001` | Essential power: which sources, what segregation and what duration keep essential functions available? | 5 · 12 · 14 · 15 | — | `STK_SAF` |
 
@@ -185,7 +188,7 @@ Recorded as pending in the PBS; each decides where a scope lives.
 | Item | Statement |
 |---|---|
 | Controlling model | The constitutional **LC-letter** lifecycle, `LC-A` to `LC-N` |
-| Canonical registry | [`02_LIFECYCLE_MODEL/README.md`][LCM] — **v0.7.0, revision H, status draft** (verified 2026-10-13); v0.7.1 pending |
+| Canonical registry | [`02_LIFECYCLE_MODEL/README.md`][LCM] — **v0.7.1, revision I, status draft** (verified 2026-11-07) |
 | Stage of this model | `LC-A` Conceptual Design. Nothing is released: no `REV-A_RELEASED` exists for any eWTW scope |
 | `LC01`–`LC14` tokens | Not used — the registry excludes that axis. The SBS README still carries `LC01` ([F05](#9-findings)) |
 | Integrated baselines | One: [`BL-053-300-010-A2`][BL-A2] — `PROPOSED`, `releasable: false` |
@@ -205,7 +208,7 @@ Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Status `PRO
 2. Author the ReqBS initial set for the station; its five [requirement candidates][REQ-533001] are the starting point.
 3. Remove the interference with a geometry revision, re-verified with zero hard interferences ([F09](#9-findings)).
 4. Disposition the plug seats against the applicable requirements: redesign, justified acceptance, or an explicitly accepted deferral ([F11](#9-findings)).
-5. Pin the membership — every member artefact at an exact revision, commit and content hash — and record the resulting configuration with its closure evidence, so that the release act is a ratification and not only an authorisation (`QPLUS-LC-RATIFY-001`, registry v0.7.1, pending).
+5. Pin the membership — every member artefact at an exact revision, commit and content hash — and record the resulting configuration with its closure evidence, so that the release act is a ratification and not only an authorisation (`QPLUS-LC-RATIFY-001`, registry v0.7.1).
 6. Record the release decision — act, date, authority — in the baseline record: `REV-A_RELEASED` for the scope.
 
 Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criterion of A2, but its findings feed `R-533001-05` and a ReqBS candidate, so it belongs before step 2.
@@ -227,11 +230,11 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 
 | Document or tool | Governs | On `main` |
 |---|---|---|
-| [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 | The assembly station and identity boundary, part-number grammar, handedness and quantity discipline, interface identifiers, executable verification | Yes — merge constitutes ratification; the §9 example needs correcting ([F12](#9-findings)) |
+| [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 | The assembly station and identity boundary, part-number grammar, handedness and quantity discipline, interface identifiers, executable verification | Yes — the header still reads *PROPOSED — merge constitutes ratification*, and no record names the approval act ([F22](#9-findings)); the §9 example needs correcting ([F12](#9-findings)) |
 | CM-001 Clarification C1 (C1.1–C1.7) | Roles, installation references, migration locks, zonal versus product-class ownership, artefact co-location, analysis records, stage folders | **No** — cited by clause in 8 SBS files; the EBS lists it as cited only ([F10](#9-findings)) |
-| [`AMPEL360-SBS-ID-CM-002`][CM-002] | Cross-structure identification: derived ids for 1:1 views, sovereign ids with typed references for n:m views, no id space for the EBS | Yes |
+| [`AMPEL360-SBS-ID-CM-002`][CM-002] | Cross-structure identification: derived ids for 1:1 views, sovereign ids with typed references for n:m views, no id space for the EBS | Yes — Issue 1; the header still reads *PROPOSED* ([F22](#9-findings)) |
 | `AMPEL360-SBS-LC-CM-003` | Artefact lifecycle in the SBS; integrated baselines `BL-<scope>-<stage><seq>` | **No** — proposed; notation ruling open (`KNOT-EWTW-LCM-001`) |
-| [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.6.1 rev. G |
+| [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
 | `complete_PBS-053-000.py` · `-100` · `-200` · `-300` · `migrate_PBS-053-010.py` | Depth passes for chapter `053`; the radome migration | Yes, at the repository root — `-200` not yet applied ([F04](#9-findings)) |
 
@@ -239,22 +242,32 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 
 ## 9. Findings
 
-Places where the repository says two things, or points at something superseded. Classes follow the registry's finding rule (`QPLUS-LC-FINDING-001`) and are proposed; an `F-DEFER` takes effect only when accepted. Editing this page closes none of them.
+Places where the repository says two things, or points at something superseded. Classes follow the registry's finding rule (`QPLUS-LC-FINDING-001`) and are proposed; an `F-DEFER` takes effect only when accepted. Editing this page closes none of them. F13–F22 were entered on 2026-11-07 from the PBS README 0.2.1, where they were proposed as N1–N10 in the same order.
 
 | F | Class | Finding | Evidence on `main` | Closes when |
 |---|---|---|---|---|
-| F01 | `F-WARN` | The energy-carrier bay is called a **battery bay** and the APM an **electric auxiliary module**, while `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are open. The PBS notes cite a publication illustration as their authority — the inverse of product → publication | [`ICN-EWTW-021000010-001-01`][ICN-021000010] ("BATT BAY (053-900)", note 3); the chapter `053` README (cross-references, green-native notes); `PBS-053-BREAKDOWN.md`; the READMEs of `053-900-010` and `053-400-020` | The authority declares the content — rows 2, 4, 6 and 14 change status — or the labels are neutralised: ICN issue 02 and amended PBS notes |
+| F01 | `F-WARN` | The energy-carrier bay is called a **battery bay** and the APM an **electric auxiliary module**, while `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are open. Since 2026-11-07 the carrier is batteries, conventional fuel or both: if every branch carries propulsion batteries, the bay label holds and only size and role stay open (`KNOT-EWTW-STO-001`); the APM label stays premature, since in the hybrid branch the module may be thermal. The PBS notes cite a publication illustration as their authority — the inverse of product → publication | [`ICN-EWTW-021000010-001-01`][ICN-021000010] ("BATT BAY (053-900)", note 3); the chapter `053` README (cross-references, green-native notes); `PBS-053-BREAKDOWN.md`; the READMEs of `053-900-010` and `053-400-020` | The authority declares the content — rows 2, 4, 6 and 14 change status — or rules that propulsion batteries are carried in every branch, which keeps the bay label; otherwise the labels are neutralised: ICN issue 02 and amended PBS notes |
 | F02 | `F-WARN` | Derived and summary documents lag the disk | `PBS-053-BREAKDOWN.md` lists 337 part numbers and `PBS-053-REALIZED-TREE.txt` 348 part files — July generator output under the G-ATLAS name — against 431 on disk; the root README cites 55 stations and ~330 part numbers; the chapter `053` README links the legacy `053-010-000` tree deleted in `abf6318e` | Regenerated from disk, or marked superseded |
-| F03 | `F-DEFER` | Eleven PBS chapters record no taxonomy mapping and point to an "Amendment A1 ratification table" that Issue 2 absorbed. The `070` group's PBS-local titles follow a powerplant-style order that S-ATLAS does not; water and waste (`038`) has no S-ATLAS chapter to map to; PBS notes cite `ATA` chapters instead of S-ATLAS addresses | `taxonomyRef` without `chapter` in `038`, `071`, `073`, `074`, `076`, `077`, `078`, `080`, `090-100`, `090-300`, `090-500` | Mapping recorded per CM-001 §3.1 — mandatory before any station is realized under these chapters |
-| F04 | `F-WARN` | 46 of 59 station records are still the generator-reconstructed Amendment A1 form | Depth passes applied to `053-000`, `053-100` (except the locked radome station `-040`) and `053-300`; the `053-200` engine plans 40 new nodes (41 → 81) and is not applied | Depth passes `053-200 … 053-900` — `053-200` once `KNOT-EWTW-MLG-001` is ruled or its note amended |
+| F03 | `F-DEFER` | Eleven PBS nodes — eight chapters and three section-grain stubs — record no taxonomy mapping and point to an "Amendment A1 ratification table" that Issue 2 absorbed. The `070` group's PBS-local titles follow a powerplant-style order that S-ATLAS does not; water and waste (`038`) has no S-ATLAS chapter to map to; PBS notes cite `ATA` chapters instead of S-ATLAS addresses | `taxonomyRef` without `chapter` in `038`, `071`, `073`, `074`, `076`, `077`, `078`, `080`, `090-100`, `090-300`, `090-500` | Mapping recorded per CM-001 §3.1 — mandatory before any station is realized under these nodes |
+| F04 | `F-WARN` | 46 of 59 station records are still the generator-reconstructed Amendment A1 form | Depth passes applied to `053-000`, `053-100` (except the locked radome station `-040`) and `053-300`; the `053-200` engine plans 40 new nodes (41 → 81) and is not applied | Depth passes for `053-200` (once `KNOT-EWTW-MLG-001` is ruled or its note amended) and `053-400 … 053-900`, and the radome migration; each record then carries the Issue 2 station contract ([F15](#9-findings)) — a pass having run is not the evidence |
 | F05 | `F-WARN` | Three lifecycle notations | SBS README §6 and §9 say `LC01 Concept Definition`, and §9–§10 still describe an empty SBS; the baseline record says `LCS-A`; the registry names the first stage *Conceptual Design* in §3 and `LC-A_Concept-Design` in §7 | `KNOT-EWTW-LCM-001` ruled; SBS README §6, §9 and §10 rewritten |
-| F06 | `F-WARN` | The registry's worked example names the radome by retired identifiers | Registry §18: `eWTW-PBS-10-10-10-10-10`, `PN-eWTW-5310-0001`. The example concerns the radome shell, which has no PBS identity yet; station `eWTW-PBS-053-100-040` (`EWTW-531004-000`) is the attach structure, not the shell. The validator scans the SBS only, so this escapes it | Registry v0.7.1 merged — §18 qualified as a historical example, retired identifiers recorded |
-| F07 | `F-WARN` | An FBS function names a solution where the decision is open, and the energy function is classified away from its homes | `eWTW-FBS-30-10` *Store-Electrical-Energy*; `eWTW-FBS-30` classified under `004-900` and `005-900` (airworthiness limitations, inspection intervals) rather than `028`, `074`, `075` | Name made solution-neutral with its identifier conserved and classification corrected — or `KNOT-EWTW-NRG-001` closed |
+| F06 | `F-WARN` | The registry's worked example names the radome by retired identifiers | Registry §18: `eWTW-PBS-10-10-10-10-10`, `PN-eWTW-5310-0001`. The example concerns the radome shell, which has no PBS identity yet; station `eWTW-PBS-053-100-040` (`EWTW-531004-000`) is the attach structure, not the shell. The validator scans the SBS only, so this escapes it | **Closed** at `72039505`, 2026-10-13: registry v0.7.1 rev. I merged, §18 qualified as a historical example with its retired identifiers recorded. The shell's missing identity continues as F14 |
+| F07 | `F-WARN` | An FBS function names a solution where the decision is open, and the energy function is classified away from its homes | `eWTW-FBS-30-10` *Store-Electrical-Energy*; `eWTW-FBS-30` classified under `004-900` and `005-900` (airworthiness limitations, inspection intervals) rather than `028` or `074` (`075` left the option set with hydrogen) | Name made solution-neutral with its identifier conserved and classification corrected — or `KNOT-EWTW-NRG-001` closed |
 | F08 | `F-BLOCK` | The pilot station's run-record is invalid YAML, and the cause is in its generator: `_y()` neutralises only double quotes — it swaps them for single quotes — and never escapes backslashes, so the backslashes of a Windows path reach a double-quoted YAML scalar raw (`\E` is an illegal escape). The recorded path is also a local one, not repository-relative | `Prompts/Run-record.yaml` in `EWTW-533001-000`, line 26 (blob `efada71f73bb` at `279bb700`) — the validator's only failing check; `_y()` in `CAD/source/EWTW-533001-000_concept.py`, `v0.2.1-concept` | Serialization repaired in the generator — escaped, or emitted by a YAML library, with repository-relative POSIX paths; a new run-record produced by the repaired generator, naming its version and hash; the invalid record superseded, not edited, and cited by blob hash; the C1.5 lowercase rename. Correcting the YAML by hand would leave the defect reproducible |
 | F09 | `F-BLOCK` | The geometry of record fails its own interference check — a measured failure | Verification report §D: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³; `TPM-533001-INTERF` = 1 against a target of 0; `R-533001-06` | A geometry revision re-verified with zero hard interferences |
 | F10 | `F-WARN` | Records produced but not committed | CM-001 Clarification C1; the LC-001 structural analysis package — *cited only* and *pending commit* in the [EBS index][EBS-IDX] | Committed into their homes; the EBS rows become *on disk* |
 | F11 | `F-WARN` | Four of twelve NDT plug seats straddle the segment butt joints. The report models them as specified and records them as INFO, flagged for design review; they need a disposition of their own, separate from F09 | Verification report §C and note I-2: seats at 15° + 30°k fall on the butts at 45°, 135°, 225° and 315° | Dispositioned against the applicable requirements — redesign, justified acceptance, or an explicitly accepted deferral (`F-DEFER`) |
 | F12 | `F-WARN` | CM-001 §9 illustrates its 1:1 SNS rule with `531004 → 53-10-01`; the rule itself, applied to the station derivation `053-100-040` → CSN `531004`, gives `53-10-04` | CM-001 Issue 2 §9; station `eWTW-PBS-053-100-040`, CSN `531004`. No data module on `main` carries either value yet. The taxonomy's `embraer_origin` fields use `53-10-0x` in another numbering — there `53-10-01` is the forward fuselage skin — so the wrong example also invites a false match | Correction recorded in the governing convention: §9 reads `531004 → 53-10-04`, entered in the CM-001 change record |
+| F13 | `F-WARN` | The radome station departs from the CM-001 §4.3 exemplar. On disk `-020` is an `assembly` whose children `-021` / `-022` are `-LH` / `-RH` with `role: "variant"`, the Amendment A1 vocabulary; the exemplar has a set of 2 with UPPER / LOWER members. Installed together or alternatives is a configuration fact, a mirrored pair or a same-side stack a design fact (§4.1): the conflict of texts settles neither | Station `eWTW-PBS-053-100-040`: `PLANNED`, Amendment A1 record; CM-001 §4.3: *realized*; `MIGRATION_LOCKED = {"531004"}` in `complete_PBS-053-100.py` | Hinge disposition established by design evidence; disk and exemplar then reconciled — a governed pass under the lock, or the exemplar amended |
+| F14 | `F-WARN` | The radome shell has no PBS identity or part number: station `053-100-040` is the attach structure only. F06 stated this; it stays open after F06's closure | No shell node under `053-100`; registry §18 (shell: no PN yet) | The shell placed in the breakdown — its station or parent, owner, and interfaces with `053-100-040` — not only numbered |
+| F15 | `F-WARN` | No station record carries `top_assembly`, `root`, `mic` or `owner`, which the single station schema requires (CM-001 §5), although 13 declare Issue 2. The handshake `realizes ↔ top_assembly` (§2) is not written down: the top assembly is identified by its folder alone, and the owner sits in `pbs-item.yaml`. One Amendment A1 record has no `realizes` | All 59 `station.yaml`; `053-600-090` without `realizes` (`KNOT-EWTW-KEL-001`) | The authority rules whether the fields are written or derived from the folder (CM-001 §5); every station then passes that contract with exactly one resolvable top assembly |
+| F16 | `F-WARN` | Citations of Amendment A1 survive outside the historical record | The root and `070` group READMEs cite it; 58 `realizesNote` clauses cite A1.1, now §3.1 — `053-600-090` has none and cites A1.1 in a comment. The PBS README 0.2.1 (N4) says 59 | Active documents cite Issue 2 clauses; historical documents keep theirs |
+| F17 | `F-WARN` | Short forms: the validator reads `eWTW-PBS-053` and `eWTW-PBS-053-100` as the `-000` nodes and cites a ruling under CM-002 §3 that CM-002's text does not contain. Without its precedence — a node carrying the code itself wins — four codes name two nodes | `tools/sbs_validate.py` 0.1.2; `eWTW-PBS-010`, `-030` and `-080` (group, or chapter `-000`) and `eWTW-PBS-053-000` (chapter, or section `053-000-000`) | CM-002 states where short forms apply and which reading wins; every reference resolves to exactly one node |
+| F18 | `F-DEFER` | The station is defined for physical assemblies — below it, everything is physical (CM-001 §2) — while group `090` holds software, digital-twin and product-passport configuration items | Stubs `090-100`, `090-300`, `090-500`, no stations | CM-001 gives these items a profile of their own, or excludes them from the station rule, before any `090` node is realized |
+| F19 | `F-WARN` | CSN domain and capacity: the derivation holds for chapters `0CC`, sections `S00` and subjects `0U0`, which allows nine stations per section; CM-001 states neither the domain nor an extension rule | All 59 CSNs follow the derivation; `053-600` uses all nine subject codes `010`–`090` | CM-001 states the domain, rejects codes outside it, and gives an extension rule that keeps every assigned CSN — before a section needs a tenth station |
+| F20 | `F-WARN` | Quantities: CM-001 counts leaves and forbids double counting, but does not say how quantities multiply along repeated occurrences, aggregate by catalog identity or follow effectivity, nor when a group with enumerated children is a set rather than a sub-assembly | CM-001 §4.2, §6 | CM-001 defines the quantity basis, with worked cases: a repeated sub-assembly, a reused catalog part, parts installed together, exclusive alternatives |
+| F21 | `F-WARN` | Authority: CM-001 calls both the folder (§5) and the register (§8) SSOT without saying which governs what; it designates no record for revision and effectivity; and `catalog_pn` (§6) is carried by no part record | CM-001 §5, §6, §8; none of the 431 `part.yaml` carries `catalog_pn` | CM-001 states authority per field — identity, row status, revision, effectivity, catalog identity |
+| F22 | `F-WARN` | Approval records: CM-001 Issue 2 and CM-002 Issue 1 are on `main`, yet both headers read *PROPOSED — merge constitutes ratification* and no record names the approval act. Approving a convention is a separate act from ratifying a product baseline | CM-001 Issue 2 entered in `8ed1bd59`, 2026-08-22; CM-002 Issue 1 in `546c84a4`, 2026-09-06 | Each header names its approval act — commit, date, authority — and the resulting status |
 
 ---
 
@@ -266,14 +279,14 @@ From the repository root:
 SBS="01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure"
 TAX="01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS"
 
-python3 tools/sbs_validate.py --sbs "$SBS" --tax "$TAX"         # at 279bb700: RESULT: FAIL (1 failing check(s)) — F08
-find "$SBS" -name station.yaml | wc -l                          # 59
-find "$SBS" -name part.yaml | wc -l                             # 431
+python3 tools/sbs_validate.py --sbs "$SBS" --tax "$TAX"         # at e212e121: RESULT: FAIL (1 failing check(s)) — F08
+find "$SBS" -type f -name station.yaml | wc -l                  # 59
+find "$SBS" -type f -name part.yaml | wc -l                     # 431
 grep -rl --include=station.yaml "Amendment A1" "$SBS" | wc -l   # 46 — F04
 python3 complete_PBS-053-200.py --root .                        # plan only, no writes: nodes added=40
 ```
 
-Every identifier, taxonomy address and link on this page was resolved against `main` at `279bb700` when it was written.
+Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
 ---
 
@@ -285,6 +298,7 @@ Every identifier, taxonomy address and link on this page was resolved against `m
 | 0.2.0 | 2026-10-12 | Metadata and contents; status at a glance; declarations completed (five `053-900` stations, vacated auxiliary fuel tank, tailcone APM provisions, E-pack taxonomy home); FBS column; registered interfaces in the crosswalk; open KNOTs; lifecycle and the path to first release; exemplars; governing documents; findings F01–F10; verification commands |
 | 0.2.1 | 2026-10-12 | Review refinements: A2 qualified — documentary and allocation criteria, `PROPOSED`, `releasable: false`, membership not pinned; geometry findings separated — F09 measured interference, F11 plug seats for disposition; F08 closed at the generator; F12 against CM-001 §9; path to first release extended to six steps |
 | 0.2.2 | 2026-10-13 | Registry re-pinned to Lifecycle Model v0.7.0 (`KNOT-EWTW-LCM-001`); F06 corrected — §18 concerns the radome shell, which has no PBS identity, while `053-100-040` is the attach structure; first-release step 5 aligned with ratification on closure evidence (`QPLUS-LC-RATIFY-001`, registry v0.7.1 pending) |
+| 0.3.0 | 2026-11-07 | Scope narrowed by the architecture authority: all-electric, or hybrid-electric with conventional fuel; liquid hydrogen allocated to the BWB-Q100. `KNOT-EWTW-NRG-001` and `-SRC-001` narrowed; the `KNOT-MRTT-CMA-001` premise flagged; §3 rows 3, 4, 6 and 14 and findings F01 and F07 restated. Findings F13–F22 entered from the PBS README 0.2.1 (N1–N10); F03 and F04 restated — eleven nodes, closure on outcome; F06 closed. Registry and conventions re-pinned: v0.7.1 rev. I, approval status of CM-001 and CM-002 |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -305,6 +319,7 @@ Every identifier, taxonomy address and link on this page was resolved against `m
 [EBS-IDX]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/EVIDENCE-INDEX.yaml
 [ICN-021000010]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning/ICN/ICN-EWTW-021000010-001-01.svg
 [MRTT]: ../01-02-01-01-03_MRTT-Q300/README.md
+[BWB]: ../01-02-01-01-02_BWB-Q100/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py
