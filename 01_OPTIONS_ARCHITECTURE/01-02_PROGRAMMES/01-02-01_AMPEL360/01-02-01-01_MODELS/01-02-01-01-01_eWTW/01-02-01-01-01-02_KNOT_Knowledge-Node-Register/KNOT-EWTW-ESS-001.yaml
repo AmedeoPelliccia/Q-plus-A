@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-ESS-001
   title: Essential power
   kind: decision-anchor
+  taxonomy: ['012', '022', '023', '024', '026', '031', '034', '042', '046', '047', '049', '076', '079']
   question: 'Essential power: which sources, what segregation and what duration keep essential functions available?'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A

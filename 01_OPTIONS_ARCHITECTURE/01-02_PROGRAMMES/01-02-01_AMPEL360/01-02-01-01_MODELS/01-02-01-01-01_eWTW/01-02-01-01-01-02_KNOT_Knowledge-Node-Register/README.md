@@ -58,6 +58,49 @@ The same ruling removes fuel cells from `KNOT-EWTW-SRC-001`.
 
 ---
 
+## By S-ATLAS chapter
+
+Each record lists, in its `taxonomy` field, the [S-ATLAS][S-ATLAS] chapters it applies to: for a configuration decision, the chapters of the model README §3 rows it unblocks — and `053` for the energy-carrier bay. The identifiers carry no classification ([CM-004][CM-004] §4). Generated from the records:
+
+| Chapter | S-ATLAS title | KNOTs |
+|---|---|---|
+| `012` | Servicing | `ESS` · `SRC` |
+| `021` | Air Conditioning Environmental Control | `NRG` · `PRP` · `STO` |
+| `022` | Auto Flight | `ESS` · `PRP` |
+| `023` | Communications | `ESS` |
+| `024` | Electrical Power | `ESS` · `NRG` · `PRP` · `SRC` · `STO` |
+| `026` | Fire Protection | `ESS` · `NRG` · `STO` |
+| `027` | Flight Control | `PRP` |
+| `028` | Energy Carrier Storage and Distribution | `NRG` |
+| `031` | Indicating and Recording Systems | `ESS` |
+| `034` | Navigation | `ESS` |
+| `042` | Integrated Modular Avionics | `ESS` |
+| `046` | Information Systems | `ESS` |
+| `047` | Inerting and Protective Atmospheres | `ESS` · `NRG` · `STO` |
+| `049` | Auxiliary Power Module | `ESS` · `SRC` |
+| `053` | Fuselage | `NRG` |
+| `061` | Powerplant Installation and Nacelle Integration | `PRP` |
+| `062` | Combustion Machinery | `PRP` |
+| `063` | Combustion Systems for Sustainable Carriers | `PRP` |
+| `064` | Carrier Delivery Metering and Conditioning | `NRG` · `PRP` |
+| `065` | Engine Air and Thermal Management | `PRP` |
+| `066` | Control Monitoring and Indicating | `PRP` |
+| `067` | Exhaust Emissions and Contrail Management | `PRP` |
+| `068` | Turbogenerators and Power Offtakes | `NRG` · `PRP` · `SRC` · `STO` |
+| `069` | Lubrication Ignition Starting and Accessories | `PRP` |
+| `071` | Propulsion Architectures and Energy Management | `PRP` |
+| `072` | Electric Machines for Propulsion | `PRP` |
+| `073` | Power Electronics and Conversion | `PRP` |
+| `074` | Propulsion Energy Storage Systems | `NRG` · `PRP` · `SRC` · `STO` |
+| `076` | Propulsion Power Distribution and Protection | `ESS` · `PRP` · `SRC` |
+| `077` | Electric Propulsors Installation and Distributed Integration | `PRP` |
+| `078` | Thermal Management of Electric Propulsion | `NRG` · `PRP` · `STO` |
+| `079` | High Voltage Safety and System Evidence | `ESS` · `NRG` · `PRP` · `SRC` · `STO` |
+
+Home to be ruled, since each decides where its scope lives: `DFN` · `KEL` · `LUG` · `MLG` · `TSI`. Lifecycle, with no chapter: `LCM`.
+
+---
+
 ## Research agenda
 
 The KNUs neither done nor cancelled, generated from the records (rule 9). Every KNU is proposed; none has started.
@@ -103,18 +146,23 @@ Three KNUs touch protected areas and are author acts: `KNU-EWTW-PRP-001-05` and 
 From the repository root:
 
 ```bash
+TAX="01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS"
 REG="01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register"
-python3 - "$REG" <<'EOF'
+python3 - "$REG" "$TAX" <<'EOF'
 import pathlib, re, sys, yaml
 K = {p.stem: yaml.safe_load(p.read_text(encoding="utf-8"))["knot"] for p in sorted(pathlib.Path(sys.argv[1]).glob("KNOT-*.yaml"))}
+TAX = {d.name.split("_")[0]: d.name.split("_", 1)[1].replace("-", " ") for d in pathlib.Path(sys.argv[2]).rglob("*_*") if d.is_dir()}
 V = {"kind": "obligation control-intent decision-anchor lifecycle-constraint", "status": "DRAFT REVIEW APPROVED SUPERSEDED OBSOLETE",
      "resolution": "OPEN RULED DEFERRED", "knu_class": "WORK_ITEM CONTROLLED_ARTEFACT REQUIREMENT_SET ANALYSIS_PACKAGE "
      "VERIFICATION_OBJECT EVIDENCE_RECORD OTHER", "progress": "NOT_STARTED IN_PROGRESS PENDING_REVIEW DONE CANCELLED"}
-bad, seen = [], set()
+bad, seen, by = [], set(), {}
 for kid, k in K.items():
     bad += [kid] * (kid != k["knot_id"] or not re.fullmatch(r"KNOT-EWTW-[A-Z]{3}-\d{3}", kid) or not k["obligation_source"])
     bad += [f"{kid} {f}" for f in ("kind", "status", "resolution") if k[f] not in V[f].split()]
     bad += [f"{kid} -> {r}" for f in ("depends_on", "closed_with", "unblocks") for r in k[f] if r not in K]
+    bad += [f"{kid} taxonomy {a}" for a in k["taxonomy"] if a not in TAX]
+    for a in k["taxonomy"]:
+        by.setdefault(a, []).append(kid[10:13])
     for u in k["knus"]:
         i = u["knu_id"]
         bad += [i] * (not re.fullmatch(f"KNU-{kid[5:]}-\\d\\d", i) or i in seen or not u["outputs"] or not u["exit"]
@@ -123,9 +171,14 @@ for kid, k in K.items():
         bad += [f"{i} serves {r}" for r in u["serves"] if r not in K]
         seen.add(i)
 if re.search(r"\b(compliant|conforms?)\b", str(K).lower()): bad.append("conformity claim")
-print(f"{len(K)} KNOTs, {len(seen)} KNUs; rule failures: {bad or 'none'}")
+print(f"{len(K)} KNOTs, {len(seen)} KNUs, {len(by)} S-ATLAS chapters; rule failures: {bad or 'none'}")
 for kid, k in K.items():
     print(f"| `{kid}` | {k['title']} | `{k['kind']}` | {k['resolution']} | {len(k['knus'])} | `{k['owner']}` |")
+for a in sorted(by):
+    print(f"| `{a}` | {TAX[a]} | {' · '.join(f'`{t}`' for t in by[a])} |")
+for label, kinds in (("Home to be ruled", ("decision-anchor",)), ("Lifecycle", ("lifecycle-constraint",))):
+    ks = [kid[10:13] for kid, k in K.items() if not k["taxonomy"] and k["kind"] in kinds]
+    print(f"{label}: {' · '.join(f'`{t}`' for t in ks)}")
 for k in K.values():
     for u in k["knus"]:
         if u["progress"] not in ("DONE", "CANCELLED"):
@@ -134,7 +187,7 @@ for k in K.values():
 EOF
 ```
 
-The first line reads `11 KNOTs, 29 KNUs; rule failures: none`; the rest reproduces the two tables above. The script checks identifiers, file names, vocabularies, references between KNOTs, outputs and exit criteria, and the absence of conformity claims.
+The first line reads `11 KNOTs, 29 KNUs, 32 S-ATLAS chapters; rule failures: none`; the rest reproduces the three tables above and the two lines under the chapter table. The script checks identifiers, file names, vocabularies, references between KNOTs, that every S-ATLAS chapter resolves, outputs and exit criteria, and the absence of conformity claims.
 
 ---
 
@@ -142,9 +195,10 @@ The first line reads `11 KNOTs, 29 KNUs; rule failures: none`; the rest reproduc
 
 | Version | Date | Change |
 |---|---|---|
-| 0.1.0 | 2026-11-08 | Register created: the 11 KNOTs of the model README 0.3.0 §5 as records, 29 KNUs proposed, ruling R1 of `KNOT-EWTW-NRG-001` recorded |
+| 0.1.0 | 2026-11-08 | Register created: the 11 KNOTs of the model README 0.3.0 §5 as records, 29 KNUs proposed, ruling R1 of `KNOT-EWTW-NRG-001` recorded; S-ATLAS chapters per KNOT and the view by chapter |
 
 [MODEL]: ../README.md
 [MODEL-5]: ../README.md#5-open-knots
 [CM-004]: AMPEL360-KNOT-CM-004_Knowledge-Nodes-and-Units.md
 [BWB]: ../../01-02-01-01-02_BWB-Q100/README.md
+[S-ATLAS]: ../../../../../01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/

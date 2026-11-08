@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-SRC-001
   title: Electrical sources
   kind: decision-anchor
+  taxonomy: ['012', '024', '049', '068', '074', '076', '079']
   question: 'Electrical sources: turbogenerators (068), batteries (074) — alone or combined? Fuel cells (075) left the option set with hydrogen'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A

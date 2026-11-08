@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-NRG-001
   title: Energy carrier
   kind: decision-anchor
+  taxonomy: ['021', '024', '026', '028', '047', '053', '064', '068', '074', '078', '079']
   question: 'Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A

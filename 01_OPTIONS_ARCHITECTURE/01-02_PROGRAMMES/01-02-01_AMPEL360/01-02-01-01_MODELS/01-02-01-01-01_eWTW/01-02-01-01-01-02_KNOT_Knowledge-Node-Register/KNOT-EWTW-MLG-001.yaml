@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-MLG-001
   title: MLG configuration
   kind: decision-anchor
+  taxonomy: []
   question: 'MLG configuration: trunnions on wing or on fuselage structure?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-030
   lifecycle_phase: LC-A

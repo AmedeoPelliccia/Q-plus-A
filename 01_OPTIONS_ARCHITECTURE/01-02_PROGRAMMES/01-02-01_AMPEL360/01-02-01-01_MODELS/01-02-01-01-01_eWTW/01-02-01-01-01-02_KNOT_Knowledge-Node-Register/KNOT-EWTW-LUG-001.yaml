@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-LUG-001
   title: Wing-attach lugs
   kind: decision-anchor
+  taxonomy: []
   question: 'Wing-attach lugs: fuselage side or 057?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-010
   lifecycle_phase: LC-A

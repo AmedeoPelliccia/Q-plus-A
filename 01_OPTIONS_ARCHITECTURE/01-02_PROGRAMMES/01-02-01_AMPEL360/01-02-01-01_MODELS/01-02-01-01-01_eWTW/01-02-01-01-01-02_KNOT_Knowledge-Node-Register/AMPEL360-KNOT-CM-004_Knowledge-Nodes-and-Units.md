@@ -35,6 +35,8 @@ KNU-<MIC>-<TOPIC>-<NNN>-<NN>       KNU-EWTW-NRG-001-03
 
 A KNU identifier is the identifier of its parent KNOT, prefixed `KNU`, with a two-digit sequence. A KNU has one parent and may serve other KNOTs (`serves`). Identifiers are never reused; a cancelled KNU keeps its number.
 
+Identifiers carry no classification. The S-ATLAS addresses a KNOT applies to are in its `taxonomy` field: the identity stays sovereign and the classification is a reference, as for PBS codes ([`AMPEL360-PBS-PN-CM-001`][CM-001] §3.1, [`AMPEL360-SBS-ID-CM-002`][CM-002]). Classifications change; identifiers do not. A KNOT whose purpose is to decide where a scope lives leaves the field empty until it is ruled.
+
 In AEROSPACEMODEL both identifiers carry an `LC01`–`LC14` code. The Q+ATLANTIDE lifecycle registry excludes that axis, so here the phase is a field (`lifecycle_phase`, LC letters) and not part of the identifier.
 
 ## 5. Records
@@ -43,7 +45,7 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Fi
 
 | Record | Fields |
 |---|---|
-| KNOT | `knot_id`, `title`, `kind`, `question`, `obligation_source`, `lifecycle_phase`, `due`, `owner`, `status`, `resolution`, `created_date`, `depends_on`, `closed_with`, `unblocks`, `affects`, `options`, `criteria`, `maturity_required` (decision anchors that release baselines), `assumptions`, `couplings`, `rulings`, `reopen_if`, `knus` |
+| KNOT | `knot_id`, `title`, `kind`, `taxonomy`, `question`, `obligation_source`, `lifecycle_phase`, `due`, `owner`, `status`, `resolution`, `created_date`, `depends_on`, `closed_with`, `unblocks`, `affects`, `options`, `criteria`, `maturity_required` (decision anchors that release baselines), `assumptions`, `couplings`, `rulings`, `reopen_if`, `knus` |
 | KNU | `knu_id`, `title`, `knu_class`, `description`, `serves`, `outputs`, `exit`, `owner`, `lifecycle_phase`, `progress`, `created_date`, `start_date`, `end_date`, `evidence_refs`, `condition` (optional) |
 | Ruling | `id`, `date`, `authority`, `statement`, `effect`, `rationale`, `rationale_recorded`, `evidence`, `waiver`, `record` |
 
@@ -59,7 +61,7 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Fi
 
 `progress` takes the place of the AEROSPACEMODEL `compliance_status`: Q+ATLANTIDE records carry no conformity claims. The AEROSPACEMODEL classes map as follows: `ARTEFACT` and `PROCEDURE` → `CONTROLLED_ARTEFACT`; `RECORD` and `REPORT` → `EVIDENCE_RECORD`; `VALIDATION_OBJECT` → `VERIFICATION_OBJECT`.
 
-**References** are typed, as in [`AMPEL360-SBS-ID-CM-002`][CM-002]: `{view, ref}`, where `view` is an SBS view (`PBS`, `FBS`, `WBS`, `CBS`, `RBS`, `LBS`, `EBS`, `IBS`, `ReqBS`, `TPMS`, `TPuBS`) or `model`, `baseline`, `finding`, `registry`, `taxonomy`. A null `ref` marks an output still to be created: no identifier is invented ahead of its view.
+**References** are typed, as in [`AMPEL360-SBS-ID-CM-002`][CM-002]: `{view, ref}`, where `view` is an SBS view (`PBS`, `FBS`, `WBS`, `CBS`, `RBS`, `LBS`, `EBS`, `IBS`, `ReqBS`, `TPMS`, `TPuBS`) or `model`, `baseline`, `finding`, `registry`, `taxonomy`. A null `ref` marks an output still to be created: no identifier is invented ahead of its view. `taxonomy` holds S-ATLAS addresses, quoted — chapters such as `'024'` or finer nodes such as `'021-510'`. S-ATLAS is the reference taxonomy, not ATA chapter numbers.
 
 ## 6. Rules
 
@@ -82,7 +84,8 @@ Configuration decisions are `LC-B` deliverables (registry §3): a KNOT is worked
 
 | Issue | Content |
 |---|---|
-| 1 | Definitions from AEROSPACEMODEL as restated on 2026-11-08; kinds; identifier grammar without `LC01`–`LC14`; record fields and vocabularies; rules 1–10 |
+| 1 | Definitions from AEROSPACEMODEL as restated on 2026-11-08; kinds; identifier grammar without `LC01`–`LC14` and without classification, S-ATLAS addresses in the `taxonomy` field; record fields and vocabularies; rules 1–10 |
 
 [AEROSPACEMODEL]: https://github.com/AmedeoPelliccia/AEROSPACEMODEL
+[CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
 [CM-002]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md

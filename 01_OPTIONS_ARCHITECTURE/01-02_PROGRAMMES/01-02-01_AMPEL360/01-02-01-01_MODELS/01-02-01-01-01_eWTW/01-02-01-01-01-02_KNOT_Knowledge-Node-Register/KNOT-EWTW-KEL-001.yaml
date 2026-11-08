@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-KEL-001
   title: Keel-beam taxonomy home
   kind: decision-anchor
+  taxonomy: []
   question: 'Keel-beam taxonomy home: extend S-ATLAS 053-600, or bind to an existing node?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-600-090
   lifecycle_phase: LC-A

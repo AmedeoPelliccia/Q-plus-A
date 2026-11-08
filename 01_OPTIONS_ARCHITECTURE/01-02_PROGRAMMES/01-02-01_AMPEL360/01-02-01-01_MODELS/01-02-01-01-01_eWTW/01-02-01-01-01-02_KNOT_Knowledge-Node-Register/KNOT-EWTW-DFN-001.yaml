@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-DFN-001
   title: Dorsal-fin root fairing
   kind: decision-anchor
+  taxonomy: []
   question: 'Dorsal-fin root fairing: 053 or 055?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-400-040
   lifecycle_phase: LC-A

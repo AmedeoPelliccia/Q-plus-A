@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-STO-001
   title: Role of energy storage
   kind: decision-anchor
+  taxonomy: ['021', '024', '026', '047', '068', '074', '078', '079']
   question: 'Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only?'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A

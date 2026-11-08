@@ -3,6 +3,7 @@ knot:
   knot_id: KNOT-EWTW-TSI-001
   title: Tail-strike indicator
   kind: decision-anchor
+  taxonomy: []
   question: 'Tail-strike indicator and sensing: which owner?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-300-030
   lifecycle_phase: LC-A
