@@ -1,0 +1,48 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-DFN-001
+  title: Dorsal-fin root fairing
+  kind: decision-anchor
+  question: 'Dorsal-fin root fairing: 053 or 055?'
+  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-400-040
+  lifecycle_phase: LC-A
+  due: before station 053-400-040 is realized
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-400-040
+  options:
+  - id: A
+    text: fuselage (053)
+    state: open
+  - id: B
+    text: stabilizers (055)
+    state: open
+  criteria: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-DFN-001-01
+    title: Fairing ownership
+    knu_class: ANALYSIS_PACKAGE
+    description: Interface between the tailcone structure and the fin, and the owner of the fairing
+    serves: []
+    outputs:
+    - view: IBS
+      ref: null
+    exit: Ruling proposal
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

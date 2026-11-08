@@ -1,0 +1,103 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-SRC-001
+  title: Electrical sources
+  kind: decision-anchor
+  question: 'Electrical sources: turbogenerators (068), batteries (074) — alone or combined? Fuel cells (075) left the option set with hydrogen'
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on:
+  - KNOT-EWTW-NRG-001
+  closed_with:
+  - KNOT-EWTW-PRP-001
+  unblocks:
+  - KNOT-EWTW-STO-001
+  - KNOT-EWTW-ESS-001
+  affects:
+  - view: model
+    ref: README §3 row 4
+  - view: model
+    ref: README §3 row 5
+  - view: model
+    ref: README §3 row 15
+  options:
+  - id: A
+    text: batteries (074) alone
+    state: open
+  - id: B
+    text: turbogenerators (068) alone
+    state: open
+  - id: C
+    text: combined
+    state: open
+  - id: D
+    text: fuel cells (075)
+    state: excluded
+    by: KNOT-EWTW-NRG-001 R1
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-SRC-001-01
+    title: Electrical load analysis
+    knu_class: ANALYSIS_PACKAGE
+    description: Propulsive and non-propulsive loads by flight phase, peak and continuous, including the E-pack ECS (S-ATLAS 021-510)
+    serves:
+    - KNOT-EWTW-STO-001
+    - KNOT-EWTW-ESS-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Load table per phase for each option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-SRC-001-02
+    title: Source sizing
+    knu_class: ANALYSIS_PACKAGE
+    description: Source size and mass for each option, on the loads of KNU-EWTW-SRC-001-01
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Source sizes and masses per option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-SRC-001-03
+    title: Distribution architecture
+    knu_class: ANALYSIS_PACKAGE
+    description: Distribution architecture and voltage level, with protection and segregation, for each option
+    serves:
+    - KNOT-EWTW-ESS-001
+    outputs:
+    - view: IBS
+      ref: null
+    - view: TPMS
+      ref: null
+    - view: model
+      ref: README §3 row 5
+    exit: Candidate architecture per option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

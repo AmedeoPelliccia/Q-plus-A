@@ -1,0 +1,193 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-NRG-001
+  title: Energy carrier
+  kind: decision-anchor
+  question: 'Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope'
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-SRC-001
+  - KNOT-EWTW-PRP-001
+  affects:
+  - view: model
+    ref: README §3 row 2
+  - view: model
+    ref: README §3 row 4
+  - view: model
+    ref: README §3 row 6
+  - view: model
+    ref: README §3 row 14
+  - view: PBS
+    ref: eWTW-PBS-053-900-000
+  - view: finding
+    ref: F01
+  options:
+  - id: A
+    text: batteries — all-electric
+    state: open
+  - id: B
+    text: conventional fuel for a thermal machine, without propulsive batteries
+    state: open
+  - id: C
+    text: both — hybrid-electric
+    state: open
+  - id: D
+    text: cryogenic hydrogen
+    state: excluded
+    by: R1
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: the carrier is not aft of the rear pressure bulkhead
+    ref:
+      view: baseline
+      ref: BL-053-300-010-A2
+  couplings:
+  - knot: KNOT-MRTT-CMA-001
+    note: targets commonality with the eWTW family under an LH₂ baseline — a premise the eWTW no longer offers
+  rulings:
+  - id: R1
+    date: '2026-11-07'
+    authority: AM.PEL — architecture authority
+    statement: 'Scope narrowed: the eWTW is all-electric, or hybrid-electric with conventional fuel; liquid hydrogen is allocated to the BWB-Q100. The KNOT stays open within that scope'
+    effect: option D excluded
+    rationale: null
+    rationale_recorded: null
+    evidence: []
+    waiver: null
+    record: 'eWTW README 0.3.0 — PR #67, merged at 92ce9e96'
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-NRG-001-01
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria and weights for the energy carrier, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: Criteria, weights and thresholds approved by the authority
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-NRG-001-02
+    title: Design mission and reserve policy
+    knu_class: REQUIREMENT_SET
+    description: Range, payload for the 100-passenger class, reserves, and the regulatory basis of reserves for a battery-electric or hybrid-electric transport aircraft
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-SRC-001
+    - KNOT-EWTW-STO-001
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: Mission set approved by the authority
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-NRG-001-03
+    title: Mission energy and power budget
+    knu_class: ANALYSIS_PACKAGE
+    description: Propulsive and non-propulsive energy and power by flight phase for options A, B and C, including the declared E-pack demand (README §2)
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-SRC-001
+    - KNOT-EWTW-STO-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Budget for options A–C on the approved mission
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-NRG-001-04
+    title: Battery technology state
+    knu_class: EVIDENCE_RECORD
+    description: Pack-level specific energy and power, cycle life, safety behaviour and TRL, with sources and a projection to entry into service
+    serves:
+    - KNOT-EWTW-STO-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Evidence record with its sources; TRL stated per element
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-NRG-001-05
+    title: Thermal machine on conventional fuel
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Turbogenerator options on conventional fuel, including sustainable aviation fuel: power class, fuel mass, efficiency, emissions'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    - view: EBS
+      ref: null
+    exit: Data set for options B and C
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-NRG-001-06
+    title: Trade study of the energy carrier
+    knu_class: ANALYSIS_PACKAGE
+    description: Options A, B and C scored against the approved criteria, with sensitivity to the recorded assumptions
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Ruling proposal with rationale and the reasons for each option not retained
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-NRG-001-07
+    title: Rationale of ruling R1
+    knu_class: EVIDENCE_RECORD
+    description: Why liquid hydrogen is allocated to the BWB-Q100 and not to the eWTW, and what would reopen the choice
+    serves: []
+    outputs:
+    - view: model
+      ref: KNOT-EWTW-NRG-001 R1
+    exit: Rationale and reopen condition completed in R1 by the authority
+    owner: AM.PEL
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

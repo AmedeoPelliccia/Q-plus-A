@@ -1,0 +1,66 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-KEL-001
+  title: Keel-beam taxonomy home
+  kind: decision-anchor
+  question: 'Keel-beam taxonomy home: extend S-ATLAS 053-600, or bind to an existing node?'
+  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-600-090
+  lifecycle_phase: LC-A
+  due: before station 053-600-090 is realized
+  owner: STK_CM
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-600-090
+  - view: finding
+    ref: F15
+  options:
+  - id: A
+    text: extend S-ATLAS 053-600
+    state: open
+  - id: B
+    text: bind to an existing node
+    state: open
+  criteria: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-KEL-001-01
+    title: Taxonomy home of the keel beam
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'Extension of S-ATLAS 053-600 or binding to an existing node. Author act: the taxonomy is a protected area'
+    serves: []
+    outputs:
+    - view: taxonomy
+      ref: null
+    exit: Ruling recorded
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-KEL-001-02
+    title: Station binding
+    knu_class: WORK_ITEM
+    description: 'Record realizes: at station 053-600-090 per the ruling, and check ICD-EWTW-532003-536009, which the 053-200 engine declares toward it. Author act: the PBS is a protected area'
+    serves: []
+    outputs:
+    - view: PBS
+      ref: eWTW-PBS-053-600-090
+    exit: 'The station''s realizes: resolves'
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

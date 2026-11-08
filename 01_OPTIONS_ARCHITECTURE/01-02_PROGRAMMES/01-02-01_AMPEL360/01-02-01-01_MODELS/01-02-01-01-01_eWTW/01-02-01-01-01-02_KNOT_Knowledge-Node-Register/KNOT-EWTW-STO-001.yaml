@@ -1,0 +1,97 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-STO-001
+  title: Role of energy storage
+  kind: decision-anchor
+  question: 'Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only?'
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on:
+  - KNOT-EWTW-SRC-001
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-ESS-001
+  affects:
+  - view: model
+    ref: README §3 row 4
+  - view: model
+    ref: README §3 row 6
+  - view: model
+    ref: README §3 row 14
+  options:
+  - id: A
+    text: propulsive energy
+    state: open
+  - id: B
+    text: buffering for start, transients and peaks
+    state: open
+  - id: C
+    text: essential and emergency supply only
+    state: open
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-STO-001-01
+    title: Storage role and size
+    knu_class: ANALYSIS_PACKAGE
+    description: 'For each option of KNOT-EWTW-SRC-001: the role of the batteries and their size for that role'
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Role and size per option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-STO-001-02
+    title: Battery installation safety
+    knu_class: REQUIREMENT_SET
+    description: Thermal-runaway propagation, containment, venting and crash loads for the energy-carrier bay
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: RBS
+      ref: null
+    - view: PBS
+      ref: eWTW-PBS-053-900-000
+    - view: model
+      ref: README §3 row 14
+    exit: Candidate requirements and risks; input to the disposition of F01
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-STO-001-03
+    title: Propagation test plan
+    knu_class: VERIFICATION_OBJECT
+    description: Laboratory test of cell-to-module propagation at TRL 4, with test objectives and correlation thresholds declared before execution
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Test plan approved before any test is run
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+    condition: only if propulsive or buffer batteries are retained
