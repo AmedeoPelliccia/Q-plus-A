@@ -1,0 +1,73 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-LUG-001
+  title: Wing-attach lugs
+  kind: decision-anchor
+  taxonomy: []
+  raised_at: '053'
+  question: 'Wing-attach lugs: fuselage side or 057?'
+  context: >-
+    The wing is attached to the fuselage through lugs and fittings. The question is which side of the joint owns them — fuselage or wing — and who owns the interface control document.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-010
+  lifecycle_phase: LC-A
+  due: before station 053-200-010 is realized
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-200-010
+    relation: gates
+    note: Wing-attach lug ownership and interface split
+  options:
+  - id: A
+    text: fuselage side (053)
+    state: open
+    pbs_footprint:
+    - action: remap
+      taxonomy: '053'
+      element: Wing-attach lug
+      key: wing-attach-lug
+  - id: B
+    text: wing (057)
+    state: open
+    pbs_footprint:
+    - action: remap
+      taxonomy: '057'
+      element: Wing-attach lug
+      key: wing-attach-lug
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-LUG-001-01
+    title: Wing-attach interface split
+    knu_class: ANALYSIS_PACKAGE
+    description: Interface split, load transfer and the owner of the interface control document
+    research_brief:
+      questions:
+      - How do aircraft manufacturers and standards split wing-to-fuselage attachment hardware between wing and fuselage breakdowns?
+      - How is the interface documented and who normally owns the interface control document?
+    serves: []
+    outputs:
+    - view: IBS
+      ref: null
+    exit: Criteria declared in this record before the options are compared; ruling proposal with the ICD owner
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

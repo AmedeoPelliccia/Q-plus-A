@@ -1,0 +1,76 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-LCM-001
+  title: Lifecycle notation and registry pin
+  kind: lifecycle-constraint
+  taxonomy: []
+  raised_at: null
+  question: 'Lifecycle notation: LC-A or LCS-A in baseline records; stage-folder names; re-pin when the registry is released'
+  context: >-
+    This KNOT is internal governance: how lifecycle stages are written in baseline records, and when the model is re-pinned to the lifecycle registry. It needs no external research.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL — registry in draft; AMPEL360-SBS-LC-CM-003 (proposed)
+  lifecycle_phase: LC-A
+  due: before the first baseline is ratified
+  owner: STK_CM
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: baseline
+    ref: BL-053-300-010-A2
+  options:
+  - id: A
+    text: LC-A
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: LCS-A
+    state: open
+    pbs_footprint: []
+  criteria: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-LCM-001-01
+    title: Baseline notation
+    knu_class: WORK_ITEM
+    description: Notation of stages in baseline records and stage-folder names
+    research_brief: null
+    serves: []
+    outputs:
+    - view: model
+      ref: README §6
+    exit: Ruling recorded and applied to BL-053-300-010-A2
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-LCM-001-02
+    title: Registry re-pin
+    knu_class: WORK_ITEM
+    description: 'Re-pin the model when the registry leaves draft; pinned now: v0.7.1, revision I'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: model
+      ref: README §6
+    exit: Model re-pinned to the released registry
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

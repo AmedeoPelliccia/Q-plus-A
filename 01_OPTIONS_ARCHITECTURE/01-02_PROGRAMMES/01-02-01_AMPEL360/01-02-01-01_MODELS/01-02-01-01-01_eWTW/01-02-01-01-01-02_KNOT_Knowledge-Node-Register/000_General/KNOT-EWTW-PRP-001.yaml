@@ -1,0 +1,190 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-PRP-001
+  title: Propulsion chain
+  kind: decision-anchor
+  taxonomy: ['021', '022', '024', '027', '061', '062', '063', '064', '065', '066', '067', '068', '069', '071', '072', '073', '074', '076', '077', '078', '079']
+  raised_at: null
+  question: 'Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not?'
+  context: >-
+    The propulsion chain is decided together with the electrical sources. It is either all-electric or hybrid-electric with a thermal machine on conventional fuel, and the propulsors may be distributed along the airframe or concentrated in a few units. The decision drives the wing and airframe integration, the heat to be rejected, and the failure cases the aircraft must survive.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on:
+  - KNOT-EWTW-NRG-001
+  closed_with:
+  - KNOT-EWTW-SRC-001
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 3
+  - view: model
+    ref: README §3 row 5
+  - view: model
+    ref: README §3 row 6
+  - view: model
+    ref: README §3 row 7
+  - view: PBS
+    ref: eWTW-PBS-071-000
+    relation: gates
+    note: Propulsion module and installation allocation
+  options:
+  - id: A
+    text: all-electric
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: hybrid-electric with a thermal machine on conventional fuel
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation, integrated in the propulsion chain
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+  - id: D1
+    text: distributed propulsion
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '077'
+      element: Distributed electric propulsor installations
+      key: electric-propulsor-installations
+  - id: D2
+    text: concentrated propulsion
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '077'
+      element: Concentrated electric propulsor installations
+      key: electric-propulsor-installations
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: the PBS skeleton holds an electric group only
+    ref:
+      view: PBS
+      ref: eWTW-PBS-070
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-PRP-001-01
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria and weights for the propulsion chain and the electrical sources, closed together, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    research_brief:
+      questions:
+      - Which criteria do published studies use to choose between all-electric and hybrid-electric chains and between distributed and concentrated propulsion?
+      - Which elements are critical (motors, inverters, distribution, propulsors) and what maturity is required before deciding?
+      - Which criteria follow from certification and cannot be traded?
+    serves:
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-PRP-001-02
+    title: Propulsor architecture
+    knu_class: ANALYSIS_PACKAGE
+    description: Number, position and type of propulsors (fan or propeller), distributed or not, and the aero-propulsive integration effects
+    research_brief:
+      questions:
+      - What aero-propulsive benefits and penalties of distributed electric propulsion are demonstrated in flight or wind-tunnel tests, as opposed to predicted?
+      - How do propeller and ducted-fan propulsors compare for a 100-passenger regional aircraft in efficiency, noise and integration?
+      - What numbers and positions of propulsors did comparable concepts adopt, and with what results?
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Candidate architectures with mass, efficiency and integration data
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-PRP-001-03
+    title: Efficiency and heat chain
+    knu_class: ANALYSIS_PACKAGE
+    description: Losses and heat loads by flight phase, from storage or generator to propulsor, for each option
+    research_brief:
+      questions:
+      - What efficiencies are demonstrated for megawatt-class motors, inverters, distribution and gearboxes in aviation programmes?
+      - How much heat does each element reject, at what temperature, and how is it rejected without excessive drag?
+      - How do the losses compare between a battery-fed chain and a turbogenerator-fed chain?
+    serves:
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    - view: model
+      ref: README §3 row 6
+    exit: Losses and heat loads per phase and option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-PRP-001-04
+    title: Propulsion failure cases
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Loss of a propulsor or of a power channel: controllability, performance and the certification basis that applies'
+    research_brief:
+      questions:
+      - Which failure cases do regulators require to be shown for electric and hybrid-electric propulsion — loss of a propulsor, of a power channel, of a source?
+      - How do distributed-propulsion concepts demonstrate controllability and performance after such failures?
+      - Which special conditions or means of compliance have been published for electric and hybrid propulsion systems?
+    serves: []
+    outputs:
+    - view: RBS
+      ref: null
+    - view: ReqBS
+      ref: null
+    exit: Failure cases with candidate requirements and risks
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-PRP-001-05
+    title: PBS group for a thermal machine
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'A PBS group for a thermal machine on conventional fuel (S-ATLAS 061–069), with its taxonomy mapping. Author act: the PBS is a protected area'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: PBS
+      ref: null
+    exit: Group opened with its mapping (CM-001 §3.1)
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+    condition: only if the ruling admits a thermal machine

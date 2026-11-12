@@ -1,0 +1,154 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-SRC-001
+  title: Electrical sources
+  kind: decision-anchor
+  taxonomy: ['012', '024', '049', '068', '074', '076', '079']
+  raised_at: null
+  question: 'Electrical sources: turbogenerators (068), batteries (074) — alone or combined? Fuel cells (075) left the option set with hydrogen'
+  context: >-
+    The electrical sources supply both propulsion and the aircraft systems, including an electric bleedless environmental control system that is one of the largest non-propulsive loads. The candidates are batteries, turbogenerators on conventional fuel, or both. Fuel cells are excluded with hydrogen.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on:
+  - KNOT-EWTW-NRG-001
+  closed_with:
+  - KNOT-EWTW-PRP-001
+  unblocks:
+  - KNOT-EWTW-STO-001
+  - KNOT-EWTW-ESS-001
+  affects:
+  - view: model
+    ref: README §3 row 4
+  - view: model
+    ref: README §3 row 5
+  - view: model
+    ref: README §3 row 15
+  - view: PBS
+    ref: eWTW-PBS-024-000
+    relation: gates
+    note: Source-dependent conversion, protection and distribution
+  options:
+  - id: A
+    text: batteries (074) alone
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '074'
+      element: Propulsive battery installation, used as an electrical source
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
+  - id: B
+    text: turbogenerators (068) alone
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '068'
+      element: Turbogenerator installation
+      key: turbogenerator-installation
+      note: S-ATLAS 068 for a turbogenerator in the propulsion or main generation chain; 049 only for an auxiliary unit detached from the propulsion architecture (architecture authority, 2026-11-12)
+  - id: C
+    text: combined
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '068'
+      element: Turbogenerator installation
+      key: turbogenerator-installation
+      note: S-ATLAS 068 for a turbogenerator in the propulsion or main generation chain; 049 only for an auxiliary unit detached from the propulsion architecture (architecture authority, 2026-11-12)
+    - action: update
+      taxonomy: '074'
+      element: Propulsive battery installation, used as an electrical source
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
+  - id: D
+    text: fuel cells (075)
+    state: excluded
+    by: KNOT-EWTW-NRG-001 R1
+    pbs_footprint: []
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-SRC-001-01
+    title: Electrical load analysis
+    knu_class: ANALYSIS_PACKAGE
+    description: Propulsive and non-propulsive loads by flight phase, peak and continuous, including the E-pack ECS (S-ATLAS 021-510)
+    research_brief:
+      questions:
+      - What is the electrical load profile of a more-electric or all-electric regional aircraft by flight phase, peak and continuous?
+      - How much power does an electric bleedless environmental control system draw for about 100 passengers, by phase and ambient condition?
+      - Which loads are shed or reduced in degraded conditions?
+    serves:
+    - KNOT-EWTW-STO-001
+    - KNOT-EWTW-ESS-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Load table per phase for each option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-SRC-001-02
+    title: Source sizing
+    knu_class: ANALYSIS_PACKAGE
+    description: Source size and mass for each option, on the loads of KNU-EWTW-SRC-001-01
+    research_brief:
+      questions:
+      - How are batteries and turbogenerators sized against peak and continuous loads in published hybrid-electric designs?
+      - What masses and volumes result for a 100-passenger regional aircraft, per option?
+      - What redundancy do the designs keep among sources?
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Source sizes and masses per option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-SRC-001-03
+    title: Distribution architecture
+    knu_class: ANALYSIS_PACKAGE
+    description: Distribution architecture and voltage level, with protection and segregation, for each option
+    research_brief:
+      questions:
+      - Which distribution voltages are used or proposed for megawatt-class aircraft, and what limits them at altitude (partial discharge, arc faults)?
+      - Which protection devices exist for high-voltage direct current in aviation, and at what maturity?
+      - How are propulsion and systems networks segregated in published architectures?
+    serves:
+    - KNOT-EWTW-ESS-001
+    outputs:
+    - view: IBS
+      ref: null
+    - view: TPMS
+      ref: null
+    - view: model
+      ref: README §3 row 5
+    exit: Candidate architecture per option
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

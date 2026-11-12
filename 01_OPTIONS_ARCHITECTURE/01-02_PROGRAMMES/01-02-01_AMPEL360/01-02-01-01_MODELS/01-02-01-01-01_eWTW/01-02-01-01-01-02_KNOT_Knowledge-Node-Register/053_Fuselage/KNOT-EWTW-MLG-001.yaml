@@ -1,0 +1,93 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-MLG-001
+  title: MLG configuration
+  kind: decision-anchor
+  taxonomy: []
+  raised_at: '053'
+  question: 'MLG configuration: trunnions on wing or on fuselage structure?'
+  context: >-
+    The main landing gear trunnions can be carried by the wing or by fuselage structure. The answer decides the load paths and the volume of the centre-fuselage gear bay, and which structural chapter owns the support structure.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-030
+  lifecycle_phase: LC-A
+  due: before the 053-200 depth pass is applied
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-200-030
+    relation: gates
+    note: Main landing gear trunnion mounting
+  - view: finding
+    ref: F04
+  options:
+  - id: A
+    text: trunnions on the wing
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '057'
+      element: Main landing gear trunnion attachment
+      key: mlg-trunnion-attachment
+  - id: B
+    text: trunnions on fuselage structure
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '053'
+      element: Main landing gear trunnion attachment
+      key: mlg-trunnion-attachment
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-MLG-001-01
+    title: Trunnion location
+    knu_class: ANALYSIS_PACKAGE
+    description: Load paths, gear-bay volume and interactions with the wing box and the keel for each option
+    research_brief:
+      questions:
+      - How do transport aircraft with wing-mounted and with fuselage-mounted main gear carry the loads, and what does each cost in structure mass and bay volume?
+      - What drives the choice for high-wing and low-wing regional aircraft of about 100 passengers?
+      - How does each option interact with the wing box and the keel beam?
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Criteria declared in this record before the options are compared; ruling proposal with rationale
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-MLG-001-02
+    title: 053-200 engine note
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'The committed 053-200 completion engine states wing-mounted trunnions as fact: amend its note, or rule first'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: model
+      ref: complete_PBS-053-200.py
+    exit: Engine note consistent with the ruling before it is applied
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

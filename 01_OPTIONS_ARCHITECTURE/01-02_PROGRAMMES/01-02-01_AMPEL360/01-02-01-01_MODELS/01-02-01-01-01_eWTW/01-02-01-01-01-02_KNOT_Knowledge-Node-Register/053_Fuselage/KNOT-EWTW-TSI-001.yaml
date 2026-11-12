@@ -1,0 +1,57 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-TSI-001
+  title: Tail-strike indicator
+  kind: decision-anchor
+  taxonomy: []
+  raised_at: '053'
+  question: 'Tail-strike indicator and sensing: which owner?'
+  context: >-
+    A tail-strike indicator needs a structural provision in the rear fuselage and a sensing and indication function. The question is who owns each part.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-300-030
+  lifecycle_phase: LC-A
+  due: before station 053-300-030 is realized
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-300-030
+    relation: gates
+    note: Tail-strike provision and sensing ownership
+  options: []
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-TSI-001-01
+    title: Tail-strike provision and sensing
+    knu_class: ANALYSIS_PACKAGE
+    description: Structural provision at 053-300-030, and the owners of sensing and indication; this KNU defines the option set
+    research_brief:
+      questions:
+      - How are tail-strike protection and indication implemented on transport aircraft — structural bumper, sensor, indication?
+      - How do published breakdowns split them between structure and systems?
+    serves: []
+    outputs:
+    - view: IBS
+      ref: null
+    exit: Criteria declared in this record before the options are compared; ruling proposal
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []

@@ -1,0 +1,29 @@
+# Shared context of every research brief — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+model_context:
+  aircraft: >-
+    The AMPEL360 eWTW is a concept for a regional airliner of about 100 passengers with a wide tube-and-wing
+    airframe. It is all-electric, or hybrid-electric with conventional fuel (kerosene or sustainable aviation fuel).
+    It carries no hydrogen and no fuel cells. Its environmental control system is electric and bleedless. The fuselage
+    has an energy-carrier bay, which is not aft of the rear pressure bulkhead. The aircraft is in
+    conceptual design: no configuration decision in this register has been ruled, and no design mission is fixed
+    yet.
+  purpose: >-
+    Each research task serves one Knowledge Unit (KNU), which produces evidence for one decision or ruling (KNOT).
+    The research informs the decision; it does not take it.
+  research_rules:
+  - Answer the questions of the KNU, in order, for this aircraft class — not for electric aviation in general.
+  - 'Prefer primary sources: regulators, standards bodies, peer-reviewed papers, test reports, manufacturer data
+    sheets. Give title, author or body, date and link for every source.'
+  - Attach a source and a date to every figure, in SI units. Say whether it is demonstrated (in test or in service)
+    or projected, and by whom.
+  - State the maturity of each technology with the evidence for it; do not assign a readiness level the source does
+    not support.
+  - Report disagreements between sources instead of averaging them, and say what would settle them.
+  - Use only public material. Do not use or reproduce confidential or proprietary documents.
+  - For an architecture trade, describe each known product footprint by S-ATLAS address and link it to the relevant
+    requirement or assumption. Compare installed part count, interfaces, modularity, maintenance access and commonality
+    within the applicable configurations. Record which criteria are mandatory before evaluating preferences.
+  - 'Do not recommend an option: list the findings, their limits and what remains unknown.'
+  deliverable: >-
+    A report with: a one-paragraph answer to each question; a table of figures with source, date and demonstrated-or-projected
+    status; the open points; the list of sources.

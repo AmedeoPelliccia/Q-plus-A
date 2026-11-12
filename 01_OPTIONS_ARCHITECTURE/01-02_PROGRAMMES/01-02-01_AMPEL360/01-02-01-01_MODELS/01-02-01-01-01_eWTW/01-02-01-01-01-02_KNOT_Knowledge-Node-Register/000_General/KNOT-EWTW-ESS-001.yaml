@@ -1,0 +1,114 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-ESS-001
+  title: Essential power
+  kind: decision-anchor
+  taxonomy: ['012', '022', '023', '024', '026', '031', '034', '042', '046', '047', '049', '076', '079']
+  raised_at: null
+  question: 'Essential power: which sources, what segregation and what duration keep essential functions available?'
+  context: >-
+    Essential power is what keeps the functions needed for continued safe flight and landing alive after the main electrical sources are lost. On an aircraft whose propulsion is electric, the question covers sources, their segregation from the main network, and the duration they must last.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SAF
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-08'
+  depends_on:
+  - KNOT-EWTW-SRC-001
+  - KNOT-EWTW-STO-001
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 5
+  - view: model
+    ref: README §3 row 12
+  - view: model
+    ref: README §3 row 14
+  - view: model
+    ref: README §3 row 15
+  - view: PBS
+    ref: eWTW-PBS-024-000
+    relation: gates
+    note: Essential feeds and segregation
+  options: []
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-ESS-001-01
+    title: Essential loads and duration
+    knu_class: ANALYSIS_PACKAGE
+    description: What must remain available after loss of the main sources, for how long, and with what segregation
+    research_brief:
+      questions:
+      - Which functions do regulators require to remain available after loss of normal electrical power in transport aircraft, and for how long?
+      - How do these requirements change when propulsion itself is electric?
+      - What essential load lists have comparable more-electric aircraft published?
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: Essential load list with duration and segregation
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ESS-001-02
+    title: Essential source options
+    knu_class: ANALYSIS_PACKAGE
+    description: 'For each option of KNOT-EWTW-SRC-001: candidate essential sources and their segregation from the main sources; this KNU defines the option set of the KNOT'
+    research_brief:
+      questions:
+      - Which essential and emergency sources are used or proposed — dedicated batteries, a segregated generator channel, a ram-air turbine or others — and with what limits?
+      - How are they segregated from the main sources, physically and electrically?
+      - What does each option weigh and how is it shown to be independent?
+    serves: []
+    outputs:
+    - view: RBS
+      ref: null
+    - view: IBS
+      ref: null
+    exit: Candidate essential architecture per option
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ESS-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria and weights for essential power, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    research_brief:
+      questions:
+      - Which criteria do published safety assessments use to choose essential power architectures?
+      - What maturity of the emergency sources is required before deciding?
+      - Which criteria are regulatory and cannot be traded?
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-12'
+    start_date: null
+    end_date: null
+    evidence_refs: []

@@ -19,13 +19,13 @@ standard_scope: governance
 | Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
 | Propulsion posture | All-electric, or hybrid-electric with conventional fuel; no hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.0 |
-| Date | 2026-11-07 |
+| Version | 0.3.2 |
+| Date | 2026-11-12 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
 
-The eWTW's breakdown structures live under [`SBS`][SBS] — a federation of views over one identity system. The fleet-level comparison between a conventional airliner and the AMPEL360 hydrogen-electric reference architecture is in the [root README][ROOT-DELTA]; this page states what of that reference the eWTW has **decided**, what it must **integrate** and what it leaves **open** — and where the model stands: what exists on disk, at which lifecycle stage, and which statements elsewhere in the repository still disagree with this page.
+The eWTW's breakdown structures live under [`SBS`][SBS] — a federation of views over one identity system. Beside the SBS, the model holds its decisions and their inputs: the [KNOT register][KNOT-REG] and the [architecture relations][REL]. The fleet-level comparison between a conventional airliner and the AMPEL360 hydrogen-electric reference architecture is in the [root README][ROOT-DELTA]; this page states what of that reference the eWTW has **decided**, what it must **integrate** and what it leaves **open** — and where the model stands: what exists on disk, at which lifecycle stage, and which statements elsewhere in the repository still disagree with this page.
 
 Nothing here is a design baseline. A planned part number establishes a controlled identity, not a manufactured component. Every figure in [§1](#1-status-at-a-glance) is derived from `main` at the commit stated and can be regenerated with the commands in [§10](#10-how-to-verify).
 
@@ -132,7 +132,7 @@ One distinction is deliberate: the TPuBS node `021-200-010` (*Distribution Ducti
 
 ## 5. Open KNOTs
 
-Uncertainty is managed with the KNOT/KNU method, as in the sibling model [MRTT-Q300][MRTT]. Identifiers and owners are proposed; they take effect when recorded.
+Uncertainty is managed with the KNOT/KNU method, as in the sibling model [MRTT-Q300][MRTT]. Identifiers and owners are proposed; they take effect when recorded. Each KNOT has a record in the [KNOT register][KNOT-REG], under [`AMPEL360-KNOT-CM-004`][CM-004] (proposed): its options, criteria, rulings with their rationale, and the Knowledge Units (KNUs) — research, analyses and other work — that resolve it. The tables below are views of those records. The [architecture relations][REL] node projects taxonomy and programme relations onto these KNOTs: the candidates for a decision, and a check of what it waits for.
 
 ### Configuration decisions
 
@@ -234,8 +234,11 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 | CM-001 Clarification C1 (C1.1–C1.7) | Roles, installation references, migration locks, zonal versus product-class ownership, artefact co-location, analysis records, stage folders | **No** — cited by clause in 8 SBS files; the EBS lists it as cited only ([F10](#9-findings)) |
 | [`AMPEL360-SBS-ID-CM-002`][CM-002] | Cross-structure identification: derived ids for 1:1 views, sovereign ids with typed references for n:m views, no id space for the EBS | Yes — Issue 1; the header still reads *PROPOSED* ([F22](#9-findings)) |
 | `AMPEL360-SBS-LC-CM-003` | Artefact lifecycle in the SBS; integrated baselines `BL-<scope>-<stage><seq>` | **No** — proposed; notation ruling open (`KNOT-EWTW-LCM-001`) |
+| [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 | KNOT and KNU records: kinds, identifiers, fields, rulings and waivers, the research agenda as a view | Yes — *PROPOSED*; its header records the approval act once given |
+| [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 | Architecture relations at programme, model and product level, and between taxonomy nodes; their projection onto the KNOT register | Yes — both *PROPOSED*; the taxonomy relations are held in the model until the taxonomy owner adopts them |
 | [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
+| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register | Yes — each with its tests |
 | `complete_PBS-053-000.py` · `-100` · `-200` · `-300` · `migrate_PBS-053-010.py` | Depth passes for chapter `053`; the radome migration | Yes, at the repository root — `-200` not yet applied ([F04](#9-findings)) |
 
 ---
@@ -288,6 +291,8 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests.
+
 ---
 
 ## 11. Revision history
@@ -299,6 +304,8 @@ Every identifier, taxonomy address and link on this page was resolved against `m
 | 0.2.1 | 2026-10-12 | Review refinements: A2 qualified — documentary and allocation criteria, `PROPOSED`, `releasable: false`, membership not pinned; geometry findings separated — F09 measured interference, F11 plug seats for disposition; F08 closed at the generator; F12 against CM-001 §9; path to first release extended to six steps |
 | 0.2.2 | 2026-10-13 | Registry re-pinned to Lifecycle Model v0.7.0 (`KNOT-EWTW-LCM-001`); F06 corrected — §18 concerns the radome shell, which has no PBS identity, while `053-100-040` is the attach structure; first-release step 5 aligned with ratification on closure evidence (`QPLUS-LC-RATIFY-001`, registry v0.7.1 pending) |
 | 0.3.0 | 2026-11-07 | Scope narrowed by the architecture authority: all-electric, or hybrid-electric with conventional fuel; liquid hydrogen allocated to the BWB-Q100. `KNOT-EWTW-NRG-001` and `-SRC-001` narrowed; the `KNOT-MRTT-CMA-001` premise flagged; §3 rows 3, 4, 6 and 14 and findings F01 and F07 restated. Findings F13–F22 entered from the PBS README 0.2.1 (N1–N10); F03 and F04 restated — eleven nodes, closure on outcome; F06 closed. Registry and conventions re-pinned: v0.7.1 rev. I, approval status of CM-001 and CM-002 |
+| 0.3.1 | 2026-11-08 | KNOT register created beside the SBS, under `AMPEL360-KNOT-CM-004` (proposed): the 11 KNOTs of §5 as records, with 31 KNUs and ruling R1 of `KNOT-EWTW-NRG-001`; §5 and §8 point to it |
+| 0.3.2 | 2026-11-12 | Architecture relations node created beside the KNOT register, under `AMPEL360-REL-CM-005` and `QPLUS-REL-001` (both proposed): pilot relations and their projection onto `KNOT-EWTW-SRC-001` and `KNOT-EWTW-ESS-001`; the introduction, §5, §8 and §10 point to it; §8 lists the two verification tools |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -320,6 +327,13 @@ Every identifier, taxonomy address and link on this page was resolved against `m
 [ICN-021000010]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning/ICN/ICN-EWTW-021000010-001-01.svg
 [MRTT]: ../01-02-01-01-03_MRTT-Q300/README.md
 [BWB]: ../01-02-01-01-02_BWB-Q100/README.md
+[KNOT-REG]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/README.md
+[CM-004]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/AMPEL360-KNOT-CM-004_Knowledge-Nodes-and-Units.md
+[REL]: 01-02-01-01-01-03_REL_Architecture-Relations/README.md
+[CM-005]: 01-02-01-01-01-03_REL_Architecture-Relations/AMPEL360-REL-CM-005_Architecture-Relations.md
+[REL-001]: 01-02-01-01-01-03_REL_Architecture-Relations/QPLUS-REL-001_Taxonomy-Relations.md
+[KNOT-CHECK]: ../../../../../tools/knot_check.py
+[REL-TOOL]: ../../../../../tools/relations_project.py
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py
