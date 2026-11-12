@@ -108,12 +108,12 @@ Home to be ruled, since each decides where its scope lives: `DFN` · `KEL` · `L
 
 ## Research agenda
 
-The KNUs neither done nor cancelled, generated from the records (rule 9). Every KNU is proposed; none has started.
+The KNUs neither done nor cancelled, generated from the records (rule 9). One KNU is pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13. The others are proposed and have not started.
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
 | `KNU-EWTW-CAD-001-01` | Source of record, script or FreeCAD document | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
-| `KNU-EWTW-CAD-001-02` | Round trip of EWTW-533001-000 through FreeCAD | `VERIFICATION_OBJECT` | — | NOT_STARTED |
+| `KNU-EWTW-CAD-001-02` | Round trip of EWTW-533001-000 through FreeCAD | `VERIFICATION_OBJECT` | — | PENDING_REVIEW |
 | `KNU-EWTW-CAD-001-03` | CAD convention | `CONTROLLED_ARTEFACT` | `DAT` | NOT_STARTED |
 | `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-ESS-001-02` | Essential source options | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
@@ -225,7 +225,7 @@ The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.4.0 | 2026-11-12 | Added effectivity, candidate PBS footprints, ruling effects across SBS views, baseline embodiment and a generated view of pending PBS allocations. |
 | 0.4.1 | 2026-11-12 | Review of 0.4.0 applied. Each footprint element has a `key` and one owning KNOT: the battery installation belongs to `NRG`, the turbogenerator to `SRC`, filed under S-ATLAS `068` by the authority's ruling of 2026-11-12. Footprints for `STO` options B and C. Verifier moved to `tools/knot_check.py` with 13 tests in `tools/knot_check_test.py` |
 | 0.4.2 | 2026-11-13 | Pointer to the architecture relations node, which reads this register. The checker reports a KNOT recorded in more than one file. No record changed |
-| 0.5.0 | 2026-11-13 | Three KNOTs that precede the next 3D model, with ten KNUs: `KNOT-EWTW-CAD-001` 3D model of record, `KNOT-EWTW-DAT-001` fuselage datum and master geometry, `KNOT-EWTW-ROD-001` rear adjustable rods. The checker lists control KNOTs that have no chapter |
+| 0.5.0 | 2026-11-13 | Three KNOTs that precede the next 3D model, with ten KNUs: `KNOT-EWTW-CAD-001` 3D model of record, `KNOT-EWTW-DAT-001` fuselage datum and master geometry, `KNOT-EWTW-ROD-001` rear adjustable rods. The checker lists control KNOTs that have no chapter. `KNU-EWTW-CAD-001-02` ran once with `tools/freecad_roundtrip.py` and is pending review |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

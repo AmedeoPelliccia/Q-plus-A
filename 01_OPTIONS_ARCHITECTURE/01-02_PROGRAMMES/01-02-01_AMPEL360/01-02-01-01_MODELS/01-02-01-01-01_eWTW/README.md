@@ -212,7 +212,7 @@ Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Status `PRO
 
 - **Gate criteria.** Six of seven are recorded as met, and all six are documentary or allocation criteria: identity bound and concept geometry present (PBS), functions allocated (FBS), interfaces declared (IBS), first estimates recorded (TPMS), risk register opened (RBS), evidence indexed (EBS). They record that artefacts exist and are allocated, not that they are adequate. The seventh, the ReqBS initial set, is missing.
 - **Membership.** The record names its members by file path and evidence string; it does not pin them to exact revisions or content hashes. A baseline is a set of exact revisions together with its gate criteria — advancing an artefact makes a gate satisfiable; release is a decision that refers to that set (the principle proposed in CM-003). A2 cannot be released until that set is pinned.
-- **Open items.** A measured interference: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³ ([`TPM-533001-INTERF`][TPM-533001], risk [`R-533001-06`][RISKS-533001]). The station run-record is invalid YAML. Separately, the verification report flags four NDT plug seats on segment butt joints as INFO for design review ([F11](#9-findings)).
+- **Open items.** A measured interference: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³ ([`TPM-533001-INTERF`][TPM-533001], risk [`R-533001-06`][RISKS-533001]). The figure equals the volume of one bracket, which points to a reversed solid and not to a clash ([F23](#9-findings)). The station run-record is invalid YAML. Separately, the verification report flags four NDT plug seats on segment butt joints as INFO for design review ([F11](#9-findings)).
 
 ### Path to the first release
 
@@ -283,6 +283,7 @@ Places where the repository says two things, or points at something superseded. 
 | F20 | `F-WARN` | Quantities: CM-001 counts leaves and forbids double counting, but does not say how quantities multiply along repeated occurrences, aggregate by catalog identity or follow effectivity, nor when a group with enumerated children is a set rather than a sub-assembly | CM-001 §4.2, §6 | CM-001 defines the quantity basis, with worked cases: a repeated sub-assembly, a reused catalog part, parts installed together, exclusive alternatives |
 | F21 | `F-WARN` | Authority: CM-001 calls both the folder (§5) and the register (§8) SSOT without saying which governs what; it designates no record for revision and effectivity; and `catalog_pn` (§6) is carried by no part record | CM-001 §5, §6, §8; none of the 431 `part.yaml` carries `catalog_pn` | CM-001 states authority per field — identity, row status, revision, effectivity, catalog identity |
 | F22 | `F-WARN` | Approval records: CM-001 Issue 2 and CM-002 Issue 1 are on `main`, yet both headers read *PROPOSED — merge constitutes ratification* and no record names the approval act. Approving a convention is a separate act from ratifying a product baseline | CM-001 Issue 2 entered in `8ed1bd59`, 2026-08-22; CM-002 Issue 1 in `546c84a4`, 2026-09-06 | Each header names its approval act — commit, date, authority — and the resulting status |
+| F23 | `F-BLOCK` | The outflow-valve surround of the geometry of record is not made of well-formed solids. In the STEP file, the doubler `EWTW-533001-041` holds 69 solids and the frame `EWTW-533001-042` two. FreeCAD 1.0.0 reads the 69 as small cylinders, 10,727 mm³ in all, and the two as shells that are not solids. Because a leaf body holds several solids, FreeCAD shows 119 bodies where the verification report counts 50, and its rule of unique labels creates labels that are not part numbers — `EWTW-533001-043` to `-114` — and shows set `-050` as `-114`. The interference recorded against the baseline, 34,856.8 mm³, equals the volume of one bracket (418,281.8 mm³ for twelve): this points to a reversed solid in the generator, not to a clash | `CAD/exchange/EWTW-533001-000_concept.step`; verification report, sections D and F; round-trip report of 2026-11-13 from [`tools/freecad_roundtrip.py`][ROUNDTRIP], pending commit in the EBS index | The generator writes each leaf body as one valid solid, the model is verified again, and the round trip shows 50 bodies under their part numbers |
 
 ---
 
@@ -318,7 +319,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.0 | 2026-11-07 | Scope narrowed by the architecture authority: all-electric, or hybrid-electric with conventional fuel; liquid hydrogen allocated to the BWB-Q100. `KNOT-EWTW-NRG-001` and `-SRC-001` narrowed; the `KNOT-MRTT-CMA-001` premise flagged; §3 rows 3, 4, 6 and 14 and findings F01 and F07 restated. Findings F13–F22 entered from the PBS README 0.2.1 (N1–N10); F03 and F04 restated — eleven nodes, closure on outcome; F06 closed. Registry and conventions re-pinned: v0.7.1 rev. I, approval status of CM-001 and CM-002 |
 | 0.3.1 | 2026-11-08 | KNOT register created beside the SBS, under `AMPEL360-KNOT-CM-004` (proposed): the 11 KNOTs of §5 as records, with 31 KNUs and ruling R1 of `KNOT-EWTW-NRG-001`; §5 and §8 point to it |
 | 0.3.2 | 2026-11-12 | Architecture relations node created beside the KNOT register, under `AMPEL360-REL-CM-005` and `QPLUS-REL-001` (both proposed): pilot relations and their projection onto `KNOT-EWTW-SRC-001` and `KNOT-EWTW-ESS-001`; the introduction, §5, §8 and §10 point to it; §8 lists the two verification tools |
-| 0.3.3 | 2026-11-13 | §5 gains *3D models and their assembly*: `KNOT-EWTW-CAD-001`, `KNOT-EWTW-DAT-001` and `KNOT-EWTW-ROD-001`, recorded in the KNOT register 0.5.0 |
+| 0.3.3 | 2026-11-13 | §5 gains *3D models and their assembly*: `KNOT-EWTW-CAD-001`, `KNOT-EWTW-DAT-001` and `KNOT-EWTW-ROD-001`, recorded in the KNOT register 0.5.0. Finding F23 from the round trip of the model of record through FreeCAD |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -346,6 +347,7 @@ The KNOT register and the architecture relations are verified with their own com
 [CM-005]: 01-02-01-01-01-03_REL_Architecture-Relations/AMPEL360-REL-CM-005_Architecture-Relations.md
 [REL-001]: 01-02-01-01-01-03_REL_Architecture-Relations/QPLUS-REL-001_Taxonomy-Relations.md
 [KNOT-CHECK]: ../../../../../tools/knot_check.py
+[ROUNDTRIP]: ../../../../../tools/freecad_roundtrip.py
 [REL-TOOL]: ../../../../../tools/relations_project.py
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md

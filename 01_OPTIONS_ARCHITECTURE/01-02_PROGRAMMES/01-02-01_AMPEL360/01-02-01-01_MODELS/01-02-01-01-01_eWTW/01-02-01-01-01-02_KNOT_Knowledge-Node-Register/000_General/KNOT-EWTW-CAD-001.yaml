@@ -7,7 +7,7 @@ knot:
   raised_at: null
   question: '3D model of record: is its source a generator script or a FreeCAD document, and how are station models assembled and identified?'
   context: >-
-    The geometry of record of EWTW-533001-000 is not drawn by hand. A Python script built on CadQuery generates it and writes a STEP AP242 file for exchange, a glTF file for preview and a verification report. Body names are part numbers, set nodes are sub-assemblies, and a run record keeps the provenance. The layout of these artefacts and the acceptance checks are written inside the request for that one model. The next models are to be built in FreeCAD. FreeCAD and CadQuery use the same geometry kernel, Open CASCADE, so solids pass between them through STEP, but parameters and the feature history do not. A FreeCAD document is a compressed archive and shows no line differences under version control. The repository validator protects STEP, glTF and image files and does not list the FreeCAD format. The lifecycle registry, still in draft, recommends revision folders by lifecycle layer under cad/freecad, each holding the native deliverable and a record (rule CAD-REVDIR-001). The artefacts of EWTW-533001-000 follow another layout — CAD/source, CAD/exchange, CAD/Preview — and hold no FreeCAD document. No rule says where the model of an assembly of several stations is kept, or which identifier it carries.
+    The geometry of record of EWTW-533001-000 is not drawn by hand. A Python script built on CadQuery generates it and writes a STEP file for exchange, a glTF file for preview and a verification report. The STEP file was requested as AP242 and is written as AP214, a fallback that the report records. Body names are part numbers, except for four butt straps that have no controlled part number yet. Set nodes are sub-assemblies, and a run record keeps the provenance. The STEP file has been opened in FreeCAD, and three views of it are kept with the part as media. A round trip through FreeCAD 1.0.0 keeps labels and volumes, but FreeCAD shows 119 bodies where the report counts 50: two leaf bodies hold several solids, FreeCAD makes one object of each solid, and its rule of unique labels then gives some of them labels that are not part numbers. The layout of these artefacts and the acceptance checks are written inside the request for that one model. The next models are to be built in FreeCAD, and no FreeCAD document is kept so far. FreeCAD and CadQuery use the same geometry kernel, Open CASCADE, so solids pass between them through STEP, but parameters and the feature history do not. A FreeCAD document is a compressed archive and shows no line differences under version control. The repository validator protects STEP, glTF and image files and does not list the FreeCAD format. The lifecycle registry, still in draft, recommends revision folders by lifecycle layer under cad/freecad, each holding the native deliverable and a record (rule CAD-REVDIR-001). The artefacts of EWTW-533001-000 follow another layout — CAD/source, CAD/exchange, CAD/Preview. No rule says where the model of an assembly of several stations is kept, or which identifier it carries.
   effectivity:
   - model: eWTW
     variants: []
@@ -78,7 +78,7 @@ knot:
   - knu_id: KNU-EWTW-CAD-001-02
     title: Round trip of EWTW-533001-000 through FreeCAD
     knu_class: VERIFICATION_OBJECT
-    description: Open the STEP file of record in FreeCAD and compare it with the verification report — 50 bodies named by part number, five sub-assemblies — then export it and compare again
+    description: Open the STEP file of record in FreeCAD and compare it with the verification report — 50 bodies named by part number, five sub-assemblies — then export it and compare again. The check is tools/freecad_roundtrip.py. It ran once without the interface, on FreeCAD 1.0.0; the owner repeats it in the FreeCAD installation of record
     research_brief: null
     serves: []
     outputs:
@@ -87,15 +87,21 @@ knot:
     exit: The differences are recorded, or their absence
     owner: STK_CM
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-13'
-    start_date: null
+    start_date: '2026-11-13'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: PBS
+      ref: 'EWTW-533001-000, MEDIA: three views of the STEP file in FreeCAD, committed 2026-09-06'
+    - view: EBS
+      ref: 'EWTW-533001-000_concept_freecad-roundtrip.txt: FreeCAD 1.0.0, 2026-11-13, 6 PASS, 5 FAIL, 6 INFO; pending commit'
+    - view: finding
+      ref: F23
   - knu_id: KNU-EWTW-CAD-001-03
     title: CAD convention
     knu_class: CONTROLLED_ARTEFACT
-    description: 'The rules now written inside one model request, made general: folders for source, exchange and preview, naming, provenance, the content of the verification report, the identifier and the place of an assembly of several stations, and the file types the validator protects. The model request lies in the PBS, a protected area, so its amendment is an act of its author'
+    description: 'The rules now written inside one model request, made general: folders for source, exchange and preview, naming, provenance, the content of the verification report, the identifier and the place of an assembly of several stations, the file types the validator protects, and the rule that a leaf body is one valid solid, so that its part number survives in FreeCAD. The model request lies in the PBS, a protected area, so its amendment is an act of its author'
     research_brief: null
     serves:
     - KNOT-EWTW-DAT-001
