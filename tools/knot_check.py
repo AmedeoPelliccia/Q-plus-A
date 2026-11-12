@@ -1,4 +1,4 @@
-# Generated 2026-11-12 - knot_check.py (0.1.0)
+# Generated 2026-11-13 - knot_check.py (0.1.1)
 """Check a KNOT register against AMPEL360-KNOT-CM-004 and print its generated views.
 
 Usage: python3 tools/knot_check.py <register> <s-atlas> [<pbs>]
@@ -80,6 +80,8 @@ def check(register, tax_root, pbs=None):
     TAX = {d.name.split("_")[0]: d.name.split("_", 1)[1].replace("-", " ") for d in tax_root.rglob("*_*") if d.is_dir()}
     bad, seen, by, prov, gates = [], set(), {}, [], []
     creates, uses = {}, []                                                       # rule 18
+    stems = [p.stem for p in paths]
+    bad += [f"{stem} recorded in more than one file" for stem in sorted(set(stems)) if stems.count(stem) > 1]
 
     for kid, k in K.items():
         anchor = k.get("kind") == "decision-anchor"

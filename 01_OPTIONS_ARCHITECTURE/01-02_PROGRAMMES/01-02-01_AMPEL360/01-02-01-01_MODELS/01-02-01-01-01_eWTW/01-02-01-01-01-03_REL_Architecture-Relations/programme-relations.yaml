@@ -2,12 +2,22 @@
 level: programme
 programme: AMPEL360
 decided-by:
-- for: electric power for propulsion
+- key: electric-propulsion-power-decided-by-src
+  for: electric power for propulsion
   model: eWTW
   knot: KNOT-EWTW-SRC-001
-- for: essential electrical power
+  source: KNOT-EWTW-SRC-001, question
+  source_checked: '2026-11-13'
+  authority: AM.PEL
+  state: PROPOSED
+- key: essential-power-decided-by-ess
+  for: essential electrical power
   model: eWTW
   knot: KNOT-EWTW-ESS-001
+  source: KNOT-EWTW-ESS-001, question
+  source_checked: '2026-11-13'
+  authority: AM.PEL
+  state: PROPOSED
 assignments:
 - key: liquid-hydrogen-to-bwb-q100
   relation: assigned-to

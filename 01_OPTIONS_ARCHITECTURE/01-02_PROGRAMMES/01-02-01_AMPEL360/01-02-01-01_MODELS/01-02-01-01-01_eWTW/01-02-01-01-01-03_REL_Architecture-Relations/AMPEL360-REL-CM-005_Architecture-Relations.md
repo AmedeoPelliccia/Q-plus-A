@@ -36,10 +36,10 @@ A relation file is YAML. Each record has a `key` in lower-case kebab form, uniqu
 | `for` | The role within which the relation holds; `null` for any role |
 | `conditions` | The technical conditions under which the claim holds |
 | `source` | The document and clause, or the act, that supports the claim |
-| `source_checked` | The date on which the source was read against the claim; `null` until then |
+| `source_checked` | The date, as `YYYY-MM-DD`, on which the source was read against the claim; `null` until then |
 | `authority`, `state` | Who can change the record, and `PROPOSED`, `RATIFIED` or `WITHDRAWN` |
 
-A programme exclusion or assignment carries `ruling` in place of `source`, `source_checked`, `authority` and `state`. Its support, authority and state are those of the ruling it cites, written `KNOT-<MIC>-<TOPIC>-<NNN>#R<n>` and read from the register.
+A programme exclusion or assignment carries `ruling` in place of `source`, `source_checked`, `authority` and `state`. Its support, authority and state are those of the ruling it cites, written `KNOT-<MIC>-<TOPIC>-<NNN>#R<n>` and read from the register. A decision link (`decided-by`) is a record like the others, with its key, its authority and its state.
 
 ## 4. Programme relations
 
@@ -53,7 +53,9 @@ A programme exclusion or assignment carries `ruling` in place of `source`, `sour
 | `common-with` | Element ↔ element of two models, with the commonality objective | — | Elements meant to be common |
 | `certification-basis` | Model and effectivity → requirements, amendments and special conditions | — | The agreed basis against which obligations are read |
 
-The last three are defined and have no record yet. `tools/relations_project.py` 0.1.0 does not read them.
+The subject of an assignment is an S-ATLAS address, or `{ns, id}` with `ns` set to `energy-carrier` or `function`. Its object is `{ns: model, id}`. A model is named as its folder under the models node of the programme: `eWTW`, `BWB-Q100`.
+
+The last three relations are defined and have no record yet. `tools/relations_project.py` does not read them.
 
 ## 5. Model relations
 
@@ -95,11 +97,12 @@ A taxonomy alternative can lead to an option. It never stands for a substitution
 4. Alternatives are a set per role ([QPLUS-REL-001][REL-001] §3), never pairs. Each member can fill the role alone. Using two members together needs a programme combination, and its members belong to the set.
 5. A symmetric relation is stored once, with the lower address as `subject`.
 6. `requires` names what a candidate brings with it, and the projection lists it beside the candidate. `enables` marks an opportunity and never creates a prerequisite. The prerequisites of a decision come from the ownership of product elements (CM-004 rule 18) and are checked against `depends_on`.
-7. A record becomes `RATIFIED` by the authority of its level, with a `source` that is public or in this repository and a `source_checked` date. A ratified record is not edited: it is withdrawn and a record with a new key replaces it. Withdrawn records stay in the file.
+7. A record becomes `RATIFIED` by the authority of its level, with a `source` that is public or in this repository and a `source_checked` date. A ratified record is not edited: it is withdrawn and a record with a new key replaces it. Withdrawn records stay in the file. A withdrawn alternatives set leaves its role free for the set that replaces it, and its members are no longer candidates.
 8. An exclusion or an assignment cites a ruling in the register, and its state is the state of that ruling. A `PROVISIONAL` ruling gives a provisional exclusion.
 9. A combination that includes an excluded member is reported for review. It is neither dropped nor kept silently.
 10. A candidate with no S-ATLAS address is listed as `unaddressed` with its nearest node. This convention gives it no address: the taxonomy owner decides.
 11. No record states conformity. `satisfies`, `verifies` and `certified-for` are read from records that carry their own evidence and, for `certified-for`, the approval.
+12. A role has one deciding KNOT per model, and the effectivity of that KNOT includes the model.
 
 ## 8. Projection
 
@@ -107,9 +110,9 @@ For a role and a model, [`tools/relations_project.py`][TOOL]:
 
 1. Takes as candidates the members of the role's alternatives and the combinations admitted for the role and the model.
 2. Marks a candidate `excluded` when an exclusion for the model covers it, with the ruling and its state. A combination with an excluded member goes to review (rule 9). The others are `open`.
-3. Joins each candidate to the product elements of the register filed at the candidate's address or at a node above it, with the KNOT that owns each element.
+3. Joins each candidate to the product elements of the register filed at the candidate's address or at a node above it, with the KNOT that owns each element. An element counts while an option that creates it is `open` or `retained`.
 4. Lists the `requires` relations recorded at the candidate's address for the role.
-5. Compares the open candidates with the options registered in the deciding KNOT, by the addresses of their footprints.
+5. Compares the open candidates with the options of the deciding KNOT that still stand — `open` or `retained` — by the addresses of their footprints. A candidate whose option was rejected or excluded is named with that option.
 6. Lists the chapters of open candidates that the `taxonomy` field of the KNOT does not include.
 7. Derives the prerequisites — the KNOTs that own the elements of the candidates not excluded — and compares them with `depends_on`. Both sides are closed over `depends_on` and `closed_with` before the comparison.
 
@@ -124,17 +127,20 @@ From the repository root:
 ```bash
 TAX="01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS"
 MODEL="01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW"
-python3 tools/relations_project.py "$MODEL/01-02-01-01-01-03_REL_Architecture-Relations" "$MODEL/01-02-01-01-01-02_KNOT_Knowledge-Node-Register" "$TAX"
+python3 tools/relations_project.py "$MODEL/01-02-01-01-01-03_REL_Architecture-Relations" "$MODEL/01-02-01-01-01-02_KNOT_Knowledge-Node-Register" "$TAX" --check
 python3 tools/relations_project_test.py
 ```
 
-The tool checks keys, relation names, S-ATLAS addresses, the form of alternatives sets and combinations (rule 4), the order of symmetric relations (rule 5), states and the source of a ratified record (rule 7), and the rulings cited by exclusions and assignments (rule 8). It exits with status 1 on a failure and then prints no projection. Rules 1 and 2, the public availability of a source and the no-edit part of rule 7, and rule 11 are checked by review.
+The tool checks keys, relation names, S-ATLAS addresses, the form of alternatives sets and combinations (rule 4), the order of symmetric relations (rule 5), states, dates and the source of a ratified record (rule 7), the rulings cited by exclusions and assignments (rule 8), the ends of an assignment, the models named by programme records, and the deciding KNOT of each role (rule 12). An input that cannot be read, a KNOT recorded in more than one file and a file whose name differs from its `knot_id` are failures. Control characters found in a record are printed in escaped form. The tool exits with status 1 on a failure and then prints no projection.
+
+The node README holds the output between two markers. `--check` fails when that section differs from the output, and `--write` replaces it. The tool reads the working tree: the run that counts is the one on a commit, in review or on a clean checkout. Rules 1 and 2, the public availability of a source and the no-edit part of rule 7, and rule 11 are checked by review.
 
 ## Change record
 
 | Issue | Content |
 |---|---|
 | 1 | From draft 0.1.0 of 2026-11-12, pinned to `565b5bb`: the four levels, the relation sets and the projection of the `SRC` options. Changes to the draft: alternatives are sets per role and not pairs, so that nothing is inferred by chaining; the taxonomy relations move to `QPLUS-REL-001`; `allocated-to` keeps its model meaning and the programme act becomes `assigned-to`; `source_checked` added; rules on inheritance, on `enables`, on ratification and on combinations with an excluded member; the closure order, which restated `depends_on`, is replaced by prerequisites derived from element ownership and compared with `depends_on`; scope check against the `taxonomy` field of the KNOT; the script and its tests are in `tools/` |
+| 1, review of 2026-11-13 | Decision links are keyed records with authority and state; rule 12; the form of the ends of an assignment; `source_checked` is a date; a withdrawn set leaves its role free (rule 7); only options that still stand count in steps 3 and 5; the generated section of the README is written and checked by the tool |
 
 [CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
 [CM-002]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md

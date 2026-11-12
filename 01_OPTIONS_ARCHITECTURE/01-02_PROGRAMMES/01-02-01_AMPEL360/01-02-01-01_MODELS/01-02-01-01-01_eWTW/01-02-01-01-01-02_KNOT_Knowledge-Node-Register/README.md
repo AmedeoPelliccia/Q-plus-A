@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.4.2 · **Date:** 2026-11-12
+**Version:** 0.4.2 · **Date:** 2026-11-13
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -197,7 +197,7 @@ python3 tools/knot_check.py "$REG" "$TAX"
 python3 tools/knot_check_test.py
 ```
 
-The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the remaining output reproduces the four tables and the two lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 13 tests: the register as it stands, and twelve copies that each break one rule.
+The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the remaining output reproduces the four tables and the two lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 14 tests: the register as it stands, and thirteen copies that each break one rule.
 
 ---
 
@@ -210,7 +210,7 @@ The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.3.0 | 2026-11-12 | `context` on every KNOT and `research_brief` on 24 KNUs, with `model-context.yaml`: together they are a prompt for a deep-research agent; command to print one brief |
 | 0.4.0 | 2026-11-12 | Added effectivity, candidate PBS footprints, ruling effects across SBS views, baseline embodiment and a generated view of pending PBS allocations. |
 | 0.4.1 | 2026-11-12 | Review of 0.4.0 applied. Each footprint element has a `key` and one owning KNOT: the battery installation belongs to `NRG`, the turbogenerator to `SRC`, filed under S-ATLAS `068` by the authority's ruling of 2026-11-12. Footprints for `STO` options B and C. Verifier moved to `tools/knot_check.py` with 13 tests in `tools/knot_check_test.py` |
-| 0.4.2 | 2026-11-12 | Pointer to the architecture relations node, which reads this register. No record changed |
+| 0.4.2 | 2026-11-13 | Pointer to the architecture relations node, which reads this register. The checker reports a KNOT recorded in more than one file. No record changed |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

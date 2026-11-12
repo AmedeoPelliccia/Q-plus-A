@@ -238,7 +238,7 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 | [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 | Architecture relations at programme, model and product level, and between taxonomy nodes; their projection onto the KNOT register | Yes — both *PROPOSED*; the taxonomy relations are held in the model until the taxonomy owner adopts them |
 | [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
-| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register | Yes — with 13 and 18 tests |
+| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register | Yes — each with its tests |
 | `complete_PBS-053-000.py` · `-100` · `-200` · `-300` · `migrate_PBS-053-010.py` | Depth passes for chapter `053`; the radome migration | Yes, at the repository root — `-200` not yet applied ([F04](#9-findings)) |
 
 ---
