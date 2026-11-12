@@ -1,0 +1,36 @@
+# Programme relations — AMPEL360-REL-CM-005 (proposed). Pilot set for the eWTW.
+level: programme
+programme: AMPEL360
+decided-by:
+- for: electric power for propulsion
+  model: eWTW
+  knot: KNOT-EWTW-SRC-001
+- for: essential electrical power
+  model: eWTW
+  knot: KNOT-EWTW-ESS-001
+assignments:
+- key: liquid-hydrogen-to-bwb-q100
+  relation: assigned-to
+  subject:
+    ns: energy-carrier
+    id: liquid hydrogen
+  object:
+    ns: model
+    id: BWB-Q100
+  ruling: KNOT-EWTW-NRG-001#R1
+exclusions:
+- key: fuel-cells-from-ewtw
+  relation: excluded-from
+  subject: '075'
+  model: eWTW
+  for: null
+  ruling: KNOT-EWTW-NRG-001#R1
+combinations:
+- key: turbogenerators-with-batteries
+  for: electric power for propulsion
+  model: eWTW
+  members: ['068', '074']
+  source: KNOT-EWTW-SRC-001, question — "alone or combined"
+  source_checked: '2026-11-12'
+  authority: AM.PEL
+  state: PROPOSED
