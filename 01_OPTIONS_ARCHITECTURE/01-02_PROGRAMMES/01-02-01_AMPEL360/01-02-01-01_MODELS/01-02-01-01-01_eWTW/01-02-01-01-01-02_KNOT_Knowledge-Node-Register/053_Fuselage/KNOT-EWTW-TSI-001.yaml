@@ -4,6 +4,7 @@ knot:
   title: Tail-strike indicator
   kind: decision-anchor
   taxonomy: []
+  raised_at: '053'
   question: 'Tail-strike indicator and sensing: which owner?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-300-030
   lifecycle_phase: LC-A
@@ -20,6 +21,7 @@ knot:
     ref: eWTW-PBS-053-300-030
   options: []
   criteria: []
+  maturity_required: []
   assumptions: []
   couplings: []
   rulings: []
@@ -33,7 +35,7 @@ knot:
     outputs:
     - view: IBS
       ref: null
-    exit: Ruling proposal
+    exit: Criteria declared in this record before the options are compared; ruling proposal
     owner: STK_SE
     lifecycle_phase: LC-A
     progress: NOT_STARTED

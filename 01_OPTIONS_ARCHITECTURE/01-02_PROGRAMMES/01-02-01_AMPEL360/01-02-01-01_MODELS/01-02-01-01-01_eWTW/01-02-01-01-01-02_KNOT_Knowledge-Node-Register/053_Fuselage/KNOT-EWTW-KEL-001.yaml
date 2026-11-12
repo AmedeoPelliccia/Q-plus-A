@@ -4,6 +4,7 @@ knot:
   title: Keel-beam taxonomy home
   kind: decision-anchor
   taxonomy: []
+  raised_at: '053'
   question: 'Keel-beam taxonomy home: extend S-ATLAS 053-600, or bind to an existing node?'
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-600-090
   lifecycle_phase: LC-A
@@ -28,6 +29,7 @@ knot:
     text: bind to an existing node
     state: open
   criteria: []
+  maturity_required: []
   assumptions: []
   couplings: []
   rulings: []
@@ -41,7 +43,7 @@ knot:
     outputs:
     - view: taxonomy
       ref: null
-    exit: Ruling recorded
+    exit: Criteria declared in this record before the options are compared; ruling recorded
     owner: STK_CM
     lifecycle_phase: LC-A
     progress: NOT_STARTED

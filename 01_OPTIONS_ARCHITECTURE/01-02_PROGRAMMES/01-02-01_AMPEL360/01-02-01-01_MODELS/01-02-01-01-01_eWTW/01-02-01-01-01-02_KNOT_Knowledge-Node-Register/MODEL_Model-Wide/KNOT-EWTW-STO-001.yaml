@@ -4,6 +4,7 @@ knot:
   title: Role of energy storage
   kind: decision-anchor
   taxonomy: ['021', '024', '026', '047', '068', '074', '078', '079']
+  raised_at: null
   question: 'Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only?'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
@@ -96,3 +97,21 @@ knot:
     end_date: null
     evidence_refs: []
     condition: only if propulsive or buffer batteries are retained
+  - knu_id: KNU-EWTW-STO-001-04
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria and weights for the role of energy storage, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-12'
+    start_date: null
+    end_date: null
+    evidence_refs: []

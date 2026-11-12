@@ -1,13 +1,14 @@
 # KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
 knot:
-  knot_id: KNOT-EWTW-DFN-001
-  title: Dorsal-fin root fairing
+  knot_id: KNOT-EWTW-LUG-001
+  title: Wing-attach lugs
   kind: decision-anchor
   taxonomy: []
-  question: 'Dorsal-fin root fairing: 053 or 055?'
-  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-400-040
+  raised_at: '053'
+  question: 'Wing-attach lugs: fuselage side or 057?'
+  obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-010
   lifecycle_phase: LC-A
-  due: before station 053-400-040 is realized
+  due: before station 053-200-010 is realized
   owner: STK_SE
   status: DRAFT
   resolution: OPEN
@@ -17,29 +18,30 @@ knot:
   unblocks: []
   affects:
   - view: PBS
-    ref: eWTW-PBS-053-400-040
+    ref: eWTW-PBS-053-200-010
   options:
   - id: A
-    text: fuselage (053)
+    text: fuselage side (053)
     state: open
   - id: B
-    text: stabilizers (055)
+    text: wing (057)
     state: open
   criteria: []
+  maturity_required: []
   assumptions: []
   couplings: []
   rulings: []
   reopen_if: []
   knus:
-  - knu_id: KNU-EWTW-DFN-001-01
-    title: Fairing ownership
+  - knu_id: KNU-EWTW-LUG-001-01
+    title: Wing-attach interface split
     knu_class: ANALYSIS_PACKAGE
-    description: Interface between the tailcone structure and the fin, and the owner of the fairing
+    description: Interface split, load transfer and the owner of the interface control document
     serves: []
     outputs:
     - view: IBS
       ref: null
-    exit: Ruling proposal
+    exit: Criteria declared in this record before the options are compared; ruling proposal with the ICD owner
     owner: STK_SE
     lifecycle_phase: LC-A
     progress: NOT_STARTED

@@ -4,6 +4,7 @@ knot:
   title: Energy carrier
   kind: decision-anchor
   taxonomy: ['021', '024', '026', '028', '047', '053', '064', '068', '074', '078', '079']
+  raised_at: null
   question: 'Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
@@ -64,6 +65,7 @@ knot:
     rationale_recorded: null
     evidence: []
     waiver: null
+    state: PROVISIONAL
     record: 'eWTW README 0.3.0 — PR #67, merged at 92ce9e96'
   reopen_if: []
   knus:
@@ -77,7 +79,7 @@ knot:
       ref: null
     - view: TPMS
       ref: null
-    exit: Criteria, weights and thresholds approved by the authority
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
     progress: NOT_STARTED
@@ -177,14 +179,16 @@ knot:
     end_date: null
     evidence_refs: []
   - knu_id: KNU-EWTW-NRG-001-07
-    title: Rationale of ruling R1
+    title: Rationale and evidence of ruling R1
     knu_class: EVIDENCE_RECORD
-    description: Why liquid hydrogen is allocated to the BWB-Q100 and not to the eWTW, and what would reopen the choice
+    description: Why liquid hydrogen is allocated to the BWB-Q100 and not to the eWTW, the evidence that supports it, and what would reopen the choice
     serves: []
     outputs:
     - view: model
       ref: KNOT-EWTW-NRG-001 R1
-    exit: Rationale and reopen condition completed in R1 by the authority
+    - view: model
+      ref: KNOT-EWTW-NRG-001 reopen_if
+    exit: Rationale and evidence completed once in R1 by the authority (CM-004 rule 7); the reopen condition recorded in the KNOT's reopen_if
     owner: AM.PEL
     lifecycle_phase: LC-A
     progress: NOT_STARTED

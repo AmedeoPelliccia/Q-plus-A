@@ -4,6 +4,7 @@ knot:
   title: Propulsion chain
   kind: decision-anchor
   taxonomy: ['021', '022', '024', '027', '061', '062', '063', '064', '065', '066', '067', '068', '069', '071', '072', '073', '074', '076', '077', '078', '079']
+  raised_at: null
   question: 'Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not?'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
@@ -61,7 +62,7 @@ knot:
       ref: null
     - view: TPMS
       ref: null
-    exit: Criteria, weights and thresholds approved by the authority
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
     progress: NOT_STARTED

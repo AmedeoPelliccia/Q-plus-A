@@ -4,6 +4,7 @@ knot:
   title: Essential power
   kind: decision-anchor
   taxonomy: ['012', '022', '023', '024', '026', '031', '034', '042', '046', '047', '049', '076', '079']
+  raised_at: null
   question: 'Essential power: which sources, what segregation and what duration keep essential functions available?'
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
@@ -65,6 +66,24 @@ knot:
     lifecycle_phase: LC-A
     progress: NOT_STARTED
     created_date: '2026-11-08'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ESS-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria and weights for essential power, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-12'
     start_date: null
     end_date: null
     evidence_refs: []
