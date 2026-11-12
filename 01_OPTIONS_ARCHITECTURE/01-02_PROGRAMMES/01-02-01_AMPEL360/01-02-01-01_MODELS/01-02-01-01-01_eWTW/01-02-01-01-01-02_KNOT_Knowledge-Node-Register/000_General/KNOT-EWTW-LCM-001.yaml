@@ -6,6 +6,8 @@ knot:
   taxonomy: []
   raised_at: null
   question: 'Lifecycle notation: LC-A or LCS-A in baseline records; stage-folder names; re-pin when the registry is released'
+  context: >-
+    This KNOT is internal governance: how lifecycle stages are written in baseline records, and when the model is re-pinned to the lifecycle registry. It needs no external research.
   obligation_source: 02_LIFECYCLE_MODEL — registry in draft; AMPEL360-SBS-LC-CM-003 (proposed)
   lifecycle_phase: LC-A
   due: before the first baseline is ratified
@@ -36,6 +38,7 @@ knot:
     title: Baseline notation
     knu_class: WORK_ITEM
     description: Notation of stages in baseline records and stage-folder names
+    research_brief: null
     serves: []
     outputs:
     - view: model
@@ -52,6 +55,7 @@ knot:
     title: Registry re-pin
     knu_class: WORK_ITEM
     description: 'Re-pin the model when the registry leaves draft; pinned now: v0.7.1, revision I'
+    research_brief: null
     serves: []
     outputs:
     - view: model

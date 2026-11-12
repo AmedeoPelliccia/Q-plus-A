@@ -45,8 +45,8 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Re
 
 | Record | Fields |
 |---|---|
-| KNOT | `knot_id`, `title`, `kind`, `taxonomy`, `raised_at`, `question`, `obligation_source`, `lifecycle_phase`, `due`, `owner`, `status`, `resolution`, `created_date`, `depends_on`, `closed_with`, `unblocks`, `affects`, `options`, `criteria`, `maturity_required` (every decision anchor), `assumptions`, `couplings`, `rulings`, `reopen_if`, `knus` |
-| KNU | `knu_id`, `title`, `knu_class`, `description`, `serves`, `outputs`, `exit`, `owner`, `lifecycle_phase`, `progress`, `created_date`, `start_date`, `end_date`, `evidence_refs`, `condition` (optional) |
+| KNOT | `knot_id`, `title`, `kind`, `taxonomy`, `raised_at`, `question`, `context`, `obligation_source`, `lifecycle_phase`, `due`, `owner`, `status`, `resolution`, `created_date`, `depends_on`, `closed_with`, `unblocks`, `affects`, `options`, `criteria`, `maturity_required` (every decision anchor), `assumptions`, `couplings`, `rulings`, `reopen_if`, `knus` |
+| KNU | `knu_id`, `title`, `knu_class`, `description`, `research_brief`, `serves`, `outputs`, `exit`, `owner`, `lifecycle_phase`, `progress`, `created_date`, `start_date`, `end_date`, `evidence_refs`, `condition` (optional) |
 | Ruling | `id`, `date`, `authority`, `statement`, `effect`, `rationale`, `rationale_recorded`, `evidence`, `waiver`, `state`, `record` |
 
 **Vocabularies**
@@ -80,6 +80,7 @@ An option is `retained` or `rejected` by scoring it against the declared criteri
 10. No record carries a conformity claim.
 11. Records are filed by scope. A KNOT whose `taxonomy` names one S-ATLAS chapter is filed in that chapter's folder, `<CCC>_<Title>/`. A KNOT with an empty `taxonomy` and a `raised_at` chapter is filed under that chapter until it is ruled. Every other KNOT — one that spans several chapters, or belongs to none — is filed in `000_General/`, the folder of S-ATLAS chapter `000` *General*. The folder is a filing place, not identity: a record moves when its scope changes, and its identifier stays.
 12. The verification script of the register enforces rules 1–5, 10 and 11 and the required fields; a record that fails it is not merged.
+13. A KNOT states its `context` in plain words, and a KNU that needs outside research states its questions in `research_brief`. With the model context of the register, written once, they form a self-contained research prompt. They state only what the model has declared and name no option as preferred.
 
 ## 7. Lifecycle and memory
 
@@ -89,7 +90,7 @@ Configuration decisions are `LC-B` deliverables (registry §3): a KNOT is worked
 
 | Issue | Content |
 |---|---|
-| 1 | Definitions from AEROSPACEMODEL as restated on 2026-11-08; kinds; identifier grammar without `LC01`–`LC14` and without classification, S-ATLAS addresses in the `taxonomy` field; record fields and vocabularies; provisional rulings; scoring gate; filing by scope; rules 1–12 |
+| 1 | Definitions from AEROSPACEMODEL as restated on 2026-11-08; kinds; identifier grammar without `LC01`–`LC14` and without classification, S-ATLAS addresses in the `taxonomy` field; record fields and vocabularies; provisional rulings; scoring gate; filing by scope; research briefs; rules 1–13 |
 
 [AEROSPACEMODEL]: https://github.com/AmedeoPelliccia/AEROSPACEMODEL
 [CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

@@ -6,6 +6,8 @@ knot:
   taxonomy: ['021', '024', '026', '047', '068', '074', '078', '079']
   raised_at: null
   question: 'Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only?'
+  context: >-
+    Batteries may play three different roles on the eWTW: storing the propulsive energy, buffering starts, transients and peaks, or supplying only essential and emergency loads. The role decides the size, mass and location of the battery installation and the safety case for the energy-carrier bay in the fuselage.
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -46,6 +48,11 @@ knot:
     title: Storage role and size
     knu_class: ANALYSIS_PACKAGE
     description: 'For each option of KNOT-EWTW-SRC-001: the role of the batteries and their size for that role'
+    research_brief:
+      questions:
+      - Which roles do batteries play in existing and proposed hybrid-electric aircraft, and how large are they for each role?
+      - How does the role change mass, volume and location of the installation?
+      - What degradation and replacement intervals follow from each role?
     serves: []
     outputs:
     - view: TPMS
@@ -62,6 +69,11 @@ knot:
     title: Battery installation safety
     knu_class: REQUIREMENT_SET
     description: Thermal-runaway propagation, containment, venting and crash loads for the energy-carrier bay
+    research_brief:
+      questions:
+      - Which requirements and means of compliance do regulators apply to large lithium battery installations in transport aircraft — thermal runaway, propagation, containment, venting, crash loads?
+      - Which containment and venting concepts are demonstrated for packs installed in a fuselage bay?
+      - Which incidents and service experience shaped these requirements?
     serves: []
     outputs:
     - view: ReqBS
@@ -84,6 +96,11 @@ knot:
     title: Propagation test plan
     knu_class: VERIFICATION_OBJECT
     description: Laboratory test of cell-to-module propagation at TRL 4, with test objectives and correlation thresholds declared before execution
+    research_brief:
+      questions:
+      - Which test standards and methods exist for cell-to-module and module-to-pack propagation, and what do they measure?
+      - What acceptance criteria and correlation thresholds have test programmes used?
+      - What laboratory set-up, instrumentation and safety provisions does such a test need?
     serves: []
     outputs:
     - view: EBS
@@ -101,6 +118,11 @@ knot:
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
     description: Criteria and weights for the role of energy storage, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    research_brief:
+      questions:
+      - Which criteria do published studies use to choose the role of energy storage in a hybrid-electric aircraft?
+      - What maturity of cells, packs and battery management is required for each role before deciding?
+      - Which criteria follow from battery safety rules and cannot be traded?
     serves: []
     outputs:
     - view: ReqBS

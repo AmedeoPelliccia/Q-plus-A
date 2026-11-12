@@ -6,6 +6,8 @@ knot:
   taxonomy: []
   raised_at: '053'
   question: 'Wing-attach lugs: fuselage side or 057?'
+  context: >-
+    The wing is attached to the fuselage through lugs and fittings. The question is which side of the joint owns them — fuselage or wing — and who owns the interface control document.
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-010
   lifecycle_phase: LC-A
   due: before station 053-200-010 is realized
@@ -37,6 +39,10 @@ knot:
     title: Wing-attach interface split
     knu_class: ANALYSIS_PACKAGE
     description: Interface split, load transfer and the owner of the interface control document
+    research_brief:
+      questions:
+      - How do aircraft manufacturers and standards split wing-to-fuselage attachment hardware between wing and fuselage breakdowns?
+      - How is the interface documented and who normally owns the interface control document?
     serves: []
     outputs:
     - view: IBS

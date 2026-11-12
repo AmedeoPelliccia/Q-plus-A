@@ -6,6 +6,8 @@ knot:
   taxonomy: []
   raised_at: '053'
   question: 'Tail-strike indicator and sensing: which owner?'
+  context: >-
+    A tail-strike indicator needs a structural provision in the rear fuselage and a sensing and indication function. The question is who owns each part.
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-300-030
   lifecycle_phase: LC-A
   due: before station 053-300-030 is realized
@@ -31,6 +33,10 @@ knot:
     title: Tail-strike provision and sensing
     knu_class: ANALYSIS_PACKAGE
     description: Structural provision at 053-300-030, and the owners of sensing and indication; this KNU defines the option set
+    research_brief:
+      questions:
+      - How are tail-strike protection and indication implemented on transport aircraft — structural bumper, sensor, indication?
+      - How do published breakdowns split them between structure and systems?
     serves: []
     outputs:
     - view: IBS

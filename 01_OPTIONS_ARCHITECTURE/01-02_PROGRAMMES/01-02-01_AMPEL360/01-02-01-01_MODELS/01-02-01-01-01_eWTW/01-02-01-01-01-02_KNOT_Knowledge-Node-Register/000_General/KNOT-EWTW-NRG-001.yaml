@@ -6,6 +6,8 @@ knot:
   taxonomy: ['021', '024', '026', '028', '047', '053', '064', '068', '074', '078', '079']
   raised_at: null
   question: 'Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope'
+  context: >-
+    The energy carrier is the first configuration decision of the eWTW: it fixes what the energy-carrier bay in the fuselage holds, and it conditions the electrical sources, the propulsion chain, thermal management and fire protection. The choice is between batteries alone, conventional fuel (kerosene or sustainable aviation fuel) feeding a thermal machine that generates electricity, or both. Hydrogen is excluded. The decision needs a feasible design mission for a 100-passenger aircraft, so the research must tie every energy figure to range, payload and reserves.
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -73,6 +75,11 @@ knot:
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
     description: Criteria and weights for the energy carrier, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    research_brief:
+      questions:
+      - Which decision criteria do published trade studies of electric and hybrid-electric regional aircraft use for the choice of energy carrier, and how do they weight them?
+      - Which technology elements are critical for each option (battery pack, turbogenerator, power electronics), and what maturity do aircraft programmes require of them before a configuration decision?
+      - Which criteria are regulatory and therefore cannot be traded?
     serves: []
     outputs:
     - view: ReqBS
@@ -91,6 +98,11 @@ knot:
     title: Design mission and reserve policy
     knu_class: REQUIREMENT_SET
     description: Range, payload for the 100-passenger class, reserves, and the regulatory basis of reserves for a battery-electric or hybrid-electric transport aircraft
+    research_brief:
+      questions:
+      - What design ranges, payloads and typical stage lengths characterise the 100-passenger regional market, with sources?
+      - What reserve rules apply to transport aircraft, and what have regulators published or proposed on energy reserves for battery-electric and hybrid-electric aircraft?
+      - What design missions did comparable electric or hybrid-electric regional concepts adopt, and why?
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-SRC-001
@@ -110,6 +122,11 @@ knot:
     title: Mission energy and power budget
     knu_class: ANALYSIS_PACKAGE
     description: Propulsive and non-propulsive energy and power by flight phase for options A, B and C, including the declared E-pack demand (README §2)
+    research_brief:
+      questions:
+      - What propulsive energy and power does a 100-passenger regional aircraft need by flight phase, in published data or validated models?
+      - How large are the non-propulsive loads by phase, in particular an electric bleedless environmental control system?
+      - What chain efficiencies are demonstrated for battery-electric and for turbogenerator-electric architectures?
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-SRC-001
@@ -129,6 +146,12 @@ knot:
     title: Battery technology state
     knu_class: EVIDENCE_RECORD
     description: Pack-level specific energy and power, cycle life, safety behaviour and TRL, with sources and a projection to entry into service
+    research_brief:
+      questions:
+      - What specific energy and specific power are demonstrated today at pack level, not cell level, for aviation-grade lithium batteries, and what is the cell-to-pack ratio?
+      - What cycle life, charge rate and degradation are demonstrated under aviation duty cycles?
+      - What is the documented safety behaviour (thermal runaway, propagation) and which qualification standards apply?
+      - Which projections exist for the next ten to fifteen years, and which of them rest on demonstrated chemistry?
     serves:
     - KNOT-EWTW-STO-001
     outputs:
@@ -146,6 +169,11 @@ knot:
     title: Thermal machine on conventional fuel
     knu_class: ANALYSIS_PACKAGE
     description: 'Turbogenerator options on conventional fuel, including sustainable aviation fuel: power class, fuel mass, efficiency, emissions'
+    research_brief:
+      questions:
+      - Which turbogenerators or turboshaft-based generators exist or are in development in the megawatt class, with power, mass, efficiency and maturity?
+      - What are their fuel consumption and emissions on kerosene and on sustainable aviation fuel, and what blend limits apply?
+      - What fuel mass and tank volume does a hybrid 100-passenger aircraft need on a regional mission in published studies?
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-SRC-001
@@ -166,6 +194,11 @@ knot:
     title: Trade study of the energy carrier
     knu_class: ANALYSIS_PACKAGE
     description: Options A, B and C scored against the approved criteria, with sensitivity to the recorded assumptions
+    research_brief:
+      questions:
+      - How do published studies compare all-electric, turbo-electric and hybrid-electric architectures for regional aircraft on range, mass, energy cost, emissions and certification risk?
+      - Which assumptions drive their conclusions, and how sensitive are the results to battery specific energy?
+      - Where do the studies disagree, and why?
     serves: []
     outputs:
     - view: EBS
@@ -182,6 +215,7 @@ knot:
     title: Rationale and evidence of ruling R1
     knu_class: EVIDENCE_RECORD
     description: Why liquid hydrogen is allocated to the BWB-Q100 and not to the eWTW, the evidence that supports it, and what would reopen the choice
+    research_brief: null
     serves: []
     outputs:
     - view: model

@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.2.0 · **Date:** 2026-11-12
+**Version:** 0.3.0 · **Date:** 2026-11-12
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -143,6 +143,28 @@ Three KNUs touch protected areas and are author acts: `KNU-EWTW-PRP-001-05` and 
 
 ---
 
+## Research briefs
+
+Every KNOT carries a `context`, and every KNU that needs outside research a `research_brief` with its questions. Together with [`model-context.yaml`](model-context.yaml) — the aircraft, the research rules and the deliverable, written once — they form a prompt that can be handed as it is to a deep-research agent. From the repository root, with `REG` set as in *How to verify*, this command prints the brief of one KNU:
+
+```sh
+python3 - "$REG" KNU-EWTW-NRG-001-04 <<'EOF'
+import pathlib, sys, yaml
+reg, kid = pathlib.Path(sys.argv[1]), sys.argv[2]
+p = next(reg.rglob("KNOT-" + kid[4:16] + ".yaml")); k = yaml.safe_load(p.read_text(encoding="utf-8"))["knot"]
+u = next(x for x in k["knus"] if x["knu_id"] == kid)
+if not u["research_brief"]: sys.exit(kid + " has no research brief: it is not a research task")
+out = dict(yaml.safe_load((reg / "model-context.yaml").read_text(encoding="utf-8")))
+out["decision"] = {f: k[f] for f in ("knot_id", "title", "question", "context", "options", "assumptions")}
+out["task"] = {f: u[f] for f in ("knu_id", "title", "knu_class", "description", "research_brief", "exit")}
+print(yaml.safe_dump(out, sort_keys=False, allow_unicode=True, width=110))
+EOF
+```
+
+24 of the 31 KNUs have a brief. The other seven are work items, author acts and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
+
+---
+
 ## How to verify
 
 From the repository root:
@@ -159,7 +181,7 @@ V = {"kind": "obligation control-intent decision-anchor lifecycle-constraint", "
      "resolution": "OPEN RULED DEFERRED", "knu_class": "WORK_ITEM CONTROLLED_ARTEFACT REQUIREMENT_SET ANALYSIS_PACKAGE "
      "VERIFICATION_OBJECT EVIDENCE_RECORD OTHER", "progress": "NOT_STARTED IN_PROGRESS PENDING_REVIEW DONE CANCELLED"}
 REQ = ("knot_id title kind taxonomy raised_at question obligation_source lifecycle_phase due owner status resolution created_date "
-       "depends_on closed_with unblocks affects options criteria assumptions couplings rulings reopen_if knus").split()
+       "context depends_on closed_with unblocks affects options criteria assumptions couplings rulings reopen_if knus").split()
 RUL = "id date authority statement effect rationale rationale_recorded evidence waiver state record".split()
 bad, seen, by, prov = [], set(), {}, []
 for kid, k in K.items():
@@ -167,6 +189,7 @@ for kid, k in K.items():
     miss = [f for f in REQ + ["maturity_required"] * anchor if f not in k]
     if miss:
         bad.append(f"{kid} missing {miss}"); continue
+    bad += [f"{kid} context"] * (not k["context"])
     bad += [kid] * (kid != k["knot_id"] or not re.fullmatch(r"KNOT-EWTW-[A-Z]{3}-\d{3}", kid) or not k["obligation_source"])
     bad += [f"{kid} {f}" for f in ("kind", "status", "resolution") if k[f] not in V[f].split()]
     bad += [f"{kid} -> {r}" for f in ("depends_on", "closed_with", "unblocks") for r in k[f] if r not in K]
@@ -190,7 +213,7 @@ for kid, k in K.items():
         bad += [i] * (not re.fullmatch(f"KNU-{kid[5:]}-\\d\\d", i) or i in seen or not u["outputs"] or not u["exit"]
                       or u["knu_class"] not in V["knu_class"].split() or u["progress"] not in V["progress"].split()
                       or (u["progress"] == "IN_PROGRESS" and not (u["evidence_refs"] or u["end_date"])))
-        bad += [f"{i} serves {r}" for r in u["serves"] if r not in K]
+        bad += [f"{i} serves {r}" for r in u["serves"] if r not in K] + [f"{i} research_brief"] * ("research_brief" not in u)
         seen.add(i)
 if re.search(r"\b(compliant|conforms?)\b", str(K).lower()): bad.append("conformity claim")
 print(f"{len(K)} KNOTs, {len(seen)} KNUs, {len(by)} S-ATLAS chapters; rule failures: {bad or 'none'}")
@@ -210,7 +233,7 @@ for k in K.values():
 EOF
 ```
 
-The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the rest reproduces the three tables above and the two lines under the chapter table. The script fails a record that lacks a required field, is filed in the wrong folder, scores an option without criteria and maturity thresholds, is ruled on a provisional ruling, or misstates a ruling's state. It also checks identifiers, file names, vocabularies, references between KNOTs, that every S-ATLAS chapter resolves, outputs and exit criteria, and the absence of conformity claims.
+The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the rest reproduces the three tables above and the two lines under the chapter table. The script fails a record that lacks a required field or a context, is filed in the wrong folder, scores an option without criteria and maturity thresholds, is ruled on a provisional ruling, or misstates a ruling's state. It also checks identifiers, file names, vocabularies, references between KNOTs, that every S-ATLAS chapter resolves, outputs and exit criteria, and the absence of conformity claims.
 
 ---
 
@@ -220,6 +243,7 @@ The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: non
 |---|---|---|
 | 0.1.0 | 2026-11-08 | Register created: the 11 KNOTs of the model README 0.3.0 §5 as records, 29 KNUs proposed, ruling R1 of `KNOT-EWTW-NRG-001` recorded; S-ATLAS chapters per KNOT and the view by chapter |
 | 0.2.0 | 2026-11-12 | Review of 0.1.0 applied. Records filed by scope: `053_Fuselage/` and `000_General/`. Scoring gate and required fields enforced by the script; `maturity_required` on every decision anchor; criteria KNUs added for `STO` and `ESS` (31 KNUs). R1 marked `PROVISIONAL`; `KNU-EWTW-NRG-001-07` now covers its evidence and writes the reopen condition to the KNOT |
+| 0.3.0 | 2026-11-12 | `context` on every KNOT and `research_brief` on 24 KNUs, with `model-context.yaml`: together they are a prompt for a deep-research agent; command to print one brief |
 
 [MODEL]: ../README.md
 [MODEL-5]: ../README.md#5-open-knots

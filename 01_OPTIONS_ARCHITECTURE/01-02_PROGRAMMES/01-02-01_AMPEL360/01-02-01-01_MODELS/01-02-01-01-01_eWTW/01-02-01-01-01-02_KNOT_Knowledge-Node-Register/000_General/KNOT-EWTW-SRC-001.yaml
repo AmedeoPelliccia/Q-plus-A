@@ -6,6 +6,8 @@ knot:
   taxonomy: ['012', '024', '049', '068', '074', '076', '079']
   raised_at: null
   question: 'Electrical sources: turbogenerators (068), batteries (074) — alone or combined? Fuel cells (075) left the option set with hydrogen'
+  context: >-
+    The electrical sources supply both propulsion and the aircraft systems, including an electric bleedless environmental control system that is one of the largest non-propulsive loads. The candidates are batteries, turbogenerators on conventional fuel, or both. Fuel cells are excluded with hydrogen.
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -52,6 +54,11 @@ knot:
     title: Electrical load analysis
     knu_class: ANALYSIS_PACKAGE
     description: Propulsive and non-propulsive loads by flight phase, peak and continuous, including the E-pack ECS (S-ATLAS 021-510)
+    research_brief:
+      questions:
+      - What is the electrical load profile of a more-electric or all-electric regional aircraft by flight phase, peak and continuous?
+      - How much power does an electric bleedless environmental control system draw for about 100 passengers, by phase and ambient condition?
+      - Which loads are shed or reduced in degraded conditions?
     serves:
     - KNOT-EWTW-STO-001
     - KNOT-EWTW-ESS-001
@@ -70,6 +77,11 @@ knot:
     title: Source sizing
     knu_class: ANALYSIS_PACKAGE
     description: Source size and mass for each option, on the loads of KNU-EWTW-SRC-001-01
+    research_brief:
+      questions:
+      - How are batteries and turbogenerators sized against peak and continuous loads in published hybrid-electric designs?
+      - What masses and volumes result for a 100-passenger regional aircraft, per option?
+      - What redundancy do the designs keep among sources?
     serves: []
     outputs:
     - view: TPMS
@@ -86,6 +98,11 @@ knot:
     title: Distribution architecture
     knu_class: ANALYSIS_PACKAGE
     description: Distribution architecture and voltage level, with protection and segregation, for each option
+    research_brief:
+      questions:
+      - Which distribution voltages are used or proposed for megawatt-class aircraft, and what limits them at altitude (partial discharge, arc faults)?
+      - Which protection devices exist for high-voltage direct current in aviation, and at what maturity?
+      - How are propulsion and systems networks segregated in published architectures?
     serves:
     - KNOT-EWTW-ESS-001
     outputs:

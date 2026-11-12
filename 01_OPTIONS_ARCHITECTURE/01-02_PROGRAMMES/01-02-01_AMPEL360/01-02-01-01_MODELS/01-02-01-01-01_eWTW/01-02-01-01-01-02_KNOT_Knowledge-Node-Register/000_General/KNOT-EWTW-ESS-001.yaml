@@ -6,6 +6,8 @@ knot:
   taxonomy: ['012', '022', '023', '024', '026', '031', '034', '042', '046', '047', '049', '076', '079']
   raised_at: null
   question: 'Essential power: which sources, what segregation and what duration keep essential functions available?'
+  context: >-
+    Essential power is what keeps the functions needed for continued safe flight and landing alive after the main electrical sources are lost. On an aircraft whose propulsion is electric, the question covers sources, their segregation from the main network, and the duration they must last.
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -39,6 +41,11 @@ knot:
     title: Essential loads and duration
     knu_class: ANALYSIS_PACKAGE
     description: What must remain available after loss of the main sources, for how long, and with what segregation
+    research_brief:
+      questions:
+      - Which functions do regulators require to remain available after loss of normal electrical power in transport aircraft, and for how long?
+      - How do these requirements change when propulsion itself is electric?
+      - What essential load lists have comparable more-electric aircraft published?
     serves: []
     outputs:
     - view: ReqBS
@@ -55,6 +62,11 @@ knot:
     title: Essential source options
     knu_class: ANALYSIS_PACKAGE
     description: 'For each option of KNOT-EWTW-SRC-001: candidate essential sources and their segregation from the main sources; this KNU defines the option set of the KNOT'
+    research_brief:
+      questions:
+      - Which essential and emergency sources are used or proposed — dedicated batteries, a segregated generator channel, a ram-air turbine or others — and with what limits?
+      - How are they segregated from the main sources, physically and electrically?
+      - What does each option weigh and how is it shown to be independent?
     serves: []
     outputs:
     - view: RBS
@@ -73,6 +85,11 @@ knot:
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
     description: Criteria and weights for essential power, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    research_brief:
+      questions:
+      - Which criteria do published safety assessments use to choose essential power architectures?
+      - What maturity of the emergency sources is required before deciding?
+      - Which criteria are regulatory and cannot be traded?
     serves: []
     outputs:
     - view: ReqBS
