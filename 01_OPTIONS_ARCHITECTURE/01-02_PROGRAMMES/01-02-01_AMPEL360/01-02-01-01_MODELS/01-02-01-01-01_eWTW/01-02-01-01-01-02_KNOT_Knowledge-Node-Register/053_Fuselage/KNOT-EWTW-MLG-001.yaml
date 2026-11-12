@@ -8,6 +8,10 @@ knot:
   question: 'MLG configuration: trunnions on wing or on fuselage structure?'
   context: >-
     The main landing gear trunnions can be carried by the wing or by fuselage structure. The answer decides the load paths and the volume of the centre-fuselage gear bay, and which structural chapter owns the support structure.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-200-030
   lifecycle_phase: LC-A
   due: before the 053-200 depth pass is applied
@@ -21,15 +25,25 @@ knot:
   affects:
   - view: PBS
     ref: eWTW-PBS-053-200-030
+    relation: gates
+    note: Main landing gear trunnion mounting
   - view: finding
     ref: F04
   options:
   - id: A
     text: trunnions on the wing
     state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '057'
+      element: Main landing gear trunnion attachment
   - id: B
     text: trunnions on fuselage structure
     state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '053'
+      element: Main landing gear trunnion attachment
   criteria: []
   maturity_required: []
   assumptions: []

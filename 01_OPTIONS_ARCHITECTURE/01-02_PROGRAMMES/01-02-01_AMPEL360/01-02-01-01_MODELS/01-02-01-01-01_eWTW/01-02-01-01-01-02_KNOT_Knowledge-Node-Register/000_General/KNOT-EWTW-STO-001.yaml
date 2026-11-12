@@ -8,6 +8,10 @@ knot:
   question: 'Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only?'
   context: >-
     Batteries may play three different roles on the eWTW: storing the propulsive energy, buffering starts, transients and peaks, or supplying only essential and emergency loads. The role decides the size, mass and location of the battery installation and the safety case for the energy-carrier bay in the fuselage.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -27,16 +31,26 @@ knot:
     ref: README §3 row 6
   - view: model
     ref: README §3 row 14
+  - view: PBS
+    ref: eWTW-PBS-028-000
+    relation: gates
+    note: Storage installation by allocated role
   options:
   - id: A
     text: propulsive energy
     state: open
+    pbs_footprint:
+    - action: populate
+      taxonomy: '074'
+      element: Propulsive battery installation
   - id: B
     text: buffering for start, transients and peaks
     state: open
+    pbs_footprint: []
   - id: C
     text: essential and emergency supply only
     state: open
+    pbs_footprint: []
   criteria: []
   maturity_required: []
   assumptions: []

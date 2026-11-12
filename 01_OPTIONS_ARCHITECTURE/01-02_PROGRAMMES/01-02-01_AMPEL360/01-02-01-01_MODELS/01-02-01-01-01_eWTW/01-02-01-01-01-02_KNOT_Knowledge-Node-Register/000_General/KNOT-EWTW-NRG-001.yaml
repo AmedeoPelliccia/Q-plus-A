@@ -8,6 +8,10 @@ knot:
   question: 'Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope'
   context: >-
     The energy carrier is the first configuration decision of the eWTW: it fixes what the energy-carrier bay in the fuselage holds, and it conditions the electrical sources, the propulsion chain, thermal management and fire protection. The choice is between batteries alone, conventional fuel (kerosene or sustainable aviation fuel) feeding a thermal machine that generates electricity, or both. Hydrogen is excluded. The decision needs a feasible design mission for a 100-passenger aircraft, so the research must tie every energy figure to range, payload and reserves.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -31,22 +35,40 @@ knot:
     ref: README §3 row 14
   - view: PBS
     ref: eWTW-PBS-053-900-000
+    relation: gates
+    note: Energy-carrier bay contents and installation
   - view: finding
     ref: F01
   options:
   - id: A
     text: batteries — all-electric
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '074'
+      element: Propulsive battery installation
   - id: B
     text: conventional fuel for a thermal machine, without propulsive batteries
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '028'
+      element: Conventional fuel storage installation
   - id: C
     text: both — hybrid-electric
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '028'
+      element: Conventional fuel storage installation
+    - action: create
+      taxonomy: '074'
+      element: Propulsive battery installation
   - id: D
     text: cryogenic hydrogen
     state: excluded
     by: R1
+    pbs_footprint: []
   criteria: []
   maturity_required: []
   assumptions:
@@ -68,6 +90,12 @@ knot:
     evidence: []
     waiver: null
     state: PROVISIONAL
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects: []
+    embodied_in: []
     record: 'eWTW README 0.3.0 — PR #67, merged at 92ce9e96'
   reopen_if: []
   knus:

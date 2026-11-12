@@ -8,6 +8,10 @@ knot:
   question: 'Essential power: which sources, what segregation and what duration keep essential functions available?'
   context: >-
     Essential power is what keeps the functions needed for continued safe flight and landing alive after the main electrical sources are lost. On an aircraft whose propulsion is electric, the question covers sources, their segregation from the main network, and the duration they must last.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -29,6 +33,10 @@ knot:
     ref: README §3 row 14
   - view: model
     ref: README §3 row 15
+  - view: PBS
+    ref: eWTW-PBS-024-000
+    relation: gates
+    note: Essential feeds and segregation
   options: []
   criteria: []
   maturity_required: []

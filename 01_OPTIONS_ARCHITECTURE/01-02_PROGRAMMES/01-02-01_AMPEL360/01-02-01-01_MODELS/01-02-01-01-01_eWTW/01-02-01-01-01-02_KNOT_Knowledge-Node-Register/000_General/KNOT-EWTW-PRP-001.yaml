@@ -8,6 +8,10 @@ knot:
   question: 'Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not?'
   context: >-
     The propulsion chain is decided together with the electrical sources. It is either all-electric or hybrid-electric with a thermal machine on conventional fuel, and the propulsors may be distributed along the airframe or concentrated in a few units. The decision drives the wing and airframe integration, the heat to be rejected, and the failure cases the aircraft must survive.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -29,19 +33,36 @@ knot:
     ref: README §3 row 6
   - view: model
     ref: README §3 row 7
+  - view: PBS
+    ref: eWTW-PBS-071-000
+    relation: gates
+    note: Propulsion module and installation allocation
   options:
   - id: A
     text: all-electric
     state: open
+    pbs_footprint: []
   - id: B
     text: hybrid-electric with a thermal machine on conventional fuel
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '062'
+      element: Conventional-fuel thermal machine installation
   - id: D1
     text: distributed propulsion
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '077'
+      element: Distributed electric propulsor installations
   - id: D2
     text: concentrated propulsion
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '077'
+      element: Concentrated electric propulsor installations
   criteria: []
   maturity_required: []
   assumptions:

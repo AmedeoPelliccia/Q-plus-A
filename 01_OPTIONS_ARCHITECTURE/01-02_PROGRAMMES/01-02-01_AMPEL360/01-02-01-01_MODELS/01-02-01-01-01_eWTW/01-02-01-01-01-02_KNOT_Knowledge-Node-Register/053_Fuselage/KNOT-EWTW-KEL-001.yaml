@@ -8,6 +8,10 @@ knot:
   question: 'Keel-beam taxonomy home: extend S-ATLAS 053-600, or bind to an existing node?'
   context: >-
     The keel beam runs under the centre fuselage through the gear-bay cut-out. Its station has no home in the S-ATLAS taxonomy yet: either the fuselage frames-and-longerons section is extended, or the keel beam is bound to an existing node.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-600-090
   lifecycle_phase: LC-A
   due: before station 053-600-090 is realized
@@ -21,15 +25,19 @@ knot:
   affects:
   - view: PBS
     ref: eWTW-PBS-053-600-090
+    relation: gates
+    note: Keel-beam taxonomy binding
   - view: finding
     ref: F15
   options:
   - id: A
     text: extend S-ATLAS 053-600
     state: open
+    pbs_footprint: []
   - id: B
     text: bind to an existing node
     state: open
+    pbs_footprint: []
   criteria: []
   maturity_required: []
   assumptions: []

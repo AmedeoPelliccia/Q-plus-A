@@ -8,6 +8,10 @@ knot:
   question: 'Electrical sources: turbogenerators (068), batteries (074) — alone or combined? Fuel cells (075) left the option set with hydrogen'
   context: >-
     The electrical sources supply both propulsion and the aircraft systems, including an electric bleedless environmental control system that is one of the largest non-propulsive loads. The candidates are batteries, turbogenerators on conventional fuel, or both. Fuel cells are excluded with hydrogen.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §5
   lifecycle_phase: LC-A
   due: before REV-B_RELEASED of any scope it affects
@@ -29,20 +33,40 @@ knot:
     ref: README §3 row 5
   - view: model
     ref: README §3 row 15
+  - view: PBS
+    ref: eWTW-PBS-024-000
+    relation: gates
+    note: Source-dependent conversion, protection and distribution
   options:
   - id: A
     text: batteries (074) alone
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '074'
+      element: Propulsive battery installation
   - id: B
     text: turbogenerators (068) alone
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '068'
+      element: Turbogenerator installation
   - id: C
     text: combined
     state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '068'
+      element: Turbogenerator installation
+    - action: create
+      taxonomy: '074'
+      element: Propulsive battery installation
   - id: D
     text: fuel cells (075)
     state: excluded
     by: KNOT-EWTW-NRG-001 R1
+    pbs_footprint: []
   criteria: []
   maturity_required: []
   assumptions: []

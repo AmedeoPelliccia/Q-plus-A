@@ -8,6 +8,10 @@ knot:
   question: 'Dorsal-fin root fairing: 053 or 055?'
   context: >-
     The dorsal-fin root fairing sits where the vertical stabilizer meets the rear fuselage. The question is whether it belongs to the fuselage or to the stabilizers.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
   obligation_source: Pending ruling recorded in the PBS at eWTW-PBS-053-400-040
   lifecycle_phase: LC-A
   due: before station 053-400-040 is realized
@@ -21,13 +25,23 @@ knot:
   affects:
   - view: PBS
     ref: eWTW-PBS-053-400-040
+    relation: gates
+    note: Dorsal-fin root fairing ownership
   options:
   - id: A
     text: fuselage (053)
     state: open
+    pbs_footprint:
+    - action: remap
+      taxonomy: '053'
+      element: Dorsal-fin root fairing
   - id: B
     text: stabilizers (055)
     state: open
+    pbs_footprint:
+    - action: remap
+      taxonomy: '055'
+      element: Dorsal-fin root fairing
   criteria: []
   maturity_required: []
   assumptions: []

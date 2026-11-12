@@ -20,6 +20,9 @@ model_context:
     not support.
   - Report disagreements between sources instead of averaging them, and say what would settle them.
   - Use only public material. Do not use or reproduce confidential or proprietary documents.
+  - For an architecture trade, describe each known product footprint by S-ATLAS address and link it to the relevant
+    requirement or assumption. Compare installed part count, interfaces, modularity, maintenance access and commonality
+    within the applicable configurations. Record which criteria are mandatory before evaluating preferences.
   - 'Do not recommend an option: list the findings, their limits and what remains unknown.'
   deliverable: >-
     A report with: a one-paragraph answer to each question; a table of figures with source, date and demonstrated-or-projected

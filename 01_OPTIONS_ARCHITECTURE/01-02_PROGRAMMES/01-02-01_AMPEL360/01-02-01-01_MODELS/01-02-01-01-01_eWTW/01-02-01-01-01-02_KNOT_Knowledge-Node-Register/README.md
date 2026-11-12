@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.3.0 · **Date:** 2026-11-12
+**Version:** 0.4.0 · **Date:** 2026-11-12
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -143,6 +143,25 @@ Three KNUs touch protected areas and are author acts: `KNU-EWTW-PRP-001-05` and 
 
 ---
 
+## PBS nodes pending a ruling
+
+This view is generated from the `gates` relations in the KNOT records. Each row identifies the existing PBS node, the decision's effectivity and the allocation awaiting that decision. The option's `pbs_footprint` describes the candidate structure. A complete ruling records the requirements and authorised changes by view, and `embodied_in` references the first ratified baseline for the affected scope. [CM-004 §8][CM-004]
+
+| PBS node | KNOT | Resolution | Effectivity | Pending allocation |
+|---|---|---|---|---|
+| `eWTW-PBS-024-000` | `KNOT-EWTW-ESS-001` | OPEN | eWTW / model scope / initial definition | Essential feeds and segregation |
+| `eWTW-PBS-024-000` | `KNOT-EWTW-SRC-001` | OPEN | eWTW / model scope / initial definition | Source-dependent conversion, protection and distribution |
+| `eWTW-PBS-028-000` | `KNOT-EWTW-STO-001` | OPEN | eWTW / model scope / initial definition | Storage installation by allocated role |
+| `eWTW-PBS-053-200-010` | `KNOT-EWTW-LUG-001` | OPEN | eWTW / model scope / initial definition | Wing-attach lug ownership and interface split |
+| `eWTW-PBS-053-200-030` | `KNOT-EWTW-MLG-001` | OPEN | eWTW / model scope / initial definition | Main landing gear trunnion mounting |
+| `eWTW-PBS-053-300-030` | `KNOT-EWTW-TSI-001` | OPEN | eWTW / model scope / initial definition | Tail-strike provision and sensing ownership |
+| `eWTW-PBS-053-400-040` | `KNOT-EWTW-DFN-001` | OPEN | eWTW / model scope / initial definition | Dorsal-fin root fairing ownership |
+| `eWTW-PBS-053-600-090` | `KNOT-EWTW-KEL-001` | OPEN | eWTW / model scope / initial definition | Keel-beam taxonomy binding |
+| `eWTW-PBS-053-900-000` | `KNOT-EWTW-NRG-001` | OPEN | eWTW / model scope / initial definition | Energy-carrier bay contents and installation |
+| `eWTW-PBS-071-000` | `KNOT-EWTW-PRP-001` | OPEN | eWTW / model scope / initial definition | Propulsion module and installation allocation |
+
+---
+
 ## Research briefs
 
 Every KNOT carries a `context`, and every KNU that needs outside research a `research_brief` with its questions. Together with [`model-context.yaml`](model-context.yaml) — the aircraft, the research rules and the deliverable, written once — they form a prompt that can be handed as it is to a deep-research agent. From the repository root, with `REG` set as in *How to verify*, this command prints the brief of one KNU:
@@ -155,7 +174,7 @@ p = next(reg.rglob("KNOT-" + kid[4:16] + ".yaml")); k = yaml.safe_load(p.read_te
 u = next(x for x in k["knus"] if x["knu_id"] == kid)
 if not u["research_brief"]: sys.exit(kid + " has no research brief: it is not a research task")
 out = dict(yaml.safe_load((reg / "model-context.yaml").read_text(encoding="utf-8")))
-out["decision"] = {f: k[f] for f in ("knot_id", "title", "question", "context", "options", "assumptions")}
+out["decision"] = {f: k[f] for f in ("knot_id", "title", "question", "context", "effectivity", "options", "assumptions")}
 out["task"] = {f: u[f] for f in ("knu_id", "title", "knu_class", "description", "research_brief", "exit")}
 print(yaml.safe_dump(out, sort_keys=False, allow_unicode=True, width=110))
 EOF
@@ -174,6 +193,11 @@ TAX="01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-A
 REG="01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register"
 python3 - "$REG" "$TAX" <<'EOF'
 import pathlib, re, sys, yaml
+
+register = pathlib.Path(sys.argv[1])
+pbs = (register.parent / "01-02-01-01-01-01_SBS_System-Breakdown-Structure"
+       / "01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure")
+pbs_ids = {d.name.split("_", 1)[0] for d in pbs.rglob("eWTW-PBS-*_*") if d.is_dir()}
 F = {p.stem: p.parent.name.split("_")[0] for p in sorted(pathlib.Path(sys.argv[1]).rglob("KNOT-*.yaml"))}
 K = {p.stem: yaml.safe_load(p.read_text(encoding="utf-8"))["knot"] for p in sorted(pathlib.Path(sys.argv[1]).rglob("KNOT-*.yaml"))}
 TAX = {d.name.split("_")[0]: d.name.split("_", 1)[1].replace("-", " ") for d in pathlib.Path(sys.argv[2]).rglob("*_*") if d.is_dir()}
@@ -181,9 +205,56 @@ V = {"kind": "obligation control-intent decision-anchor lifecycle-constraint", "
      "resolution": "OPEN RULED DEFERRED", "knu_class": "WORK_ITEM CONTROLLED_ARTEFACT REQUIREMENT_SET ANALYSIS_PACKAGE "
      "VERIFICATION_OBJECT EVIDENCE_RECORD OTHER", "progress": "NOT_STARTED IN_PROGRESS PENDING_REVIEW DONE CANCELLED"}
 REQ = ("knot_id title kind taxonomy raised_at question obligation_source lifecycle_phase due owner status resolution created_date "
-       "context depends_on closed_with unblocks affects options criteria assumptions couplings rulings reopen_if knus").split()
-RUL = "id date authority statement effect rationale rationale_recorded evidence waiver state record".split()
-bad, seen, by, prov = [], set(), {}, []
+       "context effectivity depends_on closed_with unblocks affects options criteria assumptions couplings rulings reopen_if knus").split()
+RUL = ("id date authority statement effect rationale rationale_recorded evidence waiver state record "
+       "effectivity effects embodied_in").split()
+actions = ("create", "update", "populate", "retire", "remap")
+sbs_views = ("PBS", "FBS", "WBS", "CBS", "RBS", "LBS", "EBS", "IBS", "ReqBS", "TPMS", "TPuBS")
+bad, seen, by, prov, pbs_gates = [], set(), {}, [], []
+
+def has_text(value):
+    return isinstance(value, str) and bool(value.strip())
+
+def valid_effectivity(scopes):
+    if not isinstance(scopes, list) or not scopes:
+        return False
+    for scope in scopes:
+        if not isinstance(scope, dict) or not has_text(scope.get("model")):
+            return False
+        variants = scope.get("variants")
+        if not isinstance(variants, list) or not all(has_text(variant) for variant in variants):
+            return False
+        if len(variants) != len(set(variants)) or "from_baseline" not in scope:
+            return False
+        baseline = scope["from_baseline"]
+        if baseline is not None and not has_text(baseline):
+            return False
+    return True
+
+def effectivity_label(scopes):
+    return " · ".join(
+        f"{scope['model']} / {', '.join(scope['variants']) or 'model scope'} / "
+        f"{scope['from_baseline'] or 'initial definition'}"
+        for scope in scopes
+    )
+
+def valid_footprint(item):
+    return (isinstance(item, dict) and item.get("action") in actions
+            and has_text(item.get("taxonomy")) and item["taxonomy"] in TAX
+            and has_text(item.get("element")))
+
+def valid_effect(item):
+    return (isinstance(item, dict) and item.get("view") in sbs_views
+            and item.get("action") in actions and has_text(item.get("description"))
+            and "ref" in item
+            and (has_text(item["ref"]) or (item["action"] == "create" and item["ref"] is None)))
+
+def valid_baseline_ref(item):
+    return isinstance(item, dict) and item.get("view") == "baseline" and has_text(item.get("ref"))
+
+def markdown_cell(value):
+    return value.replace("|", r"\|").replace("\n", " ")
+
 for kid, k in K.items():
     anchor = k.get("kind") == "decision-anchor"
     miss = [f for f in REQ + ["maturity_required"] * anchor if f not in k]
@@ -196,11 +267,41 @@ for kid, k in K.items():
     bad += [f"{kid} taxonomy {a}" for a in k["taxonomy"] + [k["raised_at"]] * bool(k["raised_at"]) if a not in TAX]
     home = k["taxonomy"][0] if len(k["taxonomy"]) == 1 else k["raised_at"] or "000"          # rule 11
     bad += [f"{kid} filed under {F[kid]}, expected {home}"] * (F[kid] != home)
+    scope_valid = valid_effectivity(k["effectivity"])
+    if not scope_valid:
+        bad.append(f"{kid} invalid effectivity")
+    for option in k["options"]:
+        footprint = option.get("pbs_footprint")
+        if not isinstance(footprint, list) or not all(valid_footprint(item) for item in footprint):
+            bad.append(f"{kid} option {option.get('id')} invalid pbs_footprint")
+    for target in k["affects"]:
+        relation = target.get("relation", "affects")
+        if relation == "affects":
+            continue
+        ref, note = target.get("ref"), target.get("note")
+        if (relation != "gates" or target.get("view") != "PBS"
+                or not has_text(ref) or ref not in pbs_ids or not has_text(note)):
+            bad.append(f"{kid} invalid PBS gate {ref}")
+            continue
+        if scope_valid and k["status"] in ("DRAFT", "REVIEW", "APPROVED") and k["resolution"] in ("OPEN", "DEFERRED"):
+            pbs_gates.append((ref, kid, k["resolution"], effectivity_label(k["effectivity"]), note))
+    if k["resolution"] == "RULED" and not k["rulings"]:
+        bad.append(f"{kid} ruled without a ruling")
     for r in k["rulings"]:
         bad += [f"{kid} {r.get('id')} fields"] * any(f not in r for f in RUL)
         full = bool(r.get("rationale") and r.get("evidence"))
         bad += [f"{kid} {r.get('id')} state"] * (r.get("state") != ("COMPLETE" if full else "PROVISIONAL"))
         prov += [f"`{kid[10:13]}` {r.get('id')}"] * (not full)
+        ruling = f"{kid} {r.get('id')}"
+        if not valid_effectivity(r.get("effectivity")):
+            bad.append(f"{ruling} invalid effectivity")
+        effects, baselines = r.get("effects"), r.get("embodied_in")
+        if not isinstance(effects, list) or not all(valid_effect(item) for item in effects):
+            bad.append(f"{ruling} invalid effects")
+        if not isinstance(baselines, list) or not all(valid_baseline_ref(item) for item in baselines):
+            bad.append(f"{ruling} invalid embodied_in")
+        if r.get("state") == "PROVISIONAL" and (effects or baselines):
+            bad.append(f"{ruling} provisional ruling with authorised effects or embodiment")
     scored = k["resolution"] == "RULED" or any(o["state"] in ("retained", "rejected") for o in k["options"])
     if scored:                                                                                 # rules 4 and 5
         bad += [f"{kid} ruled on a provisional ruling"] * any(r.get("state") != "COMPLETE" for r in k["rulings"])
@@ -218,6 +319,8 @@ for kid, k in K.items():
 if re.search(r"\b(compliant|conforms?)\b", str(K).lower()): bad.append("conformity claim")
 print(f"{len(K)} KNOTs, {len(seen)} KNUs, {len(by)} S-ATLAS chapters; rule failures: {bad or 'none'}")
 print(f"Provisional rulings: {' · '.join(prov) or 'none'}")
+if bad:
+    sys.exit(1)
 for kid, k in K.items():
     print(f"| `{kid}` | {k['title']} | `{k['kind']}` | `{F[kid]}` | {k['resolution']} | {len(k['knus'])} | `{k['owner']}` |")
 for a in sorted(by):
@@ -230,10 +333,12 @@ for k in K.values():
         if u["progress"] not in ("DONE", "CANCELLED"):
             also = " · ".join(f"`{x[10:13]}`" for x in u["serves"]) or "—"
             print(f"| `{u['knu_id']}` | {u['title']} | `{u['knu_class']}` | {also} | {u['progress']} |")
+for ref, kid, resolution, scope, note in sorted(pbs_gates):
+    print(f"| `{ref}` | `{kid}` | {resolution} | {markdown_cell(scope)} | {markdown_cell(note)} |")
 EOF
 ```
 
-The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the rest reproduces the three tables above and the two lines under the chapter table. The script fails a record that lacks a required field or a context, is filed in the wrong folder, scores an option without criteria and maturity thresholds, is ruled on a provisional ruling, or misstates a ruling's state. It also checks identifiers, file names, vocabularies, references between KNOTs, that every S-ATLAS chapter resolves, outputs and exit criteria, and the absence of conformity claims.
+The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the remaining output reproduces the four tables and the two lines under the chapter table. The script checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates the new effectivity, option footprints and ruling fields, and resolves each `gates` reference to a canonical PBS node. It exits with status 1 on a rule failure.
 
 ---
 
@@ -244,6 +349,7 @@ The first line reads `11 KNOTs, 31 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.1.0 | 2026-11-08 | Register created: the 11 KNOTs of the model README 0.3.0 §5 as records, 29 KNUs proposed, ruling R1 of `KNOT-EWTW-NRG-001` recorded; S-ATLAS chapters per KNOT and the view by chapter |
 | 0.2.0 | 2026-11-12 | Review of 0.1.0 applied. Records filed by scope: `053_Fuselage/` and `000_General/`. Scoring gate and required fields enforced by the script; `maturity_required` on every decision anchor; criteria KNUs added for `STO` and `ESS` (31 KNUs). R1 marked `PROVISIONAL`; `KNU-EWTW-NRG-001-07` now covers its evidence and writes the reopen condition to the KNOT |
 | 0.3.0 | 2026-11-12 | `context` on every KNOT and `research_brief` on 24 KNUs, with `model-context.yaml`: together they are a prompt for a deep-research agent; command to print one brief |
+| 0.4.0 | 2026-11-12 | Added effectivity, candidate PBS footprints, ruling effects across SBS views, baseline embodiment and a generated view of pending PBS allocations. |
 
 [MODEL]: ../README.md
 [MODEL-5]: ../README.md#5-open-knots
