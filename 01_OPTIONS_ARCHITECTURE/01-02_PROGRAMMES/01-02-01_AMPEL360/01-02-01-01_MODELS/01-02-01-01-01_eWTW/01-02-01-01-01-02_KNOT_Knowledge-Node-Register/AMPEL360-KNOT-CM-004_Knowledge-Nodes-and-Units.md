@@ -78,7 +78,7 @@ An option is `retained` or `rejected` by scoring it against the declared criteri
 8. A ruled KNOT reopens when one of its `reopen_if` conditions is met.
 9. The research agenda is a view — the KNUs neither `DONE` nor `CANCELLED`, across all records. It is generated from the records, not kept by hand.
 10. No record carries a conformity claim.
-11. Records are filed by scope. A KNOT whose `taxonomy` names one S-ATLAS chapter is filed in that chapter's folder, `<CCC>_<Title>/`. A KNOT with an empty `taxonomy` and a `raised_at` chapter is filed under that chapter until it is ruled. Every other KNOT is filed in `MODEL_Model-Wide/`. The folder is a filing place, not identity: a record moves when its scope changes, and its identifier stays.
+11. Records are filed by scope. A KNOT whose `taxonomy` names one S-ATLAS chapter is filed in that chapter's folder, `<CCC>_<Title>/`. A KNOT with an empty `taxonomy` and a `raised_at` chapter is filed under that chapter until it is ruled. Every other KNOT — one that spans several chapters, or belongs to none — is filed in `000_General/`, the folder of S-ATLAS chapter `000` *General*. The folder is a filing place, not identity: a record moves when its scope changes, and its identifier stays.
 12. The verification script of the register enforces rules 1–5, 10 and 11 and the required fields; a record that fails it is not merged.
 
 ## 7. Lifecycle and memory
