@@ -1,0 +1,112 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-CAD-001
+  title: 3D model of record
+  kind: control-intent
+  taxonomy: []
+  raised_at: null
+  question: '3D model of record: is its source a generator script or a FreeCAD document, and how are station models assembled and identified?'
+  context: >-
+    The geometry of record of EWTW-533001-000 is not drawn by hand. A Python script built on CadQuery generates it and writes a STEP AP242 file for exchange, a glTF file for preview and a verification report. Body names are part numbers, set nodes are sub-assemblies, and a run record keeps the provenance. The layout of these artefacts and the acceptance checks are written inside the request for that one model. The next models are to be built in FreeCAD. FreeCAD and CadQuery use the same geometry kernel, Open CASCADE, so solids pass between them through STEP, but parameters and the feature history do not. A FreeCAD document is a compressed archive and shows no line differences under version control. The repository validator protects STEP, glTF and image files and does not list the FreeCAD format. The lifecycle registry, still in draft, recommends revision folders by lifecycle layer under cad/freecad, each holding the native deliverable and a record (rule CAD-REVDIR-001). The artefacts of EWTW-533001-000 follow another layout — CAD/source, CAD/exchange, CAD/Preview — and hold no FreeCAD document. No rule says where the model of an assembly of several stations is kept, or which identifier it carries.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 'AMPEL360-PBS-PN-CM-001 Issue 2: body names are part numbers; 3D model request EWTW-533001-000 revision B, section 0, delivery contract'
+  lifecycle_phase: LC-A
+  due: before a second station model is authored
+  owner: STK_CM
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-13'
+  depends_on: []
+  closed_with:
+  - KNOT-EWTW-DAT-001
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-300-010
+  - view: baseline
+    ref: BL-053-300-010-A2
+  - view: model
+    ref: tools/sbs_validate.py, protected file types
+  options:
+  - id: A
+    text: the generator script is the source of record, and FreeCAD opens the STEP file to view, assemble and check
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: the FreeCAD document is the source of record, and the STEP file is exported from it
+    state: open
+    pbs_footprint: []
+  - id: C
+    text: a script is the source of record and writes the FreeCAD document together with the STEP file; the document is never edited by hand
+    state: open
+    pbs_footprint: []
+  criteria: []
+  maturity_required: []
+  assumptions: []
+  couplings:
+  - knot: KNOT-EWTW-LCM-001
+    note: stage folders for CAD artefacts follow rule CAD-REVDIR-001 once its application to the SBS is ruled there
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-CAD-001-01
+    title: Source of record, script or FreeCAD document
+    knu_class: ANALYSIS_PACKAGE
+    description: What each option keeps and loses for traceable part numbers, repeatable generation, review under version control and assembly of separately versioned models
+    research_brief:
+      questions:
+      - In FreeCAD 1.x, what does the built-in Assembly workbench offer for placing parts — joints, fixed placements, links to external documents — and how stable are its references when a part is regenerated?
+      - Can FreeCAD run without its interface to build a document from a Python script and export STEP AP242 with body names and the assembly tree preserved? What is lost against an export from CadQuery?
+      - How do open-hardware and engineering projects keep FreeCAD documents under version control, given that the document is a compressed archive? What do they commit — the document, a script, or both?
+      - What does a round trip from STEP into FreeCAD and back to STEP change — names, colours, tree, units, tolerances?
+      - How do such projects identify and store an assembly of several separately versioned models?
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Findings recorded against each option; ruling proposal with rationale
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-CAD-001-02
+    title: Round trip of EWTW-533001-000 through FreeCAD
+    knu_class: VERIFICATION_OBJECT
+    description: Open the STEP file of record in FreeCAD and compare it with the verification report — 50 bodies named by part number, five sub-assemblies — then export it and compare again
+    research_brief: null
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: The differences are recorded, or their absence
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-CAD-001-03
+    title: CAD convention
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'The rules now written inside one model request, made general: folders for source, exchange and preview, naming, provenance, the content of the verification report, the identifier and the place of an assembly of several stations, and the file types the validator protects. The model request lies in the PBS, a protected area, so its amendment is an act of its author'
+    research_brief: null
+    serves:
+    - KNOT-EWTW-DAT-001
+    outputs:
+    - view: model
+      ref: null
+    exit: Convention proposed with a line for its approval act, and the request for EWTW-533001-000 refers to it
+    owner: STK_CM
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
