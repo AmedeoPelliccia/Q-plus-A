@@ -1,0 +1,78 @@
+# Taxonomy relations — QPLUS-REL-001 (proposed). Pilot set, held in the eWTW model until the taxonomy owner adopts it.
+level: taxonomy
+namespace: S-ATLAS
+alternatives:
+- key: electric-propulsion-power-source
+  for: electric power for propulsion
+  members: ['068', '074', '075']
+  conditions: Sources of electric power for an electrified propulsion chain; an architecture uses one source or an admitted combination
+  source: NASA/TM-20210026284 §1.0 (all-electric, hybrid electric and turboelectric architectures); NASA/CR-20260001562 (fuel-cell electric propulsion)
+  source_checked: '2026-11-12'
+  authority: taxonomy owner
+  state: PROPOSED
+- key: essential-electrical-power-source
+  for: essential electrical power
+  home: '024-230'
+  members: ['024-360', '049', '068', '074', '075']
+  unaddressed:
+  - name: ram-air turbine
+    nearest: '024-230'
+    note: named as an alternate source in the research for KNU-EWTW-ESS-001-01; S-ATLAS has no node for it
+  conditions: Sources able to supply essential loads after loss of the normal electrical sources; independence from the normal sources is assessed for each architecture
+  source: Research report for KNU-EWTW-ESS-001-01 (2026-11-12), which cites EASA AMC 25.1351(d) and the FAA special conditions for the 787-8; the report is not in the repository
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED
+relations:
+- key: propulsion-storage-requires-thermal-management
+  relation: requires
+  subject: '074'
+  object: '078'
+  for: null
+  conditions: Battery operation within cell temperature limits, in flight and on the ground
+  source: NASA/TM-20205011477 (thermal management system design for electrified aircraft propulsion concepts)
+  source_checked: '2026-11-12'
+  authority: taxonomy owner
+  state: PROPOSED
+- key: turbogenerator-requires-carrier-delivery
+  relation: requires
+  subject: '068'
+  object: '064'
+  for: null
+  conditions: A turbogenerator burns an energy carrier that is delivered, metered and conditioned to it
+  source: null
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED
+- key: propulsion-storage-as-essential-source-requires-network-interface
+  relation: requires
+  subject: '074'
+  object: '076-700'
+  for: essential electrical power
+  conditions: Propulsion storage supplies essential loads only through an interface to the aircraft electrical network
+  source: null
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED
+- key: propulsion-storage-interfaces-with-distribution
+  relation: interfaces-with
+  subject: '074'
+  object: '076'
+  for: null
+  conditions: Power boundary between storage and the propulsion distribution network
+  source: null
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED
+- key: emergency-backup-power-references-cs-25-1351-d
+  relation: references-standard
+  subject: '024-230'
+  object:
+    document: EASA CS-25
+    clause: CS 25.1351(d)
+  for: null
+  conditions: Operation without normal electrical power; applicability is set by the certification basis of each model
+  source: EASA Easy Access Rules for Large Aeroplanes (CS-25)
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED

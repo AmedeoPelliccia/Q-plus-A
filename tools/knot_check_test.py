@@ -1,4 +1,4 @@
-# Generated 2026-11-12 - knot_check_test.py (0.1.0)
+# Generated 2026-11-13 - knot_check_test.py (0.1.1)
 """Tests of tools/knot_check.py on the eWTW KNOT register. Run from the repository root:
 
     python3 tools/knot_check_test.py
@@ -61,6 +61,10 @@ class KnotCheck(unittest.TestCase):
         p = self.path("TSI")
         p.rename(self.reg / "000_General" / p.name)
         self.fails("KNOT-EWTW-TSI-001 filed under 000, expected 053")
+
+    def test_knot_recorded_in_two_files(self):
+        shutil.copy(self.path("NRG"), self.reg / "053_Fuselage")
+        self.fails("KNOT-EWTW-NRG-001 recorded in more than one file")
 
     def test_scored_without_criteria(self):
         self.edit("DFN", lambda k: self.option(k, "A").update(state="rejected"))

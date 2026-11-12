@@ -10,7 +10,7 @@ Q+A is a collaborative aerospace and advanced-systems engineering repository bui
 > **The repository is not a designed aircraft. It is a governed engineering address space that must now be populated with geometry, models, simulations, analyses and evidence.**
 
 > [!IMPORTANT]
-> **Q+A is actively looking for contributors with experience in CAD, CAE, engineering simulation, systems engineering and aerospace product development.** The immediate objective is to turn structured product nodes and planned part numbers into traceable engineering artefacts. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
+> **Q+A is actively looking for contributors with experience in CAD, CAE, engineering simulation, systems engineering and aerospace product development.** The immediate objective is to turn structured product nodes and planned part numbers into traceable engineering artefacts. Start with [CONTRIBUTING.md](contributing.md).
 
 ---
 
@@ -124,14 +124,17 @@ flowchart LR
   SBS ==>|"converge on"| PD["one consistent<br/>product definition"]
 ```
 
+Beside its SBS, a model holds its decisions as records. The **KNOT register** states what the model must decide or satisfy, and the knowledge units — research, analyses, tests — that resolve each node. The **architecture relations** record how the technologies relate and what the programme has assigned or excluded, and project the candidates for each decision. Both are piloted on the [eWTW](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/README.md), under conventions that are still proposed. The levels above the model each have a README: [programmes](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/README.md), [AMPEL360](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/README.md), [models](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/README.md).
+
 ---
 
 ## Current engineering focus — AMPEL360 eWTW
 
-* **Fuselage PBS, chapter 053** — realized on the S-ATLAS-aligned grammar: ten sections (`053-000 … 053-900`, 1:1 with taxonomy sections), ~55 subjects, **55 assembly stations**, **~330 controlled part numbers** from radome attach to the energy-carrier bay, including LH/RH variants and constituents. Realized exemplar: the radome and nose-cone attach structure (`EWTW-531004-…`). Status: PLANNED identifiers under configuration governance.
+* **Fuselage PBS, chapter 053** — realized on the S-ATLAS-aligned grammar: ten sections (`053-000 … 053-900`, 1:1 with taxonomy sections), **59 assembly stations**, **431 planned part nodes** from radome attach to the energy-carrier bay, including LH/RH variants and constituents. Realized exemplar: the radome and nose-cone attach structure (`EWTW-531004-…`). Status: PLANNED identifiers under configuration governance.
 * **ECS / ATA 021 technical publications** — information-centric TPuBS nodes with node-local DMRLs, per-subject **info-code breakdowns** (description · servicing · remove · install, with effectivity variants), publication-neutral S1000D ICN vector masters, metadata sidecars and a deterministic rendition stamper.
 * **Deterministic generators** — chapter scaffolds, registers and migrations are produced by idempotent, committed Python realizers with reconciliation companions; manifests are regenerated from the same data, never hand-edited; every generator change ships with its migration plan.
-* **Energy-carrier and hydrogen concepts** — structural integration provisions (`053-900`), pack-bay and belly-fairing architecture, electric ECS (bleedless, E-pack based).
+* **Energy-carrier concepts** — structural integration provisions (`053-900`) for batteries, conventional fuel or both; pack-bay and belly-fairing architecture; electric ECS (bleedless, E-pack based). The eWTW carries no hydrogen: liquid hydrogen is assigned to the BWB-Q100 (ruling R1 of `KNOT-EWTW-NRG-001`, provisional).
+* **Decisions as records** — 11 KNOTs and 31 knowledge units in the [KNOT register](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/README.md): the energy carrier, the propulsion chain, the electrical sources, the role of storage and essential power are open. The [architecture relations](01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-03_REL_Architecture-Relations/README.md) project the candidates for each decision. Both are checked by `tools/knot_check.py` and `tools/relations_project.py`.
 
 ### A product node is an engineering contract
 
@@ -218,7 +221,7 @@ flowchart LR
 ```
 
 > [!IMPORTANT]
-> All CAD, assembly, simulation and data-module contributions require an **approved allocation issue** — see [CONTRIBUTING.md](CONTRIBUTING.md). Propose the object and its controlled location, obtain approval from the architecture authority, then act as engineering steward of the work package.
+> All CAD, assembly, simulation and data-module contributions require an **approved allocation issue** — see [CONTRIBUTING.md](contributing.md). Propose the object and its controlled location, obtain approval from the architecture authority, then act as engineering steward of the work package.
 
 ### Good first engineering contributions
 
@@ -263,11 +266,11 @@ Q+A is an independent engineering architecture and research initiative. It is **
 
 ## Licensing
 
-**No repository-wide licence is published yet.** Under default copyright rules, public visibility does not by itself grant rights of commercial reuse, redistribution or relicensing; until an explicit `LICENSE` is added, treat content as all-rights-reserved and open an issue to discuss intended use. A formal `LICENSE` is a planned governance action; contributor terms are governed by [CONTRIBUTING.md](CONTRIBUTING.md) §16 (interim). Contributors should identify the licensing status of externally sourced material and contribute only work they are authorized to share.
+**No repository-wide licence is published yet.** Under default copyright rules, public visibility does not by itself grant rights of commercial reuse, redistribution or relicensing; until an explicit `LICENSE` is added, treat content as all-rights-reserved and open an issue to discuss intended use. A formal `LICENSE` is a planned governance action; contributor terms are governed by [CONTRIBUTING.md](contributing.md) §16 (interim). Contributors should identify the licensing status of externally sourced material and contribute only work they are authorized to share.
 
 ## Join the Q+A engineering community
 
-Register in a technical or enterprise division through an approved GitHub issue: [Contribution governance](CONTRIBUTING.md) · [Team registry](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-MEMBERS.md) · [Technical divisions](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01_TECHNICAL-DIVISIONS/) · [Enterprise divisions](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02_ENTERPRISE-DIVISIONS/)
+Register in a technical or enterprise division through an approved GitHub issue: [Contribution governance](contributing.md) · [Team registry](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/TEAM-MEMBERS.md) · [Technical divisions](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-01_TECHNICAL-DIVISIONS/) · [Enterprise divisions](01_OPTIONS_ARCHITECTURE/01-01_ORGANIZATIONS/01-01-02_ENTERPRISE-DIVISIONS/)
 
 Open an engineering issue; propose a product-node realization; submit a CAD or simulation model; review assumptions; validate calculations; improve interface definitions; add publication content; identify architecture inconsistencies; propose a reproducible workflow; submit a pull request.
 
