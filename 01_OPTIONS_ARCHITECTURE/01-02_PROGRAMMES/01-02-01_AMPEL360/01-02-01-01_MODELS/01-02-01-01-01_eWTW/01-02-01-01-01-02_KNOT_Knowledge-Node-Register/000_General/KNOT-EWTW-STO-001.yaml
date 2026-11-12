@@ -42,15 +42,26 @@ knot:
     pbs_footprint:
     - action: populate
       taxonomy: '074'
-      element: Propulsive battery installation
+      element: Propulsive battery installation, sized for propulsive energy
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
   - id: B
     text: buffering for start, transients and peaks
     state: open
-    pbs_footprint: []
+    pbs_footprint:
+    - action: populate
+      taxonomy: '074'
+      element: Propulsive battery installation, sized for buffering start, transients and peaks
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
   - id: C
     text: essential and emergency supply only
     state: open
-    pbs_footprint: []
+    pbs_footprint:
+    - action: create
+      taxonomy: '024'
+      element: Essential and emergency battery installation
+      key: essential-battery-installation
   criteria: []
   maturity_required: []
   assumptions: []

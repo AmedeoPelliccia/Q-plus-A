@@ -37,6 +37,7 @@ knot:
     - action: update
       taxonomy: '057'
       element: Main landing gear trunnion attachment
+      key: mlg-trunnion-attachment
   - id: B
     text: trunnions on fuselage structure
     state: open
@@ -44,6 +45,7 @@ knot:
     - action: update
       taxonomy: '053'
       element: Main landing gear trunnion attachment
+      key: mlg-trunnion-attachment
   criteria: []
   maturity_required: []
   assumptions: []

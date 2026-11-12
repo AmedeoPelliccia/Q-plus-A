@@ -47,6 +47,7 @@ knot:
     - action: create
       taxonomy: '074'
       element: Propulsive battery installation
+      key: propulsive-battery-installation
   - id: B
     text: conventional fuel for a thermal machine, without propulsive batteries
     state: open
@@ -54,6 +55,7 @@ knot:
     - action: create
       taxonomy: '028'
       element: Conventional fuel storage installation
+      key: fuel-storage-installation
   - id: C
     text: both — hybrid-electric
     state: open
@@ -61,9 +63,11 @@ knot:
     - action: create
       taxonomy: '028'
       element: Conventional fuel storage installation
+      key: fuel-storage-installation
     - action: create
       taxonomy: '074'
       element: Propulsive battery installation
+      key: propulsive-battery-installation
   - id: D
     text: cryogenic hydrogen
     state: excluded

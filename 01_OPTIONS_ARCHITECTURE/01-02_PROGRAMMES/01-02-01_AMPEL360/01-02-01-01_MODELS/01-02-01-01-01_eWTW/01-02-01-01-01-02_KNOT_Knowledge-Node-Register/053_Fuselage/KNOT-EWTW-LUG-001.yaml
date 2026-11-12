@@ -35,6 +35,7 @@ knot:
     - action: remap
       taxonomy: '053'
       element: Wing-attach lug
+      key: wing-attach-lug
   - id: B
     text: wing (057)
     state: open
@@ -42,6 +43,7 @@ knot:
     - action: remap
       taxonomy: '057'
       element: Wing-attach lug
+      key: wing-attach-lug
   criteria: []
   maturity_required: []
   assumptions: []

@@ -46,9 +46,11 @@ knot:
     text: hybrid-electric with a thermal machine on conventional fuel
     state: open
     pbs_footprint:
-    - action: create
-      taxonomy: '062'
-      element: Conventional-fuel thermal machine installation
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation, integrated in the propulsion chain
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
   - id: D1
     text: distributed propulsion
     state: open
@@ -56,6 +58,7 @@ knot:
     - action: create
       taxonomy: '077'
       element: Distributed electric propulsor installations
+      key: electric-propulsor-installations
   - id: D2
     text: concentrated propulsion
     state: open
@@ -63,6 +66,7 @@ knot:
     - action: create
       taxonomy: '077'
       element: Concentrated electric propulsor installations
+      key: electric-propulsor-installations
   criteria: []
   maturity_required: []
   assumptions:

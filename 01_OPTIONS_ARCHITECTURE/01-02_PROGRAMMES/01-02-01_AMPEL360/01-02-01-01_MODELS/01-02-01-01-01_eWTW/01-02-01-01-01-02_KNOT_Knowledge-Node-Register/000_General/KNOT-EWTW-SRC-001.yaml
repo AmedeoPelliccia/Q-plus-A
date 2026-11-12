@@ -42,9 +42,11 @@ knot:
     text: batteries (074) alone
     state: open
     pbs_footprint:
-    - action: create
+    - action: update
       taxonomy: '074'
-      element: Propulsive battery installation
+      element: Propulsive battery installation, used as an electrical source
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
   - id: B
     text: turbogenerators (068) alone
     state: open
@@ -52,6 +54,8 @@ knot:
     - action: create
       taxonomy: '068'
       element: Turbogenerator installation
+      key: turbogenerator-installation
+      note: S-ATLAS 068 for a turbogenerator in the propulsion or main generation chain; 049 only for an auxiliary unit detached from the propulsion architecture (architecture authority, 2026-11-12)
   - id: C
     text: combined
     state: open
@@ -59,9 +63,13 @@ knot:
     - action: create
       taxonomy: '068'
       element: Turbogenerator installation
-    - action: create
+      key: turbogenerator-installation
+      note: S-ATLAS 068 for a turbogenerator in the propulsion or main generation chain; 049 only for an auxiliary unit detached from the propulsion architecture (architecture authority, 2026-11-12)
+    - action: update
       taxonomy: '074'
-      element: Propulsive battery installation
+      element: Propulsive battery installation, used as an electrical source
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
   - id: D
     text: fuel cells (075)
     state: excluded
