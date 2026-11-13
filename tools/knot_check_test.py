@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - knot_check_test.py (0.1.2)
+# Generated 2026-11-13 - knot_check_test.py (0.1.3)
 """Tests of tools/knot_check.py on the eWTW KNOT register. Run from the repository root:
 
     python3 tools/knot_check_test.py
@@ -70,6 +70,14 @@ class KnotCheck(unittest.TestCase):
     def test_scored_without_criteria(self):
         self.edit("DFN", lambda k: self.option(k, "A").update(state="rejected"))
         self.fails("KNOT-EWTW-DFN-001 scored without criteria or maturity")
+
+    def test_scored_on_criteria_that_are_only_proposed(self):
+        self.edit("ESS", lambda k: k.update(resolution="RULED", maturity_required=[{"element": "essential source"}]))
+        self.fails("KNOT-EWTW-ESS-001 scored without criteria or maturity")
+
+    def test_invalid_criterion(self):
+        self.edit("ESS", lambda k: k["criteria"][0].update({"class": "preferred"}))
+        self.fails("KNOT-EWTW-ESS-001 invalid criterion M1")
 
     def test_ruled_on_provisional_ruling(self):
         self.edit("NRG", lambda k: k.update(resolution="RULED"))

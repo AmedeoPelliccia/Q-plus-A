@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - knot_check.py (0.1.2)
+# Generated 2026-11-13 - knot_check.py (0.1.3)
 """Check a KNOT register against AMPEL360-KNOT-CM-004 and print its generated views.
 
 Usage: python3 tools/knot_check.py <register> <s-atlas> [<pbs>]
@@ -143,11 +143,16 @@ def check(register, tax_root, pbs=None):
             if r.get("state") == "PROVISIONAL" and (effects or baselines):
                 bad.append(f"{ruling} provisional ruling with authorised effects or embodiment")
 
+        for c in k["criteria"]:                                                                # a criterion record
+            if not (isinstance(c, dict) and all(isinstance(c.get(f), str) and c[f].strip() for f in ("id", "text", "source"))
+                    and c.get("class") in ("mandatory", "tradable") and c.get("state") in ("PROPOSED", "APPROVED")):
+                bad.append(f"{kid} invalid criterion {c.get('id') if isinstance(c, dict) else c}")
+        approved = bool(k["criteria"]) and all(isinstance(c, dict) and c.get("state") == "APPROVED" for c in k["criteria"])
         scored = k["resolution"] == "RULED" or any(o["state"] in ("retained", "rejected") for o in k["options"])
         if scored:                                                                             # rules 4 and 5
             bad += [f"{kid} ruled on a provisional ruling"] * any(r.get("state") != "COMPLETE" for r in k["rulings"])
             waived = any(r.get("waiver") for r in k["rulings"])
-            bad += [f"{kid} scored without criteria or maturity"] * (anchor and not (k["criteria"] and (k["maturity_required"] or waived)))
+            bad += [f"{kid} scored without criteria or maturity"] * (anchor and not (approved and (k["maturity_required"] or waived)))
 
         for a in k["taxonomy"]:
             by.setdefault(a, []).append(kid[10:13])

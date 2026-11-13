@@ -7,7 +7,7 @@ knot:
   raised_at: null
   question: 'Essential power: which sources, what segregation and what duration keep essential functions available?'
   context: >-
-    Essential power is what keeps the functions needed for continued safe flight and landing alive after the main electrical sources are lost. On an aircraft whose propulsion is electric, the question covers sources, their segregation from the main network, and the duration they must last.
+    Essential power is what keeps the functions needed for continued safe flight and landing alive after the main electrical sources are lost. On an aircraft whose propulsion is electric, the question covers sources, their segregation from the main network, and the duration they must last. On such an aircraft the generators or the batteries of the propulsion chain are also the normal electrical sources, so the loss of normal generation can coincide with the loss of thrust. An essential source that shares the electrical path of propulsion is not independent of the failure it has to survive.
   effectivity:
   - model: eWTW
     variants: []
@@ -38,9 +38,97 @@ knot:
     relation: gates
     note: Essential feeds and segregation
   options: []
-  criteria: []
+  criteria:
+  - id: M1
+    class: mandatory
+    text: An alternate source of high integrity, independent of the normal generating system, powers the services needed to complete the flight and land
+    source: EASA CS 25.1351(d)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M2
+    class: mandatory
+    text: The services for immediate safety stay powered without crew action, and those for continued controlled flight and for descent, approach and landing stay available
+    source: EASA CS 25.1351(d)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M3
+    class: mandatory
+    text: No single failure removes both the normal and the alternate supply — a fire, a cut cable bundle, the loss of a junction box or of a control panel included
+    source: EASA CS 25.1351(d) and AMC 25.1351(d)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M4
+    class: mandatory
+    text: The loss of both supplies is extremely improbable and does not result from a single failure
+    source: EASA CS 25.1309 and CS 25.1351(d)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M5
+    class: mandatory
+    text: A time-limited source lasts in the order of 60 minutes, at least 30 of them in instrument conditions, unless a shorter time is shown adequate and accepted
+    source: EASA AMC 25.1351(d)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M6
+    class: mandatory
+    text: A supply remains for the emergency procedures after an emergency landing or a ditching
+    source: EASA CS 25.1362
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M7
+    class: mandatory
+    text: The essential sources are independent of the electrical path of propulsion
+    source: 'derived from M1, M3 and M4 for an aircraft whose propulsion is electric; not a quotation of a rule'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T1
+    class: tradable
+    text: Mass of the essential sources and of their installation
+    source: CM-004 rule 15
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T2
+    class: tradable
+    text: Endurance above the floor of M5
+    source: EASA AMC 25.1351(d)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T3
+    class: tradable
+    text: Maintenance access and inspection burden
+    source: CM-004 rule 15
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T4
+    class: tradable
+    text: Commonality and modularity with the other storage and generation of the aircraft — parts and interfaces
+    source: CM-004 rule 15
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T5
+    class: tradable
+    text: Effect on drag and on the energy left for the descent
+    source: research record of 2026-11-13
+    weight: null
+    threshold: null
+    state: PROPOSED
   maturity_required: []
-  assumptions: []
+  assumptions:
+  - text: CS-25 with its acceptable means of compliance is read as the certification basis; the basis of the eWTW and its amendment are not recorded yet
+    ref:
+      view: model
+      ref: AMPEL360-REL-CM-005 section 4, certification-basis
   couplings: []
   rulings: []
   reopen_if: []
@@ -51,9 +139,9 @@ knot:
     description: What must remain available after loss of the main sources, for how long, and with what segregation
     research_brief:
       questions:
-      - Which functions do regulators require to remain available after loss of normal electrical power in transport aircraft, and for how long?
-      - How do these requirements change when propulsion itself is electric?
-      - What essential load lists have comparable more-electric aircraft published?
+      - For a transport aircraft of about 100 passengers with electric flight controls, an electric environmental control system and electric or hybrid-electric propulsion, which loads belong to the essential list that CS 25.1351(d) and its AMC describe, and what power does each draw? Where no figure is published, give a method to estimate it and state each assumption.
+      - Which loads specific to electric propulsion must stay powered after the loss of the normal sources — battery management, contactors, propulsion control, thermal management?
+      - What do aircraft of the regional class publish about their essential loads and their endurance — E-Jet, A220, CRJ, ATR 72, Dash 8? Use type-certificate data sheets, special conditions, accident reports and manufacturer publications. Do not use training summaries.
     serves: []
     outputs:
     - view: ReqBS
@@ -61,20 +149,23 @@ knot:
     exit: Essential load list with duration and segregation
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-13'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
   - knu_id: KNU-EWTW-ESS-001-02
     title: Essential source options
     knu_class: ANALYSIS_PACKAGE
     description: 'For each option of KNOT-EWTW-SRC-001: candidate essential sources and their segregation from the main sources; this KNU defines the option set of the KNOT'
     research_brief:
       questions:
-      - Which essential and emergency sources are used or proposed — dedicated batteries, a segregated generator channel, a ram-air turbine or others — and with what limits?
-      - How are they segregated from the main sources, physically and electrically?
-      - What does each option weigh and how is it shown to be independent?
+      - Which emergency sources do aircraft of the regional class use — a ram-air turbine or an air-driven generator, batteries alone, an auxiliary power unit — with their rating, their endurance and their conditions of use? Give a source that can be checked for every figure.
+      - Has a certification authority accepted, refused or conditioned the use of a propulsion battery, or of a generator of the propulsion chain, as the alternate source of 25.1351(d)? Cover EASA SC E-19 and its means of compliance, the special conditions for electric and hybrid aircraft, and the type certificates issued so far.
+      - For each candidate — dedicated battery, ram-air turbine, segregated generator channel, auxiliary power module, propulsion battery — what makes it independent of the electrical path of propulsion, and which failure would it share with that path?
+      - How are the candidates segregated from the main sources, physically and electrically, and what does each weigh installed? Give a source for every figure.
     serves: []
     outputs:
     - view: RBS
@@ -95,9 +186,8 @@ knot:
     description: Criteria and weights for essential power, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
     research_brief:
       questions:
-      - Which criteria do published safety assessments use to choose essential power architectures?
-      - What maturity of the emergency sources is required before deciding?
-      - Which criteria are regulatory and cannot be traded?
+      - What maturity must each candidate source have reached before the configuration is decided — in service on a comparable type, flight tested, or tested on the ground — and what evidence do authorities accept for a source that is new to the class?
+      - Which measures and thresholds do published trade studies use to weigh mass, endurance margin, maintenance and commonality for emergency power?
     serves: []
     outputs:
     - view: ReqBS
@@ -107,8 +197,10 @@ knot:
     exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-12'
-    start_date: null
+    start_date: '2026-11-13'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md

@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.5.0 · **Date:** 2026-11-13
+**Version:** 0.6.0 · **Date:** 2026-11-13
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -61,6 +61,10 @@ No decision anchor has declared its criteria or its maturity thresholds yet: `cr
 
 The same ruling removes fuel cells from `KNOT-EWTW-SRC-001`. A provisional ruling directs the work, but it is not an auditable basis: both exclusions stand on the authority's statement alone until R1 is completed, and no KNOT can be ruled on it (rule 4).
 
+### Criteria proposed
+
+One KNOT has criteria: `KNOT-EWTW-ESS-001`, with seven mandatory criteria (`M1` to `M7`) and five tradable ones (`T1` to `T5`), drawn from the [research record of 2026-11-13](000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md). All are `PROPOSED`. Approving them, with the weights and thresholds of the tradable ones, is an act of the authority. Until then no option is scored (rule 5).
+
 ---
 
 ## By S-ATLAS chapter
@@ -108,16 +112,16 @@ Home to be ruled, since each decides where its scope lives: `DFN` · `KEL` · `L
 
 ## Research agenda
 
-The KNUs neither done nor cancelled, generated from the records (rule 9). One KNU is pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13. The others are proposed and have not started.
+The KNUs neither done nor cancelled, generated from the records (rule 9). One KNU is pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13. Two are in progress on a first research record: `KNU-EWTW-ESS-001-01` and `KNU-EWTW-ESS-001-03`. The others are proposed and have not started.
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
 | `KNU-EWTW-CAD-001-01` | Source of record, script or FreeCAD document | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-02` | Round trip of EWTW-533001-000 through FreeCAD | `VERIFICATION_OBJECT` | — | PENDING_REVIEW |
 | `KNU-EWTW-CAD-001-03` | CAD convention | `CONTROLLED_ARTEFACT` | `DAT` | NOT_STARTED |
-| `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
+| `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
 | `KNU-EWTW-ESS-001-02` | Essential source options | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
-| `KNU-EWTW-ESS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
+| `KNU-EWTW-ESS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
 | `KNU-EWTW-LCM-001-01` | Baseline notation | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-LCM-001-02` | Registry re-pin | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-NRG-001-01` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
@@ -226,6 +230,7 @@ The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.4.1 | 2026-11-12 | Review of 0.4.0 applied. Each footprint element has a `key` and one owning KNOT: the battery installation belongs to `NRG`, the turbogenerator to `SRC`, filed under S-ATLAS `068` by the authority's ruling of 2026-11-12. Footprints for `STO` options B and C. Verifier moved to `tools/knot_check.py` with 13 tests in `tools/knot_check_test.py` |
 | 0.4.2 | 2026-11-13 | Pointer to the architecture relations node, which reads this register. The checker reports a KNOT recorded in more than one file. No record changed |
 | 0.5.0 | 2026-11-13 | Three KNOTs that precede the next 3D model, with ten KNUs: `KNOT-EWTW-CAD-001` 3D model of record, `KNOT-EWTW-DAT-001` fuselage datum and master geometry, `KNOT-EWTW-ROD-001` rear adjustable rods. The checker lists control KNOTs that have no chapter. `KNU-EWTW-CAD-001-02` ran once with `tools/freecad_roundtrip.py` and is pending review |
+| 0.6.0 | 2026-11-13 | `KNOT-EWTW-ESS-001`: twelve proposed criteria, a research record for the regulatory basis, and narrower research briefs for its three KNUs. `KNOT-EWTW-CAD-001` restated for generator `v0.2.2-concept`. CM-004 defines the criterion record |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md
