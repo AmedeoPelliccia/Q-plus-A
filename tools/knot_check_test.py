@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - knot_check_test.py (0.1.1)
+# Generated 2026-11-13 - knot_check_test.py (0.1.2)
 """Tests of tools/knot_check.py on the eWTW KNOT register. Run from the repository root:
 
     python3 tools/knot_check_test.py
@@ -51,7 +51,8 @@ class KnotCheck(unittest.TestCase):
         bad, prov, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertEqual(bad, [])
         self.assertEqual(prov, ["`NRG` R1"])
-        self.assertTrue(lines[0].startswith("11 KNOTs, 31 KNUs"))
+        self.assertTrue(lines[0].startswith("14 KNOTs, 41 KNUs"))
+        self.assertIn("Control: `CAD`", lines)
 
     def test_missing_required_field(self):
         self.edit("LUG", lambda k: k.pop("criteria"))
