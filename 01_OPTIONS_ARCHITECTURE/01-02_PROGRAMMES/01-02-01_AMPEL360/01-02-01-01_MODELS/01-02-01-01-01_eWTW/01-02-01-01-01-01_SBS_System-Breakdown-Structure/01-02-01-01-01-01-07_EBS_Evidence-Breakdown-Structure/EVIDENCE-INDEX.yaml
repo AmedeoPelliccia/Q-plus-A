@@ -102,3 +102,29 @@ rows:
       declaration.yaml + run-record.yaml, C1.6); staged pilot layout, not on main.
     citedBy:
       - PILOT-ALLOCATION_EWTW-533001.yaml
+
+  - class: verification-report
+    subject: EWTW-533001-000
+    path: null
+    status: pending-commit
+    action: "regenerate the four artefacts of node EWTW-533001-000 with generator v0.2.2-concept, run tools/freecad_roundtrip.py on the new STEP file and commit its report as evidence/EWTW-533001-000_concept_freecad-roundtrip.txt; the row then becomes on-disk with its path"
+    note: >
+      Two round trips through FreeCAD 1.0.0 (Open CASCADE 7.8.1), run without the interface
+      on 2026-11-13. On the STEP file written by v0.2.1-concept (commit 66af8162):
+      6 PASS | 5 FAIL | 6 INFO, 119 bodies against 50 leaf products. On the output of
+      v0.2.2-concept in a verification run: 11 PASS | 0 FAIL | 6 INFO, 50 bodies under
+      their part numbers. Neither report is the one of record: the STEP file on main is
+      empty until the artefacts are regenerated (model README, finding F23).
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
+    status: on-disk
+    note: >
+      Research record: the regulatory basis of essential power, as accepted on review from a
+      research report by Grok 4.7 of 2026-11-13. It lives with the KNOT register, the node
+      that produced it. One of its eleven statements was read again by the reviewer.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml

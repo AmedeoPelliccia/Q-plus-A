@@ -48,6 +48,7 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Re
 | KNOT | `knot_id`, `title`, `kind`, `taxonomy`, `raised_at`, `question`, `context`, `effectivity`, `obligation_source`, `lifecycle_phase`, `due`, `owner`, `status`, `resolution`, `created_date`, `depends_on`, `closed_with`, `unblocks`, `affects`, `options`, `criteria`, `maturity_required` (every decision anchor), `assumptions`, `couplings`, `rulings`, `reopen_if`, `knus` |
 | KNU | `knu_id`, `title`, `knu_class`, `description`, `research_brief`, `serves`, `outputs`, `exit`, `owner`, `lifecycle_phase`, `progress`, `created_date`, `start_date`, `end_date`, `evidence_refs`, `condition` (optional) |
 | Option | `id`, `text`, `state`, `pbs_footprint` and `by` where applicable |
+| Criterion | `id`, `text`, `class`, `source`, `weight`, `threshold`, `state` |
 | Ruling | `id`, `date`, `authority`, `statement`, `effect`, `rationale`, `rationale_recorded`, `evidence`, `waiver`, `state`, `record`, `effectivity`, `effects`, `embodied_in` |
 
 **Vocabularies**
@@ -60,8 +61,10 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Re
 | `knu_class` | `WORK_ITEM` · `CONTROLLED_ARTEFACT` · `REQUIREMENT_SET` · `ANALYSIS_PACKAGE` · `VERIFICATION_OBJECT` · `EVIDENCE_RECORD` · `OTHER` |
 | option `state` | `open` · `retained` · `rejected` · `excluded` |
 | ruling `state` | `PROVISIONAL` · `COMPLETE` |
+| criterion `class` | `mandatory` · `tradable` |
+| criterion `state` | `PROPOSED` · `APPROVED` |
 
-An option is `retained` or `rejected` by scoring it against the declared criteria; it is `excluded` when a ruling removes it from the scope without scoring. `raised_at` is the S-ATLAS chapter of the node that recorded the KNOT, or null.
+An option is `retained` or `rejected` by scoring it against the declared criteria; it is `excluded` when a ruling removes it from the scope without scoring. A `mandatory` criterion is not traded: an option that fails it is rejected. A `tradable` criterion carries the `weight` and the `threshold` that the authority sets. A criterion is declared when the authority has made it `APPROVED`. While any criterion of a decision anchor is `PROPOSED`, rule 5 applies as if none were declared. `raised_at` is the S-ATLAS chapter of the node that recorded the KNOT, or null.
 
 `progress` takes the place of the AEROSPACEMODEL `compliance_status`: Q+ATLANTIDE records carry no conformity claims. The AEROSPACEMODEL classes map as follows: `ARTEFACT` and `PROCEDURE` → `CONTROLLED_ARTEFACT`; `RECORD` and `REPORT` → `EVIDENCE_RECORD`; `VALIDATION_OBJECT` → `VERIFICATION_OBJECT`.
 
@@ -110,6 +113,7 @@ Configuration decisions are `LC-B` deliverables (registry §3): a KNOT is worked
 | Issue | Content |
 |---|---|
 | 1 | Definitions from AEROSPACEMODEL as restated on 2026-11-08; kinds; identifier grammar without `LC01`–`LC14` and without classification, S-ATLAS addresses in the `taxonomy` field; record fields and vocabularies; provisional rulings; scoring gate; filing by scope; research briefs, effectivity, product footprints, ruling effects and embodiment, and PBS gates. Rules 1–18. The fields `effectivity`, `effects` and `embodied_in` were added to the recorded ruling R1 of `KNOT-EWTW-NRG-001` with empty values when they were introduced: a schema migration of a provisional ruling while this issue is proposed, not a rewriting under rule 7 |
+| 1, revision of 2026-11-13 | The criterion record with its two classes and its two states; a criterion that is only proposed does not open the gate of rule 5 |
 
 [AEROSPACEMODEL]: https://github.com/AmedeoPelliccia/AEROSPACEMODEL
 [CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
