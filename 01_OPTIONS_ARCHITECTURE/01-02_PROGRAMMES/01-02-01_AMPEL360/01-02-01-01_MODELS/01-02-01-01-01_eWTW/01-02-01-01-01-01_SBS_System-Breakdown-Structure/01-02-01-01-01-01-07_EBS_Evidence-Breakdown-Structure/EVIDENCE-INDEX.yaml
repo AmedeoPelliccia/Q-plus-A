@@ -102,3 +102,17 @@ rows:
       declaration.yaml + run-record.yaml, C1.6); staged pilot layout, not on main.
     citedBy:
       - PILOT-ALLOCATION_EWTW-533001.yaml
+
+  - class: verification-report
+    subject: EWTW-533001-000
+    path: null
+    status: pending-commit
+    action: "commit the round-trip report into node EWTW-533001-000 (evidence/EWTW-533001-000_concept_freecad-roundtrip.txt), or repeat the run in the FreeCAD installation of record with tools/freecad_roundtrip.py; the row then becomes on-disk with its path"
+    note: >
+      Round trip of the STEP file of record through FreeCAD 1.0.0 (Open CASCADE 7.8.1),
+      run without the interface on 2026-11-13: 6 PASS | 5 FAIL | 6 INFO. Labels, volumes
+      and envelope are kept when FreeCAD writes the file again. FreeCAD shows 119 bodies
+      against 50 leaf products, because EWTW-533001-041 holds 69 solids and
+      EWTW-533001-042 two, which it reads as shells (model README, finding F23).
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml

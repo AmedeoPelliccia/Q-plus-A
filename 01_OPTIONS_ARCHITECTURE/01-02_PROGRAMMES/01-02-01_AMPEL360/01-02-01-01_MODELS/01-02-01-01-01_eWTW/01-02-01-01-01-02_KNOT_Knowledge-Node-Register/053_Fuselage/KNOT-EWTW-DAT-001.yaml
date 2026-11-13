@@ -1,0 +1,112 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-DAT-001
+  title: Fuselage datum and master geometry
+  kind: decision-anchor
+  taxonomy: ['053']
+  raised_at: null
+  question: 'Datum and master geometry: which reference frame and which envelope do the 3D models of the fuselage stations share, and who owns them?'
+  context: >-
+    The only 3D model of record, EWTW-533001-000, sets its own frame: millimetres, X aft, Y left, Z up, origin on the centreline at the production join plane between the aft fuselage and the tailcone. Its envelope is declared inside its own model request: a conical frustum 3000 mm in diameter 4500 mm forward of the join plane and 2200 mm in diameter at the join plane, with no upsweep, and a splice ring of 2200 mm outside diameter. The request calls these values concept assumptions, to be superseded by ratified frame data. No frame is recorded for the fuselage or for the aircraft, and no artefact outside that request holds the envelope. A second station model can be assembled to the first only if both take the frame and the envelope from one source. Otherwise the assembly joins two sets of private assumptions, and a change in one is not seen by the other.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '3D model request EWTW-533001-000 revision B, sections 1 and 7: the envelope is a concept assumption to be superseded by ratified frame data'
+  lifecycle_phase: LC-A
+  due: before a second station model is assembled to EWTW-533001-000
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-13'
+  depends_on: []
+  closed_with:
+  - KNOT-EWTW-CAD-001
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-300-000
+  - view: PBS
+    ref: eWTW-PBS-053-300-010
+  - view: baseline
+    ref: BL-053-300-010-A2
+  options:
+  - id: A
+    text: each station model keeps its own frame, a register records its transform to a fuselage frame, and one shared record holds the envelope values
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: one fuselage frame for every station model, and one shared record holds the envelope values
+    state: open
+    pbs_footprint: []
+  - id: C
+    text: one fuselage frame, and a master surface model of the fuselage from which every station takes its envelope
+    state: open
+    pbs_footprint: []
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: the join between the aft fuselage and the tailcone is a production join, and the frame of EWTW-533001-000 has its origin on that plane
+    ref:
+      view: PBS
+      ref: eWTW-PBS-053-300-010
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-DAT-001-01
+    title: Datum and master-geometry practice
+    knu_class: ANALYSIS_PACKAGE
+    description: How structural models of several parts share a frame and an envelope, and what each option costs at concept maturity
+    research_brief:
+      questions:
+      - How do transport-aircraft programmes define the fuselage reference frame — station, buttock-line and waterline datums — and where is its origin usually placed? Cite public sources.
+      - What is a master geometry, or skeleton model, in top-down CAD design? What does it hold, and how do part models refer to it?
+      - In FreeCAD 1.x and in CadQuery, how can several part models share parameters and a frame — spreadsheets or variable sets, links between documents, a shared Python module? What breaks when a shared value changes?
+      - At concept maturity, with the fuselage lines not fixed, what is the smallest shared definition that keeps station models consistent with one another?
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Criteria declared in this record before the options are compared; ruling proposal with rationale
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-DAT-001-02
+    title: Envelope of record for the aft fuselage
+    knu_class: CONTROLLED_ARTEFACT
+    description: The frame and the envelope values that EWTW-533001-000 declares, recorded once with their owner and their status, so that later station models read them and do not restate them. The model request lies in the PBS, a protected area, so its amendment is an act of its author
+    research_brief: null
+    serves: []
+    outputs:
+    - view: model
+      ref: null
+    exit: One record holds the frame and the envelope, and the request for EWTW-533001-000 refers to it
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-DAT-001-03
+    title: Assembly check across stations
+    knu_class: VERIFICATION_OBJECT
+    description: A check run on two or more station models placed together — one frame, matching dimensions at each interface, no hard interference between stations — reported in the form of the station verification report
+    research_brief: null
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: The check runs on EWTW-533001-000 placed with a second station model, and its report is indexed
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []

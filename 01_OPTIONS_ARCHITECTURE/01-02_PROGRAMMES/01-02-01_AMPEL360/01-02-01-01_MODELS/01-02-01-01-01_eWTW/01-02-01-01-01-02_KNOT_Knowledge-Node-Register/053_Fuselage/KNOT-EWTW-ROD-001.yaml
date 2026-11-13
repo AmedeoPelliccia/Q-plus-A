@@ -1,0 +1,191 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-ROD-001
+  title: Rear adjustable rods
+  kind: decision-anchor
+  taxonomy: ['053']
+  raised_at: null
+  question: 'Rear adjustable rods: what do they connect, and which loads do they carry?'
+  context: >-
+    Station eWTW-PBS-053-300-020 plans a set of two adjustable rods, left and right, in the rear fuselage. Each rod has a spherical rod end and a clevis fitting at both ends and runs between an upper and a lower support bracket. Two plugs give access for adjustment. The record says that the rods are structure and that their rigging values are maintenance data. It does not say what the rods connect or which loads they carry: the station declares no interface, and the taxonomy subject 053-300-200 is a scaffold without a description. The neighbouring station eWTW-PBS-053-300-010 holds the join package between the aft fuselage and the tailcone: a four-segment splice ring, indexing pins, systems-run brackets and the outflow-valve surround. It declares interfaces with the rear pressure bulkhead, the tailcone and the environmental control system, and none with the rods. A 3D model of the rod set cannot be placed against that structure until each end of each rod has a host.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 'PBS station eWTW-PBS-053-300-020: twelve planned parts and no declared interface'
+  lifecycle_phase: LC-A
+  due: before a 3D model request for EWTW-533002-000 is written
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-13'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-300-020
+    relation: gates
+    note: Function, hosts and interfaces of the adjustable rods
+  - view: PBS
+    ref: eWTW-PBS-053-300-010
+  - view: IBS
+    ref: eWTW-IBS-ICD-REGISTER
+  options:
+  - id: A
+    text: both ends on the structure of the aft fuselage, which the rods brace
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '053-300-200'
+      element: Rear adjustable rod set
+      key: rear-adjustable-rod-set
+    - action: create
+      taxonomy: '053-300-100'
+      element: Rod attachment provisions on the rear fuselage zone structure
+      key: rod-attachment-on-rear-fuselage-structure
+  - id: B
+    text: one end on the aft fuselage and the other on the rear pressure bulkhead
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '053-300-200'
+      element: Rear adjustable rod set
+      key: rear-adjustable-rod-set
+    - action: create
+      taxonomy: '053-300-100'
+      element: Rod attachment provisions on the rear fuselage zone structure
+      key: rod-attachment-on-rear-fuselage-structure
+    - action: create
+      taxonomy: '053-800-200'
+      element: Rod attachment provisions on the rear pressure bulkhead
+      key: rod-attachment-on-rear-pressure-bulkhead
+  - id: C
+    text: one end on the aft fuselage and the other on the tailcone, across the production join
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '053-300-200'
+      element: Rear adjustable rod set
+      key: rear-adjustable-rod-set
+    - action: create
+      taxonomy: '053-300-100'
+      element: Rod attachment provisions on the rear fuselage zone structure
+      key: rod-attachment-on-rear-fuselage-structure
+    - action: create
+      taxonomy: '053-400-100'
+      element: Rod attachment provisions on the tailcone
+      key: rod-attachment-on-tailcone
+  - id: D
+    text: the rods carry an installation that is not fuselage structure, such as an equipment module
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '053-300-200'
+      element: Rear adjustable rod set
+      key: rear-adjustable-rod-set
+      note: the carried installation and its chapter are not identified
+    - action: create
+      taxonomy: '053-300-100'
+      element: Rod attachment provisions on the rear fuselage zone structure
+      key: rod-attachment-on-rear-fuselage-structure
+  - id: E
+    text: the rods have no function in the eWTW, and the station is retired
+    state: open
+    pbs_footprint:
+    - action: retire
+      taxonomy: '053-300-200'
+      element: Rear adjustable rod set
+      key: rear-adjustable-rod-set
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: the rods are structure, and their rigging values are maintenance data
+    ref:
+      view: PBS
+      ref: eWTW-PBS-053-300-020
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-ROD-001-01
+    title: Function of adjustable rods in a rear fuselage
+    knu_class: ANALYSIS_PACKAGE
+    description: What adjustable rods do in the rear fuselage of transport aircraft, and which host of the options fits the eWTW
+    research_brief:
+      questions:
+      - In transport aircraft, what are adjustable rods — tie rods or struts with spherical rod ends — used for in the rear fuselage and the tailcone? Name the structure or the installation at each end, and the load each rod carries.
+      - Why are such rods adjustable? Separate the adjustment made once at assembly from the rigging repeated in maintenance, and state what is measured when a rod is rigged.
+      - Which of the known uses have a left and a right rod, each between an upper and a lower fitting, with access for adjustment from outside the structure?
+      - Which public standards or specifications cover rod ends, clevis fittings and tie rods for aircraft structure, and what do they fix — sizes, misalignment angle, locking?
+      - For a tailcone attached at a production join with a splice ring and indexing pins, is there a public example of rods across the join, and what do they do?
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: Criteria declared in this record before the options are compared; ruling proposal with rationale
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ROD-001-02
+    title: Rod set requirements
+    knu_class: REQUIREMENT_SET
+    description: Loads, adjustment range, locking, and access for rigging and inspection of the rod set under the retained option
+    research_brief: null
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: Requirement candidates for EWTW-533002 authored in the ReqBS, each traced to the ruling
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+    condition: only if the ruling keeps the station
+  - knu_id: KNU-EWTW-ROD-001-03
+    title: Interfaces of station 053-300-020
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'The station declares no interface. Under the retained option: its interfaces block, the rows of the ICD register and a dossier for each host. The station record lies in the PBS, a protected area, so the change is an act of its author'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: PBS
+      ref: eWTW-PBS-053-300-020
+    - view: IBS
+      ref: null
+    exit: Each end of each rod has a declared interface whose counterpart resolves in the ICD register
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+    condition: only if the ruling keeps the station
+  - knu_id: KNU-EWTW-ROD-001-04
+    title: 3D model request EWTW-533002-000
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'The request for the model of the rod set, in the form of the request for EWTW-533001-000 revision B: scope, frame, binding interpretations, parametric definition and acceptance. It adds the acceptance of the assembly with EWTW-533001-000. The request and the model lie in the PBS, a protected area, so they are acts of its author'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: PBS
+      ref: eWTW-PBS-053-300-020
+    - view: EBS
+      ref: null
+    exit: Model of record generated from the ratified request on the frame ruled in KNOT-EWTW-DAT-001, with no hard interference inside the set or against EWTW-533001-000
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-13'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+    condition: only after the rulings of KNOT-EWTW-DAT-001 and KNOT-EWTW-CAD-001, and if the ruling keeps the station
