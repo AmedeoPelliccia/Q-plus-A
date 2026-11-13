@@ -3,7 +3,7 @@
 #  EWTW-533001-000 · STRUCTURE, REAR FUSELAGE ZONE · AMPEL360 eWTW
 #  Concept-grade parametric 3D assembly — join package + zone provisions.
 #
-#  Provenance : (set at runtime) · EWTW-533001-000_concept.py · v0.2.1-concept
+#  Provenance : (set at runtime) · EWTW-533001-000_concept.py · v0.2.2-concept
 #  Frame      : X aft+ · Y left+ · Z up+ · mm · origin = join plane JP, centreline
 #  Maturity   : CONCEPT — every dimension is a declared envelope assumption.
 #
@@ -37,13 +37,14 @@ from cadquery import Vector
 
 try:
     from OCP.Interface import Interface_Static
+    from OCP.STEPControl import STEPControl_Controller
     _HAVE_STATIC = True
 except Exception:
     _HAVE_STATIC = False
 
 PN = "EWTW-533001"
 GENERATOR_FILE = Path(__file__).name     # verbatim — provenance truth (CM-001 §5)
-GENERATOR_VERSION = "v0.2.1-concept"     # rev C: repo layout + run-record schema 1.0
+GENERATOR_VERSION = "v0.2.2-concept"     # rev C; 0.2.2: every leaf body one valid solid, AP242, run-record paths
 RUN_RECORD_SCHEMA = "AMPEL360-AI-GENERATION-RUN-RECORD/1.0"
 
 # ------------------------------------------------------------------ parameters
@@ -73,12 +74,14 @@ PARAMS = {
     "cutout_axial": 480.0, "cutout_circ": 320.0, "cutout_corner_r": 60.0,
     "frame_width": 40.0, "frame_depth": 30.0,          # I-4
     "rivet_d": 6.0, "rivet_pitch": 30.0, "rivet_offset": 60.0,   # I-6
+    "outline_step": 24.0,                              # I-15: longest outline segment on the shell
     # ---- -050/-051 NDT plugs --------------------------------------------------
     "n_plugs": 12, "plug_phi0": 15.0, "plug_spacing": 30.0,     # I-2
     "plug_d": 40.0, "plug_t": 12.0,
     "plug_socket_af": 6.0, "plug_socket_depth": 6.0,
     # ---- export / naming -------------------------------------------------------
     "step_schema": "AP242DIS",
+    "step_pcurves": 0,          # 0: curves in surface parameter space are not written (I-16)
     "instance_tag": "#",        # "#": EWTW-533001-021#03 ; "none": duplicate names
     "interference_check": 1,
 }
@@ -139,6 +142,17 @@ NOTES = [
     "I-13 Butt-strap arc width 100 mm (spec gives axial 30 × t 3 only).",
     "I-14 Threads and press-fits idealized (smooth bores); fastener holes in the ring land / "
     "flanges not modeled (joint fastener design not specified at this maturity).",
+    "I-15 -041 and -042 are the conical band between two normal offsets of the shell, trimmed by "
+    "a faceted punch whose walls follow the local shell normals; outlines are sampled at 24 mm "
+    "or less (6 mm on corners), so that no segment is a long chord. Each leaf body is checked "
+    "to be one valid solid of positive volume (section A); the brief does not ask for that "
+    "check. Up to v0.2.1 the two bodies were lofts between open polygons lying on the cone, and "
+    "every rounded rectangle ran out to its sharp lower-right corner and back: -041 came out as "
+    "fragments with 70 rivet holes, -042 as two inverted bodies, and the scan of section D "
+    "counted a whole bracket as an overlap.",
+    "I-16 STEP is written as AP242 without curves in surface parameter space (step_pcurves=0): "
+    "the reader rebuilds them, and the file is less than half the size. Up to v0.2.1 the schema "
+    "was requested before the STEP controller existed, so the writer fell back to AP214.",
 ]
 
 # ----------------------------------------------------------------- small utils
@@ -162,7 +176,7 @@ def rounded_rect_points(w, h, r, arc_step=6.0):
     arc(-hw + r, hh - r, 0.5 * math.pi, math.pi)
     pts.append((-hw, -hh + r))
     arc(-hw + r, -hh + r, math.pi, 1.5 * math.pi)
-    pts.append((hw, -hh))
+    pts.append((hw - r, -hh))            # v0.2.2: was (hw, -hh), a spike out to the sharp corner and back
     arc(hw - r, -hh + r, 1.5 * math.pi, 2.0 * math.pi)
     out = []
     for p in pts:
@@ -170,6 +184,16 @@ def rounded_rect_points(w, h, r, arc_step=6.0):
             out.append(p)
     if math.dist(out[0], out[-1]) <= 1e-7:
         out.pop()
+    return out
+
+
+def densify(pts, step):
+    """The closed polyline with no segment longer than `step`. Mapped onto a curved shell, a
+    long segment becomes a chord that leaves the surface."""
+    out, closed = [], list(pts) + [pts[0]]
+    for p, q in zip(closed, closed[1:]):
+        n = max(1, int(math.ceil(math.dist(p, q) / step)))
+        out += [(p[0] + (q[0] - p[0]) * i / n, p[1] + (q[1] - p[1]) * i / n) for i in range(n)]
     return out
 
 
@@ -190,6 +214,39 @@ def points_along(pts, pitch):
         f = min(1.0, max(0.0, (target - acc) / seglen[i]))
         out.append((p[0] + f * (q[0] - p[0]), p[1] + f * (q[1] - p[1])))
     return out
+
+
+def _material_inside(solid):
+    """The solid with its material inside. A solid built from faces can come out reversed, with a
+    negative volume; a boolean on such a solid returns fragments, not the intended body."""
+    if solid.Volume() < 0.0:
+        solid = cq.Solid(solid.wrapped.Reversed())
+    return solid
+
+
+def _faceted_prism(a, b):
+    """The closed solid between two planar polygons with the same number of points. Its ends are
+    planar and each side panel is two planar triangles, so that its cuts through a cone are conics."""
+    def face(*points):
+        return cq.Face.makeFromWires(cq.Wire.makePolygon(points, False, True))
+
+    faces = [face(*a), face(*b)]
+    for i in range(len(a)):
+        j = (i + 1) % len(a)
+        faces += [face(a[i], a[j], b[j]), face(a[i], b[j], b[i])]
+    return _material_inside(cq.Solid.makeSolid(cq.Shell.makeShell(faces)))
+
+
+def _body_fault(shape):
+    """None when the body is one valid solid of positive volume; otherwise what is wrong with it."""
+    solids = shape.Solids()
+    if len(solids) != 1:
+        return f"{len(solids)} solids"
+    if not shape.isValid():
+        return "not a valid shape"
+    if shape.Volume() <= 0.0:
+        return f"volume {shape.Volume():.1f} mm3"
+    return None
 
 
 def _bbox_overlap(a, b):
@@ -448,24 +505,54 @@ class RearFuselageJoin:
             R = rho * sin_g - t * cos_g
             return Vector(x, R * math.sin(psi), R * math.cos(psi))
 
-        def loft_patch(pts, ta, tb):
-            wa = cq.Wire.makePolygon([dev(u, v, ta) for (u, v) in pts], True)
-            wb = cq.Wire.makePolygon([dev(u, v, tb) for (u, v) in pts], True)
-            return cq.Workplane(obj=cq.Solid.makeLoft([wa, wb], True))
-
         t_skin = P["ghost_wall"]                 # inner face of context shell
         t_din = t_skin + P["doubler_t"]          # doubler inner face
+        t_frame = t_din + P["frame_depth"]       # frame inner face
 
-        outer = rounded_rect_points(P["doubler_axial"], P["doubler_circ"], P["doubler_corner_r"])
-        cutout = rounded_rect_points(P["cutout_axial"], P["cutout_circ"], P["cutout_corner_r"])
+        # A conformal body is the conical band between two normal offsets of the shell, trimmed
+        # by a punch whose walls follow the local shell normals (I-15). The punch is a faceted
+        # prism with planar ends: a valid solid, which a loft between two wires lying on the
+        # cone is not.
+        centre = dev(0.0, 0.0, 0.0)
+        inward = dev(0.0, 0.0, 1.0) - centre     # unit normal at the patch centre, into the shell
 
-        doubler = loft_patch(outer, t_skin, t_din).cut(loft_patch(cutout, t_skin, t_din))
+        def on_plane(u, v, depth):
+            """Where the shell normal through the developed point (u, v) meets the plane that lies
+            `depth` inward of the patch centre, perpendicular to the centre normal."""
+            p0 = dev(u, v, 0.0)
+            d = dev(u, v, 1.0) - p0
+            return p0 + d * ((centre + inward * depth - p0).dot(inward) / d.dot(inward))
 
-        # rivet pattern around the cutout (I-6)
+        def punch(pts):
+            deepest = max((dev(u, v, t_frame) - centre).dot(inward) for (u, v) in pts)
+            return cq.Workplane(obj=_faceted_prism([on_plane(u, v, -20.0) for (u, v) in pts],
+                                                   [on_plane(u, v, deepest + 20.0) for (u, v) in pts]))
+
+        def band(pts, ta, tb):
+            xs = [dev(u, v, t).x for (u, v) in pts for t in (ta, tb)]
+            xa, xb = min(xs) - 10.0, max(xs) + 10.0
+
+            def at(x, t):
+                return Vector(x - t * sin_g, 0.0, self.R_out(x) - t * cos_g)
+
+            wire = cq.Wire.makePolygon([at(xa, ta), at(xb, ta), at(xb, tb), at(xa, tb)], False, True)
+            return cq.Workplane(obj=cq.Solid.revolve(wire, [], 360.0, Vector(0, 0, 0), Vector(1, 0, 0)))
+
+        step = P["outline_step"]
+        outer = densify(rounded_rect_points(P["doubler_axial"], P["doubler_circ"],
+                                            P["doubler_corner_r"]), step)
+        cutout = densify(rounded_rect_points(P["cutout_axial"], P["cutout_circ"],
+                                             P["cutout_corner_r"]), step)
+        opening = punch(cutout)
+
+        doubler = band(outer, t_skin, t_din).intersect(punch(outer)).cut(opening)
+
+        # rivet pattern around the cutout (I-6): all holes cut in one operation
         off = P["rivet_offset"]
         cont = rounded_rect_points(P["cutout_axial"] + 2 * off,
                                    P["cutout_circ"] + 2 * off,
                                    P["cutout_corner_r"] + off)
+        holes = []
         for (u, v) in points_along(cont, P["rivet_pitch"]):
             base, tip = dev(u, v, t_skin - 1.5), dev(u, v, t_din + 1.5)
             nv = Vector(tip.x - base.x, tip.y - base.y, tip.z - base.z)
@@ -477,20 +564,20 @@ class RearFuselageJoin:
                 ax = Vector(ax.x / ax.Length, ax.y / ax.Length, ax.z / ax.Length)
                 ang = math.degrees(math.acos(_clamp1(Vector(0, 0, 1).dot(nv))))
                 hole = hole.rotate((0.0, 0.0, 0.0), (ax.x, ax.y, ax.z), ang)
-            hole = hole.translate((base.x, base.y, base.z))
-            doubler = doubler.cut(hole)
+            holes.append(hole.translate((base.x, base.y, base.z)).val())
+        doubler = doubler.cut(cq.Workplane(obj=cq.Compound.makeCompound(holes)))
+        self.rivet_facts = (len(holes), sum(math.dist(a, b) for a, b in zip(cont, cont[1:] + cont[:1])) / len(holes))
 
         # surround frame on the doubler inner face (I-4)
         fw = P["frame_width"]
-        fout = rounded_rect_points(P["cutout_axial"] + 2 * fw,
-                                   P["cutout_circ"] + 2 * fw,
-                                   P["cutout_corner_r"] + fw)
-        frame = (loft_patch(fout, t_din, t_din + P["frame_depth"])
-                 .cut(loft_patch(cutout, t_din, t_din + P["frame_depth"])))
+        fout = densify(rounded_rect_points(P["cutout_axial"] + 2 * fw,
+                                           P["cutout_circ"] + 2 * fw,
+                                           P["cutout_corner_r"] + fw), step)
+        frame = band(fout, t_din, t_frame).intersect(punch(fout)).cut(opening)
 
         # preview-only cut of the valve provision in the ghost shell
         if P["ghost_cutout"]:
-            self.ghost_cut_tool = loft_patch(cutout, -1.0, P["ghost_wall"] + 1.0)
+            self.ghost_cut_tool = opening
 
         items = [(self._reg(f"{PN}-041", doubler, 1, 1), doubler, "teal"),
                  (self._reg(f"{PN}-042", frame, 1, 1), frame, "teal")]
@@ -557,15 +644,18 @@ class RearFuselageJoin:
         step = dest["step"] / "EWTW-533001-000_concept.step"
         if _HAVE_STATIC:
             try:
-                Interface_Static.SetCVal_s("write.step.schema", self.P["step_schema"])
-                Interface_Static.SetCVal_s("write.step.unit", "MM")
+                STEPControl_Controller.Init_s()      # the STEP parameters exist only after this
+                for key, value in (("write.step.schema", self.P["step_schema"]),
+                                   ("write.step.unit", "MM")):
+                    if not Interface_Static.SetCVal_s(key, value):
+                        self.warnings.append(f"STEP parameter {key}={value} was not accepted")
             except Exception as e:
                 self.warnings.append(f"STEP static params not set: {e}")
-        self.root.save(str(step))
+        self.root.save(str(step), write_pcurves=bool(self.P["step_pcurves"]))
         schema = "?"
         try:
             head = step.open().read(4000)
-            m = re.search(r"FILE_SCHEMA\s*\(([^)]*)\)", head)
+            m = re.search(r"FILE_SCHEMA\s*\(\s*\(\s*'([^']*)'", head)
             if m:
                 schema = m.group(1).strip()
         except Exception:
@@ -650,6 +740,11 @@ class RearFuselageJoin:
         for base in sorted(set(counts) - set(EXPECTED)):
             check(f"count {base} (undeclared)", 0, counts[base])
         check("total leaf bodies", sum(EXPECTED.values()), len(self.registry))
+        faults = [(n, _body_fault(s)) for n, _b, s in self.registry if _body_fault(s)]
+        for name, fault in faults:
+            lines.append(f"        BODY {name}: {fault}")
+        check("leaf bodies that are one valid solid of positive volume (I-15)",
+              len(self.registry), len(self.registry) - len(faults))
 
         # -- B | assembly tree truth --------------------------------------------------
         lines += ["", "== B | assembly tree truth =="]
@@ -682,6 +777,9 @@ class RearFuselageJoin:
                        if min(min(abs(a - b), 360.0 - abs(a - b))
                               for b in BUTTS) <= 0.5)
         info("plug seats straddling butt joints (I-2, flagged)", 4, straddle)
+        n_riv, riv_pitch = getattr(self, "rivet_facts", (0, 0.0))
+        info("rivet holes in -041 (I-6)", "even spacing near 30 mm",
+             f"{n_riv} holes at {riv_pitch:.1f} mm")
         info("ring cross-section (I-1)",
              "OD 2200 / band t 5 / flanges 60+60 / land 30 / web h 120",
              (f"OD {P['ring_od']:.0f} / band t {P['ring_flange_t']:.0f} / "
@@ -754,7 +852,7 @@ class RearFuselageJoin:
                 lines.append(f"        {w}")
 
         # -- H | interpretation notes ----------------------------------------------------------------------
-        lines += ["", "== H | interpretation notes I-1 .. I-14 =="]
+        lines += ["", "== H | interpretation notes I-1 .. I-16 =="]
         for n in NOTES:
             lines.append(f"        {n}")
 
@@ -783,7 +881,7 @@ def _y(v):
         return "null"
     if isinstance(v, (int, float)):
         return str(v)
-    return '"%s"' % str(v).replace('"', "'")
+    return '"%s"' % str(v).replace("\\", "\\\\").replace('"', '\\"')     # YAML double-quoted scalar
 
 
 def _git(*args, cwd):
@@ -812,9 +910,9 @@ def write_run_record(record_path: Path, root: Path, meta: dict, overrides: dict,
 
     def rel(p: Path) -> str:
         try:
-            return str(p.resolve().relative_to(root))
+            return p.resolve().relative_to(root).as_posix()
         except ValueError:
-            return p.name
+            return p.name                    # outside the node: the name only, never a local path
 
     m = re.search(r"(\d+) PASS \| (\d+) FAIL \| (\d+) WARN \| (\d+) INFO", report)
     counts = dict(zip(("pass", "fail", "warn", "info"), map(int, m.groups()))) if m else {}
@@ -883,11 +981,11 @@ def write_run_record(record_path: Path, root: Path, meta: dict, overrides: dict,
         if not p.exists():
             continue
         L.append(f'    - role: "{a["role"]}"')
-        L.append(f'      file: "{a["file"]}"')
+        L.append(f"      file: {_y(a['file'])}")
         L.append(f'      format: "{a["format"]}"')
         for k in ("requested-schema", "actual-schema"):
             if k in a:
-                L.append(f'      {k}: "{a[k]}"')
+                L.append(f"      {k}: {_y(a[k])}")
         if a.get("units"):
             L.append(f'      units: "{a["units"]}"')
         if "ghost-context" in a:
@@ -967,18 +1065,22 @@ def main(argv=None):
     src_dir = Path(__file__).resolve().parent
     root = src_dir.parent.parent
     if args.layout == "repo":
+        if (src_dir.name, src_dir.parent.name) != ("source", "CAD"):
+            ap.error("--layout repo needs this script in <part node>/CAD/source/; "
+                     "elsewhere use --layout flat --out DIR")
         dest = {"step": root / "CAD" / "exchange",
                 "glb": root / "CAD" / "preview",
                 "report": root / "evidence"}
         record = Path(args.record) if args.record else root / "prompts" / "run-record.yaml"
     else:
         out = Path(args.out or ".")
+        root = out.resolve()                 # paths in the record are relative to the output folder
         dest = {"step": out, "glb": out, "report": out}
         record = Path(args.record) if args.record else out / "run-record.yaml"
 
     def rel(p: Path) -> str:
         try:
-            return str(p.resolve().relative_to(root))
+            return p.resolve().relative_to(root).as_posix()
         except ValueError:
             return p.name
 
@@ -999,7 +1101,7 @@ def main(argv=None):
     artifacts = [{"role": "verification-evidence", "file": rel(rep_path),
                   "path": rep_path, "format": "text/plain"}]
     if not args.no_export:
-        schema_str = str(facts.get("step_schema", "unmeasured")).replace('"', "'")
+        schema_str = str(facts.get("step_schema", "unmeasured"))
         artifacts += [
             {"role": "neutral-cad", "file": rel(step_path), "path": step_path,
              "format": "STEP", "requested-schema": "AP242",
