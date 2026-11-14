@@ -1,0 +1,124 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-CRZ-001
+  title: Cruise point
+  kind: decision-anchor
+  taxonomy: ['021', '024', '071', '076', '077']
+  raised_at: null
+  question: 'Cruise point of the eWTW: which Mach number and which altitude?'
+  context: >-
+    The missions of the eWTW fix distances, seats and reserves, and no cruise speed or altitude. Three pieces of work wait for them. A propeller and a ducted fan cannot be compared before the cruise Mach is set. The voltage of the propulsion network depends on the altitude, because the margin against partial discharge falls with pressure. The power of the cabin air compressors depends on the cruise altitude and on the cabin altitude. The research has to say what cruise points aircraft of 70 to 100 seats fly, with propellers and with fans, and what each point costs in block time, in propulsive efficiency, in cabin compression and in electrical insulation.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; research records of 2026-11-14 on the propulsion chain and on the electrical sources
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-14'
+  depends_on: []
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-PRP-001
+  - KNOT-EWTW-SRC-001
+  affects:
+  - view: model
+    ref: README §3 row 3
+  - view: model
+    ref: README §3 row 5
+  - view: model
+    ref: README §3 row 9
+  options:
+  - id: A
+    text: 'a propeller cruise, near Mach 0.62 and 27,000 ft, the point of the turboprop study on record'
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: 'a jet cruise, near Mach 0.78 and 33,000 ft, the point of the turbofan in the same study and the Mach of the charts of the reference type'
+    state: open
+    pbs_footprint: []
+  - id: C
+    text: 'a point between the two, set by the trade'
+    state: open
+    pbs_footprint: []
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'the mission screening is fitted to sectors that its reference type flew at long-range cruise, and it carries no cruise speed of the eWTW'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: the two cruise points of options A and B are those of one design study of aircraft of 220 and 250 passengers; no point is on record for an aircraft of 100
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-CRZ-001-01
+    title: Cruise points of the class
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Cruise Mach and altitude of aircraft of 70 to 100 seats, and what each point costs'
+    research_brief:
+      questions:
+      - 'What cruise Mach numbers and altitudes do in-service aircraft of 70 to 100 seats fly, with propellers and with turbofans, and what block times follow on stages of 500, 1,100 and 2,000 km?'
+      - 'How does the efficiency of a propeller and of a ducted fan vary with the cruise Mach number between 0.5 and 0.8, in measurements and not only in project calculations?'
+      - 'What cabin altitude and pressure differential do types of this class certify, and how does the power of an electric cabin air compressor vary with the cruise altitude?'
+      - 'How does the partial-discharge inception voltage of aircraft insulation vary with altitude between 20,000 and 40,000 ft, in published tests?'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'Candidate cruise points with what each costs in block time, propulsive efficiency, cabin compression and insulation margin'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-CRZ-001-02
+    title: Mission screening by cruise point
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The missions of the eWTW flown at each candidate cruise point: fuel, take-off mass and block time, with the speed as a declared parameter of MSN-EWTW-NRG-001'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'Screening reissued with a cruise speed, for each candidate point'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-CRZ-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: 'Criteria and weights for the cruise point, drawn from ReqBS and TPMS'
+    research_brief:
+      questions:
+      - 'Which criteria do published studies use to set the cruise point of a regional aircraft — block time, fuel, noise, integration with faster traffic?'
+      - Which criteria follow from certification and cannot be traded?
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria, weights and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []

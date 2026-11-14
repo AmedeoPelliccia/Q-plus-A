@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - knot_check_test.py (0.1.4)
+# Generated 2026-11-14 - knot_check_test.py (0.1.5)
 """Tests of tools/knot_check.py on the eWTW KNOT register. Run from the repository root:
 
     python3 tools/knot_check_test.py
@@ -53,9 +53,10 @@ class KnotCheck(unittest.TestCase):
     def test_register_passes(self):
         bad, prov, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertEqual(bad, [])
-        self.assertEqual(prov, ["`NRG` R1"])
-        self.assertTrue(lines[0].startswith("14 KNOTs, 41 KNUs"))
+        self.assertEqual(prov, [], "ruling R1 of the energy carrier was completed on 2026-11-14")
+        self.assertTrue(lines[0].startswith("17 KNOTs, 50 KNUs"))
         self.assertIn("Control: `CAD`", lines)
+        self.assertIn("Obligation: `CRT`", lines)
 
     def test_missing_required_field(self):
         self.edit("LUG", lambda k: k.pop("criteria"))
@@ -94,14 +95,40 @@ class KnotCheck(unittest.TestCase):
         self.edit("ESS", lambda k: k["criteria"][0].update({"class": "preferred"}))
         self.fails("KNOT-EWTW-ESS-001 invalid criterion M1")
 
+    def provisional(self, k):
+        k["rulings"][0].update(rationale=None, rationale_recorded=None, evidence=[], state="PROVISIONAL")
+
     def test_ruled_on_provisional_ruling(self):
-        self.edit("NRG", lambda k: k.update(resolution="RULED"))
+        self.edit("NRG", lambda k: (self.provisional(k), k.update(resolution="RULED")))
         self.fails("KNOT-EWTW-NRG-001 ruled on a provisional ruling")
 
     def test_provisional_ruling_with_effects(self):
         effect = {"view": "ReqBS", "action": "create", "ref": None, "description": "Scope requirement"}
-        self.edit("NRG", lambda k: k["rulings"][0]["effects"].append(effect))
+        self.edit("NRG", lambda k: (self.provisional(k), k["rulings"][0]["effects"].append(effect)))
         self.fails("KNOT-EWTW-NRG-001 R1 provisional ruling with authorised effects")
+
+    def test_completed_ruling_without_evidence_is_a_state_error(self):
+        self.edit("NRG", lambda k: k["rulings"][0].update(evidence=[]))
+        self.fails("KNOT-EWTW-NRG-001 R1 state")
+
+    # rule 6: a KNOT deferred to the choice of another
+    def test_deferred_knots_keep_their_gates(self):
+        _, _, lines = knot_check.check(self.reg, TAX, PBS)
+        self.assertIn("| `KNOT-EWTW-NRG-001` | Energy carrier | `decision-anchor` | `000` | DEFERRED | 7 | `STK_SE` |", lines)
+        self.assertTrue(any(l.startswith("| `eWTW-PBS-053-900-000` | `KNOT-EWTW-NRG-001` | DEFERRED |") for l in lines))
+        self.assertTrue(any(l.startswith("| `eWTW-PBS-068-000` | `KNOT-EWTW-SRC-001` | DEFERRED |") for l in lines))
+
+    def test_deferred_needs_another_knot(self):
+        self.edit("NRG", lambda k: k.update(closed_with=[]))
+        self.fails("KNOT-EWTW-NRG-001 deferred without another KNOT in closed_with")
+
+    def test_deferred_needs_a_complete_ruling(self):
+        self.edit("SRC", self.provisional)
+        self.fails("KNOT-EWTW-SRC-001 deferred without a complete ruling")
+
+    def test_deferring_scores_nothing(self):
+        self.edit("SRC", lambda k: self.option(k, "B").update(state="retained"))
+        self.fails("KNOT-EWTW-SRC-001 scored without criteria or maturity")
 
     def test_gate_to_missing_pbs_node(self):
         def change(k):

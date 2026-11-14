@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - relations_project_test.py (0.4.0)
+# Generated 2026-11-14 - relations_project_test.py (0.4.1)
 """Tests of tools/relations_project.py on the eWTW pilot. Run from the repository root:
 
     python3 tools/relations_project_test.py
@@ -74,7 +74,11 @@ class RelationsProject(unittest.TestCase):
         self.assertEqual((p["only_projected"], p["only_registered"]), ([], []))
         self.assertEqual(sorted(p["registered"].values()), ["B", "C"])
         self.assertEqual(p["dead"], {("074",): ("A", "excluded")}, "batteries alone left the option set with ruling R2 of the energy carrier")
-        self.assertIn("PROVISIONAL", self.status(p)[("075",)])
+        self.assertEqual(self.status(p)[("075",)], "excluded by `KNOT-EWTW-NRG-001#R1` (COMPLETE)", "ruling R1 was completed on 2026-11-14")
+
+    def test_exclusion_takes_the_state_of_its_ruling(self):
+        self.knot("NRG", lambda k: k["rulings"][0].update(rationale=None, evidence=[], state="PROVISIONAL"))
+        self.assertEqual(self.status(self.projection(SRC))[("075",)], "excluded by `KNOT-EWTW-NRG-001#R1` (PROVISIONAL)")
 
     def test_prerequisites_agree_with_the_register(self):
         self.assertEqual((self.projection(SRC)["derived"], self.projection(SRC)["consistent"]), (["KNOT-EWTW-NRG-001"], True))

@@ -156,6 +156,31 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-STO-001.yaml
 
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R1-completion_2026-11-14.md
+    status: on-disk
+    note: >
+      Completion of ruling R1 of 2026-11-07 with rationale and evidence, once: liquid
+      hydrogen is allocated to the BWB-Q100 by a decision of allocation, not by a trade on
+      this airframe. Drafted by the reviewer from statements in the repository; ratified
+      by the merge of the pull request that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md
+    status: on-disk
+    note: >
+      Decision record of ruling R3 of the energy carrier and ruling R1 of the electrical
+      sources, of 2026-11-14: fuel carries the mission energy and a turbogenerator is a
+      main source in every option; the choice of a propulsion battery is deferred to the
+      role of storage. Ratified by the merge of the pull request that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+
   - class: analysis-or-test-record
     subject: KNOT-EWTW-ESS-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md

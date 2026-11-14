@@ -10,7 +10,7 @@ standard_scope: governance
 
 | Folder | Model | On disk at this date |
 |---|---|---|
-| [`01-02-01-01-01_eWTW`](01-02-01-01-01_eWTW/README.md) | Electric Wide Tube and Wing, 100 passengers. Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery; batteries alone excluded until reopened (ruling R2) | Model README 0.3.9; SBS with eleven views; KNOT register 0.10.3 — 14 KNOTs, 41 KNUs; architecture relations 0.3.0 |
+| [`01-02-01-01-01_eWTW`](01-02-01-01-01_eWTW/README.md) | Electric Wide Tube and Wing, 100 passengers. Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery; batteries alone excluded until reopened (ruling R2) | Model README 0.3.10; SBS with eleven views; KNOT register 0.11.0 — 17 KNOTs, 50 KNUs; architecture relations 0.3.1 |
 | [`01-02-01-01-02_BWB-Q100`](01-02-01-01-02_BWB-Q100/) | Blended wing body. The model assigned liquid hydrogen | SBS scaffold. README not yet written; the node is a protected area, so writing it is an act of its author |
 | [`01-02-01-01-03_MRTT-Q300`](01-02-01-01-03_MRTT-Q300/README.md) | Medical · Relief · Tanker · Transport: a humanitarian-only wide-body relief aircraft | Concept README 0.3.0 |
 | [`01-02-01-01-04_Q10`](01-02-01-01-04_Q10/) | Q10 | README not yet written |
@@ -29,7 +29,7 @@ The eWTW holds all three. The conventions are listed with their status in the [p
 
 | Coupling | Record | Open point |
 |---|---|---|
-| Liquid hydrogen is assigned to the BWB-Q100 and excluded from the eWTW | Ruling R1 of `KNOT-EWTW-NRG-001`, `PROVISIONAL` | The BWB-Q100 README does not yet state it |
+| Liquid hydrogen is assigned to the BWB-Q100 and excluded from the eWTW | Ruling R1 of `KNOT-EWTW-NRG-001`, `COMPLETE` since 2026-11-14 | The BWB-Q100 README does not yet state it |
 | The MRTT-Q300 targets commonality with the eWTW family under a liquid-hydrogen baseline | `KNOT-MRTT-CMA-001`, in the MRTT-Q300 README | The eWTW no longer offers that premise. To be revisited in the MRTT-Q300 model |
 
 ## Revision history

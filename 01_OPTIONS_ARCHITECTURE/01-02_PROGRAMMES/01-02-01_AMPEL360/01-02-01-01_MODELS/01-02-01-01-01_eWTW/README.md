@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.9 |
+| Version | 0.3.10 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -140,17 +140,22 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 
 **Scope narrowed on 2026-11-07** by the architecture authority: the eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen; liquid hydrogen is allocated to the [BWB-Q100][BWB]. `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are narrowed to that scope and stay open within it.
 
-**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery. R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
+**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery.
+
+**Deferred on 2026-11-14** by ruling R3 of `KNOT-EWTW-NRG-001` and ruling R1 of `KNOT-EWTW-SRC-001`: conventional fuel carries the mission energy and a turbogenerator is a main source in every option, and the fuel storage and the turbogenerator installation are authorised for definition. The choice that remains was held by three KNOTs and stays in one, `KNOT-EWTW-STO-001`. Ruling R1 was completed the same day. Three KNOTs were opened for what the research exposed: the cruise point, the certification basis, and the location of the fuel.R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
 
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|
 | `KNOT-EWTW-NRG-001` | Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope | 2 · 4 · 6 · 14, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]). `KNOT-MRTT-CMA-001` targets commonality with the eWTW family under an LH₂ baseline — a premise the eWTW no longer offers; to be revisited in the [MRTT-Q300][MRTT] model | `STK_SE` |
-| `KNOT-EWTW-PRP-001` | Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not? | 3 · 5 · 6 · 7 | The PBS skeleton holds an electric group ([`070`][PBS-070]) only | `STK_SE` |
+| `KNOT-EWTW-PRP-001` | Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not? The all-electric chain left with ruling R2 | 3 · 5 · 6 · 7 | The PBS skeleton holds a group for the thermal machine (`060`) beside the electric group ([`070`][PBS-070]) | `STK_SE` |
 | `KNOT-EWTW-SRC-001` | Electrical sources: turbogenerators (`068`), batteries (`074`) — alone or combined? Fuel cells (`075`) left the option set with hydrogen | 4 · 5 · 15 | — | `STK_SE` |
 | `KNOT-EWTW-STO-001` | Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only? | 4 · 6 · 14 | — | `STK_SE` |
 | `KNOT-EWTW-ESS-001` | Essential power: which sources, what segregation and what duration keep essential functions available? | 5 · 12 · 14 · 15 | — | `STK_SAF` |
+| `KNOT-EWTW-CRZ-001` | Cruise point: which Mach number and which altitude? | 3 · 5 · 9 | The mission screening carries no cruise speed of the eWTW | `STK_SE` |
+| `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet for this aircraft? An obligation, not a choice | 3 · 4 · 14 | CS-25 is read as the basis, and no record declares it | `STK_SAF` |
+| `KNOT-EWTW-FUL-001` | Where is the fuel carried — in the wing, in the fuselage bay, or in both — and what does the energy-carrier bay then hold? | 1 · 2, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]) | `STK_SE` |
 
-The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together:
+The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed:
 
 ```mermaid
 flowchart LR
@@ -160,12 +165,24 @@ flowchart LR
   PRP["KNOT-EWTW-PRP-001<br/>propulsion chain"]
   STO["KNOT-EWTW-STO-001<br/>role of storage"]
   ESS["KNOT-EWTW-ESS-001<br/>essential power"]
+  CRZ["KNOT-EWTW-CRZ-001<br/>cruise point"]
+  CRT["KNOT-EWTW-CRT-001<br/>certification basis"]
+  FUL["KNOT-EWTW-FUL-001<br/>fuel location"]
   NRG --> SRC
   NRG --> PRP
   SRC ---|"closed together"| PRP
   SRC --> STO
   SRC --> ESS
   STO --> ESS
+  NRG -.->|"deferred to"| STO
+  SRC -.->|"deferred to"| STO
+  CRZ --> PRP
+  CRZ --> SRC
+  CRT --> PRP
+  CRT --> STO
+  CRT --> ESS
+  NRG --> FUL
+  STO --> FUL
   EP --> SRC
   EP --> ESS
 ```
@@ -328,6 +345,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.7 | 2026-11-14 | `KNOT-EWTW-NRG-001` has three candidate missions with a first-order closure test, and proposes the maturity it requires of six critical elements (KNOT register 0.9.0). `tools/mission_closure.py` added |
 | 0.3.8 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001`: missions with their roles, 100 seats, the final reserve and the required maturity approved; batteries alone excluded until reopened. Size class and propulsion posture restated (KNOT register 0.10.0) |
 | 0.3.9 | 2026-11-14 | Consequences of ruling R2 in the product: rows 2 to 6 and 14 of the system table restated; PBS group `060` opened for the thermal machine with chapter `068`; the notes of F01 neutralised in the PBS (PBS README 0.2.2, KNOT register 0.10.1) |
+| 0.3.10 | 2026-11-14 | Ruling R1 completed. The energy carrier and the electrical sources deferred to the role of storage, where the one remaining choice stays; fuel storage and turbogenerator installation authorised. Three KNOTs opened: cruise point, certification basis, fuel location (KNOT register 0.11.0) |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

@@ -7,7 +7,7 @@ knot:
   raised_at: null
   question: 'Electrical sources: turbogenerators (068), batteries (074) — alone or combined? Fuel cells (075) left the option set with hydrogen'
   context: >-
-    The electrical sources supply both propulsion and the aircraft systems, including an electric bleedless environmental control system that is one of the largest non-propulsive loads. The candidates are batteries, turbogenerators on conventional fuel, or both. Fuel cells are excluded with hydrogen.
+    The electrical sources supply both propulsion and the aircraft systems, including an electric bleedless environmental control system that is one of the largest non-propulsive loads. The candidates are batteries, turbogenerators on conventional fuel, or both. Fuel cells are excluded with hydrogen. Since the rulings of 2026-11-14 batteries alone are excluded, a turbogenerator is a main source in every option, and the choice of a propulsion battery beside it is deferred to KNOT-EWTW-STO-001.
   effectivity:
   - model: eWTW
     variants: []
@@ -17,12 +17,14 @@ knot:
   due: before REV-B_RELEASED of any scope it affects
   owner: STK_SE
   status: DRAFT
-  resolution: OPEN
+  resolution: DEFERRED
   created_date: '2026-11-08'
   depends_on:
   - KNOT-EWTW-NRG-001
+  - KNOT-EWTW-CRZ-001
   closed_with:
   - KNOT-EWTW-PRP-001
+  - KNOT-EWTW-STO-001
   unblocks:
   - KNOT-EWTW-STO-001
   - KNOT-EWTW-ESS-001
@@ -84,7 +86,32 @@ knot:
   maturity_required: []
   assumptions: []
   couplings: []
-  rulings: []
+  rulings:
+  - id: R1
+    date: '2026-11-14'
+    authority: AM.PEL — architecture authority
+    statement: 'Two decisions. One: a turbogenerator is a main source of the eWTW in every option that stands, and the turbogenerator installation that options B and C share is authorised for definition. Two: options B and C differ only by a propulsion battery, which is the choice of KNOT-EWTW-STO-001. This KNOT is deferred to that choice and is ruled by the act that rules it, with KNOT-EWTW-PRP-001. Its KNUs continue: the loads, the size of the sources and the distribution do not wait for it'
+    effect: turbogenerator installation authorised; the choice between options B and C deferred to KNOT-EWTW-STO-001
+    rationale: 'Options A and D are excluded by rulings R2 and R1 of KNOT-EWTW-NRG-001, and both options that stand hold a turbogenerator. What separates them is the choice that ruling R3 of that KNOT defers to KNOT-EWTW-STO-001, for the same reason. This ruling scores nothing: this KNOT has no criteria yet'
+    rationale_recorded: '2026-11-14'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects:
+    - view: PBS
+      action: populate
+      ref: eWTW-PBS-068-000
+      description: Turbogenerator installation, S-ATLAS 068, common to options B and C. Number, rating and position stay gated
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md — PR #74, ratified by its merge'
   reopen_if: []
   knus:
   - knu_id: KNU-EWTW-SRC-001-01

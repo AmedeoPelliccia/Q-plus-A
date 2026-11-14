@@ -1,0 +1,146 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-FUL-001
+  title: Fuel location and energy-carrier bay
+  kind: decision-anchor
+  taxonomy: ['028', '053', '057']
+  raised_at: null
+  question: 'Where is the fuel carried — in the wing, in the fuselage bay, or in both — and what does the energy-carrier bay then hold?'
+  context: >-
+    Since the rulings of 2026-11-14 conventional fuel carries the mission energy of the eWTW in every option. The energy-carrier bay of the fuselage, PBS 053-900, was defined for batteries, with crash protection, containment and a maintenance compartment for electric energy, and a propulsion battery is carried only if KNOT-EWTW-STO-001 retains one. Conventional types carry fuel in the wing box. The first-order screening asks for about 6.8 t of fuel on the requirement mission. The research has to say what volume the wing of an aircraft of the class offers, what a tank in the fuselage costs in structure, protection and centre of gravity, and which requirements apply to fuel in the fuselage.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; research records of 2026-11-14 on the propulsion chain and on the electrical sources
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-14'
+  depends_on:
+  - KNOT-EWTW-NRG-001
+  - KNOT-EWTW-STO-001
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 1
+  - view: model
+    ref: README §3 row 2
+  - view: PBS
+    ref: eWTW-PBS-053-900-000
+    relation: gates
+    note: What the bay holds once the fuel is located
+  - view: PBS
+    ref: eWTW-PBS-028-000
+    relation: gates
+    note: Location of the fuel storage installation
+  - view: finding
+    ref: F01
+  options:
+  - id: A
+    text: 'fuel in the wing box; the bay holds the propulsion battery if one is retained, and is released otherwise'
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '028'
+      element: 'Conventional fuel storage installation, in the wing box'
+      key: fuel-storage-installation
+      owner: KNOT-EWTW-NRG-001
+  - id: B
+    text: fuel in the energy-carrier bay of the fuselage
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '028'
+      element: 'Conventional fuel storage installation, in the energy-carrier bay'
+      key: fuel-storage-installation
+      owner: KNOT-EWTW-NRG-001
+  - id: C
+    text: fuel in the wing box and in the bay
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '028'
+      element: 'Conventional fuel storage installation, in the wing box and in the energy-carrier bay'
+      key: fuel-storage-installation
+      owner: KNOT-EWTW-NRG-001
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: the carrier is not aft of the rear pressure bulkhead
+    ref:
+      view: baseline
+      ref: BL-053-300-010-A2
+  - text: 'about 6.8 t of fuel on the requirement mission at nominal values, from a first-order screening'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-FUL-001-01
+    title: Fuel volume and where it fits
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The volume the fuel of the requirement mission needs, against the volume the wing and the bay offer'
+    research_brief:
+      questions:
+      - 'What usable fuel volume does the wing box of in-service aircraft of 70 to 100 seats hold, and how much of it does a stage of 2,000 km with reserves use?'
+      - 'What do tanks in the fuselage or in the centre section cost in structure, crash protection and venting, and which requirements apply to fuel tanks in the fuselage?'
+      - How does the location of the fuel move the centre of gravity through a flight?
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    - view: RBS
+      ref: null
+    exit: 'Volume needed and volume available for each option, with the travel of the centre of gravity'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-FUL-001-02
+    title: Disposition of the energy-carrier bay
+    knu_class: ANALYSIS_PACKAGE
+    description: 'What the bay 053-900 holds under each option and each role of storage, and what becomes of its five stations. Changing the PBS is an act of its author'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: PBS
+      ref: eWTW-PBS-053-900-000
+    exit: 'Bay content for each option, with the stations kept, changed or released'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-FUL-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: 'Criteria and weights for the location of the fuel, drawn from ReqBS and TPMS'
+    research_brief:
+      questions:
+      - 'Which criteria do published designs use to place the fuel of a hybrid-electric aircraft — relief of wing bending, crashworthiness, centre of gravity, volume left for batteries?'
+      - Which criteria follow from certification and cannot be traded?
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria, weights and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []

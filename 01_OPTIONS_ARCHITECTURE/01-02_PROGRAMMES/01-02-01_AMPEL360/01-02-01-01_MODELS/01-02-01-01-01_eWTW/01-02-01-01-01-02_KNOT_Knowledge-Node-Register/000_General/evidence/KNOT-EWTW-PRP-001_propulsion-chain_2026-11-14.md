@@ -83,9 +83,9 @@ These are consequences drawn by the reviewer. They are not quotations.
 
 The report says that an open option B is not a ruling that admits the thermal machine, and that opening the PBS group now would get ahead of it. On the letter of the condition it is right: this KNOT has no ruling.
 
-What the record holds is this. Ruling R2 of `KNOT-EWTW-NRG-001` is complete and removes the all-electric chain, so option B is the only one left on that axis. The exclusion of hydrogen rests on ruling R1, which is provisional. The author asked for the group on 2026-11-14, and it is in a change that only his merge ratifies.
+What the record holds is this. Ruling R2 of `KNOT-EWTW-NRG-001` is complete and removes the all-electric chain, so option B is the only one left on that axis. The exclusion of hydrogen rests on ruling R1, which was provisional when the report was reviewed and was completed later the same day, in the same change. The author asked for the group on 2026-11-14, and it is in a change that only his merge ratifies.
 
-So the group is opened ahead of the ruling of this KNOT, by an act of the author, on R2. It is a scaffold with one chapter and no station. It is retired if the thermal machine leaves the option set, which can happen if R1 is not completed as it stands or if option A is reopened and chosen.
+So the group is opened ahead of the ruling of this KNOT, by an act of the author, on R2. It is a scaffold with one chapter and no station. It is retired if the thermal machine leaves the option set, which can happen if a reopen condition of `KNOT-EWTW-NRG-001` is met. Since then ruling R1 of `KNOT-EWTW-SRC-001` authorises the turbogenerator installation, which every option holds; this KNOT still has no ruling.
 
 ## Not accepted
 
@@ -117,4 +117,3 @@ The rest is work of the programme and decisions of the authority:
 - the criteria of this KNOT, with weights and thresholds, and its maturity records (`KNU-EWTW-PRP-001-01`);
 - the number of propulsors and their rating, with the failure case that sizes them (`KNU-EWTW-PRP-001-02` and `-04`);
 - the certification basis for a number of propulsors above four;
-- the completion of ruling R1, on which the exclusion of hydrogen rests.

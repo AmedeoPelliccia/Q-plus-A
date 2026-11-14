@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - knot_check.py (0.1.4)
+# Generated 2026-11-14 - knot_check.py (0.1.5)
 """Check a KNOT register against AMPEL360-KNOT-CM-004 and print its generated views.
 
 Usage: python3 tools/knot_check.py <register> <s-atlas> [<pbs>]
@@ -128,6 +128,9 @@ def check(register, tax_root, pbs=None):
                 gates.append((ref, kid, k["resolution"], effectivity_label(k["effectivity"]), note))
 
         bad += [f"{kid} ruled without a ruling"] * (k["resolution"] == "RULED" and not k["rulings"])
+        if k["resolution"] == "DEFERRED":                                                      # rule 6: deferred to the choice of another KNOT
+            bad += [f"{kid} deferred without another KNOT in closed_with"] * (not [r for r in k["closed_with"] if r in K and r != kid])
+            bad += [f"{kid} deferred without a complete ruling"] * (not any(r.get("state") == "COMPLETE" for r in k["rulings"]))
         for r in k["rulings"]:
             ruling = f"{kid} {r.get('id')}"
             bad += [f"{ruling} fields"] * any(f not in r for f in RUL)
@@ -191,7 +194,7 @@ def check(register, tax_root, pbs=None):
     lines = [f"| `{kid}` | {k['title']} | `{k['kind']}` | `{folder[kid]}` | {k['resolution']} | {len(k['knus'])} | `{k['owner']}` |"
              for kid, k in K.items()]
     lines += [f"| `{a}` | {TAX[a]} | {' · '.join(f'`{t}`' for t in by[a])} |" for a in sorted(by)]
-    for label, kind in (("Home to be ruled", "decision-anchor"), ("Lifecycle", "lifecycle-constraint"), ("Control", "control-intent")):
+    for label, kind in (("Home to be ruled", "decision-anchor"), ("Lifecycle", "lifecycle-constraint"), ("Control", "control-intent"), ("Obligation", "obligation")):
         ks = [kid[10:13] for kid, k in K.items() if not k["taxonomy"] and k["kind"] == kind]
         lines.append(f"{label}: {' · '.join(f'`{t}`' for t in ks)}")
     for k in K.values():

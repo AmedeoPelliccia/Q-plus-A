@@ -21,7 +21,7 @@ AMPEL360 is a family of four aircraft models on one identity system: S-ATLAS add
 
 | Decision | Record | State |
 |---|---|---|
-| The eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen. Liquid hydrogen is assigned to the BWB-Q100 | Ruling R1 of [`KNOT-EWTW-NRG-001`][NRG], 2026-11-07 | `PROVISIONAL`: rationale and evidence not yet recorded |
+| The eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen. Liquid hydrogen is assigned to the BWB-Q100 | Ruling R1 of [`KNOT-EWTW-NRG-001`][NRG], 2026-11-07 | `COMPLETE` since 2026-11-14: a decision of allocation within the family, with its rationale and evidence recorded |
 | The eWTW keeps 100 seats. Batteries alone are not a candidate for it until a demonstrated pack closes its requirement mission of 2,000 km | Ruling R2 of [`KNOT-EWTW-NRG-001`][NRG], 2026-11-14 | `COMPLETE` |
 
 Programme relations — what is assigned to a model, excluded from it or admitted in combination — are recorded in [`programme-relations.yaml`][PROG-REL] under [`AMPEL360-REL-CM-005`][CM-005]. The file sits in the eWTW model while the eWTW pilot is its only content.
