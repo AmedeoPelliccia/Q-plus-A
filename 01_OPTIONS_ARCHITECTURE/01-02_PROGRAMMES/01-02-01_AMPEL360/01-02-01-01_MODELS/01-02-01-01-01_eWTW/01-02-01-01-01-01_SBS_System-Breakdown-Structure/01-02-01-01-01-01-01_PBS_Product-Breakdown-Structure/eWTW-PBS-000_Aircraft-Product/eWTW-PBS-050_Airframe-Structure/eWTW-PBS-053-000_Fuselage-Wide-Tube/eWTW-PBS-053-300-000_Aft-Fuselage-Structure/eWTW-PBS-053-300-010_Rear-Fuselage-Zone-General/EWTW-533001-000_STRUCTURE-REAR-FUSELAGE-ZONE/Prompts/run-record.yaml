@@ -1,0 +1,69 @@
+# AI-assisted generative CAD execution record
+# Generated automatically by EWTW-533001-000_concept.py.PY. Do not edit after generation.
+# (publish-gate.py recomputes every hash; a hand edit can only break it.)
+run:
+  schema: "AMPEL360-AI-GENERATION-RUN-RECORD/1.0"
+
+  id: "EWTW-533001-000-C-20261114T183131Z"
+  timestamp-utc: "2026-11-14T18:31:31Z"
+
+  product:
+    pn: "EWTW-533001-000"
+    nomenclature: "STRUCTURE-REAR-FUSELAGE-ZONE"
+    maturity: "CONCEPT"
+
+  prompt:
+    file: "3d-model_EWTW-533001-000_revC.md"
+    revision: "C"
+    sha256: "unavailable"
+
+  ai:
+    model: "GLM 5.3 (Z.ai)"
+    declaration-source: "human"
+    model-string-verbatim: true
+
+  generator:
+    file: "CAD/source/EWTW-533001-000_concept.py.PY"
+    version: "v0.2.2-concept"
+    sha256: "cb923d00d6f823b6be8b1fa02a4c7ed95f5bb6c0c4f7cc7a0a76d7ff9d5253cb"
+
+  execution:
+    python-version: "3.13.2"
+    cadquery-version: "2.8.0"
+    platform: "Windows-11-10.0.26320-SP0"
+    parameters-override: {}
+
+  repository:
+    commit: "unavailable"
+    branch: "unavailable"
+    dirty: null
+
+  artifacts:
+    - role: "verification-evidence"
+      file: "evidence/EWTW-533001-000_concept_verification.txt"
+      format: "text/plain"
+      bytes: 7851
+      sha256: "48988ca8086e67f1b57276cef8737ed5a4fd1436066491221a344c574dcb492f"
+    - role: "neutral-cad"
+      file: "CAD/exchange/EWTW-533001-000_concept.step"
+      format: "STEP"
+      requested-schema: "AP242"
+      actual-schema: "AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF {1 0 10303 442 1 1 4 }"
+      units: "mm"
+      bytes: 5105307
+      sha256: "073a759f4df3c59ccfa8c266764c6d8abe8667172326b0c0fc24e1b911d0aeae"
+    - role: "3d-preview"
+      file: "CAD/preview/EWTW-533001-000_concept.glb"
+      format: "GLB"
+      units: "mm"
+      ghost-context: true
+      bytes: 4645308
+      sha256: "3d1a779f9ea24dbca4e823a7883d4e191d8309f356c28a7cd20f7fc78a2b6cd4"
+
+  verification:
+    pass: 25
+    fail: 0
+    warn: 0
+    info: 7
+    exit-code: 0
+    result: "PASS"
