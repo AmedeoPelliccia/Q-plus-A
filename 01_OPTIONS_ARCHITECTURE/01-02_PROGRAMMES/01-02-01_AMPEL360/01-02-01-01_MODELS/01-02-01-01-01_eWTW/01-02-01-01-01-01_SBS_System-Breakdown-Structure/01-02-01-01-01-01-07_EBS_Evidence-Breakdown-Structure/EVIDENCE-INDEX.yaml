@@ -142,6 +142,21 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-PRP-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-SRC-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the electrical sources and the role of energy storage, as accepted
+      on review from a report of 2026-11-14 relayed by the author - loads and the electric
+      environmental control system, sizing of sources, distribution and protection, and
+      batteries in service, in the rules and under test. Ten of its statements were read
+      by the reviewer at the source, seven are as reported, ten report that a search
+      found nothing. It serves two KNOTs.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-STO-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-ESS-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
     status: on-disk

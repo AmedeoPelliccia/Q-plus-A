@@ -85,11 +85,13 @@ knot:
     exit: Role and size per option
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
   - knu_id: KNU-EWTW-STO-001-02
     title: Battery installation safety
     knu_class: REQUIREMENT_SET
@@ -112,11 +114,13 @@ knot:
     exit: Candidate requirements and risks; input to the disposition of F01
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
   - knu_id: KNU-EWTW-STO-001-03
     title: Propagation test plan
     knu_class: VERIFICATION_OBJECT
@@ -157,8 +161,10 @@ knot:
     exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-12'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
