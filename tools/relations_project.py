@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - relations_project.py (0.3.0)
+# Generated 2026-11-14 - relations_project.py (0.4.0)
 """Check a model's architecture relations and project them onto its KNOT register.
 
 Usage: python3 tools/relations_project.py <relations> <register> <s-atlas> [--check | --write]
@@ -219,8 +219,8 @@ def validate(tax, prog, knots, TAX, known_models):
             bad.append(f"{key}: ruling {e.get('ruling')} is not in the register")
         subject, obj = e.get("subject"), e.get("object")
         if e.get("relation") == "excluded-from":
-            if not address(subject) or not model(e.get("model")) or not role_or_any(e.get("for")):
-                bad.append(f"{key}: an exclusion needs an S-ATLAS address, a model of the programme and a role or null")
+            if not address(subject) or not model(e.get("model")) or not role_or_any(e.get("for")) or not isinstance(e.get("alone", False), bool):
+                bad.append(f"{key}: an exclusion needs an S-ATLAS address, a model of the programme and a role or null; `alone` is true or false")
         elif e.get("relation") == "assigned-to":
             if not (address(subject) or (isinstance(subject, dict) and subject.get("ns") in SUBJECT_NAMESPACES
                                          and has_text(subject.get("id")))):
@@ -278,7 +278,7 @@ def project(tax, prog, knots, role, model):
     active = lambda item: item.get("state") != "WITHDRAWN"
     alt = next(a for a in tax["alternatives"] if a["for"] == role and active(a))
     knot = next(d["knot"] for d in prog["decided-by"] if d["for"] == role and d["model"] == model and active(d))
-    excluded = {e["subject"]: (e["ruling"], ruling_state(e["ruling"], knots)) for e in prog.get("exclusions", [])
+    excluded = {e["subject"]: (e["ruling"], ruling_state(e["ruling"], knots), bool(e.get("alone"))) for e in prog.get("exclusions", [])
                 if e["relation"] == "excluded-from" and e["model"] == model and e.get("for") in (None, role)}
     owned = elements(knots)
     candidates = [((m,), None) for m in alt["members"]]
@@ -286,11 +286,12 @@ def project(tax, prog, knots, role, model):
                    if c["for"] == role and c["model"] == model and active(c)]
     rows, owners = [], set()
     for members, combination in sorted(candidates):
-        hit = sorted({s for s in excluded for m in members if covers(s, m)})  # an exclusion covers what lies under it
+        hit = sorted({s for s in excluded for m in members if covers(s, m)    # an exclusion covers what lies under it,
+                      and not (excluded[s][2] and combination)})              # and one recorded as alone leaves the combinations
         if hit and combination:
             status = "review: the combination includes excluded " + ", ".join(hit)
         elif hit:
-            status = "excluded by `{}` ({})".format(*excluded[hit[0]])
+            status = "excluded{} by `{}` ({})".format(" alone" if excluded[hit[0]][2] else "", *excluded[hit[0]][:2])
         else:
             status = "open, combination" if combination else "open"
         uses = sorted({(key, kid) for key, (kid, address) in owned.items() for m in members if covers(address, m)})

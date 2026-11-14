@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-03_REL_Architecture-Relations/`
 **Conventions:** [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 — both *PROPOSED*
-**Version:** 0.2.0 · **Date:** 2026-11-14
+**Version:** 0.3.0 · **Date:** 2026-11-14
 
 This node records how the technologies open to the eWTW relate to one another, and what the AMPEL360 programme has assigned, excluded or admitted. A tool projects those relations onto the [KNOT register][KNOT-REG]. For a decision it lists the candidates, the product elements each candidate uses, what each candidate requires and the decisions that come first.
 
@@ -44,7 +44,7 @@ Every record is `PROPOSED`. The exclusion and the assignment take their state fr
 This section is the output of [`tools/relations_project.py`][TOOL], written with `--write`. With `--check` the tool fails when the section differs from what the records give.
 
 <!-- projections:begin -->
-2 alternative sets, 7 taxonomy relations, 5 programme relations; rule failures: none
+2 alternative sets, 7 taxonomy relations, 6 programme relations; rule failures: none
 
 Sources not yet checked: auxiliary-power-module-as-essential-source-requires-bridging-storage · emergency-backup-power-references-cs-25-1351-d · essential-electrical-power-source · propulsion-storage-as-essential-source-requires-network-interface · propulsion-storage-interfaces-with-distribution · turbogenerator-as-essential-source-requires-bridging-storage · turbogenerator-requires-carrier-delivery
 
@@ -54,10 +54,10 @@ Sources not yet checked: auxiliary-power-module-as-essential-source-requires-bri
 |---|---|---|---|
 | `068` Turbogenerators and Power Offtakes | open | `turbogenerator-installation` (`SRC`) | `064` |
 | `068` Turbogenerators and Power Offtakes + `074` Propulsion Energy Storage Systems | open, combination | `propulsive-battery-installation` (`NRG`) · `turbogenerator-installation` (`SRC`) | `064` · `078` |
-| `074` Propulsion Energy Storage Systems | open | `propulsive-battery-installation` (`NRG`) | `078` |
+| `074` Propulsion Energy Storage Systems | excluded alone by `KNOT-EWTW-NRG-001#R2` (COMPLETE) | `propulsive-battery-installation` (`NRG`) | `078` |
 | `075` Fuel Cell Electric Powertrains | excluded by `KNOT-EWTW-NRG-001#R1` (PROVISIONAL) | none recorded | — |
 
-Options: the open candidates match registered options A, B, C.
+Options: the open candidates match registered options B, C.
 Scope: every open candidate lies in a chapter of the KNOT's `taxonomy` field.
 Prerequisites: derived from element ownership `NRG`; declared in the register `NRG`; consistent.
 
@@ -82,7 +82,7 @@ Prerequisites: derived from element ownership `NRG` · `SRC` · `STO`; declared 
 
 ## What the pilot shows
 
-1. **Electrical sources: the records regenerate the registered options.** One alternatives set and one programme combination give options A, B and C of `KNOT-EWTW-SRC-001`, and fuel cells appear as excluded with the state of R1. The inputs were written with those options in view. The result shows that the records are sufficient to regenerate them, not that they predicted them.
+1. **Electrical sources: the records regenerate the options that stand.** One alternatives set and one programme combination give options B and C of `KNOT-EWTW-SRC-001`. Batteries alone appear as excluded by ruling R2 of `KNOT-EWTW-NRG-001`, and the battery stays a member of the combination with a turbogenerator: the exclusion is recorded as holding for the node alone. Fuel cells appear as excluded with the state of R1. The inputs were written with those options in view. The result shows that the records are sufficient to regenerate them, not that they predicted them.
 2. **Essential power: five options stand on the records.** `KNOT-EWTW-ESS-001` registers options A to E, all `open`. A, C, D and E match the four open candidates, each taken with what it brings for the role: the essential battery that bridges the start of `049` and the transfer of `068`, and the feed to the essential network for `074`. Option B, the ram-air turbine, stands on a candidate that has no S-ATLAS address. None is scored: the criteria of the KNOT are still proposed.
 3. **The scope of `KNOT-EWTW-ESS-001` is narrower than its options.** Options C and E have footprints in chapters `068` and `074`, which the `taxonomy` field of the KNOT does not include. The owner adds them on accepting the option set, at the review of `KNU-EWTW-ESS-001-02`.
 4. **The ram-air turbine has no S-ATLAS node.** Option B files its installation at the nearest node, `024-230` *Emergency Backup Power*, and says so in the footprint. Its taxonomy home is a ruling for the taxonomy owner, as for the keel beam in `KNOT-EWTW-KEL-001`.
@@ -108,7 +108,7 @@ The output is the section [Projections](#projections). With `--check` the tool c
 
 The tool reads the working tree. The run that counts is the one on a commit, in review or on a clean checkout.
 
-[`tools/relations_project_test.py`][TEST] runs 50 tests on copies of the relations and of the register: the pilot as committed, and copies that each change one input. Among them are a combination removed, an exclusion removed, a combination with an excluded member, a withdrawn set and its replacement, a second deciding KNOT for one role, a model outside the effectivity of the KNOT, a malformed assignment, a date that is not a date, a file that cannot be read, a KNOT recorded twice, a rejected option, a role requirement removed or withdrawn, an option on a candidate without an address, a stale README and a record that carries control characters.
+[`tools/relations_project_test.py`][TEST] runs 54 tests on copies of the relations and of the register: the pilot as committed, and copies that each change one input. Among them are a combination removed, an exclusion removed, a combination with an excluded member, a withdrawn set and its replacement, a second deciding KNOT for one role, a model outside the effectivity of the KNOT, a malformed assignment, a date that is not a date, a file that cannot be read, a KNOT recorded twice, a rejected option, an exclusion that holds for a node alone, a role requirement removed or withdrawn, an option on a candidate without an address, a stale README and a record that carries control characters.
 
 ---
 
@@ -119,6 +119,7 @@ The tool reads the working tree. The run that counts is the one on a commit, in 
 | 0.1.0 | 2026-11-12 | Node created: `AMPEL360-REL-CM-005` Issue 1 and `QPLUS-REL-001` Issue 1, both proposed; pilot relations for the eWTW; projections for electric power for propulsion and for essential electrical power; `tools/relations_project.py` with 18 tests |
 | 0.1.1 | 2026-11-13 | Review applied. Decision links have a key, an authority and a state, and a role has one deciding KNOT per model. Assignments, models and dates are validated. A withdrawn set leaves its role free. Rejected options no longer count as standing. Unreadable inputs and duplicate KNOT files are failures instead of crashes. The Projections section is written and checked by the tool. 42 tests |
 | 0.2.0 | 2026-11-14 | `KNOT-EWTW-ESS-001` registers five options. Two `requires` relations for essential electrical power: bridging storage for `049` and for `068`. Step 5 of the projection takes a candidate with what it brings for the role, and names an option that stands on a candidate with no address. The essential battery footprint of `KNOT-EWTW-STO-001` is filed at `024-360`. 50 tests |
+| 0.3.0 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001` projected: batteries alone excluded for electric power for propulsion, as a node alone, so that the combination with a turbogenerator stands. CM-005 rule 9 and `tools/relations_project.py` 0.4.0 take `alone: true` on an exclusion. 54 tests |
 
 [MODEL]: ../README.md
 [KNOT-REG]: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/README.md

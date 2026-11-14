@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - relations_project_test.py (0.3.0)
+# Generated 2026-11-14 - relations_project_test.py (0.4.0)
 """Tests of tools/relations_project.py on the eWTW pilot. Run from the repository root:
 
     python3 tools/relations_project_test.py
@@ -72,7 +72,8 @@ class RelationsProject(unittest.TestCase):
     def test_source_options_match_the_register(self):
         p = self.projection(SRC)
         self.assertEqual((p["only_projected"], p["only_registered"]), ([], []))
-        self.assertEqual(sorted(p["registered"].values()), ["A", "B", "C"])
+        self.assertEqual(sorted(p["registered"].values()), ["B", "C"])
+        self.assertEqual(p["dead"], {("074",): ("A", "excluded")}, "batteries alone left the option set with ruling R2 of the energy carrier")
         self.assertIn("PROVISIONAL", self.status(p)[("075",)])
 
     def test_prerequisites_agree_with_the_register(self):
@@ -142,7 +143,7 @@ class RelationsProject(unittest.TestCase):
     def test_every_programme_relation_is_counted(self):
         bad, lines = self.run_tool()
         self.assertEqual(bad, [])
-        self.assertEqual(lines[0], "2 alternative sets, 7 taxonomy relations, 5 programme relations; rule failures: none")
+        self.assertEqual(lines[0], "2 alternative sets, 7 taxonomy relations, 6 programme relations; rule failures: none")
 
     def test_committed_readme_is_current(self):
         self.assertEqual(rp.run(REL, REG, TAX, mode="check")[0], [])
@@ -163,6 +164,27 @@ class RelationsProject(unittest.TestCase):
     def test_combination_with_an_excluded_member_goes_to_review(self):
         self.programme(lambda d: d["combinations"][0].update(members=["068", "075"]))
         self.assertTrue(self.status(self.projection(SRC))[("068", "075")].startswith("review"))
+
+    def test_exclusion_alone_leaves_the_combination(self):
+        status = self.status(self.projection(SRC))
+        self.assertEqual(status[("074",)], "excluded alone by `KNOT-EWTW-NRG-001#R2` (COMPLETE)")
+        self.assertEqual(status[("068", "074")], "open, combination")
+        self.assertEqual(self.projection(SRC)["derived"], ["KNOT-EWTW-NRG-001"], "the battery of the combination still brings its owner")
+
+    def test_exclusion_not_alone_sends_the_combination_to_review(self):
+        self.programme(lambda d: d["exclusions"][1].pop("alone"))
+        status = self.status(self.projection(SRC))
+        self.assertEqual(status[("074",)], "excluded by `KNOT-EWTW-NRG-001#R2` (COMPLETE)")
+        self.assertEqual(status[("068", "074")], "review: the combination includes excluded 074")
+
+    def test_exclusion_alone_holds_in_its_role_only(self):
+        self.assertEqual(self.status(self.projection(ESS))[("074",)], "open")
+        self.programme(lambda d: d["exclusions"][1].update({"for": None}))
+        self.assertTrue(self.status(self.projection(ESS))[("074",)].startswith("excluded alone"))
+
+    def test_alone_is_true_or_false(self):
+        self.programme(lambda d: d["exclusions"][1].update(alone="yes"))
+        self.fails("batteries-alone-from-ewtw: an exclusion needs an S-ATLAS address, a model of the programme and a role or null; `alone` is true or false")
 
     def test_exclusion_needs_a_recorded_ruling(self):
         self.programme(lambda d: d["exclusions"][0].update(ruling="KNOT-EWTW-NRG-001#R9"))
@@ -305,7 +327,7 @@ class RelationsProject(unittest.TestCase):
                     option["state"] = "rejected"
         self.knot("SRC", reject)
         p = self.projection(SRC)
-        self.assertEqual((p["registered"], p["only_projected"]), ({("074",): "A"}, [("068",), ("068", "074")]))
+        self.assertEqual((p["registered"], p["only_projected"]), ({}, [("068",), ("068", "074")]))
         self.assertEqual(next(r for r in p["rows"] if r["members"] == ("068",))["elements"], [])
         self.assertIn("`068` (option B is rejected)", "\n".join(rp.render(p, rp.titles(TAX))))
         self.assertNotIn("KNOT-EWTW-SRC-001", self.projection(ESS)["derived"])

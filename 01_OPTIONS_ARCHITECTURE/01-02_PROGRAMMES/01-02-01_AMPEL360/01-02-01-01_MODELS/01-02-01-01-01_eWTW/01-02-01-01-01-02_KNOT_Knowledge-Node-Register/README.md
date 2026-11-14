@@ -62,7 +62,7 @@ No decision anchor has approved criteria yet: two records hold proposed criteria
 
 R1 also removes fuel cells from `KNOT-EWTW-SRC-001`. A provisional ruling directs the work, but it is not an auditable basis: both exclusions stand on the authority's statement alone until R1 is completed, and no KNOT can be ruled on it (rule 4).
 
-R2 is complete: it carries its rationale and its evidence, and its [decision record](000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md) says what was checked before it was recorded. It excludes option A from the scope without scoring it, and it does not narrow `KNOT-EWTW-SRC-001` or `KNOT-EWTW-PRP-001`, whose options for batteries alone and for an all-electric chain rest on the option it excludes. That is for the authority to say.
+R2 is complete: it carries its rationale and its evidence, and its [decision record](000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md) says what was checked before it was recorded. It excludes option A from the scope without scoring it. With it leave option A of `KNOT-EWTW-SRC-001`, batteries alone, and option A of `KNOT-EWTW-PRP-001`, all-electric, which rest on the option it excludes.
 
 ### Criteria proposed
 

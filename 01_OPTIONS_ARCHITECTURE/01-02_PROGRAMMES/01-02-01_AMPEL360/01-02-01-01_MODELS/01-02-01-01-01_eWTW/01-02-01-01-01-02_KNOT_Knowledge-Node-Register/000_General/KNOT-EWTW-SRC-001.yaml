@@ -40,7 +40,8 @@ knot:
   options:
   - id: A
     text: batteries (074) alone
-    state: open
+    state: excluded
+    by: KNOT-EWTW-NRG-001 R2
     pbs_footprint:
     - action: update
       taxonomy: '074'

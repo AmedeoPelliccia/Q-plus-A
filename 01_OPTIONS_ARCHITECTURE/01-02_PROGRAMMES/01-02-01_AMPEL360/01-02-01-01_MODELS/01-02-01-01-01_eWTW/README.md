@@ -140,7 +140,7 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 
 **Scope narrowed on 2026-11-07** by the architecture authority: the eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen; liquid hydrogen is allocated to the [BWB-Q100][BWB]. `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are narrowed to that scope and stay open within it.
 
-**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery. `KNOT-EWTW-SRC-001` and `KNOT-EWTW-PRP-001` still list batteries alone and an all-electric chain: R2 does not narrow them.
+**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery. R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
 
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|

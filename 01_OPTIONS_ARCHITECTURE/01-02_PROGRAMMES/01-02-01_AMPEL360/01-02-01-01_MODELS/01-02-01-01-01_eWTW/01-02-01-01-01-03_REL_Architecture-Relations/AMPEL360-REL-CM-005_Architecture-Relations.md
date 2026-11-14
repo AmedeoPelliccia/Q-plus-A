@@ -46,7 +46,7 @@ A programme exclusion or assignment carries `ruling` in place of `source`, `sour
 | Relation | From → to | Recorded under | Meaning |
 |---|---|---|---|
 | `assigned-to` | Technology, energy carrier or function → model | `assignments` | The programme gives it to that model |
-| `excluded-from` | S-ATLAS address → model, for one role or for any | `exclusions` | The address, and everything under it, leaves the option sets of the model |
+| `excluded-from` | S-ATLAS address → model, for one role or for any | `exclusions` | The address, and everything under it, leaves the option sets of the model. With `alone: true` it leaves them as a candidate on its own, and stays a member of the combinations admitted for the role |
 | Combination | Role and model → two or more members of the role's alternatives | `combinations` | The members may be used together in one architecture |
 | `decided-by` | Role and model → KNOT | `decided-by` | The KNOT whose ruling chooses among the candidates for the role |
 | `constrained-by` | Model, capability or option → programme requirement or policy | — | A requirement that screens candidates |
@@ -99,7 +99,7 @@ A taxonomy alternative can lead to an option. It never stands for a substitution
 6. `requires` names what a candidate brings with it, and the projection lists it beside the candidate. `enables` marks an opportunity and never creates a prerequisite. The prerequisites of a decision come from the ownership of product elements (CM-004 rule 18) and are checked against `depends_on`.
 7. A record becomes `RATIFIED` by the authority of its level, with a `source` that is public or in this repository and a `source_checked` date. A ratified record is not edited: it is withdrawn and a record with a new key replaces it. Withdrawn records stay in the file. A withdrawn alternatives set leaves its role free for the set that replaces it, and its members are no longer candidates.
 8. An exclusion or an assignment cites a ruling in the register, and its state is the state of that ruling. A `PROVISIONAL` ruling gives a provisional exclusion.
-9. A combination that includes an excluded member is reported for review. It is neither dropped nor kept silently.
+9. A combination that includes an excluded member is reported for review. It is neither dropped nor kept silently. An exclusion recorded with `alone: true` is the exception the ruling itself makes: the node is excluded as a candidate on its own, and the combinations that include it stand.
 10. A candidate with no S-ATLAS address is listed as `unaddressed` with its nearest node. This convention gives it no address: the taxonomy owner decides.
 11. No record states conformity. `satisfies`, `verifies` and `certified-for` are read from records that carry their own evidence and, for `certified-for`, the approval.
 12. A role has one deciding KNOT per model, and the effectivity of that KNOT includes the model.
@@ -109,7 +109,7 @@ A taxonomy alternative can lead to an option. It never stands for a substitution
 For a role and a model, [`tools/relations_project.py`][TOOL]:
 
 1. Takes as candidates the members of the role's alternatives and the combinations admitted for the role and the model.
-2. Marks a candidate `excluded` when an exclusion for the model covers it, with the ruling and its state. A combination with an excluded member goes to review (rule 9). The others are `open`.
+2. Marks a candidate `excluded` when an exclusion for the model covers it, with the ruling and its state. A combination with an excluded member goes to review, unless the exclusion holds for the node alone (rule 9). The others are `open`.
 3. Joins each candidate to the product elements of the register filed at the candidate's address or at a node above it, with the KNOT that owns each element. An element counts while an option that creates it is `open` or `retained`.
 4. Lists the `requires` relations recorded at the candidate's address for the role.
 5. Compares the open candidates with the options of the deciding KNOT that still stand — `open` or `retained` — by the addresses of their footprints. A candidate is taken with the objects of the `requires` relations recorded for the role itself: what it brings with it to fill the role. A requirement that holds for any role is listed in step 4 and is not part of the comparison. A candidate whose option was rejected or excluded is named with that option. An option that matches no candidate and has a footprint at the nearest node of an unaddressed candidate (rule 10) is named as standing on a candidate with no address; it is not a difference.
@@ -142,6 +142,7 @@ The node README holds the output between two markers. `--check` fails when that 
 | 1 | From draft 0.1.0 of 2026-11-12, pinned to `565b5bb`: the four levels, the relation sets and the projection of the `SRC` options. Changes to the draft: alternatives are sets per role and not pairs, so that nothing is inferred by chaining; the taxonomy relations move to `QPLUS-REL-001`; `allocated-to` keeps its model meaning and the programme act becomes `assigned-to`; `source_checked` added; rules on inheritance, on `enables`, on ratification and on combinations with an excluded member; the closure order, which restated `depends_on`, is replaced by prerequisites derived from element ownership and compared with `depends_on`; scope check against the `taxonomy` field of the KNOT; the script and its tests are in `tools/` |
 | 1, review of 2026-11-13 | Decision links are keyed records with authority and state; rule 12; the form of the ends of an assignment; `source_checked` is a date; a withdrawn set leaves its role free (rule 7); only options that still stand count in steps 3 and 5; the generated section of the README is written and checked by the tool |
 | 1, option set of 2026-11-14 | Step 5 takes each candidate with the objects of its `requires` relations for the role, and names an option that stands on an unaddressed candidate. Found when `KNOT-EWTW-ESS-001` registered its options: three of them carry a second element that the candidate does not work without in that role |
+| 1, ruling R2 of 2026-11-14 | An exclusion may hold for a node alone: `alone: true` leaves the combinations that include it. Found when ruling R2 of `KNOT-EWTW-NRG-001` excluded batteries alone and kept the battery beside a turbogenerator |
 
 [CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
 [CM-002]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md

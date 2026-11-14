@@ -26,7 +26,7 @@ The essential battery is created by option C of `KNOT-EWTW-STO-001`. The turboge
 
 ## With which electrical sources each option can exist
 
-`KNOT-EWTW-SRC-001` has three options: A, batteries alone; B, a turbogenerator; C, both.
+`KNOT-EWTW-SRC-001` has three options: A, batteries alone; B, a turbogenerator; C, both. Ruling R2 of `KNOT-EWTW-NRG-001`, of the same day, excludes option A; its column stays for the record.
 
 | Option | `SRC` A, batteries | `SRC` B, turbogenerator | `SRC` C, both | Condition |
 |---|:-:|:-:|:-:|---|

@@ -45,7 +45,7 @@ No critical element on the list is at level 6. Level 6 therefore freezes nothing
 
 **The aircraft keeps 100 seats.** Reducing the seats or the stage to make batteries alone close changes the aircraft. It is not a result of the comparison.
 
-Option A stays in the record and is not a candidate. It reopens only on a pack that is demonstrated, not projected, and that closes mission L at 100 seats with the cycle life of service. A cell does not reopen it.
+Option A stays in the record and is not a candidate. With it leave option A of `KNOT-EWTW-SRC-001`, batteries alone, and option A of `KNOT-EWTW-PRP-001`, all-electric. Option A reopens only on a pack that is demonstrated, not projected, and that closes mission L at 100 seats with the cycle life of service. A cell does not reopen it.
 
 ## The consequence accepted with them
 
@@ -70,7 +70,7 @@ The limit declared in the test still holds: the three options have the same empt
 
 - **It excludes option A from the scope. It does not reject it by scoring.** The criteria of the KNOT are still proposed, and no option is scored (CM-004, rule 5).
 - **It approves the six maturity records** of the KNOT. The criteria stay proposed, so the gate of rule 5 stays closed.
-- **It does not narrow the other KNOTs.** Option A of `KNOT-EWTW-SRC-001`, batteries alone, and option A of `KNOT-EWTW-PRP-001`, all-electric, rest on the option excluded here. Whether this ruling removes them is for the authority to say. The relations convention cannot yet record a node that is excluded alone and admitted in a combination (CM-005, rule 9).
+- **It removes the options that rest on option A.** Option A of `KNOT-EWTW-SRC-001`, batteries alone, and option A of `KNOT-EWTW-PRP-001`, all-electric, leave their option sets with it, as the authority confirmed in the same session. The propulsion battery stays a member of the combination with a turbogenerator: the programme relations record the exclusion as holding for the node alone (CM-005, rule 9).
 - **It writes no tolerance** for the range of the reference type. Until one is written, that point is a check of the model.
 - **It leaves ruling R1 as it is**: provisional, without rationale or evidence.
 

@@ -35,6 +35,13 @@ exclusions:
   model: eWTW
   for: null
   ruling: KNOT-EWTW-NRG-001#R1
+- key: batteries-alone-from-ewtw
+  relation: excluded-from
+  subject: '074'
+  model: eWTW
+  for: electric power for propulsion
+  alone: true
+  ruling: KNOT-EWTW-NRG-001#R2
 combinations:
 - key: turbogenerators-with-batteries
   for: electric power for propulsion
