@@ -128,3 +128,15 @@ rows:
       that produced it. One of its eleven statements was read again by the reviewer.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the emergency sources of one regional type and the reading of EASA
+      SC E-19, as accepted on review from a second report by Grok 4.7 of 2026-11-14. Seven
+      of its eleven statements were read by the reviewer at the source; three report that
+      a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml

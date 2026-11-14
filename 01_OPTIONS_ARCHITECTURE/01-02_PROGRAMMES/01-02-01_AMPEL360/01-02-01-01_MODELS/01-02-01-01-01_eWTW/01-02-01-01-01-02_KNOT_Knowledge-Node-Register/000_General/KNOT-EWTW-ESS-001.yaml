@@ -136,7 +136,7 @@ knot:
   - knu_id: KNU-EWTW-ESS-001-01
     title: Essential loads and duration
     knu_class: ANALYSIS_PACKAGE
-    description: What must remain available after loss of the main sources, for how long, and with what segregation
+    description: What must remain available after loss of the main sources, for how long, and with what segregation. Two research rounds found no published load figure for the class, so the list is built bottom-up from the functions of AMC 25.1351(d), with every assumption stated
     research_brief:
       questions:
       - For a transport aircraft of about 100 passengers with electric flight controls, an electric environmental control system and electric or hybrid-electric propulsion, which loads belong to the essential list that CS 25.1351(d) and its AMC describe, and what power does each draw? Where no figure is published, give a method to estimate it and state each assumption.
@@ -156,6 +156,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
   - knu_id: KNU-EWTW-ESS-001-02
     title: Essential source options
     knu_class: ANALYSIS_PACKAGE
@@ -175,15 +177,17 @@ knot:
     exit: Candidate essential architecture per option
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
   - knu_id: KNU-EWTW-ESS-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
-    description: Criteria and weights for essential power, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    description: Criteria and weights for essential power, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored. Research found no published weights or thresholds, so they are set by the authority
     research_brief:
       questions:
       - What maturity must each candidate source have reached before the configuration is decided — in service on a comparable type, flight tested, or tested on the ground — and what evidence do authorities accept for a source that is new to the class?
@@ -204,3 +208,5 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
