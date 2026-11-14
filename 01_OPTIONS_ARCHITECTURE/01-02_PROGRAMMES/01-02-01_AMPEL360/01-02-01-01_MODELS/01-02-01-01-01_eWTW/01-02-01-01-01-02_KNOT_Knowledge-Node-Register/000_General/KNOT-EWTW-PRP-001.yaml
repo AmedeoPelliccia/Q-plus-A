@@ -40,7 +40,8 @@ knot:
   options:
   - id: A
     text: all-electric
-    state: open
+    state: excluded
+    by: KNOT-EWTW-NRG-001 R2
     pbs_footprint: []
   - id: B
     text: hybrid-electric with a thermal machine on conventional fuel

@@ -2,11 +2,14 @@
 model_context:
   aircraft: >-
     The AMPEL360 eWTW is a concept for a regional airliner of about 100 passengers with a wide tube-and-wing
-    airframe. It is all-electric, or hybrid-electric with conventional fuel (kerosene or sustainable aviation fuel).
+    airframe. It burns conventional fuel (kerosene or sustainable aviation fuel) in a thermal machine that generates
+    electricity, with or without a propulsion battery. Batteries alone are excluded until a demonstrated pack closes
+    its requirement mission (ruling R2 of KNOT-EWTW-NRG-001).
     It carries no hydrogen and no fuel cells. Its environmental control system is electric and bleedless. The fuselage
     has an energy-carrier bay, which is not aft of the rear pressure bulkhead. The aircraft is in
-    conceptual design: no configuration decision in this register has been ruled, and no design mission is fixed
-    yet.
+    conceptual design. Ruling R2 fixes 100 passengers and three missions: a requirement mission of 2,000 km, a
+    scoring mission of about 1,100 km, the average stage, and a sensitivity mission of 500 km. No other
+    configuration decision in this register has been ruled.
   purpose: >-
     Each research task serves one Knowledge Unit (KNU), which produces evidence for one decision or ruling (KNOT).
     The research informs the decision; it does not take it.

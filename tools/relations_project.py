@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - relations_project.py (0.2.0)
+# Generated 2026-11-14 - relations_project.py (0.4.0)
 """Check a model's architecture relations and project them onto its KNOT register.
 
 Usage: python3 tools/relations_project.py <relations> <register> <s-atlas> [--check | --write]
@@ -219,8 +219,8 @@ def validate(tax, prog, knots, TAX, known_models):
             bad.append(f"{key}: ruling {e.get('ruling')} is not in the register")
         subject, obj = e.get("subject"), e.get("object")
         if e.get("relation") == "excluded-from":
-            if not address(subject) or not model(e.get("model")) or not role_or_any(e.get("for")):
-                bad.append(f"{key}: an exclusion needs an S-ATLAS address, a model of the programme and a role or null")
+            if not address(subject) or not model(e.get("model")) or not role_or_any(e.get("for")) or not isinstance(e.get("alone", False), bool):
+                bad.append(f"{key}: an exclusion needs an S-ATLAS address, a model of the programme and a role or null; `alone` is true or false")
         elif e.get("relation") == "assigned-to":
             if not (address(subject) or (isinstance(subject, dict) and subject.get("ns") in SUBJECT_NAMESPACES
                                          and has_text(subject.get("id")))):
@@ -278,7 +278,7 @@ def project(tax, prog, knots, role, model):
     active = lambda item: item.get("state") != "WITHDRAWN"
     alt = next(a for a in tax["alternatives"] if a["for"] == role and active(a))
     knot = next(d["knot"] for d in prog["decided-by"] if d["for"] == role and d["model"] == model and active(d))
-    excluded = {e["subject"]: (e["ruling"], ruling_state(e["ruling"], knots)) for e in prog.get("exclusions", [])
+    excluded = {e["subject"]: (e["ruling"], ruling_state(e["ruling"], knots), bool(e.get("alone"))) for e in prog.get("exclusions", [])
                 if e["relation"] == "excluded-from" and e["model"] == model and e.get("for") in (None, role)}
     owned = elements(knots)
     candidates = [((m,), None) for m in alt["members"]]
@@ -286,11 +286,12 @@ def project(tax, prog, knots, role, model):
                    if c["for"] == role and c["model"] == model and active(c)]
     rows, owners = [], set()
     for members, combination in sorted(candidates):
-        hit = sorted({s for s in excluded for m in members if covers(s, m)})  # an exclusion covers what lies under it
+        hit = sorted({s for s in excluded for m in members if covers(s, m)    # an exclusion covers what lies under it,
+                      and not (excluded[s][2] and combination)})              # and one recorded as alone leaves the combinations
         if hit and combination:
             status = "review: the combination includes excluded " + ", ".join(hit)
         elif hit:
-            status = "excluded by `{}` ({})".format(*excluded[hit[0]])
+            status = "excluded{} by `{}` ({})".format(" alone" if excluded[hit[0]][2] else "", *excluded[hit[0]][:2])
         else:
             status = "open, combination" if combination else "open"
         uses = sorted({(key, kid) for key, (kid, address) in owned.items() for m in members if covers(address, m)})
@@ -299,7 +300,10 @@ def project(tax, prog, knots, role, model):
                         and r["subject"] in members})  # a relation holds at its recorded address only
         if not hit:
             owners |= {kid for _, kid in uses}
-        rows.append({"members": members, "status": status, "elements": uses, "requires": needs})
+        scoped = {r["object"] for r in tax.get("relations", []) if r["relation"] == "requires" and r.get("for") == role
+                  and active(r) and r["subject"] in members}   # what the candidate brings with it for this role
+        rows.append({"members": members, "status": status, "elements": uses, "requires": needs,
+                     "footprint": tuple(sorted(set(members) | scoped))})
 
     registered, dead = {}, {}                    # footprint addresses -> option, by whether the option still stands
     for option in knots[knot]["options"]:
@@ -309,13 +313,16 @@ def project(tax, prog, knots, role, model):
                 registered[addresses] = option["id"]
             else:
                 dead[addresses] = (option["id"], option["state"])
-    projected = {r["members"] for r in rows if r["status"].startswith("open")}
+    projected = {r["footprint"] for r in rows if r["status"].startswith("open")}
+    nearest = {u["nearest"] for u in alt.get("unaddressed", [])}
+    homeless = sorted(m for m in set(registered) - projected if set(m) & nearest)   # options on an unaddressed candidate
     derived, declared = owners - {knot}, set(knots[knot]["depends_on"])
-    outside = {m[:3] for members in projected for m in members} - {t[:3] for t in knots[knot]["taxonomy"]}
+    outside = {m[:3] for r in rows if r["status"].startswith("open") for m in r["members"]} - {t[:3] for t in knots[knot]["taxonomy"]}
     return {
         "role": role, "model": model, "knot": knot, "rows": rows, "unaddressed": alt.get("unaddressed", []),
-        "outside": sorted(outside), "registered": registered, "dead": dead,
-        "only_projected": sorted(projected - set(registered)), "only_registered": sorted(set(registered) - projected),
+        "outside": sorted(outside), "registered": registered, "dead": dead, "homeless": homeless,
+        "only_projected": sorted(projected - set(registered)),
+        "only_registered": sorted(set(registered) - projected - set(homeless)),
         "derived": sorted(derived), "declared": sorted(declared),
         "consistent": reach(derived, knots) | {knot} == reach(declared, knots) | {knot},
     }
@@ -337,7 +344,9 @@ def render(p, TAX):
     if not p["registered"] and not p["dead"]:
         lines.append(f"Options: none registered with a footprint; the {sum(r['status'].startswith('open') for r in p['rows'])} open candidates are proposals.")
     elif not p["only_projected"] and not p["only_registered"]:
-        lines.append("Options: the open candidates match registered options " + ", ".join(sorted(p["registered"].values())) + ".")
+        matched = sorted(option for footprint, option in p["registered"].items() if footprint not in p["homeless"])
+        lines.append("Options: the open candidates match registered options " + ", ".join(matched) + "."
+                     if matched else "Options: no registered option matches an open candidate.")
     else:
         fate = lambda members: " (option {} is {})".format(*p["dead"][members]) if members in p["dead"] else ""
         parts = []
@@ -347,6 +356,8 @@ def render(p, TAX):
             parts.append("standing options with no open candidate: "
                          + " · ".join(f"{p['registered'][m]} {code(m)}" for m in p["only_registered"]))
         lines.append("Options: mismatch — " + "; ".join(parts) + ".")
+    for footprint in p["homeless"]:
+        lines.append(f"Option {p['registered'][footprint]} stands on a candidate that has no S-ATLAS address: {code(footprint)}.")
     if p["outside"]:
         lines.append("Scope: open candidates lie in chapters outside the KNOT's `taxonomy` field: "
                      + " · ".join(f"`{c}`" for c in p["outside"]) + ".")
@@ -358,7 +369,7 @@ def render(p, TAX):
     return lines
 
 
-def generated_section(readme, expected, write):
+def generated_section(readme, expected, write, BEGIN=BEGIN, END=END):
     """Compare the generated section of the README with the output; with write, replace it. Return a failure or None."""
     try:
         text = readme.read_text(encoding="utf-8")

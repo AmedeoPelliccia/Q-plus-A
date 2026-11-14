@@ -1,0 +1,132 @@
+# Essential load analysis — input record. tools/essential_loads.py reads it and writes the budget into README.md.
+# A figure has a basis: assumption, source or design. A figure with basis source or design names its reference in ref.
+# Power is in watts at the load, as low, nominal and high. Duty is the fraction of the endurance the load is on.
+analysis:
+  id: ELA-EWTW-ESS-001
+  version: 0.1.0
+  date: '2026-11-14'
+  knot: KNOT-EWTW-ESS-001
+  serves: KNU-EWTW-ESS-001-01
+  prepared_by: Claude, for review by STK_SAF
+  scenario: >-
+    In flight, the normal electrical generating system is lost. The alternate source supplies the essential network,
+    and every load not listed here is shed. The flight continues to a descent, an approach and a landing, at least
+    half of the time in instrument conditions. Thrust is not assumed either way: the list keeps the control power
+    that lets the propulsion chain run or be recovered, and supplies no propulsive power.
+  assumptions:
+  - id: A1
+    text: CS-25 with its acceptable means of compliance is read as the certification basis. The basis of the eWTW and its amendment are not recorded yet
+  - id: A2
+    text: The services are those that AMC 25.1351(d) normally names, as recorded in the research record of 2026-11-13, statement 4, and not read again at clause level. Loads the AMC does not name are listed under the services platform and safe-landing
+  - id: A3
+    text: Flight controls are electrically signalled. How the surfaces are powered is open (model README, section 3, row 8). Load L10 stands for that power whatever the technology, electric actuators or an electric pump
+  - id: A4
+    text: Shedding is automatic. No load of the network before shedding is counted for the time the crew takes to recognise the failure
+  - id: A5
+    text: The cabin is not pressurised by the alternate source. The aircraft descends to an altitude where it is not needed, and oxygen needs no electrical power once released
+  - id: A6
+    text: The aircraft leaves icing conditions. Probes are heated. Wing, tail and propulsor ice protection is not supplied. Windshield heating is the case icing
+  - id: A7
+    text: The propulsion chain supplies its own cooling while it runs. If it is lost, it has nothing left to cool
+  - id: A8
+    text: One efficiency covers distribution and conversion for all loads
+  - id: A9
+    text: A continuous load is an average over the endurance. What happens only at landing is an event
+  - id: A10
+    text: Landing gear extension, braking and high-lift are electrically powered. Their technology is open (model README, section 3, rows 8 and 11)
+  cases:
+  - key: icing
+    text: Instrument conditions with icing for half of the endurance
+  - key: turbogenerator
+    text: KNOT-EWTW-SRC-001 keeps a turbogenerator (its options B and C), which is controlled and can be relit
+  parameters:
+    durations:
+    - key: endurance
+      minutes: 60
+      text: Whole endurance on the store
+      events: true
+      options: [A, E]
+      basis: source
+      ref: Research record of 2026-11-13, statement 5 (AMC 25.1351(d), as reported)
+    - key: floor
+      minutes: 30
+      text: Floor in instrument conditions
+      events: true
+      options: []
+      basis: source
+      ref: Research record of 2026-11-13, statement 5 (AMC 25.1351(d), as reported)
+    - key: bridge
+      minutes: 10
+      text: Bridge to a source that is not time-limited
+      events: false
+      options: [B, C, D]
+      basis: assumption
+      note: Taken from the one precedent on record, where batteries hold essential power for at least ten minutes if the turbine does not deploy (research record of 2026-11-14, statement 3). A precedent of one type, not a floor
+    distribution_efficiency:
+      value: 0.90
+      basis: assumption
+    battery_factors:
+    - key: usable-depth
+      text: Share of the capacity delivered above the minimum acceptable voltage
+      value: 0.90
+      basis: assumption
+    - key: state-of-charge
+      text: State of charge when the failure occurs
+      value: 0.95
+      basis: assumption
+    - key: end-of-life
+      text: Capacity at the end of service life
+      value: 0.80
+      basis: assumption
+    - key: temperature-and-rate
+      text: Effect of temperature and of the discharge rate
+      value: 0.90
+      basis: assumption
+    specific_energy_wh_per_kg:
+      low: 80
+      nominal: 130
+      high: 200
+      basis: assumption
+      note: Installed battery with its containment. The low end stands for a dedicated essential battery, the high end for a pack of the propulsion kind
+  loads:
+  - {id: L01, service: attitude-heading-airspeed-altitude, tier: immediate, item: 'Flight displays of one pilot and the standby instrument', taxonomy: '031', power_w: {low: 100, nominal: 180, high: 300}, duty: 1.0, feeds: 2, when: always, basis: assumption}
+  - {id: L02, service: attitude-heading-airspeed-altitude, tier: immediate, item: 'Air data and inertial reference, one channel and the standby sensors', taxonomy: '034', power_w: {low: 60, nominal: 120, high: 200}, duty: 1.0, feeds: 2, when: always, basis: assumption}
+  - {id: L03, service: attitude-heading-airspeed-altitude, tier: immediate, item: 'Probe heating: two pitot probes, one angle-of-attack vane, one temperature probe', taxonomy: '030', power_w: {low: 300, nominal: 550, high: 900}, duty: 1.0, feeds: 2, when: always, basis: assumption}
+  - {id: L04, service: communication, tier: continued-flight, item: 'One VHF radio, receiving, with its transmissions averaged', taxonomy: '023', power_w: {low: 20, nominal: 40, high: 80}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L05, service: communication, tier: continued-flight, item: 'Flight-deck audio, interphone and passenger address', taxonomy: '023', power_w: {low: 30, nominal: 60, high: 120}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L06, service: navigation, tier: continued-flight, item: 'One navigation receiver: satellite navigation and instrument landing', taxonomy: '034', power_w: {low: 40, nominal: 70, high: 120}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L07, service: navigation, tier: continued-flight, item: 'One transponder', taxonomy: '034', power_w: {low: 25, nominal: 45, high: 80}, duty: 1.0, feeds: 1, when: always, basis: assumption, note: 'Not named by the AMC as recorded. Counted because the flight continues in controlled airspace'}
+  - {id: L08, service: lighting, tier: immediate, item: 'Flight-deck and instrument lighting', taxonomy: '033', power_w: {low: 30, nominal: 60, high: 120}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L09, service: flight-controls, tier: immediate, item: 'Flight control computers and actuator electronics, the minimum channels', taxonomy: '027', power_w: {low: 150, nominal: 300, high: 600}, duty: 1.0, feeds: 2, when: always, basis: assumption}
+  - {id: L10, service: flight-controls, tier: immediate, item: 'Power to move the minimum set of surfaces, averaged over descent and approach', taxonomy: '029', power_w: {low: 600, nominal: 1500, high: 5000}, duty: 1.0, feeds: 2, when: always, basis: assumption, note: 'The largest figure and the least certain (A3). Its peaks are event E04'}
+  - {id: L11, service: propulsion-control-and-indication, tier: immediate, item: 'Control electronics of the propulsors and of their converters', taxonomy: '077', power_w: {low: 100, nominal: 250, high: 500}, duty: 1.0, feeds: 2, when: always, basis: assumption, note: 'Stands for the engine control and engine instruments of the AMC'}
+  - {id: L12, service: propulsion-control-and-indication, tier: immediate, item: 'Battery management, contactor holding and insulation monitoring of the propulsion storage', taxonomy: '074', power_w: {low: 80, nominal: 150, high: 300}, duty: 1.0, feeds: 2, when: always, basis: assumption, note: 'Applies where a propulsion battery is kept'}
+  - {id: L13, service: warnings-and-cautions, tier: immediate, item: 'Crew alerting and aural warnings', taxonomy: '031', power_w: {low: 30, nominal: 50, high: 100}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L14, service: platform, tier: immediate, item: 'Integrated modular avionics: the cabinets that host the functions above', taxonomy: '042', power_w: {low: 150, nominal: 350, high: 700}, duty: 1.0, feeds: 2, when: always, basis: assumption}
+  - {id: L15, service: platform, tier: immediate, item: 'Essential distribution: bus controllers, contactors and data network', taxonomy: '024', power_w: {low: 60, nominal: 120, high: 250}, duty: 1.0, feeds: 2, when: always, basis: assumption}
+  - {id: L16, service: platform, tier: continued-flight, item: 'Cooling of the essential avionics', taxonomy: '021', power_w: {low: 0, nominal: 150, high: 400}, duty: 1.0, feeds: 1, when: always, basis: assumption, note: 'Zero if natural convection is shown sufficient'}
+  - {id: L17, service: platform, tier: immediate, item: 'Own consumption of the essential source: management and heating of its battery', taxonomy: '024-360', power_w: {low: 20, nominal: 60, high: 200}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L18, service: safe-landing, tier: immediate, item: 'Fire and overheat detection: propulsion and battery bays, cargo, avionics', taxonomy: '026', power_w: {low: 30, nominal: 60, high: 120}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L19, service: safe-landing, tier: continued-flight, item: 'Cabin pressure control: outflow valve and controller', taxonomy: '021', power_w: {low: 20, nominal: 40, high: 80}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L20, service: safe-landing, tier: continued-flight, item: 'Flight recorders', taxonomy: '031', power_w: {low: 20, nominal: 35, high: 60}, duty: 1.0, feeds: 1, when: always, basis: assumption}
+  - {id: L21, service: safe-landing, tier: continued-flight, item: 'Windshield heating, one pilot', taxonomy: '030', power_w: {low: 1500, nominal: 2500, high: 4000}, duty: 0.5, feeds: 1, when: icing, basis: assumption}
+  - {id: L22, service: propulsion-control-and-indication, tier: continued-flight, item: 'Fuel delivery to one turbogenerator: boost pump and metering', taxonomy: '064', power_w: {low: 150, nominal: 400, high: 800}, duty: 1.0, feeds: 1, when: turbogenerator, basis: assumption}
+  - {id: L23, service: propulsion-control-and-indication, tier: immediate, item: 'Control unit of one turbogenerator, when it does not power itself', taxonomy: '068', power_w: {low: 50, nominal: 100, high: 200}, duty: 1.0, feeds: 2, when: turbogenerator, basis: assumption}
+  events:
+  - {id: E01, service: safe-landing, tier: landing, item: 'Landing gear, alternate extension', taxonomy: '032', power_w: {low: 200, nominal: 500, high: 1500}, seconds: 15, count: 1, when: always, basis: assumption}
+  - {id: E02, service: safe-landing, tier: landing, item: 'Wheel braking on the landing roll', taxonomy: '032', power_w: {low: 1500, nominal: 3000, high: 6000}, seconds: 40, count: 1, when: always, basis: assumption}
+  - {id: E03, service: flight-controls, tier: landing, item: 'High-lift extension', taxonomy: '027', power_w: {low: 0, nominal: 3000, high: 6000}, seconds: 60, count: 1, when: always, basis: assumption, note: 'Zero if the landing is made without high-lift'}
+  - {id: E04, service: flight-controls, tier: immediate, item: 'Peaks of surface power above the average of L10', taxonomy: '029', power_w: {low: 1500, nominal: 4000, high: 10000}, seconds: 5, count: 20, when: always, basis: assumption}
+  - {id: E05, service: propulsion-control-and-indication, tier: continued-flight, item: 'Ignition for a relight of one turbogenerator', taxonomy: '068', power_w: {low: 150, nominal: 300, high: 500}, seconds: 60, count: 2, when: turbogenerator, basis: assumption}
+  not_modelled:
+  - {item: 'Propulsive power', taxonomy: '077', reason: 'Not an essential load: it is larger than the list by orders of magnitude. An option that supplies thrust from the essential source is another architecture'}
+  - {item: 'Cooling of the propulsion chain', taxonomy: '078', reason: 'Supplied by the chain it cools (A7)'}
+  - {item: 'Motoring a turbogenerator for a restart', taxonomy: '068', reason: 'No figure. If the essential source must supply it, it sizes the source. To be settled with KNOT-EWTW-SRC-001'}
+  - {item: 'Cabin air supply and pressurisation', taxonomy: '021', reason: 'Not supplied (A5)'}
+  - {item: 'Wing, tail and propulsor ice protection', taxonomy: '030', reason: 'Not supplied (A6). That the aircraft can leave icing conditions is to be shown'}
+  - {item: 'Automatic flight', taxonomy: '022', reason: 'Not supplied: the flight is flown by hand. The workload over the endurance in instrument conditions is to be assessed'}
+  - {item: 'Cabin emergency lighting and escape path marking', taxonomy: '033', reason: 'Assumed to carry their own batteries'}
+  - {item: 'Supply after an emergency landing or a ditching (criterion M6)', taxonomy: '024-230', reason: 'Not sized. It adds a reserve to a time-limited source'}
+  - {item: 'Inerting or venting of the energy-carrier bay', taxonomy: '047', reason: 'No figure. It follows the safety case of the bay'}
+  - {item: 'Load of the network before shedding', taxonomy: '024', reason: 'Not counted (A4). If shedding is manual, the unshed load runs for the recognition time'}
+  - {item: 'Galley, cabin systems and information systems', taxonomy: '046', reason: 'Shed'}

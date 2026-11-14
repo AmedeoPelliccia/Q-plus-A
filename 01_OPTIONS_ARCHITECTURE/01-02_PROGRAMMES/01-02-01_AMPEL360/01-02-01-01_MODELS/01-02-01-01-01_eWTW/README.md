@@ -16,11 +16,11 @@ standard_scope: governance
 | Path | `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/` |
 | Programme | AMPEL360 |
 | Class | Advanced tube-and-wing — S-ATLAS [`092`][S-092] |
-| Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
-| Propulsion posture | All-electric, or hybrid-electric with conventional fuel; no hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
+| Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
+| Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.2 |
-| Date | 2026-11-12 |
+| Version | 0.3.8 |
+| Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
@@ -70,7 +70,7 @@ Derived from `main` at `279bb700`, 2026-10-12, and unchanged at `e212e121`, 2026
 
 **Declared so far:**
 
-- the scope (architecture authority, 2026-11-07): **all-electric, or hybrid-electric with conventional fuel**. No hydrogen is carried; liquid hydrogen is allocated to the [BWB-Q100][BWB];
+- the scope (architecture authority, 2026-11-07 and 2026-11-14): **conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery**. Batteries alone are excluded until reopened. No hydrogen is carried; liquid hydrogen is allocated to the [BWB-Q100][BWB];
 - the fuselage PBS `053` — ten sections `053-000 … 053-900`, identifiers `PLANNED`;
 - the energy-carrier structural provisions `053-900` — bay structure (`053-900-010`), crash protection and containment interface (`053-900-020`), mount and attach fittings (`053-900-030`) and the electric-energy maintenance compartment (`053-900-040`), with load overlays in `053-200` (bay integration) and `053-700` (bay support and crash);
 - no auxiliary fuel tank: its footprint is preserved inert (`053-900-050`);
@@ -140,6 +140,8 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 
 **Scope narrowed on 2026-11-07** by the architecture authority: the eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen; liquid hydrogen is allocated to the [BWB-Q100][BWB]. `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are narrowed to that scope and stay open within it.
 
+**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery. R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
+
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|
 | `KNOT-EWTW-NRG-001` | Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope | 2 · 4 · 6 · 14, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]). `KNOT-MRTT-CMA-001` targets commonality with the eWTW family under an LH₂ baseline — a premise the eWTW no longer offers; to be revisited in the [MRTT-Q300][MRTT] model | `STK_SE` |
@@ -181,6 +183,18 @@ Recorded as pending in the PBS; each decides where a scope lives.
 | `KNOT-EWTW-TSI-001` | Tail-strike indicator and sensing: which owner? | `053-300-030` | `STK_SE` |
 | `KNOT-EWTW-LCM-001` | Lifecycle notation: `LC-A` or `LCS-A` in baseline records; stage-folder names; re-pin when the registry is released | [§6](#6-lifecycle-baselines-and-the-path-to-first-release) | `STK_CM` |
 
+### 3D models and their assembly
+
+One 3D model of record exists: `EWTW-533001-000`, the structure of the rear fuselage zone. Three decisions come before a second model is assembled to it. The first two hold for any next model. The third is specific to the rod set of `053-300-020`.
+
+| KNOT | Question | Recorded at | Proposed owner |
+|---|---|---|---|
+| `KNOT-EWTW-CAD-001` | 3D model of record: is its source a generator script or a FreeCAD document, and how are station models assembled and identified? The model of record is generated by a CadQuery script; the lifecycle registry expects FreeCAD deliverables in revision folders | `053-300-010`, lifecycle registry §7 | `STK_CM` |
+| `KNOT-EWTW-DAT-001` | Datum and master geometry: which reference frame and which envelope do the 3D models of the fuselage stations share, and who owns them? The model of record declares both inside its own request | `053-300-010` | `STK_SE` |
+| `KNOT-EWTW-ROD-001` | Rear adjustable rods: what do they connect, and which loads do they carry? The station declares no interface | `053-300-020` | `STK_SE` |
+
+`KNOT-EWTW-CAD-001` and `KNOT-EWTW-DAT-001` are best closed together. By the records, the stations that mate with the model of record are the tailcone (`053-400-010`) and the rear pressure bulkhead (`053-800-020`): station `053-300-010` declares an interface with each, and none with the rods. The rod set has no host until `KNOT-EWTW-ROD-001` is ruled.
+
 ---
 
 ## 6. Lifecycle, baselines and the path to first release
@@ -200,7 +214,7 @@ Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Status `PRO
 
 - **Gate criteria.** Six of seven are recorded as met, and all six are documentary or allocation criteria: identity bound and concept geometry present (PBS), functions allocated (FBS), interfaces declared (IBS), first estimates recorded (TPMS), risk register opened (RBS), evidence indexed (EBS). They record that artefacts exist and are allocated, not that they are adequate. The seventh, the ReqBS initial set, is missing.
 - **Membership.** The record names its members by file path and evidence string; it does not pin them to exact revisions or content hashes. A baseline is a set of exact revisions together with its gate criteria — advancing an artefact makes a gate satisfiable; release is a decision that refers to that set (the principle proposed in CM-003). A2 cannot be released until that set is pinned.
-- **Open items.** A measured interference: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³ ([`TPM-533001-INTERF`][TPM-533001], risk [`R-533001-06`][RISKS-533001]). The station run-record is invalid YAML. Separately, the verification report flags four NDT plug seats on segment butt joints as INFO for design review ([F11](#9-findings)).
+- **Open items.** A measured interference: bracket `EWTW-533001-031` #11 overlaps doubler `EWTW-533001-041` by 34,856.8 mm³ ([`TPM-533001-INTERF`][TPM-533001], risk [`R-533001-06`][RISKS-533001]). The figure equals the volume of one bracket: it is an artefact of two malformed bodies, not a clash ([F23](#9-findings)). The station run-record is invalid YAML. Separately, the verification report flags four NDT plug seats on segment butt joints as INFO for design review ([F11](#9-findings)).
 
 ### Path to the first release
 
@@ -238,7 +252,7 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 | [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 | Architecture relations at programme, model and product level, and between taxonomy nodes; their projection onto the KNOT register | Yes — both *PROPOSED*; the taxonomy relations are held in the model until the taxonomy owner adopts them |
 | [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
-| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register | Yes — each with its tests |
+| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] · [`tools/essential_loads.py`][ELA-TOOL] · [`tools/mission_closure.py`][MSN-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register; the budget of the essential load analysis; the first-order closure of the candidate missions | Yes — each with its tests |
 | `complete_PBS-053-000.py` · `-100` · `-200` · `-300` · `migrate_PBS-053-010.py` | Depth passes for chapter `053`; the radome migration | Yes, at the repository root — `-200` not yet applied ([F04](#9-findings)) |
 
 ---
@@ -271,6 +285,7 @@ Places where the repository says two things, or points at something superseded. 
 | F20 | `F-WARN` | Quantities: CM-001 counts leaves and forbids double counting, but does not say how quantities multiply along repeated occurrences, aggregate by catalog identity or follow effectivity, nor when a group with enumerated children is a set rather than a sub-assembly | CM-001 §4.2, §6 | CM-001 defines the quantity basis, with worked cases: a repeated sub-assembly, a reused catalog part, parts installed together, exclusive alternatives |
 | F21 | `F-WARN` | Authority: CM-001 calls both the folder (§5) and the register (§8) SSOT without saying which governs what; it designates no record for revision and effectivity; and `catalog_pn` (§6) is carried by no part record | CM-001 §5, §6, §8; none of the 431 `part.yaml` carries `catalog_pn` | CM-001 states authority per field — identity, row status, revision, effectivity, catalog identity |
 | F22 | `F-WARN` | Approval records: CM-001 Issue 2 and CM-002 Issue 1 are on `main`, yet both headers read *PROPOSED — merge constitutes ratification* and no record names the approval act. Approving a convention is a separate act from ratifying a product baseline | CM-001 Issue 2 entered in `8ed1bd59`, 2026-08-22; CM-002 Issue 1 in `546c84a4`, 2026-09-06 | Each header names its approval act — commit, date, authority — and the resulting status |
+| F23 | `F-BLOCK` | The artefacts of record of `EWTW-533001-000` come from one run since 2026-11-14, and their records are not closed yet. Up to `v0.2.1-concept` the generator wrote the outflow-valve surround malformed: the doubler `-041` and the frame `-042` were lofts between open polygons lying on the cone, and its rounded-rectangle helper ran out to one sharp corner and back. In the STEP file of that version FreeCAD 1.0.0 shows 119 bodies where the report counts 50, with labels that are not part numbers. The interference recorded against the baseline, 34,856.8 mm³, equals the volume of one bracket and is an artefact of those bodies, and the recorded mass, 80.3 kg, rests on them too. The corrected generator, `v0.2.2-concept`, is on `main` since 2026-11-13. Since 2026-11-14 the STEP file, the preview and the verification report on `main` come from one run of it by the author. They match the sizes and hashes in the new run record; the report gives 25 PASS, 50 bodies of one solid each and no interference; FreeCAD 1.0.0 shows the 50 bodies under their part numbers. Four points remain. The run record of `v0.2.1-concept` is still beside the new one (F08). The new record carries the hash of a copy of the generator with Windows line endings and no final newline: the text of the generator on `main`, in other bytes. It names a model the author no longer uses and a prompt of revision C that is not in the repository. The mass recorded against the baseline, 80.3 kg, rests on the malformed bodies; a verification run of `v0.2.2-concept` gave 83.2 kg at the same density | `CAD/source/EWTW-533001-000_concept.py`; `Prompts/run-record.yaml` at `ad1935ea`, checked against the three files it names; `Prompts/Run-record.yaml`, which names `v0.2.1-concept`; round trips of 2026-11-13 and 2026-11-14 with [`tools/freecad_roundtrip.py`][ROUNDTRIP], in the EBS index | The earlier run record is superseded and the round-trip report committed; the run record names the generator as committed, or the author accepts the difference on record; and `TPM-533001-MASS`, the open item of the baseline and risk `R-533001-06` are updated |
 
 ---
 
@@ -291,7 +306,7 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
-The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests.
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`.
 
 ---
 
@@ -306,6 +321,12 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.0 | 2026-11-07 | Scope narrowed by the architecture authority: all-electric, or hybrid-electric with conventional fuel; liquid hydrogen allocated to the BWB-Q100. `KNOT-EWTW-NRG-001` and `-SRC-001` narrowed; the `KNOT-MRTT-CMA-001` premise flagged; §3 rows 3, 4, 6 and 14 and findings F01 and F07 restated. Findings F13–F22 entered from the PBS README 0.2.1 (N1–N10); F03 and F04 restated — eleven nodes, closure on outcome; F06 closed. Registry and conventions re-pinned: v0.7.1 rev. I, approval status of CM-001 and CM-002 |
 | 0.3.1 | 2026-11-08 | KNOT register created beside the SBS, under `AMPEL360-KNOT-CM-004` (proposed): the 11 KNOTs of §5 as records, with 31 KNUs and ruling R1 of `KNOT-EWTW-NRG-001`; §5 and §8 point to it |
 | 0.3.2 | 2026-11-12 | Architecture relations node created beside the KNOT register, under `AMPEL360-REL-CM-005` and `QPLUS-REL-001` (both proposed): pilot relations and their projection onto `KNOT-EWTW-SRC-001` and `KNOT-EWTW-ESS-001`; the introduction, §5, §8 and §10 point to it; §8 lists the two verification tools |
+| 0.3.3 | 2026-11-13 | §5 gains *3D models and their assembly*: `KNOT-EWTW-CAD-001`, `KNOT-EWTW-DAT-001` and `KNOT-EWTW-ROD-001`, recorded in the KNOT register 0.5.0. Finding F23 from the round trip of the model of record through FreeCAD |
+| 0.3.4 | 2026-11-13 | F23 restated for the state of `main`: generator `v0.2.2-concept` committed, its outputs not yet. `KNOT-EWTW-ESS-001` has proposed criteria and a first research record (KNOT register 0.6.0) |
+| 0.3.5 | 2026-11-14 | `KNOT-EWTW-ESS-001` registers five options and has a first essential load analysis, in which every load figure is an assumption (KNOT register 0.7.0). The architecture relations take a candidate with what it brings for its role (0.2.0). `tools/essential_loads.py` added. F23 restated: the STEP file of `v0.2.2-concept` is on `main` and passes the round trip; three artefacts are still those of `v0.2.1-concept` |
+| 0.3.6 | 2026-11-14 | `KNOT-EWTW-NRG-001` has proposed criteria and a research record on the energy carrier (KNOT register 0.8.0). F23 restated: the STEP file, the preview and the verification report on `main` come from one run of `v0.2.2-concept` and match its run record; four points remain |
+| 0.3.7 | 2026-11-14 | `KNOT-EWTW-NRG-001` has three candidate missions with a first-order closure test, and proposes the maturity it requires of six critical elements (KNOT register 0.9.0). `tools/mission_closure.py` added |
+| 0.3.8 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001`: missions with their roles, 100 seats, the final reserve and the required maturity approved; batteries alone excluded until reopened. Size class and propulsion posture restated (KNOT register 0.10.0) |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -333,7 +354,12 @@ The KNOT register and the architecture relations are verified with their own com
 [CM-005]: 01-02-01-01-01-03_REL_Architecture-Relations/AMPEL360-REL-CM-005_Architecture-Relations.md
 [REL-001]: 01-02-01-01-01-03_REL_Architecture-Relations/QPLUS-REL-001_Taxonomy-Relations.md
 [KNOT-CHECK]: ../../../../../tools/knot_check.py
+[ROUNDTRIP]: ../../../../../tools/freecad_roundtrip.py
 [REL-TOOL]: ../../../../../tools/relations_project.py
+[ELA-TOOL]: ../../../../../tools/essential_loads.py
+[MSN-TOOL]: ../../../../../tools/mission_closure.py
+[MSN]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+[ELA]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py

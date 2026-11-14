@@ -36,6 +36,13 @@ rows:
       main (illegal escape in a double-quoted scalar, line 26). The correction
       and the rename to prompts/run-record.yaml are precondition P0 of the
       governing brief and sit inside the PBS area, outside this index's scope.
+      Since 2026-11-14 a second record, Prompts/run-record.yaml, stands beside it:
+      written by generator v0.2.2-concept in the author's run, valid YAML, with no
+      local path. The sizes and hashes it gives for the STEP file, the preview and
+      the verification report equal those of the files on main at ad1935ea. The
+      hash it gives for the generator is that of a copy with Windows line endings
+      and no final newline, not of the file on main. The earlier record is still
+      in the tree, so the validator still fails on it (F08).
 
   - class: ratified-act-or-convention
     subject: AMPEL360-PBS-PN-CM-001 (Issue 2)
@@ -102,3 +109,117 @@ rows:
       declaration.yaml + run-record.yaml, C1.6); staged pilot layout, not on main.
     citedBy:
       - PILOT-ALLOCATION_EWTW-533001.yaml
+
+  - class: verification-report
+    subject: EWTW-533001-000
+    path: null
+    status: pending-commit
+    action: "commit the round-trip report of 2026-11-14 as evidence/EWTW-533001-000_concept_freecad-roundtrip.txt in node EWTW-533001-000; the row then becomes on-disk with its path"
+    note: >
+      Two round trips through FreeCAD 1.0.0 (Open CASCADE 7.8.1), run without the interface
+      on 2026-11-13. On the STEP file written by v0.2.1-concept (commit 66af8162):
+      6 PASS | 5 FAIL | 6 INFO, 119 bodies against 50 leaf products. On the output of
+      v0.2.2-concept in a verification run: 11 PASS | 0 FAIL | 6 INFO, 50 bodies under
+      their part numbers. A run on 2026-11-14, on the STEP file on main at ad1935ea, which
+      the author's run of v0.2.2-concept wrote that day: 11 PASS | 0 FAIL | 6 INFO,
+      50 bodies under their part numbers. Its report is the one of record once the author
+      commits it into the node, which lies in the PBS (model README, finding F23).
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
+    status: on-disk
+    note: >
+      Research record: the regulatory basis of essential power, as accepted on review from a
+      research report by Grok 4.7 of 2026-11-13. It lives with the KNOT register, the node
+      that produced it. One of its eleven statements was read again by the reviewer.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the emergency sources of one regional type and the reading of EASA
+      SC E-19, as accepted on review from a second report by Grok 4.7 of 2026-11-14. Seven
+      of its eleven statements were read by the reviewer at the source; three report that
+      a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+    status: on-disk
+    note: >
+      Essential load analysis 0.1.0: the loads kept after the loss of normal electrical
+      generation, with power, energy and battery size. Input in essential-loads.yaml beside
+      it; the budget is written and checked by tools/essential_loads.py. Every load figure
+      is an assumption. It states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_option-set_2026-11-14.md
+    status: on-disk
+    note: >
+      Option set of essential power: five options registered as open, with the electrical
+      sources each can exist with and what each shares with the propulsion chain. The
+      reviewer's analysis, not drawn from a source. No option is scored.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the energy carrier, as accepted on review from a report by Grok of
+      2026-11-14 — the planning rule for fuel and energy, studies of hybrid regional
+      aircraft, batteries, electric and thermal machines, fuel. Twelve of its statements
+      were read by the reviewer at the source, seven are as reported, four report that a
+      search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+    status: on-disk
+    note: >
+      Missions and first-order closure 0.3.0: three missions for 100 passengers, with the
+      roles of ruling R2, and a range-equation test of which energy carrier flies each in an airframe of the class.
+      The test is fitted to six published sectors of the Embraer 190 and checked on its
+      published range. Input in missions.yaml beside it; the screening is written and
+      checked by tools/mission_closure.py. A proposal to the authority; it states no
+      conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
+    status: on-disk
+    note: >
+      Audit record: an audit of the candidate missions 0.1.0, relayed by the author on
+      2026-11-14, and its review. The main finding is accepted: the model was not anchored
+      to an in-service type. Eight findings accepted with their effect on 0.2.0; six items
+      not accepted or not read.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
+    status: on-disk
+    note: >
+      Decision record of ruling R2 of 2026-11-14, by the architecture authority: missions
+      with their roles, 100 seats, the final reserve, the required maturity, and option A
+      excluded with a reopen condition. Ratified by the merge of the pull request that
+      carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml

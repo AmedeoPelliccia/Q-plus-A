@@ -6,7 +6,7 @@ standard_scope: governance
 # AMPEL360 — Programme
 
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/`
-**Version:** 0.1.0 · **Date:** 2026-11-12
+**Version:** 0.1.1 · **Date:** 2026-11-14
 
 AMPEL360 is a family of four aircraft models on one identity system: S-ATLAS addresses above the assembly station, configuration-controlled part numbers below it.
 
@@ -22,6 +22,7 @@ AMPEL360 is a family of four aircraft models on one identity system: S-ATLAS add
 | Decision | Record | State |
 |---|---|---|
 | The eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen. Liquid hydrogen is assigned to the BWB-Q100 | Ruling R1 of [`KNOT-EWTW-NRG-001`][NRG], 2026-11-07 | `PROVISIONAL`: rationale and evidence not yet recorded |
+| The eWTW keeps 100 seats. Batteries alone are not a candidate for it until a demonstrated pack closes its requirement mission of 2,000 km | Ruling R2 of [`KNOT-EWTW-NRG-001`][NRG], 2026-11-14 | `COMPLETE` |
 
 Programme relations — what is assigned to a model, excluded from it or admitted in combination — are recorded in [`programme-relations.yaml`][PROG-REL] under [`AMPEL360-REL-CM-005`][CM-005]. The file sits in the eWTW model while the eWTW pilot is its only content.
 
@@ -42,6 +43,7 @@ Those on disk are held in the eWTW model, where they were first applied.
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-11-12 | First content: folders as found on disk; the cross-model decision and its record; the five conventions |
+| 0.1.1 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001` added to the decisions: 100 seats for the eWTW, and batteries alone excluded until reopened |
 
 [NRG]: 01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
 [PROG-REL]: 01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-03_REL_Architecture-Relations/programme-relations.yaml

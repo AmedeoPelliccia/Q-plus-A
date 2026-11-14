@@ -42,7 +42,8 @@ knot:
   options:
   - id: A
     text: batteries — all-electric
-    state: open
+    state: excluded
+    by: R2
     pbs_footprint:
     - action: create
       taxonomy: '074'
@@ -73,9 +74,157 @@ knot:
     state: excluded
     by: R1
     pbs_footprint: []
-  criteria: []
-  maturity_required: []
+  criteria:
+  - id: M1
+    class: mandatory
+    text: The requirement mission is flown with the usable fuel or energy the planning rule requires — taxi, trip, contingency, destination alternate or holding, final reserve, and additional where the operation requires it
+    source: Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M2
+    class: mandatory
+    text: The final reserve is carried — 30 minutes at holding speed at 1,500 ft, the floor of turbine-engined aeroplanes, taken for electric engines too until EASA publishes a quantity for them. The alternate is a separate item
+    source: 'Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine engines; ruling R2 of 2026-11-14 for electric engines'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M3
+    class: mandatory
+    text: No failure of the energy storage or of its delivery that prevents continued safe flight and landing results from a single failure, and each such failure condition is extremely improbable
+    source: EASA CS 25.1309
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M4
+    class: mandatory
+    text: A propulsion battery and its management system meet the type-certification basis of the aircraft, and a lithium battery installation meets CS 25.1353 with the applicable special condition
+    source: EASA SC E-19 Issue 1, EHPS.380; EASA CS 25.1353
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M5
+    class: mandatory
+    text: Fuel for a thermal machine is fuel the type design approves — Jet A or Jet A-1 to ASTM D1655, which includes blends released under ASTM D7566 within the limit of each pathway
+    source: ASTM D1655 and ASTM D7566
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T1
+    class: tradable
+    text: Mass of the energy carrier and of its installation, and its effect on take-off mass on the requirement mission
+    source: research record of 2026-11-14, statements 6 and 7
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T2
+    class: tradable
+    text: Block energy on the scoring mission
+    source: research record of 2026-11-14, statements 6 and 7
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T3
+    class: tradable
+    text: Block fuel and emissions in flight on the scoring mission
+    source: research record of 2026-11-14, statement 7
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T4
+    class: tradable
+    text: Cost of energy and of operation on the scoring mission
+    source: research record of 2026-11-14, statements 6 and 7
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T5
+    class: tradable
+    text: Range margin beyond the requirement mission
+    source: research record of 2026-11-14, statements 4 and 5
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T6
+    class: tradable
+    text: Time to recharge or refuel between flights
+    source: proposed by the reviewer; research found no figure for the class
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T7
+    class: tradable
+    text: Maintenance, modularity and commonality of the installation — parts and interfaces
+    source: CM-004 rule 15
+    weight: null
+    threshold: null
+    state: PROPOSED
+  maturity_required:
+  - id: Q1
+    element: Propulsion battery pack of megawatt-hour class, at the specific energy of packs in service
+    taxonomy: '074'
+    options: [C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'A type-certificated two-seat aeroplane flies on two batteries of 24.8 kWh in total and about 70 kg each, about 177 Wh/kg (EASA.A.573, manufacturer page read on 2026-11-14). It shows a specific energy at 25 kWh. No pack of megawatt-hour size is on record, nor its cycle life or its containment'
+    level: null
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
+  - id: Q2
+    element: Propulsion battery pack above 450 Wh/kg at pack level
+    taxonomy: '074'
+    options: [A, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'One laboratory pack of 3.9 kWh at 480.9 Wh/kg over 25 cycles (research record of 2026-11-14, statement 11). The projections on record are at cell level (statement 10)'
+    level: 4
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
+  - id: Q3
+    element: Electric motor of megawatt class with its power electronics
+    taxonomy: '077'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'Two motors offered at 750 kW each delivered over 1,000 kW together in a laboratory test of 2021, and the manufacturer reports an altitude test in a climate chamber in 2023 (research record of 2026-11-14, statement 15). A motor for a two-seat aircraft holds the first type certificate under SC E-19 (statement 14). These are statements of the manufacturer, not test results, and level 5 asks for test results in a relevant environment'
+    level: null
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
+  - id: Q4
+    element: Turbogenerator of megawatt class
+    taxonomy: '068'
+    options: [B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'One of 1 MW in development on the core of an auxiliary power unit in service, one of 600 kW on the bench in 2026, one design from 500 to 1,200 kW (research record of 2026-11-14, statements 16 to 18). All three are as reported, and no level is set on sources the reviewer did not read'
+    level: null
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
+  - id: Q5
+    element: High-voltage distribution and protection at the power of the propulsion chain
+    taxonomy: '076'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: None on record
+    level: null
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
+  - id: Q6
+    element: Thermal management of the electric propulsion chain
+    taxonomy: '078'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: None on record
+    level: null
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   assumptions:
+  - text: CS-25 and the air operations rules of Regulation (EU) No 965/2012 are read as the basis; the certification basis of the eWTW and its amendment are not recorded yet
+    ref:
+      view: model
+      ref: AMPEL360-REL-CM-005 section 4, certification-basis
   - text: the carrier is not aft of the rear pressure bulkhead
     ref:
       view: baseline
@@ -101,17 +250,49 @@ knot:
     effects: []
     embodied_in: []
     record: 'eWTW README 0.3.0 — PR #67, merged at 92ce9e96'
-  reopen_if: []
+  - id: R2
+    date: '2026-11-14'
+    authority: AM.PEL — architecture authority
+    statement: 'Four decisions. One: the mission set is approved with three roles — S, 500 km, sensitivity; M, about 1,100 km, the scoring mission; L, 2,000 km with 100 seats and the declared reserves, the requirement mission, which must close. M is not the design mission. The range the reference type is offered with is a check of the model, and no gate until the model reproduces it within a written tolerance. Two: the final reserve of the eWTW is 30 minutes at holding speed at 1,500 ft, taken as an assumption; the alternate is a separate item; the 45 minutes of the charts of the reference type apply only when the model is compared with that type. Three: level 6 of the Q+ATLANTIDE-TRL scale is required of each critical element at the release of the preliminary-design baseline, not of the concept baseline; an element below it passes only with an approved maturation cycle and its fallback, or with a waiver for that element. Four: the aircraft keeps 100 seats, and option A is not a candidate until its reopen condition is met. With it leave option A of KNOT-EWTW-SRC-001, batteries alone, and option A of KNOT-EWTW-PRP-001, all-electric'
+    effect: option A excluded, and with it option A of KNOT-EWTW-SRC-001 and option A of KNOT-EWTW-PRP-001; mission set, reserve policy, seat count and required maturity adopted
+    rationale: 'Reducing the seats or the stage to make batteries alone close changes the aircraft; it is not a result of the comparison. On the requirement mission, batteries alone need about 3,500 Wh/kg at pack level at nominal values and about 1,560 at favourable ones (MSN-EWTW-NRG-001 0.3.0). The one pack above 450 Wh/kg on record is a laboratory pack over 25 cycles, and the projections on record are at cell level and reach 764 Wh/kg for 2050. The average stage scores and is not the range requirement. The offered range of the reference type cannot be a gate while the model asks for more fuel there than the aircraft loads. Thirty minutes is the floor of turbine-engined aeroplanes, taken because no acceptable means of compliance gives a quantity for electric engines. Level 6 is not lowered to pass one element, and it holds the preliminary-design baseline, so it freezes nothing at the concept baseline'
+    rationale_recorded: '2026-11-14'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects:
+    - view: ReqBS
+      action: create
+      ref: null
+      description: Mission set of the eWTW with its roles — requirement mission of 2,000 km, scoring mission of about 1,100 km, sensitivity mission of 500 km — 100 passengers, and the reserve policy
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md — PR #71, ratified by its merge'
+  reopen_if:
+  - condition: A battery pack demonstrated, not projected, closes the requirement mission at 100 seats with the cycle life of service. A cell does not meet the condition
+    reopens: option A
+    by: R2
+  - condition: EASA publishes a quantity for the final reserve of a CS-25 aeroplane with electric engines
+    reopens: the reserve policy of the mission set
+    by: R2
   knus:
   - knu_id: KNU-EWTW-NRG-001-01
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
-    description: Criteria and weights for the energy carrier, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored
+    description: Criteria and weights for the energy carrier, drawn from ReqBS and TPMS, and the maturity required of each critical technology element and of the integration (QPLUS-LC-DECISION-MATURITY-001); declared before any option is scored. Research found no published weights and no authority text on the maturity required, so they are set by the authority
     research_brief:
       questions:
-      - Which decision criteria do published trade studies of electric and hybrid-electric regional aircraft use for the choice of energy carrier, and how do they weight them?
-      - Which technology elements are critical for each option (battery pack, turbogenerator, power electronics), and what maturity do aircraft programmes require of them before a configuration decision?
-      - Which criteria are regulatory and therefore cannot be traded?
+      - Which special conditions, means of compliance or certification memoranda has EASA published for the propulsion batteries of large aeroplanes — thermal runaway, containment, crash — and what does each require? Give title, date and link.
+      - What maturity do published aircraft programmes state for a propulsion battery, a turbogenerator and their power electronics at the time of the configuration decision? Give the document for each.
     serves: []
     outputs:
     - view: ReqBS
@@ -121,20 +302,22 @@ knot:
     exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
   - knu_id: KNU-EWTW-NRG-001-02
     title: Design mission and reserve policy
     knu_class: REQUIREMENT_SET
-    description: Range, payload for the 100-passenger class, reserves, and the regulatory basis of reserves for a battery-electric or hybrid-electric transport aircraft
+    description: Range, payload for the 100-passenger class, reserves, and the regulatory basis of reserves for a battery-electric or hybrid-electric transport aircraft. The design range is a decision of the authority. Research gives the market data and the rules
     research_brief:
       questions:
-      - What design ranges, payloads and typical stage lengths characterise the 100-passenger regional market, with sources?
-      - What reserve rules apply to transport aircraft, and what have regulators published or proposed on energy reserves for battery-electric and hybrid-electric aircraft?
-      - What design missions did comparable electric or hybrid-electric regional concepts adopt, and why?
+      - What stage lengths does the European fleet of 150 seats and fewer fly? Use Eurocontrol, Eurostat or operator data, and give the table with its unit and its year.
+      - What do the acceptable means of compliance and the guidance material to CAT.OP.MPA.181 say on the final reserve? Has EASA published a position, a proposal or a special condition on the final reserve of an aeroplane with electric engines? Give title, date and link.
+      - Which standard masses for passengers and baggage do the European air operations rules give, and under which point?
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-SRC-001
@@ -145,20 +328,27 @@ knot:
     exit: Mission set approved by the authority
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: DONE
     created_date: '2026-11-08'
-    start_date: null
-    end_date: null
-    evidence_refs: []
+    start_date: '2026-11-14'
+    end_date: '2026-11-14'
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
   - knu_id: KNU-EWTW-NRG-001-03
     title: Mission energy and power budget
     knu_class: ANALYSIS_PACKAGE
-    description: Propulsive and non-propulsive energy and power by flight phase for options A, B and C, including the declared E-pack demand (README §2)
+    description: Propulsive and non-propulsive energy and power by flight phase for options A, B and C, including the declared E-pack demand (README §2). Research found no published budget for the class, so it is built on the approved mission with every assumption stated
     research_brief:
       questions:
-      - What propulsive energy and power does a 100-passenger regional aircraft need by flight phase, in published data or validated models?
-      - How large are the non-propulsive loads by phase, in particular an electric bleedless environmental control system?
-      - What chain efficiencies are demonstrated for battery-electric and for turbogenerator-electric architectures?
+      - For in-service types of 90 to 120 seats, what do type-certificate data sheets, airport planning documents and manufacturer publications give for maximum take-off mass, operating empty mass, cruise speed and altitude, and fuel burned on a stated stage? Give the document for each figure.
+      - What cabin air flow for each occupant does CS 25.831 require, and which pressure ratio and efficiencies do published papers give for the compressor of an electric environmental control system? Give the document for each figure.
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-SRC-001
@@ -169,21 +359,24 @@ knot:
     exit: Budget for options A–C on the approved mission
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
   - knu_id: KNU-EWTW-NRG-001-04
     title: Battery technology state
     knu_class: EVIDENCE_RECORD
     description: Pack-level specific energy and power, cycle life, safety behaviour and TRL, with sources and a projection to entry into service
     research_brief:
       questions:
-      - What specific energy and specific power are demonstrated today at pack level, not cell level, for aviation-grade lithium batteries, and what is the cell-to-pack ratio?
-      - What cycle life, charge rate and degradation are demonstrated under aviation duty cycles?
-      - What is the documented safety behaviour (thermal runaway, propagation) and which qualification standards apply?
-      - Which projections exist for the next ten to fifteen years, and which of them rest on demonstrated chemistry?
+      - Which battery packs are type-certificated on an aircraft or have flown as propulsion batteries, and what are the energy, the mass and the specific energy of each at pack level? Give the document that states each figure — title, body, date and link.
+      - Which NASA documents give the specific energy of the state of the art at pack level, and the loss from cell to pack? Give title, author, date and link for each.
+      - What cycle life and charge rate are published for a pack, not a cell, on an aviation duty? Give the document.
     serves:
     - KNOT-EWTW-STO-001
     outputs:
@@ -192,20 +385,21 @@ knot:
     exit: Evidence record with its sources; TRL stated per element
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
   - knu_id: KNU-EWTW-NRG-001-05
     title: Thermal machine on conventional fuel
     knu_class: ANALYSIS_PACKAGE
     description: 'Turbogenerator options on conventional fuel, including sustainable aviation fuel: power class, fuel mass, efficiency, emissions'
     research_brief:
       questions:
-      - Which turbogenerators or turboshaft-based generators exist or are in development in the megawatt class, with power, mass, efficiency and maturity?
-      - What are their fuel consumption and emissions on kerosene and on sustainable aviation fuel, and what blend limits apply?
-      - What fuel mass and tank volume does a hybrid 100-passenger aircraft need on a regional mission in published studies?
+      - For turboshaft and turboprop engines from 1 to 5 MW, what do type-certificate data sheets give for power, dry mass and fuel consumption? Give the data sheet for each.
+      - What specific power, in kW/kg, is published for megawatt-class generators and their power electronics, demonstrated in test? Give the document.
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-SRC-001
@@ -217,11 +411,13 @@ knot:
     exit: Data set for options B and C
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
   - knu_id: KNU-EWTW-NRG-001-06
     title: Trade study of the energy carrier
     knu_class: ANALYSIS_PACKAGE

@@ -6,11 +6,11 @@ standard_scope: governance
 # AMPEL360 — Models
 
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/`
-**Version:** 0.1.0 · **Date:** 2026-11-12
+**Version:** 0.1.1 · **Date:** 2026-11-14
 
 | Folder | Model | On disk at this date |
 |---|---|---|
-| [`01-02-01-01-01_eWTW`](01-02-01-01-01_eWTW/README.md) | Electric Wide Tube and Wing, about 100 passengers. All-electric, or hybrid-electric with conventional fuel | Model README 0.3.2; SBS with eleven views; KNOT register 0.4.2 — 11 KNOTs, 31 KNUs; architecture relations 0.1.0 |
+| [`01-02-01-01-01_eWTW`](01-02-01-01-01_eWTW/README.md) | Electric Wide Tube and Wing, 100 passengers. Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery; batteries alone excluded until reopened (ruling R2) | Model README 0.3.8; SBS with eleven views; KNOT register 0.10.0 — 14 KNOTs, 41 KNUs; architecture relations 0.3.0 |
 | [`01-02-01-01-02_BWB-Q100`](01-02-01-01-02_BWB-Q100/) | Blended wing body. The model assigned liquid hydrogen | SBS scaffold. README not yet written; the node is a protected area, so writing it is an act of its author |
 | [`01-02-01-01-03_MRTT-Q300`](01-02-01-01-03_MRTT-Q300/README.md) | Medical · Relief · Tanker · Transport: a humanitarian-only wide-body relief aircraft | Concept README 0.3.0 |
 | [`01-02-01-01-04_Q10`](01-02-01-01-04_Q10/) | Q10 | README not yet written |
@@ -37,3 +37,4 @@ The eWTW holds all three. The conventions are listed with their status in the [p
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-11-12 | First content: the four models as found on disk; the three nodes of a model; the two couplings between models |
+| 0.1.1 | 2026-11-14 | The eWTW row follows its nodes: KNOT register 0.9.0 with three more KNOTs for the 3D models, proposed criteria for essential power and for the energy carrier, five options and a load analysis for essential power, missions and required maturity for the energy carrier, approved by ruling R2; architecture relations 0.3.0 |

@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - relations_project_test.py (0.2.0)
+# Generated 2026-11-14 - relations_project_test.py (0.4.0)
 """Tests of tools/relations_project.py on the eWTW pilot. Run from the repository root:
 
     python3 tools/relations_project_test.py
@@ -72,7 +72,8 @@ class RelationsProject(unittest.TestCase):
     def test_source_options_match_the_register(self):
         p = self.projection(SRC)
         self.assertEqual((p["only_projected"], p["only_registered"]), ([], []))
-        self.assertEqual(sorted(p["registered"].values()), ["A", "B", "C"])
+        self.assertEqual(sorted(p["registered"].values()), ["B", "C"])
+        self.assertEqual(p["dead"], {("074",): ("A", "excluded")}, "batteries alone left the option set with ruling R2 of the energy carrier")
         self.assertIn("PROVISIONAL", self.status(p)[("075",)])
 
     def test_prerequisites_agree_with_the_register(self):
@@ -81,11 +82,60 @@ class RelationsProject(unittest.TestCase):
         self.assertEqual(p["derived"], ["KNOT-EWTW-NRG-001", "KNOT-EWTW-SRC-001", "KNOT-EWTW-STO-001"])
         self.assertTrue(p["consistent"])
 
-    def test_essential_power_candidates_are_proposals(self):
+    def test_essential_power_options_match_the_candidates(self):
         p = self.projection(ESS)
-        self.assertEqual((p["registered"], p["dead"]), ({}, {}))
+        self.assertEqual(p["registered"], {("024-360",): "A", ("024-230", "024-360"): "B", ("024-360", "068"): "C",
+                                           ("024-360", "049"): "D", ("074", "076-700"): "E"})
+        self.assertEqual((p["only_projected"], p["only_registered"], p["dead"]), ([], [], {}))
         self.assertEqual([m for m, s in self.status(p).items() if s == "open"], [("024-360",), ("049",), ("068",), ("074",)])
         self.assertEqual(p["unaddressed"][0]["name"], "ram-air turbine")
+        self.assertIn("Options: the open candidates match registered options A, C, D, E.", rp.render(p, rp.titles(TAX)))
+
+    def test_no_registered_option_leaves_the_candidates_as_proposals(self):
+        self.knot("ESS", lambda k: k.update(options=[]))
+        p = self.projection(ESS)
+        self.assertEqual((p["registered"], p["dead"], p["homeless"]), ({}, {}, []))
+        self.assertIn("Options: none registered with a footprint; the 4 open candidates are proposals.", rp.render(p, rp.titles(TAX)))
+
+    # what a candidate brings with it for the role
+    def test_role_requirement_is_part_of_the_candidate(self):
+        footprint = {r["members"]: r["footprint"] for r in self.projection(ESS)["rows"]}
+        self.assertEqual(footprint[("049",)], ("024-360", "049"))
+        self.assertEqual(footprint[("074",)], ("074", "076-700"), "thermal management is required for any role and is not brought")
+        self.assertEqual([r["footprint"] for r in self.projection(SRC)["rows"]], [r["members"] for r in self.projection(SRC)["rows"]])
+
+    def test_role_requirement_removed(self):
+        self.taxonomy(lambda d: d.update(relations=[r for r in d["relations"] if not r["key"].startswith("auxiliary-power-module")]))
+        p = self.projection(ESS)
+        self.assertEqual((p["only_projected"], p["only_registered"]), ([("049",)], [("024-360", "049")]))
+        self.assertTrue(any(line.startswith("Options: mismatch") and "D `024-360` + `049`" in line for line in rp.render(p, rp.titles(TAX))))
+
+    def test_requirement_for_any_role_is_not_brought(self):
+        self.taxonomy(lambda d: next(r for r in d["relations"] if r["object"] == "076-700").update({"for": None}))
+        p = self.projection(ESS)
+        self.assertEqual((p["only_projected"], p["only_registered"]), ([("074",)], [("074", "076-700")]))
+
+    def test_withdrawn_requirement_is_not_brought(self):
+        self.taxonomy(lambda d: next(r for r in d["relations"] if r["key"].startswith("turbogenerator-as")).update(state="WITHDRAWN"))
+        self.assertEqual(self.projection(ESS)["only_registered"], [("024-360", "068")])
+
+    # an option on a candidate that has no address
+    def test_option_on_an_unaddressed_candidate_is_named(self):
+        p = self.projection(ESS)
+        self.assertEqual(p["homeless"], [("024-230", "024-360")])
+        self.assertIn("Option B stands on a candidate that has no S-ATLAS address: `024-230` + `024-360`.", rp.render(p, rp.titles(TAX)))
+
+    def test_option_at_the_nearest_node_needs_the_unaddressed_entry(self):
+        self.taxonomy(lambda d: d["alternatives"][1].pop("unaddressed"))
+        p = self.projection(ESS)
+        self.assertEqual((p["homeless"], p["only_registered"]), ([], [("024-230", "024-360")]))
+
+    def test_option_matching_a_candidate_is_not_homeless(self):
+        self.taxonomy(lambda d: d["alternatives"][1]["unaddressed"][0].update(nearest="024-360"))
+        self.assertEqual(self.projection(ESS)["homeless"], [("024-230", "024-360")], "only an option that matches no candidate is tried")
+        self.knot("ESS", lambda k: k.update(options=[o for o in k["options"] if o["id"] == "A"]))
+        p = self.projection(ESS)
+        self.assertEqual((p["homeless"], sorted(p["registered"].values())), ([], ["A"]))
 
     def test_candidate_chapters_outside_the_knot_scope(self):
         self.assertEqual((self.projection(SRC)["outside"], self.projection(ESS)["outside"]), ([], ["068", "074"]))
@@ -93,7 +143,7 @@ class RelationsProject(unittest.TestCase):
     def test_every_programme_relation_is_counted(self):
         bad, lines = self.run_tool()
         self.assertEqual(bad, [])
-        self.assertEqual(lines[0], "2 alternative sets, 5 taxonomy relations, 5 programme relations; rule failures: none")
+        self.assertEqual(lines[0], "2 alternative sets, 7 taxonomy relations, 6 programme relations; rule failures: none")
 
     def test_committed_readme_is_current(self):
         self.assertEqual(rp.run(REL, REG, TAX, mode="check")[0], [])
@@ -114,6 +164,27 @@ class RelationsProject(unittest.TestCase):
     def test_combination_with_an_excluded_member_goes_to_review(self):
         self.programme(lambda d: d["combinations"][0].update(members=["068", "075"]))
         self.assertTrue(self.status(self.projection(SRC))[("068", "075")].startswith("review"))
+
+    def test_exclusion_alone_leaves_the_combination(self):
+        status = self.status(self.projection(SRC))
+        self.assertEqual(status[("074",)], "excluded alone by `KNOT-EWTW-NRG-001#R2` (COMPLETE)")
+        self.assertEqual(status[("068", "074")], "open, combination")
+        self.assertEqual(self.projection(SRC)["derived"], ["KNOT-EWTW-NRG-001"], "the battery of the combination still brings its owner")
+
+    def test_exclusion_not_alone_sends_the_combination_to_review(self):
+        self.programme(lambda d: d["exclusions"][1].pop("alone"))
+        status = self.status(self.projection(SRC))
+        self.assertEqual(status[("074",)], "excluded by `KNOT-EWTW-NRG-001#R2` (COMPLETE)")
+        self.assertEqual(status[("068", "074")], "review: the combination includes excluded 074")
+
+    def test_exclusion_alone_holds_in_its_role_only(self):
+        self.assertEqual(self.status(self.projection(ESS))[("074",)], "open")
+        self.programme(lambda d: d["exclusions"][1].update({"for": None}))
+        self.assertTrue(self.status(self.projection(ESS))[("074",)].startswith("excluded alone"))
+
+    def test_alone_is_true_or_false(self):
+        self.programme(lambda d: d["exclusions"][1].update(alone="yes"))
+        self.fails("batteries-alone-from-ewtw: an exclusion needs an S-ATLAS address, a model of the programme and a role or null; `alone` is true or false")
 
     def test_exclusion_needs_a_recorded_ruling(self):
         self.programme(lambda d: d["exclusions"][0].update(ruling="KNOT-EWTW-NRG-001#R9"))
@@ -256,7 +327,7 @@ class RelationsProject(unittest.TestCase):
                     option["state"] = "rejected"
         self.knot("SRC", reject)
         p = self.projection(SRC)
-        self.assertEqual((p["registered"], p["only_projected"]), ({("074",): "A"}, [("068",), ("068", "074")]))
+        self.assertEqual((p["registered"], p["only_projected"]), ({}, [("068",), ("068", "074")]))
         self.assertEqual(next(r for r in p["rows"] if r["members"] == ("068",))["elements"], [])
         self.assertIn("`068` (option B is rejected)", "\n".join(rp.render(p, rp.titles(TAX))))
         self.assertNotIn("KNOT-EWTW-SRC-001", self.projection(ESS)["derived"])

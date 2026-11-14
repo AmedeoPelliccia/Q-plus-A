@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - knot_check_test.py (0.1.1)
+# Generated 2026-11-14 - knot_check_test.py (0.1.4)
 """Tests of tools/knot_check.py on the eWTW KNOT register. Run from the repository root:
 
     python3 tools/knot_check_test.py
@@ -20,6 +20,9 @@ MODEL = pathlib.Path("01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360
 REG = MODEL / "01-02-01-01-01-02_KNOT_Knowledge-Node-Register"
 PBS = MODEL / "01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure"
 TAX = pathlib.Path("01_OPTIONS_ARCHITECTURE/01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS")
+
+MATURITY = {"id": "Q1", "element": "Essential source", "taxonomy": "024", "options": ["A"], "decision": "REV-B_RELEASED", "required": 6,
+            "evidence": "None on record", "level": None, "source": "Test", "state": "APPROVED"}
 
 
 class KnotCheck(unittest.TestCase):
@@ -51,7 +54,8 @@ class KnotCheck(unittest.TestCase):
         bad, prov, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertEqual(bad, [])
         self.assertEqual(prov, ["`NRG` R1"])
-        self.assertTrue(lines[0].startswith("11 KNOTs, 31 KNUs"))
+        self.assertTrue(lines[0].startswith("14 KNOTs, 41 KNUs"))
+        self.assertIn("Control: `CAD`", lines)
 
     def test_missing_required_field(self):
         self.edit("LUG", lambda k: k.pop("criteria"))
@@ -69,6 +73,26 @@ class KnotCheck(unittest.TestCase):
     def test_scored_without_criteria(self):
         self.edit("DFN", lambda k: self.option(k, "A").update(state="rejected"))
         self.fails("KNOT-EWTW-DFN-001 scored without criteria or maturity")
+
+    def test_scored_on_criteria_that_are_only_proposed(self):
+        self.edit("ESS", lambda k: k.update(resolution="RULED", maturity_required=[dict(MATURITY)]))
+        self.fails("KNOT-EWTW-ESS-001 scored without criteria or maturity")
+
+    def test_scored_on_maturity_that_is_only_proposed(self):
+        approve = lambda k: [c.update(state="APPROVED") for c in k["criteria"]]
+        self.edit("ESS", lambda k: (approve(k), k.update(resolution="RULED", maturity_required=[dict(MATURITY, state="PROPOSED")])))
+        self.fails("KNOT-EWTW-ESS-001 scored without criteria or maturity")
+        self.edit("ESS", lambda k: k.update(maturity_required=[dict(MATURITY)]))
+        self.assertFalse(any("scored without criteria or maturity" in b for b in knot_check.check(self.reg, TAX, PBS)[0]))
+
+    def test_invalid_maturity_record(self):
+        for change in ({"required": 10}, {"level": 0}, {"options": ["Z"]}, {"taxonomy": "999"}, {"state": "AGREED"}, {"evidence": ""}):
+            self.edit("ESS", lambda k: k.update(maturity_required=[dict(MATURITY, **change)]))
+            self.fails("KNOT-EWTW-ESS-001 invalid maturity record Q1")
+
+    def test_invalid_criterion(self):
+        self.edit("ESS", lambda k: k["criteria"][0].update({"class": "preferred"}))
+        self.fails("KNOT-EWTW-ESS-001 invalid criterion M1")
 
     def test_ruled_on_provisional_ruling(self):
         self.edit("NRG", lambda k: k.update(resolution="RULED"))
