@@ -28,7 +28,7 @@ The workstream opens when the first measure is levied with a planned value and a
 
 ## Layout
 
-One root folder, `eWTW-TPMS-000_Aircraft-Measures`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The measures of one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the CSN for a station. The PBS is mirrored in the file names, not in folders. A product measure keeps its derived id. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
+One root folder, `eWTW-TPMS-000_Aircraft-Measures`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The measures of one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the PBS-local code for a group or a chapter, the CSN for a station. The PBS is mirrored in the file names, not in folders. A product measure keeps its derived id. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
 
 ## Status
 

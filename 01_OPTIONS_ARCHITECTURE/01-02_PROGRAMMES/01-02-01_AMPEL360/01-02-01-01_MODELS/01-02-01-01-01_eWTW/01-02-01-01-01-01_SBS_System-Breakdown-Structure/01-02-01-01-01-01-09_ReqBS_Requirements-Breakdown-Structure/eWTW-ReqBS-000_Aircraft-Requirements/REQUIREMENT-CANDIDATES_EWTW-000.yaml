@@ -5,7 +5,7 @@
 # belong to the authoring act (ReqBS charter, Trigger). Each row carries the subject, the
 # allocation (allocatedTo:, CM-002 SS3), the verification method and the decision that
 # levied it; satisfies: stays null until authored.
-# Paths are relative to the repository root.
+# Paths are relative to the SBS root.
 
 aircraft_requirement_candidates:
   id: eWTW-ReqBS-CANDIDATES-000
@@ -13,7 +13,7 @@ aircraft_requirement_candidates:
   node: eWTW-PBS-000
   levied_by: "KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14 (COMPLETE)"
   ruling_record:
-    file: 01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
+    file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
   status: CANDIDATE - none authored
 
 candidates:

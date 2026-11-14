@@ -4,7 +4,7 @@
 # no target is written. Every current value is read from an analysis on disk and carries
 # the sha256 of the input it was computed on; the analyses are first-order screenings and
 # say so. A value is given as a band where the analysis gives one.
-# Paths are relative to the repository root.
+# Paths are relative to the SBS root.
 
 aircraft_tpm_candidates:
   id: eWTW-TPMS-CANDIDATES-000
@@ -15,17 +15,17 @@ aircraft_tpm_candidates:
   sources:
     mission_screening:
       analysis: MSN-EWTW-NRG-001 0.3.0
-      file: 01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/missions.yaml
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/missions.yaml
       sha256: ad09aeb0a667679ecb16379ccd402c32bbe0b9a30c066b8f6bee2ec1a0b19d71
       results:
-        file: 01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+        file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
         sha256: da0f231d8f4ee0d3b6ef3e6cfc6269062bf8db2bd759a1c162c3e67e0b7a3d0a
     essential_loads:
       analysis: ELA-EWTW-ESS-001 0.1.0
-      file: 01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/essential-loads.yaml
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/essential-loads.yaml
       sha256: dd4325d2bde8bb818d46adc7ebbe6bfe73c0b3f7b45604d71a53ba63a0d0aad2
       results:
-        file: 01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+        file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
         sha256: ca73090d71c09b2bb818b65c0f133f0678a0a486a768d8eaec85021e5f0cd401
 
 measures:
@@ -40,7 +40,9 @@ measures:
     target: null
     threshold: null
     basis: "mission_screening, table of option B"
-    related: "requirement mission, REQUIREMENT-CANDIDATES_EWTW-000.yaml"
+    related:
+      candidate: "requirement mission"
+      file: 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/eWTW-ReqBS-000_Aircraft-Requirements/REQUIREMENT-CANDIDATES_EWTW-000.yaml
     status: estimate - first-order screening
 
   - id: null

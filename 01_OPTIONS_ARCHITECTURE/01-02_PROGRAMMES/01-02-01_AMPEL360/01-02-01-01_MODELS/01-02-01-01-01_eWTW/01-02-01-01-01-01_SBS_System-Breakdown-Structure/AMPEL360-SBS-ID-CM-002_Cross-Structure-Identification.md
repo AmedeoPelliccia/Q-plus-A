@@ -55,7 +55,7 @@ Decided by the authority on 2026-11-14 and proposed here; the merge ratifies it,
 
 **C2.1.1 — Root.** A structure that holds records at aircraft level opens one root folder, `eWTW-<structure>-000_Aircraft-<objects>`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The FBS and the WBS keep the roots and the trees they have.
 
-**C2.1.2 — Sets.** Below the root the PBS is mirrored in file names, not in folders. The records about one product node are one file, named after that node: `EWTW-000` for the aircraft, the CSN for a station. A set is opened when its first record exists; no empty set mirrors the PBS.
+**C2.1.2 — Sets.** Below the root the PBS is mirrored in file names, not in folders. The records about one product node are one file, named after that node: `EWTW-000` for the aircraft, the PBS-local code for a group or a chapter (`EWTW-020`, `EWTW-024`), the CSN for a station. A set is opened when its first record exists; no empty set mirrors the PBS.
 
 **C2.1.3 — Identity is unchanged.** A file name locates a set. Identity stays with the id of each record and the binding with its typed reference (§1, §3). A record that crosses product nodes belongs to the set of the lowest node that contains all its references.
 

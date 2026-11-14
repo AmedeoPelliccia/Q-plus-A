@@ -27,7 +27,7 @@ The workstream opens when the first risk is formally raised against a realized i
 
 ## Layout
 
-One root folder, `eWTW-RBS-000_Aircraft-Risks`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The risks stated against of one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the CSN for a station. The PBS is mirrored in the file names, not in folders. A risk keeps its sovereign id and binds through `affects:`; the file locates it and does not confine it. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
+One root folder, `eWTW-RBS-000_Aircraft-Risks`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The risks stated against one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the PBS-local code for a group or a chapter, the CSN for a station. The PBS is mirrored in the file names, not in folders. A risk keeps its sovereign id and binds through `affects:`; the file locates it and does not confine it. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
 
 ## Status
 
@@ -35,5 +35,6 @@ One root folder, `eWTW-RBS-000_Aircraft-Risks`, as the PBS has `eWTW-PBS-000_Air
 
 **Sets**, in [`eWTW-RBS-000_Aircraft-Risks`](eWTW-RBS-000_Aircraft-Risks/README.md):
 
-- [`RISK-CANDIDATES_EWTW-000.yaml`](eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-000.yaml) — the aircraft, `eWTW-PBS-000`: seven candidates prepared from the analyses on record after ruling R2 of `KNOT-EWTW-NRG-001`. None is raised.
+- [`RISK-CANDIDATES_EWTW-000.yaml`](eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-000.yaml) — the aircraft, `eWTW-PBS-000`: six candidates prepared from the analyses on record after ruling R2 of `KNOT-EWTW-NRG-001`. None is raised.
+- [`RISK-CANDIDATES_EWTW-020.yaml`](eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-020.yaml) — core systems, `eWTW-PBS-020`: one candidate, on the power to move the flight controls in the essential load. It affects chapters `024`, `027` and `029` and nothing outside the group. Not raised.
 - [`RISKS_EWTW-533001.yaml`](eWTW-RBS-000_Aircraft-Risks/RISKS_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: `R-533001-01..06` (`PILOT-ALLOCATION_EWTW-533001.yaml`, revision 3).

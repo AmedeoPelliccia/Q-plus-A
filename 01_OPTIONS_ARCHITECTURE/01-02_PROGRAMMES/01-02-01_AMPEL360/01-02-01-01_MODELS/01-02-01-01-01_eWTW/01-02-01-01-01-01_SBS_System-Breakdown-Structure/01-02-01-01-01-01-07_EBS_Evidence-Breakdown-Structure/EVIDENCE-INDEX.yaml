@@ -161,6 +161,8 @@ rows:
       is an assumption. It states no conformity.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+      - 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/eWTW-TPMS-000_Aircraft-Measures/TPM-CANDIDATES_EWTW-000.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-020.yaml
 
   - class: analysis-or-test-record
     subject: KNOT-EWTW-ESS-001
@@ -185,6 +187,7 @@ rows:
       search found nothing.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-000.yaml
 
   - class: analysis-or-test-record
     subject: KNOT-EWTW-NRG-001
@@ -199,6 +202,8 @@ rows:
       conformity.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+      - 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/eWTW-TPMS-000_Aircraft-Measures/TPM-CANDIDATES_EWTW-000.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-000.yaml
 
   - class: analysis-or-test-record
     subject: KNOT-EWTW-NRG-001
@@ -223,3 +228,5 @@ rows:
       carries it.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+      - 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/eWTW-ReqBS-000_Aircraft-Requirements/REQUIREMENT-CANDIDATES_EWTW-000.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/eWTW-RBS-000_Aircraft-Risks/RISK-CANDIDATES_EWTW-000.yaml

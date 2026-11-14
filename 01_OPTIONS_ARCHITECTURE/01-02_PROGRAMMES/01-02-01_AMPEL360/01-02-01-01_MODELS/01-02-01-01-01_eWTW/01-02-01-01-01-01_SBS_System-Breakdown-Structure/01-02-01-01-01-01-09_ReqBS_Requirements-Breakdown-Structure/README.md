@@ -27,7 +27,7 @@ The workstream opens when the first requirement is formally levied on a realized
 
 ## Layout
 
-One root folder, `eWTW-ReqBS-000_Aircraft-Requirements`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The requirements levied on of one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the CSN for a station. The PBS is mirrored in the file names, not in folders. A requirement keeps its sovereign id and its `allocatedTo:` list; one that crosses product nodes belongs to the set of the lowest node that contains all its allocations. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
+One root folder, `eWTW-ReqBS-000_Aircraft-Requirements`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The requirements levied on one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the PBS-local code for a group or a chapter, the CSN for a station. The PBS is mirrored in the file names, not in folders. A requirement keeps its sovereign id and its `allocatedTo:` list; one that crosses product nodes belongs to the set of the lowest node that contains all its allocations. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
 
 ## Status
 

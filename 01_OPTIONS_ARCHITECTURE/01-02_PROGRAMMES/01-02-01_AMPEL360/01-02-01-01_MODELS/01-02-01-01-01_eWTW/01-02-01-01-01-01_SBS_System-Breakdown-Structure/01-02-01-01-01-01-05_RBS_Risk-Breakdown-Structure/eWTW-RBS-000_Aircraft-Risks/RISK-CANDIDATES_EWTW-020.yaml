@@ -1,0 +1,29 @@
+# Generated 2026-11-14 - Claude Fable 5.2 - candidates after ruling R2 of KNOT-EWTW-NRG-001
+# RBS candidates of the core-systems group, eWTW-PBS-020 - one file per product node
+# (CM-002, clarification C2.1): the candidate below affects three chapters of that group
+# and no node outside it, so it belongs to the set of the group and not to the aircraft.
+# These are CANDIDATES prepared by the reviewer from the analyses on disk: none is
+# raised. Raising a risk is an act of the owning authority (RBS charter, Trigger); the
+# risk then takes a sovereign id R-<seq> (CM-002 SS3). Likelihood, severity and owner
+# stay null - no score is written here.
+# Paths are relative to the SBS root.
+
+group_risk_candidates:
+  id: eWTW-RBS-CANDIDATES-020
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  node: eWTW-PBS-020
+  status: CANDIDATE - none raised
+
+candidates:
+  - id: null
+    item: "the power to move the flight controls is over two fifths of the nominal essential load and its least certain figure"
+    affects: [eWTW-PBS-024-000, eWTW-PBS-027-000, eWTW-PBS-029-000]
+    evidence_note: "ELA-EWTW-ESS-001 0.1.0, what the budget shows, item 2: load L10, filed under S-ATLAS 029, is the power to move the minimum set of surfaces; whether the surfaces keep hydraulic power is open"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
