@@ -96,8 +96,8 @@ rows:
       findings A-533001-02 (R-533001-05) and A-533001-03 (ReqBS candidate).
     citedBy:
       - PILOT-ALLOCATION_EWTW-533001.yaml
-      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/RISKS_EWTW-533001.yaml
-      - 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/REQUIREMENT-CANDIDATES_EWTW-533001.yaml
+      - 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/eWTW-RBS-000_Aircraft-Risks/RISKS_EWTW-533001.yaml
+      - 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/eWTW-ReqBS-000_Aircraft-Requirements/REQUIREMENT-CANDIDATES_EWTW-533001.yaml
 
   - class: analysis-or-test-record
     subject: EWTW-533001-000

@@ -1,0 +1,56 @@
+# Generated 2026-11-14 - Claude Fable 5.2 - aircraft-level candidates after ruling R2 of KNOT-EWTW-NRG-001
+# ReqBS candidates of the aircraft, eWTW-PBS-000 - one file per product node a set is
+# levied on (CM-002, clarification C2.1). These are CANDIDATES, not requirements: no
+# REQ-<level>-<seq> id is assigned and no requirement wording is authored here - both
+# belong to the authoring act (ReqBS charter, Trigger). Each row carries the subject, the
+# allocation (allocatedTo:, CM-002 SS3), the verification method and the decision that
+# levied it; satisfies: stays null until authored.
+# Paths are relative to the repository root.
+
+aircraft_requirement_candidates:
+  id: eWTW-ReqBS-CANDIDATES-000
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  node: eWTW-PBS-000
+  levied_by: "KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14 (COMPLETE)"
+  ruling_record:
+    file: 01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
+  status: CANDIDATE - none authored
+
+candidates:
+  - subject: "requirement mission: a trip of 2,000 km with 100 passengers and the declared reserves closes"
+    allocatedTo: [eWTW-PBS-000]
+    verification: analysis
+    levied_by: "R2, decision one"
+    note: "the screening calls a mission closed when the take-off mass stays within the take-off limit of its reference type, 51.8 t; the requirement needs its own definition of closure when it is authored"
+    satisfies: null
+    id: null
+    text: null
+
+  - subject: "seat count: 100 passengers"
+    allocatedTo: [eWTW-PBS-000]
+    verification: inspection
+    levied_by: "R2, decision four"
+    note: "reducing the seats to make an option close changes the aircraft (R2, rationale)"
+    satisfies: null
+    id: null
+    text: null
+
+  - subject: "reserves: a final reserve of 30 minutes at holding speed at 1,500 ft; the alternate is a separate item"
+    allocatedTo: [eWTW-PBS-000]
+    verification: analysis
+    levied_by: "R2, decision two"
+    note: "taken by R2 as an assumption: no acceptable means of compliance gives a quantity for electric engines. Reopen condition 2 of the KNOT: EASA publishes a quantity for the final reserve of a CS-25 aeroplane with electric engines"
+    satisfies: null
+    id: null
+    text: null
+
+# Recorded so that they are not taken for requirements.
+not_candidates:
+  - item: "scoring mission M, about 1,100 km"
+    why: "it scores the options and is not the design mission (R2, decision one)"
+  - item: "sensitivity mission S, 500 km"
+    why: "it sizes nothing (R2, decision one)"
+  - item: "range the reference type is offered with, 4,445 km"
+    why: "a check of the model, and no gate until the model reproduces it within a written tolerance (R2, decision one)"
+  - item: "level 6 of the Q+ATLANTIDE-TRL scale at the release of the preliminary-design baseline"
+    why: "a condition on the decision and its lifecycle gate, kept in maturity_required of the KNOT; it is not a requirement on the product (R2, decision three)"

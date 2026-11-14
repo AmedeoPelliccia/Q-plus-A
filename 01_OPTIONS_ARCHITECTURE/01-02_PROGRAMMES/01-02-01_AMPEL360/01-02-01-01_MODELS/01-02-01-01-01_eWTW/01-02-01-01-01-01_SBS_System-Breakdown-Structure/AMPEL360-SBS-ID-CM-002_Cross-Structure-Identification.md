@@ -49,4 +49,19 @@ RBS is the instructive middle case: a risk confined to one station may carry the
 
 The IBS placeholder chain (`eWTW-IBS-10-…`, the ordinal x10 chain) is superseded by §3: the five radome dossiers become `eWTW-IBS-531004-<counterpart>` against the ICDs already declared on that station. The FBS keeps `eWTW-FBS-10 … 120` and repoints `realized_by` from the absent placeholder chapter code to real chapter and station ids. The WBS keeps its discipline-and-phase numbering unchanged. EBS is created as a derived index, with no numbering of its own.
 
+## 6. Clarification C2.1 — root folder and sets (2026-11-14)
+
+Decided by the authority on 2026-11-14 and proposed here; the merge ratifies it, as for the Issue.
+
+**C2.1.1 — Root.** A structure that holds records at aircraft level opens one root folder, `eWTW-<structure>-000_Aircraft-<objects>`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The FBS and the WBS keep the roots and the trees they have.
+
+**C2.1.2 — Sets.** Below the root the PBS is mirrored in file names, not in folders. The records about one product node are one file, named after that node: `EWTW-000` for the aircraft, the CSN for a station. A set is opened when its first record exists; no empty set mirrors the PBS.
+
+**C2.1.3 — Identity is unchanged.** A file name locates a set. Identity stays with the id of each record and the binding with its typed reference (§1, §3). A record that crosses product nodes belongs to the set of the lowest node that contains all its references.
+
+**C2.1.4 — Open.** CM-001 derives no CSN for the product root, so the derived id of a measure of the whole aircraft (§3, TPMS) is not defined.
+
+Applied first to ReqBS, TPMS and RBS.
+
 <!-- Generated 2026-09-06 - GitHub Copilot - SBS rework under CM-002 -->
+<!-- Amended 2026-11-14 - Claude Fable 5.2 - clarification C2.1 -->
