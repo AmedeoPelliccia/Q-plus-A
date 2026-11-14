@@ -48,7 +48,7 @@ This record keeps what the review accepted from the research report. It is a rea
 | # | Statement | Source | Read by the reviewer |
 |---|---|---|---|
 | 14 | The first type certificate for an engine that complies with SC E-19 was issued in February 2025, for the Safran ENGINeUS 100. Its first model was planned for a two-seat aircraft | EASA, press release of 4 February 2025 | 2026-11-14 |
-| 15 | The ENGINeUS XL is offered at 750 kW for each motor. In a laboratory test in late 2021, two motors together delivered over 1,000 kW of continuous power. The manufacturer states an efficiency of the whole system above 95 % at cruise | Safran | 2026-11-14 |
+| 15 | The ENGINeUS XL is offered at 750 kW for each motor. In a laboratory test in late 2021, two motors together delivered over 1,000 kW of continuous power. The manufacturer states an efficiency of the whole system above 95 % at cruise, and reports an altitude test in a climate chamber in 2023 | Safran | 2026-11-14 |
 | 16 | Honeywell is developing a 1 MW turbogenerator on the core of an auxiliary power unit in service. It gives 280 lb for the generator alone | Honeywell, 2021 | As reported |
 | 17 | Rolls-Royce described in 2022 a turbogenerator that scales from 500 to 1,200 kW | Rolls-Royce, June 2022 | As reported |
 | 18 | The Safran TG600 is a turbogenerator of 600 kW for a nine-seat aircraft, on the bench in 2026 | Safran | As reported |

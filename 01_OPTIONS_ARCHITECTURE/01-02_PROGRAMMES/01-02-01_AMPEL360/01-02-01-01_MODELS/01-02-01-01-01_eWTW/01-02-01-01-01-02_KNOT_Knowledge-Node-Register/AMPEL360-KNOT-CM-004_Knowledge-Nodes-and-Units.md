@@ -49,6 +49,7 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Re
 | KNU | `knu_id`, `title`, `knu_class`, `description`, `research_brief`, `serves`, `outputs`, `exit`, `owner`, `lifecycle_phase`, `progress`, `created_date`, `start_date`, `end_date`, `evidence_refs`, `condition` (optional) |
 | Option | `id`, `text`, `state`, `pbs_footprint` and `by` where applicable |
 | Criterion | `id`, `text`, `class`, `source`, `weight`, `threshold`, `state` |
+| Maturity | `id`, `element`, `taxonomy`, `options`, `decision`, `required`, `evidence`, `level`, `source`, `state` |
 | Ruling | `id`, `date`, `authority`, `statement`, `effect`, `rationale`, `rationale_recorded`, `evidence`, `waiver`, `state`, `record`, `effectivity`, `effects`, `embodied_in` |
 
 **Vocabularies**
@@ -63,8 +64,11 @@ One YAML file per KNOT, named by its identifier, holds the KNOT and its KNUs. Re
 | ruling `state` | `PROVISIONAL` · `COMPLETE` |
 | criterion `class` | `mandatory` · `tradable` |
 | criterion `state` | `PROPOSED` · `APPROVED` |
+| maturity `state` | `PROPOSED` · `APPROVED` |
 
 An option is `retained` or `rejected` by scoring it against the declared criteria; it is `excluded` when a ruling removes it from the scope without scoring. A `mandatory` criterion is not traded: an option that fails it is rejected. A `tradable` criterion carries the `weight` and the `threshold` that the authority sets. A criterion is declared when the authority has made it `APPROVED`. While any criterion of a decision anchor is `PROPOSED`, rule 5 applies as if none were declared. `raised_at` is the S-ATLAS chapter of the node that recorded the KNOT, or null.
+
+A maturity record declares, for one critical technology element or one integration, the technology readiness level that a decision requires (`QPLUS-LC-DECISION-MATURITY-001`). `element` names it, `taxonomy` is its S-ATLAS address, and `options` lists the options of the KNOT that depend on it. `decision` names the decision the threshold applies to, and `required` is the level, from 1 to 9. `evidence` states what the records show today, with its reference. `level` is the level that this evidence supports, or null where no record supports one; it is provisional and never authorises (`QATL-TRL-EVIDENCE-001`). `source` says where the threshold comes from. An option that depends on an element below `required` is retained only with an approved maturation cycle and its fallback, or with the waiver of rule 5. While any maturity record of a decision anchor is `PROPOSED`, rule 5 applies as if none were declared.
 
 `progress` takes the place of the AEROSPACEMODEL `compliance_status`: Q+ATLANTIDE records carry no conformity claims. The AEROSPACEMODEL classes map as follows: `ARTEFACT` and `PROCEDURE` → `CONTROLLED_ARTEFACT`; `RECORD` and `REPORT` → `EVIDENCE_RECORD`; `VALIDATION_OBJECT` → `VERIFICATION_OBJECT`.
 
@@ -114,6 +118,7 @@ Configuration decisions are `LC-B` deliverables (registry §3): a KNOT is worked
 |---|---|
 | 1 | Definitions from AEROSPACEMODEL as restated on 2026-11-08; kinds; identifier grammar without `LC01`–`LC14` and without classification, S-ATLAS addresses in the `taxonomy` field; record fields and vocabularies; provisional rulings; scoring gate; filing by scope; research briefs, effectivity, product footprints, ruling effects and embodiment, and PBS gates. Rules 1–18. The fields `effectivity`, `effects` and `embodied_in` were added to the recorded ruling R1 of `KNOT-EWTW-NRG-001` with empty values when they were introduced: a schema migration of a provisional ruling while this issue is proposed, not a rewriting under rule 7 |
 | 1, revision of 2026-11-13 | The criterion record with its two classes and its two states; a criterion that is only proposed does not open the gate of rule 5 |
+| 1, revision of 2026-11-14 | The maturity record: the level a decision requires of each critical element, the evidence on record and the level it supports; a maturity record that is only proposed does not open the gate of rule 5 |
 
 [AEROSPACEMODEL]: https://github.com/AmedeoPelliccia/AEROSPACEMODEL
 [CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
 | Propulsion posture | All-electric, or hybrid-electric with conventional fuel; no hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.6 |
+| Version | 0.3.7 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -250,7 +250,7 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 | [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 | Architecture relations at programme, model and product level, and between taxonomy nodes; their projection onto the KNOT register | Yes — both *PROPOSED*; the taxonomy relations are held in the model until the taxonomy owner adopts them |
 | [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
-| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] · [`tools/essential_loads.py`][ELA-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register; the budget of the essential load analysis | Yes — each with its tests |
+| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] · [`tools/essential_loads.py`][ELA-TOOL] · [`tools/mission_closure.py`][MSN-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register; the budget of the essential load analysis; the first-order closure of the candidate missions | Yes — each with its tests |
 | `complete_PBS-053-000.py` · `-100` · `-200` · `-300` · `migrate_PBS-053-010.py` | Depth passes for chapter `053`; the radome migration | Yes, at the repository root — `-200` not yet applied ([F04](#9-findings)) |
 
 ---
@@ -304,7 +304,7 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
-The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`.
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`.
 
 ---
 
@@ -323,6 +323,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.4 | 2026-11-13 | F23 restated for the state of `main`: generator `v0.2.2-concept` committed, its outputs not yet. `KNOT-EWTW-ESS-001` has proposed criteria and a first research record (KNOT register 0.6.0) |
 | 0.3.5 | 2026-11-14 | `KNOT-EWTW-ESS-001` registers five options and has a first essential load analysis, in which every load figure is an assumption (KNOT register 0.7.0). The architecture relations take a candidate with what it brings for its role (0.2.0). `tools/essential_loads.py` added. F23 restated: the STEP file of `v0.2.2-concept` is on `main` and passes the round trip; three artefacts are still those of `v0.2.1-concept` |
 | 0.3.6 | 2026-11-14 | `KNOT-EWTW-NRG-001` has proposed criteria and a research record on the energy carrier (KNOT register 0.8.0). F23 restated: the STEP file, the preview and the verification report on `main` come from one run of `v0.2.2-concept` and match its run record; four points remain |
+| 0.3.7 | 2026-11-14 | `KNOT-EWTW-NRG-001` has three candidate missions with a first-order closure test, and proposes the maturity it requires of six critical elements (KNOT register 0.9.0). `tools/mission_closure.py` added |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -353,6 +354,8 @@ The KNOT register and the architecture relations are verified with their own com
 [ROUNDTRIP]: ../../../../../tools/freecad_roundtrip.py
 [REL-TOOL]: ../../../../../tools/relations_project.py
 [ELA-TOOL]: ../../../../../tools/essential_loads.py
+[MSN-TOOL]: ../../../../../tools/mission_closure.py
+[MSN]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
 [ELA]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md

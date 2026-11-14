@@ -158,7 +158,67 @@ knot:
     weight: null
     threshold: null
     state: PROPOSED
-  maturity_required: []
+  maturity_required:
+  - id: Q1
+    element: Propulsion battery pack of megawatt-hour class, at the specific energy of packs in service
+    taxonomy: '074'
+    options: [C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'A type-certificated two-seat aeroplane flies on a dual battery system at 345 V (EASA.A.573, manufacturer page read on 2026-11-14). Its energy and its mass are not on record, and no pack of the size this aircraft needs is on record'
+    level: null
+    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
+    state: PROPOSED
+  - id: Q2
+    element: Propulsion battery pack above 450 Wh/kg at pack level
+    taxonomy: '074'
+    options: [A, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'One laboratory pack of 3.9 kWh at 480.9 Wh/kg over 25 cycles (research record of 2026-11-14, statement 11). The projections on record are at cell level (statement 10)'
+    level: 4
+    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
+    state: PROPOSED
+  - id: Q3
+    element: Electric motor of megawatt class with its power electronics
+    taxonomy: '077'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'Two motors offered at 750 kW each delivered over 1,000 kW together in a laboratory test of 2021, and the manufacturer reports an altitude test in a climate chamber in 2023 (research record of 2026-11-14, statement 15). A motor for a two-seat aircraft holds the first type certificate under SC E-19 (statement 14)'
+    level: 5
+    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
+    state: PROPOSED
+  - id: Q4
+    element: Turbogenerator of megawatt class
+    taxonomy: '068'
+    options: [B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'One of 1 MW in development on the core of an auxiliary power unit in service, one of 600 kW on the bench in 2026, one design from 500 to 1,200 kW (research record of 2026-11-14, statements 16 to 18). All three are as reported, and no level is set on sources the reviewer did not read'
+    level: null
+    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
+    state: PROPOSED
+  - id: Q5
+    element: High-voltage distribution and protection at the power of the propulsion chain
+    taxonomy: '076'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: None on record
+    level: null
+    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
+    state: PROPOSED
+  - id: Q6
+    element: Thermal management of the electric propulsion chain
+    taxonomy: '078'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: None on record
+    level: null
+    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
+    state: PROPOSED
   assumptions:
   - text: CS-25 and the air operations rules of Regulation (EU) No 965/2012 are read as the basis; the certification basis of the eWTW and its amendment are not recorded yet
     ref:
@@ -234,13 +294,15 @@ knot:
     exit: Mission set approved by the authority
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: IN_PROGRESS
+    progress: PENDING_REVIEW
     created_date: '2026-11-08'
     start_date: '2026-11-14'
     end_date: null
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
   - knu_id: KNU-EWTW-NRG-001-03
     title: Mission energy and power budget
     knu_class: ANALYSIS_PACKAGE
@@ -266,6 +328,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
   - knu_id: KNU-EWTW-NRG-001-04
     title: Battery technology state
     knu_class: EVIDENCE_RECORD

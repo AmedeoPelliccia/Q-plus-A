@@ -1,0 +1,73 @@
+# Candidate missions and first-order closure — input record. tools/mission_closure.py reads it and writes the
+# screening into README.md. A figure has a basis: assumption or source. A figure with a source names it in ref.
+# A parameter has three values: favourable, nominal and unfavourable to closing the mission.
+analysis:
+  id: MSN-EWTW-NRG-001
+  version: 0.1.0
+  date: '2026-11-14'
+  knot: KNOT-EWTW-NRG-001
+  serves: KNU-EWTW-NRG-001-02
+  prepared_by: Claude, for review by STK_SE
+  scope: >-
+    Three candidate design missions for an aircraft of 100 passengers, and a first-order test of which energy
+    carrier closes each of them. The test is a range equation with mass fractions. It ranks nothing and sizes
+    nothing: it shows the order of magnitude and which figures decide.
+  assumptions:
+  - id: A1
+    text: The aircraft carries 100 passengers. The mass taken for each, with baggage, is an assumption until the standard masses of the air operations rules are read
+  - id: A2
+    text: A mission closes when the take-off mass it needs stays within the limit, which stands for the take-off mass of in-service types of the class
+  - id: A3
+    text: The empty mass, without payload and without energy carrier, is a fixed share of the take-off mass for each option. The share is higher where the aircraft carries turbogenerators as well as motors
+  - id: A4
+    text: Reserves are flown as distance at the cruise lift-to-drag ratio — the contingency as a share of the trip, the alternate as a distance, the final reserve as time at holding speed
+  - id: A5
+    text: The final reserve of an aeroplane with electric engines is taken as that of a turbine-engined one. The rule names no time for it (research record of 2026-11-14, statement 2)
+  - id: A6
+    text: Take-off and climb cost the energy to reach cruise speed and altitude. A share of the height is recovered in the descent
+  - id: A7
+    text: A battery delivers its specific energy reduced by one share, which covers the capacity held back and the capacity lost at the end of service life
+  - id: A8
+    text: In option C the battery supplies a stated share of the trip energy, and fuel supplies the rest of the trip and all the reserves
+  - id: A9
+    text: Option B loses the mass of the fuel it burns; the test credits it with the logarithmic form of the range equation. Options A and C are credited with no loss of mass for the battery
+  - id: A10
+    text: Take-off shaft power is a fixed power for each kilogram of take-off mass. Units are counted at the ratings that the research record gives for a motor and for a turbogenerator
+  missions:
+  - {key: S, name: Short stage, range_km: 500, candidate: true, basis: assumption, note: 'Less than half of the average stage of mission M'}
+  - {key: M, name: Average stage, range_km: 1100, candidate: true, basis: source, ref: 'Research record of 2026-11-14, statement 4: average stage of the United States fleet of 150 seats and fewer, about 1,110 to 1,140 km'}
+  - {key: L, name: Long stage, range_km: 2000, candidate: true, basis: assumption, note: 'Nearly twice the average stage'}
+  - {key: X, name: Range offered by the class, range_km: 6670, candidate: false, basis: source, ref: 'Research record of 2026-11-14, statement 5: up to 3,600 nm, as reported', note: 'A reference, not a candidate'}
+  payload:
+    passengers: 100
+    kg_per_passenger: {value: 95, basis: assumption}
+  reserves:
+    contingency_share: {value: 0.05, basis: assumption}
+    alternate_km: {value: 185, basis: assumption}
+    final_reserve_min: {value: 30, basis: source, ref: 'Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine-engined aeroplanes; research record of 2026-11-14, statement 2'}
+    holding_speed_kmh: {value: 400, basis: assumption}
+  flight:
+    cruise_altitude_m: {value: 7600, basis: assumption}
+    cruise_speed_kmh: {value: 500, basis: assumption}
+    descent_recovery_share: {value: 0.5, basis: assumption}
+  fuel_energy_mj_per_kg: {value: 43.0, basis: assumption, note: 'Lower heating value commonly used for jet fuel; not read at a source'}
+  takeoff_mass_limit_kg: {value: 60000, basis: assumption, note: 'In-service types of about 100 seats are certificated at about 56 to 63 t; not read at a source'}
+  parameters:
+    lift_to_drag: {favourable: 22, nominal: 18, unfavourable: 16, basis: assumption}
+    propulsor_efficiency: {favourable: 0.88, nominal: 0.85, unfavourable: 0.80, basis: assumption}
+    electric_chain_efficiency: {favourable: 0.93, nominal: 0.90, unfavourable: 0.87, basis: assumption, note: 'From the terminals of the battery or of the generator to the shaft. A manufacturer states above 95 % for motor and electronics at cruise (statement 15)'}
+    turbogenerator_efficiency: {favourable: 0.40, nominal: 0.35, unfavourable: 0.30, basis: assumption, note: 'From fuel to electricity'}
+    pack_usable_share: {favourable: 0.85, nominal: 0.72, unfavourable: 0.65, basis: assumption, note: 'Nominal is 0.90 usable times 0.80 at the end of service life, as in ELA-EWTW-ESS-001'}
+    empty_fraction_A: {favourable: 0.46, nominal: 0.52, unfavourable: 0.58, basis: assumption}
+    empty_fraction_B: {favourable: 0.55, nominal: 0.60, unfavourable: 0.65, basis: assumption}
+    empty_fraction_C: {favourable: 0.56, nominal: 0.61, unfavourable: 0.66, basis: assumption}
+    takeoff_kw_per_kg: {favourable: 0.16, nominal: 0.20, unfavourable: 0.25, basis: assumption}
+  pack_levels:
+  - {wh_per_kg: 170, label: 'Pack of the kind certificated today', basis: assumption, note: 'No pack figure with a document is on record yet (brief of KNU-EWTW-NRG-001-04)'}
+  - {wh_per_kg: 480.9, label: 'Laboratory pack, 25 cycles', basis: source, ref: 'Research record of 2026-11-14, statement 11'}
+  - {wh_per_kg: 650, label: 'Assumption of a NASA study', basis: source, ref: 'Research record of 2026-11-14, statement 8, as reported'}
+  - {wh_per_kg: 1000, label: 'Level one study needs for economic feasibility', basis: source, ref: 'Research record of 2026-11-14, statement 6'}
+  hybrid_shares: [0.10, 0.25, 0.50]
+  units:
+    motor_kw: {value: 750, basis: source, ref: 'Research record of 2026-11-14, statement 15: offered rating of a motor tested in the laboratory'}
+    turbogenerator_kw: {value: 1000, basis: source, ref: 'Research record of 2026-11-14, statement 16, as reported: in development'}
