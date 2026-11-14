@@ -37,6 +37,10 @@ knot:
     ref: eWTW-PBS-024-000
     relation: gates
     note: Source-dependent conversion, protection and distribution
+  - view: PBS
+    ref: eWTW-PBS-068-000
+    relation: gates
+    note: Number, rating and position of the turbogenerators
   options:
   - id: A
     text: batteries (074) alone

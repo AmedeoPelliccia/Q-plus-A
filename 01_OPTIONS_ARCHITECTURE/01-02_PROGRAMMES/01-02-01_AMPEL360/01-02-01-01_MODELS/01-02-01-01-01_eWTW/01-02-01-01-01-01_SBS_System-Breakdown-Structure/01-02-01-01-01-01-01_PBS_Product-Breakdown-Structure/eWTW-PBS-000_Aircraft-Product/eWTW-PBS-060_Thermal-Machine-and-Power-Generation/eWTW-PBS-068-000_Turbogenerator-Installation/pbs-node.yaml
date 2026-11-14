@@ -1,0 +1,14 @@
+pbs_node:
+  id: eWTW-PBS-068-000
+  title: Turbogenerator Installation
+  type: chapter
+  taxonomyRef:
+    chapter: "068"
+    localCode: "068"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
+  parent: eWTW-PBS-060
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

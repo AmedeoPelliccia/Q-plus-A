@@ -8,7 +8,7 @@ standard_scope: governance
 **Product:** AMPEL360 · eWTW — regional electric Wide Tube and Wing
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/`
 **Governing convention:** [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 (this folder) · cross-view identity: [`AMPEL360-SBS-ID-CM-002`][CM-002]
-**Version:** 0.2.1 · **Date:** 2026-10-15
+**Version:** 0.2.2 · **Date:** 2026-11-14
 **Snapshot:** every count and result on this page refers to `main` at `72039505cefdbb9aa6450d713c655f5058374550` (committed 2026-10-13), checked on 2026-10-15 — see [How to verify](#how-to-verify).
 
 The PBS is the product view of the eWTW [SBS][SBS]. It is where identity passes from taxonomy-linked codes to part numbers: every subject node is an **assembly station** — above it a node is named by a PBS-local code, below it by a part number. The convention draws this boundary for physical assemblies; software and digital configuration items have no profile yet (N6). Model-level decisions, open KNOTs and the findings register live in the [model README][MODEL]. This page covers how the PBS is numbered, what it contains, where it departs from its convention, and where the convention itself is still open.
@@ -91,11 +91,12 @@ The product root and its group table are in [`eWTW-PBS-000_Aircraft-Product`][RO
 | `eWTW-PBS-030` | Protection and Mechanical Systems | `030` … `036` · `038`† | Scaffold; `036` is held as *Pneumatic Vacated* |
 | `eWTW-PBS-040` | Avionics, Information and Auxiliary Power | `042` · `045` · `046` · `049` | Scaffold |
 | `eWTW-PBS-050` | Airframe Structure | `051` … `057` | [`053`][PBS-053] planned in depth — 10 sections, 59 stations, 431 part nodes; the other chapters are scaffolds |
+| `eWTW-PBS-060` | Thermal Machine and Power Generation | `068` | Scaffold, opened on 2026-11-14; `068` is gated by `KNOT-EWTW-SRC-001` |
 | `eWTW-PBS-070` | Electric Propulsion | `071`† · `073`† · `074`† · `076`† · `077`† · `078`† | Scaffold |
 | `eWTW-PBS-080` | Alternative and Quantum Propulsion | `080-000`† (reserved) | Scaffold |
 | `eWTW-PBS-090` | Software and Digital Configuration Items | `090-100`† · `090-300`† · `090-500`† | Scaffold |
 
-† No taxonomy mapping recorded: 8 chapter nodes and 3 section-grain stubs (model finding F03). PBS-local titles need not match the S-ATLAS chapter of the same number: PBS `074` is *Propulsion Power Electronics*, S-ATLAS `074` is *Propulsion Energy Storage Systems*. No group exists for combustion propulsion (S-ATLAS `060`–`069`); one is opened only if the propulsion decision admits a thermal machine (`KNOT-EWTW-PRP-001`).
+† No taxonomy mapping recorded: 8 chapter nodes and 3 section-grain stubs (model finding F03). PBS-local titles need not match the S-ATLAS chapter of the same number: PBS `074` is *Propulsion Power Electronics*, S-ATLAS `074` is *Propulsion Energy Storage Systems*. Group `060`, for the thermal machine (S-ATLAS `060`–`069`), was opened on 2026-11-14 with chapter `068` alone and its mapping recorded (`KNU-EWTW-PRP-001-05`): ruling R2 of `KNOT-EWTW-NRG-001` leaves no option without a thermal machine.
 
 ---
 
@@ -172,7 +173,7 @@ Places where the PBS departs from its convention or from the model's open decisi
 
 | Id | Deviation | Where | Closes when |
 |---|---|---|---|
-| F01 | The energy-carrier bay is called a battery bay, and the APM an electric auxiliary module, while the energy carrier and the electrical sources are open; PBS notes cite a publication illustration as their authority | Chapter `053` README; `PBS-053-BREAKDOWN.md`; READMEs of `053-900-010` and `053-400-020` | The content is declared, or the labels are neutralised |
+| F01 | The energy-carrier bay was called a battery bay, and the APM an electric auxiliary module, and PBS notes cited a publication illustration as their authority. The PBS notes were neutralised on 2026-11-14: after ruling R2 of `KNOT-EWTW-NRG-001` fuel is carried in every option and a propulsion battery in option C only. The illustration still reads *BATT BAY* | Illustration `ICN-EWTW-021000010-001-01`, in the TPuBS | Issue 02 of the illustration |
 | F02 | Derived documents lag the disk: `PBS-053-BREAKDOWN.md` lists 337 part numbers and `PBS-053-REALIZED-TREE.txt` 348 part files, against 431; the chapter `053` README links the deleted legacy `053-010-000` tree | Chapter `053` | Regenerated from disk, or marked superseded |
 | F03 | 11 nodes record no taxonomy mapping — 8 chapter nodes and 3 section-grain stubs — and point to an Amendment A1 ratification table that Issue 2 absorbed; PBS notes cite `ATA` chapters instead of S-ATLAS addresses | Nodes marked † above | Mapping recorded per CM-001 §3.1 — mandatory before any station is realized under these nodes |
 | F04 | 46 of 59 station records still declare the generator-reconstructed Amendment A1 form | `053-100-040`; `053-200`; `053-400` … `053-900` | Depth passes for `053-200` (once `KNOT-EWTW-MLG-001` is ruled or its note amended) and `053-400` … `053-900`, and the radome migration; each record then parses against the Issue 2 station contract (N3) — a pass having run is not the evidence |
@@ -240,6 +241,7 @@ This run: commit `72039505cefdbb9aa6450d713c655f5058374550`, clean tree, 2026-10
 | 0.1.0 | 2026-07-19 | Header only (`2debb670`) |
 | 0.2.0 | 2026-10-15 | Completed: numbering convention and identity boundary, structure, chapter `053`, node anatomy, lifecycle and change control, deviations on record (including N1–N3), verification commands |
 | 0.2.1 | 2026-10-15 | Technical review of 0.2.0 applied: short forms and their precedence (N5); station contract stated as a requirement; authority table; status, declared form and approval separated from conformance and ratification; open points in the convention (N5–N10) and stale A1 citations (N4); F03, F04, F08, F09 and F11 aligned with the model register, F09 and F11 split; checks by YAML parsing; snapshot pinned to the full commit |
+| 0.2.2 | 2026-11-14 | Group `060` opened for the thermal machine, with chapter `068` and its mapping, at the request of the authority after ruling R2 of `KNOT-EWTW-NRG-001`. Notes of F01 neutralised in chapter `053`. Notes added to `028` and to group `070` |
 
 [CM-001]: AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
 [CM-002]: ../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md
