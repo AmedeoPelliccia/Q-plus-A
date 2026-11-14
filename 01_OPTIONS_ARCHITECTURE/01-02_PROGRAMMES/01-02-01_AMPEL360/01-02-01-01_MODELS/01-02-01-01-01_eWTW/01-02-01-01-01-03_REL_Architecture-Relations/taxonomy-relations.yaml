@@ -17,9 +17,9 @@ alternatives:
   unaddressed:
   - name: ram-air turbine
     nearest: '024-230'
-    note: named as an alternate source in the research for KNU-EWTW-ESS-001-01; S-ATLAS has no node for it
+    note: named as an alternate source by AMC 25.1351(d) and fitted to the Embraer 190 (TSB Canada A16O0066); S-ATLAS has no node for it
   conditions: Sources able to supply essential loads after loss of the normal electrical sources; independence from the normal sources is assessed for each architecture
-  source: Research report for KNU-EWTW-ESS-001-01 (2026-11-12), which cites EASA AMC 25.1351(d) and the FAA special conditions for the 787-8; the report is not in the repository
+  source: Research records of 2026-11-13 and 2026-11-14 for KNOT-EWTW-ESS-001, in the KNOT register; AMC 25.1351(d) names batteries, auxiliary power units and ram-air turbines as alternate sources
   source_checked: null
   authority: taxonomy owner
   state: PROPOSED
@@ -73,6 +73,26 @@ relations:
   for: null
   conditions: Operation without normal electrical power; applicability is set by the certification basis of each model
   source: EASA Easy Access Rules for Large Aeroplanes (CS-25)
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED
+- key: auxiliary-power-module-as-essential-source-requires-bridging-storage
+  relation: requires
+  subject: '049'
+  object: '024-360'
+  for: essential electrical power
+  conditions: An auxiliary power module takes time to deliver after the normal sources are lost; a store keeps the services for immediate safety powered meanwhile, without crew action
+  source: 'Derived, not quoted: CS 25.1351(d) keeps the services for immediate safety powered without crew action (research record of 2026-11-13, statement 2, as reported). Precedent on another kind of source: TSB Canada A16O0066, where a ram-air turbine supplied the essential buses about eight seconds after the loss (research record of 2026-11-14, statement 2)'
+  source_checked: null
+  authority: taxonomy owner
+  state: PROPOSED
+- key: turbogenerator-as-essential-source-requires-bridging-storage
+  relation: requires
+  subject: '068'
+  object: '024-360'
+  for: essential electrical power
+  conditions: A generator channel of a turbogenerator takes time to deliver after the normal sources are lost; a store keeps the services for immediate safety powered meanwhile, without crew action
+  source: 'Derived, not quoted: CS 25.1351(d) keeps the services for immediate safety powered without crew action (research record of 2026-11-13, statement 2, as reported). Precedent on another kind of source: TSB Canada A16O0066, where a ram-air turbine supplied the essential buses about eight seconds after the loss (research record of 2026-11-14, statement 2)'
   source_checked: null
   authority: taxonomy owner
   state: PROPOSED

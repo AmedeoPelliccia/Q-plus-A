@@ -13,7 +13,7 @@ The EBS is a **derived index over `**/evidence/`**. Evidence lives with the node
 
 Per **`AMPEL360-SBS-ID-CM-002` §3 the EBS has no id space of its own** — its rows are path-addressed and carry a `subject:` field (a part number or an act id). There is nothing to number: an evidence row is fully identified by the path of the artefact it points at, and the subject binds it to the identity systems of the PBS (part numbers) or of the governance record (act ids). Derived means regenerated: the index is rebuilt from what is on disk, and a row with no artefact behind it is a defect of the index, not a record of intent.
 
-**Evidence classes:** ratified acts and conventions · migration and completion records · verification reports · analysis and test records (future) · principal-structural-element register (future).
+**Evidence classes:** ratified acts and conventions · migration and completion records · verification reports · analysis and test records · principal-structural-element register (future).
 
 ## Index
 

@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.6.0 · **Date:** 2026-11-14
+**Version:** 0.7.0 · **Date:** 2026-11-14
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -30,7 +30,7 @@ flowchart LR
     R -.->|"below the declared maturity"| W["Waiver<br/>QPLUS-LC-DECISION-MATURITY-001"]
 ```
 
-No decision anchor has declared its criteria or its maturity thresholds yet: `criteria` and `maturity_required` are empty in every record, so no option can be scored (rule 5 of [CM-004][CM-004]). The verification script enforces that gate. Each anchor has a KNU that declares them first — a dedicated one for the configuration decisions (`KNU-EWTW-PRP-001-01` also serves `SRC`), the analysis KNU for the ownership rulings. A ruling may narrow the options without closing the KNOT, as ruling R1 of `KNOT-EWTW-NRG-001` did.
+No decision anchor has approved criteria or maturity thresholds yet: `maturity_required` is empty in every record, and the one record that has criteria holds them as proposed, so no option can be scored (rule 5 of [CM-004][CM-004]). The verification script enforces that gate. Each anchor has a KNU that declares them first — a dedicated one for the configuration decisions (`KNU-EWTW-PRP-001-01` also serves `SRC`), the analysis KNU for the ownership rulings. A ruling may narrow the options without closing the KNOT, as ruling R1 of `KNOT-EWTW-NRG-001` did.
 
 ---
 
@@ -64,6 +64,12 @@ The same ruling removes fuel cells from `KNOT-EWTW-SRC-001`. A provisional rulin
 ### Criteria proposed
 
 One KNOT has criteria: `KNOT-EWTW-ESS-001`, with seven mandatory criteria (`M1` to `M7`) and five tradable ones (`T1` to `T5`), drawn from the [research record of 2026-11-13](000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md). A [second record, of 2026-11-14](000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md), covers the emergency sources of one regional type and the reading of EASA SC E-19. All are `PROPOSED`. Approving them, with the weights and thresholds of the tradable ones, is an act of the authority. Until then no option is scored (rule 5).
+
+### Options and loads of essential power
+
+`KNOT-EWTW-ESS-001` registers five options, all `open`: a dedicated essential battery, a ram-air turbine, a segregated generator channel on the turbogenerator, an auxiliary power module, and a reserved partition of the propulsion battery. The [option set of 2026-11-14](000_General/evidence/KNOT-EWTW-ESS-001_option-set_2026-11-14.md) says with which electrical sources each can exist and what each shares with the propulsion chain. It does not rank them.
+
+The [essential load analysis](000_General/evidence/ELA-EWTW-ESS-001/README.md) lists the loads kept after the loss of normal generation, built from the services of AMC 25.1351(d). At nominal values the essential network draws between 4 and 5 kW from its source. Every load figure in it is an assumption, to be replaced by sources or design values. Its budget is written and checked by [`tools/essential_loads.py`](../../../../../../tools/essential_loads.py).
 
 ---
 
@@ -112,15 +118,15 @@ Home to be ruled, since each decides where its scope lives: `DFN` · `KEL` · `L
 
 ## Research agenda
 
-The KNUs neither done nor cancelled, generated from the records (rule 9). One KNU is pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13. The three KNUs of `KNOT-EWTW-ESS-001` are in progress on two research records. The others are proposed and have not started.
+The KNUs neither done nor cancelled, generated from the records (rule 9). Three KNUs are pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13, and `KNU-EWTW-ESS-001-01` and `-02`, with the essential load analysis and the option set of 2026-11-14. `KNU-EWTW-ESS-001-03` is in progress and waits for the authority. The others are proposed and have not started.
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
 | `KNU-EWTW-CAD-001-01` | Source of record, script or FreeCAD document | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-02` | Round trip of EWTW-533001-000 through FreeCAD | `VERIFICATION_OBJECT` | — | PENDING_REVIEW |
 | `KNU-EWTW-CAD-001-03` | CAD convention | `CONTROLLED_ARTEFACT` | `DAT` | NOT_STARTED |
-| `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
-| `KNU-EWTW-ESS-001-02` | Essential source options | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
+| `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
+| `KNU-EWTW-ESS-001-02` | Essential source options | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
 | `KNU-EWTW-ESS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
 | `KNU-EWTW-LCM-001-01` | Baseline notation | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-LCM-001-02` | Registry re-pin | `WORK_ITEM` | — | NOT_STARTED |
@@ -215,7 +221,7 @@ python3 tools/knot_check.py "$REG" "$TAX"
 python3 tools/knot_check_test.py
 ```
 
-The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the remaining output reproduces the four tables and the three lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 14 tests: the register as it stands, and thirteen copies that each break one rule.
+The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: `NRG` R1`; the remaining output reproduces the four tables and the three lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 16 tests: the register as it stands, and copies that each break one rule.
 
 ---
 
@@ -231,6 +237,7 @@ The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.4.2 | 2026-11-13 | Pointer to the architecture relations node, which reads this register. The checker reports a KNOT recorded in more than one file. No record changed |
 | 0.5.0 | 2026-11-13 | Three KNOTs that precede the next 3D model, with ten KNUs: `KNOT-EWTW-CAD-001` 3D model of record, `KNOT-EWTW-DAT-001` fuselage datum and master geometry, `KNOT-EWTW-ROD-001` rear adjustable rods. The checker lists control KNOTs that have no chapter. `KNU-EWTW-CAD-001-02` ran once with `tools/freecad_roundtrip.py` and is pending review |
 | 0.6.0 | 2026-11-14 | `KNOT-EWTW-ESS-001`: twelve proposed criteria, two research records — the regulatory basis, then the sources of the class and the precedents — and narrower research briefs for its three KNUs. `KNOT-EWTW-CAD-001` restated for generator `v0.2.2-concept`. CM-004 defines the criterion record |
+| 0.7.0 | 2026-11-14 | `KNOT-EWTW-ESS-001`: five options registered with their footprints, an option-set record and a first essential load analysis; `KNU-EWTW-ESS-001-01` and `-02` pending review. The essential battery footprint of `KNOT-EWTW-STO-001` is filed at `024-360`. `tools/essential_loads.py` with 24 tests. `KNOT-EWTW-CAD-001` restated: the STEP file of generator `v0.2.2-concept` is on `main` and passes the round trip |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

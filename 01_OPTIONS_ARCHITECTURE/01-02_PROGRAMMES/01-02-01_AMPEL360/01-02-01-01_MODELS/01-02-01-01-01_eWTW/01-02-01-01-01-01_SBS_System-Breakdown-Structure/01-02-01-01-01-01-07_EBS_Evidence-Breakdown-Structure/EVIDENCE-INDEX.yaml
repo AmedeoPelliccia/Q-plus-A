@@ -107,14 +107,17 @@ rows:
     subject: EWTW-533001-000
     path: null
     status: pending-commit
-    action: "regenerate the four artefacts of node EWTW-533001-000 with generator v0.2.2-concept, run tools/freecad_roundtrip.py on the new STEP file and commit its report as evidence/EWTW-533001-000_concept_freecad-roundtrip.txt; the row then becomes on-disk with its path"
+    action: "commit the round-trip report of 2026-11-14 as evidence/EWTW-533001-000_concept_freecad-roundtrip.txt in node EWTW-533001-000, with the verification report, the run record and the preview written by generator v0.2.2-concept; the row then becomes on-disk with its path"
     note: >
       Two round trips through FreeCAD 1.0.0 (Open CASCADE 7.8.1), run without the interface
       on 2026-11-13. On the STEP file written by v0.2.1-concept (commit 66af8162):
       6 PASS | 5 FAIL | 6 INFO, 119 bodies against 50 leaf products. On the output of
       v0.2.2-concept in a verification run: 11 PASS | 0 FAIL | 6 INFO, 50 bodies under
-      their part numbers. Neither report is the one of record: the STEP file on main is
-      empty until the artefacts are regenerated (model README, finding F23).
+      their part numbers. A third run on 2026-11-14, on the STEP file on main at 81c35059:
+      11 PASS | 0 FAIL | 6 INFO, 50 bodies under their part numbers. That file equals the
+      output of the verification run, line endings apart. Its report is the one of record
+      once the author commits it into the node, which lies in the PBS (model README,
+      finding F23).
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml
 
@@ -138,5 +141,28 @@ rows:
       SC E-19, as accepted on review from a second report by Grok 4.7 of 2026-11-14. Seven
       of its eleven statements were read by the reviewer at the source; three report that
       a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+    status: on-disk
+    note: >
+      Essential load analysis 0.1.0: the loads kept after the loss of normal electrical
+      generation, with power, energy and battery size. Input in essential-loads.yaml beside
+      it; the budget is written and checked by tools/essential_loads.py. Every load figure
+      is an assumption. It states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ESS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_option-set_2026-11-14.md
+    status: on-disk
+    note: >
+      Option set of essential power: five options registered as open, with the electrical
+      sources each can exist with and what each shares with the propulsion chain. The
+      reviewer's analysis, not drawn from a source. No option is scored.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml

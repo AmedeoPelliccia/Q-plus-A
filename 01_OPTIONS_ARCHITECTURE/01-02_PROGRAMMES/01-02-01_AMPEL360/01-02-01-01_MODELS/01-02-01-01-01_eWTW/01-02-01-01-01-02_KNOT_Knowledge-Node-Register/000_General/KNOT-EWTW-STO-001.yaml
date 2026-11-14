@@ -59,7 +59,7 @@ knot:
     state: open
     pbs_footprint:
     - action: create
-      taxonomy: '024'
+      taxonomy: '024-360'
       element: Essential and emergency battery installation
       key: essential-battery-installation
   criteria: []

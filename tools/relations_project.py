@@ -1,4 +1,4 @@
-# Generated 2026-11-13 - relations_project.py (0.2.0)
+# Generated 2026-11-14 - relations_project.py (0.3.0)
 """Check a model's architecture relations and project them onto its KNOT register.
 
 Usage: python3 tools/relations_project.py <relations> <register> <s-atlas> [--check | --write]
@@ -299,7 +299,10 @@ def project(tax, prog, knots, role, model):
                         and r["subject"] in members})  # a relation holds at its recorded address only
         if not hit:
             owners |= {kid for _, kid in uses}
-        rows.append({"members": members, "status": status, "elements": uses, "requires": needs})
+        scoped = {r["object"] for r in tax.get("relations", []) if r["relation"] == "requires" and r.get("for") == role
+                  and active(r) and r["subject"] in members}   # what the candidate brings with it for this role
+        rows.append({"members": members, "status": status, "elements": uses, "requires": needs,
+                     "footprint": tuple(sorted(set(members) | scoped))})
 
     registered, dead = {}, {}                    # footprint addresses -> option, by whether the option still stands
     for option in knots[knot]["options"]:
@@ -309,13 +312,16 @@ def project(tax, prog, knots, role, model):
                 registered[addresses] = option["id"]
             else:
                 dead[addresses] = (option["id"], option["state"])
-    projected = {r["members"] for r in rows if r["status"].startswith("open")}
+    projected = {r["footprint"] for r in rows if r["status"].startswith("open")}
+    nearest = {u["nearest"] for u in alt.get("unaddressed", [])}
+    homeless = sorted(m for m in set(registered) - projected if set(m) & nearest)   # options on an unaddressed candidate
     derived, declared = owners - {knot}, set(knots[knot]["depends_on"])
-    outside = {m[:3] for members in projected for m in members} - {t[:3] for t in knots[knot]["taxonomy"]}
+    outside = {m[:3] for r in rows if r["status"].startswith("open") for m in r["members"]} - {t[:3] for t in knots[knot]["taxonomy"]}
     return {
         "role": role, "model": model, "knot": knot, "rows": rows, "unaddressed": alt.get("unaddressed", []),
-        "outside": sorted(outside), "registered": registered, "dead": dead,
-        "only_projected": sorted(projected - set(registered)), "only_registered": sorted(set(registered) - projected),
+        "outside": sorted(outside), "registered": registered, "dead": dead, "homeless": homeless,
+        "only_projected": sorted(projected - set(registered)),
+        "only_registered": sorted(set(registered) - projected - set(homeless)),
         "derived": sorted(derived), "declared": sorted(declared),
         "consistent": reach(derived, knots) | {knot} == reach(declared, knots) | {knot},
     }
@@ -337,7 +343,9 @@ def render(p, TAX):
     if not p["registered"] and not p["dead"]:
         lines.append(f"Options: none registered with a footprint; the {sum(r['status'].startswith('open') for r in p['rows'])} open candidates are proposals.")
     elif not p["only_projected"] and not p["only_registered"]:
-        lines.append("Options: the open candidates match registered options " + ", ".join(sorted(p["registered"].values())) + ".")
+        matched = sorted(option for footprint, option in p["registered"].items() if footprint not in p["homeless"])
+        lines.append("Options: the open candidates match registered options " + ", ".join(matched) + "."
+                     if matched else "Options: no registered option matches an open candidate.")
     else:
         fate = lambda members: " (option {} is {})".format(*p["dead"][members]) if members in p["dead"] else ""
         parts = []
@@ -347,6 +355,8 @@ def render(p, TAX):
             parts.append("standing options with no open candidate: "
                          + " · ".join(f"{p['registered'][m]} {code(m)}" for m in p["only_registered"]))
         lines.append("Options: mismatch — " + "; ".join(parts) + ".")
+    for footprint in p["homeless"]:
+        lines.append(f"Option {p['registered'][footprint]} stands on a candidate that has no S-ATLAS address: {code(footprint)}.")
     if p["outside"]:
         lines.append("Scope: open candidates lie in chapters outside the KNOT's `taxonomy` field: "
                      + " · ".join(f"`{c}`" for c in p["outside"]) + ".")
@@ -358,7 +368,7 @@ def render(p, TAX):
     return lines
 
 
-def generated_section(readme, expected, write):
+def generated_section(readme, expected, write, BEGIN=BEGIN, END=END):
     """Compare the generated section of the README with the output; with write, replace it. Return a failure or None."""
     try:
         text = readme.read_text(encoding="utf-8")

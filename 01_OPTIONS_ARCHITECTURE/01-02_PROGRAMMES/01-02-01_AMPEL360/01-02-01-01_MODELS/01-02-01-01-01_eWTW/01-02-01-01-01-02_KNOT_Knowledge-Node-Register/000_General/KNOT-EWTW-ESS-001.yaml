@@ -37,7 +37,72 @@ knot:
     ref: eWTW-PBS-024-000
     relation: gates
     note: Essential feeds and segregation
-  options: []
+  options:
+  - id: A
+    text: a dedicated essential battery, segregated from the propulsion storage and sized for the whole endurance
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '024-360'
+      element: Essential and emergency battery installation
+      key: essential-battery-installation
+      owner: KNOT-EWTW-STO-001
+  - id: B
+    text: a ram-air turbine, with the essential battery bridging its deployment
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '024-230'
+      element: Ram-air turbine installation
+      key: ram-air-turbine-installation
+      note: S-ATLAS has no node for a ram-air turbine; filed at the nearest node until the taxonomy owner rules
+    - action: update
+      taxonomy: '024-360'
+      element: Essential and emergency battery installation
+      key: essential-battery-installation
+      owner: KNOT-EWTW-STO-001
+  - id: C
+    text: a segregated generator channel on the turbogenerator, with the essential battery bridging its transfer
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+      note: only where KNOT-EWTW-SRC-001 keeps a turbogenerator
+    - action: update
+      taxonomy: '024-360'
+      element: Essential and emergency battery installation
+      key: essential-battery-installation
+      owner: KNOT-EWTW-STO-001
+  - id: D
+    text: an auxiliary power module, with the essential battery bridging its start
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '049'
+      element: Auxiliary power module
+      key: auxiliary-power-module
+    - action: update
+      taxonomy: '024-360'
+      element: Essential and emergency battery installation
+      key: essential-battery-installation
+      owner: KNOT-EWTW-STO-001
+  - id: E
+    text: a reserved partition of the propulsion battery, with its own feed to the essential network
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '074'
+      element: Propulsive battery installation
+      key: propulsive-battery-installation
+      owner: KNOT-EWTW-NRG-001
+    - action: create
+      taxonomy: '076-700'
+      element: Essential feed from the propulsion battery
+      key: propulsion-battery-essential-feed
+      note: no authority precedent for a propulsion battery as the alternate source (research record of 2026-11-14)
   criteria:
   - id: M1
     class: mandatory
@@ -149,7 +214,7 @@ knot:
     exit: Essential load list with duration and segregation
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: IN_PROGRESS
+    progress: PENDING_REVIEW
     created_date: '2026-11-08'
     start_date: '2026-11-13'
     end_date: null
@@ -158,6 +223,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/ELA-EWTW-ESS-001/README.md
   - knu_id: KNU-EWTW-ESS-001-02
     title: Essential source options
     knu_class: ANALYSIS_PACKAGE
@@ -177,13 +244,15 @@ knot:
     exit: Candidate essential architecture per option
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: IN_PROGRESS
+    progress: PENDING_REVIEW
     created_date: '2026-11-08'
     start_date: '2026-11-14'
     end_date: null
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_option-set_2026-11-14.md
   - knu_id: KNU-EWTW-ESS-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET

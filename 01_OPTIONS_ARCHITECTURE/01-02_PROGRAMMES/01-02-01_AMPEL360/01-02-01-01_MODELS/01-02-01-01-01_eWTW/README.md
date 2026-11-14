@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
 | Propulsion posture | All-electric, or hybrid-electric with conventional fuel; no hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.4 |
+| Version | 0.3.5 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -250,7 +250,7 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 | [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 | Architecture relations at programme, model and product level, and between taxonomy nodes; their projection onto the KNOT register | Yes — both *PROPOSED*; the taxonomy relations are held in the model until the taxonomy owner adopts them |
 | [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
-| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register | Yes — each with its tests |
+| [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] · [`tools/essential_loads.py`][ELA-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register; the budget of the essential load analysis | Yes — each with its tests |
 | `complete_PBS-053-000.py` · `-100` · `-200` · `-300` · `migrate_PBS-053-010.py` | Depth passes for chapter `053`; the radome migration | Yes, at the repository root — `-200` not yet applied ([F04](#9-findings)) |
 
 ---
@@ -283,7 +283,7 @@ Places where the repository says two things, or points at something superseded. 
 | F20 | `F-WARN` | Quantities: CM-001 counts leaves and forbids double counting, but does not say how quantities multiply along repeated occurrences, aggregate by catalog identity or follow effectivity, nor when a group with enumerated children is a set rather than a sub-assembly | CM-001 §4.2, §6 | CM-001 defines the quantity basis, with worked cases: a repeated sub-assembly, a reused catalog part, parts installed together, exclusive alternatives |
 | F21 | `F-WARN` | Authority: CM-001 calls both the folder (§5) and the register (§8) SSOT without saying which governs what; it designates no record for revision and effectivity; and `catalog_pn` (§6) is carried by no part record | CM-001 §5, §6, §8; none of the 431 `part.yaml` carries `catalog_pn` | CM-001 states authority per field — identity, row status, revision, effectivity, catalog identity |
 | F22 | `F-WARN` | Approval records: CM-001 Issue 2 and CM-002 Issue 1 are on `main`, yet both headers read *PROPOSED — merge constitutes ratification* and no record names the approval act. Approving a convention is a separate act from ratifying a product baseline | CM-001 Issue 2 entered in `8ed1bd59`, 2026-08-22; CM-002 Issue 1 in `546c84a4`, 2026-09-06 | Each header names its approval act — commit, date, authority — and the resulting status |
-| F23 | `F-BLOCK` | The geometry of record of `EWTW-533001-000` is not consistent on `main`. Up to `v0.2.1-concept` the generator wrote the outflow-valve surround malformed: the doubler `-041` and the frame `-042` were lofts between open polygons lying on the cone, and its rounded-rectangle helper ran out to one sharp corner and back. In the STEP file of that version FreeCAD 1.0.0 shows 119 bodies where the report counts 50, with labels that are not part numbers. The interference recorded against the baseline, 34,856.8 mm³, equals the volume of one bracket and is an artefact of those bodies, and the recorded mass, 80.3 kg, rests on them too. The corrected generator, `v0.2.2-concept`, is on `main` since 2026-11-13. Its outputs are not: the STEP file on `main` is empty, and the verification report, the run record and the preview are those of `v0.2.1-concept`. A verification run of `v0.2.2-concept` gave 50 bodies of one solid each, no interference, AP242, and 83.2 kg at the same density | `CAD/source/EWTW-533001-000_concept.py`; `CAD/exchange/EWTW-533001-000_concept.step`, two bytes; `Prompts/Run-record.yaml`, which names `v0.2.1-concept`; round trips of 2026-11-13 with [`tools/freecad_roundtrip.py`][ROUNDTRIP], in the EBS index | The four artefacts are regenerated with `v0.2.2-concept` and committed, the round trip shows 50 bodies under their part numbers, and `TPM-533001-MASS`, the open item of the baseline and risk `R-533001-06` are updated |
+| F23 | `F-BLOCK` | The artefacts of record of `EWTW-533001-000` are not consistent on `main`. Up to `v0.2.1-concept` the generator wrote the outflow-valve surround malformed: the doubler `-041` and the frame `-042` were lofts between open polygons lying on the cone, and its rounded-rectangle helper ran out to one sharp corner and back. In the STEP file of that version FreeCAD 1.0.0 shows 119 bodies where the report counts 50, with labels that are not part numbers. The interference recorded against the baseline, 34,856.8 mm³, equals the volume of one bracket and is an artefact of those bodies, and the recorded mass, 80.3 kg, rests on them too. The corrected generator, `v0.2.2-concept`, is on `main` since 2026-11-13, and its STEP file since 2026-11-14: AP242, 50 bodies of one solid each, shown under their part numbers by FreeCAD 1.0.0. The verification report, the run record and the preview are still those of `v0.2.1-concept`, and the run record carries the hash of the earlier STEP file. A verification run of `v0.2.2-concept` gave no interference and 83.2 kg at the same density | `CAD/source/EWTW-533001-000_concept.py`; `CAD/exchange/EWTW-533001-000_concept.step` at `81c35059`, equal to the output of the verification run, line endings apart; `Prompts/Run-record.yaml`, which names `v0.2.1-concept`; round trips of 2026-11-13 and 2026-11-14 with [`tools/freecad_roundtrip.py`][ROUNDTRIP], in the EBS index | The verification report, the run record and the preview of `v0.2.2-concept` are committed with the round-trip report, and `TPM-533001-MASS`, the open item of the baseline and risk `R-533001-06` are updated |
 
 ---
 
@@ -304,7 +304,7 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
-The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests.
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`.
 
 ---
 
@@ -321,6 +321,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.2 | 2026-11-12 | Architecture relations node created beside the KNOT register, under `AMPEL360-REL-CM-005` and `QPLUS-REL-001` (both proposed): pilot relations and their projection onto `KNOT-EWTW-SRC-001` and `KNOT-EWTW-ESS-001`; the introduction, §5, §8 and §10 point to it; §8 lists the two verification tools |
 | 0.3.3 | 2026-11-13 | §5 gains *3D models and their assembly*: `KNOT-EWTW-CAD-001`, `KNOT-EWTW-DAT-001` and `KNOT-EWTW-ROD-001`, recorded in the KNOT register 0.5.0. Finding F23 from the round trip of the model of record through FreeCAD |
 | 0.3.4 | 2026-11-13 | F23 restated for the state of `main`: generator `v0.2.2-concept` committed, its outputs not yet. `KNOT-EWTW-ESS-001` has proposed criteria and a first research record (KNOT register 0.6.0) |
+| 0.3.5 | 2026-11-14 | `KNOT-EWTW-ESS-001` registers five options and has a first essential load analysis, in which every load figure is an assumption (KNOT register 0.7.0). The architecture relations take a candidate with what it brings for its role (0.2.0). `tools/essential_loads.py` added. F23 restated: the STEP file of `v0.2.2-concept` is on `main` and passes the round trip; three artefacts are still those of `v0.2.1-concept` |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -350,6 +351,8 @@ The KNOT register and the architecture relations are verified with their own com
 [KNOT-CHECK]: ../../../../../tools/knot_check.py
 [ROUNDTRIP]: ../../../../../tools/freecad_roundtrip.py
 [REL-TOOL]: ../../../../../tools/relations_project.py
+[ELA-TOOL]: ../../../../../tools/essential_loads.py
+[ELA]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py
