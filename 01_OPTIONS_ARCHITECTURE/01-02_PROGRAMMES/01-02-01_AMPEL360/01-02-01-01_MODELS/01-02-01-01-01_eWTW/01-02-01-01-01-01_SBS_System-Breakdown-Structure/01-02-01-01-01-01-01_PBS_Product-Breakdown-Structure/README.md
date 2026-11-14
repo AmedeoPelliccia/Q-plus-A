@@ -96,7 +96,7 @@ The product root and its group table are in [`eWTW-PBS-000_Aircraft-Product`][RO
 | `eWTW-PBS-080` | Alternative and Quantum Propulsion | `080-000`† (reserved) | Scaffold |
 | `eWTW-PBS-090` | Software and Digital Configuration Items | `090-100`† · `090-300`† · `090-500`† | Scaffold |
 
-† No taxonomy mapping recorded: 8 chapter nodes and 3 section-grain stubs (model finding F03). PBS-local titles need not match the S-ATLAS chapter of the same number: PBS `074` is *Propulsion Power Electronics*, S-ATLAS `074` is *Propulsion Energy Storage Systems*. Group `060`, for the thermal machine (S-ATLAS `060`–`069`), was opened on 2026-11-14 with chapter `068` alone and its mapping recorded (`KNU-EWTW-PRP-001-05`): ruling R2 of `KNOT-EWTW-NRG-001` leaves no option without a thermal machine.
+† No taxonomy mapping recorded: 8 chapter nodes and 3 section-grain stubs (model finding F03). PBS-local titles need not match the S-ATLAS chapter of the same number: PBS `074` is *Propulsion Power Electronics*, S-ATLAS `074` is *Propulsion Energy Storage Systems*. Group `060`, for the thermal machine (S-ATLAS `060`–`069`), was opened on 2026-11-14 with chapter `068` alone and its mapping recorded (`KNU-EWTW-PRP-001-05`), ahead of the ruling of `KNOT-EWTW-PRP-001`: ruling R2 of `KNOT-EWTW-NRG-001` leaves no option without a thermal machine, and the exclusion of hydrogen rests on R1, which is provisional.
 
 ---
 

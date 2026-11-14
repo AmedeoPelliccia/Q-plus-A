@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.10.1 · **Date:** 2026-11-14
+**Version:** 0.10.2 · **Date:** 2026-11-14
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -127,7 +127,7 @@ Home to be ruled, since each decides where its scope lives: `DFN` · `KEL` · `L
 
 ## Research agenda
 
-The KNUs neither done nor cancelled, generated from the records (rule 9). Three KNUs are pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13, and `KNU-EWTW-ESS-001-01` and `-02`, with the essential load analysis and the option set of 2026-11-14. `KNU-EWTW-NRG-001-02` is done: ruling R2 approved the mission set. `KNU-EWTW-ESS-001-03` is in progress and waits for the authority. Four other KNUs of `KNOT-EWTW-NRG-001` are in progress on a research record of 2026-11-14. The others are proposed and have not started.
+The KNUs neither done nor cancelled, generated from the records (rule 9). Four KNUs are pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13; `KNU-EWTW-ESS-001-01` and `-02`, with the essential load analysis and the option set of 2026-11-14; and `KNU-EWTW-PRP-001-05`, the PBS group opened on 2026-11-14. `KNU-EWTW-NRG-001-02` is done: ruling R2 approved the mission set. `KNU-EWTW-ESS-001-03` is in progress and waits for the authority. Four other KNUs of `KNOT-EWTW-NRG-001` are in progress on a research record of 2026-11-14, and four of `KNOT-EWTW-PRP-001` on [another of the same day](000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md), on the propulsion chain. That record proposes no criteria: it says what was shown in flight and on the ground, what the rules require, and that each of the two open options, distributed and concentrated, has a precondition nothing read meets. The others are proposed and have not started.
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
@@ -145,10 +145,10 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Three 
 | `KNU-EWTW-NRG-001-05` | Thermal machine on conventional fuel | `ANALYSIS_PACKAGE` | `PRP` · `SRC` | IN_PROGRESS |
 | `KNU-EWTW-NRG-001-06` | Trade study of the energy carrier | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-NRG-001-07` | Rationale and evidence of ruling R1 | `EVIDENCE_RECORD` | — | NOT_STARTED |
-| `KNU-EWTW-PRP-001-01` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | `SRC` | NOT_STARTED |
-| `KNU-EWTW-PRP-001-02` | Propulsor architecture | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
-| `KNU-EWTW-PRP-001-03` | Efficiency and heat chain | `ANALYSIS_PACKAGE` | `SRC` | NOT_STARTED |
-| `KNU-EWTW-PRP-001-04` | Propulsion failure cases | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
+| `KNU-EWTW-PRP-001-01` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | `SRC` | IN_PROGRESS |
+| `KNU-EWTW-PRP-001-02` | Propulsor architecture | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
+| `KNU-EWTW-PRP-001-03` | Efficiency and heat chain | `ANALYSIS_PACKAGE` | `SRC` | IN_PROGRESS |
+| `KNU-EWTW-PRP-001-04` | Propulsion failure cases | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
 | `KNU-EWTW-PRP-001-05` | PBS group for a thermal machine | `CONTROLLED_ARTEFACT` | — | PENDING_REVIEW |
 | `KNU-EWTW-SRC-001-01` | Electrical load analysis | `ANALYSIS_PACKAGE` | `STO` · `ESS` | NOT_STARTED |
 | `KNU-EWTW-SRC-001-02` | Source sizing | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
@@ -172,7 +172,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Three 
 | `KNU-EWTW-ROD-001-04` | 3D model request EWTW-533002-000 | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-TSI-001-01` | Tail-strike provision and sensing | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 
-Seven KNUs touch protected areas and are author acts. Six are in the PBS: `KNU-EWTW-PRP-001-05`, `KNU-EWTW-KEL-001-02`, `KNU-EWTW-ROD-001-03`, `KNU-EWTW-ROD-001-04`, `KNU-EWTW-DAT-001-02` and `KNU-EWTW-CAD-001-03`. One is in the taxonomy: `KNU-EWTW-KEL-001-01`. Four are conditional on their KNOT's ruling: `KNU-EWTW-STO-001-03`, and `KNU-EWTW-ROD-001-02`, `-03` and `-04`, which run only if the ruling keeps the rod station. `KNU-EWTW-PRP-001-05` was conditional on a ruling that admits a thermal machine. It is pending review since 2026-11-14: ruling R2 of `KNOT-EWTW-NRG-001` leaves no option without one, and the authority asked for the group, which is PBS group `060` with chapter `068`.
+Seven KNUs touch protected areas and are author acts. Six are in the PBS: `KNU-EWTW-PRP-001-05`, `KNU-EWTW-KEL-001-02`, `KNU-EWTW-ROD-001-03`, `KNU-EWTW-ROD-001-04`, `KNU-EWTW-DAT-001-02` and `KNU-EWTW-CAD-001-03`. One is in the taxonomy: `KNU-EWTW-KEL-001-01`. Four are conditional on their KNOT's ruling: `KNU-EWTW-STO-001-03`, and `KNU-EWTW-ROD-001-02`, `-03` and `-04`, which run only if the ruling keeps the rod station. `KNU-EWTW-PRP-001-05` is conditional on a ruling that admits a thermal machine, and `KNOT-EWTW-PRP-001` has no ruling. The authority asked for the group on 2026-11-14 and it is opened ahead of that ruling, as PBS group `060` with chapter `068`: ruling R2 of `KNOT-EWTW-NRG-001` removes the all-electric chain, and the exclusion of hydrogen rests on R1, which is provisional. The KNU is pending review, and the research record of the propulsion chain keeps the objection that the group gets ahead of the ruling.
 
 ---
 
@@ -252,6 +252,7 @@ The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.9.1 | 2026-11-14 | Candidate missions reissued as 0.2.0 after an audit: fitted to the published block fuel of a reference type and anchored to its airframe. An audit record keeps what was accepted and what was not. Maturity record `Q1` restated with the published pack of a two-seat aeroplane. `tools/mission_closure.py` 0.2.0 with 29 tests |
 | 0.10.0 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001`, complete: missions with their roles, 100 seats, the final reserve, and the required maturity, approved; option A excluded with a reopen condition. `KNU-EWTW-NRG-001-02` done. Maturity records approved, the motor without a level. Missions reissued as 0.3.0. CM-004 names the scale of the maturity record and the reopen condition. 32 tests for `tools/mission_closure.py` |
 | 0.10.1 | 2026-11-14 | PBS group `060` opened for the thermal machine at the request of the authority: `KNU-EWTW-PRP-001-05` pending review, and chapter `068` gated by `KNOT-EWTW-SRC-001` |
+| 0.10.2 | 2026-11-14 | Research record of the propulsion chain, reviewed: eleven statements read at the source, four as reported, seven findings of absence, ten items not accepted. `KNU-EWTW-PRP-001-01` to `-04` in progress. The basis of PBS group `060` restated: opened ahead of the ruling of `KNOT-EWTW-PRP-001`, on R2 |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

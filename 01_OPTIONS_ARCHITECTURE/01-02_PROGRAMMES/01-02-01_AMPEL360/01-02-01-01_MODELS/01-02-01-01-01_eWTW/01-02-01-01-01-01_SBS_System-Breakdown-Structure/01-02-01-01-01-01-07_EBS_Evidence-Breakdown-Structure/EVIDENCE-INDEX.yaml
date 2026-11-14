@@ -128,6 +128,20 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-PRP-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the propulsion chain, as accepted on review from a report of
+      2026-11-14 relayed by the author - demonstrators of distributed and hybrid
+      propulsion, megawatt machines and heat, propeller and fan studies, and the rules on
+      engine failure. Eleven of its statements were read by the reviewer at the source,
+      four are as reported, seven report that a search found nothing. It keeps the
+      objection of the report to opening the PBS group of the thermal machine.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-PRP-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-ESS-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
     status: on-disk
