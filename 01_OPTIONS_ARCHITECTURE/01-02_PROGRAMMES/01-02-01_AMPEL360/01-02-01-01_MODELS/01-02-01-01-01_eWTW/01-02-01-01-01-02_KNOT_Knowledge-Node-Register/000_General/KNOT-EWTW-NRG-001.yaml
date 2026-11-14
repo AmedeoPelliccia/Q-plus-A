@@ -165,7 +165,7 @@ knot:
     options: [C]
     decision: REV-B_RELEASED of the scopes this KNOT affects
     required: 6
-    evidence: 'A type-certificated two-seat aeroplane flies on a dual battery system at 345 V (EASA.A.573, manufacturer page read on 2026-11-14). Its energy and its mass are not on record, and no pack of the size this aircraft needs is on record'
+    evidence: 'A type-certificated two-seat aeroplane flies on two batteries of 24.8 kWh in total and about 70 kg each, about 177 Wh/kg (EASA.A.573, manufacturer page read on 2026-11-14). It shows a specific energy at 25 kWh. No pack of megawatt-hour size is on record, nor its cycle life or its containment'
     level: null
     source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
     state: PROPOSED
@@ -303,6 +303,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
     - view: EBS
       ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
   - knu_id: KNU-EWTW-NRG-001-03
     title: Mission energy and power budget
     knu_class: ANALYSIS_PACKAGE

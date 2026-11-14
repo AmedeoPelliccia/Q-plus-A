@@ -191,10 +191,23 @@ rows:
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
     status: on-disk
     note: >
-      Candidate missions and first-order closure 0.1.0: three design missions for 100
-      passengers and a range-equation test of which energy carrier flies each within a
-      take-off mass limit. Input in missions.yaml beside it; the screening is written and
-      checked by tools/mission_closure.py. Every aircraft parameter is an assumption. A
-      proposal to the authority; it states no conformity.
+      Candidate missions and first-order closure 0.2.0: three stages for 100 passengers and
+      a range-equation test of which energy carrier flies each in an airframe of the class.
+      The test is fitted to six published sectors of the Embraer 190 and checked on its
+      published range. Input in missions.yaml beside it; the screening is written and
+      checked by tools/mission_closure.py. A proposal to the authority; it states no
+      conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
+    status: on-disk
+    note: >
+      Audit record: an audit of the candidate missions 0.1.0, relayed by the author on
+      2026-11-14, and its review. The main finding is accepted: the model was not anchored
+      to an in-service type. Eight findings accepted with their effect on 0.2.0; six items
+      not accepted or not read.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml

@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.9.0 · **Date:** 2026-11-14
+**Version:** 0.9.1 · **Date:** 2026-11-14
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -67,7 +67,7 @@ Two KNOTs have criteria. `KNOT-EWTW-ESS-001` has seven mandatory criteria (`M1` 
 
 ### Missions and maturity of the energy carrier
 
-The [candidate missions](000_General/evidence/MSN-EWTW-NRG-001/README.md) propose three design missions for 100 passengers — stages of 500, 1,100 and 2,000 km — and test at first order which energy carrier flies each within a take-off mass limit. Fuel for a turbogenerator flies the three. Batteries alone fly none at a pack level that exists: the short mission needs about 850 Wh/kg at pack level at nominal values. A battery beside the fuel closes the short mission and saves no fuel below about 1,000 Wh/kg. Every aircraft parameter in the test is an assumption, and the mission set is approved by the authority. The screening is written and checked by [`tools/mission_closure.py`](../../../../../../tools/mission_closure.py).
+The [candidate missions](000_General/evidence/MSN-EWTW-NRG-001/README.md) propose three stages for 100 passengers — 500, 1,100 and 2,000 km — and test at first order which energy carrier flies each in an airframe of the class. After an [audit of 2026-11-14](000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md), the test is fitted to the published block fuel of one in-service type, the Embraer 190, within about 1 % on six sectors, and takes its empty mass and its take-off mass limit. Fuel for a turbogenerator flies the three stages at nominal values, at 40 to 44 t. Batteries alone fly none: the short stage needs about 1,640 Wh/kg at pack level at nominal values, and 670 at favourable ones. Whether a battery beside the fuel saves fuel depends on how the empty mass grows; with the airframe of the reference it breaks even at about 480 Wh/kg. The mission set is approved by the authority. The screening is written and checked by [`tools/mission_closure.py`](../../../../../../tools/mission_closure.py).
 
 `KNOT-EWTW-NRG-001` also proposes the maturity it requires, in six records: two for the propulsion battery pack, and one each for the megawatt-class motor, the turbogenerator, the high-voltage distribution and the thermal management. Each asks for level 6 at the release of the preliminary-design baseline. The evidence on record supports level 4 for a pack above 450 Wh/kg and level 5 for the motor, and no level for the others. Under the lifecycle model a concept baseline may be released with elements below the threshold, with their level and their assumptions recorded; the threshold applies at the preliminary-design baseline, where an element below it needs an approved maturation cycle with a fallback, or a waiver.
 
@@ -246,6 +246,7 @@ The first line reads `14 KNOTs, 41 KNUs, 32 S-ATLAS chapters; rule failures: non
 | 0.7.0 | 2026-11-14 | `KNOT-EWTW-ESS-001`: five options registered with their footprints, an option-set record and a first essential load analysis; `KNU-EWTW-ESS-001-01` and `-02` pending review. The essential battery footprint of `KNOT-EWTW-STO-001` is filed at `024-360`. `tools/essential_loads.py` with 24 tests. `KNOT-EWTW-CAD-001` restated: the STEP file of generator `v0.2.2-concept` is on `main` and passes the round trip |
 | 0.8.0 | 2026-11-14 | `KNOT-EWTW-NRG-001`: twelve proposed criteria, a research record on the energy carrier, five KNUs in progress and narrower research briefs. `KNOT-EWTW-CAD-001` restated: the outputs of generator `v0.2.2-concept` on `main` come from one run and match its run record |
 | 0.9.0 | 2026-11-14 | `KNOT-EWTW-NRG-001`: three candidate missions with a first-order closure test, and six proposed maturity records; `KNU-EWTW-NRG-001-02` pending review. CM-004 defines the maturity record, and `tools/knot_check.py` 0.1.4 checks it. `tools/mission_closure.py` with 21 tests |
+| 0.9.1 | 2026-11-14 | Candidate missions reissued as 0.2.0 after an audit: fitted to the published block fuel of a reference type and anchored to its airframe. An audit record keeps what was accepted and what was not. Maturity record `Q1` restated with the published pack of a two-seat aeroplane. `tools/mission_closure.py` 0.2.0 with 29 tests |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md
