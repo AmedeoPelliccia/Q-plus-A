@@ -3,27 +3,38 @@ status: draft
 standard_scope: governance
 ---
 
-# MSN-EWTW-NRG-001 — Candidate missions and first-order closure
+# MSN-EWTW-NRG-001 — Missions and first-order closure
 
 | | |
 |---|---|
 | KNOT | [`KNOT-EWTW-NRG-001`](../../KNOT-EWTW-NRG-001.yaml) Energy carrier |
 | Serves | `KNU-EWTW-NRG-001-02` Design mission and reserve policy; a first input to `KNU-EWTW-NRG-001-03` |
-| Version | 0.2.0 · 2026-11-14 |
+| Version | 0.3.0 · 2026-11-14 |
 | Prepared by | Claude, for review by `STK_SE` |
-| State | Pending review. A proposal: the mission set is approved by the authority |
+| State | The mission set is adopted by [ruling R2](../KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md) of 2026-11-14. The test stays a first-order screening |
 
-This analysis proposes three candidate stages for the eWTW and tests, at first order, which energy carrier flies each of them in an airframe of the class: batteries alone (option A), fuel for a turbogenerator (option B), or both (option C). It follows the direction given by the authority on 2026-11-14: carry forward the mission that the technologies available today can fly, and record what the candidates for more ambitious missions still have to reach.
+This analysis holds the three missions of the eWTW, each with its role, and tests at first order which energy carrier flies each of them in an airframe of the class: batteries alone (option A), fuel for a turbogenerator (option B), or both (option C). It follows the direction given by the authority on 2026-11-14: carry forward the mission that the technologies available today can fly, and record what the candidates for more ambitious missions still have to reach.
 
 It is a screening. It sizes no aircraft, it ranks no option, and it states no conformity of the eWTW with any rule.
 
 ---
 
-## What changed in 0.2.0
+## The missions and their roles
 
-Version 0.1.0 let the aircraft shrink with its mission and found take-off masses of 27 to 33 t. An [audit of 2026-11-14](../KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md) pointed out that this closed the model and not an aircraft of the class: no in-service type of 100 seats takes off at that mass, and the model had not reproduced the fuel of one. The audit was right.
+| Mission | Stage | Role |
+|---|---:|---|
+| S | 500 km | Sensitivity. The terminal phases weigh as much as the cruise. It sizes nothing |
+| M | About 1,100 km | Scoring. The average stage, on which fuel, cost and emissions are compared. It is not the range requirement |
+| L | 2,000 km | Requirement. It must close, with 100 passengers and the declared reserves |
+| X | 4,445 km | A check of the test on the range the reference type is offered with. Not a mission of the eWTW, and no gate until the test reproduces it within a written tolerance |
 
-This version is anchored to a reference type, the Embraer 190:
+Ruling R2 also fixes 100 passengers, takes 30 minutes as the final reserve of the eWTW, and excludes option A until a demonstrated pack closes mission L. The test still computes option A, so that the record shows what it would need.
+
+## What changed
+
+**In 0.3.0, with ruling R2.** The missions carry their roles. The check on the range of the reference type uses the reserve of the charts of that type, 100 nm alternate and 45 minutes, and not the reserve of the eWTW: the difference moves from 7 % to about 5 %. The screening shows the state of each option in the KNOT.
+
+**In 0.2.0, after an audit.** Version 0.1.0 let the aircraft shrink with its mission and found take-off masses of 27 to 33 t. An [audit of 2026-11-14](../KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md) pointed out that this closed the model and not an aircraft of the class: no in-service type of 100 seats takes off at that mass, and the model had not reproduced the fuel of one. The audit was right. Since 0.2.0 the test is anchored to a reference type, the Embraer 190:
 
 - **The energy is fitted to published block fuel.** Six sectors from 383 to 1,245 km give the cost of cruise and the cost of the terminal phases. The earlier version derived the terminal phases from the height and the speed of the cruise, and underestimated them by a factor of more than five.
 - **The airframe is that of the reference.** Its empty mass is the published basic operating weight, and the limit is its highest certificated take-off mass. A sensitivity shows what changes when the empty mass grows with the take-off mass.
@@ -36,26 +47,18 @@ This version is anchored to a reference type, the Embraer 190:
 - The test is a range equation. The share of the take-off mass that goes into energy follows from the distance flown and from what a kilometre costs. A mission *closes* when the empty aircraft, the payload and the energy stay within the take-off mass limit.
 - Each result is given at three sets of parameters: *favourable*, *nominal* and *unfavourable* to closing the mission. The sets are judgement, not statistics.
 - *Pack needed* is the specific energy at pack level, as installed, at which the mission just closes. It is not a cell figure.
+- A figure has a basis: `assumption`, `source` or `decision`. A decision is an act of the authority, named in the reference of the figure.
 
 ## What the screening shows
 
-1. **The test reproduces the reference.** The fit matches the six published sectors within about 1 %. On a point outside the fit, the range the type is offered with, it asks for 7 % more fuel than the aircraft can load.
-2. **On a short stage, half of the fuel is not cruise.** Taxi, take-off, climb, descent and approach cost the reference as much as about 480 km of cruise. With the reserves, a stage of 500 km is flown as about 1,400 km.
-3. **Fuel flies the three candidate stages.** At nominal values option B takes off at 40 to 44 t with 3 to 7 t of fuel, reserves included. At unfavourable values the long stage does not close. At nominal values the cruise of option B is set equal to that of the reference: the test cannot say whether a turbogenerator with electric motors does better or worse than a turbofan.
-4. **Batteries alone fly none of them.** On the short stage, option A needs between about 670 and 3,200 Wh/kg at pack level, 1,640 at nominal values. With the one laboratory pack on record, 480.9 Wh/kg over 25 cycles, the longest trip is zero at nominal values and under 200 km at favourable ones. The pack of today, 177 Wh/kg, flies no trip at any set.
+1. **The test reproduces the reference.** The fit matches the six published sectors within about 1 %. On a point outside the fit, the range the type is offered with, it asks for about 5 % more fuel than the aircraft can load.
+2. **On a short stage, half of the fuel is not cruise.** Taxi, take-off, climb, descent and approach cost the reference as much as about 480 km of cruise. With the reserves, a stage of 500 km is flown as about 1,400 km. That distance is an output of the test — the fitted terminal phases and the reserves adopted — and not a rule.
+3. **Fuel flies the requirement mission at nominal values.** Option B takes off at 40 to 44 t on the three missions, with 3 to 7 t of fuel, reserves included. At unfavourable values the requirement mission does not close. At nominal values the cruise of option B is set equal to that of the reference: the test cannot say whether a turbogenerator with electric motors does better or worse than a turbofan.
+4. **Batteries alone fly none of the missions.** On the requirement mission, option A needs between about 1,560 and 6,600 Wh/kg at pack level, 3,500 at nominal values. On the short stage it needs 670 to 3,200, and 1,640 at nominal values. With the one laboratory pack on record, 480.9 Wh/kg over 25 cycles, the longest trip is zero at nominal values and under 200 km at favourable ones.
 5. **Whether a battery beside the fuel saves fuel depends on the airframe.** With the airframe of the reference as it is, a battery that flies a quarter of the short stage breaks even at about 480 Wh/kg and saves about 6 to 11 % of the fuel from 650 to 1,000 Wh/kg. If the empty mass grows with the take-off mass, the saving starts later: between 650 and 1,000 Wh/kg, or beyond. With the pack of today the battery can fly a tenth of the short stage, and the aircraft burns about 16 % more.
 6. **Take-off needs 8 to 9 MW at nominal values.** At the ratings on record that is eleven or twelve motors and nine turbogenerators. How many propulsors the aircraft has is the question of `KNOT-EWTW-PRP-001`.
 
-## Reading proposed to the authority
-
-| | Proposal | Why |
-|---|---|---|
-| Stage carried forward as the baseline | Mission M, the average stage of about 1,100 km, with 100 passengers and the reserves of the planning rule | It is the one stage with a source. It is an average stage, not the range the class is offered with: the reference type is offered with 4,445 km |
-| Energy carrier that flies it with what is on record | Option B | The only option that closes a candidate stage without a pack level that does not exist. Its motor and its turbogenerator are on the bench, not in service |
-| Stages kept as alternates | S and L | S is where options A and C come closest. L shows where option B stops closing at unfavourable values |
-| Candidates for more ambitious solutions | Option C from the level of a laboratory pack, about 480 Wh/kg; option A from about 1,600 Wh/kg on stage S | The levels at which option C stops burning more than option B, and at which option A closes, at nominal values and with the airframe of the reference |
-
-The proposal decides nothing. Whether the design mission of the eWTW is an average stage or a range like the one the class is offered with is the decision of `KNU-EWTW-NRG-001-02`. No option is scored while the criteria and the required maturity are proposed (CM-004, rule 5). The maturity proposed for each critical element is in the record of the KNOT, under `maturity_required`.
+No option is scored while the criteria of the KNOT are proposed (CM-004, rule 5). The maturity required of each critical element is in the record of the KNOT, under `maturity_required`.
 
 ## Limits
 
@@ -63,7 +66,7 @@ The proposal decides nothing. Whether the design mission of the eWTW is an avera
 - **The eWTW is not the reference.** Its speed and altitude are not defined. The favourable set gives it 60 % of the terminal distance of the reference, for a lower and slower cruise: that share is an assumption.
 - **The three options have the same empty mass.** What the electric chain adds and what the turbofans remove is not on record.
 - **Power is not sized.** The test counts units at take-off power. It does not check the power a battery can deliver, and it gives option C no credit for a thermal machine sized to cruise with a battery covering the peaks. That role of the battery is the question of `KNOT-EWTW-STO-001`.
-- **Reserves are an analogy.** The final reserve is that of a turbine-engined aeroplane. The reserves behind the published range of the reference are not stated by its manufacturer.
+- **The final reserve is an assumption.** Ruling R2 takes the floor of turbine-engined aeroplanes. For the check on the reference, that the published range uses the reserve of the charts is an assumption, and so is the speed of its 45 minutes.
 - **The pack of today is of another class.** 24.8 kWh on a two-seat aeroplane. It shows a specific energy, not a pack of megawatt-hour size, its cycle life or its containment.
 - **Cost and emissions are not in the test.** Electricity is counted as no fuel, and its origin is not considered.
 
@@ -77,16 +80,16 @@ python3 tools/mission_closure.py "$REG/000_General/evidence/MSN-EWTW-NRG-001" "$
 python3 tools/mission_closure_test.py
 ```
 
-The tool checks the form of the input, and that options A, B and C stand in the KNOT. With `--check` it fails when the section below differs from what the input gives. `--write` replaces the section. The fit is in the function `fit` and the equations in the class `Model`; the tests compute both again by hand for the committed input.
+The tool checks the form of the input, that one mission is the requirement, and that options A, B and C are in the record of the KNOT. With `--check` it fails when the section below differs from what the input gives. `--write` replaces the section. The fit is in the function `fit` and the equations in the class `Model`; the tests compute both again by hand for the committed input.
 
 ---
 
 ## Screening
 
 <!-- screening:begin -->
-MSN-EWTW-NRG-001 0.2.0 for KNOT-EWTW-NRG-001: 3 candidate missions, 4 pack levels, 6 reference sectors; 31 figures, 16 of them assumptions; rule failures: none
+MSN-EWTW-NRG-001 0.3.0 for KNOT-EWTW-NRG-001: 3 missions, 4 pack levels, 6 reference sectors; 31 figures, 14 of them assumptions; rule failures: none
 
-Scope: Three candidate stages for an aircraft of 100 passengers, and a first-order test of which energy carrier flies each of them in an airframe of the class. The test is a range equation, fitted to the published block fuel of one in-service type of the class. It ranks nothing and sizes nothing: it shows the order of magnitude and which figures decide.
+Scope: Three missions for an aircraft of 100 passengers, each with its role, and a first-order test of which energy carrier flies each of them in an airframe of the class. The test is a range equation, fitted to the published block fuel of one in-service type of the class. It ranks nothing and sizes nothing: it shows the order of magnitude and which figures decide.
 
 ### Reference aircraft — Embraer 190
 
@@ -103,16 +106,19 @@ Source of the sectors: Aircraft Commerce, issue 64, June/July 2009, E-Jet family
 
 The fit has two results. Taxi, take-off, climb, descent and approach cost the fuel of 483 km of cruise. A thousand kilometres of cruise cost 5.6% of the take-off mass, which is an overall efficiency times lift-to-drag ratio of 4.08 at 43 MJ/kg.
 
-Check on a point outside the fit: for 4445 km with 100 passengers and the reserves of this test, the fit asks for 13396 kg of fuel. At its take-off mass the aircraft can load 12547 kg. The fit asks for +7%. Source of the point: Embraer 190 specification sheet, read on 2026-11-14: range of the LR with full passengers at 100 kg, long-range cruise, typical mission reserves.
+Check on a point outside the fit: for 4445 km with 100 passengers and the reserve of the charts of the reference, 100 nm of alternate and 45 minutes flown here at holding speed, the fit asks for 13143 kg of fuel. At its take-off mass the aircraft can load 12547 kg. The fit asks for +4.7%. No tolerance is written for this point: it is a check of the test, not a requirement of the aircraft. Source of the point: Embraer 190 specification sheet, read on 2026-11-14: range of the LR with full passengers at 100 kg, long-range cruise, typical mission reserves. Source of the reserve: Embraer 190 airport planning manual, section 3.2, payload and range charts, revision 20, read on 2026-11-14: reserve of 100 nm alternate and 45 min flight. That the range of the specification sheet uses the same reserve is an assumption, and so is the speed of the 45 minutes.
 
 ### Missions
 
-| Key | Mission | Trip km | Flown with terminal phases and reserves km | Candidate | Basis | Source or note |
-|---|---|---:|---:|---|---|---|
-| S | Short stage | 500 | 1393 | yes | assumption | Less than half of the average stage of mission M |
-| M | Average stage | 1100 | 2023 | yes | source | Research record of 2026-11-14, statement 4: average stage of the United States fleet of 150 seats and fewer, about 1,110 to 1,140 km |
-| L | Long stage | 2000 | 2968 | yes | assumption | Nearly twice the average stage |
-| X | Range the reference type is offered with | 4445 | 5535 | no | source | Embraer 190 specification sheet, read on 2026-11-14: 2,400 nm for the LR |
+| Key | Mission | Role | Trip km | Flown with terminal phases and reserves km | Basis | Source or note |
+|---|---|---|---:|---:|---|---|
+| S | Short stage | sensitivity | 500 | 1393 | decision | KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14. Where the terminal phases weigh as much as the cruise. It sizes nothing |
+| M | Average stage | scoring | 1100 | 2023 | source | Research record of 2026-11-14, statement 4: average stage of the United States fleet of 150 seats and fewer, about 1,110 to 1,140 km |
+| L | Long stage | requirement | 2000 | 2968 | decision | KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14. It must close |
+| X | Range the reference type is offered with | reference | 4445 | 5535 | source | Embraer 190 specification sheet, read on 2026-11-14: 2,400 nm for the LR. A check of the test, not a mission of the eWTW |
+
+Options in `KNOT-EWTW-NRG-001`: A excluded by R2 · B open · C open · D excluded by R1.
+On the requirement mission L, option B closes at favourable and nominal values, and not at unfavourable values. Option A needs 1556 · 3485 · 6555 Wh/kg at pack level, and option C 177 · 616 · 17403 Wh/kg with the battery flying 10% of the trip.
 
 Payload: 100 passengers at 95 kg, 9500 kg. At nominal values the terminal phases count for 483 km and the alternate with the final reserve for 385 km. The empty mass is 27753 kg, and 0% of it grows with the take-off mass. A mission closes when the take-off mass stays within 51.8 t.
 
@@ -190,7 +196,7 @@ The test runs at 0%. At 100 % the empty mass is a fixed share of the take-off ma
 | payload.kg_per_passenger | 95 | assumption | — |
 | reserves.contingency_share | 0.05 | assumption | — |
 | reserves.alternate_km | 185 | assumption | — |
-| reserves.final_reserve_min | 30 | source | Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine-engined aeroplanes; research record of 2026-11-14, statement 2 |
+| reserves.final_reserve_min | 30 | decision | KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14: the floor of Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine-engined aeroplanes, taken as an assumption |
 | reserves.holding_speed_kmh | 400 | assumption | — |
 | units.motor_kw | 750 | source | Research record of 2026-11-14, statement 15: offered rating of a motor tested in the laboratory |
 | units.turbogenerator_kw | 1000 | source | Research record of 2026-11-14, statement 16, as reported: in development |
@@ -205,16 +211,17 @@ The test runs at 0%. At 100 % the empty mass is a fixed share of the take-off ma
 
 | Id | Assumption |
 |---|---|
-| A1 | The aircraft carries 100 passengers. The mass taken for each, with baggage, is an assumption until the standard masses of the air operations rules are read |
+| A1 | The aircraft carries 100 passengers, fixed by the authority (KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14). The mass taken for each, with baggage, is an assumption until the standard masses of the air operations rules are read |
 | A2 | The airframe is that of the reference type. Its empty mass is the basic operating weight of the reference, and a mission closes when the take-off mass stays within the highest take-off mass certificated for it |
 | A3 | The airframe is not resized for the mission, so its empty mass is fixed. A sensitivity shows what changes when a share of the empty mass grows in proportion to the take-off mass. The three options have the same empty mass. What the electric chain adds and what the turbofans remove is not on record |
 | A4 | Taxi, take-off, climb, descent and approach cost the energy of a fixed distance in cruise. The distance is fitted to the reference, and the eWTW takes a stated share of it |
 | A5 | Reserves are flown as distance in cruise — the contingency as a share of the trip, the alternate as a distance, the final reserve as time at holding speed |
-| A6 | The final reserve of an aeroplane with electric engines is taken as that of a turbine-engined one, by analogy. The rule names no time for it (research record of 2026-11-14, statement 2) |
+| A6 | The final reserve of the eWTW is 30 minutes at holding speed, the floor of turbine-engined aeroplanes, adopted as an assumption by the authority (KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14). The rule names no time for electric engines (research record of 2026-11-14, statement 2). The alternate is a separate item |
 | A7 | A battery delivers its specific energy reduced by one share, which covers the capacity held back and the capacity lost at the end of service life |
 | A8 | In option C the battery supplies a stated share of the trip energy, and fuel supplies the rest of the trip and all the reserves |
 | A9 | Fuel burned makes the aircraft lighter, and the test credits it with the logarithmic form of the range equation. A battery keeps its mass |
 | A10 | Take-off shaft power is a fixed power for each kilogram of take-off mass. Units are counted at the ratings that the research record gives for a motor and for a turbogenerator |
+| A11 | The range the reference type is offered with is a check of the test, flown with the reserve of the charts of that type. It is not a requirement of the eWTW until the test reproduces it within a written tolerance (KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14) |
 <!-- screening:end -->
 
 ---
@@ -225,3 +232,4 @@ The test runs at 0%. At 100 % the empty mass is a fixed share of the take-off ma
 |---|---|---|
 | 0.1.0 | 2026-11-14 | First issue: three candidate missions and one reference, four pack levels, three sets of parameters |
 | 0.2.0 | 2026-11-14 | After the audit of 2026-11-14: energy fitted to six published sectors of the Embraer 190 and checked on its published range; airframe, empty mass and take-off mass limit of that type; the pack of today from a manufacturer page; a sensitivity to the growth of the empty mass. Take-off masses of option B move from 27–33 t to 40–44 t, and the pack that option A needs on the short stage from about 850 to about 1,640 Wh/kg |
+| 0.3.0 | 2026-11-14 | With ruling R2: missions with their roles — S sensitivity, M scoring, L requirement; the check on the reference flown with the reserve of its own charts; the state of each option of the KNOT shown in the screening |

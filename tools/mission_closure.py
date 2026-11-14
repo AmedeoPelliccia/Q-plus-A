@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - mission_closure.py (0.2.0)
+# Generated 2026-11-14 - mission_closure.py (0.3.0)
 """First-order closure of candidate missions: which energy carrier flies each mission in an airframe of the class.
 
     python3 tools/mission_closure.py <analysis folder> <KNOT register> [--check | --write]
@@ -20,7 +20,8 @@ import relations_project as rp  # noqa: E402
 
 G, NM, LB = 9.80665, 1.852, 0.45359237                   # m/s2, km in a nautical mile, kg in a pound
 SETS = ("favourable", "nominal", "unfavourable")
-BASES = ("assumption", "source")
+BASES = ("assumption", "source", "decision")
+ROLES = ("requirement", "scoring", "sensitivity", "reference")   # reference: a point of comparison, not a mission of the aircraft
 PARAMETERS = ("lift_to_drag", "propulsor_efficiency", "electric_chain_efficiency", "turbogenerator_efficiency",
               "pack_usable_share", "terminal_share", "empty_mass_share", "takeoff_kw_per_kg")
 SHARES = PARAMETERS[1:5]                                # parameters that lie above 0 and below 1
@@ -80,8 +81,11 @@ def validate(a, knot):
         bad.append("reference.sectors: at least three, each with a name, a distance, a block fuel below the take-off mass, and a take-off mass")
     elif len({s["esad_nm"] for s in sectors}) < 2 or fit(a)["terminal_km"] <= 0 or fit(a)["per_km"] <= 0:
         bad.append("reference.sectors: the published sectors must give a positive cost of cruise and a positive terminal distance")
-    if not (isinstance(check, dict) and rp.has_text(check.get("ref")) and all(number(check.get(k)) and check[k] > 0 for k in ("range_nm", "passengers", "kg_per_passenger"))):
-        bad.append("reference.range_check: a range, a number of passengers, the mass of each, and a source")
+    if not (isinstance(check, dict) and rp.has_text(check.get("ref")) and rp.has_text(check.get("reserve_ref"))
+            and all(number(check.get(k)) and check[k] > 0 for k in ("range_nm", "passengers", "kg_per_passenger"))
+            and all(number(check.get(k)) and check[k] >= 0 for k in ("alternate_nm", "flight_min"))
+            and (check.get("tolerance_share") is None or (number(check["tolerance_share"]) and 0 < check["tolerance_share"] < 1))):
+        bad.append("reference.range_check: a range, passengers and their mass, the alternate and the minutes of its reserve, their sources, and a tolerance or null")
 
     p = a["parameters"]
     if not isinstance(p, dict) or [k for k in PARAMETERS if not isinstance(p.get(k), dict)]:
@@ -96,10 +100,10 @@ def validate(a, knot):
 
     keys = [m.get("key") for m in a["missions"]] if rp.is_list_of(a["missions"], dict) else None
     if not keys or not all(rp.has_text(m.get("key")) and rp.has_text(m.get("name")) and number(m.get("range_km")) and m["range_km"] > 0
-                           and isinstance(m.get("candidate"), bool) for m in a["missions"]):
-        bad.append("missions: each has a key, a name, a positive range_km, and candidate true or false")
-    elif len(set(keys)) != len(keys) or not any(m["candidate"] for m in a["missions"]):
-        bad.append("missions: keys are used once, and at least one mission is a candidate")
+                           and m.get("role") in ROLES for m in a["missions"]):
+        bad.append("missions: each has a key, a name, a positive range_km, and a role among " + ", ".join(ROLES))
+    elif len(set(keys)) != len(keys) or [m["role"] for m in a["missions"]].count("requirement") != 1:
+        bad.append("missions: keys are used once, and one mission is the requirement")
     if not (rp.is_list_of(a["pack_levels"], dict) and a["pack_levels"]
             and all(number(x.get("wh_per_kg")) and x["wh_per_kg"] > 0 and rp.has_text(x.get("label")) for x in a["pack_levels"])):
         bad.append("pack_levels: each has a positive wh_per_kg and a label")
@@ -109,12 +113,17 @@ def validate(a, knot):
         for label, x in figures(a):
             if x.get("basis") not in BASES:
                 bad.append(f"{label}: basis is one of " + ", ".join(BASES))
-            elif x["basis"] == "source" and not rp.has_text(x.get("ref")):
-                bad.append(f"{label}: a figure with a source names it in ref")
-        standing = {o.get("id") for o in knot.get("options") or [] if isinstance(o, dict) and o.get("state") in rp.LIVE}
-        if {"A", "B", "C"} - standing:
-            bad.append(f"{a['knot']}: options A, B and C must stand; {', '.join(sorted({'A', 'B', 'C'} - standing))} does not")
+            elif x["basis"] != "assumption" and not rp.has_text(x.get("ref")):
+                bad.append(f"{label}: a figure with a {x['basis']} names it in ref")
+        if {"A", "B", "C"} - set(option_states(knot)):
+            bad.append(f"{a['knot']}: options A, B and C must be in the record; {', '.join(sorted({'A', 'B', 'C'} - set(option_states(knot))))} is not")
     return bad
+
+
+def option_states(knot):
+    """State of each option of the KNOT, with the ruling that excluded it where one did."""
+    return {o["id"]: o["state"] + (f" by {o['by']}" if o.get("by") else "") for o in knot.get("options") or []
+            if isinstance(o, dict) and rp.has_text(o.get("id")) and rp.has_text(o.get("state"))}
 
 
 def reserve_km(a):
@@ -140,9 +149,9 @@ def fit(a):
     out = {"per_km": per_km, "terminal_km": terminal, "rows": rows,
            "product": 1000 * G / (per_km * a["fuel_energy_mj_per_kg"]["value"] * 1e6) if per_km > 0 else 0.0}
     check = ref.get("range_check")
-    if isinstance(check, dict) and all(number(check.get(k)) for k in ("range_nm", "passengers", "kg_per_passenger")) and per_km > 0:
-        takeoff = ref["sizing_takeoff_kg"]["value"]
-        km = check["range_nm"] * NM * (1 + a["reserves"]["contingency_share"]["value"]) + terminal + reserve_km(a)
+    if isinstance(check, dict) and all(number(check.get(k)) for k in ("range_nm", "passengers", "kg_per_passenger", "alternate_nm", "flight_min")) and per_km > 0:
+        takeoff = ref["sizing_takeoff_kg"]["value"]                # flown with the reserve of the reference, not with that of the aircraft under test
+        km = (check["range_nm"] + check["alternate_nm"]) * NM + terminal + a["reserves"]["holding_speed_kmh"]["value"] * check["flight_min"] / 60
         out["check"] = {"km": check["range_nm"] * NM, "asked_kg": takeoff * (1 - math.exp(-per_km * km)),
                         "loadable_kg": takeoff - ref["basic_operating_kg"]["value"] - check["passengers"] * check["kg_per_passenger"]}
     return out
@@ -217,7 +226,7 @@ class Model:
         return mass is not None and mass <= self.limit
 
 
-def render(a):
+def render(a, knot):
     fitted = fit(a)
     models = {s: Model(a, s, fitted) for s in SETS}
     nominal, levels, ref, cell = models["nominal"], a["pack_levels"], a["reference"], (lambda text: str(text).replace("|", "/"))
@@ -236,13 +245,23 @@ def render(a):
               f"The fit has two results. Taxi, take-off, climb, descent and approach cost the fuel of {fitted['terminal_km']:.0f} km of cruise. "
               f"A thousand kilometres of cruise cost {fitted['per_km'] * 1000:.1%} of the take-off mass, which is an overall efficiency times lift-to-drag ratio of "
               f"{fitted['product']:.2f} at {a['fuel_energy_mj_per_kg']['value']:g} MJ/kg.", "",
-              f"Check on a point outside the fit: for {check['km']:.0f} km with {ref['range_check']['passengers']:g} passengers and the reserves of this test, the fit asks for "
-              f"{check['asked_kg']:.0f} kg of fuel. At its take-off mass the aircraft can load {check['loadable_kg']:.0f} kg. The fit asks for {check['asked_kg'] / check['loadable_kg'] - 1:+.0%}. "
-              f"Source of the point: {cell(ref['range_check']['ref'])}."]
+              f"Check on a point outside the fit: for {check['km']:.0f} km with {ref['range_check']['passengers']:g} passengers and the reserve of the charts of the reference, "
+              f"{ref['range_check']['alternate_nm']:g} nm of alternate and {ref['range_check']['flight_min']:g} minutes flown here at holding speed, the fit asks for "
+              f"{check['asked_kg']:.0f} kg of fuel. At its take-off mass the aircraft can load {check['loadable_kg']:.0f} kg. The fit asks for {check['asked_kg'] / check['loadable_kg'] - 1:+.1%}. "
+              + ("No tolerance is written for this point: it is a check of the test, not a requirement of the aircraft. " if ref["range_check"].get("tolerance_share") is None else
+                 f"The tolerance written for this point is {ref['range_check']['tolerance_share']:.0%}. ")
+              + f"Source of the point: {cell(ref['range_check']['ref'])}. Source of the reserve: {cell(ref['range_check']['reserve_ref'])}."]
 
-    lines += ["", "### Missions", "", "| Key | Mission | Trip km | Flown with terminal phases and reserves km | Candidate | Basis | Source or note |", "|---|---|---:|---:|---|---|---|"]
-    lines += [f"| {m['key']} | {cell(m['name'])} | {m['range_km']:g} | {nominal.equivalent_km(m):.0f} | {'yes' if m['candidate'] else 'no'} | {m['basis']} | {source(m)} |"
-              for m in a["missions"]]
+    lines += ["", "### Missions", "", "| Key | Mission | Role | Trip km | Flown with terminal phases and reserves km | Basis | Source or note |", "|---|---|---|---:|---:|---|---|"]
+    lines += [f"| {m['key']} | {cell(m['name'])} | {m['role']} | {m['range_km']:g} | {nominal.equivalent_km(m):.0f} | {m['basis']} | {source(m)}"
+              + (f". {cell(m['note'])}" if m.get("ref") and m.get("note") else "") + " |" for m in a["missions"]]
+    required = next(m for m in a["missions"] if m["role"] == "requirement")
+    closing = [s for s in SETS if models[s].closes(models[s].option_b(required))]
+    lines += ["", f"Options in `{a['knot']}`: " + " · ".join(f"{key} {state}" for key, state in sorted(option_states(knot).items())) + ".",
+              f"On the requirement mission {required['key']}, option B closes at " + (" and ".join(closing) if closing else "no") + " values"
+              + ("" if len(closing) == len(SETS) else ", and not at " + " and ".join(s for s in SETS if s not in closing) + " values")
+              + f". Option A needs {three(lambda x: wh(x.pack_needed_a(required)))} Wh/kg at pack level, and option C {three(lambda x: wh(x.pack_needed_c(required, min(a['hybrid_shares']))))} Wh/kg "
+              f"with the battery flying {min(a['hybrid_shares']):.0%} of the trip."]
     lines += ["", f"Payload: {a['payload']['passengers']} passengers at {a['payload']['kg_per_passenger']['value']:g} kg, {nominal.payload:.0f} kg. "
               f"At nominal values the terminal phases count for {nominal.terminal_km:.0f} km and the alternate with the final reserve for {nominal.reserve_km:.0f} km. "
               f"The empty mass is {nominal.empty:.0f} kg, and {a['empty_growth_share']['value']:.0%} of it grows with the take-off mass. "
@@ -284,7 +303,7 @@ def render(a):
     lines += ["", "*over* means that the mission needs more than the take-off mass limit, and *none* that no take-off mass flies it. Masses are at nominal values. "
               "*Fuel burned against option B* compares kilograms of fuel on the same mission at nominal values: a plus sign means that the aircraft with a battery burns more."]
 
-    first, middle = next(m for m in a["missions"] if m["candidate"]), a["hybrid_shares"][len(a["hybrid_shares"]) // 2]
+    first, middle = next(m for m in a["missions"] if m["role"] != "reference"), a["hybrid_shares"][len(a["hybrid_shares"]) // 2]
     lines += ["", "### Sensitivity to the growth of the empty mass", "",
               f"| Share that grows with take-off mass | Option B on {first['key']}, take-off t | Option A on {first['key']}, pack needed Wh/kg | "
               f"Option C on {first['key']} at {middle:.0%}, fuel burned against option B at " + " · ".join(head) + " |", "|---:|---:|---:|---:|"]
@@ -319,13 +338,14 @@ def run(folder, register, mode=None):
         if failure or not (isinstance(record, dict) and isinstance(record.get("knot"), dict)):
             bad.append(failure or f"{found[0].name}: the top-level key is `knot`")
         else:
-            bad += validate(a, record["knot"])
+            knot = record["knot"]
+            bad += validate(a, knot)
     head, body = "mission closure; rule failures: ", []
     if not bad:
         counted = figures(a)
-        head = (f"{a['id']} {a['version']} for {a['knot']}: {sum(m['candidate'] for m in a['missions'])} candidate missions, {len(a['pack_levels'])} pack levels, "
+        head = (f"{a['id']} {a['version']} for {a['knot']}: {sum(m['role'] != 'reference' for m in a['missions'])} missions, {len(a['pack_levels'])} pack levels, "
                 f"{len(a['reference']['sectors'])} reference sectors; {len(counted)} figures, {sum(1 for _, x in counted if x['basis'] == 'assumption')} of them assumptions; rule failures: ")
-        body = [rp.safe(line) for line in [""] + render(a)]
+        body = [rp.safe(line) for line in [""] + render(a, knot)]
         if mode:
             failure = rp.generated_section(folder / "README.md", "\n".join([rp.safe(head) + "none"] + body), mode == "write", BEGIN, END)
             bad += [failure] if failure else []

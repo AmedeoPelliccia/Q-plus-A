@@ -42,7 +42,8 @@ knot:
   options:
   - id: A
     text: batteries — all-electric
-    state: open
+    state: excluded
+    by: R2
     pbs_footprint:
     - action: create
       taxonomy: '074'
@@ -76,15 +77,15 @@ knot:
   criteria:
   - id: M1
     class: mandatory
-    text: The design mission is flown with the usable fuel or energy the planning rule requires — taxi, trip, contingency, destination alternate or holding, final reserve, and additional where the operation requires it
+    text: The requirement mission is flown with the usable fuel or energy the planning rule requires — taxi, trip, contingency, destination alternate or holding, final reserve, and additional where the operation requires it
     source: Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)
     weight: null
     threshold: null
     state: PROPOSED
   - id: M2
     class: mandatory
-    text: The final reserve is carried — at least 30 minutes at holding speed at 1,500 ft where the aeroplane is turbine-engined, and the time agreed with the authority where its engines are electric, for which the rule names no time
-    source: 'Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5); the second part is a reading of the reviewer, not a quotation'
+    text: The final reserve is carried — 30 minutes at holding speed at 1,500 ft, the floor of turbine-engined aeroplanes, taken for electric engines too until EASA publishes a quantity for them. The alternate is a separate item
+    source: 'Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine engines; ruling R2 of 2026-11-14 for electric engines'
     weight: null
     threshold: null
     state: PROPOSED
@@ -111,35 +112,35 @@ knot:
     state: PROPOSED
   - id: T1
     class: tradable
-    text: Mass of the energy carrier and of its installation, and its effect on take-off mass and payload on the design mission
+    text: Mass of the energy carrier and of its installation, and its effect on take-off mass on the requirement mission
     source: research record of 2026-11-14, statements 6 and 7
     weight: null
     threshold: null
     state: PROPOSED
   - id: T2
     class: tradable
-    text: Block energy on the design mission
+    text: Block energy on the scoring mission
     source: research record of 2026-11-14, statements 6 and 7
     weight: null
     threshold: null
     state: PROPOSED
   - id: T3
     class: tradable
-    text: Block fuel and emissions in flight on the design mission
+    text: Block fuel and emissions in flight on the scoring mission
     source: research record of 2026-11-14, statement 7
     weight: null
     threshold: null
     state: PROPOSED
   - id: T4
     class: tradable
-    text: Cost of energy and of operation
+    text: Cost of energy and of operation on the scoring mission
     source: research record of 2026-11-14, statements 6 and 7
     weight: null
     threshold: null
     state: PROPOSED
   - id: T5
     class: tradable
-    text: Range margin beyond the design mission
+    text: Range margin beyond the requirement mission
     source: research record of 2026-11-14, statements 4 and 5
     weight: null
     threshold: null
@@ -167,8 +168,8 @@ knot:
     required: 6
     evidence: 'A type-certificated two-seat aeroplane flies on two batteries of 24.8 kWh in total and about 70 kg each, about 177 Wh/kg (EASA.A.573, manufacturer page read on 2026-11-14). It shows a specific energy at 25 kWh. No pack of megawatt-hour size is on record, nor its cycle life or its containment'
     level: null
-    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
-    state: PROPOSED
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   - id: Q2
     element: Propulsion battery pack above 450 Wh/kg at pack level
     taxonomy: '074'
@@ -177,18 +178,18 @@ knot:
     required: 6
     evidence: 'One laboratory pack of 3.9 kWh at 480.9 Wh/kg over 25 cycles (research record of 2026-11-14, statement 11). The projections on record are at cell level (statement 10)'
     level: 4
-    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
-    state: PROPOSED
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   - id: Q3
     element: Electric motor of megawatt class with its power electronics
     taxonomy: '077'
     options: [A, B, C]
     decision: REV-B_RELEASED of the scopes this KNOT affects
     required: 6
-    evidence: 'Two motors offered at 750 kW each delivered over 1,000 kW together in a laboratory test of 2021, and the manufacturer reports an altitude test in a climate chamber in 2023 (research record of 2026-11-14, statement 15). A motor for a two-seat aircraft holds the first type certificate under SC E-19 (statement 14)'
-    level: 5
-    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
-    state: PROPOSED
+    evidence: 'Two motors offered at 750 kW each delivered over 1,000 kW together in a laboratory test of 2021, and the manufacturer reports an altitude test in a climate chamber in 2023 (research record of 2026-11-14, statement 15). A motor for a two-seat aircraft holds the first type certificate under SC E-19 (statement 14). These are statements of the manufacturer, not test results, and level 5 asks for test results in a relevant environment'
+    level: null
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   - id: Q4
     element: Turbogenerator of megawatt class
     taxonomy: '068'
@@ -197,8 +198,8 @@ knot:
     required: 6
     evidence: 'One of 1 MW in development on the core of an auxiliary power unit in service, one of 600 kW on the bench in 2026, one design from 500 to 1,200 kW (research record of 2026-11-14, statements 16 to 18). All three are as reported, and no level is set on sources the reviewer did not read'
     level: null
-    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
-    state: PROPOSED
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   - id: Q5
     element: High-voltage distribution and protection at the power of the propulsion chain
     taxonomy: '076'
@@ -207,8 +208,8 @@ knot:
     required: 6
     evidence: None on record
     level: null
-    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
-    state: PROPOSED
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   - id: Q6
     element: Thermal management of the electric propulsion chain
     taxonomy: '078'
@@ -217,8 +218,8 @@ knot:
     required: 6
     evidence: None on record
     level: null
-    source: 'Proposed by the reviewer: the level commonly asked at preliminary design. No authority text was found (research record of 2026-11-14, statement 23)'
-    state: PROPOSED
+    source: 'Ruling R2 of 2026-11-14: level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline'
+    state: APPROVED
   assumptions:
   - text: CS-25 and the air operations rules of Regulation (EU) No 965/2012 are read as the basis; the certification basis of the eWTW and its amendment are not recorded yet
     ref:
@@ -249,7 +250,40 @@ knot:
     effects: []
     embodied_in: []
     record: 'eWTW README 0.3.0 — PR #67, merged at 92ce9e96'
-  reopen_if: []
+  - id: R2
+    date: '2026-11-14'
+    authority: AM.PEL — architecture authority
+    statement: 'Four decisions. One: the mission set is approved with three roles — S, 500 km, sensitivity; M, about 1,100 km, the scoring mission; L, 2,000 km with 100 seats and the declared reserves, the requirement mission, which must close. M is not the design mission. The range the reference type is offered with is a check of the model, and no gate until the model reproduces it within a written tolerance. Two: the final reserve of the eWTW is 30 minutes at holding speed at 1,500 ft, taken as an assumption; the alternate is a separate item; the 45 minutes of the charts of the reference type apply only when the model is compared with that type. Three: level 6 of the Q+ATLANTIDE-TRL scale is required of each critical element at the release of the preliminary-design baseline, not of the concept baseline; an element below it passes only with an approved maturation cycle and its fallback, or with a waiver for that element. Four: the aircraft keeps 100 seats, and option A is not a candidate until its reopen condition is met'
+    effect: option A excluded; mission set, reserve policy, seat count and required maturity adopted
+    rationale: 'Reducing the seats or the stage to make batteries alone close changes the aircraft; it is not a result of the comparison. On the requirement mission, batteries alone need about 3,500 Wh/kg at pack level at nominal values and about 1,560 at favourable ones (MSN-EWTW-NRG-001 0.3.0). The one pack above 450 Wh/kg on record is a laboratory pack over 25 cycles, and the projections on record are at cell level and reach 764 Wh/kg for 2050. The average stage scores and is not the range requirement. The offered range of the reference type cannot be a gate while the model asks for more fuel there than the aircraft loads. Thirty minutes is the floor of turbine-engined aeroplanes, taken because no acceptable means of compliance gives a quantity for electric engines. Level 6 is not lowered to pass one element, and it holds the preliminary-design baseline, so it freezes nothing at the concept baseline'
+    rationale_recorded: '2026-11-14'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects:
+    - view: ReqBS
+      action: create
+      ref: null
+      description: Mission set of the eWTW with its roles — requirement mission of 2,000 km, scoring mission of about 1,100 km, sensitivity mission of 500 km — 100 passengers, and the reserve policy
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md — PR #71, ratified by its merge'
+  reopen_if:
+  - condition: A battery pack demonstrated, not projected, closes the requirement mission at 100 seats with the cycle life of service. A cell does not meet the condition
+    reopens: option A
+    by: R2
+  - condition: EASA publishes a quantity for the final reserve of a CS-25 aeroplane with electric engines
+    reopens: the reserve policy of the mission set
+    by: R2
   knus:
   - knu_id: KNU-EWTW-NRG-001-01
     title: Decision criteria and maturity thresholds
@@ -294,10 +328,10 @@ knot:
     exit: Mission set approved by the authority
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: PENDING_REVIEW
+    progress: DONE
     created_date: '2026-11-08'
     start_date: '2026-11-14'
-    end_date: null
+    end_date: '2026-11-14'
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
@@ -305,6 +339,8 @@ knot:
       ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-NRG-001_audit-of-mission-closure_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
   - knu_id: KNU-EWTW-NRG-001-03
     title: Mission energy and power budget
     knu_class: ANALYSIS_PACKAGE

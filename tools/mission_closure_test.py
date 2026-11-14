@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - mission_closure_test.py (0.2.0)
+# Generated 2026-11-14 - mission_closure_test.py (0.3.0)
 """Tests of tools/mission_closure.py on the candidate missions of the eWTW. Run from the repository root:
 
     python3 tools/mission_closure_test.py
@@ -68,7 +68,7 @@ class MissionClosure(unittest.TestCase):
     def test_committed_analysis_passes_and_its_readme_is_current(self):
         bad, lines = mc.run(MSN, REG, mode="check")
         self.assertEqual(bad, [])
-        self.assertTrue(lines[0].endswith("3 candidate missions, 4 pack levels, 6 reference sectors; 31 figures, 16 of them assumptions; rule failures: none"), lines[0])
+        self.assertTrue(lines[0].endswith("3 missions, 4 pack levels, 6 reference sectors; 31 figures, 14 of them assumptions; rule failures: none"), lines[0])
 
     # the fit to the reference
     def test_fit_by_another_implementation(self):
@@ -101,10 +101,27 @@ class MissionClosure(unittest.TestCase):
     def test_check_outside_the_fit_by_hand(self):
         a = self.read()
         fitted = mc.fit(a)
-        km = 2400 * NM * 1.05 + fitted["terminal_km"] + 185 + 400 * 30 / 60
+        km = (2400 + 100) * NM + fitted["terminal_km"] + 400 * 45 / 60          # the reserve of the reference: no contingency, 100 nm, 45 minutes
         self.assertAlmostEqual(fitted["check"]["asked_kg"], 50300 * (1 - math.exp(-fitted["per_km"] * km)))
         self.assertEqual(fitted["check"]["loadable_kg"], 50300 - 27753 - 100 * 100)
-        self.assertAlmostEqual(fitted["check"]["asked_kg"] / fitted["check"]["loadable_kg"] - 1, 0.07, places=2)
+        self.assertAlmostEqual(fitted["check"]["asked_kg"] / fitted["check"]["loadable_kg"] - 1, 0.047, places=3)
+
+    def test_check_does_not_use_the_reserve_of_the_aircraft_under_test(self):
+        before = mc.fit(self.read())["check"]["asked_kg"]
+        self.analysis(lambda a: (a["reserves"]["final_reserve_min"].update(value=90), a["reserves"]["alternate_km"].update(value=500)))
+        self.assertAlmostEqual(mc.fit(self.read())["check"]["asked_kg"], before)
+        self.analysis(lambda a: a["reference"]["range_check"].update(flight_min=30))
+        self.assertLess(mc.fit(self.read())["check"]["asked_kg"], before)
+
+    def test_tolerance_of_the_check(self):
+        self.assertTrue(any("No tolerance is written for this point: it is a check of the test, not a requirement of the aircraft." in line for line in self.run_tool()[1]))
+        self.analysis(lambda a: a["reference"]["range_check"].update(tolerance_share=0.05))
+        self.assertTrue(any("The tolerance written for this point is 5%." in line for line in self.run_tool()[1]))
+        self.analysis(lambda a: a["reference"]["range_check"].update(tolerance_share=1.5))
+        self.fails("reference.range_check: a range, passengers and their mass")
+        self.restore()
+        self.analysis(lambda a: a["reference"]["range_check"].pop("reserve_ref"))
+        self.fails("reference.range_check: a range, passengers and their mass")
 
     # the equations
     def test_distance_flown_by_hand(self):
@@ -224,7 +241,10 @@ class MissionClosure(unittest.TestCase):
         self.analysis(lambda a: a["missions"][1].pop("ref"))
         self.fails("mission M: a figure with a source names it in ref")
         self.analysis(lambda a: a["missions"][1].update(basis="estimate"))
-        self.fails("mission M: basis is one of assumption, source")
+        self.fails("mission M: basis is one of assumption, source, decision")
+        self.restore()
+        self.analysis(lambda a: a["missions"][2].pop("ref"))
+        self.fails("mission L: a figure with a decision names it in ref")
 
     def test_reference_masses_and_sectors(self):
         self.analysis(lambda a: a["reference"]["sizing_takeoff_kg"].update(value=60000))
@@ -246,15 +266,29 @@ class MissionClosure(unittest.TestCase):
         self.analysis(lambda a: [s.update(esad_nm=300) for s in a["reference"]["sectors"]])
         self.fails("reference.sectors: the published sectors must give a positive cost of cruise and a positive terminal distance")
 
-    def test_missions_need_a_candidate_and_distinct_keys(self):
+    def test_missions_have_roles_and_one_requirement(self):
         self.analysis(lambda a: a["missions"][1].update(key="S"))
-        self.fails("missions: keys are used once, and at least one mission is a candidate")
+        self.fails("missions: keys are used once, and one mission is the requirement")
         self.restore()
-        self.analysis(lambda a: [m.update(candidate=False) for m in a["missions"]])
-        self.fails("missions: keys are used once, and at least one mission is a candidate")
+        self.analysis(lambda a: a["missions"][2].update(role="scoring"))
+        self.fails("missions: keys are used once, and one mission is the requirement")
+        self.restore()
+        self.analysis(lambda a: a["missions"][1].update(role="requirement"))
+        self.fails("missions: keys are used once, and one mission is the requirement")
+        self.restore()
+        self.analysis(lambda a: a["missions"][0].update(role="design"))
+        self.fails("missions: each has a key, a name, a positive range_km, and a role among requirement, scoring, sensitivity, reference")
         self.restore()
         self.analysis(lambda a: a["missions"][0].update(range_km=0))
         self.fails("missions: each has a key, a name, a positive range_km")
+
+    def test_requirement_mission_is_reported(self):
+        lines = self.run_tool()[1]
+        self.assertIn("| L | Long stage | requirement | 2000 | 2968 | decision | KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14. It must close |", lines)
+        self.assertTrue(any(line.startswith("On the requirement mission L, option B closes at favourable and nominal values, and not at unfavourable values. "
+                                            "Option A needs 1556 · 3485 · 6555 Wh/kg at pack level") for line in lines))
+        self.analysis(lambda a: (a["missions"][2].update(role="sensitivity"), a["missions"][0].update(role="requirement")))
+        self.assertTrue(any(line.startswith("On the requirement mission S, option B closes at favourable and nominal and unfavourable values. ") for line in self.run_tool()[1]))
 
     def test_pack_levels_shares_and_single_figures(self):
         self.analysis(lambda a: a["pack_levels"][0].update(wh_per_kg=0))
@@ -266,9 +300,12 @@ class MissionClosure(unittest.TestCase):
         self.analysis(lambda a: a["reserves"]["alternate_km"].update(value=-1))
         self.fails("reserves.alternate_km: a record with a value that is not negative")
 
-    def test_options_must_stand_in_the_knot(self):
-        self.knot(lambda k: next(o for o in k["options"] if o["id"] == "C").update(state="excluded"))
-        self.fails("KNOT-EWTW-NRG-001: options A, B and C must stand; C does not")
+    def test_options_are_read_from_the_knot_with_their_state(self):
+        self.assertIn("Options in `KNOT-EWTW-NRG-001`: A excluded by R2 · B open · C open · D excluded by R1.", self.run_tool()[1])
+        self.knot(lambda k: next(o for o in k["options"] if o["id"] == "A").update(state="open", by=None))
+        self.assertIn("Options in `KNOT-EWTW-NRG-001`: A open · B open · C open · D excluded by R1.", self.run_tool()[1])
+        self.knot(lambda k: k.update(options=[o for o in k["options"] if o["id"] != "C"]))
+        self.fails("KNOT-EWTW-NRG-001: options A, B and C must be in the record; C is not")
 
     def test_missing_section_and_inputs_that_cannot_be_read(self):
         self.analysis(lambda a: a.pop("reference"))

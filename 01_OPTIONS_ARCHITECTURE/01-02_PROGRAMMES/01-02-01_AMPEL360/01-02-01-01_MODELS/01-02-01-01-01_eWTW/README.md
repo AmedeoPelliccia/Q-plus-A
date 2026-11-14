@@ -16,10 +16,10 @@ standard_scope: governance
 | Path | `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/` |
 | Programme | AMPEL360 |
 | Class | Advanced tube-and-wing — S-ATLAS [`092`][S-092] |
-| Size class | Approximately 100 passengers ([SBS README][SBS] §6) |
-| Propulsion posture | All-electric, or hybrid-electric with conventional fuel; no hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
+| Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
+| Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.7 |
+| Version | 0.3.8 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -70,7 +70,7 @@ Derived from `main` at `279bb700`, 2026-10-12, and unchanged at `e212e121`, 2026
 
 **Declared so far:**
 
-- the scope (architecture authority, 2026-11-07): **all-electric, or hybrid-electric with conventional fuel**. No hydrogen is carried; liquid hydrogen is allocated to the [BWB-Q100][BWB];
+- the scope (architecture authority, 2026-11-07 and 2026-11-14): **conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery**. Batteries alone are excluded until reopened. No hydrogen is carried; liquid hydrogen is allocated to the [BWB-Q100][BWB];
 - the fuselage PBS `053` — ten sections `053-000 … 053-900`, identifiers `PLANNED`;
 - the energy-carrier structural provisions `053-900` — bay structure (`053-900-010`), crash protection and containment interface (`053-900-020`), mount and attach fittings (`053-900-030`) and the electric-energy maintenance compartment (`053-900-040`), with load overlays in `053-200` (bay integration) and `053-700` (bay support and crash);
 - no auxiliary fuel tank: its footprint is preserved inert (`053-900-050`);
@@ -139,6 +139,8 @@ Uncertainty is managed with the KNOT/KNU method, as in the sibling model [MRTT-Q
 These are LC-B deliverables — *major configuration decisions* in the [lifecycle model][LCM] §3. Each is taken, or explicitly deferred with its rationale, before `REV-B_RELEASED` of any scope it affects. LC-A work proceeds under recorded assumptions, and each assumption names the KNOT that would invalidate it.
 
 **Scope narrowed on 2026-11-07** by the architecture authority: the eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen; liquid hydrogen is allocated to the [BWB-Q100][BWB]. `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are narrowed to that scope and stay open within it.
+
+**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery. `KNOT-EWTW-SRC-001` and `KNOT-EWTW-PRP-001` still list batteries alone and an all-electric chain: R2 does not narrow them.
 
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|
@@ -324,6 +326,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.5 | 2026-11-14 | `KNOT-EWTW-ESS-001` registers five options and has a first essential load analysis, in which every load figure is an assumption (KNOT register 0.7.0). The architecture relations take a candidate with what it brings for its role (0.2.0). `tools/essential_loads.py` added. F23 restated: the STEP file of `v0.2.2-concept` is on `main` and passes the round trip; three artefacts are still those of `v0.2.1-concept` |
 | 0.3.6 | 2026-11-14 | `KNOT-EWTW-NRG-001` has proposed criteria and a research record on the energy carrier (KNOT register 0.8.0). F23 restated: the STEP file, the preview and the verification report on `main` come from one run of `v0.2.2-concept` and match its run record; four points remain |
 | 0.3.7 | 2026-11-14 | `KNOT-EWTW-NRG-001` has three candidate missions with a first-order closure test, and proposes the maturity it requires of six critical elements (KNOT register 0.9.0). `tools/mission_closure.py` added |
+| 0.3.8 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001`: missions with their roles, 100 seats, the final reserve and the required maturity approved; batteries alone excluded until reopened. Size class and propulsion posture restated (KNOT register 0.10.0) |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

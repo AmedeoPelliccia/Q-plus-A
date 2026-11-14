@@ -1,21 +1,21 @@
 # Candidate missions and first-order closure — input record. tools/mission_closure.py reads it and writes the
-# screening into README.md. A figure has a basis: assumption or source. A figure with a source names it in ref.
+# screening into README.md. A figure has a basis: assumption, source or decision. A figure with a source or a decision names it in ref.
 # A parameter has three values: favourable, nominal and unfavourable to closing the mission.
 analysis:
   id: MSN-EWTW-NRG-001
-  version: 0.2.0
+  version: 0.3.0
   date: '2026-11-14'
   knot: KNOT-EWTW-NRG-001
   serves: KNU-EWTW-NRG-001-02
   prepared_by: Claude, for review by STK_SE
   scope: >-
-    Three candidate stages for an aircraft of 100 passengers, and a first-order test of which energy carrier
-    flies each of them in an airframe of the class. The test is a range equation, fitted to the published
+    Three missions for an aircraft of 100 passengers, each with its role, and a first-order test of which energy
+    carrier flies each of them in an airframe of the class. The test is a range equation, fitted to the published
     block fuel of one in-service type of the class. It ranks nothing and sizes nothing: it shows the order of
     magnitude and which figures decide.
   assumptions:
   - id: A1
-    text: The aircraft carries 100 passengers. The mass taken for each, with baggage, is an assumption until the standard masses of the air operations rules are read
+    text: The aircraft carries 100 passengers, fixed by the authority (KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14). The mass taken for each, with baggage, is an assumption until the standard masses of the air operations rules are read
   - id: A2
     text: The airframe is that of the reference type. Its empty mass is the basic operating weight of the reference, and a mission closes when the take-off mass stays within the highest take-off mass certificated for it
   - id: A3
@@ -25,7 +25,7 @@ analysis:
   - id: A5
     text: Reserves are flown as distance in cruise — the contingency as a share of the trip, the alternate as a distance, the final reserve as time at holding speed
   - id: A6
-    text: The final reserve of an aeroplane with electric engines is taken as that of a turbine-engined one, by analogy. The rule names no time for it (research record of 2026-11-14, statement 2)
+    text: The final reserve of the eWTW is 30 minutes at holding speed, the floor of turbine-engined aeroplanes, adopted as an assumption by the authority (KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14). The rule names no time for electric engines (research record of 2026-11-14, statement 2). The alternate is a separate item
   - id: A7
     text: A battery delivers its specific energy reduced by one share, which covers the capacity held back and the capacity lost at the end of service life
   - id: A8
@@ -34,6 +34,8 @@ analysis:
     text: Fuel burned makes the aircraft lighter, and the test credits it with the logarithmic form of the range equation. A battery keeps its mass
   - id: A10
     text: Take-off shaft power is a fixed power for each kilogram of take-off mass. Units are counted at the ratings that the research record gives for a motor and for a turbogenerator
+  - id: A11
+    text: The range the reference type is offered with is a check of the test, flown with the reserve of the charts of that type. It is not a requirement of the eWTW until the test reproduces it within a written tolerance (KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14)
   reference:
     aircraft: Embraer 190
     basic_operating_kg: {value: 27753, basis: source, ref: 'Embraer 190 specification sheet, read on 2026-11-14: basic operating weight, standard'}
@@ -53,18 +55,22 @@ analysis:
       passengers: 100
       kg_per_passenger: 100
       ref: 'Embraer 190 specification sheet, read on 2026-11-14: range of the LR with full passengers at 100 kg, long-range cruise, typical mission reserves'
+      alternate_nm: 100
+      flight_min: 45
+      reserve_ref: 'Embraer 190 airport planning manual, section 3.2, payload and range charts, revision 20, read on 2026-11-14: reserve of 100 nm alternate and 45 min flight. That the range of the specification sheet uses the same reserve is an assumption, and so is the speed of the 45 minutes'
+      tolerance_share: null
   missions:
-  - {key: S, name: Short stage, range_km: 500, candidate: true, basis: assumption, note: 'Less than half of the average stage of mission M'}
-  - {key: M, name: Average stage, range_km: 1100, candidate: true, basis: source, ref: 'Research record of 2026-11-14, statement 4: average stage of the United States fleet of 150 seats and fewer, about 1,110 to 1,140 km'}
-  - {key: L, name: Long stage, range_km: 2000, candidate: true, basis: assumption, note: 'Nearly twice the average stage'}
-  - {key: X, name: Range the reference type is offered with, range_km: 4445, candidate: false, basis: source, ref: 'Embraer 190 specification sheet, read on 2026-11-14: 2,400 nm for the LR', note: 'A reference, not a candidate'}
+  - {key: S, name: Short stage, range_km: 500, role: sensitivity, basis: decision, ref: 'KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14', note: 'Where the terminal phases weigh as much as the cruise. It sizes nothing'}
+  - {key: M, name: Average stage, range_km: 1100, role: scoring, basis: source, ref: 'Research record of 2026-11-14, statement 4: average stage of the United States fleet of 150 seats and fewer, about 1,110 to 1,140 km'}
+  - {key: L, name: Long stage, range_km: 2000, role: requirement, basis: decision, ref: 'KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14', note: 'It must close'}
+  - {key: X, name: Range the reference type is offered with, range_km: 4445, role: reference, basis: source, ref: 'Embraer 190 specification sheet, read on 2026-11-14: 2,400 nm for the LR', note: 'A check of the test, not a mission of the eWTW'}
   payload:
     passengers: 100
     kg_per_passenger: {value: 95, basis: assumption}
   reserves:
     contingency_share: {value: 0.05, basis: assumption}
     alternate_km: {value: 185, basis: assumption}
-    final_reserve_min: {value: 30, basis: source, ref: 'Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine-engined aeroplanes; research record of 2026-11-14, statement 2'}
+    final_reserve_min: {value: 30, basis: decision, ref: 'KNOT-EWTW-NRG-001, ruling R2 of 2026-11-14: the floor of Regulation (EU) 2021/1296, CAT.OP.MPA.181(c)(5), for turbine-engined aeroplanes, taken as an assumption'}
     holding_speed_kmh: {value: 400, basis: assumption}
   fuel_energy_mj_per_kg: {value: 43.0, basis: assumption, note: 'Lower heating value commonly used for jet fuel; not read at a source'}
   empty_growth_share: {value: 0.0, basis: assumption, note: 'Share of the empty mass that grows with the take-off mass. Zero keeps the airframe of the reference as it is'}
