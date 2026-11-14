@@ -36,6 +36,13 @@ rows:
       main (illegal escape in a double-quoted scalar, line 26). The correction
       and the rename to prompts/run-record.yaml are precondition P0 of the
       governing brief and sit inside the PBS area, outside this index's scope.
+      Since 2026-11-14 a second record, Prompts/run-record.yaml, stands beside it:
+      written by generator v0.2.2-concept in the author's run, valid YAML, with no
+      local path. The sizes and hashes it gives for the STEP file, the preview and
+      the verification report equal those of the files on main at ad1935ea. The
+      hash it gives for the generator is that of a copy with Windows line endings
+      and no final newline, not of the file on main. The earlier record is still
+      in the tree, so the validator still fails on it (F08).
 
   - class: ratified-act-or-convention
     subject: AMPEL360-PBS-PN-CM-001 (Issue 2)
@@ -107,17 +114,16 @@ rows:
     subject: EWTW-533001-000
     path: null
     status: pending-commit
-    action: "commit the round-trip report of 2026-11-14 as evidence/EWTW-533001-000_concept_freecad-roundtrip.txt in node EWTW-533001-000, with the verification report, the run record and the preview written by generator v0.2.2-concept; the row then becomes on-disk with its path"
+    action: "commit the round-trip report of 2026-11-14 as evidence/EWTW-533001-000_concept_freecad-roundtrip.txt in node EWTW-533001-000; the row then becomes on-disk with its path"
     note: >
       Two round trips through FreeCAD 1.0.0 (Open CASCADE 7.8.1), run without the interface
       on 2026-11-13. On the STEP file written by v0.2.1-concept (commit 66af8162):
       6 PASS | 5 FAIL | 6 INFO, 119 bodies against 50 leaf products. On the output of
       v0.2.2-concept in a verification run: 11 PASS | 0 FAIL | 6 INFO, 50 bodies under
-      their part numbers. A third run on 2026-11-14, on the STEP file on main at 81c35059:
-      11 PASS | 0 FAIL | 6 INFO, 50 bodies under their part numbers. That file equals the
-      output of the verification run, line endings apart. Its report is the one of record
-      once the author commits it into the node, which lies in the PBS (model README,
-      finding F23).
+      their part numbers. A run on 2026-11-14, on the STEP file on main at ad1935ea, which
+      the author's run of v0.2.2-concept wrote that day: 11 PASS | 0 FAIL | 6 INFO,
+      50 bodies under their part numbers. Its report is the one of record once the author
+      commits it into the node, which lies in the PBS (model README, finding F23).
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml
 
@@ -166,3 +172,16 @@ rows:
       reviewer's analysis, not drawn from a source. No option is scored.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ESS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the energy carrier, as accepted on review from a report by Grok of
+      2026-11-14 — the planning rule for fuel and energy, studies of hybrid regional
+      aircraft, batteries, electric and thermal machines, fuel. Twelve of its statements
+      were read by the reviewer at the source, seven are as reported, four report that a
+      search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
