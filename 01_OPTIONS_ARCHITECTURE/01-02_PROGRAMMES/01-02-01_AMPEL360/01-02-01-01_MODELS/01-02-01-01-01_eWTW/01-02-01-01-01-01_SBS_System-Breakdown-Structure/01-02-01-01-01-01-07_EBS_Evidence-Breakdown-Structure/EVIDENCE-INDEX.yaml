@@ -156,6 +156,18 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-STO-001.yaml
 
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-SRC-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
+    status: on-disk
+    note: >
+      Concept of operations of the environmental control system 0.1.0: phases, functions,
+      supplies, failure and ground cases, and open inputs. Input in conops.yaml beside it;
+      the tables are written and checked by tools/conops_check.py. It carries no figure of
+      power and states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+
   - class: ratified-act-or-convention
     subject: KNOT-EWTW-NRG-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R1-completion_2026-11-14.md

@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.0 · **Date:** 2026-11-14
+**Version:** 0.11.1 · **Date:** 2026-11-14
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -96,6 +96,10 @@ The [missions](000_General/evidence/MSN-EWTW-NRG-001/README.md) of the eWTW are 
 `KNOT-EWTW-ESS-001` registers five options, all `open`: a dedicated essential battery, a ram-air turbine, a segregated generator channel on the turbogenerator, an auxiliary power module, and a reserved partition of the propulsion battery. The [option set of 2026-11-14](000_General/evidence/KNOT-EWTW-ESS-001_option-set_2026-11-14.md) says with which electrical sources each can exist and what each shares with the propulsion chain. It does not rank them.
 
 The [essential load analysis](000_General/evidence/ELA-EWTW-ESS-001/README.md) lists the loads kept after the loss of normal generation, built from the services of AMC 25.1351(d). At nominal values the essential network draws between 4 and 5 kW from its source. Every load figure in it is an assumption, to be replaced by sources or design values. Its budget is written and checked by [`tools/essential_loads.py`](../../../../../../tools/essential_loads.py).
+
+### Concept of operations of the environmental control system
+
+The [concept of operations](000_General/evidence/CONOPS-EWTW-ECS-001/README.md) is the first part of the load analysis of `KNOT-EWTW-SRC-001`. It says in which phases the system works, what it does, what supplies it and what it does in seven failure and ground cases. It carries no figure of power, and its tool refuses one: the research found no load profile for the class, and this document fixes the phases and the cases for which the analysis has to give a number. Of its 26 statements, 7 are declared by the model or a ruling, 2 come from the essential load analysis, 13 are proposed in it and 4 are open. Its eight open inputs name the KNOT that decides each, or the authority.
 
 ---
 
@@ -284,6 +288,7 @@ The first line reads `17 KNOTs, 50 KNUs, 33 S-ATLAS chapters; rule failures: non
 | 0.10.2 | 2026-11-14 | Research record of the propulsion chain, reviewed: eleven statements read at the source, four as reported, seven findings of absence, ten items not accepted. `KNU-EWTW-PRP-001-01` to `-04` in progress. The basis of PBS group `060` restated: opened ahead of the ruling of `KNOT-EWTW-PRP-001`, on R2 |
 | 0.10.3 | 2026-11-14 | Research record of the electrical sources and of the role of storage, reviewed: ten statements read at the source, seven as reported, ten findings of absence, six items not accepted. `KNU-EWTW-SRC-001-01` to `-03` and `KNU-EWTW-STO-001-01`, `-02` and `-04` in progress |
 | 0.11.0 | 2026-11-14 | Ruling R1 completed with rationale and evidence. `KNOT-EWTW-NRG-001` (R3) and `KNOT-EWTW-SRC-001` (R1) deferred to `KNOT-EWTW-STO-001`, where the one remaining choice stays; fuel storage and turbogenerator installation authorised. CM-004 rule 6 defines the deferral and `tools/knot_check.py` 0.1.5 checks it. Three KNOTs opened: cruise point, certification basis, fuel location. 17 KNOTs, 50 KNUs; 23 tests |
+| 0.11.1 | 2026-11-14 | Concept of operations of the environmental control system, first issue, for `KNU-EWTW-SRC-001-01`: phases, functions, supplies, cases and open inputs, with no figure. `tools/conops_check.py` with 16 tests |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

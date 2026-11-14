@@ -139,6 +139,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/CONOPS-EWTW-ECS-001/README.md
   - knu_id: KNU-EWTW-SRC-001-02
     title: Source sizing
     knu_class: ANALYSIS_PACKAGE
