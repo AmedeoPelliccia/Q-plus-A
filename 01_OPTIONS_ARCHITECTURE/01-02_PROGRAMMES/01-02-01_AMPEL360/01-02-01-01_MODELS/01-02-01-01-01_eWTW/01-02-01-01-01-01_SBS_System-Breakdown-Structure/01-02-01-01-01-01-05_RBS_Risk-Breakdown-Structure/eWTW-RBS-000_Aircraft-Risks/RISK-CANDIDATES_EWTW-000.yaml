@@ -1,0 +1,94 @@
+# Generated 2026-11-14 - Claude Fable 5.2 - aircraft-level candidates after ruling R2 of KNOT-EWTW-NRG-001
+# RBS candidates of the aircraft, eWTW-PBS-000 - one file per product node (CM-002,
+# clarification C2.1). These are CANDIDATES prepared by the reviewer from the analyses
+# and records on disk: none is raised. Raising a risk is an act of the owning authority
+# (RBS charter, Trigger); a risk of the aircraft then takes a sovereign id R-<seq>
+# (CM-002 SS3). The binding field is affects: (PBS node ids, each resolvable on disk);
+# likelihood, severity and owner stay null - no score is written here. A candidate whose
+# affects: list stays inside one group is in the set of that group (RISK-CANDIDATES_EWTW-020.yaml).
+# Paths are relative to the SBS root.
+
+aircraft_risk_candidates:
+  id: eWTW-RBS-CANDIDATES-000
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  node: eWTW-PBS-000
+  status: CANDIDATE - none raised
+
+candidates:
+  - id: null
+    item: "the requirement mission L does not close at unfavourable values for option B, the only option that closes it on the technology on record"
+    affects: [eWTW-PBS-000]
+    evidence_note: "MSN-EWTW-NRG-001 0.3.0, option B: take-off mass 35.3 t favourable, 44.1 t nominal, over the limit at unfavourable values"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
+
+  - id: null
+    item: "no critical element has on record the level 6 required at the release of the preliminary-design baseline"
+    affects: [eWTW-PBS-000]
+    evidence_note: "maturity records Q1 to Q6 of KNOT-EWTW-NRG-001, approved by R2: level 4 for a pack above 450 Wh/kg; no level on record for the megawatt-hour pack, the megawatt-class motor, the megawatt-class turbogenerator, high-voltage distribution and thermal management"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
+
+  - id: null
+    item: "the screening rests on one reference type and has no written tolerance: at the range that type is offered with, the fit asks for 4.7 % more fuel than the aircraft can load"
+    affects: [eWTW-PBS-000]
+    evidence_note: "MSN-EWTW-NRG-001 0.3.0, check on a point outside the fit; a second reference type is not fitted"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
+
+  - id: null
+    item: "at the unit sizes on record the take-off power of option B needs 12 motors and 9 turbogenerators; their number, installation and failure cases are not studied"
+    affects: [eWTW-PBS-000, eWTW-PBS-071-000]
+    evidence_note: "MSN-EWTW-NRG-001 0.3.0, option B on mission L at nominal values, units of 750 kW and 1,000 kW; KNOT-EWTW-PRP-001 keeps distributed and concentrated propulsion open"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
+
+  - id: null
+    item: "the final reserve of an aeroplane with electric engines has no published quantity, and the certification basis of the eWTW is not recorded"
+    affects: [eWTW-PBS-000]
+    evidence_note: "R2, decision two: 30 minutes taken as an assumption; research record of 2026-11-14 on the operating rule and on the scope of the special condition for electric engines"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
+
+  - id: null
+    item: "where the fuel is carried is not decided, and the energy-carrier bay was defined for batteries, which only option C carries"
+    affects: [eWTW-PBS-053-900-000, eWTW-PBS-028-000]
+    evidence_note: "R2 leaves options B and C: fuel in both, a propulsion battery in C only; 6,839 kg of fuel on mission L at nominal values (MSN-EWTW-NRG-001 0.3.0); model finding F01"
+    evidence:
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+    raised: null
+    likelihood: null
+    severity: null
+    owner: null
+    mitigation: null
+    status: CANDIDATE
