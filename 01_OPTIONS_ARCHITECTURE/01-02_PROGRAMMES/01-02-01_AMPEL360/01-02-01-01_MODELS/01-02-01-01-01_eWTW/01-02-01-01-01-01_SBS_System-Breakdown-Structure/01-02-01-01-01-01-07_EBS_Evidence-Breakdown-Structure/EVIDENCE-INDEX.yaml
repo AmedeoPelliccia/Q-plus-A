@@ -229,6 +229,18 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-FUL-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    status: on-disk
+    note: >
+      Criteria proposed for the cruise point on 2026-11-15, at the request of the
+      authority: four not traded, five traded with weights, with the reasons, the
+      argument against, what would open the weights again, and what the set implies on
+      the points of the screening. A proposal: it rules nothing and scores no option.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk

@@ -44,7 +44,70 @@ knot:
     text: 'a point between the two, such as Mach 0.62 at 27,000 ft, the point of a turboprop design study on record'
     state: open
     pbs_footprint: []
-  criteria: []
+  criteria:
+  - id: M1
+    class: mandatory
+    text: 'The cabin pressure altitude is not above 8,000 ft at the maximum operating altitude, in normal operation'
+    source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M2
+    class: mandatory
+    text: 'Above 25,000 ft, the cabin pressure altitude stays at or below 15,000 ft after any reasonably probable failure of the pressurisation system. It applies to the points above 25,000 ft only'
+    source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M3
+    class: mandatory
+    text: 'The requirement mission closes at the cruise point, with the reserves of ruling R2 of KNOT-EWTW-NRG-001'
+    source: 'Ruling R2 of KNOT-EWTW-NRG-001, 2026-11-14'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M4
+    class: mandatory
+    text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service'
+    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400. It is a requirement of the programme and is in no text'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T1
+    class: tradable
+    text: 'Power of the gas turbines for the cruise, referred to sea level, on the take-off mass of the requirement mission. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
+    weight: 0.35
+    threshold: null
+    state: PROPOSED
+  - id: T2
+    class: tradable
+    text: 'Fuel loaded on the scoring mission. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
+    weight: 0.30
+    threshold: null
+    state: PROPOSED
+  - id: T3
+    class: tradable
+    text: 'Time at cruise speed on the scoring mission. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
+    weight: 0.20
+    threshold: null
+    state: PROPOSED
+  - id: T4
+    class: tradable
+    text: 'Inception voltage of partial discharge left at the cruise altitude, as a share of its value at sea level. Higher is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
+    weight: 0.10
+    threshold: null
+    state: PROPOSED
+  - id: T5
+    class: tradable
+    text: 'Ideal work to compress outside air to the cabin pressure. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
+    weight: 0.05
+    threshold: null
+    state: PROPOSED
   maturity_required: []
   assumptions:
   - text: 'the mission screening is fitted to sectors that its reference type flew at long-range cruise, and it carries no cruise speed of the eWTW'
@@ -132,3 +195,5 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md

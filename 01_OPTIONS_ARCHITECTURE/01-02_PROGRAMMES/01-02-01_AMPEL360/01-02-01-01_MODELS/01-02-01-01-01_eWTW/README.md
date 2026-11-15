@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.16 |
+| Version | 0.3.17 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -361,6 +361,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.14 | 2026-11-15 | Generation architecture: research record, and the gas turbines in the screening of the cruise points (KNOT register 0.11.4). No turbogenerator of the megawatt class has flown; at a declared first-order rule the cruise, not the take-off, sizes the gas turbines at every candidate point |
 | 0.3.15 | 2026-11-15 | Certification basis: research record (KNOT register 0.11.5). The texts are read at the Agency; a turbogenerator used for propulsion falls under the definition of an engine; four gaps have no text. The basis is not declared: the declaration is an act of the authority |
 | 0.3.16 | 2026-11-15 | Fuel location: research record (KNOT register 0.11.6). The fuel of the requirement mission exceeds the tanks of the turboprops of the class and is about half the wing of the reference jet; the wing of the eWTW is not defined, so the KNOT now depends on the cruise point. A tank in the fuselage has three costs the rules name and no mass on record |
+| 0.3.17 | 2026-11-15 | Cruise point: criteria proposed, with weights (KNOT register 0.11.7). Fuel and installed power carry 0.65, time 0.20; a floor of 360 kt on the cruise speed is proposed as a requirement of the programme. Nothing is scored: the criteria are `PROPOSED` and the maturity is not declared |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
