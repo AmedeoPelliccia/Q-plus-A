@@ -88,6 +88,10 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+  - text: a turbogenerator used for propulsion falls under the definition of an engine, by a certification memorandum of the Agency; the certification basis of the eWTW, which would make that reading binding here, is not declared
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
   - text: the tailcone holds mounts and a firewall declared for an auxiliary power module, not for a turbogenerator
     ref:
       view: PBS

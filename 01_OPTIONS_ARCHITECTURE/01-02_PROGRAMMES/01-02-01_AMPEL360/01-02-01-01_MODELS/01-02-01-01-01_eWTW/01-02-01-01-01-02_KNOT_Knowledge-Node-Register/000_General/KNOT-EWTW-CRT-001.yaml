@@ -25,6 +25,7 @@ knot:
   - KNOT-EWTW-PRP-001
   - KNOT-EWTW-STO-001
   - KNOT-EWTW-ESS-001
+  - KNOT-EWTW-GEN-001
   affects:
   - view: model
     ref: README §3 row 3
@@ -62,11 +63,13 @@ knot:
     exit: 'Texts in force and proposed, each read at the source, with amendment and date'
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-14'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
   - knu_id: KNU-EWTW-CRT-001-02
     title: Requirements with no text for this aircraft
     knu_class: ANALYSIS_PACKAGE
@@ -89,11 +92,13 @@ knot:
     exit: 'Each gap stated with the text that is missing, the nearest text in force, and the position to seek'
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-14'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
   - knu_id: KNU-EWTW-CRT-001-03
     title: Declaration of the basis
     knu_class: REQUIREMENT_SET

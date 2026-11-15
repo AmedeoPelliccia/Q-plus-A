@@ -199,6 +199,22 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRT-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the certification basis, as accepted on review from a report of
+      2026-11-15 relayed by the author - the amendment of CS-25 in force and the paragraphs
+      named in the brief, the special condition for electric and hybrid propulsion with
+      its means of compliance, a certification memorandum, special conditions for
+      batteries, and the requirements with no text. Fifteen of its statements were read by
+      the reviewer at the source, one is as reported, four report that a search found
+      nothing. It declares no basis.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRT-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk

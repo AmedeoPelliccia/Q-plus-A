@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.14 |
+| Version | 0.3.15 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -152,7 +152,7 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 | `KNOT-EWTW-STO-001` | Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only? | 4 · 6 · 14 | — | `STK_SE` |
 | `KNOT-EWTW-ESS-001` | Essential power: which sources, what segregation and what duration keep essential functions available? | 5 · 12 · 14 · 15 | — | `STK_SAF` |
 | `KNOT-EWTW-CRZ-001` | Cruise point: which Mach number and which altitude? | 3 · 5 · 9 | The mission screening carries no cruise speed of the eWTW | `STK_SE` |
-| `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet for this aircraft? An obligation, not a choice | 3 · 4 · 14 | CS-25 is read as the basis, and no record declares it | `STK_SAF` |
+| `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet for this aircraft? An obligation, not a choice | 3 · 4 · 14 | CS-25 at Amendment 28 and SC E-19 are read at the source; no record declares the basis | `STK_SAF` |
 | `KNOT-EWTW-GEN-001` | Generation architecture: how many turbogenerators, of what rating, and where are they installed? | 3 · 4 | First-order take-off power near 8.8 MW, and a cruise that asks more of the gas turbines once referred to sea level; units on record of 0.6 to 1 MW, none flown | `STK_SE` |
 | `KNOT-EWTW-FUL-001` | Where is the fuel carried — in the wing, in the fuselage bay, or in both — and what does the energy-carrier bay then hold? | 1 · 2, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]) | `STK_SE` |
 
@@ -357,6 +357,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.12 | 2026-11-15 | `KNOT-EWTW-GEN-001` opened for the number, rating and position of the turbogenerators, which the deferral of the electrical sources had left without a decision of their own (KNOT register 0.11.2) |
 | 0.3.13 | 2026-11-15 | Cruise point: research record and a first-order screening of four points (KNOT register 0.11.3). The cruise asks about as much electrical power as the take-off; the jet point saves time and costs fuel, cabin compression and insulation margin |
 | 0.3.14 | 2026-11-15 | Generation architecture: research record, and the gas turbines in the screening of the cruise points (KNOT register 0.11.4). No turbogenerator of the megawatt class has flown; at a declared first-order rule the cruise, not the take-off, sizes the gas turbines at every candidate point |
+| 0.3.15 | 2026-11-15 | Certification basis: research record (KNOT register 0.11.5). The texts are read at the Agency; a turbogenerator used for propulsion falls under the definition of an engine; four gaps have no text. The basis is not declared: the declaration is an act of the authority |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
