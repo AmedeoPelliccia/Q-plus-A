@@ -215,6 +215,20 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-FUL-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUL-001_fuel-location_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the place of the fuel, as accepted on review from a report of
+      2026-11-15 relayed by the author - fuel capacity of three types of the class, the
+      requirements on fuel tanks in and outside the fuselage, and the criteria of
+      placement. Nine of its statements were read by the reviewer at the source, three
+      are as reported, five report that a search found nothing. It reads station
+      053-900-050 of the product tree and finds no volume on record for the bay.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-FUL-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk

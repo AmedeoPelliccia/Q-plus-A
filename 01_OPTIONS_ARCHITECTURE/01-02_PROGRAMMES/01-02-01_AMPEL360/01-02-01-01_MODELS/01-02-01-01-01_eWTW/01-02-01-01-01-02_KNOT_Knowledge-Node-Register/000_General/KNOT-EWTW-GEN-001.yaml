@@ -96,7 +96,9 @@ knot:
     ref:
       view: PBS
       ref: eWTW-PBS-053-400-000
-  couplings: []
+  couplings:
+  - knot: KNOT-EWTW-FUL-001
+    note: the fragments of a rotor leave near its plane and no fuel is to be released near the engines; the position of the turbogenerators and the place of the fuel are chosen together
   rulings: []
   reopen_if: []
   knus:
