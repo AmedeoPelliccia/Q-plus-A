@@ -1,4 +1,4 @@
-# Criteria proposed — cruise point
+# Criteria and maturity proposed — cruise point
 
 | | |
 |---|---|
@@ -7,7 +7,8 @@
 | Proposed by | Claude, 2026-11-15, at the request of the authority of the model |
 | Second reading | An assessment relayed by the author on 2026-11-15 found the set consistent with the records and asked for the note on CS 25.841 above 25,000 ft. It does not name its producer |
 | State | Proposed. Every criterion is `PROPOSED` in the record of the KNOT. To approve them is an act of the authority |
-| Not in it | The maturity the decision requires. `maturity_required` is still empty, so rule 5 keeps the KNOT closed to scoring even after the criteria are approved |
+| Maturity | Three maturity records, added the same day on the decision of the authority to keep the threshold of ruling R2 of `KNOT-EWTW-NRG-001`. They are `PROPOSED` too |
+| Gate | Rule 5 keeps the KNOT closed to scoring while a criterion or a maturity record is `PROPOSED` |
 
 This record states a proposal and its reasons. It rules nothing, and by it no option is retained or rejected.
 
@@ -69,6 +70,21 @@ Fuel and installed power carry 0.65 together, and time 0.20. No threshold is pro
 
 Noise and integration with faster traffic have no figure on record, so nothing can be scored on them today. If either gets a figure, the weights are to be opened again. Propulsive efficiency is not a criterion by itself: it acts through `T2`.
 
+## Maturity the decision requires
+
+On 2026-11-15 the authority decided to keep for this KNOT the threshold of ruling R2 of `KNOT-EWTW-NRG-001`: level 6 of the Q+ATLANTIDE-TRL scale at the release of the preliminary-design baseline, with no waiver. Its reason: the elements this choice depends on are those of the chain that `KNOT-EWTW-NRG-001` and `KNOT-EWTW-GEN-001` size, and no record gives a ground for closing the cruise point on elements less mature than those of the energy carrier.
+
+| Id | Element | Options that depend on it | Required | Level the records support |
+|---|---|---|---|---|
+| `Q1` | Turbogenerator of megawatt class | A, B, C | 6 | none |
+| `Q2` | Propeller driven by an electric motor of megawatt class, at the cruise Mach of the option | A, C | 6 | none |
+| `Q3` | Ducted fan driven by an electric motor of megawatt class, at the cruise Mach of the option | B | 6 | none |
+
+- At the concept baseline an element may be below the threshold, if its level and the assumptions are on record.
+- At the preliminary-design baseline an element below it needs an approved maturation cycle with its fallback, or a waiver. A waiver is an act of the authority, with its reason (rule 5 of CM-004).
+- No level is set today. What the records hold are statements of makers and design studies, not test results.
+- `Q1` is common to the three options and does not separate them. The cruise point changes how many megawatts of it are installed, which is criterion `T1`. `Q2` and `Q3` separate the propeller options from the jet option.
+
 ## Why fuel and installed power
 
 1. **The architecture pays only through the propulsor.** The electric chain costs about a tenth of the power it carries. The [mission screening](MSN-EWTW-NRG-001/README.md) puts the cruise of the eWTW at about 5 % more fuel than the cruise fitted to its reference, at nominal values, with a propeller at 0.85. With the fan at 0.76 of the jet point that becomes about 17 % more. At the jet point the eWTW is, by its own figures, a less efficient jet than the one it is measured against.
@@ -87,7 +103,7 @@ Three things would open the weights again:
 
 ## What the set implies on the points of the screening
 
-This is an illustration. It retains and rejects nothing: rule 5 allows no scoring before the criteria and the maturity are approved.
+This is an illustration. It retains and rejects nothing: rule 5 allows no scoring before the criteria and the maturity records are approved.
 
 Each measure is divided into the best value among the points compared, so that the best point has 1 on each criterion, and the results are added with the weights.
 

@@ -108,7 +108,37 @@ knot:
     weight: 0.05
     threshold: null
     state: PROPOSED
-  maturity_required: []
+  maturity_required:
+  - id: Q1
+    element: 'Turbogenerator of megawatt class'
+    taxonomy: '068'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'A generator of 1 MW tested by itself, a turbogenerator of 600 kW on a bench since July 2026, and a generator meant for 2.5 MW that passed 1 MW with its turbine on a bench; none has flown (research record of the generation architecture, 2026-11-15, statements 1, 4 and 5). These are statements of the makers, read at the source, not test results. The cruise point sets how many megawatts are installed, not which element is needed'
+    level: null
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought'
+    state: PROPOSED
+  - id: Q2
+    element: 'Propeller driven by an electric motor of megawatt class, at the cruise Mach of the option'
+    taxonomy: '077'
+    options: [A, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'Six electric propellers of 50 kW each flew about 100 hours on a demonstrator (research record of the propulsion chain, 2026-11-14, statement 1). The propeller efficiency of 0.85 at Mach 0.62 is that of a design study (statement 8). No efficiency of a motor with its inverter has been measured in flight at a megawatt (finding 18)'
+    level: null
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought'
+    state: PROPOSED
+  - id: Q3
+    element: 'Ducted fan driven by an electric motor of megawatt class, at the cruise Mach of the option'
+    taxonomy: '077'
+    options: [B]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'The one motor of 2 MW meant to replace a turbofan on an airliner of about 100 seats never flew (research record of the propulsion chain, 2026-11-14, statement 5). An all-electric aircraft of 19 seats with ducted propulsors made a first flight on 2026-11-14, at about 300 km/h and with no power given for a propulsor (statement 4). No comparison in flight of propellers and ducted fans exists at this class (finding 17)'
+    level: null
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought'
+    state: PROPOSED
   assumptions:
   - text: 'the mission screening is fitted to sectors that its reference type flew at long-range cruise, and it carries no cruise speed of the eWTW'
     ref:
@@ -188,7 +218,7 @@ knot:
     exit: 'Criteria, weights and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: IN_PROGRESS
+    progress: PENDING_REVIEW
     created_date: '2026-11-14'
     start_date: '2026-11-15'
     end_date: null
