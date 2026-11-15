@@ -54,7 +54,7 @@ class KnotCheck(unittest.TestCase):
         bad, prov, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertEqual(bad, [])
         self.assertEqual(prov, [], "ruling R1 of the energy carrier was completed on 2026-11-14")
-        self.assertTrue(lines[0].startswith("17 KNOTs, 50 KNUs"))
+        self.assertTrue(lines[0].startswith("18 KNOTs, 53 KNUs"))
         self.assertIn("Control: `CAD`", lines)
         self.assertIn("Obligation: `CRT`", lines)
 
@@ -116,7 +116,13 @@ class KnotCheck(unittest.TestCase):
         _, _, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertIn("| `KNOT-EWTW-NRG-001` | Energy carrier | `decision-anchor` | `000` | DEFERRED | 7 | `STK_SE` |", lines)
         self.assertTrue(any(l.startswith("| `eWTW-PBS-053-900-000` | `KNOT-EWTW-NRG-001` | DEFERRED |") for l in lines))
-        self.assertTrue(any(l.startswith("| `eWTW-PBS-068-000` | `KNOT-EWTW-SRC-001` | DEFERRED |") for l in lines))
+        self.assertTrue(any(l.startswith("| `eWTW-PBS-024-000` | `KNOT-EWTW-SRC-001` | DEFERRED |") for l in lines))
+
+    def test_turbogenerator_chapter_is_gated_by_its_own_decision(self):
+        _, _, lines = knot_check.check(self.reg, TAX, PBS)
+        rows = [l for l in lines if l.startswith("| `eWTW-PBS-068-000` |")]
+        self.assertEqual(len(rows), 1, "a deferred KNOT does not hold the gate of a question it does not decide")
+        self.assertTrue(rows[0].startswith("| `eWTW-PBS-068-000` | `KNOT-EWTW-GEN-001` | OPEN |"))
 
     def test_deferred_needs_another_knot(self):
         self.edit("NRG", lambda k: k.update(closed_with=[]))

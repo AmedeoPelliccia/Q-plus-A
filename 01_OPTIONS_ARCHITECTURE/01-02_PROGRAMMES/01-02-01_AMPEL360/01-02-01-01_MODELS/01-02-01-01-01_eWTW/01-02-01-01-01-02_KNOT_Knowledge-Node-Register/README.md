@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.1 · **Date:** 2026-11-14
+**Version:** 0.11.2 · **Date:** 2026-11-15
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -43,6 +43,7 @@ No decision anchor has approved criteria yet: two records hold proposed criteria
 | `KNOT-EWTW-CRZ-001` | Cruise point | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-ESS-001` | Essential power | `decision-anchor` | `000` | OPEN | 3 | `STK_SAF` |
 | `KNOT-EWTW-FUL-001` | Fuel location and energy-carrier bay | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
+| `KNOT-EWTW-GEN-001` | Generation architecture | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-LCM-001` | Lifecycle notation and registry pin | `lifecycle-constraint` | `000` | OPEN | 2 | `STK_CM` |
 | `KNOT-EWTW-NRG-001` | Energy carrier | `decision-anchor` | `000` | DEFERRED | 7 | `STK_SE` |
 | `KNOT-EWTW-PRP-001` | Propulsion chain | `decision-anchor` | `000` | OPEN | 5 | `STK_SE` |
@@ -80,6 +81,9 @@ Three KNOTs come from the research records of the same day. Each holds a questio
 | `KNOT-EWTW-CRZ-001` | Cruise point: which Mach number and which altitude? | Propeller against ducted fan (`PRP`); the voltage of the propulsion network (`SRC`); the cabin air compressors |
 | `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet? | The criteria of `PRP`, `STO` and `ESS`. It is an obligation, not a choice |
 | `KNOT-EWTW-FUL-001` | Where is the fuel carried, and what does the energy-carrier bay then hold? | The fuel storage (`028`) and the bay `053-900`, which was defined for batteries |
+| `KNOT-EWTW-GEN-001` | Generation architecture: how many turbogenerators, of what rating, and where? | The turbogenerator installation (`068`); option C of essential power. It is decided with `PRP` |
+
+`KNOT-EWTW-GEN-001` was opened on 2026-11-15 to correct the deferral of the day before. The gate on the turbogenerator chapter, number, rating and position, had been put on `KNOT-EWTW-SRC-001`, which is deferred to the role of storage. That choice decides whether a battery is carried, not how many turbogenerators there are, so the gate would have opened on a decision that does not concern it. The question now has its own KNOT, and `KNU-EWTW-SRC-001-02` serves it.
 
 ### Criteria proposed
 
@@ -125,14 +129,14 @@ Each record lists, in its `taxonomy` field, the [S-ATLAS][S-ATLAS] chapters it a
 | `049` | Auxiliary Power Module | `ESS` · `SRC` |
 | `053` | Fuselage | `FUL` · `NRG` · `DAT` · `ROD` |
 | `057` | Wings | `FUL` |
-| `061` | Powerplant Installation and Nacelle Integration | `PRP` |
+| `061` | Powerplant Installation and Nacelle Integration | `GEN` · `PRP` |
 | `062` | Combustion Machinery | `PRP` |
 | `063` | Combustion Systems for Sustainable Carriers | `PRP` |
 | `064` | Carrier Delivery Metering and Conditioning | `NRG` · `PRP` |
 | `065` | Engine Air and Thermal Management | `PRP` |
 | `066` | Control Monitoring and Indicating | `PRP` |
 | `067` | Exhaust Emissions and Contrail Management | `PRP` |
-| `068` | Turbogenerators and Power Offtakes | `NRG` · `PRP` · `SRC` · `STO` |
+| `068` | Turbogenerators and Power Offtakes | `GEN` · `NRG` · `PRP` · `SRC` · `STO` |
 | `069` | Lubrication Ignition Starting and Accessories | `PRP` |
 | `071` | Propulsion Architectures and Energy Management | `CRZ` · `PRP` |
 | `072` | Electric Machines for Propulsion | `PRP` |
@@ -168,6 +172,9 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Five K
 | `KNU-EWTW-FUL-001-01` | Fuel volume and where it fits | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-FUL-001-02` | Disposition of the energy-carrier bay | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-FUL-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
+| `KNU-EWTW-GEN-001-01` | Unit ratings, counts and installations on record | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
+| `KNU-EWTW-GEN-001-02` | Generation sizing by failure case | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
+| `KNU-EWTW-GEN-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 | `KNU-EWTW-LCM-001-01` | Baseline notation | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-LCM-001-02` | Registry re-pin | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-NRG-001-01` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
@@ -182,7 +189,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Five K
 | `KNU-EWTW-PRP-001-04` | Propulsion failure cases | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
 | `KNU-EWTW-PRP-001-05` | PBS group for a thermal machine | `CONTROLLED_ARTEFACT` | — | PENDING_REVIEW |
 | `KNU-EWTW-SRC-001-01` | Electrical load analysis | `ANALYSIS_PACKAGE` | `STO` · `ESS` | IN_PROGRESS |
-| `KNU-EWTW-SRC-001-02` | Source sizing | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
+| `KNU-EWTW-SRC-001-02` | Source sizing | `ANALYSIS_PACKAGE` | `GEN` | IN_PROGRESS |
 | `KNU-EWTW-SRC-001-03` | Distribution architecture | `ANALYSIS_PACKAGE` | `ESS` | IN_PROGRESS |
 | `KNU-EWTW-STO-001-01` | Storage role and size | `ANALYSIS_PACKAGE` | — | IN_PROGRESS |
 | `KNU-EWTW-STO-001-02` | Battery installation safety | `REQUIREMENT_SET` | — | IN_PROGRESS |
@@ -225,7 +232,7 @@ This view is generated from the `gates` relations in the KNOT records. Each row 
 | `eWTW-PBS-053-600-090` | `KNOT-EWTW-KEL-001` | OPEN | eWTW / model scope / initial definition | Keel-beam taxonomy binding |
 | `eWTW-PBS-053-900-000` | `KNOT-EWTW-FUL-001` | OPEN | eWTW / model scope / initial definition | What the bay holds once the fuel is located |
 | `eWTW-PBS-053-900-000` | `KNOT-EWTW-NRG-001` | DEFERRED | eWTW / model scope / initial definition | Energy-carrier bay contents and installation |
-| `eWTW-PBS-068-000` | `KNOT-EWTW-SRC-001` | DEFERRED | eWTW / model scope / initial definition | Number, rating and position of the turbogenerators |
+| `eWTW-PBS-068-000` | `KNOT-EWTW-GEN-001` | OPEN | eWTW / model scope / initial definition | Number, rating and position of the turbogenerators |
 | `eWTW-PBS-071-000` | `KNOT-EWTW-PRP-001` | OPEN | eWTW / model scope / initial definition | Propulsion module and installation allocation |
 
 ---
@@ -248,7 +255,7 @@ print(yaml.safe_dump(out, sort_keys=False, allow_unicode=True, width=110))
 EOF
 ```
 
-33 of the 50 KNUs have a brief. The other seventeen are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
+35 of the 53 KNUs have a brief. The other eighteen are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
 
 ---
 
@@ -263,7 +270,7 @@ python3 tools/knot_check.py "$REG" "$TAX"
 python3 tools/knot_check_test.py
 ```
 
-The first line reads `17 KNOTs, 50 KNUs, 33 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
+The first line reads `18 KNOTs, 53 KNUs, 33 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
 
 ---
 
@@ -289,6 +296,7 @@ The first line reads `17 KNOTs, 50 KNUs, 33 S-ATLAS chapters; rule failures: non
 | 0.10.3 | 2026-11-14 | Research record of the electrical sources and of the role of storage, reviewed: ten statements read at the source, seven as reported, ten findings of absence, six items not accepted. `KNU-EWTW-SRC-001-01` to `-03` and `KNU-EWTW-STO-001-01`, `-02` and `-04` in progress |
 | 0.11.0 | 2026-11-14 | Ruling R1 completed with rationale and evidence. `KNOT-EWTW-NRG-001` (R3) and `KNOT-EWTW-SRC-001` (R1) deferred to `KNOT-EWTW-STO-001`, where the one remaining choice stays; fuel storage and turbogenerator installation authorised. CM-004 rule 6 defines the deferral and `tools/knot_check.py` 0.1.5 checks it. Three KNOTs opened: cruise point, certification basis, fuel location. 17 KNOTs, 50 KNUs; 23 tests |
 | 0.11.1 | 2026-11-14 | Concept of operations of the environmental control system, first issue, for `KNU-EWTW-SRC-001-01`: phases, functions, supplies, cases and open inputs, with no figure. `tools/conops_check.py` with 16 tests |
+| 0.11.2 | 2026-11-15 | `KNOT-EWTW-GEN-001` opened for the number, rating and position of the turbogenerators. It takes the gate on `eWTW-PBS-068-000` from `KNOT-EWTW-SRC-001`, which is deferred to a choice that does not decide it. 18 KNOTs, 53 KNUs; 24 tests |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

@@ -8,7 +8,7 @@
 # tools/conops_check.py checks the form and writes the tables of the README.
 conops:
   id: CONOPS-EWTW-ECS-001
-  version: '0.1.0'
+  version: '0.1.1'
   date: 2026-11-14
   title: How the environmental control system of the eWTW is operated, by phase and by failure case
   knot: KNOT-EWTW-SRC-001
@@ -150,7 +150,7 @@ conops:
     sheds: []
     supply: [turbogenerators]
     basis: open
-    decided_by: KNOT-EWTW-SRC-001
+    decided_by: KNOT-EWTW-GEN-001
   - key: normal-generation-lost
     kind: emergency
     text: All normal electrical generation is lost and the essential network is on its alternate source
@@ -205,9 +205,9 @@ conops:
     blocks: [stand, stand-without-supply, auxiliary]
     decided_by: authority
   - key: shed-policy
-    text: What is shed on the loss of one turbogenerator, and in which order
+    text: What is shed on the loss of one turbogenerator, and in which order. It follows the number of turbogenerators
     blocks: [turbogenerator-lost]
-    decided_by: KNOT-EWTW-SRC-001
+    decided_by: KNOT-EWTW-GEN-001
   - key: take-off-load
     text: Whether the packs are reduced or stopped while the propulsors take the peak of power at take-off. It is the same peak a buffer battery would shave
     blocks: [take-off]

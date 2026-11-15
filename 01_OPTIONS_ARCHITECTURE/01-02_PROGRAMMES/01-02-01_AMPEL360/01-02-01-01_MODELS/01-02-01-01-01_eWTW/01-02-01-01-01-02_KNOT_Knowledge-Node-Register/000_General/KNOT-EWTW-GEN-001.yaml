@@ -1,0 +1,157 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-GEN-001
+  title: Generation architecture
+  kind: decision-anchor
+  taxonomy: ['061', '068']
+  raised_at: null
+  question: 'Generation architecture: how many turbogenerators, of what rating, and where are they installed?'
+  context: >-
+    A turbogenerator is a main source of the eWTW in every option since ruling R1 of KNOT-EWTW-SRC-001, and its installation is authorised for definition. That ruling defers the electrical sources to the role of storage, which decides whether a battery is carried and not how many turbogenerators there are. Their number, their rating and their position are a decision of their own, held here. The first-order screening puts the take-off power near 8.8 MW, and the units on record are of about 1 MW. The rating depends on the cruise point, which sets the power needed in climb and cruise against take-off, and on whether a buffer battery takes the peaks. The number depends on the failure case, and the position on where the propulsors are. The research has to say what ratings exist, how many units published concepts of the class adopt and why, and where they install them.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; ruling R1 of KNOT-EWTW-SRC-001; research records of 2026-11-14 on the propulsion chain and on the electrical sources
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-15'
+  depends_on:
+  - KNOT-EWTW-CRZ-001
+  - KNOT-EWTW-CRT-001
+  - KNOT-EWTW-STO-001
+  closed_with:
+  - KNOT-EWTW-PRP-001
+  unblocks:
+  - KNOT-EWTW-ESS-001
+  affects:
+  - view: model
+    ref: README §3 row 3
+  - view: model
+    ref: README §3 row 4
+  - view: PBS
+    ref: eWTW-PBS-068-000
+    relation: gates
+    note: Number, rating and position of the turbogenerators
+  options:
+  - id: A
+    text: few large units, two to four turbogenerators of 2 MW or more each
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation, two to four units of 2 MW or more
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+  - id: B
+    text: many units at the rating on record, of about 1 MW each
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation, more than four units of about 1 MW
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+  - id: P1
+    text: installed in the rear fuselage and the tailcone
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation, in the rear fuselage and the tailcone
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+  - id: P2
+    text: installed on the wing, in nacelles or pods
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: Turbogenerator installation, on the wing in nacelles or pods
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: the take-off power of about 8.8 MW and the count of nine units of 1,000 kW come from a first-order screening that takes all the take-off power from the turbogenerators
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: no megawatt-class turbogenerator has a maturity level on record; the one generator of 2.5 MW read was to feed a motor of 2 MW and never flew
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+  - text: the tailcone holds mounts and a firewall declared for an auxiliary power module, not for a turbogenerator
+    ref:
+      view: PBS
+      ref: eWTW-PBS-053-400-000
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-GEN-001-01
+    title: Unit ratings, counts and installations on record
+    knu_class: ANALYSIS_PACKAGE
+    description: Ratings of turbogenerators that have run or flown, and the number and place of the units in published concepts of the class
+    research_brief:
+      questions:
+      - 'What ratings do turbogenerators and gas-turbine generators for aircraft have that have run on a bench or flown, and at what mass and volume?'
+      - 'How many generating units do published hybrid and turboelectric concepts of 70 to 100 seats adopt, and which failure case sizes them?'
+      - 'Where do those concepts install the units — fuselage, tailcone or wing — and what do they say of inlets, exhausts, fire zones and rotor burst?'
+      - 'How does the power of a gas turbine fall with altitude, and which flight phase sizes it in those concepts?'
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    - view: RBS
+      ref: null
+    exit: Unit ratings available and counts adopted, with the failure case and the installation of each
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-15'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-GEN-001-02
+    title: Generation sizing by failure case
+    knu_class: ANALYSIS_PACKAGE
+    description: Number and rating of the turbogenerators of the eWTW for each cruise point and each role of storage, with the failure case that sizes them. It takes the source sizing of KNU-EWTW-SRC-001-02
+    research_brief: null
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: Count and rating for each option, with the power left after the loss of one unit
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-15'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-GEN-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria and weights for the generation architecture, drawn from ReqBS and TPMS
+    research_brief:
+      questions:
+      - 'Which criteria do published designs use to choose the number and the position of generating units — mass, redundancy, rotor burst and fire zones, noise, access for maintenance?'
+      - 'Which criteria follow from certification and cannot be traded?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: Criteria, weights and thresholds approved by the authority and written into this record
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-15'
+    start_date: null
+    end_date: null
+    evidence_refs: []

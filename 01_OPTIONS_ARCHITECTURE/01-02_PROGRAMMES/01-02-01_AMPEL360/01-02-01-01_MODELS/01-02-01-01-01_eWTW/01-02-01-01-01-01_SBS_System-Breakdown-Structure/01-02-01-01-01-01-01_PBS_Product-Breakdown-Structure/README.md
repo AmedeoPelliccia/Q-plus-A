@@ -91,7 +91,7 @@ The product root and its group table are in [`eWTW-PBS-000_Aircraft-Product`][RO
 | `eWTW-PBS-030` | Protection and Mechanical Systems | `030` … `036` · `038`† | Scaffold; `036` is held as *Pneumatic Vacated* |
 | `eWTW-PBS-040` | Avionics, Information and Auxiliary Power | `042` · `045` · `046` · `049` | Scaffold |
 | `eWTW-PBS-050` | Airframe Structure | `051` … `057` | [`053`][PBS-053] planned in depth — 10 sections, 59 stations, 431 part nodes; the other chapters are scaffolds |
-| `eWTW-PBS-060` | Thermal Machine and Power Generation | `068` | Scaffold, opened on 2026-11-14; `068` is gated by `KNOT-EWTW-SRC-001` |
+| `eWTW-PBS-060` | Thermal Machine and Power Generation | `068` | Scaffold, opened on 2026-11-14; `068` is gated by `KNOT-EWTW-GEN-001` |
 | `eWTW-PBS-070` | Electric Propulsion | `071`† · `073`† · `074`† · `076`† · `077`† · `078`† | Scaffold |
 | `eWTW-PBS-080` | Alternative and Quantum Propulsion | `080-000`† (reserved) | Scaffold |
 | `eWTW-PBS-090` | Software and Digital Configuration Items | `090-100`† · `090-300`† · `090-500`† | Scaffold |

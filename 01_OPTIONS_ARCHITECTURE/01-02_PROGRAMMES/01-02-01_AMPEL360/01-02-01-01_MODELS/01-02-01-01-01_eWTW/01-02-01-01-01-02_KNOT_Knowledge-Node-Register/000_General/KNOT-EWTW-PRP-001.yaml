@@ -25,6 +25,7 @@ knot:
   - KNOT-EWTW-CRT-001
   closed_with:
   - KNOT-EWTW-SRC-001
+  - KNOT-EWTW-GEN-001
   unblocks: []
   affects:
   - view: model

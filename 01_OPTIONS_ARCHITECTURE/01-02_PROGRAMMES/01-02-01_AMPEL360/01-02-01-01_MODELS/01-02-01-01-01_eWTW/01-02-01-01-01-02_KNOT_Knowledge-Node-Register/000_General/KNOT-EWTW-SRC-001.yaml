@@ -39,10 +39,6 @@ knot:
     ref: eWTW-PBS-024-000
     relation: gates
     note: Source-dependent conversion, protection and distribution
-  - view: PBS
-    ref: eWTW-PBS-068-000
-    relation: gates
-    note: Number, rating and position of the turbogenerators
   options:
   - id: A
     text: batteries (074) alone
@@ -109,7 +105,7 @@ knot:
     - view: PBS
       action: populate
       ref: eWTW-PBS-068-000
-      description: Turbogenerator installation, S-ATLAS 068, common to options B and C. Number, rating and position stay gated
+      description: Turbogenerator installation, S-ATLAS 068, common to options B and C. Number, rating and position stay gated, by KNOT-EWTW-GEN-001
     embodied_in: []
     record: '000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md — PR #74, ratified by its merge'
   reopen_if: []
@@ -150,7 +146,8 @@ knot:
       - How are batteries and turbogenerators sized against peak and continuous loads in published hybrid-electric designs?
       - What masses and volumes result for a 100-passenger regional aircraft, per option?
       - What redundancy do the designs keep among sources?
-    serves: []
+    serves:
+    - KNOT-EWTW-GEN-001
     outputs:
     - view: TPMS
       ref: null

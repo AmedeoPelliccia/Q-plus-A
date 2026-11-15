@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-03_REL_Architecture-Relations/`
 **Conventions:** [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 — both *PROPOSED*
-**Version:** 0.3.1 · **Date:** 2026-11-14
+**Version:** 0.3.2 · **Date:** 2026-11-15
 
 This node records how the technologies open to the eWTW relate to one another, and what the AMPEL360 programme has assigned, excluded or admitted. A tool projects those relations onto the [KNOT register][KNOT-REG]. For a decision it lists the candidates, the product elements each candidate uses, what each candidate requires and the decisions that come first.
 
@@ -75,7 +75,7 @@ No S-ATLAS address: ram-air turbine — nearest `024-230` Emergency Backup Power
 Options: the open candidates match registered options A, C, D, E.
 Option B stands on a candidate that has no S-ATLAS address: `024-230` + `024-360`.
 Scope: open candidates lie in chapters outside the KNOT's `taxonomy` field: `068` · `074`.
-Prerequisites: derived from element ownership `NRG` · `SRC` · `STO`; declared in the register `CRT` · `SRC` · `STO`; consistent.
+Prerequisites: derived from element ownership `NRG` · `SRC` · `STO`; declared in the register `CRT` · `GEN` · `SRC` · `STO`; consistent.
 <!-- projections:end -->
 
 ---
@@ -121,6 +121,7 @@ The tool reads the working tree. The run that counts is the one on a commit, in 
 | 0.2.0 | 2026-11-14 | `KNOT-EWTW-ESS-001` registers five options. Two `requires` relations for essential electrical power: bridging storage for `049` and for `068`. Step 5 of the projection takes a candidate with what it brings for the role, and names an option that stands on a candidate with no address. The essential battery footprint of `KNOT-EWTW-STO-001` is filed at `024-360`. 50 tests |
 | 0.3.0 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001` projected: batteries alone excluded for electric power for propulsion, as a node alone, so that the combination with a turbogenerator stands. CM-005 rule 9 and `tools/relations_project.py` 0.4.0 take `alone: true` on an exclusion. 54 tests |
 | 0.3.1 | 2026-11-14 | Ruling R1 of `KNOT-EWTW-NRG-001` completed: the exclusion of fuel cells and the assignment of hydrogen read `COMPLETE`. The electrical sources are deferred to `KNOT-EWTW-STO-001` and their options still regenerate; the register declares the new prerequisites `CRZ` and `CRT`. 55 tests |
+| 0.3.2 | 2026-11-15 | The register declares `KNOT-EWTW-GEN-001` among the prerequisites of essential power; the projection stays consistent |
 
 [MODEL]: ../README.md
 [KNOT-REG]: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/README.md
