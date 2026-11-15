@@ -68,45 +68,51 @@ knot:
     state: PROPOSED
   - id: M4
     class: mandatory
-    text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service'
-    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400. It is a requirement of the programme and is in no text'
+    text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service of rule 19 of CM-004'
+    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text'
     weight: null
     threshold: null
     state: PROPOSED
   - id: T1
     class: tradable
     text: 'Power of the gas turbines for the cruise, referred to sea level, on the take-off mass of the requirement mission. Lower is better'
-    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
-    weight: 0.35
-    threshold: null
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 2
     state: PROPOSED
   - id: T2
     class: tradable
-    text: 'Fuel loaded on the scoring mission. Lower is better'
-    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
-    weight: 0.30
-    threshold: null
+    text: 'Fuel loaded on the scoring mission, the one measure of environmental effect on record: the emissions in flight follow the fuel burned. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; north star by decision of the authority of 2026-11-16, rule 19 of CM-004'
+    weight: null
+    threshold: 0.05
+    precedence: 1
+    north_star: true
     state: PROPOSED
   - id: T3
     class: tradable
     text: 'Time at cruise speed on the scoring mission. Lower is better'
-    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
-    weight: 0.20
-    threshold: null
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 3
     state: PROPOSED
   - id: T4
     class: tradable
     text: 'Inception voltage of partial discharge left at the cruise altitude, as a share of its value at sea level. Higher is better'
-    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
-    weight: 0.10
-    threshold: null
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 4
     state: PROPOSED
   - id: T5
     class: tradable
     text: 'Ideal work to compress outside air to the cabin pressure. Lower is better'
-    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; weight proposed on 2026-11-15'
-    weight: 0.05
-    threshold: null
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 5
     state: PROPOSED
   maturity_required:
   - id: Q1
@@ -227,3 +233,49 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+  - knu_id: KNU-EWTW-CRZ-001-04
+    title: Measure of environmental effect
+    knu_class: ANALYSIS_PACKAGE
+    description: 'What the north star measures at the cruise point, beyond the fuel loaded'
+    research_brief:
+      questions:
+      - 'Which published measures of the environmental performance of an aeroplane exist, and what does each count — the carbon dioxide metric of ICAO Annex 16 Volume III, the noise limits of Volume I, the criteria of the EU taxonomy for aircraft, the Flight Emissions Label of EASA? Which apply to a new CS-25 type, with which limits and from which date?'
+      - 'How do the effects on climate other than carbon dioxide — contrails and nitrogen oxides — change with the cruise altitude between 20,000 and 35,000 ft and with the cruise speed, in published assessments? Is there a figure that can be set beside the fuel burned?'
+      - 'How does the fuel burned by a regional aircraft on a fixed stage change with its cruise speed and altitude, in published data — the lift-to-drag ratio against the Mach number, and the specific fuel consumption of a turboshaft against altitude?'
+      - 'Which share of sustainable aviation fuel is required and which is allowed, by which rule and from which date? Does it change which cruise point is the more ecological?'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-GEN-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'A measure of environmental effect for the north-star criterion, with its source, and a statement of what still has no figure'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-16'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-CRZ-001-05
+    title: Floor of service
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The evidence behind a floor on the cruise speed, which keeps the north star from choosing an aircraft nobody flies'
+    research_brief:
+      questions:
+      - 'Which cruise speeds and block times have operators accepted for aircraft of 70 to 100 seats on stages of 500 to 2,000 km? What do orders and deliveries of turboprops against regional jets show, and which reasons are published?'
+      - 'Which turboprop programmes of 90 to 100 seats were studied or announced, and why did each stop or go ahead?'
+      - 'How does block time change the productivity of a regional aircraft and its cost for each seat-kilometre, in published operating-cost models?'
+      - 'Is there a speed or a flight level below which faster traffic restricts a regional aircraft — in route charges, in airspace rules or in flow management?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: 'A floor of service for criterion M4 with its evidence, or the statement that none is on record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-16'
+    start_date: null
+    end_date: null
+    evidence_refs: []

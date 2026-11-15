@@ -234,11 +234,11 @@ rows:
     status: on-disk
     note: >
       Criteria and maturity proposed for the cruise point on 2026-11-15, at the request
-      of the authority: four criteria not traded, five traded with weights, and three
-      maturity records at the threshold of ruling R2 of KNOT-EWTW-NRG-001; with the
-      reasons, the argument against, what would open the weights again, and what the set
-      implies on the points of the screening. A proposal: it rules nothing and scores no
-      option.
+      of the authority, reissued on 2026-11-16: four criteria not traded, five traded in
+      order of precedence with fuel as the north star (CM-004 rule 19), and three maturity
+      records at the threshold of ruling R2 of KNOT-EWTW-NRG-001; with what supports the
+      order, what it costs, what would open it again, and what it implies on the points
+      of the screening. A proposal: it rules nothing and scores no option.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
 

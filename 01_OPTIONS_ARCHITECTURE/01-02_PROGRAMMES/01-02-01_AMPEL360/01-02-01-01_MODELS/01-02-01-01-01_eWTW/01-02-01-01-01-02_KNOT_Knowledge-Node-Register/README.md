@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.8 · **Date:** 2026-11-15
+**Version:** 0.11.9 · **Date:** 2026-11-16
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -40,7 +40,7 @@ No decision anchor has approved criteria yet: three records hold proposed criter
 |---|---|---|---|---|:-:|---|
 | `KNOT-EWTW-CAD-001` | 3D model of record | `control-intent` | `000` | OPEN | 3 | `STK_CM` |
 | `KNOT-EWTW-CRT-001` | Certification basis | `obligation` | `000` | OPEN | 3 | `STK_SAF` |
-| `KNOT-EWTW-CRZ-001` | Cruise point | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
+| `KNOT-EWTW-CRZ-001` | Cruise point | `decision-anchor` | `000` | OPEN | 5 | `STK_SE` |
 | `KNOT-EWTW-ESS-001` | Essential power | `decision-anchor` | `000` | OPEN | 3 | `STK_SAF` |
 | `KNOT-EWTW-FUL-001` | Fuel location and energy-carrier bay | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-GEN-001` | Generation architecture | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
@@ -85,9 +85,13 @@ Three KNOTs come from the research records of the same day. Each holds a questio
 
 `KNOT-EWTW-GEN-001` was opened on 2026-11-15 to correct the deferral of the day before. The gate on the turbogenerator chapter, number, rating and position, had been put on `KNOT-EWTW-SRC-001`, which is deferred to the role of storage. That choice decides whether a battery is carried, not how many turbogenerators there are, so the gate would have opened on a decision that does not concern it. The question now has its own KNOT, and `KNU-EWTW-SRC-001-02` serves it.
 
+### North star
+
+On 2026-11-16 the authority decided that this work builds a more ecological alternative, and that the more ecological option prevails over time and cost among the options that meet what is never traded: safety, the certification basis, the requirement mission and the required maturity. It is rule 19 of [CM-004][CM-004], for every decision anchor. The tradable criterion that measures the environmental effect is marked `north_star` and comes first; the others follow in order, each deciding only where the earlier ones do not separate the options by more than a margin. Where the measure improves without limit as the service gets worse, a floor of service is a mandatory criterion. No decision anchor is scored without a north-star criterion, and the verification script checks it. `KNOT-EWTW-CRZ-001` is the first to use the rule. The other anchors with proposed criteria, `KNOT-EWTW-ESS-001` and `KNOT-EWTW-NRG-001`, have no north-star criterion yet.
+
 ### Criteria proposed
 
-Three KNOTs have criteria. `KNOT-EWTW-ESS-001` has seven mandatory criteria (`M1` to `M7`) and five tradable ones (`T1` to `T5`), drawn from the [research record of 2026-11-13](000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md). A [second record, of 2026-11-14](000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md), covers the emergency sources of one regional type and the reading of EASA SC E-19. `KNOT-EWTW-NRG-001` has five mandatory criteria (`M1` to `M5`) and seven tradable ones (`T1` to `T7`), drawn from a [research record of 2026-11-14](000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md) on the energy carrier: the planning rule for fuel and energy, the published studies of hybrid regional aircraft, and the state of batteries and turbogenerators. `KNOT-EWTW-CRZ-001` has four mandatory criteria (`M1` to `M4`) and five tradable ones (`T1` to `T5`), the only ones in the register that carry weights. They come from a [proposal of 2026-11-15](000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md), which gives fuel and installed power 0.65 of the weight and time 0.20, sets a floor of 360 kt on the cruise speed, and states its reasons, the argument against it and what would open the weights again. Its three maturity records (`Q1` to `Q3`: the turbogenerator, the propeller and the ducted fan driven by a motor of megawatt class) are proposed at the threshold of ruling R2 of `KNOT-EWTW-NRG-001`, level 6 at the release of the preliminary-design baseline, which the authority decided to keep on 2026-11-15. All are `PROPOSED`. Approving them, with the weights and thresholds of the tradable ones, is an act of the authority. Until then no option is scored (rule 5).
+Three KNOTs have criteria. `KNOT-EWTW-ESS-001` has seven mandatory criteria (`M1` to `M7`) and five tradable ones (`T1` to `T5`), drawn from the [research record of 2026-11-13](000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md). A [second record, of 2026-11-14](000_General/evidence/KNOT-EWTW-ESS-001_sources-and-precedents_2026-11-14.md), covers the emergency sources of one regional type and the reading of EASA SC E-19. `KNOT-EWTW-NRG-001` has five mandatory criteria (`M1` to `M5`) and seven tradable ones (`T1` to `T7`), drawn from a [research record of 2026-11-14](000_General/evidence/KNOT-EWTW-NRG-001_energy-carrier_2026-11-14.md) on the energy carrier: the planning rule for fuel and energy, the published studies of hybrid regional aircraft, and the state of batteries and turbogenerators. `KNOT-EWTW-CRZ-001` has four mandatory criteria (`M1` to `M4`) and five tradable ones (`T1` to `T5`), the only ones in the register that are in order of precedence (rule 19 of [CM-004][CM-004]). They come from a [proposal of 2026-11-15](000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md), reissued on 2026-11-16: fuel on the scoring mission is the north star, installed power follows, then time; a floor of 360 kt on the cruise speed is the floor of service. The record states what supports the order, what it costs and what would open it again. Its three maturity records (`Q1` to `Q3`: the turbogenerator, the propeller and the ducted fan driven by a motor of megawatt class) are proposed at the threshold of ruling R2 of `KNOT-EWTW-NRG-001`, level 6 at the release of the preliminary-design baseline, which the authority decided to keep on 2026-11-15. All are `PROPOSED`. Approving them, with the weights and thresholds of the tradable ones, is an act of the authority. Until then no option is scored (rule 5).
 
 ### Missions and maturity of the energy carrier
 
@@ -182,6 +186,8 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Seven 
 | `KNU-EWTW-CRZ-001-01` | Cruise points of the class | `ANALYSIS_PACKAGE` | `PRP` · `SRC` | IN_PROGRESS |
 | `KNU-EWTW-CRZ-001-02` | Mission screening by cruise point | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
 | `KNU-EWTW-CRZ-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | PENDING_REVIEW |
+| `KNU-EWTW-CRZ-001-04` | Measure of environmental effect | `ANALYSIS_PACKAGE` | `PRP` · `GEN` | NOT_STARTED |
+| `KNU-EWTW-CRZ-001-05` | Floor of service | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
 | `KNU-EWTW-ESS-001-02` | Essential source options | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
 | `KNU-EWTW-ESS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
@@ -271,7 +277,7 @@ print(yaml.safe_dump(out, sort_keys=False, allow_unicode=True, width=110))
 EOF
 ```
 
-35 of the 53 KNUs have a brief. The other eighteen are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
+37 of the 55 KNUs have a brief. The other eighteen are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
 
 ---
 
@@ -286,7 +292,7 @@ python3 tools/knot_check.py "$REG" "$TAX"
 python3 tools/knot_check_test.py
 ```
 
-The first line reads `18 KNOTs, 53 KNUs, 33 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
+The first line reads `18 KNOTs, 55 KNUs, 33 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
 
 ---
 
@@ -319,6 +325,7 @@ The first line reads `18 KNOTs, 53 KNUs, 33 S-ATLAS chapters; rule failures: non
 | 0.11.6 | 2026-11-15 | Research record of the fuel location, reviewed: nine statements read at the source, three as reported, five findings of absence, seven items not accepted. `KNU-EWTW-FUL-001-01` and `-03` in progress. `KNOT-EWTW-FUL-001` now depends on `KNOT-EWTW-CRZ-001` and is coupled with `KNOT-EWTW-GEN-001`. With it the pass over the KNOTs opened since ruling R2 has a research record for each |
 | 0.11.7 | 2026-11-15 | Criteria proposed for `KNOT-EWTW-CRZ-001`: four mandatory, among them the two limits of CS 25.841 read at the Agency and a floor of 360 kt on the cruise speed, and five tradable with weights. A record gives the reasons, the argument against, and what the set implies on the points of the screening. All `PROPOSED`; the maturity the decision requires is not declared yet |
 | 0.11.8 | 2026-11-15 | Maturity records `Q1` to `Q3` proposed for `KNOT-EWTW-CRZ-001`, at the threshold of ruling R2 of `KNOT-EWTW-NRG-001`, kept by decision of the authority; no level is set on the evidence on record. `KNU-EWTW-CRZ-001-03` pending review. The overview said two records held proposed criteria; it is three |
+| 0.11.9 | 2026-11-16 | The north star, by decision of the authority: rule 19 of CM-004. The criteria of `KNOT-EWTW-CRZ-001` are in order of precedence in place of weights — fuel first, then installed power, then time — with a margin of 5 %, and its floor of 360 kt is the floor of service. Two research KNUs opened, `KNU-EWTW-CRZ-001-04` on the measure of environmental effect and `-05` on the floor of service (55 KNUs). `tools/knot_check.py` 0.1.6 checks the order and the north star, with 28 tests |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md
