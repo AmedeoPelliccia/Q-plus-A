@@ -1,0 +1,52 @@
+# Generated 2026-11-15 - Claude Fable 5.2 - first issue, for KNU-EWTW-CRZ-001-02
+# Candidate cruise points of the eWTW and what each costs at first order. The points come
+# from the research record of 2026-11-15; the missions, the masses and the efficiencies
+# come from the mission screening MSN-EWTW-NRG-001, which is read and not changed.
+# Every figure names its basis: source (read at a source, named), assumption, or decision.
+# tools/cruise_points.py checks the form and writes the tables of the README.
+analysis:
+  id: CRP-EWTW-CRZ-001
+  version: '0.1.0'
+  date: 2026-11-15
+  knot: KNOT-EWTW-CRZ-001
+  serves: KNU-EWTW-CRZ-001-02
+  missions: MSN-EWTW-NRG-001
+  option: B
+  cabin_altitude_ft: {value: 8000, basis: source, ref: '14 CFR 25.841(a): the cabin pressure altitude is not above 8,000 ft in normal operation. Research record of the cruise point, 2026-11-15, statement 7'}
+
+  points:
+  - key: P1
+    name: ATR 72-600 at maximum cruise
+    option: A
+    speed: {value: 275, unit: kt, basis: source, ref: 'ATR, factsheet of the ATR 72-600, 2020. Research record of the cruise point, 2026-11-15, statement 1'}
+    altitude_ft: {value: 20000, basis: assumption, note: 'The factsheet says the best flight level and gives none. As reported, the type cruises typically near 20,000 ft'}
+    propulsor_efficiency: {value: 0.85, basis: assumption, note: 'The propeller efficiency of the design study on record at Mach 0.62, used here at a lower Mach number'}
+  - key: P2
+    name: Dash 8-400 at maximum cruise
+    option: A
+    speed: {value: 360, unit: kt, basis: source, ref: 'De Havilland Canada, specification sheet of the Dash 8-400, issue 11. Research record of the cruise point, 2026-11-15, statement 2'}
+    altitude_ft: {value: 25000, basis: source, ref: 'Same sheet: maximum cruise altitude'}
+    propulsor_efficiency: {value: 0.85, basis: assumption, note: 'As for P1'}
+    published: {takeoff_kg: 29574, cruise_shp: 7894, takeoff_shp: 9160, basis: source, ref: 'De Havilland Canada, specification sheet of the Dash 8-400, issue 11, two engines at maximum cruise power and at normal take-off power, at the maximum take-off mass'}
+  - key: P3
+    name: Turboprop design study
+    option: C
+    speed: {value: 0.62, unit: mach, basis: source, ref: 'DLR, Atanasov, 2022. Research record of the propulsion chain, statement 8'}
+    altitude_ft: {value: 27000, basis: source, ref: 'Same study'}
+    propulsor_efficiency: {value: 0.85, basis: source, ref: 'Same study: propeller efficiency of about 0.85 at this point'}
+  - key: P4
+    name: Jet of the class
+    option: B
+    speed: {value: 0.78, unit: mach, basis: source, ref: 'Embraer, airport planning manual of the Embraer 190, section 3.2: the Mach of the payload and range charts. Research record of the cruise point, 2026-11-15, statement 3'}
+    altitude_ft: {value: 35000, basis: assumption, note: 'The altitude at which the propulsor study of the record designs. The ceiling of the type, 41,000 ft, is as reported'}
+    propulsor_efficiency: {value: 0.76, basis: source, ref: 'DLR, Atanasov, 2022: fan efficiency of about 0.76 for the turbofan at Mach 0.78. Research record of the propulsion chain, statement 8'}
+
+  insulation:
+    basis: source
+    ref: 'Madonna, Giangrande and Galea, IEEE Transactions on Industry Applications: median repetitive inception voltage on twisted pairs of magnet wire, peak to peak. Research record of the cruise point, 2026-11-15, statement 9'
+    table:
+    - {mbar: 1013, kv: 1.79}
+    - {mbar: 500, kv: 1.49}
+    - {mbar: 250, kv: 1.27}
+    - {mbar: 100, kv: 1.02}
+    - {mbar: 50, kv: 0.91}

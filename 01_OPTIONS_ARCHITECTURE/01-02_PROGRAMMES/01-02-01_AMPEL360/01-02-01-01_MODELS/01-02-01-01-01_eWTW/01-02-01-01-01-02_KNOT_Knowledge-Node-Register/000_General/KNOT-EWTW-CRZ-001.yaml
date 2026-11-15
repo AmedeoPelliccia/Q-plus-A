@@ -33,15 +33,15 @@ knot:
     ref: README §3 row 9
   options:
   - id: A
-    text: 'a propeller cruise, near Mach 0.62 and 27,000 ft, the point of the turboprop study on record'
+    text: 'a propeller cruise at the points of the turboprops of the class in service, 275 to 360 kt true airspeed and up to 25,000 ft'
     state: open
     pbs_footprint: []
   - id: B
-    text: 'a jet cruise, near Mach 0.78 and 33,000 ft, the point of the turbofan in the same study and the Mach of the charts of the reference type'
+    text: 'a jet cruise at the point of the jets of the class, Mach 0.78 and above 30,000 ft'
     state: open
     pbs_footprint: []
   - id: C
-    text: 'a point between the two, set by the trade'
+    text: 'a point between the two, such as Mach 0.62 at 27,000 ft, the point of a turboprop design study on record'
     state: open
     pbs_footprint: []
   criteria: []
@@ -51,7 +51,11 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
-  - text: the two cruise points of options A and B are those of one design study of aircraft of 220 and 250 passengers; no point is on record for an aircraft of 100
+  - text: the points of option A are read from the sheets of two turboprops of 72 and 82 seats; the Mach of option B is that of the charts of the reference type, and its altitude is as reported
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+  - text: the point named in option C is that of a design study of aircraft of 220 and 250 passengers
     ref:
       view: EBS
       ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
@@ -78,11 +82,13 @@ knot:
     exit: 'Candidate cruise points with what each costs in block time, propulsive efficiency, cabin compression and insulation margin'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-14'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
   - knu_id: KNU-EWTW-CRZ-001-02
     title: Mission screening by cruise point
     knu_class: ANALYSIS_PACKAGE
@@ -95,11 +101,13 @@ knot:
     exit: 'Screening reissued with a cruise speed, for each candidate point'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-14'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
   - knu_id: KNU-EWTW-CRZ-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -117,8 +125,10 @@ knot:
     exit: 'Criteria, weights and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-14'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md

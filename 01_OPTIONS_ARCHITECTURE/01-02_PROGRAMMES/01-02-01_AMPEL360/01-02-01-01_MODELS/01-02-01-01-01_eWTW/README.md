@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.12 |
+| Version | 0.3.13 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -355,6 +355,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.10 | 2026-11-14 | Ruling R1 completed. The energy carrier and the electrical sources deferred to the role of storage, where the one remaining choice stays; fuel storage and turbogenerator installation authorised. Three KNOTs opened: cruise point, certification basis, fuel location (KNOT register 0.11.0) |
 | 0.3.11 | 2026-11-14 | Concept of operations of the environmental control system, first issue, in the KNOT register (0.11.1). It carries no figure; its open inputs are the cruise point, the supply at the stand and what is shed on the loss of a turbogenerator |
 | 0.3.12 | 2026-11-15 | `KNOT-EWTW-GEN-001` opened for the number, rating and position of the turbogenerators, which the deferral of the electrical sources had left without a decision of their own (KNOT register 0.11.2) |
+| 0.3.13 | 2026-11-15 | Cruise point: research record and a first-order screening of four points (KNOT register 0.11.3). The cruise asks about as much electrical power as the take-off; the jet point saves time and costs fuel, cabin compression and insulation margin |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

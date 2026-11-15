@@ -157,6 +157,32 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-STO-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the cruise point, as accepted on review from a report of 2026-11-15
+      relayed by the author - cruise points of the class in service, propulsors against
+      the cruise Mach, cabin pressure and insulation against altitude. Six of its
+      statements were read by the reviewer at the source, six are as reported, five report
+      that a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    status: on-disk
+    note: >
+      Screening of the candidate cruise points 0.1.0: four points, with time at cruise
+      speed, the missions of option B, cruise power against take-off power, compression of
+      the cabin air and insulation margin. Input in cruise-points.yaml beside it; it reads
+      the mission screening and does not change it. Written and checked by
+      tools/cruise_points.py. A first-order screening; it states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk

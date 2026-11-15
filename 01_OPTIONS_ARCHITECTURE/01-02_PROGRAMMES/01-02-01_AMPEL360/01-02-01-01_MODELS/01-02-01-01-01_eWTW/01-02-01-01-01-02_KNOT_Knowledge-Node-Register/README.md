@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.2 · **Date:** 2026-11-15
+**Version:** 0.11.3 · **Date:** 2026-11-15
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -101,6 +101,10 @@ The [missions](000_General/evidence/MSN-EWTW-NRG-001/README.md) of the eWTW are 
 
 The [essential load analysis](000_General/evidence/ELA-EWTW-ESS-001/README.md) lists the loads kept after the loss of normal generation, built from the services of AMC 25.1351(d). At nominal values the essential network draws between 4 and 5 kW from its source. Every load figure in it is an assumption, to be replaced by sources or design values. Its budget is written and checked by [`tools/essential_loads.py`](../../../../../../tools/essential_loads.py).
 
+### Cruise point: research and screening
+
+The [research record](000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md) of 2026-11-15 gives the cruise points of the class in service, and the options of `KNOT-EWTW-CRZ-001` are restated on them: propellers at 275 to 360 kt up to 25,000 ft, jets at Mach 0.78 above 30,000 ft. The [screening](000_General/evidence/CRP-EWTW-CRZ-001/README.md) takes four points through the missions of option B without changing the mission screening. It finds that the jet point saves 36 minutes of cruise on the requirement mission against the fastest propeller point and loads 13 % more fuel; that the cruise asks about as much electrical power as the take-off, so that a battery for the take-off peak removes little from the rating of the turbogenerators; and that the compression of the cabin air and the insulation margin both worsen with altitude by amounts it gives. It is a first-order screening with one lift-to-drag ratio for every point, and a check on a published point shows that ratio is too high at a maximum cruise speed.
+
 ### Concept of operations of the environmental control system
 
 The [concept of operations](000_General/evidence/CONOPS-EWTW-ECS-001/README.md) is the first part of the load analysis of `KNOT-EWTW-SRC-001`. It says in which phases the system works, what it does, what supplies it and what it does in seven failure and ground cases. It carries no figure of power, and its tool refuses one: the research found no load profile for the class, and this document fixes the phases and the cases for which the analysis has to give a number. Of its 26 statements, 7 are declared by the model or a ruling, 2 come from the essential load analysis, 13 are proposed in it and 4 are open. Its eight open inputs name the KNOT that decides each, or the authority.
@@ -153,7 +157,7 @@ Home to be ruled, since each decides where its scope lives: `DFN` · `KEL` · `L
 
 ## Research agenda
 
-The KNUs neither done nor cancelled, generated from the records (rule 9). Five KNUs are pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13; `KNU-EWTW-ESS-001-01` and `-02`, with the essential load analysis and the option set of 2026-11-14; `KNU-EWTW-PRP-001-05`, the PBS group opened on 2026-11-14; and `KNU-EWTW-NRG-001-07`, the completion of ruling R1. `KNU-EWTW-NRG-001-02` is done: ruling R2 approved the mission set. `KNU-EWTW-ESS-001-03` is in progress and waits for the authority. Four other KNUs of `KNOT-EWTW-NRG-001` are in progress on a research record of 2026-11-14, and four of `KNOT-EWTW-PRP-001` on [another of the same day](000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md), on the propulsion chain. That record proposes no criteria: it says what was shown in flight and on the ground, what the rules require, and that each of the two open options, distributed and concentrated, has a precondition nothing read meets. Three KNUs of `KNOT-EWTW-SRC-001` and three of `KNOT-EWTW-STO-001` are in progress on a [third record](000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md), on the electrical sources and the role of storage. It finds no load table and no weighed source for the class, and it notes that the two KNOTs and `KNOT-EWTW-NRG-001` now hold one open question: whether a propulsion battery is carried, and in which role. The others are proposed and have not started.
+The KNUs neither done nor cancelled, generated from the records (rule 9). Six KNUs are pending review: `KNU-EWTW-CAD-001-02`, whose check ran on 2026-11-13; `KNU-EWTW-ESS-001-01` and `-02`, with the essential load analysis and the option set of 2026-11-14; `KNU-EWTW-PRP-001-05`, the PBS group opened on 2026-11-14; `KNU-EWTW-NRG-001-07`, the completion of ruling R1; and `KNU-EWTW-CRZ-001-02`, the screening of the cruise points. `KNU-EWTW-NRG-001-02` is done: ruling R2 approved the mission set. `KNU-EWTW-ESS-001-03` is in progress and waits for the authority. Four other KNUs of `KNOT-EWTW-NRG-001` are in progress on a research record of 2026-11-14, and four of `KNOT-EWTW-PRP-001` on [another of the same day](000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md), on the propulsion chain. That record proposes no criteria: it says what was shown in flight and on the ground, what the rules require, and that each of the two open options, distributed and concentrated, has a precondition nothing read meets. Three KNUs of `KNOT-EWTW-SRC-001` and three of `KNOT-EWTW-STO-001` are in progress on a [third record](000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md), on the electrical sources and the role of storage. It finds no load table and no weighed source for the class, and it notes that the two KNOTs and `KNOT-EWTW-NRG-001` now hold one open question: whether a propulsion battery is carried, and in which role. The others are proposed and have not started.
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
@@ -163,9 +167,9 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Five K
 | `KNU-EWTW-CRT-001-01` | Basis and special conditions in force | `EVIDENCE_RECORD` | `PRP` · `STO` · `ESS` | NOT_STARTED |
 | `KNU-EWTW-CRT-001-02` | Requirements with no text for this aircraft | `ANALYSIS_PACKAGE` | `PRP` · `STO` | NOT_STARTED |
 | `KNU-EWTW-CRT-001-03` | Declaration of the basis | `REQUIREMENT_SET` | — | NOT_STARTED |
-| `KNU-EWTW-CRZ-001-01` | Cruise points of the class | `ANALYSIS_PACKAGE` | `PRP` · `SRC` | NOT_STARTED |
-| `KNU-EWTW-CRZ-001-02` | Mission screening by cruise point | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
-| `KNU-EWTW-CRZ-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
+| `KNU-EWTW-CRZ-001-01` | Cruise points of the class | `ANALYSIS_PACKAGE` | `PRP` · `SRC` | IN_PROGRESS |
+| `KNU-EWTW-CRZ-001-02` | Mission screening by cruise point | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
+| `KNU-EWTW-CRZ-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
 | `KNU-EWTW-ESS-001-01` | Essential loads and duration | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
 | `KNU-EWTW-ESS-001-02` | Essential source options | `ANALYSIS_PACKAGE` | — | PENDING_REVIEW |
 | `KNU-EWTW-ESS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
@@ -297,6 +301,7 @@ The first line reads `18 KNOTs, 53 KNUs, 33 S-ATLAS chapters; rule failures: non
 | 0.11.0 | 2026-11-14 | Ruling R1 completed with rationale and evidence. `KNOT-EWTW-NRG-001` (R3) and `KNOT-EWTW-SRC-001` (R1) deferred to `KNOT-EWTW-STO-001`, where the one remaining choice stays; fuel storage and turbogenerator installation authorised. CM-004 rule 6 defines the deferral and `tools/knot_check.py` 0.1.5 checks it. Three KNOTs opened: cruise point, certification basis, fuel location. 17 KNOTs, 50 KNUs; 23 tests |
 | 0.11.1 | 2026-11-14 | Concept of operations of the environmental control system, first issue, for `KNU-EWTW-SRC-001-01`: phases, functions, supplies, cases and open inputs, with no figure. `tools/conops_check.py` with 16 tests |
 | 0.11.2 | 2026-11-15 | `KNOT-EWTW-GEN-001` opened for the number, rating and position of the turbogenerators. It takes the gate on `eWTW-PBS-068-000` from `KNOT-EWTW-SRC-001`, which is deferred to a choice that does not decide it. 18 KNOTs, 53 KNUs; 24 tests |
+| 0.11.3 | 2026-11-15 | Research record of the cruise point, reviewed: six statements read at the source, six as reported, five findings of absence. Options of `KNOT-EWTW-CRZ-001` restated on the points in service. Screening of four cruise points for `KNU-EWTW-CRZ-001-02`, with `tools/cruise_points.py` and 20 tests |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md
