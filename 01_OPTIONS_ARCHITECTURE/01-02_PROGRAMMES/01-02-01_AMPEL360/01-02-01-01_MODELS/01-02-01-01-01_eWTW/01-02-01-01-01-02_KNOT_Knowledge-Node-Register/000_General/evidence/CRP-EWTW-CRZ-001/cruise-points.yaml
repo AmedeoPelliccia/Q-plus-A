@@ -1,4 +1,5 @@
 # Generated 2026-11-15 - Claude Fable 5.2 - first issue, for KNU-EWTW-CRZ-001-02
+# 0.2.0, 2026-11-15: the rule for the air a gas turbine takes in, for KNU-EWTW-GEN-001-02
 # Candidate cruise points of the eWTW and what each costs at first order. The points come
 # from the research record of 2026-11-15; the missions, the masses and the efficiencies
 # come from the mission screening MSN-EWTW-NRG-001, which is read and not changed.
@@ -6,13 +7,18 @@
 # tools/cruise_points.py checks the form and writes the tables of the README.
 analysis:
   id: CRP-EWTW-CRZ-001
-  version: '0.1.0'
+  version: '0.2.0'
   date: 2026-11-15
   knot: KNOT-EWTW-CRZ-001
   serves: KNU-EWTW-CRZ-001-02
   missions: MSN-EWTW-NRG-001
   option: B
   cabin_altitude_ft: {value: 8000, basis: source, ref: '14 CFR 25.841(a): the cabin pressure altitude is not above 8,000 ft in normal operation. Research record of the cruise point, 2026-11-15, statement 7'}
+
+  gas_turbine:
+    rule: corrected-flow
+    basis: assumption
+    note: 'A machine held at one point of its map, behind an inlet that loses nothing, gives the same work for each kilogram of air at the cruise point as at sea level. No fall of power with altitude is on record for a turbogenerator. Research record of the generation architecture, 2026-11-15, finding 17'
 
   points:
   - key: P1

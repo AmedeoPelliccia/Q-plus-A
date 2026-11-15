@@ -1,4 +1,4 @@
-# Generated 2026-11-15 - cruise_points_test.py (0.1.0)
+# Generated 2026-11-15 - cruise_points_test.py (0.2.0)
 """Tests of tools/cruise_points.py on the cruise-point screening of the eWTW. Run from the repository root:
 
     python3 tools/cruise_points_test.py
@@ -59,8 +59,8 @@ class CruisePoints(unittest.TestCase):
     def test_committed_analysis_passes_and_its_readme_is_current(self):
         bad, lines = cp.run(CRP, REG, "check")
         self.assertEqual(bad, [])
-        self.assertEqual(lines[0], "CRP-EWTW-CRZ-001 0.1.0 for KNOT-EWTW-CRZ-001: 4 points on 3 missions of MSN-EWTW-NRG-001 0.3.0; "
-                                   "19 figures, 4 of them assumptions; rule failures: none")
+        self.assertEqual(lines[0], "CRP-EWTW-CRZ-001 0.2.0 for KNOT-EWTW-CRZ-001: 4 points on 3 missions of MSN-EWTW-NRG-001 0.3.0; "
+                                   "20 figures, 5 of them assumptions; rule failures: none")
 
     def test_standard_atmosphere_matches_its_table(self):
         for feet, kelvin, hpa in ((0, 288.15, 1013.25), (8000, 272.30, 752.6), (25000, 238.62, 376.0), (35000, 218.81, 238.4), (41000, 216.65, 178.7)):
@@ -112,6 +112,39 @@ class CruisePoints(unittest.TestCase):
         self.assertAlmostEqual(q["product"], G * 185.2 / (1000 * q["per_kg"]), places=6)                     # 9.1
         self.assertAlmostEqual(q["model"], G * 185.2 / (15 * 0.85) / 1000, places=6)                         # 0.142 kW/kg, no electric chain
         self.assertAlmostEqual(q["cruise"], q["per_kg"] / 0.90, places=6)
+
+    def test_air_flow_of_a_gas_turbine_by_hand(self):
+        self.assertAlmostEqual(cp.air_flow(288.15, 101325.0, 0.0), 1.0, places=9)                             # sea level at rest
+        self.assertAlmostEqual(cp.air_flow(238.62, 37600.0, 0.0), (376.0 / 1013.25) / math.sqrt(238.62 / 288.15), delta=1e-4)   # 25,000 ft at rest: 0.408
+        rows, _ = self.rows()
+        ram = 1 + 0.2 * (185.2 / 309.66) ** 2                                                                 # Mach 0.598 at 25,000 ft: 1.0715
+        by_hand = (376.0 / 1013.25) * ram ** 3.5 / math.sqrt(238.62 / 288.15 * ram)                           # 0.502
+        self.assertAlmostEqual(rows["P2"]["air"], by_hand, delta=5e-4)
+        self.assertAlmostEqual(rows["P2"]["air"], 0.502, delta=0.001)
+        ram = 1 + 0.2 * 0.78 ** 2                                                                             # 1.1217 at the jet point
+        self.assertAlmostEqual(rows["P4"]["air"], (238.4 / 1013.25) * ram ** 3.5 / math.sqrt(218.81 / 288.15 * ram), delta=5e-4)   # 0.381
+        self.assertGreater(rows["P1"]["air"], rows["P2"]["air"])
+        self.assertGreater(rows["P3"]["air"], rows["P4"]["air"])
+
+    def test_cruise_power_referred_to_sea_level_by_hand(self):
+        rows, _ = self.rows()
+        for key, low in (("P1", 1.0), ("P2", 1.5), ("P3", 1.7), ("P4", 2.8)):
+            self.assertGreater(rows[key]["cruise"] / rows[key]["air"] / rows[key]["takeoff"], low, f"{key}: the cruise referred to sea level is above the take-off power")
+        _, lines = cp.run(self.crp, self.reg)
+        row = next(l for l in lines if l.startswith("| `P2` | 50% |"))
+        mass = rows["P2"]["flights"]["L"]["mass"]
+        self.assertEqual([x.strip() for x in row.strip("|").split("|")][2:],
+                         [f"{rows['P2']['cruise'] * mass / 1000:.1f}", f"{rows['P2']['cruise'] * mass / 1000 / rows['P2']['air']:.1f}", "158%"])
+        self.assertAlmostEqual(rows["P2"]["published"]["sea_level_shp"], 7894 / rows["P2"]["air"], places=6)   # 15,700 shp
+        self.assertAlmostEqual(rows["P2"]["published"]["sea_level_shp"] / 9160, 1.72, delta=0.01)
+
+    def test_gas_turbine_rule_is_a_declared_assumption(self):
+        self.edit(lambda a: a["gas_turbine"].update(basis="source"))
+        self.fails("gas_turbine: the rule is `corrected-flow`, an assumption with a note")
+        self.edit(lambda a: a["gas_turbine"].update(basis="assumption", rule="density"))
+        self.fails("gas_turbine: the rule is `corrected-flow`, an assumption with a note")
+        self.edit(lambda a: a.pop("gas_turbine"))
+        self.fails("missing section gas_turbine")
 
     def test_cabin_compression_by_hand(self):
         rows, _ = self.rows()

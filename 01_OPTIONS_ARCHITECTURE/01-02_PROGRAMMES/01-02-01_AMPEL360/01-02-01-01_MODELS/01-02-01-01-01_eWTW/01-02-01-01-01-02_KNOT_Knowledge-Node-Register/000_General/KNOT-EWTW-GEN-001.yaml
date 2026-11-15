@@ -84,6 +84,10 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+  - text: the cruise power referred to sea level, which is above the take-off power at every candidate cruise point, rests on a rule for the air a gas turbine takes in that no machine on record confirms
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
   - text: the tailcone holds mounts and a firewall declared for an auxiliary power module, not for a turbogenerator
     ref:
       view: PBS
@@ -111,11 +115,13 @@ knot:
     exit: Unit ratings available and counts adopted, with the failure case and the installation of each
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-15'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md
   - knu_id: KNU-EWTW-GEN-001-02
     title: Generation sizing by failure case
     knu_class: ANALYSIS_PACKAGE
@@ -128,11 +134,13 @@ knot:
     exit: Count and rating for each option, with the power left after the loss of one unit
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-15'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
   - knu_id: KNU-EWTW-GEN-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -150,8 +158,10 @@ knot:
     exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-15'
-    start_date: null
+    start_date: '2026-11-15'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md

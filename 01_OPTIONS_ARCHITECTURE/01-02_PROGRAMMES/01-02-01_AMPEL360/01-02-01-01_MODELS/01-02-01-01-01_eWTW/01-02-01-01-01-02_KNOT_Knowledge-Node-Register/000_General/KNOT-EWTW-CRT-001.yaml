@@ -76,9 +76,11 @@ knot:
       - How have applicants and authorities treated the climb requirement with one engine inoperative for aircraft with more than four propulsors?
       - What final reserve have authorities accepted or proposed for aeroplanes with electric engines?
       - What emissions requirements are proposed to complement SC E-19 for CS-25 aircraft?
+      - 'Under which requirements is a gas turbine that gives no thrust and drives generators for propulsion treated: as an engine under CS 25.903, as an auxiliary power unit, or under SC E-19? What does that change for isolation and for rotor burst?'
     serves:
     - KNOT-EWTW-PRP-001
     - KNOT-EWTW-STO-001
+    - KNOT-EWTW-GEN-001
     outputs:
     - view: RBS
       ref: null

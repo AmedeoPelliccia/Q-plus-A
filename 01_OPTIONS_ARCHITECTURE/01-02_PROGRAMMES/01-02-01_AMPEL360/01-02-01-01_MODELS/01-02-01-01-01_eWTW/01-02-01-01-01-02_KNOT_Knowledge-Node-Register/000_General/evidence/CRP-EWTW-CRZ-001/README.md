@@ -1,11 +1,11 @@
 # CRP-EWTW-CRZ-001 — Screening of the candidate cruise points
 
-**Version:** 0.1.0 · **Date:** 2026-11-15 · **Status:** first issue, proposed
-**For:** `KNOT-EWTW-CRZ-001`, `KNU-EWTW-CRZ-001-02` Mission screening by cruise point
+**Version:** 0.2.0 · **Date:** 2026-11-15 · **Status:** second issue, proposed
+**For:** `KNOT-EWTW-CRZ-001`, `KNU-EWTW-CRZ-001-02` Mission screening by cruise point. Its section on the gas turbines also serves `KNU-EWTW-GEN-001-02`
 **Input:** [`cruise-points.yaml`](cruise-points.yaml), and the mission screening [`MSN-EWTW-NRG-001`](../MSN-EWTW-NRG-001/README.md), which is read and not changed
 **Checked by:** [`tools/cruise_points.py`](../../../../../../../../../tools/cruise_points.py)
 
-Four candidate cruise points, and what each costs at first order: time, fuel, power, compression of the cabin air and insulation margin. The points come from the [research record](../KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md) of the cruise point. Two are the maximum cruise of the turboprops of the class in service, one is the point of a design study, one is the Mach of the charts of the reference jet.
+Four candidate cruise points, and what each costs at first order: time, fuel, power, the size of the gas turbines, compression of the cabin air and insulation margin. The points come from the [research record](../KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md) of the cruise point. Two are the maximum cruise of the turboprops of the class in service, one is the point of a design study, one is the Mach of the charts of the reference jet.
 
 This is a screening. It recommends no point and states no conformity with any rule.
 
@@ -18,15 +18,17 @@ This is a screening. It recommends no point and states no conformity with any ru
 3. **Power: the cruise asks about as much as the take-off.** At the jet point the cruise asks 111 % of the nominal take-off power of the mission screening. At the two fast propeller points it asks about 80 %, and at the slow one 60 %. The check on a published point says the model is low: the Dash 8-400 uses 86 % of its take-off power at maximum cruise, and the model gives 72 % of the cruise power its sheet publishes.
 4. **Cabin.** With the cabin at 8,000 ft, the pressure ratio of the compression goes from 1.6 at 20,000 ft to 3.2 at 35,000 ft. The ideal work on each kilogram of outside air goes from 37 to 85 kJ, 2.3 times.
 5. **Insulation.** On the specimens measured, the inception voltage of partial discharge left at the cruise altitude is 82 % of its sea-level value at the lowest point and 70 % at the highest.
+6. **Gas turbines.** The [research](../KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md) on the generation architecture gives no fall of power with altitude. The screening therefore states a rule and declares it an assumption: a gas turbine takes in air in proportion to the total pressure over the root of the total temperature, and gives the same work for each kilogram. The air flow at the four points is 56, 50, 47 and 38 % of that at sea level and at rest. The cruise power referred to sea level is then 9.6, 13.9, 15.3 and 26.1 MW, which is 109, 158, 173 and 290 % of the take-off power.
 
-**What item 3 means for the sources.** At the cruise speeds read, the generators and the motors are sized by the cruise at least as much as by the take-off. A battery that only shaves the take-off peak then removes little from the rating of the turbogenerators, unless the aircraft cruises well below those speeds. That is an input to `KNOT-EWTW-STO-001` and `KNOT-EWTW-GEN-001`, not a ruling on them.
+**What items 3 and 6 mean for the sources.** At the cruise speeds read, the generators and the motors are sized by the cruise at least as much as by the take-off (item 3). At the rule of item 6 the gas turbines are sized by the cruise at every point. The nine units of 1,000 kW that the mission screening counts for the take-off would give 5.0 MW at the slowest point, where the cruise asks 5.3 MW. A battery that only shaves the take-off peak then removes nothing from the rating of the turbogenerators. That is an input to `KNOT-EWTW-STO-001` and `KNOT-EWTW-GEN-001`, not a ruling on them, and it stands on an assumption.
 
 ## Limits
 
 - **The propeller points are maximum cruise speeds**, read from the sheets of the manufacturers. A long-range cruise is slower and asks less power. The jet point is the Mach of the charts of the reference type.
 - **One lift-to-drag ratio serves every point.** The mission screening sets it for its reference at long-range cruise. The check on point `P2` shows that it is too high at a maximum cruise speed.
 - **The mass in cruise is taken as the take-off mass**, so the megawatts are an upper bound.
-- **The fall of the power of a gas turbine with altitude is not computed.** The sea-level rating that gives this power at the cruise altitude is larger. It waits for `KNU-EWTW-GEN-001-01`.
+- **The fall of the power of a gas turbine with altitude is a rule, not a measurement.** The research found none for a turbogenerator. The rule holds the machine at one point of its map, behind an inlet that loses nothing, and keeps the work for each kilogram of air. A real machine gives more work for each kilogram in colder air, runs against limits of speed and temperature, and may have a take-off rating held below what it gives at sea level. The check on `P2` cannot tell these apart.
+- **The published point takes a rating as a cruise power.** The sheet of the Dash 8-400 gives the maximum cruise power of its engines as a rating, without the altitude at which it is delivered. Both checks on `P2` take it at 25,000 ft and 360 kt. If the engines give less there, the model is nearer to the published point than the first check says, and the second check gives less than 172 %.
 - **The climb is not sized.**
 - **Fuel differs between points by the propulsor efficiency alone.** Drag, engine efficiency and the terminal phases are those of the mission screening at every point.
 - **The work of compression is the ideal work on a kilogram of air.** It is not the power of a system: the air flow and the efficiency of the machine are not in it.
@@ -38,7 +40,7 @@ This is a screening. It recommends no point and states no conformity with any ru
 Generated by the tool from the two inputs. Do not edit between the markers.
 
 <!-- cruise:begin -->
-CRP-EWTW-CRZ-001 0.1.0 for KNOT-EWTW-CRZ-001: 4 points on 3 missions of MSN-EWTW-NRG-001 0.3.0; 19 figures, 4 of them assumptions; rule failures: none
+CRP-EWTW-CRZ-001 0.2.0 for KNOT-EWTW-CRZ-001: 4 points on 3 missions of MSN-EWTW-NRG-001 0.3.0; 20 figures, 5 of them assumptions; rule failures: none
 
 ### Points
 
@@ -84,6 +86,19 @@ Electrical power at the terminals of the generators for each kilogram of mass, a
 
 **Check on a published point, `P2`.** De Havilland Canada, specification sheet of the Dash 8-400, issue 11, two engines at maximum cruise power and at normal take-off power, at the maximum take-off mass: 0.199 kW of shaft power in cruise for each kilogram of take-off mass, 86% of the take-off power of the same engines. At the same speed the model gives 0.142 kW/kg at the shaft, 72% of the published figure: the published point implies a product of lift-to-drag and propulsor efficiency of 9.1, against 12.8 in the model. With the published figure and the electric chain, the cruise of this point asks 0.221 kW/kg, 111% of the nominal take-off power.
 
+### Gas turbines: the cruise power referred to sea level
+
+A gas turbine held at one point of its map takes in air in proportion to the total pressure at its inlet and to the inverse of the square root of the total temperature. The second column is that air flow at the cruise point against the flow at sea level and at rest, in the standard atmosphere, behind an inlet that loses nothing. The cruise power divided by it is the power at sea level of machines that give the same work for each kilogram of air at both conditions. That rule is an assumption of this screening, of first order. It is not the fall of power of a machine, and none is on record for a turbogenerator.
+
+| Point | Air flow against sea level at rest | Cruise, MW | Referred to sea level, MW | Against take-off power |
+|---|---|---|---|---|
+| `P1` | 56% | 5.3 | 9.6 | 109% |
+| `P2` | 50% | 7.0 | 13.9 | 158% |
+| `P3` | 47% | 7.2 | 15.3 | 173% |
+| `P4` | 38% | 9.9 | 26.1 | 290% |
+
+**The same rule on the published point, `P2`.** The sheet rates its engines at 7,894 shp at maximum cruise. If they give it at this point, where the air flow is 50% of that at sea level, the rule above makes them machines of 15,734 shp at sea level and at rest, 172% of the take-off power the sheet gives. The sheet does not say at what altitude the rating is given, nor how much of the difference is a take-off rating held below what the engines give at sea level.
+
 ### Cabin and insulation
 
 Pressure ratio from the ambient pressure to a cabin at 8,000 ft, the ideal work to compress a kilogram of outside air through it, and the inception voltage of partial discharge left at the ambient pressure, as a share of its value at sea level on the specimens measured.
@@ -106,10 +121,11 @@ python3 tools/cruise_points.py "$REG/000_General/evidence/CRP-EWTW-CRZ-001" "$RE
 python3 tools/cruise_points_test.py
 ```
 
-The tool first runs the mission screening through its own check. Its tests compare the standard atmosphere with the published table, and compute by hand the speed, the time, the mission at the jet point, the cruise power, the published point, the compression and the interpolation of the inception voltage.
+The tool first runs the mission screening through its own check. Its tests compare the standard atmosphere with the published table, and compute by hand the speed, the time, the mission at the jet point, the cruise power, the published point, the air flow of a gas turbine, the power referred to sea level, the compression and the interpolation of the inception voltage.
 
 ## Revision history
 
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-11-15 | First issue: four points on the three missions of the eWTW. 19 figures, 4 of them assumptions |
+| 0.2.0 | 2026-11-15 | Gas turbines: a declared rule for the air a machine takes in, and the cruise power referred to sea level, for `KNU-EWTW-GEN-001-02`. The published point is said to take a rating as a cruise power. 20 figures, 5 of them assumptions |

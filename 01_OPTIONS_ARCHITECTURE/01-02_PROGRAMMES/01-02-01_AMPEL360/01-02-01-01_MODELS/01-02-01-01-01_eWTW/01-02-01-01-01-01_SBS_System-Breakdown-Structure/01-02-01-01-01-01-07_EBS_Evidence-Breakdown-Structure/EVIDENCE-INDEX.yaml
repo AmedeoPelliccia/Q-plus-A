@@ -174,13 +174,29 @@ rows:
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CRP-EWTW-CRZ-001/README.md
     status: on-disk
     note: >
-      Screening of the candidate cruise points 0.1.0: four points, with time at cruise
-      speed, the missions of option B, cruise power against take-off power, compression of
-      the cabin air and insulation margin. Input in cruise-points.yaml beside it; it reads
-      the mission screening and does not change it. Written and checked by
-      tools/cruise_points.py. A first-order screening; it states no conformity.
+      Screening of the candidate cruise points 0.2.0: four points, with time at cruise
+      speed, the missions of option B, cruise power against take-off power, that power
+      referred to sea level by a declared rule for the air a gas turbine takes in,
+      compression of the cabin air and insulation margin. Input in cruise-points.yaml
+      beside it; it reads the mission screening and does not change it. Written and
+      checked by tools/cruise_points.py. A first-order screening; it states no conformity.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-GEN-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the generation architecture, as accepted on review from a report of
+      2026-11-15 relayed by the author - generators and turbogenerators that have run,
+      counts and failure cases in published concepts, the rules on isolation and rotor
+      burst. Ten of its statements were read by the reviewer at the source, three are as
+      reported, six report that a search found nothing. It gives no fall of power with
+      altitude.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
 
   - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
