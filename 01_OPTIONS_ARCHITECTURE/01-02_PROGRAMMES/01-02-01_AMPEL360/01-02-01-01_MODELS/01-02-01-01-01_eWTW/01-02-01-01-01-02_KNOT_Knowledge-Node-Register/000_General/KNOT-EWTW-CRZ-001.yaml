@@ -69,7 +69,7 @@ knot:
   - id: M4
     class: mandatory
     text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service of rule 19 of CM-004'
-    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text'
+    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text; the research of 2026-11-16 found no evidence for or against a floor at this speed'
     weight: null
     threshold: null
     state: PROPOSED
@@ -252,11 +252,13 @@ knot:
     exit: 'A measure of environmental effect for the north-star criterion, with its source, and a statement of what still has no figure'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-16'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md
   - knu_id: KNU-EWTW-CRZ-001-05
     title: Floor of service
     knu_class: ANALYSIS_PACKAGE
@@ -274,8 +276,10 @@ knot:
     exit: 'A floor of service for criterion M4 with its evidence, or the statement that none is on record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-16'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md

@@ -102,7 +102,7 @@ On 2026-11-15 the authority decided to keep for this KNOT the threshold of rulin
 
 Time and cost are no longer weighed. A costly aircraft earns its cost by flying more, and a faster one makes more flights in a day. The records hold no figure for what 17 to 20 minutes are worth, so that argument is not answered here; it is set aside by a decision of policy.
 
-The floor `M4` now carries all of it. An aircraft cuts emissions only if it flies in the place of another, and without a floor the north star always chooses the slowest point, with nothing to stop it at 275 kt. The 360 kt are a number of the programme, taken from the fastest turboprop in service and found in no text. `KNU-EWTW-CRZ-001-05` asks the research for the evidence behind a floor.
+The floor `M4` now carries all of it. An aircraft cuts emissions only if it flies in the place of another, and without a floor the north star always chooses the slowest point, with nothing to stop it at 275 kt. The 360 kt are a number of the programme, taken from the fastest turboprop in service and found in no text. `KNU-EWTW-CRZ-001-05` asked the research for the evidence behind a floor, and it found none for or against this one (below).
 
 Three things would open the set again:
 
@@ -128,11 +128,22 @@ This is an illustration. It retains and rejects nothing: rule 5 allows no scorin
 
 The weights of issue 1 gave the same order: 0.96, 0.93 and 0.77 for `P2`, `P3` and `P4` with the floor, and the slowest point first without it.
 
+## What the research of 2026-11-16 found
+
+The [research record](KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md) of the two KNUs below changes nothing in the set and says where it stands.
+
+- **On the measure.** A published measure of the same kind as `T2` exists: the carbon dioxide metric of ICAO, fuel for each kilometre in cruise against the size of the cabin, with a limit that tightens for new types from the end of 2031. The EU taxonomy gives a bar for an aircraft of this mass, 11 % below that limit. The programme cannot compute the metric of the eWTW before a cabin area and a drag polar are on record.
+- **On the effects other than carbon dioxide.** A lower cruise reduces the forcing of nitrogen oxides and the coverage of contrails, in two assessments of the world fleet. They point the same way as fuel and put the jet point last. No figure sets them beside the fuel of a mission, so they are not scored.
+- **On the floor.** Both 275 kt and 360 kt are in service, the slower type in the larger fleet, on stages shorter than those of ruling R2. Nothing anchors the floor at 360 kt and nothing refutes it. `M4` is a requirement of the programme: the missions of ruling R2 are flown by jets today, and the authority does not want the alternative to be slower than the fastest propeller aircraft in service.
+- **On the margin.** The figures of the two makers for carbon dioxide by seat-kilometre are 4 % apart, inside the margin of 5 %. The north star does not separate 275 kt from 360 kt; without `M4`, installed power chooses the slower.
+
 ## Research asked
 
 | KNU | What it asks | What it feeds |
 |---|---|---|
 | `KNU-EWTW-CRZ-001-04` | The published measures of the environmental performance of an aeroplane; the effects other than carbon dioxide against cruise altitude; fuel against cruise speed in published data; the rules on sustainable fuel | The north star `T2` |
 | `KNU-EWTW-CRZ-001-05` | The speeds and block times operators have accepted in the class, the large turboprops that were studied and not built, the cost of block time, and any limit set by faster traffic | The floor `M4` |
+
+Both were answered on 2026-11-16, the first in part.
 
 One piece of work stays with the programme: the fuel of each cruise point with a drag polar and a machine of the eWTW, in the screening. Until then the north star separates the jet point from the propeller points and nothing else.

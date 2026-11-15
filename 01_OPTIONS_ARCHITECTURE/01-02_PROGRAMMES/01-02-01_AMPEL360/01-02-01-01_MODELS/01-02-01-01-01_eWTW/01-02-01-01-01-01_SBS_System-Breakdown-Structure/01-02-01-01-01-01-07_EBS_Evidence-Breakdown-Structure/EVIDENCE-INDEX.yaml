@@ -243,6 +243,21 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md
+    status: on-disk
+    note: >
+      Research record: the measure of environmental effect and the floor of service, as
+      accepted on review from two reports of 2026-11-16 relayed by the author - the
+      published measures of the environmental performance of an aeroplane, the effects on
+      climate other than carbon dioxide against cruise altitude, fuel and speed in the
+      class, and what operators and makers have done. Nine of its statements were read by
+      the reviewer at the source, five are as reported, six report that a search found
+      nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk
