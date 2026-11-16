@@ -78,7 +78,9 @@ knot:
     ref:
       view: PBS
       ref: eWTW-PBS-060
-  couplings: []
+  couplings:
+  - knot: KNOT-EWTW-WNG-001
+    note: 'propulsors along the span or at the tips change the wing the aircraft needs and the loads it carries'
   rulings: []
   reopen_if: []
   knus:

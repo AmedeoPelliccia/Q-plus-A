@@ -19,7 +19,8 @@ knot:
   status: DRAFT
   resolution: OPEN
   created_date: '2026-11-14'
-  depends_on: []
+  depends_on:
+  - KNOT-EWTW-AER-001
   closed_with: []
   unblocks:
   - KNOT-EWTW-PRP-001
@@ -165,7 +166,9 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
-  couplings: []
+  couplings:
+  - knot: KNOT-EWTW-WNG-001
+    note: 'the wing loading follows the cruise point, and the lift-to-drag ratio at a cruise point follows the wing; the two are sized together'
   rulings: []
   reopen_if: []
   knus:

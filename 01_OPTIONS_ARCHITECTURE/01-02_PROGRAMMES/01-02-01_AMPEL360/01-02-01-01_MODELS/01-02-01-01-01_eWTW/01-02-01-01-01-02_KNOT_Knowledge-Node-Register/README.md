@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.12 · **Date:** 2026-11-16
+**Version:** 0.11.13 · **Date:** 2026-11-16
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -38,6 +38,7 @@ No decision anchor has approved criteria yet: three records hold proposed criter
 
 | KNOT | Title | Kind | Filed under | Resolution | KNUs | Proposed owner |
 |---|---|---|---|---|:-:|---|
+| `KNOT-EWTW-AER-001` | Drag polar of the configuration | `obligation` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-CAD-001` | 3D model of record | `control-intent` | `000` | OPEN | 3 | `STK_CM` |
 | `KNOT-EWTW-CRT-001` | Certification basis | `obligation` | `000` | OPEN | 3 | `STK_SAF` |
 | `KNOT-EWTW-CRZ-001` | Cruise point | `decision-anchor` | `000` | OPEN | 5 | `STK_SE` |
@@ -51,11 +52,13 @@ No decision anchor has approved criteria yet: three records hold proposed criter
 | `KNOT-EWTW-STO-001` | Role of energy storage | `decision-anchor` | `000` | OPEN | 4 | `STK_SE` |
 | `KNOT-EWTW-DAT-001` | Fuselage datum and master geometry | `decision-anchor` | `053` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-DFN-001` | Dorsal-fin root fairing | `decision-anchor` | `053` | OPEN | 1 | `STK_SE` |
+| `KNOT-EWTW-FUS-001` | Fuselage section, length and cabin | `decision-anchor` | `053` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-KEL-001` | Keel-beam taxonomy home | `decision-anchor` | `053` | OPEN | 2 | `STK_CM` |
 | `KNOT-EWTW-LUG-001` | Wing-attach lugs | `decision-anchor` | `053` | OPEN | 1 | `STK_SE` |
 | `KNOT-EWTW-MLG-001` | MLG configuration | `decision-anchor` | `053` | OPEN | 2 | `STK_SE` |
 | `KNOT-EWTW-ROD-001` | Rear adjustable rods | `decision-anchor` | `053` | OPEN | 4 | `STK_SE` |
 | `KNOT-EWTW-TSI-001` | Tail-strike indicator | `decision-anchor` | `053` | OPEN | 1 | `STK_SE` |
+| `KNOT-EWTW-WNG-001` | Wing planform: span, aspect ratio and area | `decision-anchor` | `057` | OPEN | 3 | `STK_SE` |
 
 ### Rulings recorded
 
@@ -84,6 +87,18 @@ Three KNOTs come from the research records of the same day. Each holds a questio
 | `KNOT-EWTW-GEN-001` | Generation architecture: how many turbogenerators, of what rating, and where? | The turbogenerator installation (`068`); option C of essential power. It is decided with `PRP` |
 
 `KNOT-EWTW-GEN-001` was opened on 2026-11-15 to correct the deferral of the day before. The gate on the turbogenerator chapter, number, rating and position, had been put on `KNOT-EWTW-SRC-001`, which is deferred to the role of storage. That choice decides whether a battery is carried, not how many turbogenerators there are, so the gate would have opened on a decision that does not concern it. The question now has its own KNOT, and `KNU-EWTW-SRC-001-02` serves it.
+
+### KNOTs opened on 2026-11-16: the dimensions of the airframe
+
+The open decisions depend on the altitude, the speed, the propulsors and the place of the fuel. None of them defines a section, an aspect ratio, a wetted area or a cabin area, and without these the north star and the minimum objective cannot be applied with figures of the eWTW. Three KNOTs hold them, each in the chapter of its scope. They record dimensions and a polar with their assumptions. They do not choose between a tube-and-wing, a lifting body and a blended body: if an architecture between them improves the lift-to-drag ratio or the cabin area, the improvement has to appear in the screening, and is not assumed.
+
+| KNOT | Question | What waits for it |
+|---|---|---|
+| `KNOT-EWTW-FUS-001`, chapter `053` | Which cross-section and which length does the fuselage have, and what cabin area do they give for 100 passengers? | The wetted area of the polar; the cabin area of the carbon dioxide metric; the volume of the bay `053-900` (`FUL`) |
+| `KNOT-EWTW-WNG-001`, chapter `057` | Which span, which aspect ratio and which area does the wing have? | The induced drag of the polar; the fuel the wing box holds (`FUL`). It is sized with the cruise point (`CRZ`) |
+| `KNOT-EWTW-AER-001`, chapters `006`, `053`, `055`, `057` | Which wetted area, which parasite drag and which lift-to-drag ratio does the eWTW have at each candidate cruise point? | The fuel of the north star and the metric of the minimum objective (`CRZ`). It is an obligation, not a choice |
+
+The polar and the wetted area are one KNOT, because the second is an input of the first. The wing and the cruise point are coupled and not ordered: each sets the other. `KNOT-EWTW-CRZ-001` now depends on the polar, and `KNOT-EWTW-FUL-001` on the wing and on the fuselage. Three KNUs carry research briefs: sections and cabins with the concepts that have a lifting fuselage, wings with span limits and propellers on the wing, and drag data with the forecasts of ICAO.
 
 ### North star
 
@@ -141,6 +156,7 @@ Each record lists, in its `taxonomy` field, the [S-ATLAS][S-ATLAS] chapters it a
 
 | Chapter | S-ATLAS title | KNOTs |
 |---|---|---|
+| `006` | Dimensions and Areas | `AER` |
 | `012` | Servicing | `ESS` · `SRC` |
 | `021` | Air Conditioning Environmental Control | `CRZ` · `NRG` · `PRP` · `STO` |
 | `022` | Auto Flight | `ESS` · `PRP` |
@@ -155,8 +171,9 @@ Each record lists, in its `taxonomy` field, the [S-ATLAS][S-ATLAS] chapters it a
 | `046` | Information Systems | `ESS` |
 | `047` | Inerting and Protective Atmospheres | `ESS` · `NRG` · `STO` |
 | `049` | Auxiliary Power Module | `ESS` · `SRC` |
-| `053` | Fuselage | `FUL` · `NRG` · `DAT` · `ROD` |
-| `057` | Wings | `FUL` |
+| `053` | Fuselage | `AER` · `FUL` · `NRG` · `DAT` · `FUS` · `ROD` |
+| `055` | Stabilizers | `AER` |
+| `057` | Wings | `AER` · `FUL` · `WNG` |
 | `061` | Powerplant Installation and Nacelle Integration | `GEN` · `PRP` |
 | `062` | Combustion Machinery | `PRP` |
 | `063` | Combustion Systems for Sustainable Carriers | `PRP` |
@@ -185,6 +202,9 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
+| `KNU-EWTW-AER-001-01` | Published drag data and forecasts for the class | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` | NOT_STARTED |
+| `KNU-EWTW-AER-001-02` | Polar of the eWTW in the screening | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` · `PRP` | NOT_STARTED |
+| `KNU-EWTW-AER-001-03` | Dimensions and areas of record | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-01` | Source of record, script or FreeCAD document | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-02` | Round trip of EWTW-533001-000 through FreeCAD | `VERIFICATION_OBJECT` | — | PENDING_REVIEW |
 | `KNU-EWTW-CAD-001-03` | CAD convention | `CONTROLLED_ARTEFACT` | `DAT` | NOT_STARTED |
@@ -229,6 +249,9 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-DAT-001-02` | Envelope of record for the aft fuselage | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-DAT-001-03` | Assembly check across stations | `VERIFICATION_OBJECT` | — | NOT_STARTED |
 | `KNU-EWTW-DFN-001-01` | Fairing ownership | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
+| `KNU-EWTW-FUS-001-01` | Sections and cabins: the class, and concepts with a lifting fuselage | `ANALYSIS_PACKAGE` | `AER` | NOT_STARTED |
+| `KNU-EWTW-FUS-001-02` | Cabin and fuselage dimensions by option | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | NOT_STARTED |
+| `KNU-EWTW-FUS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 | `KNU-EWTW-KEL-001-01` | Taxonomy home of the keel beam | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-KEL-001-02` | Station binding | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-LUG-001-01` | Wing-attach interface split | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
@@ -239,6 +262,9 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-ROD-001-03` | Interfaces of station 053-300-020 | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-ROD-001-04` | 3D model request EWTW-533002-000 | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-TSI-001-01` | Tail-strike provision and sensing | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
+| `KNU-EWTW-WNG-001-01` | Wings of the class, span limits and high aspect ratio | `ANALYSIS_PACKAGE` | `AER` · `PRP` | NOT_STARTED |
+| `KNU-EWTW-WNG-001-02` | Wing area and span by cruise point | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | NOT_STARTED |
+| `KNU-EWTW-WNG-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 
 Seven KNUs touch protected areas and are author acts. Six are in the PBS: `KNU-EWTW-PRP-001-05`, `KNU-EWTW-KEL-001-02`, `KNU-EWTW-ROD-001-03`, `KNU-EWTW-ROD-001-04`, `KNU-EWTW-DAT-001-02` and `KNU-EWTW-CAD-001-03`. One is in the taxonomy: `KNU-EWTW-KEL-001-01`. Four are conditional on their KNOT's ruling: `KNU-EWTW-STO-001-03`, and `KNU-EWTW-ROD-001-02`, `-03` and `-04`, which run only if the ruling keeps the rod station. `KNU-EWTW-PRP-001-05` is conditional on a ruling that admits a thermal machine, and `KNOT-EWTW-PRP-001` has no ruling. The authority asked for the group on 2026-11-14 and it is opened ahead of that ruling, as PBS group `060` with chapter `068`: ruling R2 of `KNOT-EWTW-NRG-001` removes the all-electric chain, and the exclusion of hydrogen rests on R1, completed on the same day. The KNU is pending review, and the research record of the propulsion chain keeps the objection that the group gets ahead of the ruling.
 
@@ -285,7 +311,7 @@ print(yaml.safe_dump(out, sort_keys=False, allow_unicode=True, width=110))
 EOF
 ```
 
-37 of the 55 KNUs have a brief. The other eighteen are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
+40 of the 64 KNUs have a brief. The other twenty-four are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
 
 ---
 
@@ -300,7 +326,7 @@ python3 tools/knot_check.py "$REG" "$TAX"
 python3 tools/knot_check_test.py
 ```
 
-The first line reads `18 KNOTs, 55 KNUs, 33 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
+The first line reads `21 KNOTs, 64 KNUs, 35 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
 
 ---
 
@@ -337,6 +363,7 @@ The first line reads `18 KNOTs, 55 KNUs, 33 S-ATLAS chapters; rule failures: non
 | 0.11.10 | 2026-11-16 | Research record of the measure of environmental effect and of the floor of service, reviewed: nine statements read at the source, five as reported, six findings of absence, six items not accepted. `KNU-EWTW-CRZ-001-04` in progress, `-05` pending review. The set of criteria is unchanged; the record of the proposal states the ground of the floor |
 | 0.11.11 | 2026-11-16 | Two decisions of the authority: the floor of 360 kt stays, in knots; the most stringent of the carbon dioxide requirements in law is the minimum objective of the aircraft, criterion `M5` of `KNOT-EWTW-CRZ-001`. Screening of the cruise points 0.3.0 computes the metric of ICAO at first order: no point meets the objective at nominal values. `tools/cruise_points.py` 0.3.0 with 29 tests |
 | 0.11.12 | 2026-11-16 | Rationale of ruling R1 of `KNOT-EWTW-NRG-001`: its last sentence restated by the authority before the merge that ratifies it. The eWTW is not said to keep a tube-and-wing fuselage: its architecture lies between a conventional tube-and-wing and a blended wing body, and its geometry is not yet on record |
+| 0.11.13 | 2026-11-16 | Three KNOTs opened for the dimensions of the airframe, at the request of the authority: `KNOT-EWTW-FUS-001` (fuselage section, length and cabin, chapter `053`), `KNOT-EWTW-WNG-001` (wing planform, chapter `057`, a new folder) and `KNOT-EWTW-AER-001` (drag polar, an obligation under rule 19). `KNOT-EWTW-CRZ-001` depends on the polar; `KNOT-EWTW-FUL-001` on the wing and the fuselage; wing and cruise point are coupled. The research context names the architecture and the north star. 21 KNOTs, 64 KNUs |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

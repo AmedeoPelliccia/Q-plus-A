@@ -54,7 +54,7 @@ class KnotCheck(unittest.TestCase):
         bad, prov, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertEqual(bad, [])
         self.assertEqual(prov, [], "ruling R1 of the energy carrier was completed on 2026-11-14")
-        self.assertTrue(lines[0].startswith("18 KNOTs, 55 KNUs"))
+        self.assertTrue(lines[0].startswith("21 KNOTs, 64 KNUs"))
         self.assertIn("Control: `CAD`", lines)
         self.assertIn("Obligation: `CRT`", lines)
 

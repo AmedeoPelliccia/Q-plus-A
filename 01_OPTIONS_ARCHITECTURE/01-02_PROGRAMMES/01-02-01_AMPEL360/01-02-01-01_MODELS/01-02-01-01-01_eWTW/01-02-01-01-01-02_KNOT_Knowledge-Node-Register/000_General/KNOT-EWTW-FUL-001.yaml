@@ -23,6 +23,8 @@ knot:
   - KNOT-EWTW-NRG-001
   - KNOT-EWTW-STO-001
   - KNOT-EWTW-CRZ-001
+  - KNOT-EWTW-WNG-001
+  - KNOT-EWTW-FUS-001
   closed_with: []
   unblocks: []
   affects:

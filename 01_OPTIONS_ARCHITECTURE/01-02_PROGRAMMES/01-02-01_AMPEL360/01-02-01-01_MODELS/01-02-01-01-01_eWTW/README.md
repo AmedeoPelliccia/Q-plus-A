@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.21 |
+| Version | 0.3.22 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -155,6 +155,9 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 | `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet for this aircraft? An obligation, not a choice | 3 · 4 · 14 | CS-25 at Amendment 28 and SC E-19 are read at the source; no record declares the basis | `STK_SAF` |
 | `KNOT-EWTW-GEN-001` | Generation architecture: how many turbogenerators, of what rating, and where are they installed? | 3 · 4 | First-order take-off power near 8.8 MW, and a cruise that asks more of the gas turbines once referred to sea level; units on record of 0.6 to 1 MW, none flown | `STK_SE` |
 | `KNOT-EWTW-FUL-001` | Where is the fuel carried — in the wing, in the fuselage bay, or in both — and what does the energy-carrier bay then hold? | 1 · 2, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]) | `STK_SE` |
+| `KNOT-EWTW-FUS-001` | Fuselage: which cross-section and which length, and what cabin area for 100 passengers? | The fuselage (`053`), and the volume of `053-900` | The screening assumes a cabin of 60 to 95 m²; no section is on record | `STK_SE` |
+| `KNOT-EWTW-WNG-001` | Wing: which span, which aspect ratio and which area? | The wing (`057`), and the fuel its box holds | The mission screening keeps the airframe of its reference type | `STK_SE` |
+| `KNOT-EWTW-AER-001` | Drag polar: which wetted area, which parasite drag and which lift-to-drag ratio at each cruise point? An obligation, not a choice | The fuel and the carbon dioxide metric of every cruise point | One lift-to-drag ratio of 15 for every point | `STK_SE` |
 
 The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed:
 
@@ -170,6 +173,9 @@ flowchart LR
   CRT["KNOT-EWTW-CRT-001<br/>certification basis"]
   FUL["KNOT-EWTW-FUL-001<br/>fuel location"]
   GEN["KNOT-EWTW-GEN-001<br/>generation architecture"]
+  FUS["KNOT-EWTW-FUS-001<br/>fuselage section and cabin"]
+  WNG["KNOT-EWTW-WNG-001<br/>wing planform"]
+  AER["KNOT-EWTW-AER-001<br/>drag polar"]
   NRG --> SRC
   NRG --> PRP
   SRC ---|"closed together"| PRP
@@ -187,6 +193,13 @@ flowchart LR
   STO --> FUL
   CRZ --> FUL
   FUL ---|"coupled"| GEN
+  FUS --> AER
+  WNG --> AER
+  AER --> CRZ
+  FUS --> FUL
+  WNG --> FUL
+  FUS ---|"coupled"| WNG
+  WNG ---|"coupled"| CRZ
   CRZ --> GEN
   CRT --> GEN
   STO --> GEN
@@ -366,6 +379,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.19 | 2026-11-16 | North star, by decision of the authority: the more ecological option prevails over time and cost among the options that meet what is never traded (CM-004 rule 19, KNOT register 0.11.9). The criteria of the cruise point are in order, fuel first; two research KNUs ask for the measure of environmental effect and for the floor of service |
 | 0.3.20 | 2026-11-16 | Research on the north star of the cruise point (KNOT register 0.11.10): a published metric of fuel in cruise exists and tightens for new types from the end of 2031; the effects other than carbon dioxide point the same way as fuel and cannot be scored; nothing anchors or refutes the floor of 360 kt, which stays a requirement of the programme |
 | 0.3.21 | 2026-11-16 | Minimum objective, by decision of the authority: the most stringent of the carbon dioxide requirements in law, today 11 % below the new-type limit of ICAO (KNOT register 0.11.11). At first order and at nominal values the eWTW stands 23 % above it at the propeller points and 39 % at the jet point; the favourable values of the mission screening reach it |
+| 0.3.22 | 2026-11-16 | Dimensions of the airframe: three KNOTs opened for the fuselage section and cabin, the wing planform and the drag polar (KNOT register 0.11.13). The architecture lies between a conventional tube-and-wing and a blended wing body, by statement of the authority, and its geometry is not on record; a gain from it has to appear in the polar. The identity table of this README still classes the model as advanced tube-and-wing |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
