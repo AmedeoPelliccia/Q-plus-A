@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.11 · **Date:** 2026-11-16
+**Version:** 0.11.12 · **Date:** 2026-11-16
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs** — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -336,6 +336,7 @@ The first line reads `18 KNOTs, 55 KNUs, 33 S-ATLAS chapters; rule failures: non
 | 0.11.9 | 2026-11-16 | The north star, by decision of the authority: rule 19 of CM-004. The criteria of `KNOT-EWTW-CRZ-001` are in order of precedence in place of weights — fuel first, then installed power, then time — with a margin of 5 %, and its floor of 360 kt is the floor of service. Two research KNUs opened, `KNU-EWTW-CRZ-001-04` on the measure of environmental effect and `-05` on the floor of service (55 KNUs). `tools/knot_check.py` 0.1.6 checks the order and the north star, with 28 tests |
 | 0.11.10 | 2026-11-16 | Research record of the measure of environmental effect and of the floor of service, reviewed: nine statements read at the source, five as reported, six findings of absence, six items not accepted. `KNU-EWTW-CRZ-001-04` in progress, `-05` pending review. The set of criteria is unchanged; the record of the proposal states the ground of the floor |
 | 0.11.11 | 2026-11-16 | Two decisions of the authority: the floor of 360 kt stays, in knots; the most stringent of the carbon dioxide requirements in law is the minimum objective of the aircraft, criterion `M5` of `KNOT-EWTW-CRZ-001`. Screening of the cruise points 0.3.0 computes the metric of ICAO at first order: no point meets the objective at nominal values. `tools/cruise_points.py` 0.3.0 with 29 tests |
+| 0.11.12 | 2026-11-16 | Rationale of ruling R1 of `KNOT-EWTW-NRG-001`: its last sentence restated by the authority before the merge that ratifies it. The eWTW is not said to keep a tube-and-wing fuselage: its architecture lies between a conventional tube-and-wing and a blended wing body, and its geometry is not yet on record |
 
 [MODEL]: ../README.md
 [REL]: ../01-02-01-01-01-03_REL_Architecture-Relations/README.md

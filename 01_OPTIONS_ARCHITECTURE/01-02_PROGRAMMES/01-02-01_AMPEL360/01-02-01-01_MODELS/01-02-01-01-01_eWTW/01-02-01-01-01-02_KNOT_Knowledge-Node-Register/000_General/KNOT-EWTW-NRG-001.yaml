@@ -239,7 +239,7 @@ knot:
     authority: AM.PEL — architecture authority
     statement: 'Scope narrowed: the eWTW is all-electric, or hybrid-electric with conventional fuel; liquid hydrogen is allocated to the BWB-Q100. The KNOT stays open within that scope'
     effect: option D excluded
-    rationale: 'The exclusion is a decision of allocation within the family of models. It is not the result of a comparison of carriers on this airframe: no trade of liquid hydrogen on the eWTW is on record, and none is claimed. The family carries liquid hydrogen in one model, the BWB-Q100. For the same energy liquid hydrogen needs about four times the volume of kerosene, which moves its storage out of the wing, and the place of the tanks then drives the centre of gravity. The eWTW keeps a tube-and-wing fuselage for 100 passengers and is defined on the carriers that airframe takes without that change'
+    rationale: 'The exclusion is a decision of allocation within the family of models. It is not the result of a comparison of carriers on this airframe: no trade of liquid hydrogen on the eWTW is on record, and none is claimed. The family carries liquid hydrogen in one model, the BWB-Q100. For the same energy liquid hydrogen needs about four times the volume of kerosene, which moves its storage out of the wing, and the place of the tanks then drives the centre of gravity. The eWTW is the model with a wide tube and a wing, an architecture between a conventional tube-and-wing and a blended wing body, for 100 passengers. Its geometry is not yet on record, and the family defines it on the carriers that do not need that volume'
     rationale_recorded: '2026-11-14'
     evidence:
     - view: EBS
