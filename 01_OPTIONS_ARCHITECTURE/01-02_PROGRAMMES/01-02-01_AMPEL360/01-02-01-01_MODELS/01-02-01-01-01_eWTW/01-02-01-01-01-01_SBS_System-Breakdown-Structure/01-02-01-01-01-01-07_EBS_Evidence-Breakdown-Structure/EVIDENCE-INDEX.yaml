@@ -174,9 +174,10 @@ rows:
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CRP-EWTW-CRZ-001/README.md
     status: on-disk
     note: >
-      Screening of the candidate cruise points 0.2.0: four points, with time at cruise
+      Screening of the candidate cruise points 0.3.0: four points, with time at cruise
       speed, the missions of option B, cruise power against take-off power, that power
-      referred to sea level by a declared rule for the air a gas turbine takes in,
+      referred to sea level by a declared rule for the air a gas turbine takes in, the
+      carbon dioxide metric of ICAO at first order against the minimum objective,
       compression of the cabin air and insulation margin. Input in cruise-points.yaml
       beside it; it reads the mission screening and does not change it. Written and
       checked by tools/cruise_points.py. A first-order screening; it states no conformity.

@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.20 |
+| Version | 0.3.21 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -365,6 +365,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.18 | 2026-11-15 | Cruise point: three maturity records proposed at the threshold of ruling R2, level 6 at the release of the preliminary-design baseline (KNOT register 0.11.8). Criteria and maturity wait for a ruling of the authority |
 | 0.3.19 | 2026-11-16 | North star, by decision of the authority: the more ecological option prevails over time and cost among the options that meet what is never traded (CM-004 rule 19, KNOT register 0.11.9). The criteria of the cruise point are in order, fuel first; two research KNUs ask for the measure of environmental effect and for the floor of service |
 | 0.3.20 | 2026-11-16 | Research on the north star of the cruise point (KNOT register 0.11.10): a published metric of fuel in cruise exists and tightens for new types from the end of 2031; the effects other than carbon dioxide point the same way as fuel and cannot be scored; nothing anchors or refutes the floor of 360 kt, which stays a requirement of the programme |
+| 0.3.21 | 2026-11-16 | Minimum objective, by decision of the authority: the most stringent of the carbon dioxide requirements in law, today 11 % below the new-type limit of ICAO (KNOT register 0.11.11). At first order and at nominal values the eWTW stands 23 % above it at the propeller points and 39 % at the jet point; the favourable values of the mission screening reach it |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

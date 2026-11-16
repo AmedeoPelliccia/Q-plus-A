@@ -5,7 +5,7 @@
 | KNOT | `KNOT-EWTW-CRZ-001` Cruise point |
 | Serves | `KNU-EWTW-CRZ-001-03` Decision criteria and maturity thresholds |
 | Proposed by | Claude, 2026-11-15, at the request of the authority of the model |
-| Issue | 2, of 2026-11-16. The weights of issue 1 are replaced by an order of precedence, on the decision of the authority that the more ecological option is the north star of the programme (rule 19 of CM-004) |
+| Issue | 3, of 2026-11-16. Criterion `M5`, the minimum objective, is added on a decision of the authority of the same day. Issue 2, of 2026-11-16: The weights of issue 1 are replaced by an order of precedence, on the decision of the authority that the more ecological option is the north star of the programme (rule 19 of CM-004) |
 | Second reading | An assessment relayed by the author on 2026-11-15 found issue 1 consistent with the records and asked for the note on CS 25.841 above 25,000 ft. It does not name its producer |
 | State | Proposed. Every criterion is `PROPOSED` in the record of the KNOT. To approve them is an act of the authority |
 | Maturity | Three maturity records, on the decision of the authority to keep the threshold of ruling R2 of `KNOT-EWTW-NRG-001`. They are `PROPOSED` too |
@@ -49,11 +49,26 @@ The jet point buys 17 to 20 minutes on the scoring mission. It asks for 13 % mor
 | `M1` | The cabin pressure altitude is not above 8,000 ft at the maximum operating altitude, in normal operation | CS 25.841(a), read on 2026-11-15 |
 | `M2` | Above 25,000 ft, the cabin pressure altitude stays at or below 15,000 ft after any reasonably probable failure of the pressurisation system | CS 25.841(a), read on 2026-11-15 |
 | `M3` | The requirement mission closes at the cruise point, with the reserves of ruling R2 of `KNOT-EWTW-NRG-001` | Ruling R2 of 2026-11-14 |
-| `M4` | The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service that rule 19 asks for | Proposed here, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text |
+| `M4` | The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service that rule 19 asks for | Proposed here, and kept by the authority on 2026-11-16, in knots, after the research. It is a requirement of the programme and is in no text |
+| `M5` | The carbon dioxide metric of the aircraft is not above the most stringent limit in law at its take-off mass: today 11 % below the new-type limit of ICAO, the margin of the EU taxonomy. It is the minimum objective of the aircraft | Decision of the authority of 2026-11-16 |
 
 `M2` applies to the points above 25,000 ft only. The turboprops of the class have their ceiling there ([record of the cruise point](KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md), statements 2 and 4). What it costs is not on record. Option A at its fast end is at 25,000 ft and is not above it; option C at 27,000 ft is. The choice between A and C has to be made knowing it.
 
 The record of the cruise point gave three limits under 14 CFR 25.841. CS 25.841, read on 2026-11-15, gives the first two. The limits of exposure after a decompression are in the United States text and were not found in CS 25.841 as read.
+
+**The minimum objective, `M5`.** The authority took the most stringent of the carbon dioxide requirements in law as the least the aircraft has to reach. Three limits were read: the new-type limit of ICAO, the stricter standard adopted in March 2026, which is 3 % or 10 % below it, and the margin of the EU taxonomy, 11 % below it. The last is the most stringent, by one point. If a stricter one enters the law, the objective moves with it.
+
+The [screening](CRP-EWTW-CRZ-001/README.md) computes the metric at first order. No cabin is on record, so it assumes an area between 60 and 95 m², which moves the metric by about 5 % either way.
+
+| Point | Metric, kg/km | Minimum objective, kg/km | Above the objective | Efficiency times lift-to-drag: has, needs |
+|---|---|---|---|---|
+| `P1`, `P2`, `P3` | 0.73 | 0.60 | 23 % | 4.02, 4.92 |
+| `P4` | 0.84 | 0.60 | 39 % | 3.59, 4.98 |
+
+- **At nominal values no point meets it.** The propeller points are also 9 % above the new-type limit as it stands, 0.67 kg/km.
+- **It is within the favourable values of the mission screening**, which give a product of 5.89 against the 4.92 needed. The objective asks about a quarter more of the product of turbogenerator efficiency, chain efficiency, propulsor efficiency and lift-to-drag ratio than the nominal values hold.
+- **So it is an objective and not a test of today.** A mandatory criterion rejects an option that fails it. Applied now to nominal values it would reject every option. The reviewer proposes that it applies at the release of the preliminary-design baseline, as the maturity threshold does, and that the gap is recorded as a target meanwhile. That moment is for the authority to confirm.
+- **It does not separate the propeller points.** The screening gives them one metric. It puts the jet point further from the objective.
 
 ### Traded, in order
 
@@ -132,7 +147,7 @@ The weights of issue 1 gave the same order: 0.96, 0.93 and 0.77 for `P2`, `P3` a
 
 The [research record](KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md) of the two KNUs below changes nothing in the set and says where it stands.
 
-- **On the measure.** A published measure of the same kind as `T2` exists: the carbon dioxide metric of ICAO, fuel for each kilometre in cruise against the size of the cabin, with a limit that tightens for new types from the end of 2031. The EU taxonomy gives a bar for an aircraft of this mass, 11 % below that limit. The programme cannot compute the metric of the eWTW before a cabin area and a drag polar are on record.
+- **On the measure.** A published measure of the same kind as `T2` exists: the carbon dioxide metric of ICAO, fuel for each kilometre in cruise against the size of the cabin, with a limit that tightens for new types from the end of 2031. The EU taxonomy gives a bar for an aircraft of this mass, 11 % below that limit, which the authority then took as the minimum objective (`M5`). The metric of the eWTW is of first order until a cabin area and a drag polar are on record.
 - **On the effects other than carbon dioxide.** A lower cruise reduces the forcing of nitrogen oxides and the coverage of contrails, in two assessments of the world fleet. They point the same way as fuel and put the jet point last. No figure sets them beside the fuel of a mission, so they are not scored.
 - **On the floor.** Both 275 kt and 360 kt are in service, the slower type in the larger fleet, on stages shorter than those of ruling R2. Nothing anchors the floor at 360 kt and nothing refutes it. `M4` is a requirement of the programme: the missions of ruling R2 are flown by jets today, and the authority does not want the alternative to be slower than the fastest propeller aircraft in service.
 - **On the margin.** The figures of the two makers for carbon dioxide by seat-kilometre are 4 % apart, inside the margin of 5 %. The north star does not separate 275 kt from 360 kt; without `M4`, installed power chooses the slower.

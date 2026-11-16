@@ -69,7 +69,14 @@ knot:
   - id: M4
     class: mandatory
     text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service of rule 19 of CM-004'
-    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text; the research of 2026-11-16 found no evidence for or against a floor at this speed'
+    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text; the research of 2026-11-16 found no evidence for or against a floor at this speed, and the authority then kept it, stated in knots'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M5
+    class: mandatory
+    text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is not above the most stringent limit in law at its take-off mass. On 2026-11-16 that is 11 % below the new-type limit, the margin of the EU taxonomy for 5.7 to 60 t. It is the minimum objective of the aircraft, to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target'
+    source: 'Decision of the authority of 2026-11-16: the most stringent of the carbon dioxide requirements in law is the minimum objective. Research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application is proposed by the reviewer'
     weight: null
     threshold: null
     state: PROPOSED
@@ -259,6 +266,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
   - knu_id: KNU-EWTW-CRZ-001-05
     title: Floor of service
     knu_class: ANALYSIS_PACKAGE

@@ -115,3 +115,12 @@ The rest is work of the programme and decisions of the authority:
 - whether the margin of statement 3 becomes a threshold of the north star;
 - whether the cruise altitude enters the criteria as an indicator of the effects other than carbon dioxide;
 - the floor `M4`: to keep it at 360 kt as a requirement of the programme, to move it, or to state it as a time on a mission of ruling R2.
+
+## Decisions that followed
+
+On 2026-11-16, after this record, the authority decided two of these points.
+
+- **The floor stays, stated in knots.** `M4` keeps 360 kt.
+- **The most stringent of the carbon dioxide requirements in law is the minimum objective of the aircraft.** Of the limits of statements 1 to 3 that is the margin of the EU taxonomy, 11 % below the new-type limit. It is criterion `M5` of the KNOT, proposed like the others.
+
+The [screening of the cruise points](CRP-EWTW-CRZ-001/README.md), in its third issue, computes the metric at first order with an assumed cabin area. At nominal values no point meets the objective: the propeller points stand 23 % above it and the jet point 39 %.

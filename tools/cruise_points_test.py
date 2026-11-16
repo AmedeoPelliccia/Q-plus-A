@@ -1,4 +1,4 @@
-# Generated 2026-11-15 - cruise_points_test.py (0.2.0)
+# Generated 2026-11-16 - cruise_points_test.py (0.3.0)
 """Tests of tools/cruise_points.py on the cruise-point screening of the eWTW. Run from the repository root:
 
     python3 tools/cruise_points_test.py
@@ -59,8 +59,8 @@ class CruisePoints(unittest.TestCase):
     def test_committed_analysis_passes_and_its_readme_is_current(self):
         bad, lines = cp.run(CRP, REG, "check")
         self.assertEqual(bad, [])
-        self.assertEqual(lines[0], "CRP-EWTW-CRZ-001 0.2.0 for KNOT-EWTW-CRZ-001: 4 points on 3 missions of MSN-EWTW-NRG-001 0.3.0; "
-                                   "20 figures, 5 of them assumptions; rule failures: none")
+        self.assertEqual(lines[0], "CRP-EWTW-CRZ-001 0.3.0 for KNOT-EWTW-CRZ-001: 4 points on 3 missions of MSN-EWTW-NRG-001 0.3.0; "
+                                   "29 figures, 6 of them assumptions; rule failures: none")
 
     def test_standard_atmosphere_matches_its_table(self):
         for feet, kelvin, hpa in ((0, 288.15, 1013.25), (8000, 272.30, 752.6), (25000, 238.62, 376.0), (35000, 218.81, 238.4), (41000, 216.65, 178.7)):
@@ -145,6 +145,80 @@ class CruisePoints(unittest.TestCase):
         self.fails("gas_turbine: the rule is `corrected-flow`, an assumption with a note")
         self.edit(lambda a: a.pop("gas_turbine"))
         self.fails("missing section gas_turbine")
+
+    # the carbon dioxide metric against the minimum objective
+    def test_carbon_dioxide_metric_by_hand(self):
+        rows, _ = self.rows()
+        c = rows["P2"]["co2"]
+        mtom = rows["P2"]["flights"]["L"]["mass"]                                                             # 44.1 t
+        self.assertAlmostEqual(mtom, 44100, delta=100)
+        high, low = 0.92 * mtom, 0.45 * mtom + 0.63 * mtom ** 0.924
+        self.assertAlmostEqual(low, 32170, delta=60)                                                          # 19,845 + 12,320
+        per_kg_km = 1000 * 9.80665 / (0.35 * 0.90 * 0.85 * 15 * 43.0e6)                                       # 5.68e-5 kg of fuel for each kg and km
+        per_km = per_kg_km * (high + (high + low) / 2 + low) / 3                                              # 2.06 kg/km
+        self.assertAlmostEqual(c["per_km"], per_km, delta=1e-4)
+        self.assertAlmostEqual(c["per_km"], 2.06, delta=0.01)
+        for key, area, metric in (("low", 60, 0.77), ("nominal", 75, 0.73), ("high", 95, 0.69)):
+            self.assertAlmostEqual(c["metric"][key], per_km / area ** 0.24, delta=1e-4)
+            self.assertAlmostEqual(c["metric"][key], metric, delta=0.006)
+        x = math.log10(mtom)
+        limit = 10 ** (-2.73780 + 0.681310 * x - 0.0277861 * x * x)                                           # 0.67 kg/km
+        self.assertAlmostEqual(c["limit"], limit, delta=1e-6)
+        self.assertAlmostEqual(c["limit"], 0.672, delta=0.002)
+        self.assertAlmostEqual(c["objective"], 0.89 * limit, delta=1e-6)                                      # the taxonomy: 11 % below
+        self.assertAlmostEqual(c["metric"]["nominal"] / c["objective"], 1.23, delta=0.01)
+        self.assertAlmostEqual(c["product"], 0.35 * 0.90 * 0.85 * 15, places=6)                               # 4.02
+        self.assertAlmostEqual(c["needed"], c["product"] * c["metric"]["nominal"] / c["objective"], places=6)
+        self.assertAlmostEqual(c["needed"], 4.92, delta=0.02)
+
+    def test_jet_point_is_further_from_the_objective(self):
+        rows, _ = self.rows()
+        self.assertEqual(rows["P1"]["co2"]["metric"], rows["P2"]["co2"]["metric"], "one lift-to-drag ratio and one propulsor efficiency: equal metrics")
+        self.assertAlmostEqual(rows["P4"]["co2"]["product"], 0.35 * 0.90 * 0.76 * 15, places=6)
+        self.assertGreater(rows["P4"]["co2"]["metric"]["nominal"] / rows["P4"]["co2"]["objective"], 1.35)
+        _, lines = cp.run(self.crp, self.reg)
+        self.assertIn("Points that meet the minimum objective at the nominal cabin area: none. ", "\n".join(lines))
+        row = next(l for l in lines if l.startswith("| `P4` | 45.0 |"))
+        self.assertEqual([x.strip() for x in row.strip("|").split("|")][2:], ["2.36", "0.88, 0.84 and 0.79", "0.68", "0.60", "139%", "3.59, 4.98"])
+
+    def test_objective_is_the_most_stringent_limit(self):
+        self.edit(lambda a: a["co2_metric"]["margins"].pop())                                                # without the taxonomy the stricter standard leads
+        c = self.rows()[0]["P2"]["co2"]
+        self.assertAlmostEqual(c["objective"], 0.90 * c["limit"], delta=1e-9)
+        self.edit(lambda a: a["co2_metric"]["margins"].append({"key": "future", "name": "A limit not yet written", "below": 0.30, "basis": "source", "ref": "Test"}))
+        rows, _ = self.rows()
+        c = rows["P2"]["co2"]
+        self.assertAlmostEqual(c["objective"], 0.70 * c["limit"], delta=1e-9)
+        self.assertIn("| A limit not yet written — the most stringent | 30% | Test |", cp.run(self.crp, self.reg)[1])
+
+    def test_better_efficiency_meets_the_objective(self):
+        path = next(self.tmp.rglob("missions.yaml"))
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        doc["analysis"]["parameters"]["lift_to_drag"]["nominal"] = 17.5                                       # 0.38 x 0.90 x 0.88 x 17.5 = 5.27, above the 4.9 needed
+        doc["analysis"]["parameters"]["turbogenerator_efficiency"]["nominal"] = 0.38
+        path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
+        self.edit(lambda a: [p["propulsor_efficiency"].update(value=0.88) for p in a["points"] if p["key"] != "P4"])
+        _, lines = cp.run(self.crp, self.reg)
+        text = "\n".join(lines)
+        self.assertIn("Points that meet the minimum objective at the nominal cabin area: `P1`, `P2`, `P3`. ", text)
+
+    def test_carbon_dioxide_inputs_are_declared(self):
+        self.edit(lambda a: a["co2_metric"]["cabin_area_m2"].update(basis="source"))
+        self.fails("co2_metric: cabin_area_m2 is an assumption with low, nominal and high in rising order and a note")
+        self.edit(lambda a: a["co2_metric"]["cabin_area_m2"].update(basis="assumption", low=80))
+        self.fails("co2_metric: cabin_area_m2 is an assumption with low, nominal and high in rising order and a note")
+        self.edit(lambda a: (a["co2_metric"]["cabin_area_m2"].update(low=60), a["co2_metric"]["margins"][0].pop("ref")))
+        self.fails("co2_metric: each margin has a key, a name and a share below the limit from 0 to under 1, read at a source")
+        self.edit(lambda a: (a["co2_metric"]["margins"][0].update(ref="Test"), a["co2_metric"]["objective"].update(basis="assumption")))
+        self.fails("co2_metric: the objective is a decision that names its act")
+        self.edit(lambda a: a.pop("co2_metric"))
+        self.fails("missing section co2_metric")
+
+    def test_limit_formula_has_a_range(self):
+        self.edit(lambda a: a["co2_metric"]["limit"].update(up_to_kg=40000))
+        rows, lines = self.rows()[0], cp.run(self.crp, self.reg)[1]
+        self.assertNotIn("co2", rows["P2"])
+        self.assertTrue(any(l.startswith("| `P2` | — |") and "beyond the formula" in l for l in lines))
 
     def test_cabin_compression_by_hand(self):
         rows, _ = self.rows()

@@ -1,13 +1,13 @@
-# Generated 2026-11-15 - cruise_points.py (0.2.0)
-"""Screening of candidate cruise points: speed, time, the missions of option B, cruise power, gas turbines, cabin and insulation.
+# Generated 2026-11-16 - cruise_points.py (0.3.0)
+"""Screening of candidate cruise points: speed, time, the missions of option B, cruise power, gas turbines, carbon dioxide metric, cabin and insulation.
 
     python3 tools/cruise_points.py <analysis folder> <KNOT register> [--check | --write]
 
 Reads cruise-points.yaml in the analysis folder and the mission screening it names, which stays as it is. For each
 point it gives the true airspeed in the standard atmosphere, the time at cruise speed on each mission, the mission
 of option B flown with the propulsor efficiency of the point, the power in cruise against the take-off power, that
-power referred to sea level by the air a gas turbine takes in, the pressure ratio to the cabin and the insulation
-margin left at that pressure. The README of the folder holds the
+power referred to sea level by the air a gas turbine takes in, the carbon dioxide metric of ICAO against the
+minimum objective, the pressure ratio to the cabin and the insulation margin left at that pressure. The README of the folder holds the
 output between two markers: --check fails when it differs, --write replaces it. Every figure printed follows from
 the figures of the two inputs, and the output says how many are assumptions. The tool states no conformity with
 any rule. It exits with status 1 on a failure and then prints only its first line.
@@ -23,7 +23,7 @@ import mission_closure as mc  # noqa: E402
 import relations_project as rp  # noqa: E402
 
 BASES = ("assumption", "source", "decision")
-SECTIONS = ("id", "version", "date", "knot", "serves", "missions", "option", "cabin_altitude_ft", "gas_turbine", "points", "insulation")
+SECTIONS = ("id", "version", "date", "knot", "serves", "missions", "option", "cabin_altitude_ft", "gas_turbine", "co2_metric", "points", "insulation")
 RULE = "corrected-flow"                                     # the one rule this tool knows for the air a gas turbine takes in
 ROLES = ("sensitivity", "scoring", "requirement")          # the missions of the aircraft; a reference is not flown here
 BEGIN, END = "<!-- cruise:begin -->", "<!-- cruise:end -->"
@@ -49,6 +49,19 @@ def air_flow(t, pressure, mach):
     return (pressure / p0) * ram ** (GAMMA / (GAMMA - 1)) / math.sqrt(t / t0 * ram)
 
 
+def reference_masses(shares, mtom):
+    """The three masses at which the carbon dioxide metric takes the specific air range, in kg."""
+    high = shares["high_share"] * mtom
+    low = shares["low_share"] * mtom + shares["low_factor"] * mtom ** shares["low_exponent"]
+    return high, (high + low) / 2, low
+
+
+def metric_limit(limit, mtom):
+    """Greatest carbon dioxide metric permitted for a new type at a maximum take-off mass, kg/km."""
+    x = math.log10(mtom)
+    return 10 ** (limit["a"] + limit["b"] * x + limit["c"] * x * x)
+
+
 def figure(x, low=None, high=None):
     """A figure is a number with its basis; one read at a source names it."""
     ok = (isinstance(x, dict) and mc.number(x.get("value")) and x.get("basis") in BASES and (x["basis"] != "source" or rp.has_text(x.get("ref"))))
@@ -56,7 +69,9 @@ def figure(x, low=None, high=None):
 
 
 def figures(a):
+    co2 = a["co2_metric"]
     out = [a["cabin_altitude_ft"], a["gas_turbine"]] + [{"basis": a["insulation"]["basis"]} for _ in a["insulation"]["table"]]
+    out += [co2[k] for k in ("cabin_area_m2", "cabin_exponent", "reference_masses", "limit", "objective")] + list(co2["margins"])
     for p in a["points"]:
         out += [p["speed"], p["altitude_ft"], p["propulsor_efficiency"]] + ([p["published"]] if p.get("published") else [])
     return out
@@ -74,6 +89,25 @@ def validate(a, knot, missions):
     bad += ["cabin_altitude_ft is a figure between 0 and 15,000 ft"] * (not figure(a["cabin_altitude_ft"], -1, 15000))
     gas = a["gas_turbine"]
     bad += [f"gas_turbine: the rule is `{RULE}`, an assumption with a note"] * (not (isinstance(gas, dict) and gas.get("rule") == RULE and gas.get("basis") == "assumption" and rp.has_text(gas.get("note"))))
+    co2 = a["co2_metric"]
+    sourced = lambda x: isinstance(x, dict) and x.get("basis") == "source" and rp.has_text(x.get("ref"))
+    if not (isinstance(co2, dict) and all(k in co2 for k in ("cabin_area_m2", "cabin_exponent", "reference_masses", "limit", "margins", "objective"))):
+        return bad + ["co2_metric: it has cabin_area_m2, cabin_exponent, reference_masses, limit, margins and objective"]
+    area = co2["cabin_area_m2"]
+    bad += ["co2_metric: cabin_area_m2 is an assumption with low, nominal and high in rising order and a note"] * (not (
+        isinstance(area, dict) and all(mc.number(area.get(k)) for k in ("low", "nominal", "high")) and 0 < area["low"] < area["nominal"] < area["high"]
+        and area.get("basis") == "assumption" and rp.has_text(area.get("note"))))
+    bad += ["co2_metric: cabin_exponent is a figure above 0 and below 1"] * (not figure(co2["cabin_exponent"], 0, 1))
+    bad += ["co2_metric: reference_masses gives high_share, low_share, low_factor and low_exponent read at a source"] * (not (
+        sourced(co2["reference_masses"]) and all(mc.number(co2["reference_masses"].get(k)) and co2["reference_masses"][k] > 0 for k in ("high_share", "low_share", "low_factor", "low_exponent"))))
+    bad += ["co2_metric: limit gives a, b, c and up_to_kg read at a source"] * (not (sourced(co2["limit"]) and all(mc.number(co2["limit"].get(k)) for k in ("a", "b", "c", "up_to_kg"))))
+    margins = co2["margins"]
+    bad += ["co2_metric: each margin has a key, a name and a share below the limit from 0 to under 1, read at a source"] * (not (
+        isinstance(margins, list) and margins and all(sourced(m) and rp.has_text(m.get("key")) and rp.has_text(m.get("name")) and mc.number(m.get("below")) and 0 <= m["below"] < 1 for m in margins)
+        and len({m["key"] for m in margins}) == len(margins)))
+    bad += ["co2_metric: the objective is a decision that names its act"] * (not (isinstance(co2["objective"], dict) and co2["objective"].get("basis") == "decision" and rp.has_text(co2["objective"].get("ref"))))
+    if bad:
+        return bad
     options = {o["id"] for o in knot["options"]}
     points = a["points"]
     if not (isinstance(points, list) and points and all(isinstance(p, dict) and rp.has_text(p.get("key")) and KEY.fullmatch(p["key"]) and rp.has_text(p.get("name")) for p in points)):
@@ -136,6 +170,14 @@ def compute(a, missions):
                "cruise": shaft / base.p["electric_chain_efficiency"], "takeoff": base.p["takeoff_kw_per_kg"], "air": air_flow(t, pressure, v / sound),
                "ratio": max(cabin / pressure, 1.0), "work": CP * t * (max(cabin / pressure, 1.0) ** ((GAMMA - 1) / GAMMA) - 1) / 1000,
                "inception": inception(a["insulation"]["table"], pressure / 100)}
+        co2, mtom = a["co2_metric"], flights[requirement["key"]]["mass"]                      # the take-off mass of the requirement mission stands for the maximum
+        if mtom is not None and mtom <= co2["limit"]["up_to_kg"]:
+            per_km = model.per_km_fuel * sum(reference_masses(co2["reference_masses"], mtom)) / 3      # kg of fuel for each km: the average of 1/SAR
+            limit = metric_limit(co2["limit"], mtom)
+            objective = limit * (1 - max(m["below"] for m in co2["margins"]))
+            metric = {k: per_km / co2["cabin_area_m2"][k] ** co2["cabin_exponent"]["value"] for k in ("low", "nominal", "high")}
+            row["co2"] = {"mtom": mtom, "per_km": per_km, "metric": metric, "limit": limit, "objective": objective,
+                          "product": model.product_b, "needed": model.product_b * metric["nominal"] / objective}
         pub = p.get("published")
         if pub:
             per_kg = pub["cruise_shp"] * SHP / pub["takeoff_kg"]
@@ -196,6 +238,30 @@ def render(a, missions, rows):
                       f"If they give it at this point, where the air flow is {r['air']:.0%} of that at sea level, the rule above makes them machines of {q['sea_level_shp']:,.0f} shp at sea level and at rest, "
                       f"{q['sea_level_shp'] / pub['takeoff_shp']:.0%} of the take-off power the sheet gives. The sheet does not say at what altitude the rating is given, "
                       "nor how much of the difference is a take-off rating held below what the engines give at sea level."]
+    co2 = a["co2_metric"]
+    area, most = co2["cabin_area_m2"], max(co2["margins"], key=lambda m: m["below"])
+    favourable = math.prod(missions["parameters"][k]["favourable"] for k in ("turbogenerator_efficiency", "electric_chain_efficiency", "propulsor_efficiency", "lift_to_drag"))
+    lines += ["", "### Carbon dioxide metric against the minimum objective", "",
+              "The metric of ICAO Annex 16, Volume III, is the fuel for each kilometre in cruise, averaged over three reference masses, divided by the area of the cabin "
+              f"to the power {co2['cabin_exponent']['value']:g}. The screening takes the take-off mass of the requirement mission as the maximum take-off mass, and the fuel of its own cruise, "
+              "which is of first order and has one lift-to-drag ratio for every point. No cabin is on record, so the metric is given for three cabin areas; they are an assumption. "
+              "The minimum objective is the most stringent of the limits below, by decision of the authority.", "",
+              "| Limit | Below the new-type limit | Source |", "|---|---|---|"]
+    lines += [f"| {m['name']}" + (" — the most stringent" if m is most else "") + f" | {m['below']:.0%} | {m['ref']} |" for m in co2["margins"]]
+    lines += ["", f"| Point | Take-off mass, t | Fuel in cruise, kg/km | Metric at {area['low']:g}, {area['nominal']:g} and {area['high']:g} m², kg/km | New-type limit, kg/km | Minimum objective, kg/km | "
+              f"Metric against the objective, at {area['nominal']:g} m² | Efficiency times lift-to-drag: has, needs |", "|---|---|---|---|---|---|---|---|"]
+    met = []
+    for r in rows:
+        c = r.get("co2")
+        if c is None:
+            lines.append(f"| `{r['point']['key']}` | — | — | — | — | — | the requirement mission does not close, or the mass is beyond the formula | — |")
+            continue
+        met += [r["point"]["key"]] * (c["metric"]["nominal"] <= c["objective"])
+        lines.append(f"| `{r['point']['key']}` | {c['mtom'] / 1000:.1f} | {c['per_km']:.2f} | {c['metric']['low']:.2f}, {c['metric']['nominal']:.2f} and {c['metric']['high']:.2f} | {c['limit']:.2f} | {c['objective']:.2f} | "
+                     f"{c['metric']['nominal'] / c['objective']:.0%} | {c['product']:.2f}, {c['needed']:.2f} |")
+    lines += ["", "Points that meet the minimum objective at the nominal cabin area: " + (", ".join(f"`{k}`" for k in met) or "none") + ". "
+              "The last column is the product of the efficiencies from the fuel to the propulsor and of the lift-to-drag ratio: what the screening has at its nominal values with the propulsor of the point, "
+              f"and what the objective needs. The mission screening has {favourable:.2f} at its favourable values."]
     lines += ["", "### Cabin and insulation", "",
               f"Pressure ratio from the ambient pressure to a cabin at {a['cabin_altitude_ft']['value']:,.0f} ft, the ideal work to compress a kilogram of outside air through it, "
               "and the inception voltage of partial discharge left at the ambient pressure, as a share of its value at sea level on the specimens measured.", "",
