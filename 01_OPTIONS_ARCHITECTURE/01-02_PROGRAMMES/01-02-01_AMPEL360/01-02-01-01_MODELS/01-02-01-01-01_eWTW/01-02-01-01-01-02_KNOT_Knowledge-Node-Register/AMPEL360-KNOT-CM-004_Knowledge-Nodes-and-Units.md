@@ -1,4 +1,4 @@
-# AMPEL360-KNOT-CM-004 — Knowledge Nodes and Knowledge Units
+# AMPEL360-KNOT-CM-004 — Knowledge Threads and Knowledge Units
 
 **Issue 1** · Owner: `STK_CM` (proposed) · Authority: AM.PEL · Status: **PROPOSED**
 **Approval act:** not yet recorded. On approval, this line names the act: commit or merge, date, authority.
@@ -11,7 +11,7 @@ This convention governs how the eWTW model records what it must decide or satisf
 
 ## 2. Definitions
 
-**KNOT** — a governing traceability node representing an obligation, a control intent, a decision anchor or an authoritative lifecycle constraint. A KNOT states the problem; it does not solve it. The expansion of the acronym is not fixed; *Knowledge Node Ontological Trace* (or *Track*) is under consideration.
+**KNOT** — a governing traceability node representing an obligation, a control intent, a decision anchor or an authoritative lifecycle constraint. A KNOT states the problem; it does not solve it. The acronym stands for **KNOwledge Thread**, as the authority fixed it on 2026-11-16; the expansions considered before are withdrawn. Folder and file names that read *Knowledge Node* predate it.
 
 **KNU** — Knowledge Unit: a traceable implementation unit linked to a KNOT. It is the action that produces knowledge toward the KNOT's resolution — research, analysis, test or any other activity — together with what that action delivers. Its class names the delivery: a work item, a controlled artefact, a requirement set, an analysis package, a verification object, an evidence record, or another executable lifecycle unit.
 
@@ -123,6 +123,7 @@ Configuration decisions are `LC-B` deliverables (registry §3): a KNOT is worked
 | 1, revision of 2026-11-14 | The maturity record: the level a decision requires of each critical element on the Q+ATLANTIDE-TRL scale, the evidence on record and the level it supports; a maturity record that is only proposed does not open the gate of rule 5. The reopen condition names what it reopens and the ruling that set it |
 | 1, second revision of 2026-11-14 | Rule 6: a ruling may defer the choice that remains to another KNOT that holds the same choice. The KNOT is `DEFERRED`, names the other in `closed_with`, and is ruled with it. Found when rulings R1 and R2 of `KNOT-EWTW-NRG-001` left three KNOTs with one open choice. `tools/knot_check.py` 0.1.5 checks it, and prints the obligations with no chapter |
 | 1, revision of 2026-11-16 | Rule 19, the north star: by decision of the authority the more ecological option prevails over time and cost among the options that meet what is never traded. The criterion record gains `precedence` and `north_star`, and the `threshold` of an ordered criterion is its margin. A floor of service is a mandatory criterion. `tools/knot_check.py` 0.1.6 checks the order, and that no decision anchor is scored without a north-star criterion |
+| 1, second revision of 2026-11-16 | The acronym is fixed by the authority: KNOT stands for Knowledge Thread. No rule changes. Folder and file names keep the earlier words |
 
 [AEROSPACEMODEL]: https://github.com/AmedeoPelliccia/AEROSPACEMODEL
 [CM-001]: ../01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

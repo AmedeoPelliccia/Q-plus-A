@@ -7,7 +7,7 @@ knot:
   raised_at: null
   question: 'Which wetted area, which parasite drag and which lift-to-drag ratio does the eWTW have at each candidate cruise point?'
   context: >-
-    The north star of the programme is measured in fuel, and the minimum objective of the aircraft is a carbon dioxide metric 11 % below the new-type limit of ICAO. Both depend on the drag of the aircraft. The screenings of the eWTW use one lift-to-drag ratio, 15, set so that the cruise costs what a fit gives for the reference type, a regional jet. With it the fuel of the three propeller cruise points is equal, so the north star separates only the jet point; and no point meets the minimum objective: the product of the efficiencies and of the lift-to-drag ratio is 4.02 where 4.92 is needed. A lift-to-drag ratio of about 18.4 would close that gap by itself. The architecture of the eWTW lies between a conventional tube-and-wing and a blended wing body, and its dimensions are not on record. A gain in lift-to-drag ratio from that architecture, or from electric propulsors on the wing, is to appear in a polar built from dimensions on record, with its assumptions. It is not to be assumed. This KNOT is an obligation: it owes the analyses a polar. It chooses no architecture.
+    The north star of the programme is measured in fuel, and the minimum objective of the aircraft is a carbon dioxide metric 11 % below the new-type limit of ICAO. Both depend on the drag of the aircraft. The screenings of the eWTW use one lift-to-drag ratio, 15, set so that the cruise costs what a fit gives for the reference type, a regional jet. With it the fuel of the three propeller cruise points is equal, so the north star separates only the jet point; and no point meets the minimum objective: the product of the efficiencies and of the lift-to-drag ratio is 4.02 where 4.92 is needed. A lift-to-drag ratio of about 18.4 would close that gap by itself. The eWTW has a wide tube and a wing, and its dimensions are not on record. What the wide tube costs or gains in lift-to-drag ratio, and what electric propulsors on the wing change, is to appear in a polar built from dimensions on record, with its assumptions. It is not to be assumed. This KNOT is an obligation: it owes the analyses a polar. It chooses no architecture.
   effectivity:
   - model: eWTW
     variants: []
@@ -77,7 +77,7 @@ knot:
   - knu_id: KNU-EWTW-AER-001-02
     title: 'Polar of the eWTW in the screening'
     knu_class: ANALYSIS_PACKAGE
-    description: 'A drag polar built from the dimensions of KNOT-EWTW-FUS-001 and KNOT-EWTW-WNG-001: wetted area by component, parasite drag, induced drag, and the lift-to-drag ratio at each cruise point and mass. It replaces the one ratio of the mission screening and is checked against a published type'
+    description: 'A drag polar built from the dimensions of KNOT-EWTW-FUS-001 and KNOT-EWTW-WNG-001, for each combination of their options: wetted area by component, parasite drag, induced drag, and the lift-to-drag ratio at each cruise point and mass. It replaces the one ratio of the mission screening and is checked against a published type'
     research_brief: null
     serves:
     - KNOT-EWTW-CRZ-001

@@ -258,6 +258,19 @@ rows:
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
 
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
+    status: on-disk
+    note: >
+      Decision record of ruling R1 of the cruise point, of 2026-11-16, by the architecture
+      authority: the three maturity records approved at level 6 for the preliminary-design
+      baseline, and the minimum objective on carbon dioxide applied at that release. No
+      criterion approved and no option scored. Ratified by the merge of the pull request
+      that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
   - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md

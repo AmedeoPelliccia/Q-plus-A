@@ -35,7 +35,7 @@ Those on disk are held in the eWTW model, where they were first applied.
 | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 | Assembly station, identity boundary, part numbers | On `main`; the header reads *PROPOSED* and names no approval act |
 | [`AMPEL360-SBS-ID-CM-002`][CM-002] Issue 1 | Identification across the breakdown structures | On `main`; the header reads *PROPOSED* and names no approval act |
 | `AMPEL360-SBS-LC-CM-003` | Artefact lifecycle in the SBS; integrated baselines | Not on `main` |
-| [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 | Knowledge nodes and knowledge units | *PROPOSED* |
+| [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 | Knowledge threads and knowledge units | *PROPOSED* |
 | [`AMPEL360-REL-CM-005`][CM-005] Issue 1 | Architecture relations and their projection onto a KNOT register | *PROPOSED* |
 
 ## Revision history

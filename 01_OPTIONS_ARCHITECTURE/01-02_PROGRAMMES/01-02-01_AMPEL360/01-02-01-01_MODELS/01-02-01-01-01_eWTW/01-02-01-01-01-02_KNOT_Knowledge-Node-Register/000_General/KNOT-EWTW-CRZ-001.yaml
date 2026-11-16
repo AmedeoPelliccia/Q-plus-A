@@ -77,7 +77,7 @@ knot:
   - id: M5
     class: mandatory
     text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is not above the most stringent limit in law at its take-off mass. On 2026-11-16 that is 11 % below the new-type limit, the margin of the EU taxonomy for 5.7 to 60 t. It is the minimum objective of the aircraft, to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target'
-    source: 'Decision of the authority of 2026-11-16: the most stringent of the carbon dioxide requirements in law is the minimum objective. Research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application is proposed by the reviewer'
+    source: 'Decision of the authority of 2026-11-16: the most stringent of the carbon dioxide requirements in law is the minimum objective. Research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application was proposed by the reviewer and fixed by ruling R1 of 2026-11-16'
     weight: null
     threshold: null
     state: PROPOSED
@@ -131,8 +131,8 @@ knot:
     required: 6
     evidence: 'A generator of 1 MW tested by itself, a turbogenerator of 600 kW on a bench since July 2026, and a generator meant for 2.5 MW that passed 1 MW with its turbine on a bench; none has flown (research record of the generation architecture, 2026-11-15, statements 1, 4 and 5). These are statements of the makers, read at the source, not test results. The cruise point sets how many megawatts are installed, not which element is needed'
     level: null
-    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought'
-    state: PROPOSED
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
+    state: APPROVED
   - id: Q2
     element: 'Propeller driven by an electric motor of megawatt class, at the cruise Mach of the option'
     taxonomy: '077'
@@ -141,8 +141,8 @@ knot:
     required: 6
     evidence: 'Six electric propellers of 50 kW each flew about 100 hours on a demonstrator (research record of the propulsion chain, 2026-11-14, statement 1). The propeller efficiency of 0.85 at Mach 0.62 is that of a design study (statement 8). No efficiency of a motor with its inverter has been measured in flight at a megawatt (finding 18)'
     level: null
-    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought'
-    state: PROPOSED
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
+    state: APPROVED
   - id: Q3
     element: 'Ducted fan driven by an electric motor of megawatt class, at the cruise Mach of the option'
     taxonomy: '077'
@@ -151,8 +151,8 @@ knot:
     required: 6
     evidence: 'The one motor of 2 MW meant to replace a turbofan on an airliner of about 100 seats never flew (research record of the propulsion chain, 2026-11-14, statement 5). An all-electric aircraft of 19 seats with ducted propulsors made a first flight on 2026-11-14, at about 300 km/h and with no power given for a propulsor (statement 4). No comparison in flight of propellers and ducted fans exists at this class (finding 17)'
     level: null
-    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought'
-    state: PROPOSED
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
+    state: APPROVED
   assumptions:
   - text: 'the mission screening is fitted to sectors that its reference type flew at long-range cruise, and it carries no cruise speed of the eWTW'
     ref:
@@ -169,7 +169,30 @@ knot:
   couplings:
   - knot: KNOT-EWTW-WNG-001
     note: 'the wing loading follows the cruise point, and the lift-to-drag ratio at a cruise point follows the wing; the two are sized together'
-  rulings: []
+  rulings:
+  - id: R1
+    date: '2026-11-16'
+    authority: AM.PEL — architecture authority
+    statement: 'Two decisions. One: the maturity that the decision of the cruise point requires is approved — level 6 of the Q+ATLANTIDE-TRL scale at the release of the preliminary-design baseline, for the turbogenerator of megawatt class, for the propeller driven by an electric motor of megawatt class and for the ducted fan driven by one. It is the threshold of ruling R2 of KNOT-EWTW-NRG-001, and no waiver is sought. Two: the minimum objective on carbon dioxide, criterion M5, is to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target. The options stay open, and the criteria stay proposed'
+    effect: maturity records Q1 to Q3 approved; moment of application of criterion M5 fixed; no option scored or excluded
+    rationale: 'One element has one threshold in every decision that depends on it: the turbogenerator is record Q4 of KNOT-EWTW-NRG-001 and record Q1 here, and a waiver is not needed and would weaken that coherence. The authority approved the records unless the reviewer saw problems; the reviewer found none against the thresholds, and recorded that no element has a level on the evidence on record. Applied today to nominal values, criterion M5 would reject every option: the screening puts the metric 23 % above the objective at the propeller points and 39 % above it at the jet point. The authority keeps the options open, so the objective is a target of the design until the preliminary-design baseline, as the maturity threshold is'
+    rationale_recorded: '2026-11-16'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects: []
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md — PR #74, ratified by its merge'
   reopen_if: []
   knus:
   - knu_id: KNU-EWTW-CRZ-001-01
@@ -243,6 +266,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
   - knu_id: KNU-EWTW-CRZ-001-04
     title: Measure of environmental effect
     knu_class: ANALYSIS_PACKAGE

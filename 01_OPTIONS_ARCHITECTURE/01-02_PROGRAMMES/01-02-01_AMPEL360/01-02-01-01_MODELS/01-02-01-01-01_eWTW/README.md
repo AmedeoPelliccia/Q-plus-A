@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.22 |
+| Version | 0.3.23 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -132,7 +132,7 @@ One distinction is deliberate: the TPuBS node `021-200-010` (*Distribution Ducti
 
 ## 5. Open KNOTs
 
-Uncertainty is managed with the KNOT/KNU method, as in the sibling model [MRTT-Q300][MRTT]. Identifiers and owners are proposed; they take effect when recorded. Each KNOT has a record in the [KNOT register][KNOT-REG], under [`AMPEL360-KNOT-CM-004`][CM-004] (proposed): its options, criteria, rulings with their rationale, and the Knowledge Units (KNUs) — research, analyses and other work — that resolve it. The tables below are views of those records. The [architecture relations][REL] node projects taxonomy and programme relations onto these KNOTs: the candidates for a decision, and a check of what it waits for.
+Uncertainty is managed with the KNOT/KNU method, knowledge threads and knowledge units, as in the sibling model [MRTT-Q300][MRTT]. Identifiers and owners are proposed; they take effect when recorded. Each KNOT has a record in the [KNOT register][KNOT-REG], under [`AMPEL360-KNOT-CM-004`][CM-004] (proposed): its options, criteria, rulings with their rationale, and the Knowledge Units (KNUs) — research, analyses and other work — that resolve it. The tables below are views of those records. The [architecture relations][REL] node projects taxonomy and programme relations onto these KNOTs: the candidates for a decision, and a check of what it waits for.
 
 ### Configuration decisions
 
@@ -266,6 +266,26 @@ Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Status `PRO
 
 Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criterion of A2, but its findings feed `R-533001-05` and a ReqBS candidate, so it belongs before step 2.
 
+### Path to the concept baseline of the aircraft
+
+Proposed on 2026-11-16, at the request of the authority, as the shortest way to the choice of a reference configuration. It is a plan, not a ruling.
+
+The release of a concept baseline asks for a first concept with its first geometry and early proportions, an initial requirements baseline, an initial upgrade watch list, and the readiness level and the assumptions of each immature element ([lifecycle model][LCM], §3 and §13.2). The major configuration decisions are due at the preliminary-design baseline. The concept baseline needs a value for the three that give the aircraft its proportions — the cruise point, the fuselage section and the wing planform — by ruling where the screening separates the options, and as a recorded assumption where it does not.
+
+| Step | Who | What | Exit |
+|---|---|---|---|
+| 1 | Outside research, in parallel | The three briefs: `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01`, `KNU-EWTW-AER-001-01` | Three reports |
+| 2 | Reviewer | The reports arbitrated; the dimensions each option gives to the fuselage and to the wing (`KNU-EWTW-FUS-001-02`, `KNU-EWTW-WNG-001-02`) | Three research records; one record of dimensions (`KNU-EWTW-AER-001-03`) |
+| 3 | Reviewer | A polar of first order, checked against a published type, and the screening run once over every combination of section, planform and cruise point (`KNU-EWTW-AER-001-02`) | One table: fuel, carbon dioxide metric, installed power and time for each combination |
+| 4 | Authority | The criteria. Those of the cruise point approved; the purposes of the wide tube, comfort and the ground for tanks of liquid hydrogen, stated as mandatory criteria with a measure and a value; the limit on the span | Criteria `APPROVED` in the three KNOTs |
+| 5 | Authority | One act for the cruise point, the section and the planform, which are sized together: the mandatory criteria first, then the north star | A reference configuration. What the table does not separate by more than its margin stays open, with the reference value as an assumption |
+| 6 | Authority, with the reviewer | The baseline record of the aircraft scope: dimensions of record, initial requirements, upgrade watch list, the readiness level and the assumptions of each critical element, and the KNOTs left open with the assumption each one carries | `REV-A_RELEASED` for the aircraft scope |
+
+Steps 2 and 3 are one piece of work, and steps 4 and 5 can be one act.
+
+- **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
+- **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state.
+
 ---
 
 ## 7. Exemplars
@@ -380,6 +400,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.20 | 2026-11-16 | Research on the north star of the cruise point (KNOT register 0.11.10): a published metric of fuel in cruise exists and tightens for new types from the end of 2031; the effects other than carbon dioxide point the same way as fuel and cannot be scored; nothing anchors or refutes the floor of 360 kt, which stays a requirement of the programme |
 | 0.3.21 | 2026-11-16 | Minimum objective, by decision of the authority: the most stringent of the carbon dioxide requirements in law, today 11 % below the new-type limit of ICAO (KNOT register 0.11.11). At first order and at nominal values the eWTW stands 23 % above it at the propeller points and 39 % at the jet point; the favourable values of the mission screening reach it |
 | 0.3.22 | 2026-11-16 | Dimensions of the airframe: three KNOTs opened for the fuselage section and cabin, the wing planform and the drag polar (KNOT register 0.11.13). The architecture lies between a conventional tube-and-wing and a blended wing body, by statement of the authority, and its geometry is not on record; a gain from it has to appear in the polar. The identity table of this README still classes the model as advanced tube-and-wing |
+| 0.3.23 | 2026-11-16 | Ruling R1 of the cruise point: its maturity records approved, and the minimum objective applied at the release of the preliminary-design baseline (KNOT register 0.11.14). The authority states that the wide tube is for more comfort and as the ground for an architecture better suited to tanks of liquid hydrogen, on an aircraft far from a blended wing body: the class of the identity table stands. §6 proposes a path to the concept baseline of the aircraft |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
