@@ -97,7 +97,7 @@ These are consequences drawn by the reviewer. They are not quotations.
 | That the speed advantage of the Dash 8-400 shows most on sectors longer than about 90 minutes | No source is named |
 | The carbon dioxide standard as it stands, with no word of its tightening | The stricter standard was adopted in March 2026 and applies to new types from the end of 2031 (statement 2). A type applied for after that date meets it |
 | Minimum operational shares of sustainable fuel from 2030 as a criterion for the manufacture of aircraft | Section 3.21 as read asks for certification on a 100 % blend from 2028 to 2032. Shares in operation belong to other sections, not read |
-| That the certified values of the metric are published by EASA | Not read. A database of ICAO, hosted by the FAA, publishes values that makers submit voluntarily (statement 1) |
+| That the certified values of the metric are published by EASA | Not read. A database of ICAO, hosted by the FAA, publishes values that makers submit voluntarily (statement 1). Note of 2026-11-17: read since. EASA publishes the values it certified ([record of the drag data](KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md), statement 3) |
 
 ## Open
 

@@ -45,6 +45,14 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'the reference cabin of the class is four abreast, 2.74 m wide and 2.00 m high with an aisle of 0.49 m, that of the Embraer 190; no value is set for the wide tube'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+  - text: 'at 98 seats a blended body burns 4 % more fuel than a tube-and-wing with the same technologies, in the one sized comparison read, which is calculated; a gain in lift-to-drag ratio is not a gain in fuel unless the empty mass is carried with it'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
   - text: 'the configuration is named Wide Tube and Wing, and no record defines the wide tube'
     ref:
       view: PBS
@@ -93,11 +101,13 @@ knot:
     exit: 'Dimensions of the class and of the published concepts, each with its source and with whether it was measured or calculated'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-17'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
   - knu_id: KNU-EWTW-FUS-001-02
     title: 'Cabin and fuselage dimensions by option'
     knu_class: ANALYSIS_PACKAGE

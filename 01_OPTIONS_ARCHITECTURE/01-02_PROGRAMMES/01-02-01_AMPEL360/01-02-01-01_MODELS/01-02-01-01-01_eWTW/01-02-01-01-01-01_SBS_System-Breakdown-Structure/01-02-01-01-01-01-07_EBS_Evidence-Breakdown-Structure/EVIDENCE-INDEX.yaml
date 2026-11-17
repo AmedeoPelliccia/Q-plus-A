@@ -272,6 +272,43 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-FUS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+    status: on-disk
+    note: >
+      Research record: sections and cabins of the class, and a blended body at 100 seats, as
+      accepted on review from a report of 2026-11-17 relayed by the author. Six of its
+      statements were read by the reviewer at the source, four are as reported, three report
+      that a search found nothing. It reads a study of NASA that sizes a blended body and a
+      tube-and-wing of 98 seats.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/053_Fuselage/KNOT-EWTW-FUS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-WNG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-WNG-001_wings-and-span-limits_2026-11-17.md
+    status: on-disk
+    note: >
+      Research record: wings of the class, the limit on the span and wings of high aspect
+      ratio, as accepted on review from a report of 2026-11-17 relayed by the author. Seven
+      of its statements were read by the reviewer at the source, five are as reported, four
+      report that a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/057_Wings/KNOT-EWTW-WNG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
+    status: on-disk
+    note: >
+      Research record: published drag data and forecasts for the class, as accepted on
+      review from a report of 2026-11-17 relayed by the author. Three of its statements were
+      read by the reviewer at the source, four are as reported, four report that a search
+      found nothing. The database of EASA and the forecasts of ICAO were not opened.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk

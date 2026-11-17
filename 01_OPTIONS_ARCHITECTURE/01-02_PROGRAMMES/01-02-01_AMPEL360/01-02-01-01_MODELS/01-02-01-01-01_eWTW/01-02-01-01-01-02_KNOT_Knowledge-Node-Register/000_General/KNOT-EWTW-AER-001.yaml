@@ -35,6 +35,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'a published computation gives 19.8 at the start of cruise to an advanced tube-and-wing of 98 seats with laminar flow control; it is a forecast, and the screenings keep 15 until a polar of the eWTW exists'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
   - text: 'one lift-to-drag ratio of 15 serves every cruise point, set on the cruise fitted to the reference type'
     ref:
       view: EBS
@@ -69,15 +73,17 @@ knot:
     exit: 'Drag data and forecasts of the class, each with its source and with whether it was measured or calculated'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-17'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
   - knu_id: KNU-EWTW-AER-001-02
     title: 'Polar of the eWTW in the screening'
     knu_class: ANALYSIS_PACKAGE
-    description: 'A drag polar built from the dimensions of KNOT-EWTW-FUS-001 and KNOT-EWTW-WNG-001, for each combination of their options: wetted area by component, parasite drag, induced drag, and the lift-to-drag ratio at each cruise point and mass. It replaces the one ratio of the mission screening and is checked against a published type'
+    description: 'A drag polar built from the dimensions of KNOT-EWTW-FUS-001 and KNOT-EWTW-WNG-001, for each combination of their options: wetted area by component, parasite drag, induced drag, and the lift-to-drag ratio at each cruise point and mass. It replaces the one ratio of the mission screening. No manufacturer publishes a lift-to-drag ratio with its conditions, so the polar is checked through the fuel of a published mission. The screening that uses it carries the empty mass each option changes'
     research_brief: null
     serves:
     - KNOT-EWTW-CRZ-001

@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.14 · **Date:** 2026-11-16
+**Version:** 0.11.15 · **Date:** 2026-11-17
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs**, the knowledge threads — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -104,6 +104,14 @@ The open decisions depend on the altitude, the speed, the propulsors and the pla
 The polar and the wetted area are one KNOT, because the second is an input of the first. The wing and the cruise point are coupled and not ordered: each sets the other. `KNOT-EWTW-CRZ-001` now depends on the polar, and `KNOT-EWTW-FUL-001` on the wing and on the fuselage. Three KNUs carry research briefs: sections and cabins with the concepts that have a lifting fuselage, wings with span limits and propellers on the wing, and drag data with the forecasts of ICAO.
 
 On the same day the authority said what the wide tube is for: more comfort, and the ground for an architecture better suited to tanks of liquid hydrogen, on an aircraft that stays far from a blended wing body and carries no hydrogen in this model. Neither purpose has a measure or a value on record. Both ask for section, and the north star is fuel; so they are candidates for mandatory criteria of `KNOT-EWTW-FUS-001`, as the floor of 360 kt is for the cruise point, and not for traded ones. The three KNOTs and the cruise point are the decisions on the [path to the concept baseline][MODEL-PATH] proposed in the model README.
+
+**What the research of 2026-11-17 found.** Three reports were reviewed, one for each brief: [sections and cabins](000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md), [wings and span limits](000_General/evidence/KNOT-EWTW-WNG-001_wings-and-span-limits_2026-11-17.md) and [drag data and forecasts](000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md). The reports name few sources, so sixteen statements were read by the reviewer, thirteen are as reported and eleven say that a search found nothing.
+
+- At 98 seats a blended body burns 4 % more fuel than a tube-and-wing of the same technologies, in a study of NASA that sizes both. Its lift-to-drag ratio is higher and its empty mass higher still. A screening of sections has to carry mass with drag.
+- The class sits four abreast in a cabin of 2.74 m or less. The stands it uses stop short of a span of 36 m, and its wings span 27 to 29 m: the limit leaves room for an aspect ratio of 14 to 21 before folding tips or a brace are needed.
+- The same study computes a lift-to-drag ratio of 19.8 for an advanced tube-and-wing of 98 seats, with laminar flow control. The screening uses 15 and needs about 18.4 for the minimum objective. It is a forecast, not evidence.
+- No manufacturer publishes a lift-to-drag ratio with its conditions, so the polar is to be checked through the fuel of a published mission. EASA publishes the certified values of the carbon dioxide metric; the file was not opened.
+- Not answered: which section the tanks of liquid hydrogen ask for, which study supports a flattened section that carries lift, and what the forecasts of ICAO say.
 
 ### North star
 
@@ -207,7 +215,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
-| `KNU-EWTW-AER-001-01` | Published drag data and forecasts for the class | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` | NOT_STARTED |
+| `KNU-EWTW-AER-001-01` | Published drag data and forecasts for the class | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` | IN_PROGRESS |
 | `KNU-EWTW-AER-001-02` | Polar of the eWTW in the screening | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` · `PRP` | NOT_STARTED |
 | `KNU-EWTW-AER-001-03` | Dimensions and areas of record | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-01` | Source of record, script or FreeCAD document | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
@@ -254,7 +262,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-DAT-001-02` | Envelope of record for the aft fuselage | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-DAT-001-03` | Assembly check across stations | `VERIFICATION_OBJECT` | — | NOT_STARTED |
 | `KNU-EWTW-DFN-001-01` | Fairing ownership | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
-| `KNU-EWTW-FUS-001-01` | Sections and cabins: the class, and concepts with a lifting fuselage | `ANALYSIS_PACKAGE` | `AER` | NOT_STARTED |
+| `KNU-EWTW-FUS-001-01` | Sections and cabins: the class, and concepts with a lifting fuselage | `ANALYSIS_PACKAGE` | `AER` | IN_PROGRESS |
 | `KNU-EWTW-FUS-001-02` | Cabin and fuselage dimensions by option | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | NOT_STARTED |
 | `KNU-EWTW-FUS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 | `KNU-EWTW-KEL-001-01` | Taxonomy home of the keel beam | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
@@ -267,7 +275,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-ROD-001-03` | Interfaces of station 053-300-020 | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-ROD-001-04` | 3D model request EWTW-533002-000 | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-TSI-001-01` | Tail-strike provision and sensing | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
-| `KNU-EWTW-WNG-001-01` | Wings of the class, span limits and high aspect ratio | `ANALYSIS_PACKAGE` | `AER` · `PRP` | NOT_STARTED |
+| `KNU-EWTW-WNG-001-01` | Wings of the class, span limits and high aspect ratio | `ANALYSIS_PACKAGE` | `AER` · `PRP` | IN_PROGRESS |
 | `KNU-EWTW-WNG-001-02` | Wing area and span by cruise point | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | NOT_STARTED |
 | `KNU-EWTW-WNG-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 
@@ -370,6 +378,7 @@ The first line reads `21 KNOTs, 64 KNUs, 35 S-ATLAS chapters; rule failures: non
 | 0.11.12 | 2026-11-16 | Rationale of ruling R1 of `KNOT-EWTW-NRG-001`: its last sentence restated by the authority before the merge that ratifies it. The eWTW is not said to keep a tube-and-wing fuselage: its architecture lies between a conventional tube-and-wing and a blended wing body, and its geometry is not yet on record |
 | 0.11.13 | 2026-11-16 | Three KNOTs opened for the dimensions of the airframe, at the request of the authority: `KNOT-EWTW-FUS-001` (fuselage section, length and cabin, chapter `053`), `KNOT-EWTW-WNG-001` (wing planform, chapter `057`, a new folder) and `KNOT-EWTW-AER-001` (drag polar, an obligation under rule 19). `KNOT-EWTW-CRZ-001` depends on the polar; `KNOT-EWTW-FUL-001` on the wing and the fuselage; wing and cruise point are coupled. The research context names the architecture and the north star. 21 KNOTs, 64 KNUs |
 | 0.11.14 | 2026-11-16 | Ruling R1 of `KNOT-EWTW-CRZ-001`: its three maturity records approved, and criterion `M5` applied at the release of the preliminary-design baseline; the ten criteria stay proposed. The authority states what the wide tube is for, comfort and the ground for tanks of liquid hydrogen: recorded in `KNOT-EWTW-FUS-001`, in the research context and in the rationale of ruling R1 of `KNOT-EWTW-NRG-001`, restated before ratification. KNOT stands for Knowledge Thread (CM-004, second revision of 2026-11-16). A path to the concept baseline is proposed in the model README |
+| 0.11.15 | 2026-11-17 | Research on the dimensions of the airframe reviewed: three records, for `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01` and `KNU-EWTW-AER-001-01`, now in progress. Sixteen statements read by the reviewer, thirteen as reported, eleven findings of absence. The context of `KNOT-EWTW-WNG-001` gains the span limit read at a source, and the polar of `KNOT-EWTW-AER-001` is to be checked through fuel and carried with mass |
 
 [MODEL]: ../README.md
 [MODEL-PATH]: ../README.md#path-to-the-concept-baseline-of-the-aircraft

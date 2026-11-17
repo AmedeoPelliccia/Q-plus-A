@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.23 |
+| Version | 0.3.24 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -283,6 +283,8 @@ The release of a concept baseline asks for a first concept with its first geomet
 
 Steps 2 and 3 are one piece of work, and steps 4 and 5 can be one act.
 
+Step 1 was delivered on 2026-11-17, and its three records are in the [KNOT register][KNOT-REG]. They change step 3 in two ways. The screening carries the empty mass each option changes, because the one sized comparison read gives a blended body of 98 seats a better lift-to-drag ratio and a higher fuel burn. And the polar is checked through the fuel of a published mission, because no manufacturer publishes a lift-to-drag ratio with its conditions.
+
 - **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
 - **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state.
 
@@ -401,6 +403,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.21 | 2026-11-16 | Minimum objective, by decision of the authority: the most stringent of the carbon dioxide requirements in law, today 11 % below the new-type limit of ICAO (KNOT register 0.11.11). At first order and at nominal values the eWTW stands 23 % above it at the propeller points and 39 % at the jet point; the favourable values of the mission screening reach it |
 | 0.3.22 | 2026-11-16 | Dimensions of the airframe: three KNOTs opened for the fuselage section and cabin, the wing planform and the drag polar (KNOT register 0.11.13). The architecture lies between a conventional tube-and-wing and a blended wing body, by statement of the authority, and its geometry is not on record; a gain from it has to appear in the polar. The identity table of this README still classes the model as advanced tube-and-wing |
 | 0.3.23 | 2026-11-16 | Ruling R1 of the cruise point: its maturity records approved, and the minimum objective applied at the release of the preliminary-design baseline (KNOT register 0.11.14). The authority states that the wide tube is for more comfort and as the ground for an architecture better suited to tanks of liquid hydrogen, on an aircraft far from a blended wing body: the class of the identity table stands. §6 proposes a path to the concept baseline of the aircraft |
+| 0.3.24 | 2026-11-17 | Step 1 of the path to the concept baseline delivered: three research records on sections and cabins, wings and span limits, and drag data (KNOT register 0.11.15). Step 3 gains the empty mass by option and a check through fuel |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
