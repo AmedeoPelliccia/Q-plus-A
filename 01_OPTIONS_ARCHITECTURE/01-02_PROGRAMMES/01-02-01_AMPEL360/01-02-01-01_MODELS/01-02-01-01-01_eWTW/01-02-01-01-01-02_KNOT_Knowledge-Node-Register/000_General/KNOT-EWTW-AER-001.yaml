@@ -35,6 +35,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'the polar of first order follows a public method: zero-lift drag from the wetted area and a skin-friction coefficient, induced drag from the aspect ratio and a span efficiency of 0.85, wave drag apart'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
   - text: 'a published computation gives 19.8 at the start of cruise to an advanced tube-and-wing of 98 seats with laminar flow control; it is a forecast, and the screenings keep 15 until a polar of the eWTW exists'
     ref:
       view: EBS
@@ -48,6 +52,8 @@ knot:
       view: EBS
       ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
   couplings:
+  - knot: KNOT-EWTW-MAS-001
+    note: 'the same dimensions give the drag and the mass, and the screening uses both'
   - knot: KNOT-EWTW-PRP-001
     note: 'propulsors on the wing or behind the fuselage change the drag and the lift of the airframe; their effect enters the polar only when it is on record'
   rulings: []
@@ -80,6 +86,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
   - knu_id: KNU-EWTW-AER-001-02
     title: 'Polar of the eWTW in the screening'
     knu_class: ANALYSIS_PACKAGE

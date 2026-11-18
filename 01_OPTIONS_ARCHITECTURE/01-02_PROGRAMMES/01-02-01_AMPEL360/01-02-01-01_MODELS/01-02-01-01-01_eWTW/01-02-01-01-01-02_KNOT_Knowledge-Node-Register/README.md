@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.15 · **Date:** 2026-11-17
+**Version:** 0.11.16 · **Date:** 2026-11-18
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs**, the knowledge threads — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -46,6 +46,7 @@ No decision anchor has approved criteria yet: three records hold proposed criter
 | `KNOT-EWTW-FUL-001` | Fuel location and energy-carrier bay | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-GEN-001` | Generation architecture | `decision-anchor` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-LCM-001` | Lifecycle notation and registry pin | `lifecycle-constraint` | `000` | OPEN | 2 | `STK_CM` |
+| `KNOT-EWTW-MAS-001` | Empty mass of the configuration | `obligation` | `000` | OPEN | 3 | `STK_SE` |
 | `KNOT-EWTW-NRG-001` | Energy carrier | `decision-anchor` | `000` | DEFERRED | 7 | `STK_SE` |
 | `KNOT-EWTW-PRP-001` | Propulsion chain | `decision-anchor` | `000` | OPEN | 5 | `STK_SE` |
 | `KNOT-EWTW-SRC-001` | Electrical sources | `decision-anchor` | `000` | DEFERRED | 3 | `STK_SE` |
@@ -113,6 +114,18 @@ On the same day the authority said what the wide tube is for: more comfort, and 
 - No manufacturer publishes a lift-to-drag ratio with its conditions, so the polar is to be checked through the fuel of a published mission. EASA publishes the certified values of the carbon dioxide metric; the file was not opened.
 - Not answered: which section the tanks of liquid hydrogen ask for, which study supports a flattened section that carries lift, and what the forecasts of ICAO say.
 
+**What the research of 2026-11-18 found.** At the request of the authority the reviewer did the research directly, and filed four records: [wide sections and hydrogen tanks](000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md), [wings in service and propellers](000_General/evidence/KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md), [drag method and forecasts](000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md) and [structural mass and additive manufacturing](000_General/evidence/KNOT-EWTW-MAS-001_structural-mass-and-additive_2026-11-18.md). Thirty-eight statements were read at the source and fourteen say that a search or a file gave nothing. The same hand researched and reviewed, and each record says so: no second reader has checked them.
+
+- The wide tube has values to choose from: 2.74 m for four abreast, 3.28 m for five, 3.63 m for six. Two aisles do not pay at this size. A wider tube gives less width for each seat than the reference cabin, unless seats are left out of the row.
+- A wide fuselage that carries a fifth of the lift saves 10.6 % of fuel by calculation, at 180 seats (the D8 of MIT). Nothing is read near 100 seats.
+- On hydrogen the two sources disagree: one design widens a regional fuselage for the tanks, one parametric study finds two points more energy for it. The energy of the requirement mission is 2.4 to 2.8 t of hydrogen.
+- The jets now in production span 33.7 to 35.1 m, at an aspect ratio of 11 to 12: the room inside code letter C is used. This corrects the record of 2026-11-17.
+- Propellers at the wingtip cut the drag of a wing by 5 to 15 % in a small wind tunnel; the flight campaign on record reports no aerodynamic gain.
+- The polar has a public method. The forecasts of ICAO and the database of EASA still do not open from here.
+- A structure largely optimised in topology would gain 1.4 to 4.7 % of the empty mass, 1 to 3.5 % of the fuel, on two assumptions of the reviewer. Composite structure gains about 8 %. The regulator's policy on additive parts stops at low criticality.
+
+**`KNOT-EWTW-MAS-001`, opened on 2026-11-18.** The screening kept the empty mass of the reference type for every option, and two of the studies read show a comparison by drag alone to mislead. The KNOT is an obligation in chapters `008`, `053`, `057` and `058`: the empty mass by option, and the factor each structural technology is allowed with its maturity. `KNOT-EWTW-CRZ-001` now depends on it as it does on the polar.
+
 ### North star
 
 On 2026-11-16 the authority decided that this work builds a more ecological alternative, and that the more ecological option prevails over time and cost among the options that meet what is never traded: safety, the certification basis, the requirement mission and the required maturity. It is rule 19 of [CM-004][CM-004], for every decision anchor. The tradable criterion that measures the environmental effect is marked `north_star` and comes first; the others follow in order, each deciding only where the earlier ones do not separate the options by more than a margin. Where the measure improves without limit as the service gets worse, a floor of service is a mandatory criterion. No decision anchor is scored without a north-star criterion, and the verification script checks it. `KNOT-EWTW-CRZ-001` is the first to use the rule. The other anchors with proposed criteria, `KNOT-EWTW-ESS-001` and `KNOT-EWTW-NRG-001`, have no north-star criterion yet.
@@ -170,6 +183,7 @@ Each record lists, in its `taxonomy` field, the [S-ATLAS][S-ATLAS] chapters it a
 | Chapter | S-ATLAS title | KNOTs |
 |---|---|---|
 | `006` | Dimensions and Areas | `AER` |
+| `008` | Levelling and Weighing | `MAS` |
 | `012` | Servicing | `ESS` · `SRC` |
 | `021` | Air Conditioning Environmental Control | `CRZ` · `NRG` · `PRP` · `STO` |
 | `022` | Auto Flight | `ESS` · `PRP` |
@@ -184,9 +198,10 @@ Each record lists, in its `taxonomy` field, the [S-ATLAS][S-ATLAS] chapters it a
 | `046` | Information Systems | `ESS` |
 | `047` | Inerting and Protective Atmospheres | `ESS` · `NRG` · `STO` |
 | `049` | Auxiliary Power Module | `ESS` · `SRC` |
-| `053` | Fuselage | `AER` · `FUL` · `NRG` · `DAT` · `FUS` · `ROD` |
+| `053` | Fuselage | `AER` · `FUL` · `MAS` · `NRG` · `DAT` · `FUS` · `ROD` |
 | `055` | Stabilizers | `AER` |
-| `057` | Wings | `AER` · `FUL` · `WNG` |
+| `057` | Wings | `AER` · `FUL` · `MAS` · `WNG` |
+| `058` | Advanced and Green Structural Systems | `MAS` |
 | `061` | Powerplant Installation and Nacelle Integration | `GEN` · `PRP` |
 | `062` | Combustion Machinery | `PRP` |
 | `063` | Combustion Systems for Sustainable Carriers | `PRP` |
@@ -240,6 +255,9 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-GEN-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
 | `KNU-EWTW-LCM-001-01` | Baseline notation | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-LCM-001-02` | Registry re-pin | `WORK_ITEM` | — | NOT_STARTED |
+| `KNU-EWTW-MAS-001-01` | Published mass data, methods and structural technologies | `ANALYSIS_PACKAGE` | `CRZ` | IN_PROGRESS |
+| `KNU-EWTW-MAS-001-02` | Empty mass by option | `ANALYSIS_PACKAGE` | `CRZ` · `FUL` | NOT_STARTED |
+| `KNU-EWTW-MAS-001-03` | Structural technologies and the mass they are allowed | `ANALYSIS_PACKAGE` | `CRZ` | NOT_STARTED |
 | `KNU-EWTW-NRG-001-01` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
 | `KNU-EWTW-NRG-001-03` | Mission energy and power budget | `ANALYSIS_PACKAGE` | `PRP` · `SRC` · `STO` | IN_PROGRESS |
 | `KNU-EWTW-NRG-001-04` | Battery technology state | `EVIDENCE_RECORD` | `STO` | IN_PROGRESS |
@@ -324,7 +342,7 @@ print(yaml.safe_dump(out, sort_keys=False, allow_unicode=True, width=110))
 EOF
 ```
 
-40 of the 64 KNUs have a brief. The other twenty-four are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
+41 of the 67 KNUs have a brief. The other twenty-six are work items, author acts, checks on the models, work of the programme on its own analyses, the declaration of the certification basis and the authority's own rationale for R1, which no outside research can supply. The briefs state only what the model has declared; they are proposed text, to be sharpened before a research run.
 
 ---
 
@@ -339,7 +357,7 @@ python3 tools/knot_check.py "$REG" "$TAX"
 python3 tools/knot_check_test.py
 ```
 
-The first line reads `21 KNOTs, 64 KNUs, 35 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
+The first line reads `22 KNOTs, 67 KNUs, 37 S-ATLAS chapters; rule failures: none` and the second `Provisional rulings: none`; the remaining output reproduces the four tables and the four lines under the chapter table. [`tools/knot_check.py`](../../../../../../tools/knot_check.py) checks record fields, filing, scoring and ruling state, identifiers, vocabularies, references between KNOTs, S-ATLAS addresses, KNU outputs and exit criteria, and the absence of conformity claims. It also validates effectivity, option footprints and ruling fields, checks that each product element has a single owning KNOT (rule 18), and resolves each `gates` reference to a canonical PBS node. A KNOT recorded in more than one file is a failure. It exits with status 1 on a rule failure and then prints only the two first lines. [`tools/knot_check_test.py`](../../../../../../tools/knot_check_test.py) runs 18 tests: the register as it stands, and copies that each break one rule.
 
 ---
 
@@ -379,6 +397,7 @@ The first line reads `21 KNOTs, 64 KNUs, 35 S-ATLAS chapters; rule failures: non
 | 0.11.13 | 2026-11-16 | Three KNOTs opened for the dimensions of the airframe, at the request of the authority: `KNOT-EWTW-FUS-001` (fuselage section, length and cabin, chapter `053`), `KNOT-EWTW-WNG-001` (wing planform, chapter `057`, a new folder) and `KNOT-EWTW-AER-001` (drag polar, an obligation under rule 19). `KNOT-EWTW-CRZ-001` depends on the polar; `KNOT-EWTW-FUL-001` on the wing and the fuselage; wing and cruise point are coupled. The research context names the architecture and the north star. 21 KNOTs, 64 KNUs |
 | 0.11.14 | 2026-11-16 | Ruling R1 of `KNOT-EWTW-CRZ-001`: its three maturity records approved, and criterion `M5` applied at the release of the preliminary-design baseline; the ten criteria stay proposed. The authority states what the wide tube is for, comfort and the ground for tanks of liquid hydrogen: recorded in `KNOT-EWTW-FUS-001`, in the research context and in the rationale of ruling R1 of `KNOT-EWTW-NRG-001`, restated before ratification. KNOT stands for Knowledge Thread (CM-004, second revision of 2026-11-16). A path to the concept baseline is proposed in the model README |
 | 0.11.15 | 2026-11-17 | Research on the dimensions of the airframe reviewed: three records, for `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01` and `KNU-EWTW-AER-001-01`, now in progress. Sixteen statements read by the reviewer, thirteen as reported, eleven findings of absence. The context of `KNOT-EWTW-WNG-001` gains the span limit read at a source, and the polar of `KNOT-EWTW-AER-001` is to be checked through fuel and carried with mass |
+| 0.11.16 | 2026-11-18 | Research done by the reviewer at the request of the authority: four records, thirty-eight statements read at the source and fourteen findings of absence, with no second reader. `KNOT-EWTW-MAS-001` opened, an obligation for the empty mass by option and for the factor each structural technology is allowed; `KNOT-EWTW-CRZ-001` depends on it. The record of the wings of 2026-11-17 is corrected by a dated note: the jets now in production are close to the span limit. 22 KNOTs, 67 KNUs |
 
 [MODEL]: ../README.md
 [MODEL-PATH]: ../README.md#path-to-the-concept-baseline-of-the-aircraft

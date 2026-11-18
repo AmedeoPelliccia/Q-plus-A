@@ -21,6 +21,7 @@ knot:
   created_date: '2026-11-14'
   depends_on:
   - KNOT-EWTW-AER-001
+  - KNOT-EWTW-MAS-001
   closed_with: []
   unblocks:
   - KNOT-EWTW-PRP-001

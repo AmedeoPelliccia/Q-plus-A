@@ -23,6 +23,7 @@ knot:
   closed_with: []
   unblocks:
   - KNOT-EWTW-AER-001
+  - KNOT-EWTW-MAS-001
   - KNOT-EWTW-FUL-001
   affects:
   - view: PBS
@@ -45,6 +46,18 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'the widths read at a manufacturer are 2.74 m for four seats abreast, 3.28 m for five and 3.63 m for six; two aisles start at seven abreast and are not found to pay below about 180 seats, so the wide tube at 100 seats is of five or six abreast with one aisle'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+  - text: 'a wider tube gives less width for each seat abreast than the reference cabin unless seats are left out of the row; comfort needs a measure for each passenger'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+  - text: 'the two sources read on hydrogen disagree on the width of a regional fuselage: one design widens it for the tanks, one parametric study finds two points more energy; both are calculated'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
   - text: 'the reference cabin of the class is four abreast, 2.74 m wide and 2.00 m high with an aisle of 0.49 m, that of the Embraer 190; no value is set for the wide tube'
     ref:
       view: EBS
@@ -108,6 +121,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
   - knu_id: KNU-EWTW-FUS-001-02
     title: 'Cabin and fuselage dimensions by option'
     knu_class: ANALYSIS_PACKAGE

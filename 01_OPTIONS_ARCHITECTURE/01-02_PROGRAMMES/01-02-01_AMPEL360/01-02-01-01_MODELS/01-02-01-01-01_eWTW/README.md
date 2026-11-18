@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.24 |
+| Version | 0.3.25 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -158,6 +158,7 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 | `KNOT-EWTW-FUS-001` | Fuselage: which cross-section and which length, and what cabin area for 100 passengers? | The fuselage (`053`), and the volume of `053-900` | The screening assumes a cabin of 60 to 95 m²; no section is on record | `STK_SE` |
 | `KNOT-EWTW-WNG-001` | Wing: which span, which aspect ratio and which area? | The wing (`057`), and the fuel its box holds | The mission screening keeps the airframe of its reference type | `STK_SE` |
 | `KNOT-EWTW-AER-001` | Drag polar: which wetted area, which parasite drag and which lift-to-drag ratio at each cruise point? An obligation, not a choice | The fuel and the carbon dioxide metric of every cruise point | One lift-to-drag ratio of 15 for every point | `STK_SE` |
+| `KNOT-EWTW-MAS-001` | Empty mass: what does the eWTW weigh empty under each option of its fuselage and of its wing, and which part rests on structural technologies not yet in service? An obligation, not a choice | The fuel of every option | The empty mass of the reference type for every option | `STK_SE` |
 
 The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed:
 
@@ -176,6 +177,7 @@ flowchart LR
   FUS["KNOT-EWTW-FUS-001<br/>fuselage section and cabin"]
   WNG["KNOT-EWTW-WNG-001<br/>wing planform"]
   AER["KNOT-EWTW-AER-001<br/>drag polar"]
+  MAS["KNOT-EWTW-MAS-001<br/>empty mass"]
   NRG --> SRC
   NRG --> PRP
   SRC ---|"closed together"| PRP
@@ -196,6 +198,9 @@ flowchart LR
   FUS --> AER
   WNG --> AER
   AER --> CRZ
+  FUS --> MAS
+  WNG --> MAS
+  MAS --> CRZ
   FUS --> FUL
   WNG --> FUL
   FUS ---|"coupled"| WNG
@@ -276,7 +281,7 @@ The release of a concept baseline asks for a first concept with its first geomet
 |---|---|---|---|
 | 1 | Outside research, in parallel | The three briefs: `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01`, `KNU-EWTW-AER-001-01` | Three reports |
 | 2 | Reviewer | The reports arbitrated; the dimensions each option gives to the fuselage and to the wing (`KNU-EWTW-FUS-001-02`, `KNU-EWTW-WNG-001-02`) | Three research records; one record of dimensions (`KNU-EWTW-AER-001-03`) |
-| 3 | Reviewer | A polar of first order, checked against a published type, and the screening run once over every combination of section, planform and cruise point (`KNU-EWTW-AER-001-02`) | One table: fuel, carbon dioxide metric, installed power and time for each combination |
+| 3 | Reviewer | A polar of first order, checked against a published type, and the screening run once over every combination of section, planform and cruise point (`KNU-EWTW-AER-001-02`), with the empty mass of each option (`KNU-EWTW-MAS-001-02`) | One table: fuel, carbon dioxide metric, installed power and time for each combination |
 | 4 | Authority | The criteria. Those of the cruise point approved; the purposes of the wide tube, comfort and the ground for tanks of liquid hydrogen, stated as mandatory criteria with a measure and a value; the limit on the span | Criteria `APPROVED` in the three KNOTs |
 | 5 | Authority | One act for the cruise point, the section and the planform, which are sized together: the mandatory criteria first, then the north star | A reference configuration. What the table does not separate by more than its margin stays open, with the reference value as an assumption |
 | 6 | Authority, with the reviewer | The baseline record of the aircraft scope: dimensions of record, initial requirements, upgrade watch list, the readiness level and the assumptions of each critical element, and the KNOTs left open with the assumption each one carries | `REV-A_RELEASED` for the aircraft scope |
@@ -284,6 +289,8 @@ The release of a concept baseline asks for a first concept with its first geomet
 Steps 2 and 3 are one piece of work, and steps 4 and 5 can be one act.
 
 Step 1 was delivered on 2026-11-17, and its three records are in the [KNOT register][KNOT-REG]. They change step 3 in two ways. The screening carries the empty mass each option changes, because the one sized comparison read gives a blended body of 98 seats a better lift-to-drag ratio and a higher fuel burn. And the polar is checked through the fuel of a published mission, because no manufacturer publishes a lift-to-drag ratio with its conditions.
+
+On 2026-11-18 the reviewer completed step 1 by direct research, at the request of the authority: four more records, with no second reader. They give the widths of four, five and six seats abreast, a public method for the polar and for the masses, and a first estimate of what topology optimisation and additive manufacturing would gain. `KNOT-EWTW-MAS-001` now holds the empty mass by option.
 
 - **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
 - **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state.
@@ -404,6 +411,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.22 | 2026-11-16 | Dimensions of the airframe: three KNOTs opened for the fuselage section and cabin, the wing planform and the drag polar (KNOT register 0.11.13). The architecture lies between a conventional tube-and-wing and a blended wing body, by statement of the authority, and its geometry is not on record; a gain from it has to appear in the polar. The identity table of this README still classes the model as advanced tube-and-wing |
 | 0.3.23 | 2026-11-16 | Ruling R1 of the cruise point: its maturity records approved, and the minimum objective applied at the release of the preliminary-design baseline (KNOT register 0.11.14). The authority states that the wide tube is for more comfort and as the ground for an architecture better suited to tanks of liquid hydrogen, on an aircraft far from a blended wing body: the class of the identity table stands. §6 proposes a path to the concept baseline of the aircraft |
 | 0.3.24 | 2026-11-17 | Step 1 of the path to the concept baseline delivered: three research records on sections and cabins, wings and span limits, and drag data (KNOT register 0.11.15). Step 3 gains the empty mass by option and a check through fuel |
+| 0.3.25 | 2026-11-18 | Research by the reviewer, at the request of the authority: four records on wide sections and hydrogen tanks, wings in service, the method of the polar, and structural mass with additive manufacturing (KNOT register 0.11.16). `KNOT-EWTW-MAS-001` opened for the empty mass by option; the cruise point depends on it |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

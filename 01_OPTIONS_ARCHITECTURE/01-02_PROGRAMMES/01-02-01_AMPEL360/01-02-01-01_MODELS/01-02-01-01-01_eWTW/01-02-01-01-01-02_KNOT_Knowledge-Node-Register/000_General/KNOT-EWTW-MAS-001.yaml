@@ -1,0 +1,118 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-MAS-001
+  title: Empty mass of the configuration
+  kind: obligation
+  taxonomy: ['008', '053', '057', '058']
+  raised_at: null
+  question: 'What is the empty mass of the eWTW under each option of its fuselage and of its wing, and which part of it rests on structural technologies that are not yet in service?'
+  context: >-
+    The north star of the programme is measured in fuel, and fuel follows the mass of the aircraft as it follows its drag. The mission screening keeps the empty mass of its reference type for every option; run on copies, it turns three quarters of a relative change in empty mass into fuel. Two studies read in November 2026 show what a comparison by drag alone would miss: a blended body of 98 seats has a better lift-to-drag ratio than a tube-and-wing and burns more fuel, because it is heavier; and a regional aircraft with a fuselage widened from four to five abreast uses more energy, with the mass of the fuselage named as the first cause. On 2026-11-18 the authority asked what a structure largely optimised in topology would gain, at the sizes and capacities of additive manufacturing. A first estimate gives a few per cent of the empty mass, and the primary structure it needs is not in service. This KNOT holds the empty mass by option and the factor each structural technology is allowed, with its maturity. It is an obligation, not a choice between options.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 'AMPEL360-KNOT-CM-004 rule 19; criteria T2 and M5 of KNOT-EWTW-CRZ-001; question of the authority of 2026-11-18 on topology optimisation and additive manufacturing'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-18'
+  depends_on:
+  - KNOT-EWTW-FUS-001
+  - KNOT-EWTW-WNG-001
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-CRZ-001
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-000
+  - view: PBS
+    ref: eWTW-PBS-057-000
+  options: []
+  criteria: []
+  assumptions:
+  - text: 'the mission screening keeps the empty mass of the reference type, 27,753 kg, for every option'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: 'three quarters of a relative change in empty mass arrive as fuel on the requirement mission, by runs of the mission screening on copies'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-MAS-001_structural-mass-and-additive_2026-11-18.md
+  - text: 'a structure largely optimised in topology is taken to gain 1.4 to 4.7 % of the empty mass, on two assumptions of the reviewer; primary structure of that kind is not in service, so the gain is a favourable case and not a nominal one'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-MAS-001_structural-mass-and-additive_2026-11-18.md
+  couplings:
+  - knot: KNOT-EWTW-AER-001
+    note: 'the same dimensions give the drag and the mass, and the screening uses both'
+  - knot: KNOT-EWTW-PRP-001
+    note: 'propulsors along the span relieve the wing, and the propulsion chain is part of the empty mass'
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-MAS-001-01
+    title: 'Published mass data, methods and structural technologies'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Published mass breakdowns and estimation methods for the class, and what composite structure, topology optimisation and additive manufacturing are shown to gain'
+    research_brief:
+      questions:
+      - 'What is the mass of each group — wing, fuselage, tail, landing gear, nacelles, power plant, systems, furnishings — of named aircraft of 70 to 130 seats, and which share of the structure is fittings, brackets and secondary structure?'
+      - 'Which primary structures designed by topology optimisation were built, tested or put in service, and what mass did each save against a design already optimised in sizing? Distinguish what was computed, what was built and what is in service.'
+      - 'Which additive parts are certified in the structure of airliners: the part, the material, the process, its class of criticality, its mass against the part it replaces, and the reductions applied for fatigue?'
+      - 'What are the build size, the deposition rate and the materials of the additive processes in production today and announced to 2035 — powder bed, wire deposition and others — and which machines are installed?'
+      - 'What have additive heat exchangers, housings and windings of electric machines and power electronics gained in mass, or in power for each kilogram, by measurement, at powers of hundreds of kilowatts to megawatts?'
+    serves:
+    - KNOT-EWTW-CRZ-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Mass data, methods and the gains of structural technologies, each with its source and with whether it was measured or calculated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-18'
+    start_date: '2026-11-18'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-MAS-001_structural-mass-and-additive_2026-11-18.md
+  - knu_id: KNU-EWTW-MAS-001-02
+    title: 'Empty mass by option'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The empty mass of the eWTW for each combination of the options of KNOT-EWTW-FUS-001 and KNOT-EWTW-WNG-001, by a public method checked on the published empty mass of the reference type: the fuselage and the wing from their dimensions, the propulsion chain from the screening of the cruise points. It replaces the fixed empty mass of the mission screening'
+    research_brief: null
+    serves:
+    - KNOT-EWTW-CRZ-001
+    - KNOT-EWTW-FUL-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'An empty mass by option with its assumptions, written and checked by a tool, and used by the screening of the cruise points'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-18'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-MAS-001-03
+    title: 'Structural technologies and the mass they are allowed'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'For each structural technology the screening may credit — composite primary structure, topology optimisation, additive manufacturing — the factor on the empty mass at nominal and at favourable values, the evidence it rests on and its readiness level'
+    research_brief: null
+    serves:
+    - KNOT-EWTW-CRZ-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'A factor for each technology with its source and its maturity record; none enters the nominal case below the level the programme requires'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-18'
+    start_date: null
+    end_date: null
+    evidence_refs: []

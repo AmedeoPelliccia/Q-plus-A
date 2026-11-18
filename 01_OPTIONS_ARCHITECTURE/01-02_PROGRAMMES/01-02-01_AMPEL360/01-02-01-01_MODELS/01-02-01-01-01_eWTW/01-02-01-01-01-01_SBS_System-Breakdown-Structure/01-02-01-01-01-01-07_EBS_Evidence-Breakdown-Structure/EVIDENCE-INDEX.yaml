@@ -309,6 +309,57 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-FUS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: sections of four to six seats abreast, a wide fuselage that carries
+      lift, and tanks of liquid hydrogen. Fourteen statements read at the source, three
+      findings of absence.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/053_Fuselage/KNOT-EWTW-FUS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-WNG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: the wings now in service, propellers at the wingtip and the braced
+      wing. Six statements read at the source, three findings of absence. It corrects one
+      consequence of the record of 2026-11-17.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/057_Wings/KNOT-EWTW-WNG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: a public method for the polar, and the forecasts that could not be
+      read. Four statements read at the source, four findings of absence.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-MAS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-MAS-001_structural-mass-and-additive_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: structural mass, topology optimisation and additive manufacturing.
+      Fourteen statements read at the source, four findings of absence, and a first estimate
+      of the gain for the eWTW on two assumptions of the reviewer.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-MAS-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-SRC-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk
