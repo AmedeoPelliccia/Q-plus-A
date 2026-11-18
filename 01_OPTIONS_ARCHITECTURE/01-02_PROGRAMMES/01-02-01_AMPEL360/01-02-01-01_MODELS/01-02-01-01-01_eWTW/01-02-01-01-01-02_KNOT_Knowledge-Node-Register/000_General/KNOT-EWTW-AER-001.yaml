@@ -35,6 +35,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'EASA certified the ATR 72-212A with PW127XT-M engines at 0.404 kg/km and 23,000 kg, 20.3 % below the new-type level; with a floor computed by the screening that is a product of efficiency and lift-to-drag of 4.14, which agrees with the best ratio the propeller points are set on for one value of the engine efficiency, not read'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
   - text: 'the polar of the first screening rests on two published figures: a lift-to-drag ratio of 15 for the Embraer 190, which the mission screening assumes, sets the jet point, and a best ratio of 15.74 for the ATR 72, which is a statistic, sets the propeller points'
     ref:
       view: EBS
@@ -100,6 +104,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
   - knu_id: KNU-EWTW-AER-001-02
     title: 'Polar of the eWTW in the screening'
     knu_class: ANALYSIS_PACKAGE

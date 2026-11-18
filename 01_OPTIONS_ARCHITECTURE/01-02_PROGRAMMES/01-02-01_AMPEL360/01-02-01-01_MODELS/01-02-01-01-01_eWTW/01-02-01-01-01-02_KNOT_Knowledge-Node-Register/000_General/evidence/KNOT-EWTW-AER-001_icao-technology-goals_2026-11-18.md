@@ -65,4 +65,4 @@ These are consequences drawn by the reviewer. They are not quotations.
 
 - the years of the further values of statement 8, read on the table itself;
 - the technology appendix of the long-term goal, which still does not open from this workspace, for the split by aerodynamics, mass and propulsion in the turboprop and regional classes;
-- the certified values of the E190-E2 and of the types of the class in the database of EASA, to set the model of the experts against a certified figure.
+- the certified values of the E190-E2 and of the types of the class in the database of EASA, to set the model of the experts against a certified figure. *Note of the same day: the file was read ([record](KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md)). It has no E190-E2. For the A320neo and the A350-900 the certified values are 4 to 6 and 1 to 3 points better than the models of the experts.*

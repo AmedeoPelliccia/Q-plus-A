@@ -155,6 +155,10 @@ knot:
     source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
     state: APPROVED
   assumptions:
+  - text: 'of the types certified by EASA up to September 2026, the one turboprop stands 20.3 % below the new-type level and the jets nearest to the class 11.4 % and 4.7 % below; none is certified against the new-type limit, and the limit formula of the screenings gives the limits the regulator prints'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
   - text: 'the carbon dioxide metric is taken at the best lift-to-drag ratio of each aircraft, because the applicant selects its altitude and its speed; it does not see the cruise speed, and criterion T2 does'
     ref:
       view: EBS

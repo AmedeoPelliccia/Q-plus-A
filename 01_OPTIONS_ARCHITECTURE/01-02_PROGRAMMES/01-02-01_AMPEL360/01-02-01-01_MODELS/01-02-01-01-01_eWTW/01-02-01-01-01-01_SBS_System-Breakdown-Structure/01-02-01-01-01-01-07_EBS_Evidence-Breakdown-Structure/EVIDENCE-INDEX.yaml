@@ -364,10 +364,11 @@ rows:
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CFG-EWTW-AER-001/README.md
     status: on-disk
     note: >
-      Screening of the configurations 0.1.0: four fuselage sections, three wings and four
+      Screening of the configurations 0.2.0: four fuselage sections, three wings and four
       cruise points at three technology sets, each aircraft sized on the requirement mission
       with a polar of first order and an empty mass by option, and its carbon dioxide metric
-      against the objective of 26 % below the new-type level. Input in configuration.yaml
+      against the objective of 26 % below the new-type level, with two types certified by
+      EASA as checks. Input in configuration.yaml
       beside it; it reads the mission screening and the screening of the cruise points and
       does not change them. Written and checked by tools/configuration_screen.py. Produced
       and checked by the same hand on 2026-11-18; no second reader has checked it. A
@@ -396,6 +397,21 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-PRP-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: the certified carbon dioxide metrics in the EASA Aeroplane CO2 Emissions
+      Database, issue 12 of 30 September 2026, read from the file the authority attached on
+      2026-11-18. Seven statements read in the file, four findings of absence. The file itself
+      is not in the repository. Produced and reviewed by the same hand; no second reader has
+      checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
 
   - class: analysis-or-test-record
     subject: KNOT-EWTW-MAS-001

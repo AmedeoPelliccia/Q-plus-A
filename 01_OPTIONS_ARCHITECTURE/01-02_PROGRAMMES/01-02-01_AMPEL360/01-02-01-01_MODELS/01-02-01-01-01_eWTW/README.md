@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.27 |
+| Version | 0.3.28 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -294,6 +294,8 @@ On 2026-11-18 the reviewer completed step 1 by direct research, at the request o
 
 Steps 2 and 3 were delivered the same day in a first issue, the [screening of the configurations][CFG]: dimensions by section, a polar and an empty mass by option, and one table over 144 aircraft, with no second reader. It was run against the objective the authority set that day: 26 % below the new-type level of the carbon dioxide standard, and beyond. At nominal values no aircraft is below the level. With the baskets of the ICAO experts for 2037 the best is 18.8 % below. A mechanical drive on the same airframe is about ten points better than the electrical chain. Installed power and time are not in its table, because it does not size the propulsion system; the one record of dimensions (`KNU-EWTW-AER-001-03`) waits for the choices.
 
+The authority then attached the database of EASA of certified carbon dioxide metrics, and the screening carries two of its types as checks in a second issue. A turboprop in service, the ATR 72-212A with PW127XT-M engines, stands 20.3 % below the new-type level, and the A220-100 11.4 % below. The nominal chain of the eWTW has the efficiency the certified turboprop shows, and the objective asks a product of efficiency and lift-to-drag of 5.4 to 5.5: a third more than that turboprop has, and less than the jet has.
+
 - **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
 - **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state. The screening does not meet the objective of 26 % with the options as written: step 4 has to say whether that objective gates the preliminary-design baseline, as ruling R1 has it for criterion `M5`.
 
@@ -416,6 +418,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.25 | 2026-11-18 | Research by the reviewer, at the request of the authority: four records on wide sections and hydrogen tanks, wings in service, the method of the polar, and structural mass with additive manufacturing (KNOT register 0.11.16). `KNOT-EWTW-MAS-001` opened for the empty mass by option; the cruise point depends on it |
 | 0.3.26 | 2026-11-18 | The technology goals of ICAO, read in its Environmental Reports (KNOT register 0.11.17): the minimum objective on carbon dioxide is the margin of the regional jet of 2017, and the goal of the experts for 2037 is 26 % below the new-type level. The eWTW of the screening reaches it only with every favourable value at once |
 | 0.3.27 | 2026-11-18 | The objective, by decision of the authority: 26 % below the new-type level of the carbon dioxide standard, and beyond (KNOT register 0.11.18). Steps 2 and 3 of the path delivered in a first issue, the screening of the configurations: no aircraft meets the objective at nominal values or with the baskets of the ICAO experts for 2037, and the electrical chain costs about ten points against a mechanical drive on the same airframe |
+| 0.3.28 | 2026-11-18 | The certified carbon dioxide metrics of EASA, read from the file the authority attached (KNOT register 0.11.19): a turboprop in service stands 20.3 % below the new-type level and the A220-100 11.4 % below. The screening of the configurations carries both as checks; the objective asks a product of efficiency and lift-to-drag between the two |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

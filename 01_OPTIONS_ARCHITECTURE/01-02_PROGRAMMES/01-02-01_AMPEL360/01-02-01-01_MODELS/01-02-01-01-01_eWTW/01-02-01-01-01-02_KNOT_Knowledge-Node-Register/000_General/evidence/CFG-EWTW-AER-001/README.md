@@ -1,6 +1,6 @@
 # CFG-EWTW-AER-001 — Screening of the configurations: sections, wings and cruise points
 
-**Version:** 0.1.0 · **Date:** 2026-11-18 · **Status:** first issue, proposed
+**Version:** 0.2.0 · **Date:** 2026-11-18 · **Status:** second issue, proposed
 **For:** `KNOT-EWTW-AER-001`, `KNU-EWTW-AER-001-02` Polar of the eWTW in the screening. Its table of sections serves `KNU-EWTW-FUS-001-02`, its wings `KNU-EWTW-WNG-001-02` and its masses `KNU-EWTW-MAS-001-02`
 **Input:** [`configuration.yaml`](configuration.yaml), the mission screening [`MSN-EWTW-NRG-001`](../MSN-EWTW-NRG-001/README.md) and the screening of the cruise points [`CRP-EWTW-CRZ-001`](../CRP-EWTW-CRZ-001/README.md), which are read and not changed
 **Checked by:** [`tools/configuration_screen.py`](../../../../../../../../../tools/configuration_screen.py)
@@ -25,15 +25,19 @@ This is a screening of first order. It recommends no option and states no confor
 7. **The section moves the fuel by about two per cent.** Five abreast burns 2 % less than the reference cabin, six abreast 1 % less. That is inside the error of the fuselage formula: with the wide fuselages 15 % heavier, the two figures become less than 1 % either way. A cabin of five abreast in the width of six, for a wide aisle or wider seats, burns 4 % more than the reference cabin. The metric counts floor area and not seats: six abreast loses three points of margin to the reference cabin at about the same fuel.
 8. **For the wing, aspect ratio pays and a smaller area does not.** The wing of option B burns 2.4 to 3.4 % less than that of option A, and the braced wing 4.0 to 5.9 % less. A larger wing improves the margin and costs fuel at the floor of speed: with the baskets of 2037, every wing at 500 kg/m² gives −24.5 % for 3 % more fuel, and at 380 kg/m² −29.2 % for 12 % more. The wings of options B and C have little or no room for the fuel of the requirement mission: it is 0.85 to 1.15 times what they hold, by a rule of similarity, against 0.67 to 0.82 for the wing of option A.
 9. **The levers add up.** A braced wing of aspect ratio 20 at 500 kg/m², with the point of the floor flown at 31,000 ft, gives a best margin of −28.0 % with the baskets of 2037, and a least fuel 9 % below that of the screening as it stands. The span of such a wing is about 40 m, beyond code letter C.
-10. **Four assumptions move the result more than any choice of section.** The drag level of a propeller aircraft: ten points of margin between a turboprop in service and a jet. The lift-to-drag ratio of the jet reference: −16.6 % to −28.3 % across the range reported for regional jets. The friction drag due to lift: five points. The mass of the propulsion system: 7 to 9 % of fuel between 1.45 and 2.27 times a conventional one.
+10. **Two certified types give the scale.** In the [database of EASA](../KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md), the ATR 72-212A with PW127XT-M engines stands 20.3 % below the new-type level, and the Airbus A220-100 11.4 % below. In the terms of the screening the turboprop has a product of efficiency and lift-to-drag of 4.14 and weighs 422 kg at take-off for each square metre of floor; the jet has 6.03 and weighs 732 kg. The turboprop stands better because it is light, not because it turns fuel into distance better.
+11. **The nominal chain of the eWTW has the efficiency of the turboprop in service.** At the best ratio the propeller points are set on, the certified turboprop turns 0.263 of the energy of its fuel into thrust work, and the nominal chain of the screening 0.268: a better thermal machine, and an electrical chain that takes the difference back. With the same drag level, the nominal eWTW differs from the certified turboprop by its mass: 629 to 724 kg for each square metre of floor.
+12. **The objective asks a product between the two.** For the best aircraft of the second and third sets, at 38 to 39 t and 79 m² of floor, the objective asks a product of 5.4 to 5.5: a third more than the turboprop certified in 2025 has, and less than the jet certified in 2026 has. With the baskets of 2037 the best aircraft has 4.99.
+13. **Mass and range are weak levers at a fixed wing loading.** An empty mass 10 % lower saves 5 to 8 % of fuel and one to three points of margin: a lighter aircraft has a smaller wing against the same fuselage. A requirement mission of 1,596 km in the place of 2,000 km gains less than one point.
+14. **Four assumptions move the result more than any choice of section.** The drag level of a propeller aircraft: ten points of margin between a turboprop in service and a jet. The lift-to-drag ratio of the jet reference: −16.6 % to −28.3 % across the range reported for regional jets. The friction drag due to lift: five points. The mass of the propulsion system: 7 to 9 % of fuel between 1.45 and 2.27 times a conventional one.
 
 ## What it means for the KNOTs
 
 These are inputs. None is a ruling, and no criterion of `KNOT-EWTW-CRZ-001` is approved.
 
 - **`KNOT-EWTW-CRZ-001`, criteria `M5` and `T2`.** The two can pull apart. A wing sized to meet the metric is larger than the wing of least fuel at the floor of speed (item 8), and the metric is the same at 275 kt and at 360 kt (item 5). The fuel on the scoring mission is the measure that follows what the aircraft burns in service. The floor of speed, criterion `M4`, costs 9 to 10 % of that fuel at 25,000 ft; the cruise altitude is a second lever, which the candidate points do not explore.
-- **`KNOT-EWTW-PRP-001` and `KNOT-EWTW-GEN-001`.** The objective is won or lost in the propulsion chain. Ten points of margin separate the electrical chain from a mechanical drive on the same airframe (item 4). The research of these KNOTs has to show what propulsors along the span give back, in figures the screening can use, or how much of the power has to go through the electrical chain.
-- **`KNOT-EWTW-AER-001`.** The polar rests on two published figures, one for a jet and one for a turboprop, and the second is a statistic. A measured polar of a propeller aircraft of the class, or its fuel flow in cruise, is the figure the screening most needs.
+- **`KNOT-EWTW-PRP-001` and `KNOT-EWTW-GEN-001`.** The objective is won or lost in the propulsion chain. The nominal chain is level with a turboprop engine and propeller in service, and a jet of today has a product 46 % higher than that turboprop (items 10 and 11): the efficiency of the thermal machine counts as much as the electrical losses. Ten points of margin separate the electrical chain from a mechanical drive on the same airframe (item 4). The research of these KNOTs has to show what propulsors along the span give back, in figures the screening can use, or how much of the power has to go through the electrical chain.
+- **`KNOT-EWTW-AER-001`.** The polar rests on two published figures, one for a jet and one for a turboprop, and the second is a statistic. The certified metric of the turboprop bounds it and does not replace it: it gives the product of efficiency and lift-to-drag, and the two agree if the engines of the type turn about 31 % of the energy of the fuel into shaft work. The consumption of that engine in cruise is the figure the screening most needs.
 - **`KNOT-EWTW-FUS-001`.** The wide tube is neither helped nor hurt by the fuel, within what the method can tell. The choice of section can be made on comfort and on the room it gives to an energy-carrier bay: the gross section is 7.9 m² for the reference cabin, 9.9 m² for five abreast and 11.9 m² for six. Comfort bought with width costs about 4 % of fuel and three points of margin. Option C, the flattened section, is not screened.
 - **`KNOT-EWTW-WNG-001`.** The three options do not separate the two choices the screening shows to matter, the span and the brace. At the take-off masses of the second and third technology sets, the braced wing of aspect ratio 17 stays within code letter C; it passes 36 m at the masses of the first set only.
 - **`KNOT-EWTW-FUL-001`.** The smaller wings have little or no room for the fuel (item 8). With the wings of options B and C, part of it may have to be carried elsewhere, or the wing grows.
@@ -43,7 +47,7 @@ These are inputs. None is a ruling, and no criterion of `KNOT-EWTW-CRZ-001` is a
 
 - **One hand.** The method, the tool and its tests were written by the same reviewer. Nothing here has been checked by a second reader.
 - **The jet is set on a ratio the mission screening assumes.** The lift-to-drag ratio of 15 for the Embraer 190 is the nominal value of the mission screening, chosen so that its product fits the published sectors of the type. No manufacturer's figure supports it; the range reported for regional jets is 14 to 17. One check holds: with the metric taken at the best ratio, the method places the Embraer 190 at +8.5 % from the new-type level, and the figures of the ICAO experts and of Embraer together place it at +7.6 %.
-- **The propeller points are set on a statistic.** The best ratio of 15.74 for the ATR 72 comes from a statistic of turboprops, applied in a published redesign that meets the masses of the type. It is not a measured polar. The other check on record is weaker: the sheet of the Dash 8-400 implies a product of propulsor efficiency and lift-to-drag of 9.1 if its engines give their cruise rating at 25,000 ft, and the aircraft of the screening have 11.7 to 12.7 there.
+- **The propeller points are set on a statistic.** The best ratio of 15.74 for the ATR 72 comes from a statistic of turboprops, applied in a published redesign that meets the masses of the type. It is not a measured polar. The certified metric of the type agrees with it for one value of the engine efficiency, which was not read. The other check on record is weaker: the sheet of the Dash 8-400 implies a product of propulsor efficiency and lift-to-drag of 9.1 if its engines give their cruise rating at 25,000 ft, and the aircraft of the screening have 11.7 to 12.7 there.
 - **Propulsors along the span are neither credited nor charged.** No gain is taken for propellers at the wingtips, for lift blown at low speed beyond the wing loading assumed, or for ingestion of the boundary layer: the [records](../KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md) hold a wind-tunnel test at small scale and a flight campaign that reports no aerodynamic gain. No drag is added for many nacelles in a slipstream beyond the level of the turboprop.
 - **The span efficiency falls with the aspect ratio.** The method adds to the induced drag a term in proportion to the zero-lift drag. It gives a span efficiency of 0.79 to the Embraer 190 and of 0.54 to 0.66 to the braced wings. With half that term the best margin with the baskets of 2037 is −24.2 %.
 - **The wing formula is used beyond the wings it was fitted on.** It has no term for flutter or stiffness at aspect ratios of 14 to 20, and the relief of a brace is a handbook figure. With no relief the best margin moves by half a point to a point and a half.
@@ -51,6 +55,7 @@ These are inputs. None is a ruling, and no criterion of `KNOT-EWTW-CRZ-001` is a
 - **Two simplifications work against the propeller points.** The design dive speed, and with it the fuselage mass, is the same at every cruise point. The terminal distance of every mission is that fitted on the jet reference.
 - **The propulsion system is not sized.** Its mass is that of the reference in proportion to the take-off mass, times one ratio for each technology set, from one study. The [screening of the cruise points](../CRP-EWTW-CRZ-001/README.md) shows that the cruise sizes the machines at least as much as the take-off; a faster or a higher cruise would make them heavier, and that is not here.
 - **The technology sets are not forecasts for this aircraft.** The baskets of the experts are stated for the single-aisle and twin-aisle classes, over their reference of 2017. Here they are laid on a jet airframe set on a type of 2005 and on a propeller aircraft set on a type designed in the 1980s. If the drag basket includes a higher aspect ratio, the wings of options B and C count it twice.
+- **The floors of the two certified types are computed, not read.** The database gives no reference geometric factor. The floors come from the cabin rule of the screening, with the seat pitch of the screening for the jet. A floor 10 % larger or smaller moves the product of a type by 2 %.
 - **The metric is of first order.** Every reference mass is taken at the best ratio, without a check of ceiling or of minimum speed. The take-off mass of the requirement mission stands for the maximum take-off mass. The floor is the outer width times the cabin length.
 - **Field performance is not checked.** A loading of 620 kg/m² is above the wings in service, and nothing here shows that the aircraft takes off and lands on the runways of the class.
 - **The rest of the aircraft is that of the reference.** Systems, furnishings and operating items are held at 9.9 t for every aircraft. Tails are sized by volume coefficients, with no credit for thrust that can be steered.
@@ -61,7 +66,7 @@ These are inputs. None is a ruling, and no criterion of `KNOT-EWTW-CRZ-001` is a
 Generated by the tool from the three inputs. Do not edit between the markers.
 
 <!-- configuration:begin -->
-CFG-EWTW-AER-001 0.1.0 for KNOT-EWTW-AER-001: 4 sections, 3 wings and 4 cruise points at 3 technology sets, on the missions of MSN-EWTW-NRG-001 0.3.0; 106 figures, 52 of them assumptions; rule failures: none
+CFG-EWTW-AER-001 0.2.0 for KNOT-EWTW-AER-001: 4 sections, 3 wings and 4 cruise points at 3 technology sets, on the missions of MSN-EWTW-NRG-001 0.3.0; 118 figures, 53 of them assumptions; rule failures: none
 
 ### Sections
 
@@ -79,6 +84,8 @@ Not screened: option C of `KNOT-EWTW-FUS-001`. A flattened section that carries 
 - **Geometry.** The Embraer 190 is 36.24 m long with a wing of 92.5 m². It has a slenderness of 11.4 and, by the method, a wetted area 6.29 times its wing area.
 - **Drag of the jet.** The mission screening takes a lift-to-drag ratio of 15 at nominal values, so that its product of efficiency and lift-to-drag, 4.02, is near the 4.08 it fits on the published sectors of the type. This screening takes that ratio as the one of the type in its cruise. The method gives it with an equivalent skin-friction coefficient of 0.00334, inside the 0.003 to 0.004 of the source, and a span efficiency of 0.79. The best ratio of the type at that Mach number is then 15.9.
 - **Drag of a propeller aircraft.** With that coefficient the method gives the ATR 72 a wetted area 6.34 times its wing area and a best lift-to-drag ratio of 18.2. The source gives it 15.74. The method meets that figure with a zero-lift drag 1.26 times its own, and the propeller points of the screening carry 100 % of that excess.
+- **Certified metric of a propeller aircraft.** EASA certified the ATR 72-212A with PW127XT-M engines and 568F-1 propellers at 0.404 kg/km and a take-off mass of 23,000 kg: -20.3 % from the new-type level, which its database gives as 0.507 kg/km and the formula of the screening as 0.507. With a floor of 54.5 m² by the cabin rule of the screening, that metric is a product of efficiency and lift-to-drag of 4.14. At the best ratio above, the type then turns 0.263 of the energy of its fuel into thrust work. The nominal chain of the screening turns 0.268 at `P2`, and 0.301 with a mechanical drive. The type weighs 422 kg at take-off for each square metre of that floor.
+- **Certified metric of a jet.** EASA certified the Airbus A220-100 at 0.677 kg/km and a take-off mass of 63,730 kg: -11.4 % from the new-type level of 0.764 kg/km in its database. With a floor of 87.1 m² by the same rule, that metric is a product of efficiency and lift-to-drag of 6.03. The type weighs 732 kg at take-off for each square metre of that floor.
 - **Structure.** The method gives the Embraer 190 a wing of 4,562 kg, a fuselage of 5,578 kg, tails of 914 kg and a landing gear of 2,163 kg: 13,217 kg, 26.3 % of its take-off mass of 50,300 kg. The sample breakdown on record gives 27.23 %.
 - **The rest.** Its power plant is taken as 9.26 % of its take-off mass, 4,658 kg. What is left of its operating mass of 27,753 kg, 9,878 kg of systems, furnishings and operating items, is held for every aircraft of the screening.
 - **Metric.** The applicant selects the altitude and the speed of the carbon dioxide metric, so the screening takes it at the best lift-to-drag ratio of each aircraft. With the fitted product raised in that proportion, a floor of 78.0 m² and that take-off mass, the metric of the Embraer 190 stands +8.5 % from the new-type level; at its cruise it would stand +14.7 %. Its successor, the Embraer E190-E2, stands 11 % below that level by the experts of ICAO and burns 17.3 % less by its manufacturer: the two together place the Embraer 190 at +7.6 %.
@@ -185,11 +192,21 @@ Turbogenerator 0.400, electrical chain 0.93, propulsor of the point times 1.035;
 
 The objective is a margin of -26.0 % to the new-type level, or better. The floor of speed is 360 kt.
 
-| Technology set | Least fuel on the scoring mission, at or above the floor | Its margin | Best margin at or above the floor | Best margin with a mechanical drive | Meet the objective at or above the floor | Meet it below the floor |
-|---|---|---|---|---|---|---|
-| Nominal chain, airframe technology of the reference | `P3`, `F5`, `WC`: 5,193 kg | +7.3 % | `P4`, `F4`, `WC`: +4.9 % | `P4`, `F4`, `WC`: -10.8 % | 0 of 36 | 0 of 12 |
-| Baskets of the ICAO experts for 2037 | `P4`, `F5`, `WC`: 3,676 kg | -18.5 % | `P4`, `F4`, `WC`: -18.8 % | `P4`, `F4`, `WC`: **-28.5 %** | 0 of 36 | 0 of 12 |
-| Favourable chain and composite airframe | `P4`, `F5`, `WC`: 3,337 kg | **-26.1 %** | `P4`, `F4`, `WC`: **-26.4 %** | `P4`, `F4`, `WC`: **-32.9 %** | 2 of 36 | 0 of 12 |
+| Technology set | Least fuel on the scoring mission, at or above the floor | Its margin | Best margin at or above the floor | Best margin with a mechanical drive | Take-off mass for each m² of floor, kg | Meet the objective at or above the floor | Meet it below the floor |
+|---|---|---|---|---|---|---|---|
+| Nominal chain, airframe technology of the reference | `P3`, `F5`, `WC`: 5,193 kg | +7.3 % | `P4`, `F4`, `WC`: +4.9 % | `P4`, `F4`, `WC`: -10.8 % | 629 to 724 | 0 of 36 | 0 of 12 |
+| Baskets of the ICAO experts for 2037 | `P4`, `F5`, `WC`: 3,676 kg | -18.5 % | `P4`, `F4`, `WC`: -18.8 % | `P4`, `F4`, `WC`: **-28.5 %** | 477 to 539 | 0 of 36 | 0 of 12 |
+| Favourable chain and composite airframe | `P4`, `F5`, `WC`: 3,337 kg | **-26.1 %** | `P4`, `F4`, `WC`: **-26.4 %** | `P4`, `F4`, `WC`: **-32.9 %** | 467 to 527 | 2 of 36 | 0 of 12 |
+
+### What the objective asks
+
+For the aircraft of best margin at or above the floor in each set: the product of efficiency and best lift-to-drag ratio it has, and the product that would put it at the objective at its take-off mass and on its floor. The certified turboprop has 4.14, at 23.0 t and 54.5 m²; the certified jet has 6.03, at 63.7 t and 87.1 m².
+
+| Technology set | Aircraft | Take-off mass, t | Floor, m² | Product it has | Product the objective asks |
+|---|---|---|---|---|---|
+| Nominal chain, airframe technology of the reference | `P4`, `F4`, `WC` | 52.0 | 79.2 | 4.52 | 6.42 |
+| Baskets of the ICAO experts for 2037 | `P4`, `F4`, `WC` | 39.2 | 79.2 | 4.99 | 5.47 |
+| Favourable chain and composite airframe | `P4`, `F4`, `WC` | 38.4 | 79.2 | 5.44 | 5.41 |
 
 ### One choice at a time
 
@@ -229,6 +246,8 @@ The whole screening again with one assumption changed. For each technology set, 
 | Fuselage of the wide sections 15 % heavier than the formula gives | 0.00334 | 1.26 | 5,287 kg · +4.9 % | 3,733 kg · -18.8 % | 3,383 kg · **-26.4 %** |
 | Propulsion system at 2.27 times a conventional one in every set | 0.00334 | 1.26 | 5,193 kg · +4.9 % | 3,934 kg · -17.1 % | 3,576 kg · -24.9 % |
 | Propulsion system at 1.45 times a conventional one in every set | 0.00334 | 1.26 | 4,767 kg · +1.7 % | 3,676 kg · -18.8 % | 3,337 kg · **-26.4 %** |
+| Empty mass 10 % lower in every set | 0.00334 | 1.26 | 4,802 kg · +1.9 % | 3,486 kg · -20.0 % | 3,171 kg · **-27.4 %** |
+| Requirement mission of 1,596 km, the range of the Dash 8-400 with full passengers, in the place of the 2,000 km of ruling R2 | 0.00334 | 1.26 | 5,199 kg · +4.0 % | 3,701 kg · -19.2 % | 3,359 kg · **-26.7 %** |
 | Three of the above together: every wing at 500 kg/m2, the braced wing at an aspect ratio of 20, the point of the floor at 31,000 ft | 0.00334 | 1.26 | 4,871 kg · -4.5 % | 3,361 kg · **-28.0 %** | 3,038 kg · **-35.0 %** |
 <!-- configuration:end -->
 
@@ -242,10 +261,11 @@ python3 tools/configuration_screen.py "$REG/000_General/evidence/CFG-EWTW-AER-00
 python3 tools/configuration_screen_test.py
 ```
 
-The tool first runs the two screenings it reads through their own checks. It fails if a section or a wing names an option that is not open, if an open option is neither screened nor named as not screened, or if the skin friction it sets on the jet leaves the range of its source. Its tests compute again by hand, from the figures of the input, a section, the skin friction of the jet, the drag level of the propeller points, the masses of the reference, its metric, and one whole aircraft: geometry, polar, masses, the closure of the requirement mission, the fuel of the scoring mission and the metric.
+The tool first runs the two screenings it reads through their own checks. It fails if a section or a wing names an option that is not open, if an open option is neither screened nor named as not screened, or if the skin friction it sets on the jet leaves the range of its source. Its tests compute again by hand, from the figures of the input, a section, the skin friction of the jet, the drag level of the propeller points, the masses of the reference, its metric, the products of the two certified types, and one whole aircraft: geometry, polar, masses, the closure of the requirement mission, the fuel of the scoring mission and the metric.
 
 ## Revision history
 
 | Version | Date | Change |
 |---|---|---|
 | 0.1.0 | 2026-11-18 | First issue: four sections, three wings and four cruise points at three technology sets, with fourteen assumptions changed one at a time. 106 figures, 52 of them assumptions |
+| 0.2.0 | 2026-11-18 | The certified metrics of the ATR 72-212A and of the A220-100, from the database of EASA, as checks: the product each shows, and its take-off mass over its floor. A table of the product the objective asks. Two more assumptions changed: a lighter empty mass and a shorter requirement mission. No result of the first issue changes. 118 figures, 53 of them assumptions |

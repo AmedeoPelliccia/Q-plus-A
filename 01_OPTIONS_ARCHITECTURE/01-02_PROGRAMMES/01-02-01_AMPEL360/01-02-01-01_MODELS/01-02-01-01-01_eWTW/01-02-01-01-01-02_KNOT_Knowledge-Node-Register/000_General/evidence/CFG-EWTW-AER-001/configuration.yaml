@@ -1,7 +1,7 @@
 # Configuration screening of the eWTW - input of tools/configuration_screen.py
 analysis:
   id: CFG-EWTW-AER-001
-  version: 0.1.0
+  version: 0.2.0
   date: 2026-11-18
   knot: KNOT-EWTW-AER-001
   serves: [KNU-EWTW-FUS-001-02, KNU-EWTW-WNG-001-02, KNU-EWTW-AER-001-02, KNU-EWTW-MAS-001-02]
@@ -41,6 +41,23 @@ analysis:
     span_m: {value: 27.05, basis: source, ref: "ATR, page of the ATR 72-600. Research record of the wings and span limits, 2026-11-17, statement 2"}
     wing_area_m2: {value: 61, basis: source, ref: "ATR, factsheet of the ATR 72-600, 2020. Research record of the fuel location, 2026-11-15, statement 1"}
     best_lift_to_drag: {value: 15.74, basis: source, ref: "Scholz and Nita, Preliminary Sizing of Large Propeller Driven Aeroplanes, 2008, table 2: maximum lift-to-drag ratio in cruise of a redesign of the ATR 72, from a statistic of turboprops. The redesign meets the masses, the wing area and the power of the type within 0.6 %. Read on 2026-11-18"}
+    certified_type: ATR 72-212A with PW127XT-M engines and 568F-1 propellers
+    abreast: 4
+    seats: {value: 72, basis: source, ref: "ATR, page of the ATR 72-600: 72 seats at a pitch of 29 in. Research record of the sections and cabins, 2026-11-17, statement 2"}
+    seat_pitch_m: {value: 0.737, basis: source, ref: "The same statement: 29 in"}
+    cabin_width_m: {value: 2.57, basis: source, ref: "The same record, statement 7, as reported: the sheets read do not give the width"}
+    certified_mtom_kg: {value: 23000, basis: source, ref: "EASA Aeroplane CO2 Emissions Database, issue 12 of 30 September 2026, record CO200040. Research record of the database, 2026-11-18, statement 2"}
+    certified_metric_kg_km: {value: 0.404, basis: source, ref: "The same record of the database: the carbon dioxide metric value as certified"}
+    certified_limit_kg_km: {value: 0.507, basis: source, ref: "The same record of the database: the new-type limit at that mass. Printed beside the limit formula of the screening; it enters no result"}
+  certified_jet:
+    aircraft: Airbus A220-100
+    abreast: 5
+    seats: {value: 120, basis: source, ref: "Airbus, A220 Aircraft Characteristics Publication: standard seating. Research record of the wide sections, 2026-11-18, statement 2"}
+    seat_pitch_m: {value: 0.82, basis: assumption, note: "The pitch of the screening. The pitch of the standard seating of the type was not read"}
+    cabin_width_m: {value: 3.28, basis: source, ref: "The same statement: figure of the passenger cross-section, label not legible"}
+    certified_mtom_kg: {value: 63730, basis: source, ref: "EASA Aeroplane CO2 Emissions Database, issue 12 of 30 September 2026, records CO200087, CO200088 and CO200090. Research record of the database, 2026-11-18, statement 3"}
+    certified_metric_kg_km: {value: 0.677, basis: source, ref: "The same records of the database"}
+    certified_limit_kg_km: {value: 0.764, basis: source, ref: "The same records of the database: the new-type limit at that mass, above the range of the limit formula of the screening"}
   cabin:
     seat_pitch_m: {value: 0.82, basis: source, ref: "Embraer, Airport Planning Manual of the Embraer 190: pitch of the standard arrangement. Research record of the sections and cabins, 2026-11-17, statement 1"}
     service_area_m2: {value: 15.9, basis: assumption, note: "Floor for doors, galleys and lavatories, held equal for every section. It is what the cabin of the reference leaves beyond its 98 seats, if the 25.91 m of its side view is the cabin length"}
@@ -195,5 +212,9 @@ analysis:
     set: [{path: technology.T1.chain_mass_ratio, value: 2.27}, {path: technology.T2.chain_mass_ratio, value: 2.27}]
   - name: Propulsion system at 1.45 times a conventional one in every set
     set: [{path: technology.T0.chain_mass_ratio, value: 1.45}]
+  - name: Empty mass 10 % lower in every set
+    set: [{path: technology.T0.empty_factor, value: 0.9}, {path: technology.T1.empty_factor, value: 0.819}, {path: technology.T2.empty_factor, value: 0.873}]
+  - name: "Requirement mission of 1,596 km, the range of the Dash 8-400 with full passengers, in the place of the 2,000 km of ruling R2"
+    set: [{where: missions, path: missions.L, field: range_km, value: 1596}]
   - name: "Three of the above together: every wing at 500 kg/m2, the braced wing at an aspect ratio of 20, the point of the floor at 31,000 ft"
     set: [{path: wings.WA.loading_kg_m2, value: 500}, {path: wings.WB.loading_kg_m2, value: 500}, {path: wings.WC.loading_kg_m2, value: 500}, {path: wings.WC.aspect_ratio, value: 20}, {where: points, path: points.P2.altitude_ft, value: 31000}]

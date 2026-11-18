@@ -58,7 +58,7 @@ What is not corrected: the energy carrier and rulings R1 to R3 of `KNOT-EWTW-NRG
 | 9 | No measured polar of a regional turboprop, and no fuel flow of one in cruise, in what was read. The best ratio of statement 6 comes from a statistic |
 | 10 | A benchmark model of a regional turboprop of about 70 passengers gives no lift-to-drag ratio, no polar coefficient and no fuel in its slides (Fritzsche and others, DLR, Deutscher Luft- und Raumfahrtkongress 2023) |
 | 11 | The paper behind statement 5 could not be read as text; only its slides were. The factor of the method for the Mach number was not legible and is not used |
-| 12 | No certified metric of a turboprop: the database of EASA is still not read |
+| 12 | No certified metric of a turboprop: the database of EASA is still not read. *Note of the same day: the authority attached the file. The ATR 72-212A is certified 20.3 % below the new-type level ([record](KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md)). The figure gives a product of efficiency and lift-to-drag and bounds the statistic of statement 6; it does not replace it* |
 
 ## What follows for the eWTW
 

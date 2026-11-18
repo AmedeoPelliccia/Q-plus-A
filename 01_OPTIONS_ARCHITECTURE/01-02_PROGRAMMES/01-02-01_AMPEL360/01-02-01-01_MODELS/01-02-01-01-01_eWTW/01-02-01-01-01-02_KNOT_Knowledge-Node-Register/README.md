@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.18 · **Date:** 2026-11-18
+**Version:** 0.11.19 · **Date:** 2026-11-18
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs**, the knowledge threads — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -136,6 +136,14 @@ On the same day the authority said what the wide tube is for: more comfort, and 
 - The propeller points carry the drag of a turboprop in service, 26 % more zero-lift drag than a jet, and the figure is a statistic. With it the jet point burns what the propeller points burn. It is the largest unknown of the screening.
 - The section moves the fuel by about 2 %, inside the error of the method; a wider cabin for the same seats costs 4 %. Aspect ratio saves 2.4 to 5.9 %. The smaller wings of options B and C have little or no room for the fuel of the requirement mission.
 - A braced wing of aspect ratio 20 at a lower loading, flown higher at the floor of speed, stands 28.0 % below with the baskets of 2037. Its span is beyond code letter C.
+
+**The certified metrics of EASA.** The authority attached issue 12 of the database of EASA, which three records had asked for and could not open; a [record](000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md) holds seven statements read in it and four findings of absence. It has 113 records, all certified against the in-production limit, with no reference geometric factor, no Embraer E2 and no Dash 8-400. The screening of the configurations, in its second issue, carries two of its types as checks.
+
+- One turboprop is in it: the ATR 72-212A with PW127XT-M engines stands 20.3 % below the new-type level. The Airbus A220-100 stands 11.4 % below, the margin the ICAO experts give to their regional-jet reference, and the A220-300 4.7 % below.
+- The limit formula of the screenings gives the limits the regulator prints, on the four types below 60 t.
+- In the terms of the screening the turboprop has a product of efficiency and lift-to-drag of 4.14 and the jet 6.03. The turboprop stands better on the metric because it is light: 422 kg of take-off mass for each square metre of floor, against 732.
+- The nominal chain of the eWTW turns 0.268 of the energy of its fuel into thrust work, and the certified turboprop 0.263, if its best lift-to-drag ratio is that of the statistic. With the same drag level the nominal eWTW differs from that turboprop by its mass, 629 to 724 kg for each square metre.
+- The objective asks a product of 5.4 to 5.5 of the best aircraft of the screening: between the turboprop and the jet of today. The statistic the propeller points are set on is bounded by the file and not replaced: the consumption of the engine of the type in cruise is still missing.
 
 ### North star
 
@@ -413,6 +421,7 @@ The first line reads `22 KNOTs, 67 KNUs, 37 S-ATLAS chapters; rule failures: non
 | 0.11.16 | 2026-11-18 | Research done by the reviewer at the request of the authority: four records, thirty-eight statements read at the source and fourteen findings of absence, with no second reader. `KNOT-EWTW-MAS-001` opened, an obligation for the empty mass by option and for the factor each structural technology is allowed; `KNOT-EWTW-CRZ-001` depends on it. The record of the wings of 2026-11-17 is corrected by a dated note: the jets now in production are close to the span limit. 22 KNOTs, 67 KNUs |
 | 0.11.17 | 2026-11-18 | The technology goals of ICAO read in its Environmental Reports of 2019 and 2022, by the route the authority indicated: eight statements read at the source, three findings of absence. The regional-jet reference of 2017 is 11 % below the new-type level, the margin of criterion `M5`; the goals are 16 % below for 2027 and 26 % below for 2037. The record of the same day that called the forecasts unread carries a note |
 | 0.11.18 | 2026-11-18 | Decision of the authority: the objective is 26 % below the new-type level, and beyond. Criterion `M5` restated, with the legal minimum as its floor, in a record that also holds what the decision corrects and eight statements read for it. First screening of the configurations, `CFG-EWTW-AER-001`, written and checked by `tools/configuration_screen.py`: dimensions by section, a polar and an empty mass by option, 144 aircraft, and fourteen assumptions changed one at a time. `KNU-EWTW-WNG-001-02` and `KNU-EWTW-AER-001-02` wait for review; `KNU-EWTW-FUS-001-02` and `KNU-EWTW-MAS-001-02` are in progress |
+| 0.11.19 | 2026-11-18 | The database of EASA of certified carbon dioxide metrics, issue 12, attached by the authority and read: seven statements, four findings of absence. The ATR 72-212A is certified 20.3 % below the new-type level and the A220-100 11.4 % below; the limit formula of the screenings is confirmed on four types. Screening of the configurations 0.2.0: the two types as checks, the product the objective asks, and two more assumptions changed. Notes on the four records that could not read the file |
 
 [MODEL]: ../README.md
 [MODEL-PATH]: ../README.md#path-to-the-concept-baseline-of-the-aircraft

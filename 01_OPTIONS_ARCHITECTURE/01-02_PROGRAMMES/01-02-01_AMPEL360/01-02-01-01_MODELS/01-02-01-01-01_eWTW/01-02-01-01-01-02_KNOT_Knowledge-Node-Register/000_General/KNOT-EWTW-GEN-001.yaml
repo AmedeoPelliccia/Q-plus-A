@@ -76,6 +76,10 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'at the best lift-to-drag ratio of the statistic, the turboprop certified by EASA turns 0.263 of the energy of its fuel into thrust work; the nominal chain of the screenings turns 0.268, so its thermal machine is assumed better than the engine of that type by what the electrical chain loses'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
   - text: the take-off power of about 8.8 MW and the count of nine units of 1,000 kW come from a first-order screening that takes all the take-off power from the turbogenerators
     ref:
       view: EBS

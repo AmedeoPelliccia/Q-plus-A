@@ -1,4 +1,4 @@
-# Generated 2026-11-18 - configuration_screen.py (0.1.0)
+# Generated 2026-11-18 - configuration_screen.py (0.2.0)
 """Screening of configurations: fuselage sections, wings and cruise points, with a polar of first order and an empty mass by option.
 
     python3 tools/configuration_screen.py <analysis folder> <KNOT register> [--check | --write]
@@ -26,12 +26,14 @@ import relations_project as rp  # noqa: E402
 
 BEGIN, END = "<!-- configuration:begin -->", "<!-- configuration:end -->"
 SECTIONS = ("id", "version", "date", "knot", "serves", "missions", "cruise_points", "section_knot", "wing_knot", "objective", "floor_speed_kt",
-            "reference", "propeller_reference", "cabin", "sections", "not_screened", "wings", "drag", "mass", "mechanical", "technology", "sensitivities")
+            "reference", "propeller_reference", "certified_jet", "cabin", "sections", "not_screened", "wings", "drag", "mass", "mechanical", "technology", "sensitivities")
 BASES = ("source", "assumption", "decision")
 NEEDED = {"reference": ("length_m", "width_m", "height_m", "cabin_length_m", "span_m", "wing_area_m2", "zero_fuel_kg", "usable_fuel_kg", "sweep_deg",
                         "cruise_mach", "cruise_altitude_ft", "wing_relief", "power_plant_share", "structure_share", "successor_below",
                         "successor_saving", "successor_span_m", "successor_wing_area_m2", "successor_usable_fuel_kg"),
-          "propeller_reference": ("length_m", "diameter_m", "span_m", "wing_area_m2", "best_lift_to_drag"),
+          "propeller_reference": ("length_m", "diameter_m", "span_m", "wing_area_m2", "best_lift_to_drag", "seats", "seat_pitch_m", "cabin_width_m",
+                                  "certified_mtom_kg", "certified_metric_kg_km", "certified_limit_kg_km"),
+          "certified_jet": ("seats", "seat_pitch_m", "cabin_width_m", "certified_mtom_kg", "certified_metric_kg_km", "certified_limit_kg_km"),
           "cabin": ("seat_pitch_m", "service_area_m2", "flight_deck_m", "ends_factor", "wall_m"),
           "drag": ("skin_friction_low", "skin_friction_high", "taper_function", "fuselage_span_factor", "viscous_factor", "propeller_drag_share",
                    "brace_wetted_share", "wetted_factor", "root_chord_factor", "mean_chord_factor", "tail_volume_horizontal", "tail_volume_vertical",
@@ -168,10 +170,18 @@ def metric_margin(co2, per_km, takeoff, floor):
     return metric / cp.metric_limit(co2["limit"], takeoff) - 1
 
 
+def certified_product(co2, energy, cabin, x, abreast, outer):
+    """The floor of a type by the cabin rule of the screening, and the product of efficiency and lift-to-drag that its certified metric shows."""
+    floor = outer * (math.ceil(x["seats"] / abreast) * x["seat_pitch_m"] + cabin["service_area_m2"] / x["cabin_width_m"])
+    means = sum(cp.reference_masses(co2["reference_masses"], x["certified_mtom_kg"])) / 3
+    return floor, 1000 * mc.G * means / (energy * x["certified_metric_kg_km"] * floor ** co2["cabin_exponent"]["value"])
+
+
 def reference(a, missions, co2):
     """The method set on two types in service. On the jet: the skin-friction coefficient that gives it the lift-to-drag ratio of the mission
     screening, and the masses the method does not compute, by difference. On the turboprop: the zero-lift drag its published best ratio asks.
-    With them, two checks on published figures: the metric of the jet, and the fuel the wing of its successor holds."""
+    With them, three checks on published figures: the metric of the jet, the fuel the wing of its successor holds, and the certified
+    metric of the turboprop."""
     r, d, m = values(a["reference"]), values(a["drag"]), values(a["mass"])
     takeoff, operating = missions["reference"]["sizing_takeoff_kg"]["value"], missions["reference"]["basic_operating_kg"]["value"]
     area, span = r["wing_area_m2"], r["span_m"]
@@ -199,7 +209,13 @@ def reference(a, missions, co2):
     edge = lift_factor(d, p["span_m"] ** 2 / p["wing_area_m2"], other["d"], p["span_m"])
     clean = friction * wet / p["wing_area_m2"]
     asked = ((-edge + math.sqrt(edge ** 2 + viscous / p["best_lift_to_drag"] ** 2)) / (2 * viscous) if viscous > 0 else 1 / (4 * p["best_lift_to_drag"] ** 2 * edge))
-    return {"geom": geom, "form": form, "friction": friction, "zero": zero, "wetted": wetted, "area": area, "aspect": aspect, "lift": lift,
+    energy, cabin, j = missions["fuel_energy_mj_per_kg"]["value"] * 1e6, values(a["cabin"]), values(a["certified_jet"])
+    deck, product = certified_product(co2, energy, cabin, p, a["propeller_reference"]["abreast"], other["outer"])
+    certified = {"floor": deck, "product": product, "efficiency": product / p["best_lift_to_drag"], "limit": cp.metric_limit(co2["limit"], p["certified_mtom_kg"]),
+                 "share": p["certified_metric_kg_km"] / p["certified_limit_kg_km"], "loading": p["certified_mtom_kg"] / deck}
+    deck, product = certified_product(co2, energy, cabin, j, a["certified_jet"]["abreast"], j["cabin_width_m"] + 2 * cabin["wall_m"])
+    jet = {"floor": deck, "product": product, "share": j["certified_metric_kg_km"] / j["certified_limit_kg_km"], "loading": j["certified_mtom_kg"] / deck}
+    return {"geom": geom, "form": form, "friction": friction, "zero": zero, "wetted": wetted, "area": area, "aspect": aspect, "lift": lift, "certified": certified, "certified_jet": jet,
             "target": target, "best": best, "efficiency": 1 / (math.pi * aspect * (shape + viscous * zero)), "takeoff": takeoff, "operating": operating,
             "masses": masses, "structure": structure, "plant": plant, "fixed": operating - structure - plant, "fitted": fitted,
             "nominal": mc.Model(missions, "nominal").product_b, "tank": tank, "holds": r["usable_fuel_kg"],
@@ -364,6 +380,9 @@ def validate(a, register, missions, points):
                 if state.startswith("open") and o not in screened]
     bad += [f"sections: {s['key']} seats a whole number of passengers abreast" for s in a["sections"] if not (isinstance(s.get("abreast"), int) and s["abreast"] > 0)]
     bad += [f"wings: {w['key']} says whether it is braced" for w in a["wings"] if not isinstance(w.get("braced"), bool)]
+    for name, label in (("propeller_reference", "certified_type"), ("certified_jet", "aircraft")):
+        bad += [f"{name}: it seats a whole number of passengers abreast and names the type certified"] * (
+            not (isinstance(a[name].get("abreast"), int) and a[name]["abreast"] > 0 and rp.has_text(a[name].get(label))))
     bad += ["not_screened: each entry names a KNOT, an option and a reason"] * (not (rp.is_list_of(a["not_screened"], dict)
                                                                                      and all(rp.has_text(x.get(k)) for x in a["not_screened"] for k in ("knot", "option", "reason"))))
     known = knus(register)
@@ -409,7 +428,9 @@ def render(a, missions, points, ref, geoms, rows, cases):
                    f"{g['section']:.1f} | {g['cabin']:.1f} | {g['length']:.1f} | {g['slenderness']:.1f} | {g['wetted']:.0f} | {g['floor']:.1f} |")
     for x in a["not_screened"]:
         out += ["", f"Not screened: option {x['option']} of `{x['knot']}`. {x['reason']}."]
-    r, g, d, prop = a["reference"], ref["geom"], a["drag"], a["propeller_reference"]
+    r, g, d, prop, sure, jet, flown = a["reference"], ref["geom"], a["drag"], a["propeller_reference"], ref["certified"], a["certified_jet"], ref["certified_jet"]
+    nominal, drive = values(sets[0]), values(a["mechanical"])
+    spin = next(p for p in pts if p["key"] == record)["propulsor_efficiency"]["value"] * nominal["propulsor_factor"]
     out += ["", "### The method on two types in service", "",
             f"- **Geometry.** The {r['aircraft']} is {g['length']:.2f} m long with a wing of {ref['area']:.1f} m². It has a slenderness of {g['slenderness']:.1f} and, by the method, "
             f"a wetted area {ref['wetted'] / ref['area']:.2f} times its wing area.",
@@ -420,6 +441,17 @@ def render(a, missions, points, ref, geoms, rows, cases):
             f"- **Drag of a propeller aircraft.** With that coefficient the method gives the {prop['aircraft']} a wetted area {ref['propeller_wetted']:.2f} times its wing area and a best "
             f"lift-to-drag ratio of {ref['propeller_clean']:.1f}. The source gives it {prop['best_lift_to_drag']['value']:g}. The method meets that figure with a zero-lift drag "
             f"{ref['propeller']:.2f} times its own, and the propeller points of the screening carry {100 * d['propeller_drag_share']['value']:.0f} % of that excess.",
+            f"- **Certified metric of a propeller aircraft.** EASA certified the {prop['certified_type']} at {prop['certified_metric_kg_km']['value']:g} kg/km and a take-off mass of "
+            f"{prop['certified_mtom_kg']['value']:,} kg: {pct(sure['share'] - 1)} from the new-type level, which its database gives as {prop['certified_limit_kg_km']['value']:g} kg/km "
+            f"and the formula of the screening as {sure['limit']:.3f}. With a floor of {sure['floor']:.1f} m² by the cabin rule of the screening, that metric is a product of efficiency "
+            f"and lift-to-drag of {sure['product']:.2f}. At the best ratio above, the type then turns {sure['efficiency']:.3f} of the energy of its fuel into thrust work. The nominal "
+            f"chain of the screening turns {nominal['turbogenerator_efficiency'] * nominal['electric_chain_efficiency'] * spin:.3f} at `{record}`, and "
+            f"{nominal['turbogenerator_efficiency'] / drive['generator_efficiency'] * drive['gearbox_efficiency'] * spin:.3f} with a mechanical drive. "
+            f"The type weighs {sure['loading']:.0f} kg at take-off for each square metre of that floor.",
+            f"- **Certified metric of a jet.** EASA certified the {jet['aircraft']} at {jet['certified_metric_kg_km']['value']:g} kg/km and a take-off mass of "
+            f"{jet['certified_mtom_kg']['value']:,} kg: {pct(flown['share'] - 1)} from the new-type level of {jet['certified_limit_kg_km']['value']:g} kg/km in its database. With a floor "
+            f"of {flown['floor']:.1f} m² by the same rule, that metric is a product of efficiency and lift-to-drag of {flown['product']:.2f}. The type weighs {flown['loading']:.0f} kg "
+            f"at take-off for each square metre of that floor.",
             f"- **Structure.** The method gives the {r['aircraft']} a wing of {ref['masses']['wing']:,.0f} kg, a fuselage of {ref['masses']['fuselage']:,.0f} kg, tails of "
             f"{ref['masses']['tails']:,.0f} kg and a landing gear of {ref['masses']['gear']:,.0f} kg: {ref['structure']:,.0f} kg, {100 * ref['structure'] / ref['takeoff']:.1f} % of its "
             f"take-off mass of {ref['takeoff']:,} kg. The sample breakdown on record gives {100 * r['structure_share']['value']:.2f} %.",
@@ -476,12 +508,12 @@ def render(a, missions, points, ref, geoms, rows, cases):
     out += ["", "### Against the objective", "",
             f"The objective is a margin of {pct(objective)} to the new-type level, or better. The floor of speed is {a['floor_speed_kt']['value']} kt.", "",
             "| Technology set | Least fuel on the scoring mission, at or above the floor | Its margin | Best margin at or above the floor | Best margin with a mechanical drive | "
-            "Meet the objective at or above the floor | Meet it below the floor |", "|---|---|---|---|---|---|---|"]
+            "Take-off mass for each m² of floor, kg | Meet the objective at or above the floor | Meet it below the floor |", "|---|---|---|---|---|---|---|---|"]
     for tech in sets:
         mine = at_floor(rows, tech["key"])
         slow = [x for x in rows if x["tech"] == tech["key"] and not x["floor"] and x["converged"]]
         if not mine:
-            out.append(f"| {tech['name']} | none closes | - | - | - | 0 | - |")
+            out.append(f"| {tech['name']} | none closes | - | - | - | - | 0 | - |")
             continue
         least, best = min(mine, key=lambda x: x["scoring"]), min(mine, key=lambda x: x["margin"])
         driven = [x for x in mine if x.get("mechanical") is not None]
@@ -489,7 +521,20 @@ def render(a, missions, points, ref, geoms, rows, cases):
         out.append(f"| {tech['name']} | `{least['point']}`, `{least['section']}`, `{least['wing']}`: {least['scoring']:,.0f} kg | {margin(least)} | "
                    f"`{best['point']}`, `{best['section']}`, `{best['wing']}`: {margin(best)} | "
                    + (f"`{other['point']}`, `{other['section']}`, `{other['wing']}`: {margin(other, 'mechanical')}" if other else "-")
+                   + f" | {min(x['takeoff'] / geoms[x['section']]['floor'] for x in mine):.0f} to {max(x['takeoff'] / geoms[x['section']]['floor'] for x in mine):.0f}"
                    + f" | {sum(1 for x in mine if x['margin'] <= objective + 1e-9)} of {len(mine)} | {sum(1 for x in slow if x['margin'] <= objective + 1e-9)} of {len(slow)} |")
+    out += ["", "### What the objective asks", "",
+            "For the aircraft of best margin at or above the floor in each set: the product of efficiency and best lift-to-drag ratio it has, and the product that would put it "
+            f"at the objective at its take-off mass and on its floor. The certified turboprop has {sure['product']:.2f}, at {prop['certified_mtom_kg']['value'] / 1000:.1f} t and "
+            f"{sure['floor']:.1f} m²; the certified jet has {flown['product']:.2f}, at {jet['certified_mtom_kg']['value'] / 1000:.1f} t and {flown['floor']:.1f} m².", "",
+            "| Technology set | Aircraft | Take-off mass, t | Floor, m² | Product it has | Product the objective asks |", "|---|---|---|---|---|---|"]
+    for tech in sets:
+        mine = at_floor(rows, tech["key"])
+        if mine:
+            best = min(mine, key=lambda x: x["margin"])
+            has = best["chain"] * best["best"]
+            out.append(f"| {tech['name']} | `{best['point']}`, `{best['section']}`, `{best['wing']}` | {best['takeoff'] / 1000:.1f} | {geoms[best['section']]['floor']:.1f} | "
+                       f"{has:.2f} | {has * (1 + best['margin']) / (1 + objective):.2f} |")
     choices = (("Section", sk, sk[0], lambda k, o: [((k, w, p), (o, w, p)) for w in wk for p in pk]),
                ("Wing", wk, wk[0], lambda k, o: [((s, k, p), (s, o, p)) for s in sk for p in pk]),
                ("Cruise point", pk, record, lambda k, o: [((s, w, k), (s, w, o)) for s in sk for w in wk]))

@@ -1,4 +1,4 @@
-# Generated 2026-11-18 - configuration_screen_test.py (0.1.0)
+# Generated 2026-11-18 - configuration_screen_test.py (0.2.0)
 """Tests of tools/configuration_screen.py on the configuration screening of the eWTW. Run from the repository root:
 
     python3 tools/configuration_screen_test.py
@@ -25,8 +25,8 @@ MODEL = pathlib.Path("01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360
 REG = MODEL / "01-02-01-01-01-02_KNOT_Knowledge-Node-Register"
 CFG = REG / "000_General" / "evidence" / "CFG-EWTW-AER-001"
 G = 9.80665
-HEAD = ("CFG-EWTW-AER-001 0.1.0 for KNOT-EWTW-AER-001: 4 sections, 3 wings and 4 cruise points at 3 technology sets, on the missions of "
-        "MSN-EWTW-NRG-001 0.3.0; 106 figures, 52 of them assumptions; rule failures: none")
+HEAD = ("CFG-EWTW-AER-001 0.2.0 for KNOT-EWTW-AER-001: 4 sections, 3 wings and 4 cruise points at 3 technology sets, on the missions of "
+        "MSN-EWTW-NRG-001 0.3.0; 118 figures, 53 of them assumptions; rule failures: none")
 
 
 def read(folder, name):
@@ -154,6 +154,49 @@ class Committed(unittest.TestCase):
         self.assertAlmostEqual(self.ref["margin"], 0.0855, delta=0.0005)
         self.assertAlmostEqual(self.ref["expected"], 0.89 / 0.827 - 1, places=9)           # 11 % below, and 17.3 % less fuel than the reference
         self.assertLess(abs(self.ref["margin"] - self.ref["expected"]), 0.01)
+
+    def test_certified_turboprop_by_hand(self):
+        sure, co2 = self.ref["certified"], self.points["co2_metric"]
+        floor = 2.8 * (18 * 0.737 + 15.9 / 2.57)                           # 18 rows of four, and the service floor of the screening, on the width of the type
+        self.assertAlmostEqual(sure["floor"], floor, places=9)
+        self.assertAlmostEqual(floor, 54.5, delta=0.05)
+        product = 1000 * G * sum(cp.reference_masses(co2["reference_masses"], 23000)) / 3 / (43.0e6 * 0.404 * floor ** 0.24)
+        self.assertAlmostEqual(sure["product"], product, places=9)
+        self.assertAlmostEqual(product, 4.14, delta=0.005)
+        self.assertAlmostEqual(sure["efficiency"], product / 15.74, places=12)             # at the best ratio the propeller points are set on
+        self.assertAlmostEqual(sure["efficiency"], 0.263, delta=0.0005)
+        self.assertAlmostEqual(sure["share"], 0.404 / 0.507, places=12)                     # 79.7 % of the new-type level
+        self.assertAlmostEqual(sure["limit"], 0.507, delta=0.0005)                          # the limit formula on record gives the limit the regulator prints
+        self.assertAlmostEqual(sure["loading"], 23000 / floor, places=9)
+        nominal = 0.35 * 0.90 * 0.85                                                        # the nominal chain is within 2 % of what the certified type shows
+        self.assertLess(abs(nominal / sure["efficiency"] - 1), 0.02)
+
+    def test_certified_jet_by_hand(self):
+        jet, co2 = self.ref["certified_jet"], self.points["co2_metric"]
+        floor = (3.28 + 2 * 0.135) * (24 * 0.82 + 15.9 / 3.28)             # 24 rows of five at the pitch of the screening
+        self.assertAlmostEqual(jet["floor"], floor, places=9)
+        self.assertAlmostEqual(floor, 87.1, delta=0.05)
+        product = 1000 * G * sum(cp.reference_masses(co2["reference_masses"], 63730)) / 3 / (43.0e6 * 0.677 * floor ** 0.24)
+        self.assertAlmostEqual(jet["product"], product, places=9)
+        self.assertAlmostEqual(product, 6.03, delta=0.005)
+        self.assertAlmostEqual(jet["share"], 0.677 / 0.764, places=12)                      # 88.6 % of the new-type level
+        self.assertGreater(jet["product"], 1.4 * self.ref["certified"]["product"])          # the jet of today against the turboprop of today
+
+    def test_floor_of_a_certified_type_counts_whole_rows(self):
+        co2, cabin = self.points["co2_metric"], cs.values(self.a["cabin"])
+        x = {"seats": 74, "seat_pitch_m": 0.8, "cabin_width_m": 2.5, "certified_mtom_kg": 23000, "certified_metric_kg_km": 0.4}
+        floor, _ = cs.certified_product(co2, 43.0e6, cabin, x, 4, 2.8)
+        self.assertAlmostEqual(floor, 2.8 * (19 * 0.8 + 15.9 / 2.5), places=9)                # 74 seats four abreast take 19 rows
+
+    def test_shorter_requirement_mission_makes_a_lighter_aircraft(self):
+        case = {"name": "x", "set": [{"where": "missions", "path": "missions.L", "field": "range_km", "value": 1596}]}
+        b, flown, at, failure = cs.changed(self.a, self.missions, self.points, case)
+        self.assertIsNone(failure)
+        rows = {(x["tech"], x["section"], x["wing"], x["point"]): x for x in cs.compute(b, flown, at, mechanical=False)[2]}
+        key = ("T1", "F4", "WA", "P2")
+        self.assertLess(rows[key]["takeoff"], self.grid[key]["takeoff"] - 300)
+        self.assertLess(rows[key]["loaded"], self.grid[key]["loaded"])
+        self.assertLess(rows[key]["margin"], self.grid[key]["margin"])
 
     def test_fuel_a_wing_holds_is_checked_on_the_successor(self):
         self.assertAlmostEqual(self.ref["successor_holds"], 12971 * (103 ** 2 / 33.72) / (92.5 ** 2 / 28.72), places=6)
@@ -353,6 +396,14 @@ class Changed(unittest.TestCase):
     def test_figure_of_a_section_is_required(self):
         self.edit(lambda a: a["drag"].pop("viscous_factor"))
         self.fails("drag: `viscous_factor` is a figure")
+
+    def test_certified_types_are_complete(self):
+        self.edit(lambda a: a["certified_jet"].pop("certified_metric_kg_km"))
+        self.fails("certified_jet: `certified_metric_kg_km` is a figure")
+
+    def test_certified_types_are_named_and_seated(self):
+        self.edit(lambda a: a["propeller_reference"].update(abreast=0))
+        self.fails("propeller_reference: it seats a whole number of passengers abreast and names the type certified")
 
     def test_figure_read_at_a_source_names_it(self):
         self.edit(lambda a: a["mass"]["tail_kg_m2"].pop("ref"))

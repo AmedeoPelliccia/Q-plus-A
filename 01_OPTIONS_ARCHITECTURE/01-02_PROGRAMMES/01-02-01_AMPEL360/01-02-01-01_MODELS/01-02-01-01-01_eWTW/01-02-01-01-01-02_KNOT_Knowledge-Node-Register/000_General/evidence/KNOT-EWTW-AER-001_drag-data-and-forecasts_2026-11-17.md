@@ -37,7 +37,7 @@ The report gives one range of lift-to-drag ratios without a source, and no figur
 | 4 | The lift-to-drag ratios cited for regional jets in cruise, near Mach 0.78 and 35,000 ft, lie between 14 and 17 | The report, from design handbooks and literature it does not name | As reported |
 | 5 | The handbooks of Torenbeek, Roskam and Raymer give ranges for the equivalent skin-friction coefficient and for the span efficiency factor of transport aircraft | The report | As reported: no value and no page is given |
 | 6 | ICAO Doc 10127 and the technology appendix of the report on the long-term aspirational goal set technology goals for 2027, 2037 and 2050, with forecasts of lift-to-drag ratio and of engine efficiency for regional jets and turboprops | The report | As reported: neither the report nor the reviewer could open the documents |
-| 7 | The database of statement 3 holds recent regional jets and some turboprops, and each entry gives the metric value, the maximum take-off mass and the reference geometric factor | The report | As reported: the entries were not read |
+| 7 | The database of statement 3 holds recent regional jets and some turboprops, and each entry gives the metric value, the maximum take-off mass and the reference geometric factor | The report | As reported: the entries were not read. *Note of 2026-11-18: read since, from the file the authority attached. It holds one turboprop and no regional jet of this kind, and gives no reference geometric factor ([record](KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md), findings 8 and 9)* |
 
 ### Findings of absence
 
