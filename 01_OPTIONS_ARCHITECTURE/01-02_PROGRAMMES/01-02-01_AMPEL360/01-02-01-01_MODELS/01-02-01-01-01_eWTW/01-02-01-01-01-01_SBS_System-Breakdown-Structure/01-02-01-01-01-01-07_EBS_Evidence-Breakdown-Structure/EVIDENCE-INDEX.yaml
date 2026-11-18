@@ -431,12 +431,29 @@ rows:
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk
     note: >
-      Concept of operations of the environmental control system 0.1.0: phases, functions,
+      Concept of operations of the environmental control system 0.1.2: phases, functions,
       supplies, failure and ground cases, and open inputs. Input in conops.yaml beside it;
       the tables are written and checked by tools/conops_check.py. It carries no figure of
       power and states no conformity.
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+
+  - class: migration-or-completion-record
+    subject: F24
+    path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md
+    status: on-disk
+    note: >
+      Withdrawal record of the publications of chapter 021, of 2026-11-18, at the request of
+      the architecture authority: finding F24 of the model findings register. The tree of the
+      chapter in the information architecture of the TPuBS (789 files), its module of the
+      maintenance manual and its rows of the consolidated registers, measured against the
+      rule on publication content classes, CM-001 section 9 and ruling R1 of
+      KNOT-EWTW-NRG-001. It says what is kept, what the tree held that is written nowhere
+      else, and how to restore it from commit 53848df1. Ratified by the merge of the pull
+      request that carries it.
+    citedBy:
+      - ../README.md
+      - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
 
   - class: ratified-act-or-convention
     subject: KNOT-EWTW-NRG-001

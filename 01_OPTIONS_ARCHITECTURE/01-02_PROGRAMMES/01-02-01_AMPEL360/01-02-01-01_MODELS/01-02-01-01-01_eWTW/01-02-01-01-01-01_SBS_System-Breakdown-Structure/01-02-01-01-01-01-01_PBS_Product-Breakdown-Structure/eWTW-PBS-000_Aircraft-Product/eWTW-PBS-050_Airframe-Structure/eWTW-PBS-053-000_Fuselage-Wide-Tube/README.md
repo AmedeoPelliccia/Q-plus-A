@@ -123,8 +123,8 @@ one defining section and two overlays:
   What the bay holds is open (`KNOT-EWTW-NRG-001`): after ruling R2 of
   2026-11-14 fuel is carried in every option and a propulsion battery in
   option C only, and where the fuel is carried is not decided. The
-  illustration `ICN-EWTW-021000010` uses the same 053-900 references under
-  the label *BATT BAY*; it is not an authority for the product. No
+  illustration that labelled the bay *BATT BAY* was withdrawn on
+  2026-11-18 with the publications of chapter 021. No
   conventional analogue
   (a kerosene tank is a wing-box volume, not a fuselage structural bay). ->
   **STD-G**.

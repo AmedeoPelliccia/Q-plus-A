@@ -14,7 +14,7 @@ CSN `531003` - grammar `EWTW-531003-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 ## Notes
 
-- E-E bay ventilation function is ATA 021 (REF ICN-EWTW-021000010).
+- E-E bay ventilation function is ATA 021. Note amended on 2026-11-18 (F01).
 
 Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
 

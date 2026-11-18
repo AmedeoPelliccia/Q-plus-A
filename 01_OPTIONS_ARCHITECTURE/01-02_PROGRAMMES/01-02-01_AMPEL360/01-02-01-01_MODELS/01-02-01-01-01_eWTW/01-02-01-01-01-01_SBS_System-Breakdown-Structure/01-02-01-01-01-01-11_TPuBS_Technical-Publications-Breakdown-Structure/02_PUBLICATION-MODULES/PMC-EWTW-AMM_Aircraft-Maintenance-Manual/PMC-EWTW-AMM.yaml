@@ -19,7 +19,8 @@ selection:
     bands:
       - "S-ATLAS_000-099"
 
-publicationModules:
-  - "PM-EWTW-AMM-021_AIR-CONDITIONING.yaml"
+# None at present. The module of chapter 021 was withdrawn on 2026-11-18
+# with the publications of that chapter (withdrawal record at the root of the TPuBS).
+publicationModules: []
 
 rule: "PM references DMs by DMC; it never holds DM content (linked, not stored)."

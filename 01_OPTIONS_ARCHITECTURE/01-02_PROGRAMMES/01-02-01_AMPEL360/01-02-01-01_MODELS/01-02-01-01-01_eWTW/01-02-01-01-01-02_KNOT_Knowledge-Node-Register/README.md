@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.19 · **Date:** 2026-11-18
+**Version:** 0.11.20 · **Date:** 2026-11-18
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs**, the knowledge threads — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -422,6 +422,7 @@ The first line reads `22 KNOTs, 67 KNUs, 37 S-ATLAS chapters; rule failures: non
 | 0.11.17 | 2026-11-18 | The technology goals of ICAO read in its Environmental Reports of 2019 and 2022, by the route the authority indicated: eight statements read at the source, three findings of absence. The regional-jet reference of 2017 is 11 % below the new-type level, the margin of criterion `M5`; the goals are 16 % below for 2027 and 26 % below for 2037. The record of the same day that called the forecasts unread carries a note |
 | 0.11.18 | 2026-11-18 | Decision of the authority: the objective is 26 % below the new-type level, and beyond. Criterion `M5` restated, with the legal minimum as its floor, in a record that also holds what the decision corrects and eight statements read for it. First screening of the configurations, `CFG-EWTW-AER-001`, written and checked by `tools/configuration_screen.py`: dimensions by section, a polar and an empty mass by option, 144 aircraft, and fourteen assumptions changed one at a time. `KNU-EWTW-WNG-001-02` and `KNU-EWTW-AER-001-02` wait for review; `KNU-EWTW-FUS-001-02` and `KNU-EWTW-MAS-001-02` are in progress |
 | 0.11.19 | 2026-11-18 | The database of EASA of certified carbon dioxide metrics, issue 12, attached by the authority and read: seven statements, four findings of absence. The ATR 72-212A is certified 20.3 % below the new-type level and the A220-100 11.4 % below; the limit formula of the screenings is confirmed on four types. Screening of the configurations 0.2.0: the two types as checks, the product the objective asks, and two more assumptions changed. Notes on the four records that could not read the file |
+| 0.11.20 | 2026-11-18 | Concept of operations of the environmental control system 0.1.2, corrected: the taxonomy does name the air supply without bleed, with its electric compressor, at `021-900-070`. The function `fresh-air` is bound to `021-900` and the open input on its taxonomy home is restated. Found while the publications of chapter `021` were reviewed and withdrawn from the TPuBS (model README 0.3.29, finding F24). No KNOT and no KNU changes |
 
 [MODEL]: ../README.md
 [MODEL-PATH]: ../README.md#path-to-the-concept-baseline-of-the-aircraft

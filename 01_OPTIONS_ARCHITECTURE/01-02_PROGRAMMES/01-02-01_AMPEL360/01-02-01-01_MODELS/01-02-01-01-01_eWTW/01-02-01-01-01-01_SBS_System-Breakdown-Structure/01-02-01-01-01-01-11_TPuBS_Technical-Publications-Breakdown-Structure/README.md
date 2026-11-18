@@ -11,7 +11,7 @@ csdb: S1000D Issue 4.2
 owner: Q-DATAGOV
 governance: [DEGF-v1.0, LC-A..LC-N, No-AAA, SSOT+PUB]
 status: baseline
-version: "3.0"
+version: "3.0.1"
 supersedes: "TPuBS README v2.0 (manual-first; S-ATLAS replicated under each PMC)"
 ---
 
@@ -20,6 +20,8 @@ supersedes: "TPuBS README v2.0 (manual-first; S-ATLAS replicated under each PMC)
 The **root** of the eWTW model's technical information, and the `-11` (PUB) member of the SBS. The TPuBS is organized **information-centric**: a single canonical S-ATLAS information architecture with a **DMRL per node**, a common Data Module pool, and publications defined as **Publication Module compositions** that reference — never own — the Data Modules.
 
 > **Correction (v3.0).** v2.0 organized the TPuBS manual-first, replicating the S-ATLAS/ATA breakdown under every PMC. That recreated the traditional book paradigm in which information is implicitly "owned" by the manual. Per the CSDB/S1000D principle, a Data Module is a standalone, reusable information unit identified by its DMC and managed in the CSDB; the manual is not the primary container of information but a **controlled composition of the common information pool**.
+
+> **Note (v3.0.1, 2026-11-18).** The information architecture holds one chapter today, `003-900`. The publications of chapter `021` were withdrawn: they came before the product they described and carried procedures at stage `LC-A` ([withdrawal record](TPuBS-EWTW-021_withdrawal_2026-11-18.md)). Where the sections below name chapter `021`, a compressor or the air conditioning, they show the pattern and point to no file. The doctrine is unchanged.
 
 ## Doctrine
 
@@ -35,10 +37,10 @@ Equivalently:
 
 - [1. The Four Layers](#1-the-four-layers)
 - [2. Logical Model](#2-logical-model)
-- [3. DMRL per S-ATLAS Node](#3-dmrl-per-g-atlas-node)
-- [4. Publication Modules Separated from the S-ATLAS Tree](#4-publication-modules-separated-from-the-g-atlas-tree)
+- [3. DMRL per S-ATLAS Node](#3-dmrl-per-s-atlas-node)
+- [4. Publication Modules Separated from the S-ATLAS Tree](#4-publication-modules-separated-from-the-s-atlas-tree)
 - [5. Not Every Node Needs Every Manual](#5-not-every-node-needs-every-manual)
-- [6. S-ATLAS Is the Allocation Backbone, Not a Mandatory TOC](#6-g-atlas-is-the-allocation-backbone-not-a-mandatory-toc)
+- [6. S-ATLAS Is the Allocation Backbone, Not a Mandatory TOC](#6-s-atlas-is-the-allocation-backbone-not-a-mandatory-toc)
 - [7. The 19 PMCs](#7-the-19-pmcs)
 - [8. SSOT + PUB Preserved](#8-ssot--pub-preserved)
 - [9. Governance](#9-governance)
@@ -138,7 +140,7 @@ Inside `02_PUBLICATION-MODULES`, a PMC contains the **editorial structure of the
 02_PUBLICATION-MODULES/
 └── PMC-EWTW-AMM_Aircraft-Maintenance-Manual/
     ├── PMC-EWTW-AMM.yaml                     ← publication configuration / selection rules
-    ├── PM-EWTW-AMM-021_AIR-CONDITIONING.yaml ← editorial projection of chapter 021
+    ├── PM-EWTW-AMM-<chapter>_<TITLE>.yaml    ← editorial projection of one chapter (none at present)
     ├── pm.xml · publication-baseline.yaml · applicability.yaml · dm-reference-index.yaml
     └── …
 ```
@@ -231,8 +233,8 @@ Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA** a
 <!--
 Last.MarkedDown:
   artifact: TPuBS/README.md (root)
-  revision: v3.0 — information-centric; single S-ATLAS instance; DMRL per node; PMCs as publication views
+  revision: v3.0.1 — note on the withdrawal of the chapter 021 publications, and three anchors of the index; doctrine of v3.0 unchanged (information-centric; single S-ATLAS instance; DMRL per node; PMCs as publication views)
   supersedes: v2.0 (manual-first; S-ATLAS replicated under each PMC)
-  version: "3.0"
+  version: "3.0.1"
 .YieldedAlgorithmicMachineLearning: true
 -->

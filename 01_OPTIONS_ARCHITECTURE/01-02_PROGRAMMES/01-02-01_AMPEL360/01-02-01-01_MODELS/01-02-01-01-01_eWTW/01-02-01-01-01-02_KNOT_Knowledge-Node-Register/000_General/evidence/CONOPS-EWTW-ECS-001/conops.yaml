@@ -8,7 +8,7 @@
 # tools/conops_check.py checks the form and writes the tables of the README.
 conops:
   id: CONOPS-EWTW-ECS-001
-  version: '0.1.1'
+  version: '0.1.2'
   date: 2026-11-14
   title: How the environmental control system of the eWTW is operated, by phase and by failure case
   knot: KNOT-EWTW-SRC-001
@@ -21,10 +21,10 @@ conops:
   functions:
   - key: fresh-air
     text: Take outside air and compress it to cabin pressure, with electric compressors
-    taxonomy: '021'
+    taxonomy: '021-900'
     basis: declared
     source: "model README, section 3, row 9: a bleedless system with electric compressors"
-    note: S-ATLAS 021 names no node for this compression (open input compression-home)
+    note: The taxonomy names the air supply without bleed, with its electric compressor, as a subject of this section, 021-900-070. It names it an interface, and the chapter has no section for compression (open input compression-home)
   - key: cooling
     text: Cool and dry the air for the cabin in the electric packs
     taxonomy: '021-510'
@@ -221,7 +221,7 @@ conops:
     blocks: [climb, descent]
     decided_by: authority
   - key: compression-home
-    text: The taxonomy home of the fresh-air compression. S-ATLAS 021 names an electric compressor inside the cooling unit, 021-510, and no node for compressing outside air to cabin pressure. The taxonomy is a protected area
+    text: Whether the fresh-air compressors belong where the taxonomy names them. S-ATLAS 021 names the air supply without bleed, with its electric compressor, as an interface of the energy-system thermal integration, 021-900-070, and an electric compressor inside the cooling unit, 021-510-010. The chapter has no section for compression. The taxonomy is a protected area
     blocks: [fresh-air]
     decided_by: authority
   - key: power-by-phase

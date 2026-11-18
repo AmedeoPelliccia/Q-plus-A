@@ -14,6 +14,6 @@ CSN `539001` - grammar `EWTW-539001-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 ## Notes
 
-- Energy-carrier bay. What it holds is open (`KNOT-EWTW-NRG-001`): after ruling R2 of 2026-11-14, fuel in every option and a propulsion battery in option C only. The carrier units are not part of this station: fuel storage is S-ATLAS `028`, a propulsion battery S-ATLAS `074`. The illustration ICN-EWTW-021000010 uses the same 053-900 references under the label *BATT BAY*; it is not an authority for the product. Note amended on 2026-11-14 (F01).
+- Energy-carrier bay. What it holds is open (`KNOT-EWTW-NRG-001`): after ruling R2 of 2026-11-14, fuel in every option and a propulsion battery in option C only. The carrier units are not part of this station: fuel storage is S-ATLAS `028`, a propulsion battery S-ATLAS `074`. The illustration that labelled this bay *BATT BAY* was withdrawn on 2026-11-18 with the publications of chapter 021. Note amended on 2026-11-14 and on 2026-11-18 (F01).
 
 Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)
