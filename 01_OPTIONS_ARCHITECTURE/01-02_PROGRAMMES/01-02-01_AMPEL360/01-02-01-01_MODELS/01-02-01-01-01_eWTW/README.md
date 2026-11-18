@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.25 |
+| Version | 0.3.26 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -412,6 +412,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.23 | 2026-11-16 | Ruling R1 of the cruise point: its maturity records approved, and the minimum objective applied at the release of the preliminary-design baseline (KNOT register 0.11.14). The authority states that the wide tube is for more comfort and as the ground for an architecture better suited to tanks of liquid hydrogen, on an aircraft far from a blended wing body: the class of the identity table stands. §6 proposes a path to the concept baseline of the aircraft |
 | 0.3.24 | 2026-11-17 | Step 1 of the path to the concept baseline delivered: three research records on sections and cabins, wings and span limits, and drag data (KNOT register 0.11.15). Step 3 gains the empty mass by option and a check through fuel |
 | 0.3.25 | 2026-11-18 | Research by the reviewer, at the request of the authority: four records on wide sections and hydrogen tanks, wings in service, the method of the polar, and structural mass with additive manufacturing (KNOT register 0.11.16). `KNOT-EWTW-MAS-001` opened for the empty mass by option; the cruise point depends on it |
+| 0.3.26 | 2026-11-18 | The technology goals of ICAO, read in its Environmental Reports (KNOT register 0.11.17): the minimum objective on carbon dioxide is the margin of the regional jet of 2017, and the goal of the experts for 2037 is 26 % below the new-type level. The eWTW of the screening reaches it only with every favourable value at once |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

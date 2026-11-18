@@ -33,6 +33,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'the independent experts of ICAO take 2 to 4 % off the empty mass by 2027 and 8 to 10 % by 2037, at nominal confidence, for the larger classes'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
   - text: 'the mission screening keeps the empty mass of the reference type, 27,753 kg, for every option'
     ref:
       view: EBS

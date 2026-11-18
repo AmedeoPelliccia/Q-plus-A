@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.16 · **Date:** 2026-11-18
+**Version:** 0.11.17 · **Date:** 2026-11-18
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs**, the knowledge threads — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -121,10 +121,12 @@ On the same day the authority said what the wide tube is for: more comfort, and 
 - On hydrogen the two sources disagree: one design widens a regional fuselage for the tanks, one parametric study finds two points more energy for it. The energy of the requirement mission is 2.4 to 2.8 t of hydrogen.
 - The jets now in production span 33.7 to 35.1 m, at an aspect ratio of 11 to 12: the room inside code letter C is used. This corrects the record of 2026-11-17.
 - Propellers at the wingtip cut the drag of a wing by 5 to 15 % in a small wind tunnel; the flight campaign on record reports no aerodynamic gain.
-- The polar has a public method. The forecasts of ICAO and the database of EASA still do not open from here.
+- The polar has a public method. The database of EASA still does not open from here; the forecasts of ICAO were read the same day in its Environmental Reports (below).
 - A structure largely optimised in topology would gain 1.4 to 4.7 % of the empty mass, 1 to 3.5 % of the fuel, on two assumptions of the reviewer. Composite structure gains about 8 %. The regulator's policy on additive parts stops at low criticality.
 
 **`KNOT-EWTW-MAS-001`, opened on 2026-11-18.** The screening kept the empty mass of the reference type for every option, and two of the studies read show a comparison by drag alone to mislead. The KNOT is an obligation in chapters `008`, `053`, `057` and `058`: the empty mass by option, and the factor each structural technology is allowed with its maturity. `KNOT-EWTW-CRZ-001` now depends on it as it does on the polar.
+
+**The technology goals of ICAO.** The review of the independent experts is sold; the authority pointed to its summaries in the Environmental Reports of ICAO, which are free, and they open ([record](000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md)). The experts put their regional-jet reference of 2017, the E190-E2, 11 % below the new-type level of the carbon dioxide standard, and set goals of 16 % below for 2027 and 26 % below for 2037. So the minimum objective of criterion `M5` is where the regional jet already stood in 2017. At nominal values the eWTW of the screening is 9.5 % above the level, because its nominal values reproduce the fuel of the Embraer 190 of the generation before. It reaches the goal of 2037 only with every favourable value at once. Whether that goal becomes the target of the eWTW, beside the floor of `M5`, is a decision of the authority.
 
 ### North star
 
@@ -398,6 +400,7 @@ The first line reads `22 KNOTs, 67 KNUs, 37 S-ATLAS chapters; rule failures: non
 | 0.11.14 | 2026-11-16 | Ruling R1 of `KNOT-EWTW-CRZ-001`: its three maturity records approved, and criterion `M5` applied at the release of the preliminary-design baseline; the ten criteria stay proposed. The authority states what the wide tube is for, comfort and the ground for tanks of liquid hydrogen: recorded in `KNOT-EWTW-FUS-001`, in the research context and in the rationale of ruling R1 of `KNOT-EWTW-NRG-001`, restated before ratification. KNOT stands for Knowledge Thread (CM-004, second revision of 2026-11-16). A path to the concept baseline is proposed in the model README |
 | 0.11.15 | 2026-11-17 | Research on the dimensions of the airframe reviewed: three records, for `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01` and `KNU-EWTW-AER-001-01`, now in progress. Sixteen statements read by the reviewer, thirteen as reported, eleven findings of absence. The context of `KNOT-EWTW-WNG-001` gains the span limit read at a source, and the polar of `KNOT-EWTW-AER-001` is to be checked through fuel and carried with mass |
 | 0.11.16 | 2026-11-18 | Research done by the reviewer at the request of the authority: four records, thirty-eight statements read at the source and fourteen findings of absence, with no second reader. `KNOT-EWTW-MAS-001` opened, an obligation for the empty mass by option and for the factor each structural technology is allowed; `KNOT-EWTW-CRZ-001` depends on it. The record of the wings of 2026-11-17 is corrected by a dated note: the jets now in production are close to the span limit. 22 KNOTs, 67 KNUs |
+| 0.11.17 | 2026-11-18 | The technology goals of ICAO read in its Environmental Reports of 2019 and 2022, by the route the authority indicated: eight statements read at the source, three findings of absence. The regional-jet reference of 2017 is 11 % below the new-type level, the margin of criterion `M5`; the goals are 16 % below for 2027 and 26 % below for 2037. The record of the same day that called the forecasts unread carries a note |
 
 [MODEL]: ../README.md
 [MODEL-PATH]: ../README.md#path-to-the-concept-baseline-of-the-aircraft

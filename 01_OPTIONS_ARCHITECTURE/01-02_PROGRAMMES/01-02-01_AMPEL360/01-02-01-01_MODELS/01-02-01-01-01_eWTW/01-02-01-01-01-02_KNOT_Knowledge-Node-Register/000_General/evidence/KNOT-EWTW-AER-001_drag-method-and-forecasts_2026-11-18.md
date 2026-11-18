@@ -27,7 +27,7 @@ Four statements say that a document could not be read from here. They are limits
 
 | # | Statement |
 |---|---|
-| 5 | ICAO Doc 10127 and the report on the long-term aspirational goal did not open, at any of the addresses tried on 2026-11-16 and 2026-11-18. No figure of a forecast of ICAO is on record |
+| 5 | ICAO Doc 10127 and the report on the long-term aspirational goal did not open, at any of the addresses tried on 2026-11-16 and 2026-11-18. No figure of a forecast of ICAO is on record. *Note of the same day: the goals were then read in the summaries of the Environmental Reports of ICAO, by the route the authority indicated ([record](KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md)). The two documents themselves stay unread* |
 | 6 | The database of EASA of certified carbon dioxide values is a spreadsheet, and it could not be read as text. Whether the types of the class are in it is not known |
 | 7 | The European Aviation Environmental Report gives the certified values and the targets of Clean Aviation as images, with no figure in its text |
 | 8 | The lecture notes give no wetted area for a type of the class in the text read |

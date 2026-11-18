@@ -155,6 +155,10 @@ knot:
     source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
     state: APPROVED
   assumptions:
+  - text: 'the minimum objective of criterion M5, 11 % below the new-type level, is the margin the independent experts of ICAO give to the regional jet in service in 2017; their goal for 2037 is 26 % below, which the screening reaches only with every favourable value at once'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
   - text: 'the mission screening is fitted to sectors that its reference type flew at long-range cruise, and it carries no cruise speed of the eWTW'
     ref:
       view: EBS

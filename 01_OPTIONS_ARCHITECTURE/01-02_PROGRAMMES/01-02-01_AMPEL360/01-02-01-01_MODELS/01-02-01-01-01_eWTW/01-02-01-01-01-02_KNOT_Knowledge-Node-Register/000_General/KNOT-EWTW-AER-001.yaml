@@ -35,6 +35,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'the independent experts of ICAO put their regional-jet reference of 2017, the E190-E2, 11 % below the new-type level, and set goals of 16 % below for 2027 and 26 % below for 2037; they are forecasts at nominal confidence'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
   - text: 'the polar of first order follows a public method: zero-lift drag from the wetted area and a skin-friction coefficient, induced drag from the aspect ratio and a span efficiency of 0.85, wave drag apart'
     ref:
       view: EBS
@@ -88,6 +92,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
   - knu_id: KNU-EWTW-AER-001-02
     title: 'Polar of the eWTW in the screening'
     knu_class: ANALYSIS_PACKAGE
