@@ -74,6 +74,10 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'in a first screening the electrical chain costs about ten points of margin of the carbon dioxide metric against a mechanical drive on the same airframe, and no gain is credited to propulsors along the span; what they give back is still to be shown in figures'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - text: the PBS skeleton holds a group for the thermal machine since 2026-11-14, with the turbogenerator chapter alone, beside the electric group
     ref:
       view: PBS
@@ -159,6 +163,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
   - knu_id: KNU-EWTW-PRP-001-04
     title: Propulsion failure cases
     knu_class: ANALYSIS_PACKAGE

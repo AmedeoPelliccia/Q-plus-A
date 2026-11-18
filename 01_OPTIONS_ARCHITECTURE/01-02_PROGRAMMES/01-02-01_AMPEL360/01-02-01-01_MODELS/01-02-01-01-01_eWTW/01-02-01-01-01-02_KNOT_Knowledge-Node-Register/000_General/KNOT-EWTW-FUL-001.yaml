@@ -73,6 +73,10 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'in a first screening the fuel of the requirement mission is 0.85 to 1.15 times what the wings of options B and C of KNOT-EWTW-WNG-001 hold, by a rule of similarity with the wing of the reference type'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - text: the carrier is not aft of the rear pressure bulkhead
     ref:
       view: baseline

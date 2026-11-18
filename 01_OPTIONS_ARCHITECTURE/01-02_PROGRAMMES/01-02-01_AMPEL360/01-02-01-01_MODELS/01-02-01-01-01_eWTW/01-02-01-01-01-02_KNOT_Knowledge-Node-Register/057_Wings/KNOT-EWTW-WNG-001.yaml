@@ -44,6 +44,10 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'a first screening sizes three wings, of aspect ratio 11.5, 14 and 17 with a brace, at 560 and 620 kg/m2; by a rule of similarity the two smaller wings have little or no room for the fuel of the requirement mission, which is 0.85 to 1.15 times what they hold, and the braced wing passes 36 m only at the take-off masses of the nominal case'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - text: 'the aspect ratio of the class is 11 to 12, the square of the span over the reference area of the jets now in production; a higher one inside code letter C needs a smaller wing'
     ref:
       view: EBS
@@ -122,11 +126,13 @@ knot:
     exit: 'Dimensions for each option and cruise point, with the assumptions behind them, in a record the screening and the polar read'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-18'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - knu_id: KNU-EWTW-WNG-001-03
     title: 'Decision criteria and maturity thresholds'
     knu_class: REQUIREMENT_SET

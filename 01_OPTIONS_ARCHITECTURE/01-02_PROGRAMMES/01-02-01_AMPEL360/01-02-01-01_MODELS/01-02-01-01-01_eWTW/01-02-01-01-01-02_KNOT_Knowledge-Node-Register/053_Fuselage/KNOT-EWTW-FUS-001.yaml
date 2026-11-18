@@ -46,6 +46,10 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'a first screening sizes option A at four abreast and option B at five and six abreast, on the cabin widths of three types in service, and prices a wider cabin for the same seats; the section moves the fuel by about 2 %, inside the error of its fuselage formula. Option C is not screened'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - text: 'the widths read at a manufacturer are 2.74 m for four seats abreast, 3.28 m for five and 3.63 m for six; two aisles start at seven abreast and are not found to pay below about 180 seats, so the wide tube at 100 seats is of five or six abreast with one aisle'
     ref:
       view: EBS
@@ -138,11 +142,13 @@ knot:
     exit: 'Dimensions for each option, with the assumptions behind them, in a record the screening and the polar read'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-18'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - knu_id: KNU-EWTW-FUS-001-03
     title: 'Decision criteria and maturity thresholds'
     knu_class: REQUIREMENT_SET

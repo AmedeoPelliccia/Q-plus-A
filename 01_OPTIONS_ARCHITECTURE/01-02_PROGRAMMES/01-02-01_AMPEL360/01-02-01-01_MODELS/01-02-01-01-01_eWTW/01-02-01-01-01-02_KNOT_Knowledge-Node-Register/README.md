@@ -8,7 +8,7 @@ standard_scope: governance
 **Model:** AMPEL360 · [eWTW][MODEL]
 **Location:** `01_OPTIONS_ARCHITECTURE/01-02_PROGRAMMES/01-02-01_AMPEL360/01-02-01-01_MODELS/01-02-01-01-01_eWTW/01-02-01-01-01-02_KNOT_Knowledge-Node-Register/`
 **Convention:** [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 — *PROPOSED*
-**Version:** 0.11.17 · **Date:** 2026-11-18
+**Version:** 0.11.18 · **Date:** 2026-11-18
 
 This register holds what the eWTW must decide or satisfy — its **KNOTs**, the knowledge threads — and how each is to be resolved: its **Knowledge Units**, the **KNUs**. A KNOT states the problem. Its KNUs are the research, analyses, tests and other work that produce the knowledge to resolve it. A ruling records the decision with its rationale, and the options not retained stay in the record.
 
@@ -128,6 +128,15 @@ On the same day the authority said what the wide tube is for: more comfort, and 
 
 **The technology goals of ICAO.** The review of the independent experts is sold; the authority pointed to its summaries in the Environmental Reports of ICAO, which are free, and they open ([record](000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md)). The experts put their regional-jet reference of 2017, the E190-E2, 11 % below the new-type level of the carbon dioxide standard, and set goals of 16 % below for 2027 and 26 % below for 2037. So the minimum objective of criterion `M5` is where the regional jet already stood in 2017. At nominal values the eWTW of the screening is 9.5 % above the level, because its nominal values reproduce the fuel of the Embraer 190 of the generation before. It reaches the goal of 2037 only with every favourable value at once. Whether that goal becomes the target of the eWTW, beside the floor of `M5`, is a decision of the authority.
 
+**The objective of 26 %, and the first screening of the configurations.** On 2026-11-18 the authority decided: the objective is 26 % below the new-type level and beyond, and everything is to be done to better it. Criterion `M5` is restated, with the legal minimum as its floor, and a [record](000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md) holds the decision, what it corrects in the earlier screenings, and eight statements read for it. The [screening of the configurations](000_General/evidence/CFG-EWTW-AER-001/README.md) is steps 2 and 3 of the [path][MODEL-PATH]: four sections, three wings and four cruise points at three sets of technology, each aircraft sized on the requirement mission with its own polar and its own empty mass. It is of first order, and no second reader has checked it.
+
+- At nominal values no aircraft is below the new-type level: the margins are +5 % to +19 %. With the baskets of the ICAO experts for 2037 the best is 18.8 % below, and none meets the objective. With every favourable value and a composite airframe, two of 36 meet it.
+- The electrical chain costs about ten points of margin against a mechanical drive on the same airframe. What propulsors along the span give back is not credited, because no figure on record can be used; it is for `KNOT-EWTW-PRP-001` to show.
+- The metric is taken where the applicant chooses, at the best lift-to-drag ratio, and does not see the cruise speed. The fuel does: the floor of 360 kt costs 9 to 10 % of it at 25,000 ft, and 6,000 ft more of altitude give 7 % back.
+- The propeller points carry the drag of a turboprop in service, 26 % more zero-lift drag than a jet, and the figure is a statistic. With it the jet point burns what the propeller points burn. It is the largest unknown of the screening.
+- The section moves the fuel by about 2 %, inside the error of the method; a wider cabin for the same seats costs 4 %. Aspect ratio saves 2.4 to 5.9 %. The smaller wings of options B and C have little or no room for the fuel of the requirement mission.
+- A braced wing of aspect ratio 20 at a lower loading, flown higher at the floor of speed, stands 28.0 % below with the baskets of 2037. Its span is beyond code letter C.
+
 ### North star
 
 On 2026-11-16 the authority decided that this work builds a more ecological alternative, and that the more ecological option prevails over time and cost among the options that meet what is never traded: safety, the certification basis, the requirement mission and the required maturity. It is rule 19 of [CM-004][CM-004], for every decision anchor. The tradable criterion that measures the environmental effect is marked `north_star` and comes first; the others follow in order, each deciding only where the earlier ones do not separate the options by more than a margin. Where the measure improves without limit as the service gets worse, a floor of service is a mandatory criterion. No decision anchor is scored without a north-star criterion, and the verification script checks it. `KNOT-EWTW-CRZ-001` is the first to use the rule. The other anchors with proposed criteria, `KNOT-EWTW-ESS-001` and `KNOT-EWTW-NRG-001`, have no north-star criterion yet.
@@ -139,6 +148,8 @@ The [research record](000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measu
 ### Minimum objective: the carbon dioxide metric
 
 On 2026-11-16, after that record, the authority kept the floor of 360 kt, stated in knots, and took the most stringent of the carbon dioxide requirements in law as the minimum objective of the aircraft. Of the limits read that is the margin of the EU taxonomy, 11 % below the new-type limit of ICAO. It is criterion `M5` of `KNOT-EWTW-CRZ-001`, proposed like the others. The [screening of the cruise points](000_General/evidence/CRP-EWTW-CRZ-001/README.md), in its third issue, computes the metric at first order with an assumed cabin area: 0.73 kg/km at the propeller points and 0.84 at the jet point, against an objective of 0.60. No point meets it at nominal values. The objective asks a product of efficiencies and lift-to-drag ratio of 4.92 where the nominal values hold 4.02 and the favourable ones 5.89. It is therefore a target of the design: by ruling R1 of `KNOT-EWTW-CRZ-001` it applies at the release of the preliminary-design baseline, and the gap is recorded meanwhile.
+
+On 2026-11-18 the authority set the objective at 26 % below the new-type level, and beyond. The minimum of this section stays as the floor of criterion `M5` ([record](000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md)).
 
 ### Criteria proposed
 
@@ -233,7 +244,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | KNU | Title | Class | Also serves | Progress |
 |---|---|---|---|---|
 | `KNU-EWTW-AER-001-01` | Published drag data and forecasts for the class | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` | IN_PROGRESS |
-| `KNU-EWTW-AER-001-02` | Polar of the eWTW in the screening | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` · `PRP` | NOT_STARTED |
+| `KNU-EWTW-AER-001-02` | Polar of the eWTW in the screening | `ANALYSIS_PACKAGE` | `CRZ` · `GEN` · `PRP` | PENDING_REVIEW |
 | `KNU-EWTW-AER-001-03` | Dimensions and areas of record | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-01` | Source of record, script or FreeCAD document | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-CAD-001-02` | Round trip of EWTW-533001-000 through FreeCAD | `VERIFICATION_OBJECT` | — | PENDING_REVIEW |
@@ -258,7 +269,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-LCM-001-01` | Baseline notation | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-LCM-001-02` | Registry re-pin | `WORK_ITEM` | — | NOT_STARTED |
 | `KNU-EWTW-MAS-001-01` | Published mass data, methods and structural technologies | `ANALYSIS_PACKAGE` | `CRZ` | IN_PROGRESS |
-| `KNU-EWTW-MAS-001-02` | Empty mass by option | `ANALYSIS_PACKAGE` | `CRZ` · `FUL` | NOT_STARTED |
+| `KNU-EWTW-MAS-001-02` | Empty mass by option | `ANALYSIS_PACKAGE` | `CRZ` · `FUL` | IN_PROGRESS |
 | `KNU-EWTW-MAS-001-03` | Structural technologies and the mass they are allowed | `ANALYSIS_PACKAGE` | `CRZ` | NOT_STARTED |
 | `KNU-EWTW-NRG-001-01` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | IN_PROGRESS |
 | `KNU-EWTW-NRG-001-03` | Mission energy and power budget | `ANALYSIS_PACKAGE` | `PRP` · `SRC` · `STO` | IN_PROGRESS |
@@ -283,7 +294,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-DAT-001-03` | Assembly check across stations | `VERIFICATION_OBJECT` | — | NOT_STARTED |
 | `KNU-EWTW-DFN-001-01` | Fairing ownership | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-FUS-001-01` | Sections and cabins: the class, and concepts with a lifting fuselage | `ANALYSIS_PACKAGE` | `AER` | IN_PROGRESS |
-| `KNU-EWTW-FUS-001-02` | Cabin and fuselage dimensions by option | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | NOT_STARTED |
+| `KNU-EWTW-FUS-001-02` | Cabin and fuselage dimensions by option | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | IN_PROGRESS |
 | `KNU-EWTW-FUS-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 | `KNU-EWTW-KEL-001-01` | Taxonomy home of the keel beam | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-KEL-001-02` | Station binding | `WORK_ITEM` | — | NOT_STARTED |
@@ -296,7 +307,7 @@ The KNUs neither done nor cancelled, generated from the records (rule 9). Eight 
 | `KNU-EWTW-ROD-001-04` | 3D model request EWTW-533002-000 | `CONTROLLED_ARTEFACT` | — | NOT_STARTED |
 | `KNU-EWTW-TSI-001-01` | Tail-strike provision and sensing | `ANALYSIS_PACKAGE` | — | NOT_STARTED |
 | `KNU-EWTW-WNG-001-01` | Wings of the class, span limits and high aspect ratio | `ANALYSIS_PACKAGE` | `AER` · `PRP` | IN_PROGRESS |
-| `KNU-EWTW-WNG-001-02` | Wing area and span by cruise point | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | NOT_STARTED |
+| `KNU-EWTW-WNG-001-02` | Wing area and span by cruise point | `ANALYSIS_PACKAGE` | `AER` · `FUL` · `CRZ` | PENDING_REVIEW |
 | `KNU-EWTW-WNG-001-03` | Decision criteria and maturity thresholds | `REQUIREMENT_SET` | — | NOT_STARTED |
 
 Seven KNUs touch protected areas and are author acts. Six are in the PBS: `KNU-EWTW-PRP-001-05`, `KNU-EWTW-KEL-001-02`, `KNU-EWTW-ROD-001-03`, `KNU-EWTW-ROD-001-04`, `KNU-EWTW-DAT-001-02` and `KNU-EWTW-CAD-001-03`. One is in the taxonomy: `KNU-EWTW-KEL-001-01`. Four are conditional on their KNOT's ruling: `KNU-EWTW-STO-001-03`, and `KNU-EWTW-ROD-001-02`, `-03` and `-04`, which run only if the ruling keeps the rod station. `KNU-EWTW-PRP-001-05` is conditional on a ruling that admits a thermal machine, and `KNOT-EWTW-PRP-001` has no ruling. The authority asked for the group on 2026-11-14 and it is opened ahead of that ruling, as PBS group `060` with chapter `068`: ruling R2 of `KNOT-EWTW-NRG-001` removes the all-electric chain, and the exclusion of hydrogen rests on R1, completed on the same day. The KNU is pending review, and the research record of the propulsion chain keeps the objection that the group gets ahead of the ruling.
@@ -401,6 +412,7 @@ The first line reads `22 KNOTs, 67 KNUs, 37 S-ATLAS chapters; rule failures: non
 | 0.11.15 | 2026-11-17 | Research on the dimensions of the airframe reviewed: three records, for `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01` and `KNU-EWTW-AER-001-01`, now in progress. Sixteen statements read by the reviewer, thirteen as reported, eleven findings of absence. The context of `KNOT-EWTW-WNG-001` gains the span limit read at a source, and the polar of `KNOT-EWTW-AER-001` is to be checked through fuel and carried with mass |
 | 0.11.16 | 2026-11-18 | Research done by the reviewer at the request of the authority: four records, thirty-eight statements read at the source and fourteen findings of absence, with no second reader. `KNOT-EWTW-MAS-001` opened, an obligation for the empty mass by option and for the factor each structural technology is allowed; `KNOT-EWTW-CRZ-001` depends on it. The record of the wings of 2026-11-17 is corrected by a dated note: the jets now in production are close to the span limit. 22 KNOTs, 67 KNUs |
 | 0.11.17 | 2026-11-18 | The technology goals of ICAO read in its Environmental Reports of 2019 and 2022, by the route the authority indicated: eight statements read at the source, three findings of absence. The regional-jet reference of 2017 is 11 % below the new-type level, the margin of criterion `M5`; the goals are 16 % below for 2027 and 26 % below for 2037. The record of the same day that called the forecasts unread carries a note |
+| 0.11.18 | 2026-11-18 | Decision of the authority: the objective is 26 % below the new-type level, and beyond. Criterion `M5` restated, with the legal minimum as its floor, in a record that also holds what the decision corrects and eight statements read for it. First screening of the configurations, `CFG-EWTW-AER-001`, written and checked by `tools/configuration_screen.py`: dimensions by section, a polar and an empty mass by option, 144 aircraft, and fourteen assumptions changed one at a time. `KNU-EWTW-WNG-001-02` and `KNU-EWTW-AER-001-02` wait for review; `KNU-EWTW-FUS-001-02` and `KNU-EWTW-MAS-001-02` are in progress |
 
 [MODEL]: ../README.md
 [MODEL-PATH]: ../README.md#path-to-the-concept-baseline-of-the-aircraft

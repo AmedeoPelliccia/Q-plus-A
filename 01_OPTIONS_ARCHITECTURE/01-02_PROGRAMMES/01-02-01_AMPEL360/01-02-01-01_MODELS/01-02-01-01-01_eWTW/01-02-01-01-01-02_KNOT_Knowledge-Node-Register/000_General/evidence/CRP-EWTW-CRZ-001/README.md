@@ -9,6 +9,8 @@ Four candidate cruise points, and what each costs at first order: time, fuel, po
 
 This is a screening. It recommends no point and states no conformity with any rule.
 
+*Note of 2026-11-18.* The authority has set the objective at 26 % below the new-type level, and beyond ([record](../KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md)). Item 7 and the section on the metric measure against the former objective, 11 % below. The [screening of the configurations](../CFG-EWTW-AER-001/README.md) gives each point its own polar and each option its own empty mass, and takes the metric at the best lift-to-drag ratio: it replaces items 2 and 7. This screening is kept as issued.
+
 ---
 
 ## What it shows

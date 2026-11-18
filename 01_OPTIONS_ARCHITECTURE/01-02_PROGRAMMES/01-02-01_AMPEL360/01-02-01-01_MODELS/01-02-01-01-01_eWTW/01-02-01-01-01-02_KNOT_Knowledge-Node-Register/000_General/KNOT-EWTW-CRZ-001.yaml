@@ -77,8 +77,8 @@ knot:
     state: PROPOSED
   - id: M5
     class: mandatory
-    text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is not above the most stringent limit in law at its take-off mass. On 2026-11-16 that is 11 % below the new-type limit, the margin of the EU taxonomy for 5.7 to 60 t. It is the minimum objective of the aircraft, to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target'
-    source: 'Decision of the authority of 2026-11-16: the most stringent of the carbon dioxide requirements in law is the minimum objective. Research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application was proposed by the reviewer and fixed by ruling R1 of 2026-11-16'
+    text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is at least 26 % below the new-type level at its take-off mass, and the aircraft is to better that margin where it can. It is the goal of the independent experts of ICAO for a regional jet of 2037. The most stringent limit in law, on 2026-11-16 the 11 % below the new-type level of the EU taxonomy for 5.7 to 60 t, stays as the floor under it. The objective is to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target'
+    source: 'Decision of the authority of 2026-11-18: the objective is 26 % and beyond. It replaces as objective the legal minimum of the decision of 2026-11-16, which stays as the floor. Record of the objective and the premises, 2026-11-18; research record of the technology goals, 2026-11-18, statement 2; research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application was proposed by the reviewer and fixed by ruling R1 of 2026-11-16, when the criterion stood at 11 %'
     weight: null
     threshold: null
     state: PROPOSED
@@ -155,7 +155,15 @@ knot:
     source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
     state: APPROVED
   assumptions:
-  - text: 'the minimum objective of criterion M5, 11 % below the new-type level, is the margin the independent experts of ICAO give to the regional jet in service in 2017; their goal for 2037 is 26 % below, which the screening reaches only with every favourable value at once'
+  - text: 'the carbon dioxide metric is taken at the best lift-to-drag ratio of each aircraft, because the applicant selects its altitude and its speed; it does not see the cruise speed, and criterion T2 does'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'in the first screening of the configurations no aircraft meets criterion M5 at nominal values or with the baskets of the ICAO experts for 2037; two of 36 meet it with every favourable value'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'the objective of criterion M5, 26 % below the new-type level, is the goal the independent experts of ICAO set for a regional jet of 2037; the 11 % of its floor is the margin they give to the regional jet in service in 2017'
     ref:
       view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
@@ -273,6 +281,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
   - knu_id: KNU-EWTW-CRZ-001-04
     title: Measure of environmental effect
     knu_class: ANALYSIS_PACKAGE
@@ -301,6 +311,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md
     - view: EBS
       ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - knu_id: KNU-EWTW-CRZ-001-05
     title: Floor of service
     knu_class: ANALYSIS_PACKAGE

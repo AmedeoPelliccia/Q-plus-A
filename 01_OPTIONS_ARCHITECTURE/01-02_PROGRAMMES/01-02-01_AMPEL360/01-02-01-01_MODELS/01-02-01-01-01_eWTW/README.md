@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.26 |
+| Version | 0.3.27 |
 | Date | 2026-11-13 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -155,10 +155,10 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 | `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet for this aircraft? An obligation, not a choice | 3 · 4 · 14 | CS-25 at Amendment 28 and SC E-19 are read at the source; no record declares the basis | `STK_SAF` |
 | `KNOT-EWTW-GEN-001` | Generation architecture: how many turbogenerators, of what rating, and where are they installed? | 3 · 4 | First-order take-off power near 8.8 MW, and a cruise that asks more of the gas turbines once referred to sea level; units on record of 0.6 to 1 MW, none flown | `STK_SE` |
 | `KNOT-EWTW-FUL-001` | Where is the fuel carried — in the wing, in the fuselage bay, or in both — and what does the energy-carrier bay then hold? | 1 · 2, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]) | `STK_SE` |
-| `KNOT-EWTW-FUS-001` | Fuselage: which cross-section and which length, and what cabin area for 100 passengers? | The fuselage (`053`), and the volume of `053-900` | The screening assumes a cabin of 60 to 95 m²; no section is on record | `STK_SE` |
-| `KNOT-EWTW-WNG-001` | Wing: which span, which aspect ratio and which area? | The wing (`057`), and the fuel its box holds | The mission screening keeps the airframe of its reference type | `STK_SE` |
-| `KNOT-EWTW-AER-001` | Drag polar: which wetted area, which parasite drag and which lift-to-drag ratio at each cruise point? An obligation, not a choice | The fuel and the carbon dioxide metric of every cruise point | One lift-to-drag ratio of 15 for every point | `STK_SE` |
-| `KNOT-EWTW-MAS-001` | Empty mass: what does the eWTW weigh empty under each option of its fuselage and of its wing, and which part rests on structural technologies not yet in service? An obligation, not a choice | The fuel of every option | The empty mass of the reference type for every option | `STK_SE` |
+| `KNOT-EWTW-FUS-001` | Fuselage: which cross-section and which length, and what cabin area for 100 passengers? | The fuselage (`053`), and the volume of `053-900` | A first screening sizes four, five and six abreast, with 71 to 81 m² of floor; no section is chosen | `STK_SE` |
+| `KNOT-EWTW-WNG-001` | Wing: which span, which aspect ratio and which area? | The wing (`057`), and the fuel its box holds | A first screening sizes three wings, of aspect ratio 11.5, 14 and 17; no wing is chosen | `STK_SE` |
+| `KNOT-EWTW-AER-001` | Drag polar: which wetted area, which parasite drag and which lift-to-drag ratio at each cruise point? An obligation, not a choice | The fuel and the carbon dioxide metric of every cruise point | A polar of first order by option, set on one jet and on one turboprop in service, with no second reader | `STK_SE` |
+| `KNOT-EWTW-MAS-001` | Empty mass: what does the eWTW weigh empty under each option of its fuselage and of its wing, and which part rests on structural technologies not yet in service? An obligation, not a choice | The fuel of every option | An empty mass of first order by option: 31 to 36 t at nominal values | `STK_SE` |
 
 The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed:
 
@@ -292,8 +292,10 @@ Step 1 was delivered on 2026-11-17, and its three records are in the [KNOT regis
 
 On 2026-11-18 the reviewer completed step 1 by direct research, at the request of the authority: four more records, with no second reader. They give the widths of four, five and six seats abreast, a public method for the polar and for the masses, and a first estimate of what topology optimisation and additive manufacturing would gain. `KNOT-EWTW-MAS-001` now holds the empty mass by option.
 
+Steps 2 and 3 were delivered the same day in a first issue, the [screening of the configurations][CFG]: dimensions by section, a polar and an empty mass by option, and one table over 144 aircraft, with no second reader. It was run against the objective the authority set that day: 26 % below the new-type level of the carbon dioxide standard, and beyond. At nominal values no aircraft is below the level. With the baskets of the ICAO experts for 2037 the best is 18.8 % below. A mechanical drive on the same airframe is about ten points better than the electrical chain. Installed power and time are not in its table, because it does not size the propulsion system; the one record of dimensions (`KNU-EWTW-AER-001-03`) waits for the choices.
+
 - **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
-- **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state.
+- **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state. The screening does not meet the objective of 26 % with the options as written: step 4 has to say whether that objective gates the preliminary-design baseline, as ruling R1 has it for criterion `M5`.
 
 ---
 
@@ -374,7 +376,7 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
-The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`.
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`. The [screening of the configurations][CFG] of `KNOT-EWTW-AER-001` is checked by `tools/configuration_screen.py`.
 
 ---
 
@@ -413,6 +415,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.24 | 2026-11-17 | Step 1 of the path to the concept baseline delivered: three research records on sections and cabins, wings and span limits, and drag data (KNOT register 0.11.15). Step 3 gains the empty mass by option and a check through fuel |
 | 0.3.25 | 2026-11-18 | Research by the reviewer, at the request of the authority: four records on wide sections and hydrogen tanks, wings in service, the method of the polar, and structural mass with additive manufacturing (KNOT register 0.11.16). `KNOT-EWTW-MAS-001` opened for the empty mass by option; the cruise point depends on it |
 | 0.3.26 | 2026-11-18 | The technology goals of ICAO, read in its Environmental Reports (KNOT register 0.11.17): the minimum objective on carbon dioxide is the margin of the regional jet of 2017, and the goal of the experts for 2037 is 26 % below the new-type level. The eWTW of the screening reaches it only with every favourable value at once |
+| 0.3.27 | 2026-11-18 | The objective, by decision of the authority: 26 % below the new-type level of the carbon dioxide standard, and beyond (KNOT register 0.11.18). Steps 2 and 3 of the path delivered in a first issue, the screening of the configurations: no aircraft meets the objective at nominal values or with the baskets of the ICAO experts for 2037, and the electrical chain costs about ten points against a mechanical drive on the same airframe |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -446,6 +449,7 @@ The KNOT register and the architecture relations are verified with their own com
 [MSN-TOOL]: ../../../../../tools/mission_closure.py
 [MSN]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
 [ELA]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+[CFG]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CFG-EWTW-AER-001/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py

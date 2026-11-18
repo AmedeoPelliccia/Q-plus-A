@@ -35,6 +35,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'the polar of the first screening rests on two published figures: a lift-to-drag ratio of 15 for the Embraer 190, which the mission screening assumes, sets the jet point, and a best ratio of 15.74 for the ATR 72, which is a statistic, sets the propeller points'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - text: 'the independent experts of ICAO put their regional-jet reference of 2017, the E190-E2, 11 % below the new-type level, and set goals of 16 % below for 2027 and 26 % below for 2037; they are forecasts at nominal confidence'
     ref:
       view: EBS
@@ -94,6 +98,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
   - knu_id: KNU-EWTW-AER-001-02
     title: 'Polar of the eWTW in the screening'
     knu_class: ANALYSIS_PACKAGE
@@ -109,11 +115,13 @@ knot:
     exit: 'A polar with its assumptions, written and checked by a tool, and the fuel and the metric of each cruise point computed with it'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-16'
-    start_date: null
+    start_date: '2026-11-18'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - knu_id: KNU-EWTW-AER-001-03
     title: 'Dimensions and areas of record'
     knu_class: CONTROLLED_ARTEFACT

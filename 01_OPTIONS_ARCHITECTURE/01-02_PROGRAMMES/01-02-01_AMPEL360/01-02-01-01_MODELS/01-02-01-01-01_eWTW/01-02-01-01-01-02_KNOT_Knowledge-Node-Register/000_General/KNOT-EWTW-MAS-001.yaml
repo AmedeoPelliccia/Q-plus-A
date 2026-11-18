@@ -33,6 +33,10 @@ knot:
   options: []
   criteria: []
   assumptions:
+  - text: 'the empty mass of the first screening is of first order: wing and fuselage by a handbook method, the propulsion system at 1.45 or 2.27 times a conventional one from one study, and systems, furnishings and operating items held at those of the reference type'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - text: 'the independent experts of ICAO take 2 to 4 % off the empty mass by 2027 and 8 to 10 % by 2037, at nominal confidence, for the larger classes'
     ref:
       view: EBS
@@ -97,11 +101,13 @@ knot:
     exit: 'An empty mass by option with its assumptions, written and checked by a tool, and used by the screening of the cruise points'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-18'
-    start_date: null
+    start_date: '2026-11-18'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
   - knu_id: KNU-EWTW-MAS-001-03
     title: 'Structural technologies and the mass they are allowed'
     knu_class: ANALYSIS_PACKAGE

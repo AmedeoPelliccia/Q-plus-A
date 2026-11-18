@@ -1,0 +1,199 @@
+# Configuration screening of the eWTW - input of tools/configuration_screen.py
+analysis:
+  id: CFG-EWTW-AER-001
+  version: 0.1.0
+  date: 2026-11-18
+  knot: KNOT-EWTW-AER-001
+  serves: [KNU-EWTW-FUS-001-02, KNU-EWTW-WNG-001-02, KNU-EWTW-AER-001-02, KNU-EWTW-MAS-001-02]
+  missions: MSN-EWTW-NRG-001
+  cruise_points: CRP-EWTW-CRZ-001
+  section_knot: KNOT-EWTW-FUS-001
+  wing_knot: KNOT-EWTW-WNG-001
+  objective:
+    below: {value: 0.26, basis: decision, ref: "Decision of the authority of 2026-11-18: the objective of the eWTW is the goal of the independent experts of ICAO for 2037, 26 % below the new-type level of the carbon dioxide standard, and beyond"}
+  floor_speed_kt: {value: 360, basis: decision, ref: "Criterion M4 of KNOT-EWTW-CRZ-001, proposed: the floor of service"}
+  reference:
+    aircraft: Embraer 190
+    length_m: {value: 36.24, basis: source, ref: "Embraer, Airport Planning Manual of the Embraer 190, APM-1901, revision 24. Research record of the sections and cabins, 2026-11-17, statement 1"}
+    width_m: {value: 3.01, basis: source, ref: "The same statement: a figure of the cross-section carries 3.35 m and 3.01 m without saying what they measure. Taken as the outer height and width"}
+    height_m: {value: 3.35, basis: source, ref: "The same statement, taken as the outer height"}
+    cabin_length_m: {value: 25.91, basis: source, ref: "The same statement: a side view carries 25.91 m without saying what it measures. Taken as the length of the cabin"}
+    span_m: {value: 28.72, basis: source, ref: "The same manual: span over the winglets. Research record of the wings and span limits, 2026-11-17, statement 1"}
+    wing_area_m2: {value: 92.5, basis: source, ref: "The same statement: wing reference area"}
+    zero_fuel_kg: {value: 40800, basis: source, ref: "Embraer, specification sheet of the Embraer 190: maximum zero-fuel mass of the LR. Research record of the fuel location, 2026-11-15, statement 3"}
+    usable_fuel_kg: {value: 12971, basis: source, ref: "The same statement: maximum usable fuel"}
+    sweep_deg: {value: 23, basis: assumption, note: "Sweep of the half-chord line of the reference wing. Not read at a source"}
+    cruise_mach: {value: 0.78, basis: source, ref: "The jet point of the cruise-point screening: the Mach number of the payload and range charts of the type"}
+    cruise_altitude_ft: {value: 35000, basis: assumption, note: "The altitude of the jet point of the cruise-point screening"}
+    wing_relief: {value: 0.95, basis: source, ref: "Scholz, Aircraft Design lecture notes, chapter 10, after Torenbeek: 5 % off the wing mass for two engines on the wing. Research record of the wings in service, 2026-11-18, statement 5"}
+    power_plant_share: {value: 0.0926, basis: source, ref: "Lissys, mass estimation of the Piano design tool: the power plant of its sample aircraft over its take-off mass. Research record of the structural mass, 2026-11-18, statement 1"}
+    structure_share: {value: 0.2723, basis: source, ref: "The same statement: wing, fuselage, tail and undercarriage of the sample aircraft over its take-off mass. Printed beside the result of the method; it enters no result"}
+    successor: Embraer E190-E2
+    successor_below: {value: 0.11, basis: source, ref: "ICAO Environmental Report 2019: the reference aircraft of 2017 for regional jets stands 11 % below the new-type level. Research record of the technology goals, 2026-11-18, statements 1 and 2. Printed as a check; it enters no result"}
+    successor_saving: {value: 0.173, basis: source, ref: "Embraer, release of 28 February 2018 on the certification of the E190-E2: a 17.3 % improvement in fuel consumption compared to the current-generation E190. The release gives no mission and no basis. Read on 2026-11-18. Printed as a check; it enters no result"}
+    successor_span_m: {value: 33.72, basis: source, ref: "Embraer, Airport Planning Manual of the E-Jets E2. Research record of the wings in service, 2026-11-18, statement 1. Used to check the rule for the fuel a wing holds"}
+    successor_wing_area_m2: {value: 103, basis: source, ref: "The same statement"}
+    successor_usable_fuel_kg: {value: 13500, basis: source, ref: "The same statement"}
+  propeller_reference:
+    aircraft: ATR 72
+    length_m: {value: 27.17, basis: source, ref: "ATR, page of the ATR 72-600. Research record of the sections and cabins, 2026-11-17, statement 2"}
+    diameter_m: {value: 2.8, basis: source, ref: "Aerospace Technology Institute, FlyZero: the fuselage of the ATR 72-600, the reference of its regional concept. Research record of the wide sections, 2026-11-18, statement 10"}
+    span_m: {value: 27.05, basis: source, ref: "ATR, page of the ATR 72-600. Research record of the wings and span limits, 2026-11-17, statement 2"}
+    wing_area_m2: {value: 61, basis: source, ref: "ATR, factsheet of the ATR 72-600, 2020. Research record of the fuel location, 2026-11-15, statement 1"}
+    best_lift_to_drag: {value: 15.74, basis: source, ref: "Scholz and Nita, Preliminary Sizing of Large Propeller Driven Aeroplanes, 2008, table 2: maximum lift-to-drag ratio in cruise of a redesign of the ATR 72, from a statistic of turboprops. The redesign meets the masses, the wing area and the power of the type within 0.6 %. Read on 2026-11-18"}
+  cabin:
+    seat_pitch_m: {value: 0.82, basis: source, ref: "Embraer, Airport Planning Manual of the Embraer 190: pitch of the standard arrangement. Research record of the sections and cabins, 2026-11-17, statement 1"}
+    service_area_m2: {value: 15.9, basis: assumption, note: "Floor for doors, galleys and lavatories, held equal for every section. It is what the cabin of the reference leaves beyond its 98 seats, if the 25.91 m of its side view is the cabin length"}
+    flight_deck_m: {value: 3.17, basis: assumption, note: "Pressurised length ahead of the cabin: the 29.08 m of the pressurised section of the reference, less 25.91 m"}
+    ends_factor: {value: 2.25, basis: assumption, note: "Length of the unpressurised nose and tail, in mean diameters. Set on the reference: 36.24 m less 29.08 m, over 3.18 m"}
+    wall_m: {value: 0.135, basis: assumption, note: "Outer width less cabin width, halved, on the reference: 3.01 m and 2.74 m. Held for every section"}
+  sections:
+  - key: F4
+    option: A
+    name: Four abreast, the cabin of the reference
+    abreast: 4
+    cabin_width_m: {value: 2.74, basis: source, ref: "Embraer, Airport Planning Manual of the Embraer 190. Research record of the sections and cabins, 2026-11-17, statement 1"}
+    height_ratio: {value: 1.113, basis: source, ref: "The same statement: 3.35 m over 3.01 m"}
+    mass_factor: {value: 1.0, basis: assumption, note: "The fuselage formula as it stands"}
+  - key: F5
+    option: B
+    name: Five abreast
+    abreast: 5
+    cabin_width_m: {value: 3.28, basis: source, ref: "Airbus, A220 Aircraft Characteristics Publication, figure of the passenger cross-section, label not legible. Research record of the wide sections, 2026-11-18, statement 2"}
+    height_ratio: {value: 1.0, basis: assumption, note: "A circular section"}
+    mass_factor: {value: 1.0, basis: assumption, note: "The fuselage formula as it stands. It has no term for the pressure load of a wider shell"}
+  - key: F5W
+    option: B
+    name: Five abreast in the width of six
+    abreast: 5
+    cabin_width_m: {value: 3.63, basis: source, ref: "The cabin width of the section of six abreast. It leaves 0.35 m more than the section of five for a wide aisle or for wider seats"}
+    height_ratio: {value: 1.0, basis: assumption, note: "A circular section"}
+    mass_factor: {value: 1.0, basis: assumption, note: "As the section of five abreast"}
+  - key: F6
+    option: B
+    name: Six abreast
+    abreast: 6
+    cabin_width_m: {value: 3.63, basis: source, ref: "Airbus, A320 Aircraft Characteristics, cross-section figure, label not legible. Research record of the wide sections, 2026-11-18, statement 3"}
+    height_ratio: {value: 1.0, basis: assumption, note: "A circular section"}
+    mass_factor: {value: 1.0, basis: assumption, note: "As the section of five abreast"}
+  not_screened:
+  - knot: KNOT-EWTW-FUS-001
+    option: C
+    reason: "A flattened section that carries lift has no dimension and no mass method on record. Research record of the wide sections, 2026-11-18, findings 15 and 16"
+  wings:
+  - key: WA
+    option: A
+    name: Aspect ratio of the class
+    aspect_ratio: {value: 11.5, basis: source, ref: "Embraer, Airport Planning Manual of the E-Jets E2: the square of the span over the reference area is 11.0 and 12.0. Research record of the wings in service, 2026-11-18, statement 1"}
+    loading_kg_m2: {value: 560, basis: source, ref: "The jets of the class now in production carry 548 to 597 kg/m2 at maximum take-off mass. The same record, statements 1 and 2"}
+    braced: false
+  - key: WB
+    option: B
+    name: Higher aspect ratio on a smaller wing
+    aspect_ratio: {value: 14, basis: assumption, note: "Between the class and the braced wings studied. No wing of this aspect ratio flies on an aircraft of the class"}
+    loading_kg_m2: {value: 620, basis: assumption, note: "Above the wings in service, as the option says propulsors along the span would allow. Field performance is not checked by this screening"}
+    braced: false
+  - key: WC
+    option: C
+    name: Braced wing of high aspect ratio
+    aspect_ratio: {value: 17, basis: assumption, note: "A braced wing. The study of NASA on record compares a braced wing with a cantilever one of aspect ratio 13; it is for 154 passengers and has not flown"}
+    loading_kg_m2: {value: 620, basis: assumption, note: "As the wing of option B"}
+    braced: true
+  drag:
+    skin_friction_low: {value: 0.003, basis: source, ref: "Scholz, Aircraft Design lecture notes, chapter 13, table 13.1, after Roskam: equivalent skin-friction coefficient of jets, 0.003 to 0.004. Read on 2026-11-18"}
+    skin_friction_high: {value: 0.004, basis: source, ref: "The same table. It gives 0.004 to 0.007 for twins and has no line for propeller transports"}
+    taper_function: {value: 0.0019, basis: source, ref: "Nita and Scholz, Estimating the Oswald Factor from Basic Aircraft Geometrical Parameters, Deutscher Luft- und Raumfahrtkongress 2012, slides of the method: the function of the taper ratio, after Hoerner, at the taper of least induced drag of an unswept wing, 0.357. Read on 2026-11-18"}
+    fuselage_span_factor: {value: 2, basis: source, ref: "The same slides: the span efficiency loses twice the square of the fuselage diameter over the span"}
+    viscous_factor: {value: 0.38, basis: source, ref: "The same slides, second method: a drag due to lift in proportion to the zero-lift drag"}
+    propeller_drag_share: {value: 1.0, basis: assumption, note: "Share of the excess of zero-lift drag of the propeller reference over the method, set on a jet, that the propeller points carry. At 1 they have the drag level of a turboprop in service"}
+    brace_wetted_share: {value: 0.15, basis: assumption, note: "Wetted area of the brace over that of the exposed wing. Not read at a source"}
+    wetted_factor: {value: 2.04, basis: assumption, note: "Wetted area of a wing or tail over its exposed area"}
+    root_chord_factor: {value: 1.5, basis: assumption, note: "Root chord over the mean geometric chord, for a taper ratio of one third"}
+    mean_chord_factor: {value: 1.05, basis: assumption, note: "Mean aerodynamic chord over the mean geometric chord"}
+    tail_volume_horizontal: {value: 1.0, basis: assumption, note: "Horizontal tail volume coefficient. A handbook value for jet transports, not read at a source"}
+    tail_volume_vertical: {value: 0.09, basis: assumption, note: "Vertical tail volume coefficient. A handbook value for jet transports, not read at a source"}
+    tail_arm_share: {value: 0.45, basis: assumption, note: "Tail arm over fuselage length"}
+    nacelle_share: {value: 0.06, basis: assumption, note: "Wetted area of nacelles and pods over that of the rest"}
+    sweep_above_mach: {value: 0.70, basis: assumption, note: "Above this Mach number the wing is swept, pays wave drag, and the propulsor is a fan; below it the wing is straight and the propulsor a propeller"}
+    sweep_deg: {value: 23, basis: assumption, note: "Sweep of a wing that cruises above that Mach number, as the reference"}
+    wave_counts: {value: 10, basis: assumption, note: "Wave drag in cruise above that Mach number, in counts. The notes of Scholz define drag divergence at 20 counts"}
+    cruise_mass_share: {value: 0.95, basis: assumption, note: "Mass in cruise over take-off mass"}
+  mass:
+    wing_constant: {value: 0.00667, basis: source, ref: "Scholz, Aircraft Design lecture notes, chapter 10, after Torenbeek: wing mass over zero-fuel mass, for aircraft above 5,700 kg. Read on 2026-11-18. The equations were only partly legible in the text read: the exponents are those of the handbook, as the reviewer knows them"}
+    wing_reference_span_m: {value: 1.905, basis: source, ref: "The same equation"}
+    ultimate_load: {value: 3.75, basis: source, ref: "The same chapter: 1.5 times a limit load factor of 2.5"}
+    root_thickness_ratio: {value: 0.14, basis: assumption, note: "Thickness of the wing root over its chord"}
+    spoilers: {value: 0.02, basis: source, ref: "The same chapter: 2 % more for spoilers"}
+    relief_distributed: {value: 0.90, basis: assumption, note: "The same chapter takes 10 % off for four engines on the wing. It is assumed here for propulsors along the span"}
+    braced_factor: {value: 0.77, basis: source, ref: "The same chapter: 30 % off for a braced wing, the brace being about a tenth of the wing mass. Research record of the wings in service, 2026-11-18, statement 5"}
+    fuselage_constant: {value: 0.23, basis: source, ref: "The same chapter, after Torenbeek: fuselage mass from the wetted area to the power 1.2, the dive speed, the tail arm and the sum of width and height. Research record of the structural mass, 2026-11-18, statement 3"}
+    dive_speed_ms: {value: 190, basis: assumption, note: "Design dive speed, equivalent airspeed, held for every cruise point. A slower aircraft would have a lower one and a lighter fuselage"}
+    pressurised: {value: 1.08, basis: source, ref: "The same statement: 8 % more for a pressurised cabin"}
+    tail_kg_m2: {value: 27, basis: source, ref: "The same chapter, table of first estimates. Research record of the structural mass, 2026-11-18, statement 2"}
+    gear_share: {value: 0.043, basis: source, ref: "The same table: landing gear over take-off mass"}
+  mechanical:
+    name: The same aircraft with a mechanical drive, for comparison only
+    gearbox_efficiency: {value: 0.98, basis: assumption, note: "A gearbox in the place of the electrical chain. No measured efficiency of an aviation gearbox at a megawatt is on record"}
+    generator_efficiency: {value: 0.97, basis: source, ref: "Perullo and others, 2020: the efficiency the study assumes for its generator in 2030. The turbogenerator efficiency of each technology set is divided by it, to give the shaft of the thermal machine"}
+    chain_mass_ratio: {value: 1.0, basis: assumption, note: "The power plant of the reference, in proportion to the take-off mass"}
+  technology:
+  - key: T0
+    name: Nominal chain, airframe technology of the reference
+    turbogenerator_efficiency: {value: 0.35, basis: assumption, note: "Nominal value of the mission screening, from fuel to electricity"}
+    electric_chain_efficiency: {value: 0.90, basis: assumption, note: "Nominal value of the mission screening, from the terminals of the generator to the shaft"}
+    propulsor_factor: {value: 1.0, basis: assumption, note: "The propulsor efficiency of each cruise point as the cruise-point screening holds it"}
+    drag_factor: {value: 1.0, basis: assumption, note: "The drag of the method, set on the reference type"}
+    empty_factor: {value: 1.0, basis: assumption, note: "No saving on the empty mass"}
+    wing_tail_factor: {value: 1.0, basis: assumption, note: "Metal structure, as the reference"}
+    fuselage_factor: {value: 1.0, basis: assumption, note: "Metal structure, as the reference"}
+    chain_mass_ratio: {value: 2.27, basis: assumption, note: "Mass of the propulsion system over that of a conventional one. The study of Perullo and others gives 12,724 against 8,800 in its table, of which 7,274 electrical, with the technologies it assumes for 2030; here the electrical part is doubled, the case of its sensitivity study with half the specific power"}
+  - key: T1
+    name: Baskets of the ICAO experts for 2037
+    turbogenerator_efficiency: {value: 0.389, basis: assumption, note: "The nominal value with the 10 % of fuel the experts give to new propulsion by 2037. Research record of the technology goals, 2026-11-18, statement 4"}
+    electric_chain_efficiency: {value: 0.90, basis: assumption, note: "Nominal value of the mission screening. The study of Perullo and others assumes 0.99, 0.99, 0.98 and 0.96 from the terminals of its generator to the shaft for 2030, which multiply to 0.92"}
+    propulsor_factor: {value: 1.0, basis: assumption, note: "As the first set"}
+    drag_factor: {value: 0.91, basis: source, ref: "ICAO Environmental Report 2019: 8 to 10 % less drag by 2037, stated for the single-aisle and twin-aisle classes. Research record of the technology goals, 2026-11-18, statements 4 and 10"}
+    empty_factor: {value: 0.91, basis: source, ref: "The same statements: 8 to 10 % less empty mass by 2037"}
+    wing_tail_factor: {value: 1.0, basis: assumption, note: "The saving is taken on the whole empty mass"}
+    fuselage_factor: {value: 1.0, basis: assumption, note: "The saving is taken on the whole empty mass"}
+    chain_mass_ratio: {value: 1.45, basis: source, ref: "Perullo and others, An Update on Sizing and Performance Analysis of a Hybrid Turboelectric Regional Jet for the NASA ULI Program, 2020: propulsion system of 12,724 against 8,800 in its table, with the technologies it assumes for 2030. Read on 2026-11-18"}
+  - key: T2
+    name: Favourable chain and composite airframe
+    turbogenerator_efficiency: {value: 0.40, basis: assumption, note: "Favourable value of the mission screening. It asks more of propulsion than the experts give"}
+    electric_chain_efficiency: {value: 0.93, basis: assumption, note: "Favourable value of the mission screening, near the 0.92 that the study of Perullo and others assumes for 2030"}
+    propulsor_factor: {value: 1.035, basis: assumption, note: "Favourable propulsor efficiency of the mission screening over its nominal one, 0.88 over 0.85"}
+    drag_factor: {value: 0.91, basis: source, ref: "ICAO Environmental Report 2019, as the second set"}
+    empty_factor: {value: 0.97, basis: assumption, note: "Topology optimisation and additive manufacturing: the middle of the 1.4 to 4.7 % of the research record of the structural mass. Primary structure of that kind is not in service"}
+    wing_tail_factor: {value: 0.765, basis: source, ref: "Nickol, Hybrid Wing Body Configuration Scaling Study, NASA, 2012: composite wing and tail taken 23.5 % lighter than metal. Research record of the structural mass, 2026-11-18, statement 4"}
+    fuselage_factor: {value: 0.855, basis: source, ref: "The same statement: composite fuselage taken 14.5 % lighter than metal"}
+    chain_mass_ratio: {value: 1.45, basis: source, ref: "Perullo and others, 2020, as the second set"}
+  sensitivities:
+  - name: Jet reference at a lift-to-drag ratio of 14, the low end of the range reported for regional jets
+    set: [{where: missions, path: parameters.lift_to_drag, field: nominal, value: 14}]
+  - name: Jet reference at a lift-to-drag ratio of 17, the high end of that range
+    set: [{where: missions, path: parameters.lift_to_drag, field: nominal, value: 17}]
+  - name: Propeller points with half the excess of drag of the turboprop in service
+    set: [{path: drag.propeller_drag_share, value: 0.5}]
+  - name: Propeller points at the drag level of the jet
+    set: [{path: drag.propeller_drag_share, value: 0}]
+  - name: Half the friction drag due to lift
+    set: [{path: drag.viscous_factor, value: 0.19}]
+  - name: Every wing at 500 kg/m2
+    set: [{path: wings.WA.loading_kg_m2, value: 500}, {path: wings.WB.loading_kg_m2, value: 500}, {path: wings.WC.loading_kg_m2, value: 500}]
+  - name: Every wing at 380 kg/m2, near the loading of the ATR 72-600
+    set: [{path: wings.WA.loading_kg_m2, value: 380}, {path: wings.WB.loading_kg_m2, value: 380}, {path: wings.WC.loading_kg_m2, value: 380}]
+  - name: The point of the floor flown at 31,000 ft in the place of 25,000 ft
+    set: [{where: points, path: points.P2.altitude_ft, value: 31000}]
+  - name: A brace that takes nothing off the mass of the wing
+    set: [{path: mass.braced_factor, value: 1.0}]
+  - name: Braced wing at an aspect ratio of 20
+    set: [{path: wings.WC.aspect_ratio, value: 20}]
+  - name: Fuselage of the wide sections 15 % heavier than the formula gives
+    report: section
+    set: [{path: sections.F5.mass_factor, value: 1.15}, {path: sections.F5W.mass_factor, value: 1.15}, {path: sections.F6.mass_factor, value: 1.15}]
+  - name: Propulsion system at 2.27 times a conventional one in every set
+    set: [{path: technology.T1.chain_mass_ratio, value: 2.27}, {path: technology.T2.chain_mass_ratio, value: 2.27}]
+  - name: Propulsion system at 1.45 times a conventional one in every set
+    set: [{path: technology.T0.chain_mass_ratio, value: 1.45}]
+  - name: "Three of the above together: every wing at 500 kg/m2, the braced wing at an aspect ratio of 20, the point of the floor at 31,000 ft"
+    set: [{path: wings.WA.loading_kg_m2, value: 500}, {path: wings.WB.loading_kg_m2, value: 500}, {path: wings.WC.loading_kg_m2, value: 500}, {path: wings.WC.aspect_ratio, value: 20}, {where: points, path: points.P2.altitude_ft, value: 31000}]
