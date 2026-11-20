@@ -10,3 +10,5 @@
 - [`021-900-030-Cryogenic-Cold-Sink-Utilization.md`](021-900-030-Cryogenic-Cold-Sink-Utilization.md) — Cryogenic cold-sink utilization (cooling)
 - [`021-900-050-ECS-Thermal-Management-System-Coupling.md`](021-900-050-ECS-Thermal-Management-System-Coupling.md) — ECS ↔ thermal-management-system coupling
 - [`021-900-070-Bleedless-Air-Supply-Interface.md`](021-900-070-Bleedless-Air-Supply-Interface.md) — Bleedless air-supply interface (e-compressor / process air)
+
+The compressors of the air supply are in [`021-100`](../021-100_Air-Compression-Electric/). Subject `021-900-070` holds their interface with the energy system, and process air.

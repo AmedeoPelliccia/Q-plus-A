@@ -13,6 +13,6 @@ CSN `534002` - grammar `EWTW-534002-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 ## Notes
 
-- APM unit itself: ATA 049 family (electric auxiliary module).
+- APM unit itself: PBS `049`, auxiliary power module. The name does not determine its technology (model README §3, row 15). Note amended on 2026-11-14 (F01).
 
 Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

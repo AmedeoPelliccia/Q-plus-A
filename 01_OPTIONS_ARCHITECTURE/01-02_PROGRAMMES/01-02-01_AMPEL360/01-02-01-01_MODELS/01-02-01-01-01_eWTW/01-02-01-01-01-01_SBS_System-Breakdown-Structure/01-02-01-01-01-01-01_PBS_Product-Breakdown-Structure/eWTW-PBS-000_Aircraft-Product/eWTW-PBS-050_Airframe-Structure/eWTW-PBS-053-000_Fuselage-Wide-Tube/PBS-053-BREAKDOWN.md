@@ -70,7 +70,7 @@ Sections and subjects map to the S-ATLAS 053 register (PBS codes are PBS-local; 
 - `EWTW-531003-030` PANEL-COMPARTMENT-PARTITION
 - `EWTW-531003-040` SUPPORT-VENTILATION-DUCT-PROVISION
 
-> E-E bay ventilation function is ATA 021 (REF ICN-EWTW-021000010).
+> E-E bay ventilation function is ATA 021. Note amended on 2026-11-18 (F01).
 
 ### 053-100-040 Radome and Diverters Attach Structure (csn 531004)
 
@@ -137,7 +137,7 @@ Sections and subjects map to the S-ATLAS 053 register (PBS codes are PBS-local; 
   - `EWTW-532002-052` RAIL-PACK-MOUNT-RH
 - `EWTW-532002-060` SEAL-FAIRING-PERIPHERAL
 
-> Hosts the unpressurized pack bay (PB in ICN-EWTW-021000010); E-PACK units are ATA 021-510.
+> Hosts the unpressurized pack bay; E-PACK units are ATA 021-510. Note amended on 2026-11-18 (F01).
 
 ### 053-200-030 Main Landing Gear Wheelwell and Sealing (csn 532003)
 
@@ -230,7 +230,7 @@ Sections and subjects map to the S-ATLAS 053 register (PBS codes are PBS-local; 
 - `EWTW-534002-020` STRUT-APM-SUPPORT-SET
 - `EWTW-534002-030` RAIL-APM-INSTALLATION
 
-> APM unit itself: ATA 049 family (electric auxiliary module).
+> APM unit itself: PBS `049`, auxiliary power module. The name does not determine its technology (model README §3, row 15). Note amended on 2026-11-14 (F01).
 
 ### 053-400-030 Auxiliary Power Module Firewall and Thermal Provisions (csn 534003)
 
@@ -558,7 +558,7 @@ Sections and subjects map to the S-ATLAS 053 register (PBS codes are PBS-local; 
 - `EWTW-539001-030` PANEL-BAY-LINER-SET
 - `EWTW-539001-040` SEAL-BAY-PERIMETER
 
-> Battery bay per ICN-EWTW-021000010 (053-900 references confirmed correct). Energy carrier units: ATA 024 family.
+> Energy-carrier bay. What it holds is open (`KNOT-EWTW-NRG-001`): after ruling R2 of 2026-11-14, fuel in every option and a propulsion battery in option C only. The carrier units are not part of this station: fuel storage is S-ATLAS `028`, a propulsion battery S-ATLAS `074`. The illustration that labelled this bay *BATT BAY* was withdrawn on 2026-11-18 with the publications of chapter 021. Note amended on 2026-11-14 and on 2026-11-18 (F01).
 
 ### 053-900-020 Energy Carrier Crash Protection and Containment Interface (csn 539002)
 

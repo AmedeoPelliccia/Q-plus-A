@@ -128,6 +128,389 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CAD-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-PRP-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the propulsion chain, as accepted on review from a report of
+      2026-11-14 relayed by the author - demonstrators of distributed and hybrid
+      propulsion, megawatt machines and heat, propeller and fan studies, and the rules on
+      engine failure. Eleven of its statements were read by the reviewer at the source,
+      four are as reported, seven report that a search found nothing. It keeps the
+      objection of the report to opening the PBS group of the thermal machine.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-PRP-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-SRC-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+    status: on-disk
+    note: >
+      Research record: the electrical sources and the role of energy storage, as accepted
+      on review from a report of 2026-11-14 relayed by the author - loads and the electric
+      environmental control system, sizing of sources, distribution and protection, and
+      batteries in service, in the rules and under test. Ten of its statements were read
+      by the reviewer at the source, seven are as reported, ten report that a search
+      found nothing. It serves two KNOTs.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-STO-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the cruise point, as accepted on review from a report of 2026-11-15
+      relayed by the author - cruise points of the class in service, propulsors against
+      the cruise Mach, cabin pressure and insulation against altitude. Six of its
+      statements were read by the reviewer at the source, six are as reported, five report
+      that a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    status: on-disk
+    note: >
+      Screening of the candidate cruise points 0.3.0: four points, with time at cruise
+      speed, the missions of option B, cruise power against take-off power, that power
+      referred to sea level by a declared rule for the air a gas turbine takes in, the
+      carbon dioxide metric of ICAO at first order against the minimum objective,
+      compression of the cabin air and insulation margin. Input in cruise-points.yaml
+      beside it; it reads the mission screening and does not change it. Written and
+      checked by tools/cruise_points.py. A first-order screening; it states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-GEN-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the generation architecture, as accepted on review from a report of
+      2026-11-15 relayed by the author - generators and turbogenerators that have run,
+      counts and failure cases in published concepts, the rules on isolation and rotor
+      burst. Ten of its statements were read by the reviewer at the source, three are as
+      reported, six report that a search found nothing. It gives no fall of power with
+      altitude.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRT-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the certification basis, as accepted on review from a report of
+      2026-11-15 relayed by the author - the amendment of CS-25 in force and the paragraphs
+      named in the brief, the special condition for electric and hybrid propulsion with
+      its means of compliance, a certification memorandum, special conditions for
+      batteries, and the requirements with no text. Fifteen of its statements were read by
+      the reviewer at the source, one is as reported, four report that a search found
+      nothing. It declares no basis.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRT-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-FUL-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUL-001_fuel-location_2026-11-15.md
+    status: on-disk
+    note: >
+      Research record: the place of the fuel, as accepted on review from a report of
+      2026-11-15 relayed by the author - fuel capacity of three types of the class, the
+      requirements on fuel tanks in and outside the fuselage, and the criteria of
+      placement. Nine of its statements were read by the reviewer at the source, three
+      are as reported, five report that a search found nothing. It reads station
+      053-900-050 of the product tree and finds no volume on record for the bay.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-FUL-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    status: on-disk
+    note: >
+      Criteria and maturity proposed for the cruise point on 2026-11-15, at the request
+      of the authority, reissued on 2026-11-16: four criteria not traded, five traded in
+      order of precedence with fuel as the north star (CM-004 rule 19), and three maturity
+      records at the threshold of ruling R2 of KNOT-EWTW-NRG-001; with what supports the
+      order, what it costs, what would open it again, and what it implies on the points
+      of the screening. A proposal: it rules nothing and scores no option.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md
+    status: on-disk
+    note: >
+      Research record: the measure of environmental effect and the floor of service, as
+      accepted on review from two reports of 2026-11-16 relayed by the author - the
+      published measures of the environmental performance of an aeroplane, the effects on
+      climate other than carbon dioxide against cruise altitude, fuel and speed in the
+      class, and what operators and makers have done. Nine of its statements were read by
+      the reviewer at the source, five are as reported, six report that a search found
+      nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
+    status: on-disk
+    note: >
+      Decision record of ruling R1 of the cruise point, of 2026-11-16, by the architecture
+      authority: the three maturity records approved at level 6 for the preliminary-design
+      baseline, and the minimum objective on carbon dioxide applied at that release. No
+      criterion approved and no option scored. Ratified by the merge of the pull request
+      that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-FUS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+    status: on-disk
+    note: >
+      Research record: sections and cabins of the class, and a blended body at 100 seats, as
+      accepted on review from a report of 2026-11-17 relayed by the author. Six of its
+      statements were read by the reviewer at the source, four are as reported, three report
+      that a search found nothing. It reads a study of NASA that sizes a blended body and a
+      tube-and-wing of 98 seats.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/053_Fuselage/KNOT-EWTW-FUS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-WNG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-WNG-001_wings-and-span-limits_2026-11-17.md
+    status: on-disk
+    note: >
+      Research record: wings of the class, the limit on the span and wings of high aspect
+      ratio, as accepted on review from a report of 2026-11-17 relayed by the author. Seven
+      of its statements were read by the reviewer at the source, five are as reported, four
+      report that a search found nothing.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/057_Wings/KNOT-EWTW-WNG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
+    status: on-disk
+    note: >
+      Research record: published drag data and forecasts for the class, as accepted on
+      review from a report of 2026-11-17 relayed by the author. Three of its statements were
+      read by the reviewer at the source, four are as reported, four report that a search
+      found nothing. The database of EASA and the forecasts of ICAO were not opened.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-FUS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: sections of four to six seats abreast, a wide fuselage that carries
+      lift, and tanks of liquid hydrogen. Fourteen statements read at the source, three
+      findings of absence.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/053_Fuselage/KNOT-EWTW-FUS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-WNG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: the wings now in service, propellers at the wingtip and the braced
+      wing. Six statements read at the source, three findings of absence. It corrects one
+      consequence of the record of 2026-11-17.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/057_Wings/KNOT-EWTW-WNG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: a public method for the polar, and the forecasts that could not be
+      read. Four statements read at the source, four findings of absence.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: the technology goals of ICAO for fuel burn, read in the summaries of
+      its Environmental Reports of 2019 and 2022. Eight statements read at the source, three
+      findings of absence. Produced and reviewed by the same hand on 2026-11-18, by the route
+      the authority indicated; no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CFG-EWTW-AER-001/README.md
+    status: on-disk
+    note: >
+      Screening of the configurations 0.2.0: four fuselage sections, three wings and four
+      cruise points at three technology sets, each aircraft sized on the requirement mission
+      with a polar of first order and an empty mass by option, and its carbon dioxide metric
+      against the objective of 26 % below the new-type level, with two types certified by
+      EASA as checks. Input in configuration.yaml
+      beside it; it reads the mission screening and the screening of the cruise points and
+      does not change them. Written and checked by tools/configuration_screen.py. Produced
+      and checked by the same hand on 2026-11-18; no second reader has checked it. A
+      first-order screening; it states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/053_Fuselage/KNOT-EWTW-FUS-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/057_Wings/KNOT-EWTW-WNG-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-MAS-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-PRP-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-FUL-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
+    status: on-disk
+    note: >
+      Record of the objective and of the premises it corrects: the decision of the authority
+      of 2026-11-18 that the carbon dioxide metric of the aircraft is to be 26 % below the
+      new-type level and beyond, what that corrects in the two earlier screenings, and eight
+      statements read at the source on the electrical chain, the drag of propeller aircraft
+      and the span efficiency, with four findings of absence. Produced and reviewed by the
+      same hand; no second reader has checked it. The criterion it restates stays proposed.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-PRP-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AER-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: the certified carbon dioxide metrics in the EASA Aeroplane CO2 Emissions
+      Database, issue 12 of 30 September 2026, read from the file the authority attached on
+      2026-11-18. Seven statements read in the file, four findings of absence. The file itself
+      is not in the repository. Produced and reviewed by the same hand; no second reader has
+      checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AER-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-MAS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-MAS-001_structural-mass-and-additive_2026-11-18.md
+    status: on-disk
+    note: >
+      Research record: structural mass, topology optimisation and additive manufacturing.
+      Fourteen statements read at the source, four findings of absence, and a first estimate
+      of the gain for the eWTW on two assumptions of the reviewer.
+      Produced and reviewed by the same hand on 2026-11-18, at the request of the authority;
+      no second reader has checked it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-MAS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-SRC-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
+    status: on-disk
+    note: >
+      Concept of operations of the environmental control system 0.1.3: phases, functions,
+      supplies, failure and ground cases, and open inputs. Input in conops.yaml beside it;
+      the tables are written and checked by tools/conops_check.py. It carries no figure of
+      power and states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+
+  - class: migration-or-completion-record
+    subject: F24
+    path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md
+    status: on-disk
+    note: >
+      Withdrawal record of the publications of chapter 021, of 2026-11-18, at the request of
+      the architecture authority: finding F24 of the model findings register. The tree of the
+      chapter in the information architecture of the TPuBS (789 files), its module of the
+      maintenance manual and its rows of the consolidated registers, measured against the
+      rule on publication content classes, CM-001 section 9 and ruling R1 of
+      KNOT-EWTW-NRG-001. It says what is kept, what the tree held that is written nowhere
+      else, and how to restore it from commit 53848df1. Ratified by the merge of the pull
+      request that carries it.
+    citedBy:
+      - ../README.md
+      - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
+
+  - class: migration-or-completion-record
+    subject: F24
+    path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-003-900_withdrawal_2026-11-20.md
+    status: on-disk
+    note: >
+      Withdrawal record of the publications of section 003-900, of 2026-11-20, at the request of
+      the architecture authority: finding F24 of the model findings register. The tree of the
+      section in the information architecture of the TPuBS (37 files) and its rows of the
+      consolidated registers, measured against the same rules as the record of 2026-11-18 and
+      against ruling R2 of KNOT-EWTW-NRG-001. It keeps the nine carrier-neutral subjects that
+      the tree projected, and says how to restore it from commit 53848df1. Ratified by the
+      merge of the pull request that carries it.
+    citedBy:
+      - ../README.md
+      - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
+
+  - class: ratified-act-or-convention
+    subject: AMPEL360-AMM-INFOCODE-CM-001
+    path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/AMPEL360-AMM-INFOCODE-CM-001_Information-Code-Breakdown-and-Effectivity-Variants.md
+    status: on-disk
+    note: >
+      Convention on the information-code breakdown of a subject node, its one-way link to the
+      product, the modification stack and the fork rule. Issue 1, PROPOSED: drafted on
+      2026-11-20 at the request of the authority, from CM-001 section 9, the TPuBS README and
+      the form of the withdrawn example; five open points. Its header records the approval act
+      once given.
+    citedBy:
+      - 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
+      - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
+
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R1-completion_2026-11-14.md
+    status: on-disk
+    note: >
+      Completion of ruling R1 of 2026-11-07 with rationale and evidence, once: liquid
+      hydrogen is allocated to the BWB-Q100 by a decision of allocation, not by a trade on
+      this airframe. Drafted by the reviewer from statements in the repository; ratified
+      by the merge of the pull request that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-NRG-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md
+    status: on-disk
+    note: >
+      Decision record of ruling R3 of the energy carrier and ruling R1 of the electrical
+      sources, of 2026-11-14: fuel carries the mission energy and a turbogenerator is a
+      main source in every option; the choice of a propulsion battery is deferred to the
+      role of storage. Ratified by the merge of the pull request that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-NRG-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-ESS-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ESS-001_regulatory-basis_2026-11-13.md
     status: on-disk

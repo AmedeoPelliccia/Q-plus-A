@@ -1,0 +1,147 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-AER-001
+  title: Drag polar of the configuration
+  kind: obligation
+  taxonomy: ['006', '053', '055', '057']
+  raised_at: null
+  question: 'Which wetted area, which parasite drag and which lift-to-drag ratio does the eWTW have at each candidate cruise point?'
+  context: >-
+    The north star of the programme is measured in fuel, and the minimum objective of the aircraft is a carbon dioxide metric 11 % below the new-type limit of ICAO. Both depend on the drag of the aircraft. The screenings of the eWTW use one lift-to-drag ratio, 15, set so that the cruise costs what a fit gives for the reference type, a regional jet. With it the fuel of the three propeller cruise points is equal, so the north star separates only the jet point; and no point meets the minimum objective: the product of the efficiencies and of the lift-to-drag ratio is 4.02 where 4.92 is needed. A lift-to-drag ratio of about 18.4 would close that gap by itself. The eWTW has a wide tube and a wing, and its dimensions are not on record. What the wide tube costs or gains in lift-to-drag ratio, and what electric propulsors on the wing change, is to appear in a polar built from dimensions on record, with its assumptions. It is not to be assumed. This KNOT is an obligation: it owes the analyses a polar. It chooses no architecture.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 'AMPEL360-KNOT-CM-004 rule 19; criteria T2 and M5 of KNOT-EWTW-CRZ-001; decision of the authority of 2026-11-16 on the minimum objective'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-16'
+  depends_on:
+  - KNOT-EWTW-FUS-001
+  - KNOT-EWTW-WNG-001
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-CRZ-001
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-000
+  - view: PBS
+    ref: eWTW-PBS-055-000
+  - view: PBS
+    ref: eWTW-PBS-057-000
+  options: []
+  criteria: []
+  assumptions:
+  - text: 'EASA certified the ATR 72-212A with PW127XT-M engines at 0.404 kg/km and 23,000 kg, 20.3 % below the new-type level; with a floor computed by the screening that is a product of efficiency and lift-to-drag of 4.14, which agrees with the best ratio the propeller points are set on for one value of the engine efficiency, not read'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
+  - text: 'the polar of the first screening rests on two published figures: a lift-to-drag ratio of 15 for the Embraer 190, which the mission screening assumes, sets the jet point, and a best ratio of 15.74 for the ATR 72, which is a statistic, sets the propeller points'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'the independent experts of ICAO put their regional-jet reference of 2017, the E190-E2, 11 % below the new-type level, and set goals of 16 % below for 2027 and 26 % below for 2037; they are forecasts at nominal confidence'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
+  - text: 'the polar of first order follows a public method: zero-lift drag from the wetted area and a skin-friction coefficient, induced drag from the aspect ratio and a span efficiency of 0.85, wave drag apart'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
+  - text: 'a published computation gives 19.8 at the start of cruise to an advanced tube-and-wing of 98 seats with laminar flow control; it is a forecast, and the screenings keep 15 until a polar of the eWTW exists'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
+  - text: 'one lift-to-drag ratio of 15 serves every cruise point, set on the cruise fitted to the reference type'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: 'at nominal values the carbon dioxide metric of the eWTW is 23 % above the minimum objective at the propeller points, with an assumed cabin area'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+  couplings:
+  - knot: KNOT-EWTW-MAS-001
+    note: 'the same dimensions give the drag and the mass, and the screening uses both'
+  - knot: KNOT-EWTW-PRP-001
+    note: 'propulsors on the wing or behind the fuselage change the drag and the lift of the airframe; their effect enters the polar only when it is on record'
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-AER-001-01
+    title: 'Published drag data and forecasts for the class'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Published lift-to-drag ratios, drag build-up data and certified metric values near 100 seats, and what the forecasts of ICAO expect'
+    research_brief:
+      questions:
+      - 'Which lift-to-drag ratios in cruise are published for aircraft of 70 to 130 seats, turboprops and jets, with the Mach number, the altitude and the mass they hold at, and from which kind of source — flight manual, manufacturer, wind tunnel or calculation?'
+      - 'Which wetted areas, zero-lift drag coefficients, equivalent skin-friction coefficients and span efficiency factors are published for those aircraft, or recommended for the class by design handbooks in public use?'
+      - 'Which certified values of the carbon dioxide metric of ICAO Annex 16 Volume III are published for the types of the class, with their take-off mass and their reference geometric factor, in the databases of ICAO and of EASA?'
+      - 'What do the independent expert review of ICAO, Doc 10127, and the technology appendix of the LTAG report of ICAO forecast for the lift-to-drag ratio, the engine efficiency and the metric value of regional jets and turboprops in 2027, 2037 and 2050?'
+      - 'Which lift-to-drag ratio do published studies give to architectures between a tube-and-wing and a blended wing body — a lifting fuselage, a double bubble, a braced wing — near 100 seats, and which of those values were measured?'
+    serves:
+    - KNOT-EWTW-CRZ-001
+    - KNOT-EWTW-GEN-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Drag data and forecasts of the class, each with its source and with whether it was measured or calculated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-16'
+    start_date: '2026-11-17'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-data-and-forecasts_2026-11-17.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_drag-method-and-forecasts_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
+  - knu_id: KNU-EWTW-AER-001-02
+    title: 'Polar of the eWTW in the screening'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'A drag polar built from the dimensions of KNOT-EWTW-FUS-001 and KNOT-EWTW-WNG-001, for each combination of their options: wetted area by component, parasite drag, induced drag, and the lift-to-drag ratio at each cruise point and mass. It replaces the one ratio of the mission screening. No manufacturer publishes a lift-to-drag ratio with its conditions, so the polar is checked through the fuel of a published mission. The screening that uses it carries the empty mass each option changes'
+    research_brief: null
+    serves:
+    - KNOT-EWTW-CRZ-001
+    - KNOT-EWTW-GEN-001
+    - KNOT-EWTW-PRP-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'A polar with its assumptions, written and checked by a tool, and the fuel and the metric of each cruise point computed with it'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: PENDING_REVIEW
+    created_date: '2026-11-16'
+    start_date: '2026-11-18'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - knu_id: KNU-EWTW-AER-001-03
+    title: 'Dimensions and areas of record'
+    knu_class: CONTROLLED_ARTEFACT
+    description: 'The principal dimensions and areas the analyses use — lengths, span, wing area, cabin area, wetted areas — in one record with the source of each, under S-ATLAS 006'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'One record of dimensions and areas that the screening, the polar and the product tree read, in place of a copy in each'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-16'
+    start_date: null
+    end_date: null
+    evidence_refs: []

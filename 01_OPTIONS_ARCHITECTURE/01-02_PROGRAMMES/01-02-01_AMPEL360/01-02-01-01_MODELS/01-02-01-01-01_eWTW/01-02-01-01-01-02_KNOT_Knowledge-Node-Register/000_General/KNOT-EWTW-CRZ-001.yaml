@@ -1,0 +1,343 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-CRZ-001
+  title: Cruise point
+  kind: decision-anchor
+  taxonomy: ['021', '024', '071', '076', '077']
+  raised_at: null
+  question: 'Cruise point of the eWTW: which Mach number and which altitude?'
+  context: >-
+    The missions of the eWTW fix distances, seats and reserves, and no cruise speed or altitude. Three pieces of work wait for them. A propeller and a ducted fan cannot be compared before the cruise Mach is set. The voltage of the propulsion network depends on the altitude, because the margin against partial discharge falls with pressure. The power of the cabin air compressors depends on the cruise altitude and on the cabin altitude. The research has to say what cruise points aircraft of 70 to 100 seats fly, with propellers and with fans, and what each point costs in block time, in propulsive efficiency, in cabin compression and in electrical insulation.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: 02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; research records of 2026-11-14 on the propulsion chain and on the electrical sources
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-14'
+  depends_on:
+  - KNOT-EWTW-AER-001
+  - KNOT-EWTW-MAS-001
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-PRP-001
+  - KNOT-EWTW-SRC-001
+  affects:
+  - view: model
+    ref: README §3 row 3
+  - view: model
+    ref: README §3 row 5
+  - view: model
+    ref: README §3 row 9
+  options:
+  - id: A
+    text: 'a propeller cruise at the points of the turboprops of the class in service, 275 to 360 kt true airspeed and up to 25,000 ft'
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: 'a jet cruise at the point of the jets of the class, Mach 0.78 and above 30,000 ft'
+    state: open
+    pbs_footprint: []
+  - id: C
+    text: 'a point between the two, such as Mach 0.62 at 27,000 ft, the point of a turboprop design study on record'
+    state: open
+    pbs_footprint: []
+  criteria:
+  - id: M1
+    class: mandatory
+    text: 'The cabin pressure altitude is not above 8,000 ft at the maximum operating altitude, in normal operation'
+    source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M2
+    class: mandatory
+    text: 'Above 25,000 ft, the cabin pressure altitude stays at or below 15,000 ft after any reasonably probable failure of the pressurisation system. It applies to the points above 25,000 ft only'
+    source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M3
+    class: mandatory
+    text: 'The requirement mission closes at the cruise point, with the reserves of ruling R2 of KNOT-EWTW-NRG-001'
+    source: 'Ruling R2 of KNOT-EWTW-NRG-001, 2026-11-14'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M4
+    class: mandatory
+    text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service of rule 19 of CM-004'
+    source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text; the research of 2026-11-16 found no evidence for or against a floor at this speed, and the authority then kept it, stated in knots'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M5
+    class: mandatory
+    text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is at least 26 % below the new-type level at its take-off mass, and the aircraft is to better that margin where it can. It is the goal of the independent experts of ICAO for a regional jet of 2037. The most stringent limit in law, on 2026-11-16 the 11 % below the new-type level of the EU taxonomy for 5.7 to 60 t, stays as the floor under it. The objective is to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target'
+    source: 'Decision of the authority of 2026-11-18: the objective is 26 % and beyond. It replaces as objective the minimum of the decision of 2026-11-16, which stays as the floor: a criterion of the EU taxonomy for the manufacturing of aircraft, and not a limit of the type certificate. Record of the objective and the premises, 2026-11-18; research record of the technology goals, 2026-11-18, statement 2; research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application was proposed by the reviewer and fixed by ruling R1 of 2026-11-16, when the criterion stood at 11 %'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: T1
+    class: tradable
+    text: 'Power of the gas turbines for the cruise, referred to sea level, on the take-off mass of the requirement mission. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 2
+    state: PROPOSED
+  - id: T2
+    class: tradable
+    text: 'Fuel loaded on the scoring mission, the one measure of environmental effect on record: the emissions in flight follow the fuel burned. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; north star by decision of the authority of 2026-11-16, rule 19 of CM-004'
+    weight: null
+    threshold: 0.05
+    precedence: 1
+    north_star: true
+    state: PROPOSED
+  - id: T3
+    class: tradable
+    text: 'Time at cruise speed on the scoring mission. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 3
+    state: PROPOSED
+  - id: T4
+    class: tradable
+    text: 'Inception voltage of partial discharge left at the cruise altitude, as a share of its value at sea level. Higher is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 4
+    state: PROPOSED
+  - id: T5
+    class: tradable
+    text: 'Ideal work to compress outside air to the cabin pressure. Lower is better'
+    source: 'Screening of the cruise points CRP-EWTW-CRZ-001; order proposed on 2026-11-16'
+    weight: null
+    threshold: 0.05
+    precedence: 5
+    state: PROPOSED
+  maturity_required:
+  - id: Q1
+    element: 'Turbogenerator of megawatt class'
+    taxonomy: '068'
+    options: [A, B, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'A generator of 1 MW tested by itself, a turbogenerator of 600 kW on a bench since July 2026, and a generator meant for 2.5 MW that passed 1 MW with its turbine on a bench; none has flown (research record of the generation architecture, 2026-11-15, statements 1, 4 and 5). These are statements of the makers, read at the source, not test results. The cruise point sets how many megawatts are installed, not which element is needed'
+    level: null
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
+    state: APPROVED
+  - id: Q2
+    element: 'Propeller driven by an electric motor of megawatt class, at the cruise Mach of the option'
+    taxonomy: '077'
+    options: [A, C]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'Six electric propellers of 50 kW each flew about 100 hours on a demonstrator (research record of the propulsion chain, 2026-11-14, statement 1). The propeller efficiency of 0.85 at Mach 0.62 is that of a design study (statement 8). No efficiency of a motor with its inverter has been measured in flight at a megawatt (finding 18)'
+    level: null
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
+    state: APPROVED
+  - id: Q3
+    element: 'Ducted fan driven by an electric motor of megawatt class, at the cruise Mach of the option'
+    taxonomy: '077'
+    options: [B]
+    decision: REV-B_RELEASED of the scopes this KNOT affects
+    required: 6
+    evidence: 'The one motor of 2 MW meant to replace a turbofan on an airliner of about 100 seats never flew (research record of the propulsion chain, 2026-11-14, statement 5). An all-electric aircraft of 19 seats with ducted propulsors made a first flight on 2026-11-14, at about 300 km/h and with no power given for a propulsor (statement 4). No comparison in flight of propellers and ducted fans exists at this class (finding 17)'
+    level: null
+    source: 'Decision of the authority of 2026-11-15: the threshold of ruling R2 of KNOT-EWTW-NRG-001 is kept for this KNOT, level 6 of the Q+ATLANTIDE-TRL scale — a model or prototype of the system or subsystem demonstrated in a relevant environment — at the release of the preliminary-design baseline, not of the concept baseline. No waiver is sought. Approved by ruling R1 of 2026-11-16'
+    state: APPROVED
+  assumptions:
+  - text: 'of the types certified by EASA up to September 2026, the one turboprop stands 20.3 % below the new-type level and the jets nearest to the class 11.4 % and 4.7 % below; none is certified against the new-type limit, and the limit formula of the screenings gives the limits the regulator prints'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_easa-co2-database_2026-11-18.md
+  - text: 'the carbon dioxide metric is taken at the best lift-to-drag ratio of each aircraft, because the applicant selects its altitude and its speed; it does not see the cruise speed, and criterion T2 does'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'in the first screening of the configurations no aircraft meets criterion M5 at nominal values or with the baskets of the ICAO experts for 2037; two of 36 meet it with every favourable value'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'the objective of criterion M5, 26 % below the new-type level, is the goal the independent experts of ICAO set for a regional jet of 2037; the 11 % of its floor is the margin they give to the regional jet in service in 2017'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AER-001_icao-technology-goals_2026-11-18.md
+  - text: 'the mission screening is fitted to sectors that its reference type flew at long-range cruise, and it carries no cruise speed of the eWTW'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: the points of option A are read from the sheets of two turboprops of 72 and 82 seats; the Mach of option B is that of the charts of the reference type, and its altitude is as reported
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+  - text: the point named in option C is that of a design study of aircraft of 220 and 250 passengers
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+  couplings:
+  - knot: KNOT-EWTW-WNG-001
+    note: 'the wing loading follows the cruise point, and the lift-to-drag ratio at a cruise point follows the wing; the two are sized together'
+  rulings:
+  - id: R1
+    date: '2026-11-16'
+    authority: AM.PEL — architecture authority
+    statement: 'Two decisions. One: the maturity that the decision of the cruise point requires is approved — level 6 of the Q+ATLANTIDE-TRL scale at the release of the preliminary-design baseline, for the turbogenerator of megawatt class, for the propeller driven by an electric motor of megawatt class and for the ducted fan driven by one. It is the threshold of ruling R2 of KNOT-EWTW-NRG-001, and no waiver is sought. Two: the minimum objective on carbon dioxide, criterion M5, is to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target. The options stay open, and the criteria stay proposed'
+    effect: maturity records Q1 to Q3 approved; moment of application of criterion M5 fixed; no option scored or excluded
+    rationale: 'One element has one threshold in every decision that depends on it: the turbogenerator is record Q4 of KNOT-EWTW-NRG-001 and record Q1 here, and a waiver is not needed and would weaken that coherence. The authority approved the records unless the reviewer saw problems; the reviewer found none against the thresholds, and recorded that no element has a level on the evidence on record. Applied today to nominal values, criterion M5 would reject every option: the screening puts the metric 23 % above the objective at the propeller points and 39 % above it at the jet point. The authority keeps the options open, so the objective is a target of the design until the preliminary-design baseline, as the maturity threshold is'
+    rationale_recorded: '2026-11-16'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects: []
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md — PR #74, ratified by its merge'
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-CRZ-001-01
+    title: Cruise points of the class
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Cruise Mach and altitude of aircraft of 70 to 100 seats, and what each point costs'
+    research_brief:
+      questions:
+      - 'What cruise Mach numbers and altitudes do in-service aircraft of 70 to 100 seats fly, with propellers and with turbofans, and what block times follow on stages of 500, 1,100 and 2,000 km?'
+      - 'How does the efficiency of a propeller and of a ducted fan vary with the cruise Mach number between 0.5 and 0.8, in measurements and not only in project calculations?'
+      - 'What cabin altitude and pressure differential do types of this class certify, and how does the power of an electric cabin air compressor vary with the cruise altitude?'
+      - 'How does the partial-discharge inception voltage of aircraft insulation vary with altitude between 20,000 and 40,000 ft, in published tests?'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'Candidate cruise points with what each costs in block time, propulsive efficiency, cabin compression and insulation margin'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-14'
+    start_date: '2026-11-15'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+  - knu_id: KNU-EWTW-CRZ-001-02
+    title: Mission screening by cruise point
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The missions of the eWTW flown at each candidate cruise point: fuel, take-off mass and block time, with the speed as a declared parameter of MSN-EWTW-NRG-001'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'Screening reissued with a cruise speed, for each candidate point'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: PENDING_REVIEW
+    created_date: '2026-11-14'
+    start_date: '2026-11-15'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+  - knu_id: KNU-EWTW-CRZ-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: 'Criteria and weights for the cruise point, drawn from ReqBS and TPMS'
+    research_brief:
+      questions:
+      - 'Which criteria do published studies use to set the cruise point of a regional aircraft — block time, fuel, noise, integration with faster traffic?'
+      - Which criteria follow from certification and cannot be traded?
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria, weights and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: PENDING_REVIEW
+    created_date: '2026-11-14'
+    start_date: '2026-11-15'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
+  - knu_id: KNU-EWTW-CRZ-001-04
+    title: Measure of environmental effect
+    knu_class: ANALYSIS_PACKAGE
+    description: 'What the north star measures at the cruise point, beyond the fuel loaded'
+    research_brief:
+      questions:
+      - 'Which published measures of the environmental performance of an aeroplane exist, and what does each count — the carbon dioxide metric of ICAO Annex 16 Volume III, the noise limits of Volume I, the criteria of the EU taxonomy for aircraft, the Flight Emissions Label of EASA? Which apply to a new CS-25 type, with which limits and from which date?'
+      - 'How do the effects on climate other than carbon dioxide — contrails and nitrogen oxides — change with the cruise altitude between 20,000 and 35,000 ft and with the cruise speed, in published assessments? Is there a figure that can be set beside the fuel burned?'
+      - 'How does the fuel burned by a regional aircraft on a fixed stage change with its cruise speed and altitude, in published data — the lift-to-drag ratio against the Mach number, and the specific fuel consumption of a turboshaft against altitude?'
+      - 'Which share of sustainable aviation fuel is required and which is allowed, by which rule and from which date? Does it change which cruise point is the more ecological?'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-GEN-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'A measure of environmental effect for the north-star criterion, with its source, and a statement of what still has no figure'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-16'
+    start_date: '2026-11-16'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md
+    - view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - knu_id: KNU-EWTW-CRZ-001-05
+    title: Floor of service
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The evidence behind a floor on the cruise speed, which keeps the north star from choosing an aircraft nobody flies'
+    research_brief:
+      questions:
+      - 'Which cruise speeds and block times have operators accepted for aircraft of 70 to 100 seats on stages of 500 to 2,000 km? What do orders and deliveries of turboprops against regional jets show, and which reasons are published?'
+      - 'Which turboprop programmes of 90 to 100 seats were studied or announced, and why did each stop or go ahead?'
+      - 'How does block time change the productivity of a regional aircraft and its cost for each seat-kilometre, in published operating-cost models?'
+      - 'Is there a speed or a flight level below which faster traffic restricts a regional aircraft — in route charges, in airspace rules or in flow management?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: 'A floor of service for criterion M4 with its evidence, or the statement that none is on record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: PENDING_REVIEW
+    created_date: '2026-11-16'
+    start_date: '2026-11-16'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_environmental-measure-and-floor_2026-11-16.md

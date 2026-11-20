@@ -1,0 +1,226 @@
+# Generated 2026-11-14 - Claude Fable 5.2 - first issue, at the request of the authority
+# Concept of operations of the environmental control system of the eWTW. It says in which
+# phases the system works, what it does, what supplies it and what it does when something
+# fails. It carries no figure of power: the load of each function in each phase is the
+# work of KNU-EWTW-SRC-001-01, which this document feeds. Every statement names its basis:
+# declared (by the model or a ruling), assumption (of an analysis on record), proposed (by
+# this document, to be confirmed) or open (with the KNOT that decides it, or the authority).
+# tools/conops_check.py checks the form and writes the tables of the README.
+conops:
+  id: CONOPS-EWTW-ECS-001
+  version: '0.1.3'
+  date: 2026-11-14
+  title: How the environmental control system of the eWTW is operated, by phase and by failure case
+  knot: KNOT-EWTW-SRC-001
+  serves: KNU-EWTW-SRC-001-01
+  bindings:
+    functions: [eWTW-FBS-70-10, eWTW-FBS-70-20, eWTW-FBS-70-40]
+    pbs: [eWTW-PBS-021-000, eWTW-PBS-053-200-020]
+    taxonomy: ['021']
+
+  functions:
+  - key: fresh-air
+    text: Take outside air and compress it to cabin pressure, with electric compressors
+    taxonomy: '021-100'
+    basis: declared
+    source: "model README, section 3, row 9: a bleedless system with electric compressors"
+    note: The section was added to the taxonomy on 2026-11-20, at the request of the authority. The interface of the compressors with the energy system stays at 021-900-070
+  - key: cooling
+    text: Cool and dry the air for the cabin in the electric packs
+    taxonomy: '021-510'
+    basis: declared
+    source: "model README, section 3, row 9: E-packs, in an unpressurised bay of the wing-to-fuselage fairing"
+  - key: recirculation
+    text: Recirculate cabin air
+    taxonomy: '021-240'
+    basis: declared
+    source: "model README, section 3, row 9"
+  - key: distribution
+    text: Distribute the air and hold the temperature of each zone
+    taxonomy: '021-200'
+    basis: declared
+    source: "model README, section 3, row 9"
+  - key: pressure-control
+    text: Hold the cabin pressure with the outflow valve and its controller
+    taxonomy: '021-300'
+    basis: declared
+    source: "model README, section 3, row 9; function eWTW-FBS-70-10"
+  - key: equipment-cooling
+    text: Ventilate and cool the avionics and the equipment bays
+    taxonomy: '021-260'
+    basis: declared
+    source: "model README, section 3, row 6"
+  - key: ram-air
+    text: Ventilate the cabin with ram air when the packs do not supply it
+    taxonomy: '021-250'
+    basis: proposed
+    note: The taxonomy names the function; the model does not declare it for the eWTW
+  - key: ground-air
+    text: Take conditioned air from a unit on the ground
+    taxonomy: '021-290'
+    basis: proposed
+    note: The taxonomy names the function; the model does not declare it for the eWTW
+
+  supplies:
+  - key: turbogenerators
+    text: The turbogenerators, the main source in every option
+    taxonomy: '068'
+    basis: declared
+    source: ruling R1 of KNOT-EWTW-SRC-001, 2026-11-14
+  - key: ground-power
+    text: External electrical power at the stand
+    taxonomy: '012'
+    basis: proposed
+    note: "model README, section 3, row 15 names external power and sizes the ground services against the demand of the packs"
+  - key: auxiliary
+    text: The auxiliary power module
+    taxonomy: '049'
+    basis: open
+    decided_by: authority
+    note: Its technology is not determined, and no KNOT holds it; it appears only as option D of KNOT-EWTW-ESS-001
+  - key: essential
+    text: The essential network on its alternate source
+    taxonomy: '024'
+    basis: assumption
+    source: ELA-EWTW-ESS-001 0.1.0
+
+  phases:
+  - key: stand
+    text: At the stand with passengers boarding or leaving
+    state: On the ground, doors open, not pressurised
+    functions: [cooling, recirculation, distribution, equipment-cooling, ground-air]
+    supply: [ground-power, auxiliary, turbogenerators]
+    basis: open
+    decided_by: authority
+    note: Which of the three supplies the packs at the stand is open input ground-supply
+  - key: taxi-out
+    text: Start of the turbogenerators and taxi to the runway
+    state: On the ground, doors closed, not pressurised
+    functions: [fresh-air, cooling, recirculation, distribution, pressure-control, equipment-cooling]
+    supply: [turbogenerators]
+    basis: proposed
+  - key: take-off
+    text: Take-off and initial climb
+    state: Pressurising
+    functions: [fresh-air, cooling, recirculation, distribution, pressure-control, equipment-cooling]
+    supply: [turbogenerators]
+    basis: proposed
+    note: Whether the packs are reduced while the propulsors take the peak of power is open input take-off-load
+  - key: climb
+    text: Climb to the cruise altitude
+    state: Pressurising
+    functions: [fresh-air, cooling, recirculation, distribution, pressure-control, equipment-cooling]
+    supply: [turbogenerators]
+    basis: proposed
+  - key: cruise
+    text: Cruise
+    state: Pressurised at the cabin altitude
+    functions: [fresh-air, cooling, recirculation, distribution, pressure-control, equipment-cooling]
+    supply: [turbogenerators]
+    basis: proposed
+    note: The cruise altitude and the cabin altitude are open input cruise-point
+  - key: descent
+    text: Descent and approach
+    state: Depressurising to the pressure of the landing field
+    functions: [fresh-air, cooling, recirculation, distribution, pressure-control, equipment-cooling]
+    supply: [turbogenerators]
+    basis: proposed
+  - key: taxi-in
+    text: Landing and taxi to the stand
+    state: On the ground, doors closed, not pressurised
+    functions: [fresh-air, cooling, recirculation, distribution, equipment-cooling]
+    supply: [turbogenerators]
+    basis: proposed
+
+  cases:
+  - key: pack-inoperative
+    kind: degraded
+    text: One pack does not work
+    response: The other pack supplies the cabin at a reduced flow. The altitude that flow can hold is to be sized
+    keeps: [fresh-air, cooling, recirculation, distribution, pressure-control, equipment-cooling]
+    sheds: []
+    supply: [turbogenerators]
+    basis: proposed
+    note: The one sizing of an electric system read covers the failure of a pack (research record of the sources, statement 3)
+  - key: turbogenerator-lost
+    kind: degraded
+    text: One turbogenerator does not work
+    response: Open. What is shed, and whether the packs are among it, depends on how many turbogenerators there are and on what survives a failure
+    keeps: [pressure-control, equipment-cooling]
+    sheds: []
+    supply: [turbogenerators]
+    basis: open
+    decided_by: KNOT-EWTW-GEN-001
+  - key: normal-generation-lost
+    kind: emergency
+    text: All normal electrical generation is lost and the essential network is on its alternate source
+    response: The packs are shed. The alternate source does not pressurise the cabin and the aircraft descends to an altitude where pressurisation is not needed. The control of cabin pressure and the cooling of the essential avionics stay supplied
+    keeps: [pressure-control, equipment-cooling]
+    sheds: [fresh-air, cooling, recirculation, distribution]
+    supply: [essential]
+    basis: assumption
+    source: ELA-EWTW-ESS-001 0.1.0, assumptions A4 and A5, loads L16 and L19
+  - key: packs-off-in-flight
+    kind: degraded
+    text: Both packs are off in flight
+    response: Ram air ventilates the cabin, at an altitude where pressurisation is not needed
+    keeps: [ram-air, pressure-control, equipment-cooling]
+    sheds: [fresh-air, cooling, recirculation]
+    supply: [turbogenerators]
+    basis: proposed
+  - key: cabin-pressure-lost
+    kind: emergency
+    text: The cabin loses its pressure
+    response: Emergency descent. Oxygen is released for the occupants. The packs keep supplying if they work
+    keeps: [fresh-air, cooling, distribution, pressure-control, equipment-cooling]
+    sheds: []
+    supply: [turbogenerators]
+    basis: proposed
+    note: The load analysis assumes that oxygen needs no electrical power once released (assumption A5)
+  - key: smoke
+    kind: emergency
+    text: Smoke in the cabin or in the air supply
+    response: The pack concerned is isolated and recirculation stops. The cabin is ventilated with outside air
+    keeps: [fresh-air, distribution, pressure-control, equipment-cooling]
+    sheds: [recirculation]
+    supply: [turbogenerators]
+    basis: proposed
+  - key: stand-without-supply
+    kind: ground
+    text: At the stand with no supply from the ground
+    response: Open. The auxiliary power module or a turbogenerator supplies the packs, or the cabin is not conditioned
+    keeps: [equipment-cooling]
+    sheds: []
+    supply: [auxiliary, turbogenerators]
+    basis: open
+    decided_by: authority
+
+  open_inputs:
+  - key: cruise-point
+    text: The cruise altitude and the cabin altitude. They set the pressure ratio of the fresh-air compression and the altitude that a reduced flow can hold
+    blocks: [climb, cruise, pack-inoperative]
+    decided_by: KNOT-EWTW-CRZ-001
+  - key: ground-supply
+    text: What supplies the packs at the stand. External power, the auxiliary power module and a turbogenerator are the candidates, and the technology of the module is not determined
+    blocks: [stand, stand-without-supply, auxiliary]
+    decided_by: authority
+  - key: shed-policy
+    text: What is shed on the loss of one turbogenerator, and in which order. It follows the number of turbogenerators
+    blocks: [turbogenerator-lost]
+    decided_by: KNOT-EWTW-GEN-001
+  - key: take-off-load
+    text: Whether the packs are reduced or stopped while the propulsors take the peak of power at take-off. It is the same peak a buffer battery would shave
+    blocks: [take-off]
+    decided_by: KNOT-EWTW-STO-001
+  - key: energy-system-cooling
+    text: Whether this system also cools a propulsion battery or other energy equipment. The taxonomy keeps a node for it, 021-900, and one study on record cools the battery through it
+    blocks: [take-off, cruise, cooling]
+    decided_by: KNOT-EWTW-STO-001
+  - key: ice-protection
+    text: How wings and inlets are protected from ice without bleed air, and whether that load falls in the same phases as the packs
+    blocks: [climb, descent]
+    decided_by: authority
+  - key: power-by-phase
+    text: The electrical power of each function in each phase. This document carries none
+    blocks: [stand, taxi-out, take-off, climb, cruise, descent, taxi-in]
+    decided_by: KNOT-EWTW-SRC-001

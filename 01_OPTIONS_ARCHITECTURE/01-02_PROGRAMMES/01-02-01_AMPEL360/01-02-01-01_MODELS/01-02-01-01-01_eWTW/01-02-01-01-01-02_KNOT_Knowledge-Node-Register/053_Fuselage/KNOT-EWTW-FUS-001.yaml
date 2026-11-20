@@ -1,0 +1,168 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-FUS-001
+  title: Fuselage section, length and cabin
+  kind: decision-anchor
+  taxonomy: ['053']
+  raised_at: null
+  question: 'Which cross-section and which length does the fuselage have, and what cabin area do they give for 100 passengers?'
+  context: >-
+    The eWTW is named for a wide tube and a wing. On 2026-11-16 the authority stated what the wide tube is for: more comfort, and the ground for an architecture better suited to tanks of liquid hydrogen. The aircraft stays far from a blended wing body, and this model carries no hydrogen (ruling R1 of KNOT-EWTW-NRG-001). Neither purpose has a value on record: no measure of comfort, and no tank to make room for. No record defines the wide tube: there is no cross-section, no cabin layout and no length. The only envelope on record is that of the aft fuselage, which its own model request calls a concept assumption. Three analyses wait for these dimensions. The drag of the aircraft depends on the wetted area of the fuselage. The carbon dioxide metric of ICAO divides the fuel for each kilometre of cruise by the area of the cabin to the power 0.24, and the screening assumes that area between 60 and 95 m². The energy-carrier bay has no volume on record. A wider tube has more wetted area and more frontal area for the same seats, unless it is shorter or carries lift; whether it gains is to be shown by a drag polar and not assumed. The north star is fuel, which a wider tube costs on a model that carries no hydrogen, while the carbon dioxide metric gives some credit for cabin area. This KNOT records the dimensions each option gives. It does not choose between the tube, the lifting body and the blended body before those dimensions and the polar exist.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; AMPEL360-KNOT-CM-004 rule 19; criterion M5 of KNOT-EWTW-CRZ-001; statement of the authority of 2026-11-16 on the architecture'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-16'
+  depends_on: []
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-AER-001
+  - KNOT-EWTW-MAS-001
+  - KNOT-EWTW-FUL-001
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-053-000
+  - view: model
+    ref: README identity table, row Class
+  options:
+  - id: A
+    text: 'a circular tube of the width of the regional jets of the class, with one aisle'
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: 'a wide tube, circular or nearly so and shorter for the same seats, with a wide single aisle or two aisles'
+    state: open
+    pbs_footprint: []
+  - id: C
+    text: 'a flattened or elliptical section that carries part of the lift, between a tube and a blended body'
+    state: open
+    pbs_footprint: []
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'a first screening sizes option A at four abreast and option B at five and six abreast, on the cabin widths of three types in service, and prices a wider cabin for the same seats; the section moves the fuel by about 2 %, inside the error of its fuselage formula. Option C is not screened'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'the widths read at a manufacturer are 2.74 m for four seats abreast, 3.28 m for five and 3.63 m for six; two aisles start at seven abreast and are not found to pay below about 180 seats, so the wide tube at 100 seats is of five or six abreast with one aisle'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+  - text: 'a wider tube gives less width for each seat abreast than the reference cabin unless seats are left out of the row; comfort needs a measure for each passenger'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+  - text: 'the two sources read on hydrogen disagree on the width of a regional fuselage: one design widens it for the tanks, one parametric study finds two points more energy; both are calculated'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+  - text: 'the reference cabin of the class is four abreast, 2.74 m wide and 2.00 m high with an aisle of 0.49 m, that of the Embraer 190; no value is set for the wide tube'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+  - text: 'at 98 seats a blended body burns 4 % more fuel than a tube-and-wing with the same technologies, in the one sized comparison read, which is calculated; a gain in lift-to-drag ratio is not a gain in fuel unless the empty mass is carried with it'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+  - text: 'the configuration is named Wide Tube and Wing, and no record defines the wide tube'
+    ref:
+      view: PBS
+      ref: eWTW-PBS-053-000
+  - text: 'the model README classes the eWTW as advanced tube-and-wing, S-ATLAS 092; the authority states that it is far from a blended wing body, so the class stands while option C is open'
+    ref:
+      view: model
+      ref: README identity table, row Class
+  - text: 'the wide tube is meant for more comfort and as the ground for an architecture better suited to tanks of liquid hydrogen; no record gives a measure of comfort or a tank to make room for'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R1-completion_2026-11-14.md
+  - text: 'the screening assumes a cabin area between 60 and 95 m², for want of a cabin on record'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+  - text: 'the mission screening keeps the airframe of its reference type, a single-aisle tube'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  couplings:
+  - knot: KNOT-EWTW-WNG-001
+    note: 'a section that carries lift changes the wing the aircraft needs; the two are sized together'
+  - knot: KNOT-EWTW-DAT-001
+    note: 'the frame and the envelope of record of the fuselage stations take their values from the section chosen here'
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-FUS-001-01
+    title: 'Sections and cabins: the class, and concepts with a lifting fuselage'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Published dimensions of fuselages and cabins near 100 seats, and what is claimed and what is measured for a fuselage that carries lift'
+    research_brief:
+      questions:
+      - 'What are the fuselage width and height, the seats abreast, the seat width and the aisle width, the cabin length and the cabin floor area of the aircraft of 70 to 130 seats in service or certified — regional jets, small single-aisles and turboprops — in the documents of their manufacturers?'
+      - 'Which published concepts put a wide or flattened fuselage that carries lift between a tube-and-wing and a blended wing body, at 100 to 200 seats? For each: the cross-section, the share of lift the fuselage carries, the wetted area and the lift-to-drag ratio claimed, and whether it comes from a flight test, a wind-tunnel test or a calculation.'
+      - 'What do published studies of blended wing bodies say of sizes near 100 seats: the cabin height and the thickness of the centre body, the wetted area for each passenger, and the size at which an advantage over a tube-and-wing appears?'
+      - 'What does a pressurised section that is not circular cost in structural mass, in published studies and in aircraft that have flown?'
+      - 'How is the reference geometric factor of ICAO Annex 16 Volume III defined, and which values are published for the types of the first question?'
+      - 'Which fuselage sections do published designs of hydrogen aircraft of 70 to 150 seats use, and where do they put the tanks of liquid hydrogen — behind the cabin, above it or beside it? Which section and which tank volume do they state, and what does the tank cost in fuselage length?'
+    serves:
+    - KNOT-EWTW-AER-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Dimensions of the class and of the published concepts, each with its source and with whether it was measured or calculated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-16'
+    start_date: '2026-11-17'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUS-001_wide-sections-and-hydrogen-tanks_2026-11-18.md
+  - knu_id: KNU-EWTW-FUS-001-02
+    title: 'Cabin and fuselage dimensions by option'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'For each option: the seats abreast, the cabin length and floor area for 100 passengers, the fuselage length, the wetted area, and the volume left for the energy-carrier bay. It gives the screening its cabin area and the polar its wetted area'
+    research_brief: null
+    serves:
+    - KNOT-EWTW-AER-001
+    - KNOT-EWTW-FUL-001
+    - KNOT-EWTW-CRZ-001
+    outputs:
+    - view: PBS
+      ref: eWTW-PBS-053-000
+    exit: 'Dimensions for each option, with the assumptions behind them, in a record the screening and the polar read'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-16'
+    start_date: '2026-11-18'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - knu_id: KNU-EWTW-FUS-001-03
+    title: 'Decision criteria and maturity thresholds'
+    knu_class: REQUIREMENT_SET
+    description: 'Criteria in order, with the north-star criterion of rule 19, and the maturity the decision requires. The two purposes the authority states for the wide tube, comfort and the ground for tanks of liquid hydrogen, are candidates for mandatory criteria; each needs a measure and a value'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: 'Criteria and maturity records approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-16'
+    start_date: null
+    end_date: null
+    evidence_refs: []

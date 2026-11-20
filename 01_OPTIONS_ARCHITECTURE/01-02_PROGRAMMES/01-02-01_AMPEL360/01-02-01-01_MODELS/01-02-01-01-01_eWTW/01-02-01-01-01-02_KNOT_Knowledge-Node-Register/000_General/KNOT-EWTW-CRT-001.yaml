@@ -1,0 +1,118 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-CRT-001
+  title: Certification basis
+  kind: obligation
+  taxonomy: []
+  raised_at: null
+  question: 'Certification basis of the eWTW: which specification, which special conditions, and which requirements have no text yet for this aircraft?'
+  context: >-
+    The records of the eWTW read CS-25 as the basis, and none declares it. The special condition for electric and hybrid propulsion systems covers the propulsion system and, for CS-25 aircraft, is to be complemented with emissions requirements that are not defined yet. The research found three requirements with no text for this aircraft: the climb with one engine inoperative gives no gradient for more than four engines; the planning rule gives no final reserve for electric engines; and lithium batteries on large aeroplanes are handled by special conditions written for batteries far smaller than a propulsion pack. The research has to give the texts in force with their amendment, the proposed ones with their state, and the positions an authority has published.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: CS-25, Certification Specifications for Large Aeroplanes, read as the basis by the records of the eWTW; EASA SC E-19; research records of 2026-11-13 and 2026-11-14
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SAF
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-14'
+  depends_on: []
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-PRP-001
+  - KNOT-EWTW-STO-001
+  - KNOT-EWTW-ESS-001
+  - KNOT-EWTW-GEN-001
+  affects:
+  - view: model
+    ref: README §3 row 3
+  - view: model
+    ref: README §3 row 4
+  - view: model
+    ref: README §3 row 14
+  options: []
+  criteria: []
+  assumptions:
+  - text: CS-25 and the air operations rules of Regulation (EU) No 965/2012 are read as the basis; the certification basis of the eWTW and its amendment are not recorded
+    ref:
+      view: model
+      ref: 'AMPEL360-REL-CM-005 section 4, certification-basis'
+  couplings: []
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-CRT-001-01
+    title: Basis and special conditions in force
+    knu_class: EVIDENCE_RECORD
+    description: 'The texts the eWTW would be designed to, each read at the source with its amendment and date'
+    research_brief:
+      questions:
+      - 'Which amendment of CS-25 is in force, and what do CS 25.121, CS 25.903(b), CS 25.1351(d), CS 25.1353 and CS 25.1309 state at that amendment?'
+      - 'What do SC E-19 and each of its means of compliance state, and which are final and which proposed?'
+      - 'Which special conditions have EASA and the FAA published for rechargeable lithium batteries on large aeroplanes, and what do they require?'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-STO-001
+    - KNOT-EWTW-ESS-001
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: 'Texts in force and proposed, each read at the source, with amendment and date'
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-14'
+    start_date: '2026-11-15'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
+  - knu_id: KNU-EWTW-CRT-001-02
+    title: Requirements with no text for this aircraft
+    knu_class: ANALYSIS_PACKAGE
+    description: 'The gaps between the texts in force and an aircraft with a turbogenerator, electric propulsors and possibly a propulsion battery'
+    research_brief:
+      questions:
+      - How have applicants and authorities treated the climb requirement with one engine inoperative for aircraft with more than four propulsors?
+      - What final reserve have authorities accepted or proposed for aeroplanes with electric engines?
+      - What emissions requirements are proposed to complement SC E-19 for CS-25 aircraft?
+      - 'Under which requirements is a gas turbine that gives no thrust and drives generators for propulsion treated: as an engine under CS 25.903, as an auxiliary power unit, or under SC E-19? What does that change for isolation and for rotor burst?'
+    serves:
+    - KNOT-EWTW-PRP-001
+    - KNOT-EWTW-STO-001
+    - KNOT-EWTW-GEN-001
+    outputs:
+    - view: RBS
+      ref: null
+    - view: ReqBS
+      ref: null
+    exit: 'Each gap stated with the text that is missing, the nearest text in force, and the position to seek'
+    owner: STK_SAF
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-14'
+    start_date: '2026-11-15'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
+  - knu_id: KNU-EWTW-CRT-001-03
+    title: Declaration of the basis
+    knu_class: REQUIREMENT_SET
+    description: 'The certification basis the eWTW is designed to, declared by the authority of the model with the gaps it carries. An act of the authority'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: model
+      ref: README §2
+    exit: Basis declared in the model README and cited by the criteria of the KNOTs this one unblocks
+    owner: AM.PEL
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-14'
+    start_date: null
+    end_date: null
+    evidence_refs: []

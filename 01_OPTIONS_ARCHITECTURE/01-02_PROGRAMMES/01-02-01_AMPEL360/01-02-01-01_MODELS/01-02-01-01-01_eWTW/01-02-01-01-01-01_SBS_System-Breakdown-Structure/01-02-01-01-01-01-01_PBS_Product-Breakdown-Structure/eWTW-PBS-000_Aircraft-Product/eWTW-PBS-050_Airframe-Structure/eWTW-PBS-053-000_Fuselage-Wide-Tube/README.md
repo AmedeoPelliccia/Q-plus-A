@@ -107,7 +107,7 @@ after executing the exemplar migration (ruling 5).
 | Stabilizers / empennage | `055` Stabilizers-Empennage | body-side attach here |
 | Landing-gear system | `032` Landing Gear | gear bays/fittings structure here |
 | Pylons / nacelles | `054` Nacelles-and-Pylons | pylon-to-body attach here |
-| Energy carrier (battery) | `028` Energy-Carrier-Storage | bay *structure* here, carrier there |
+| Energy carrier | `028` Energy-Carrier-Storage | bay *structure* here, carrier there |
 | Fire / thermal containment | `026-900` Fire Protection | structural interface here |
 | Standard practices | `051` Standard-Practices-Structures | standards families, fasteners, repairs |
 
@@ -116,11 +116,16 @@ after executing the exemplar migration (ruling 5).
 The fuselage is mostly energy-neutral structure (STD), but the electric WTW adds
 one defining section and two overlays:
 
-- **`053-900-000` Energy-Carrier Structural Integration** - the battery-bay
-  structure, crash-protection/containment interface (to `026-900`), carrier
-  mount and attach fittings, the electric-energy maintenance compartment and
-  the vacated auxiliary-fuel-tank footprint. Confirmed coherent with
-  `ICN-EWTW-021000010` (053-900 references). No conventional analogue
+- **`053-900-000` Energy-Carrier Structural Integration** - the
+  energy-carrier bay structure, crash-protection/containment interface (to
+  `026-900`), carrier mount and attach fittings, the electric-energy
+  maintenance compartment and the vacated auxiliary-fuel-tank footprint.
+  What the bay holds is open (`KNOT-EWTW-NRG-001`): after ruling R2 of
+  2026-11-14 fuel is carried in every option and a propulsion battery in
+  option C only, and where the fuel is carried is not decided. The
+  illustration that labelled the bay *BATT BAY* was withdrawn on
+  2026-11-18 with the publications of chapter 021. No
+  conventional analogue
   (a kerosene tank is a wing-box volume, not a fuselage structural bay). ->
   **STD-G**.
 - **◇ overlays** - two conventional sections also carry energy-carrier mass
@@ -135,6 +140,6 @@ Terminology per **S-ATLAS-NORM-TERM-001**: engine/APU -> auxiliary-power module
 
 [^ata53]: ATA 100 / iSpec 2200 - Chapter 53 *Fuselage* (heritage scope reference).
 [^gatlas]: S-ATLAS `050-059 / 053_Fuselage` register (taxonomy reference this chapter realizes by mapping per Amendment A1).
-[^carrier]: S-ATLAS `028` Energy-Carrier-Storage (battery packs and their limits).
+[^carrier]: S-ATLAS `028` Energy-Carrier Storage and Distribution (the carrier and its storage, whatever the carrier). Note amended on 2026-11-20 (F01).
 [^fire]: S-ATLAS `026-900` Fire Protection (energy-carrier thermal/fire containment).
 [^sp]: S-ATLAS `051` Standard-Practices-Structures (standards families, fasteners, repair allowables).

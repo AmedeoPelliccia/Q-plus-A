@@ -2,13 +2,14 @@
 
 **Chapter:** `021` ⇄ ATA **21**
 **Master range:** `020-029_Core-Aircraft-Systems` · **Band:** `000-099_S-ATLAS`
-**Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `021-500` ⚡, `021-510` ⚡, `021-900`) · **Status:** agnostic standard (SSOT)
+**Owner:** Q-AIR · **Green overlay:** Q-GREENTECH (nodes `021-100` ⚡, `021-500` ⚡, `021-510` ⚡, `021-900`) · **Status:** agnostic standard (SSOT)
 
-Distribution, ventilation, pressurization, relief, and temperature control are energy-neutral and carry forward. The cooling pack (`021-510`, conventional ACM/bleed) is substituted ⚡ by an electrically-driven / vapour-cycle / cryo-integrated cooling unit. Thermal integration (`021-900`) is a first-class green delta with no ATA equivalent. See the master-range [`README.md`](../README.md) for the full node register and conventions.
+Distribution, ventilation, pressurization, relief, and temperature control are energy-neutral and carry forward. The air supply (`021-100`) is outside air compressed electrically ⚡, where the conventional supply is bleed air (chapter `036`). The cooling pack (`021-510`, conventional ACM/bleed) is substituted ⚡ by an electrically-driven / vapour-cycle / cryo-integrated cooling unit. Thermal integration (`021-900`) is a first-class green delta with no ATA equivalent. See the master-range [`README.md`](../README.md) for the full node register and conventions.
 
 ## Section-nodes
 
 - [`021-000_General`](021-000_General/)
+- [`021-100_Air-Compression-Electric`](021-100_Air-Compression-Electric/) ⚡
 - [`021-200_Distribution`](021-200_Distribution/)
 - [`021-210_Cockpit-Distribution`](021-210_Cockpit-Distribution/)
 - [`021-220_Passenger-Cabin-Distribution`](021-220_Passenger-Cabin-Distribution/)

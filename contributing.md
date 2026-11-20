@@ -87,7 +87,7 @@ Every work package begins with an issue.
 ```text
 [WORK PACKAGE] EWTW-538001-010 — Forward pressure bulkhead web CAD model
 [WORK PACKAGE] eWTW-PBS-053-200-020 — Wing-to-fuselage fairing surface model
-[WORK PACKAGE] 021-200-010 — ECS duct pressure-loss simulation
+[WORK PACKAGE] eWTW-PBS-021-000 — ECS duct pressure-loss simulation
 [WORK PACKAGE] DMC EWTW-A-53-80-01-00A-040A-D — Forward pressure bulkhead descriptive DM
 ```
 

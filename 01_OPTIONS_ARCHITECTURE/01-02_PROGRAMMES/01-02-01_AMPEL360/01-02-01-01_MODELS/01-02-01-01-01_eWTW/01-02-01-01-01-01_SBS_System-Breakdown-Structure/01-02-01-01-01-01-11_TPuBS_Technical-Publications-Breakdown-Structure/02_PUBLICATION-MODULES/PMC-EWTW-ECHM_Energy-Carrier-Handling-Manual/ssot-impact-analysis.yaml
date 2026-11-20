@@ -22,6 +22,8 @@ ssot_impact_analysis:
     - node: "003-900"
       band: "000-099 S-ATLAS"
       band_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099"
+      # The folder was withdrawn on 2026-11-20 with its publications (withdrawal record at the root of the TPuBS):
+      # the path below is where the node returns when it is planned again.
       node_dir: "../../01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/003-900_Energy-Replenishment-Ground-Infrastructure"
       title: Energy-Replenishment Ground Infrastructure
       relevance: primary

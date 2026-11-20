@@ -21,8 +21,11 @@ knot:
   created_date: '2026-11-08'
   depends_on:
   - KNOT-EWTW-NRG-001
+  - KNOT-EWTW-CRZ-001
+  - KNOT-EWTW-CRT-001
   closed_with:
   - KNOT-EWTW-SRC-001
+  - KNOT-EWTW-GEN-001
   unblocks: []
   affects:
   - view: model
@@ -71,11 +74,17 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
-  - text: the PBS skeleton holds an electric group only
+  - text: 'in a first screening the electrical chain costs about ten points of margin of the carbon dioxide metric against a mechanical drive on the same airframe, and no gain is credited to propulsors along the span; what they give back is still to be shown in figures'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: the PBS skeleton holds a group for the thermal machine since 2026-11-14, with the turbogenerator chapter alone, beside the electric group
     ref:
       view: PBS
-      ref: eWTW-PBS-070
-  couplings: []
+      ref: eWTW-PBS-060
+  couplings:
+  - knot: KNOT-EWTW-WNG-001
+    note: 'propulsors along the span or at the tips change the wing the aircraft needs and the loads it carries'
   rulings: []
   reopen_if: []
   knus:
@@ -98,11 +107,13 @@ knot:
     exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
   - knu_id: KNU-EWTW-PRP-001-02
     title: Propulsor architecture
     knu_class: ANALYSIS_PACKAGE
@@ -119,11 +130,13 @@ knot:
     exit: Candidate architectures with mass, efficiency and integration data
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
   - knu_id: KNU-EWTW-PRP-001-03
     title: Efficiency and heat chain
     knu_class: ANALYSIS_PACKAGE
@@ -143,11 +156,15 @@ knot:
     exit: Losses and heat loads per phase and option
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
   - knu_id: KNU-EWTW-PRP-001-04
     title: Propulsion failure cases
     knu_class: ANALYSIS_PACKAGE
@@ -166,11 +183,13 @@ knot:
     exit: Failure cases with candidate requirements and risks
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
   - knu_id: KNU-EWTW-PRP-001-05
     title: PBS group for a thermal machine
     knu_class: CONTROLLED_ARTEFACT
@@ -179,13 +198,17 @@ knot:
     serves: []
     outputs:
     - view: PBS
-      ref: null
+      ref: eWTW-PBS-060
     exit: Group opened with its mapping (CM-001 §3.1)
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: PBS
+      ref: eWTW-PBS-060
+    - view: PBS
+      ref: eWTW-PBS-068-000
     condition: only if the ruling admits a thermal machine

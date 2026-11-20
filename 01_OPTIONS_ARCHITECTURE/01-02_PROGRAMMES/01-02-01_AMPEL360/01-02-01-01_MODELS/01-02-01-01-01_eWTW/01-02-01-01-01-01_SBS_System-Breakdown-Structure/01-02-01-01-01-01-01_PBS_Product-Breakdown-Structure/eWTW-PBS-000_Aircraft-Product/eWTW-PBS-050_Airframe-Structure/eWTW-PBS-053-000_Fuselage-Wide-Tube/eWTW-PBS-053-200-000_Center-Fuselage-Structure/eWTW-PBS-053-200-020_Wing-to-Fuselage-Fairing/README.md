@@ -22,6 +22,6 @@ CSN `532002` - grammar `EWTW-532002-III` per AMPEL360-PBS-PN-CM-001 (items x10; 
 
 ## Notes
 
-- Hosts the unpressurized pack bay (PB in ICN-EWTW-021000010); E-PACK units are ATA 021-510.
+- Hosts the unpressurized pack bay; E-PACK units are ATA 021-510. Note amended on 2026-11-18 (F01).
 
 Generated 2026-07-06 - realize_PBS-053_GATLAS.py (2.0.0-GATLAS)

@@ -19,8 +19,8 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.8 |
-| Date | 2026-11-13 |
+| Version | 0.3.30 |
+| Date | 2026-11-20 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
@@ -61,7 +61,7 @@ Derived from `main` at `279bb700`, 2026-10-12, and unchanged at `e212e121`, 2026
 | ReqBS | 5 [requirement candidates][REQ-533001] for `EWTW-533001`; no initial baseline |
 | EBS | A derived [evidence index][EBS-IDX] of 11 rows — 4 on disk, 5 cited only (Clarification C1), 2 pending commit (LC-001) |
 | LBS | README only |
-| TPuBS | 50 information-architecture subject nodes; 19 publication modules |
+| TPuBS | No information-architecture subject node and no data module; 19 publication modules, none listing a data module. The publications of chapter `021` were withdrawn on 2026-11-18 and those of section `003-900` on 2026-11-20 ([F24](#9-findings)) |
 | Validator | [`tools/sbs_validate.py`][VAL] 0.1.2 — **FAIL, 1 check**: the pilot station's run-record is invalid YAML ([F08](#9-findings)) |
 
 ---
@@ -75,12 +75,12 @@ Derived from `main` at `279bb700`, 2026-10-12, and unchanged at `e212e121`, 2026
 - the energy-carrier structural provisions `053-900` — bay structure (`053-900-010`), crash protection and containment interface (`053-900-020`), mount and attach fittings (`053-900-030`) and the electric-energy maintenance compartment (`053-900-040`), with load overlays in `053-200` (bay integration) and `053-700` (bay support and crash);
 - no auxiliary fuel tank: its footprint is preserved inert (`053-900-050`);
 - the pack-bay and belly-fairing architecture — an unpressurised pack bay in the wing-to-fuselage fairing (`053-200-020`, pack-mount rails `EWTW-532002-050`);
-- an **electric, bleedless ECS based on E-packs** — taxonomy home S-ATLAS [`021-510`][S-021-510] *Environmental Cooling Unit — Electric*; the PBS holds chapter `036` as *Pneumatic — Vacated*;
+- an **electric, bleedless ECS based on E-packs** — taxonomy homes S-ATLAS [`021-100`][S-021-100] *Air Compression (Electric)* for its compressors and [`021-510`][S-021-510] *Environmental Cooling Unit — Electric* for its cooling; the PBS holds chapter `036` as *Pneumatic — Vacated*;
 - tailcone provisions for the Auxiliary Power Module — mounts (`053-400-020`), firewall and thermal provisions (`053-400-030`): a location and a fire boundary, not a technology.
 
 **The one system-level change already identifiable** is the transfer of the ECS power source from the engine's pneumatic domain to the electrical domain. It couples E-pack sizing to generation, distribution, protection and heat rejection — before any propulsion decision is taken.
 
-**Open decisions**, which together gate the preliminary-design baseline: the energy carrier · the propulsion chain · the electrical sources · the role of energy storage · the architecture of essential power — registered as KNOTs in [§5](#5-open-knots). The structure of the energy-carrier bay does not determine its content: batteries and conventional fuel tanks would each require a different realisation; cryogenic tanks are out of scope. Several pages on `main` still call it a battery bay ([F01](#9-findings)).
+**Open decisions**, which together gate the preliminary-design baseline: the energy carrier · the propulsion chain · the electrical sources · the role of energy storage · the architecture of essential power — registered as KNOTs in [§5](#5-open-knots). The structure of the energy-carrier bay does not determine its content: batteries and conventional fuel tanks would each require a different realisation; cryogenic tanks are out of scope. The pages that called it a battery bay are amended or withdrawn ([F01](#9-findings)).
 
 ---
 
@@ -93,19 +93,19 @@ The S-ATLAS column gives taxonomy homes. PBS codes are PBS-local (CM-001 §3.1) 
 | # | System | S-ATLAS | FBS | To be represented for eWTW | St. |
 |---|---|---|---|---|:-:|
 | 1 | Airframe | `051–059` | `50` · `10` | Fuselage, wings, empennage, propulsor attachments, doors, floors, compartments, fairings, equipment supports. Energy-carrier provisions, E-pack installation, penetrations, access and mass distribution | D·I |
-| 2 | Energy-carrier storage and delivery | `028` · `064` | `30` | Carrier containment, supports, charging or refuelling interfaces, gauging, isolation, links to consumers. The bay that receives the carrier is declared (`053-900`); the carrier is not | O |
-| 3 | Propulsion | `061–069` · `071–074` · `076–077` | `20` | Propulsive units, installation, power transmission, control and monitoring. If electric: inverters, motors, optional gearboxes, propellers or fans; if hybrid, the thermal machine on conventional fuel and its sub-systems too — the PBS skeleton has no group for one yet | O |
-| 4 | Electrical generation and storage | `024` · `068` · `074` | `30` · `40` | Main sources, conversion, storage, start, energy management; fuel cells (`075`) left the option set with hydrogen. The E-pack creates a significant demand; **it does not determine the kind of generation or the role of batteries** | I·O |
-| 5 | Electrical distribution | `024` · `076` · `079` | `40` | Buses, switchgear, converters, protection, harnesses, segregation, essential supplies. E-pack supplies and protection must be allocated now; a propulsion HV network only if the propulsion chain requires it | I·O |
-| 6 | Thermal management | `021` · `078` | `70-40` · `20-40` · `30-30` | Equipment cooling, heat exchangers, ventilation, liquid loops, air inlets and outlets — integrated with the E-pack installation; propulsion-battery and thermal-machine loops conditional on their presence | I·O |
+| 2 | Energy-carrier storage and delivery | `028` · `064` | `30` | Carrier containment, supports, charging or refuelling interfaces, gauging, isolation, links to consumers. **Conventional fuel is carried in every option since ruling R2**, and a propulsion battery in option C only. A bay is declared (`053-900`) and was defined for batteries; where the fuel is carried is not decided | D·O |
+| 3 | Propulsion | `061–069` · `071–074` · `076–077` | `20` | Propulsive units, installation, power transmission, control and monitoring. **Electric propulsors in every option since ruling R2**: inverters, motors, optional gearboxes, propellers or fans. They are fed by a thermal machine on conventional fuel that generates electricity, in PBS group `060`, opened with chapter `068`. Distributed or concentrated propulsion is open | D·O |
+| 4 | Electrical generation and storage | `024` · `068` · `074` | `30` · `40` | Main sources, conversion, storage, start, energy management. **A turbogenerator (`068`) is a source in every option since ruling R2**; batteries alone left the option set with it, and fuel cells (`075`) with hydrogen. The E-pack creates a significant demand; it does not determine the role of batteries, which is open | D·I·O |
+| 5 | Electrical distribution | `024` · `076` · `079` | `40` | Buses, switchgear, converters, protection, harnesses, segregation, essential supplies. E-pack supplies and protection must be allocated now; a propulsion HV network in every option since ruling R2, from the turbogenerators to the electric propulsors | I·O |
+| 6 | Thermal management | `021` · `078` | `70-40` · `20-40` · `30-30` | Equipment cooling, heat exchangers, ventilation, liquid loops, air inlets and outlets — integrated with the E-pack installation; a thermal-machine loop in every option since ruling R2, and a propulsion-battery loop in option C only | I·O |
 | 7 | Flight controls | `027` · `022` | `60` | Computers, sensors, primary and secondary surfaces, actuators. No model-specific change declared; differential thrust only if distributed propulsion is chosen | O |
 | 8 | Actuation and utility power | `029` | `60-50` · `110-20` | Pumps, accumulators, actuators, hydraulic lines, possible EHA and EMA. The electric ECS does not decide the fate of hydraulics — technology allocated function by function | O |
-| 9 | ECS, pressurisation, pneumatics | `021` · `036` | `70-10` · `70-20` | E-packs (`021-510`), electric compressors, air treatment, distribution, recirculation, thermal regulation, cabin pressure. **Bleedless ECS declared**; pack bay in the belly fairing; any other pneumatic consumer is treated separately | D |
+| 9 | ECS, pressurisation, pneumatics | `021` · `036` | `70-10` · `70-20` | E-packs (`021-510`), electric compressors (`021-100`), air treatment, distribution, recirculation, thermal regulation, cabin pressure. **Bleedless ECS declared**; pack bay in the belly fairing; any other pneumatic consumer is treated separately | D |
 | 10 | Ice and rain protection | `030` | `70-30` | Surfaces and inlets, probes and windshield heating, rain removal. Technology open: **a bleedless ECS is not an aircraft without bleed** | O |
 | 11 | Landing gear, braking, steering | `032` | `110` · `50-40` | Legs, retraction, wheels, brakes, anti-skid, steering, doors, structural interfaces. Bay and fitting structure defines an integration scope, not the gear design: NLG bay `053-100-020` with NLG fittings `053-800-030`, MLG wheelwell `053-200-030`. The MLG configuration is open (`KNOT-EWTW-MLG-001`) | I·O |
 | 12 | Avionics and flight management | `022` · `023` · `031` · `034` · `042` · `046` | `80` · `90` | Navigation, communication, surveillance, guidance, instruments, alerting, systems management; E-pack control and indication now, energy management once the sources are chosen | I·O |
 | 13 | Cabin, cargo, equipment | `025` · `033` · `035` · `044` · `050` | `100` | Furnishings, seats, floors, lighting, oxygen, water and waste, holds, evacuation; interfaces with air distribution. Floor structure (`053-700-010 … -050`) and seat tracks (`053-700-060`) carry planned part trees; water and waste has no S-ATLAS chapter yet ([F03](#9-findings)) | I |
-| 14 | Protection and emergency | `026` · `047` · `079` | `120` | Fire and smoke detection, source isolation, electrical protection, continuity of essential functions. **Thermal-propagation management if propulsion batteries are present; fire protection of the thermal machine and its fuel in the hybrid branch** | O |
+| 14 | Protection and emergency | `026` · `047` · `079` | `120` | Fire and smoke detection, source isolation, electrical protection, continuity of essential functions. **Fire protection of the thermal machine and its fuel in every option since ruling R2; thermal-propagation management if propulsion batteries are present (option C)** | I·O |
 | 15 | Auxiliary power and ground services | `049` · `012` | `40-50` · `110-40` | External power, auxiliary sources, start, emergency supplies, service interfaces — sized against E-pack demand and the energy configuration. Tailcone mounts and firewall are declared (`053-400-020`, `-030`); the name *Auxiliary Power Module* does not determine its technology | I·O |
 | 16 | Diagnostics and maintenance support | `045` | `130` | Monitoring, built-in test, fault recording, access, test points, support equipment — extending to the E-packs and to whatever equipment is selected; TPuBS follows its configuration and effectivity | I |
 
@@ -124,15 +124,15 @@ The PBS nodes below exist. Stations of `053-000 … 053-300` are already allocat
 | `053` seat tracks | Provide seat attachment and load transfer | `eWTW-PBS-053-700-060` | Seats, fasteners, floor, supporting structure |
 | `053` pressure bulkheads | Close the pressurised volume and carry pressure loads | `eWTW-PBS-053-800-010` (forward) · `-020` (rear) | **Registered:** rear joint `ICD-EWTW-533001-538002`; forward: radome dossier `eWTW-IBS-531004-538001`. To register: skin, frames, seals, penetrations |
 | `053-900` energy-carrier bay | Integrate the energy module and carry its loads in the assigned scenarios | `eWTW-PBS-053-900-010` · crash and containment `-020` · mounts `-030` | Supports, envelopes, access, load paths, system connections — content-dependent until `KNOT-EWTW-NRG-001` closes |
-| `021` ECS | Condition and distribute air at the required state | Chapter `eWTW-PBS-021-000` exists as a scaffold — **the E-pack station and its part numbers are still to be realized under it**, realizing S-ATLAS `021-510`; its mount rails already exist in the fairing (`EWTW-532002-050`) | Electrical supply, air, control, installation, exhaust, maintenance |
+| `021` ECS | Condition and distribute air at the required state | Chapter `eWTW-PBS-021-000` exists as a scaffold — **the E-pack station and its part numbers are still to be realized under it**, realizing S-ATLAS `021-100` and `021-510`; its mount rails already exist in the fairing (`EWTW-532002-050`) | Electrical supply, air, control, installation, exhaust, maintenance |
 
-One distinction is deliberate: the TPuBS node `021-200-010` (*Distribution Ducting Architecture*) is a publication node. It describes the product; it can never identify an E-pack or give it a part number (CM-001 §9). The link runs from the product, with its configuration and effectivity, to the publication — never the other way round. The ECS zoning illustration [`ICN-EWTW-021000010-001-01`][ICN-021000010] is today the counter-example: it labels the energy-carrier bay a battery bay, and PBS notes cite it as their authority ([F01](#9-findings)).
+One distinction is deliberate: a TPuBS node is a publication node. It describes the product; it can never identify an E-pack or give it a part number (CM-001 §9). The link runs from the product, with its configuration and effectivity, to the publication — never the other way round. The publications of chapter `021` were the counter-example, and were withdrawn on 2026-11-18: 210 data modules for a system that has no station yet, and an illustration that PBS notes cited as their authority ([F24](#9-findings), [F01](#9-findings); [withdrawal record][WDR-021]). Those of section `003-900`, which described the charging of an aircraft that stores its energy in batteries alone, followed on 2026-11-20 ([record][WDR-003]). The form that a subject node takes once a product exists is in [`AMPEL360-AMM-INFOCODE-CM-001`][CM-INFOCODE] (proposed).
 
 ---
 
 ## 5. Open KNOTs
 
-Uncertainty is managed with the KNOT/KNU method, as in the sibling model [MRTT-Q300][MRTT]. Identifiers and owners are proposed; they take effect when recorded. Each KNOT has a record in the [KNOT register][KNOT-REG], under [`AMPEL360-KNOT-CM-004`][CM-004] (proposed): its options, criteria, rulings with their rationale, and the Knowledge Units (KNUs) — research, analyses and other work — that resolve it. The tables below are views of those records. The [architecture relations][REL] node projects taxonomy and programme relations onto these KNOTs: the candidates for a decision, and a check of what it waits for.
+Uncertainty is managed with the KNOT/KNU method, knowledge threads and knowledge units, as in the sibling model [MRTT-Q300][MRTT]. Identifiers and owners are proposed; they take effect when recorded. Each KNOT has a record in the [KNOT register][KNOT-REG], under [`AMPEL360-KNOT-CM-004`][CM-004] (proposed): its options, criteria, rulings with their rationale, and the Knowledge Units (KNUs) — research, analyses and other work — that resolve it. The tables below are views of those records. The [architecture relations][REL] node projects taxonomy and programme relations onto these KNOTs: the candidates for a decision, and a check of what it waits for.
 
 ### Configuration decisions
 
@@ -140,17 +140,27 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 
 **Scope narrowed on 2026-11-07** by the architecture authority: the eWTW is all-electric, or hybrid-electric with conventional fuel, and carries no hydrogen; liquid hydrogen is allocated to the [BWB-Q100][BWB]. `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are narrowed to that scope and stay open within it.
 
-**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery. R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
+**Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery.
+
+**Deferred on 2026-11-14** by ruling R3 of `KNOT-EWTW-NRG-001` and ruling R1 of `KNOT-EWTW-SRC-001`: conventional fuel carries the mission energy and a turbogenerator is a main source in every option, and the fuel storage and the turbogenerator installation are authorised for definition. The choice that remains was held by three KNOTs and stays in one, `KNOT-EWTW-STO-001`. Ruling R1 was completed the same day. Three KNOTs were opened for what the research exposed: the cruise point, the certification basis, and the location of the fuel. A fourth followed on 2026-11-15, the generation architecture: the number, rating and position of the turbogenerators are not decided by the role of storage.R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
 
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|
 | `KNOT-EWTW-NRG-001` | Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope | 2 · 4 · 6 · 14, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]). `KNOT-MRTT-CMA-001` targets commonality with the eWTW family under an LH₂ baseline — a premise the eWTW no longer offers; to be revisited in the [MRTT-Q300][MRTT] model | `STK_SE` |
-| `KNOT-EWTW-PRP-001` | Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not? | 3 · 5 · 6 · 7 | The PBS skeleton holds an electric group ([`070`][PBS-070]) only | `STK_SE` |
+| `KNOT-EWTW-PRP-001` | Propulsion chain: all-electric, or hybrid-electric with a thermal machine on conventional fuel; distributed or not? The all-electric chain left with ruling R2 | 3 · 5 · 6 · 7 | The PBS skeleton holds a group for the thermal machine (`060`) beside the electric group ([`070`][PBS-070]) | `STK_SE` |
 | `KNOT-EWTW-SRC-001` | Electrical sources: turbogenerators (`068`), batteries (`074`) — alone or combined? Fuel cells (`075`) left the option set with hydrogen | 4 · 5 · 15 | — | `STK_SE` |
 | `KNOT-EWTW-STO-001` | Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only? | 4 · 6 · 14 | — | `STK_SE` |
 | `KNOT-EWTW-ESS-001` | Essential power: which sources, what segregation and what duration keep essential functions available? | 5 · 12 · 14 · 15 | — | `STK_SAF` |
+| `KNOT-EWTW-CRZ-001` | Cruise point: which Mach number and which altitude? | 3 · 5 · 9 | The mission screening carries no cruise speed of the eWTW | `STK_SE` |
+| `KNOT-EWTW-CRT-001` | Certification basis: which specification, which special conditions, and which requirements have no text yet for this aircraft? An obligation, not a choice | 3 · 4 · 14 | CS-25 at Amendment 28 and SC E-19 are read at the source; no record declares the basis | `STK_SAF` |
+| `KNOT-EWTW-GEN-001` | Generation architecture: how many turbogenerators, of what rating, and where are they installed? | 3 · 4 | First-order take-off power near 8.8 MW, and a cruise that asks more of the gas turbines once referred to sea level; units on record of 0.6 to 1 MW, none flown | `STK_SE` |
+| `KNOT-EWTW-FUL-001` | Where is the fuel carried — in the wing, in the fuselage bay, or in both — and what does the energy-carrier bay then hold? | 1 · 2, and the content of `053-900` | Assumed: the carrier is not aft of the rear pressure bulkhead ([`BL-053-300-010-A2`][BL-A2]) | `STK_SE` |
+| `KNOT-EWTW-FUS-001` | Fuselage: which cross-section and which length, and what cabin area for 100 passengers? | The fuselage (`053`), and the volume of `053-900` | A first screening sizes four, five and six abreast, with 71 to 81 m² of floor; no section is chosen | `STK_SE` |
+| `KNOT-EWTW-WNG-001` | Wing: which span, which aspect ratio and which area? | The wing (`057`), and the fuel its box holds | A first screening sizes three wings, of aspect ratio 11.5, 14 and 17; no wing is chosen | `STK_SE` |
+| `KNOT-EWTW-AER-001` | Drag polar: which wetted area, which parasite drag and which lift-to-drag ratio at each cruise point? An obligation, not a choice | The fuel and the carbon dioxide metric of every cruise point | A polar of first order by option, set on one jet and on one turboprop in service, with no second reader | `STK_SE` |
+| `KNOT-EWTW-MAS-001` | Empty mass: what does the eWTW weigh empty under each option of its fuselage and of its wing, and which part rests on structural technologies not yet in service? An obligation, not a choice | The fuel of every option | An empty mass of first order by option: 31 to 36 t at nominal values | `STK_SE` |
 
-The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together:
+The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed:
 
 ```mermaid
 flowchart LR
@@ -160,12 +170,46 @@ flowchart LR
   PRP["KNOT-EWTW-PRP-001<br/>propulsion chain"]
   STO["KNOT-EWTW-STO-001<br/>role of storage"]
   ESS["KNOT-EWTW-ESS-001<br/>essential power"]
+  CRZ["KNOT-EWTW-CRZ-001<br/>cruise point"]
+  CRT["KNOT-EWTW-CRT-001<br/>certification basis"]
+  FUL["KNOT-EWTW-FUL-001<br/>fuel location"]
+  GEN["KNOT-EWTW-GEN-001<br/>generation architecture"]
+  FUS["KNOT-EWTW-FUS-001<br/>fuselage section and cabin"]
+  WNG["KNOT-EWTW-WNG-001<br/>wing planform"]
+  AER["KNOT-EWTW-AER-001<br/>drag polar"]
+  MAS["KNOT-EWTW-MAS-001<br/>empty mass"]
   NRG --> SRC
   NRG --> PRP
   SRC ---|"closed together"| PRP
   SRC --> STO
   SRC --> ESS
   STO --> ESS
+  NRG -.->|"deferred to"| STO
+  SRC -.->|"deferred to"| STO
+  CRZ --> PRP
+  CRZ --> SRC
+  CRT --> PRP
+  CRT --> STO
+  CRT --> ESS
+  NRG --> FUL
+  STO --> FUL
+  CRZ --> FUL
+  FUL ---|"coupled"| GEN
+  FUS --> AER
+  WNG --> AER
+  AER --> CRZ
+  FUS --> MAS
+  WNG --> MAS
+  MAS --> CRZ
+  FUS --> FUL
+  WNG --> FUL
+  FUS ---|"coupled"| WNG
+  WNG ---|"coupled"| CRZ
+  CRZ --> GEN
+  CRT --> GEN
+  STO --> GEN
+  GEN ---|"closed together"| PRP
+  GEN --> ESS
   EP --> SRC
   EP --> ESS
 ```
@@ -227,6 +271,34 @@ Scope `eWTW-PBS-053-300-010`, the rear fuselage zone; supersedes A1. Status `PRO
 
 Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criterion of A2, but its findings feed `R-533001-05` and a ReqBS candidate, so it belongs before step 2.
 
+### Path to the concept baseline of the aircraft
+
+Proposed on 2026-11-16, at the request of the authority, as the shortest way to the choice of a reference configuration. It is a plan, not a ruling.
+
+The release of a concept baseline asks for a first concept with its first geometry and early proportions, an initial requirements baseline, an initial upgrade watch list, and the readiness level and the assumptions of each immature element ([lifecycle model][LCM], §3 and §13.2). The major configuration decisions are due at the preliminary-design baseline. The concept baseline needs a value for the three that give the aircraft its proportions — the cruise point, the fuselage section and the wing planform — by ruling where the screening separates the options, and as a recorded assumption where it does not.
+
+| Step | Who | What | Exit |
+|---|---|---|---|
+| 1 | Outside research, in parallel | The three briefs: `KNU-EWTW-FUS-001-01`, `KNU-EWTW-WNG-001-01`, `KNU-EWTW-AER-001-01` | Three reports |
+| 2 | Reviewer | The reports arbitrated; the dimensions each option gives to the fuselage and to the wing (`KNU-EWTW-FUS-001-02`, `KNU-EWTW-WNG-001-02`) | Three research records; one record of dimensions (`KNU-EWTW-AER-001-03`) |
+| 3 | Reviewer | A polar of first order, checked against a published type, and the screening run once over every combination of section, planform and cruise point (`KNU-EWTW-AER-001-02`), with the empty mass of each option (`KNU-EWTW-MAS-001-02`) | One table: fuel, carbon dioxide metric, installed power and time for each combination |
+| 4 | Authority | The criteria. Those of the cruise point approved; the purposes of the wide tube, comfort and the ground for tanks of liquid hydrogen, stated as mandatory criteria with a measure and a value; the limit on the span | Criteria `APPROVED` in the three KNOTs |
+| 5 | Authority | One act for the cruise point, the section and the planform, which are sized together: the mandatory criteria first, then the north star | A reference configuration. What the table does not separate by more than its margin stays open, with the reference value as an assumption |
+| 6 | Authority, with the reviewer | The baseline record of the aircraft scope: dimensions of record, initial requirements, upgrade watch list, the readiness level and the assumptions of each critical element, and the KNOTs left open with the assumption each one carries | `REV-A_RELEASED` for the aircraft scope |
+
+Steps 2 and 3 are one piece of work, and steps 4 and 5 can be one act.
+
+Step 1 was delivered on 2026-11-17, and its three records are in the [KNOT register][KNOT-REG]. They change step 3 in two ways. The screening carries the empty mass each option changes, because the one sized comparison read gives a blended body of 98 seats a better lift-to-drag ratio and a higher fuel burn. And the polar is checked through the fuel of a published mission, because no manufacturer publishes a lift-to-drag ratio with its conditions.
+
+On 2026-11-18 the reviewer completed step 1 by direct research, at the request of the authority: four more records, with no second reader. They give the widths of four, five and six seats abreast, a public method for the polar and for the masses, and a first estimate of what topology optimisation and additive manufacturing would gain. `KNOT-EWTW-MAS-001` now holds the empty mass by option.
+
+Steps 2 and 3 were delivered the same day in a first issue, the [screening of the configurations][CFG]: dimensions by section, a polar and an empty mass by option, and one table over 144 aircraft, with no second reader. It was run against the objective the authority set that day: 26 % below the new-type level of the carbon dioxide standard, and beyond. At nominal values no aircraft is below the level. With the baskets of the ICAO experts for 2037 the best is 18.8 % below. A mechanical drive on the same airframe is about ten points better than the electrical chain. Installed power and time are not in its table, because it does not size the propulsion system; the one record of dimensions (`KNU-EWTW-AER-001-03`) waits for the choices.
+
+The authority then attached the database of EASA of certified carbon dioxide metrics, and the screening carries two of its types as checks in a second issue. A turboprop in service, the ATR 72-212A with PW127XT-M engines, stands 20.3 % below the new-type level, and the A220-100 11.4 % below. The nominal chain of the eWTW has the efficiency the certified turboprop shows, and the objective asks a product of efficiency and lift-to-drag of 5.4 to 5.5: a third more than that turboprop has, and less than the jet has.
+
+- **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
+- **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state. The screening does not meet the objective of 26 % with the options as written: step 4 has to say whether that objective gates the preliminary-design baseline, as ruling R1 has it for criterion `M5`.
+
 ---
 
 ## 7. Exemplars
@@ -250,6 +322,7 @@ Committing the LC-001 analysis package ([F10](#9-findings)) is not a gate criter
 | `AMPEL360-SBS-LC-CM-003` | Artefact lifecycle in the SBS; integrated baselines `BL-<scope>-<stage><seq>` | **No** — proposed; notation ruling open (`KNOT-EWTW-LCM-001`) |
 | [`AMPEL360-KNOT-CM-004`][CM-004] Issue 1 | KNOT and KNU records: kinds, identifiers, fields, rulings and waivers, the research agenda as a view | Yes — *PROPOSED*; its header records the approval act once given |
 | [`AMPEL360-REL-CM-005`][CM-005] Issue 1 · [`QPLUS-REL-001`][REL-001] Issue 1 | Architecture relations at programme, model and product level, and between taxonomy nodes; their projection onto the KNOT register | Yes — both *PROPOSED*; the taxonomy relations are held in the model until the taxonomy owner adopts them |
+| [`AMPEL360-AMM-INFOCODE-CM-001`][CM-INFOCODE] Issue 1 | The information-code breakdown of a TPuBS subject node, its one-way link to the product, the modification stack and the fork rule | Yes, from the change that carries it — *PROPOSED*: drafted on 2026-11-20 for ratification, with five open points. CM-001 §9 and 13 station records cited it before it had a text |
 | [Lifecycle model][LCM] · [C-GROWTH][CGR] | LC-letter stages, release gates, findings; intra-stage execution | Yes — draft v0.7.1 rev. I |
 | [`tools/sbs_validate.py`][VAL] 0.1.2 | One exit code over the SBS: protected areas, YAML, placeholder and ghost codes, typed references, taxonomy addresses, self-claims | Yes |
 | [`tools/knot_check.py`][KNOT-CHECK] · [`tools/relations_project.py`][REL-TOOL] · [`tools/essential_loads.py`][ELA-TOOL] · [`tools/mission_closure.py`][MSN-TOOL] | The KNOT register against CM-004; the relations against CM-005 and their projection onto the register; the budget of the essential load analysis; the first-order closure of the candidate missions | Yes — each with its tests |
@@ -263,7 +336,7 @@ Places where the repository says two things, or points at something superseded. 
 
 | F | Class | Finding | Evidence on `main` | Closes when |
 |---|---|---|---|---|
-| F01 | `F-WARN` | The energy-carrier bay is called a **battery bay** and the APM an **electric auxiliary module**, while `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are open. Since 2026-11-07 the carrier is batteries, conventional fuel or both: if every branch carries propulsion batteries, the bay label holds and only size and role stay open (`KNOT-EWTW-STO-001`); the APM label stays premature, since in the hybrid branch the module may be thermal. The PBS notes cite a publication illustration as their authority — the inverse of product → publication | [`ICN-EWTW-021000010-001-01`][ICN-021000010] ("BATT BAY (053-900)", note 3); the chapter `053` README (cross-references, green-native notes); `PBS-053-BREAKDOWN.md`; the READMEs of `053-900-010` and `053-400-020` | The authority declares the content — rows 2, 4, 6 and 14 change status — or rules that propulsion batteries are carried in every branch, which keeps the bay label; otherwise the labels are neutralised: ICN issue 02 and amended PBS notes |
+| F01 | `F-WARN` | The energy-carrier bay is called a **battery bay** and the APM an **electric auxiliary module**, while `KNOT-EWTW-NRG-001` and `KNOT-EWTW-SRC-001` are open. Since 2026-11-07 the carrier is batteries, conventional fuel or both: if every branch carries propulsion batteries, the bay label holds and only size and role stay open (`KNOT-EWTW-STO-001`); the APM label stays premature, since in the hybrid branch the module may be thermal. The PBS notes cite a publication illustration as their authority — the inverse of product → publication | The illustration `ICN-EWTW-021000010-001-01` ("BATT BAY (053-900)", note 3), withdrawn on 2026-11-18 with the publications of chapter `021` ([F24](#9-findings)); the chapter `053` README (cross-references, green-native notes); `PBS-053-BREAKDOWN.md`; the READMEs of `053-900-010` and `053-400-020` | The authority declares the content — rows 2, 4, 6 and 14 change status — or rules that propulsion batteries are carried in every branch, which keeps the bay label; otherwise the labels are neutralised: ICN issue 02 and amended PBS notes. **Since 2026-11-14:** ruling R2 declares the content — fuel in every option, a propulsion battery in option C only — and rows 2 to 6 and 14 changed; the bay label does not hold in every branch, and the PBS notes are neutralised (PBS README 0.2.2). **Since 2026-11-18:** the illustration is withdrawn (F24) and no issue 02 is due; the PBS notes no longer name it. **Since 2026-11-20:** the two labels that were left in the chapter `053` README are neutralised. Nothing of the closing condition is outstanding: closed when this is on `main` |
 | F02 | `F-WARN` | Derived and summary documents lag the disk | `PBS-053-BREAKDOWN.md` lists 337 part numbers and `PBS-053-REALIZED-TREE.txt` 348 part files — July generator output under the G-ATLAS name — against 431 on disk; the root README cites 55 stations and ~330 part numbers; the chapter `053` README links the legacy `053-010-000` tree deleted in `abf6318e` | Regenerated from disk, or marked superseded |
 | F03 | `F-DEFER` | Eleven PBS nodes — eight chapters and three section-grain stubs — record no taxonomy mapping and point to an "Amendment A1 ratification table" that Issue 2 absorbed. The `070` group's PBS-local titles follow a powerplant-style order that S-ATLAS does not; water and waste (`038`) has no S-ATLAS chapter to map to; PBS notes cite `ATA` chapters instead of S-ATLAS addresses | `taxonomyRef` without `chapter` in `038`, `071`, `073`, `074`, `076`, `077`, `078`, `080`, `090-100`, `090-300`, `090-500` | Mapping recorded per CM-001 §3.1 — mandatory before any station is realized under these nodes |
 | F04 | `F-WARN` | 46 of 59 station records are still the generator-reconstructed Amendment A1 form | Depth passes applied to `053-000`, `053-100` (except the locked radome station `-040`) and `053-300`; the `053-200` engine plans 40 new nodes (41 → 81) and is not applied | Depth passes for `053-200` (once `KNOT-EWTW-MLG-001` is ruled or its note amended) and `053-400 … 053-900`, and the radome migration; each record then carries the Issue 2 station contract ([F15](#9-findings)) — a pass having run is not the evidence |
@@ -286,6 +359,7 @@ Places where the repository says two things, or points at something superseded. 
 | F21 | `F-WARN` | Authority: CM-001 calls both the folder (§5) and the register (§8) SSOT without saying which governs what; it designates no record for revision and effectivity; and `catalog_pn` (§6) is carried by no part record | CM-001 §5, §6, §8; none of the 431 `part.yaml` carries `catalog_pn` | CM-001 states authority per field — identity, row status, revision, effectivity, catalog identity |
 | F22 | `F-WARN` | Approval records: CM-001 Issue 2 and CM-002 Issue 1 are on `main`, yet both headers read *PROPOSED — merge constitutes ratification* and no record names the approval act. Approving a convention is a separate act from ratifying a product baseline | CM-001 Issue 2 entered in `8ed1bd59`, 2026-08-22; CM-002 Issue 1 in `546c84a4`, 2026-09-06 | Each header names its approval act — commit, date, authority — and the resulting status |
 | F23 | `F-BLOCK` | The artefacts of record of `EWTW-533001-000` come from one run since 2026-11-14, and their records are not closed yet. Up to `v0.2.1-concept` the generator wrote the outflow-valve surround malformed: the doubler `-041` and the frame `-042` were lofts between open polygons lying on the cone, and its rounded-rectangle helper ran out to one sharp corner and back. In the STEP file of that version FreeCAD 1.0.0 shows 119 bodies where the report counts 50, with labels that are not part numbers. The interference recorded against the baseline, 34,856.8 mm³, equals the volume of one bracket and is an artefact of those bodies, and the recorded mass, 80.3 kg, rests on them too. The corrected generator, `v0.2.2-concept`, is on `main` since 2026-11-13. Since 2026-11-14 the STEP file, the preview and the verification report on `main` come from one run of it by the author. They match the sizes and hashes in the new run record; the report gives 25 PASS, 50 bodies of one solid each and no interference; FreeCAD 1.0.0 shows the 50 bodies under their part numbers. Four points remain. The run record of `v0.2.1-concept` is still beside the new one (F08). The new record carries the hash of a copy of the generator with Windows line endings and no final newline: the text of the generator on `main`, in other bytes. It names a model the author no longer uses and a prompt of revision C that is not in the repository. The mass recorded against the baseline, 80.3 kg, rests on the malformed bodies; a verification run of `v0.2.2-concept` gave 83.2 kg at the same density | `CAD/source/EWTW-533001-000_concept.py`; `Prompts/run-record.yaml` at `ad1935ea`, checked against the three files it names; `Prompts/Run-record.yaml`, which names `v0.2.1-concept`; round trips of 2026-11-13 and 2026-11-14 with [`tools/freecad_roundtrip.py`][ROUNDTRIP], in the EBS index | The earlier run record is superseded and the round-trip report committed; the run record names the generator as committed, or the author accepts the difference on record; and `TPM-533001-MASS`, the open item of the baseline and risk `R-533001-06` are updated |
+| F24 | `F-WARN` | The publications of chapter `021` came before the product. The tree in the TPuBS held 210 data modules, 149 of them procedures, for a system with no station under `eWTW-PBS-021-000` and a model at `LC-A`. None declared a content class; all 207 requirements read `AUTHORED`, over stubs and unverified modules; 41 of the 50 subject nodes had addresses that the taxonomy does not define; and the modules stated a cryogenic cold sink, a modification effective from a serial number and compressor data with no source | `main` at `fe6e4685`: `021_Air-Conditioning-Environmental-Control/` in the information architecture of the TPuBS, from `53848df1`; measured against `QPLUS-LC-PUBCLASS-001`, CM-001 §9 and ruling R1 of `KNOT-EWTW-NRG-001` in the [withdrawal record][WDR-021] | The tree, its module of the maintenance manual and its rows of the consolidated registers are withdrawn. Asked by the authority on 2026-11-18 and entered with the withdrawal: closed when it is on `main`. Publications of the chapter return in class `P0`, planned on the stations of the product once they exist. **Since 2026-11-20:** the tree of section `003-900` — 37 files, five data modules on ground charging — had the same defects and bound the eWTW to charging alone, against ruling R2; it is withdrawn too ([record][WDR-003]), and the information architecture holds no data module |
 
 ---
 
@@ -306,7 +380,7 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
-The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`.
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`. The [screening of the configurations][CFG] of `KNOT-EWTW-AER-001` is checked by `tools/configuration_screen.py`.
 
 ---
 
@@ -327,6 +401,28 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.6 | 2026-11-14 | `KNOT-EWTW-NRG-001` has proposed criteria and a research record on the energy carrier (KNOT register 0.8.0). F23 restated: the STEP file, the preview and the verification report on `main` come from one run of `v0.2.2-concept` and match its run record; four points remain |
 | 0.3.7 | 2026-11-14 | `KNOT-EWTW-NRG-001` has three candidate missions with a first-order closure test, and proposes the maturity it requires of six critical elements (KNOT register 0.9.0). `tools/mission_closure.py` added |
 | 0.3.8 | 2026-11-14 | Ruling R2 of `KNOT-EWTW-NRG-001`: missions with their roles, 100 seats, the final reserve and the required maturity approved; batteries alone excluded until reopened. Size class and propulsion posture restated (KNOT register 0.10.0) |
+| 0.3.9 | 2026-11-14 | Consequences of ruling R2 in the product: rows 2 to 6 and 14 of the system table restated; PBS group `060` opened for the thermal machine with chapter `068`; the notes of F01 neutralised in the PBS (PBS README 0.2.2, KNOT register 0.10.1) |
+| 0.3.10 | 2026-11-14 | Ruling R1 completed. The energy carrier and the electrical sources deferred to the role of storage, where the one remaining choice stays; fuel storage and turbogenerator installation authorised. Three KNOTs opened: cruise point, certification basis, fuel location (KNOT register 0.11.0) |
+| 0.3.11 | 2026-11-14 | Concept of operations of the environmental control system, first issue, in the KNOT register (0.11.1). It carries no figure; its open inputs are the cruise point, the supply at the stand and what is shed on the loss of a turbogenerator |
+| 0.3.12 | 2026-11-15 | `KNOT-EWTW-GEN-001` opened for the number, rating and position of the turbogenerators, which the deferral of the electrical sources had left without a decision of their own (KNOT register 0.11.2) |
+| 0.3.13 | 2026-11-15 | Cruise point: research record and a first-order screening of four points (KNOT register 0.11.3). The cruise asks about as much electrical power as the take-off; the jet point saves time and costs fuel, cabin compression and insulation margin |
+| 0.3.14 | 2026-11-15 | Generation architecture: research record, and the gas turbines in the screening of the cruise points (KNOT register 0.11.4). No turbogenerator of the megawatt class has flown; at a declared first-order rule the cruise, not the take-off, sizes the gas turbines at every candidate point |
+| 0.3.15 | 2026-11-15 | Certification basis: research record (KNOT register 0.11.5). The texts are read at the Agency; a turbogenerator used for propulsion falls under the definition of an engine; four gaps have no text. The basis is not declared: the declaration is an act of the authority |
+| 0.3.16 | 2026-11-15 | Fuel location: research record (KNOT register 0.11.6). The fuel of the requirement mission exceeds the tanks of the turboprops of the class and is about half the wing of the reference jet; the wing of the eWTW is not defined, so the KNOT now depends on the cruise point. A tank in the fuselage has three costs the rules name and no mass on record |
+| 0.3.17 | 2026-11-15 | Cruise point: criteria proposed, with weights (KNOT register 0.11.7). Fuel and installed power carry 0.65, time 0.20; a floor of 360 kt on the cruise speed is proposed as a requirement of the programme. Nothing is scored: the criteria are `PROPOSED` and the maturity is not declared |
+| 0.3.18 | 2026-11-15 | Cruise point: three maturity records proposed at the threshold of ruling R2, level 6 at the release of the preliminary-design baseline (KNOT register 0.11.8). Criteria and maturity wait for a ruling of the authority |
+| 0.3.19 | 2026-11-16 | North star, by decision of the authority: the more ecological option prevails over time and cost among the options that meet what is never traded (CM-004 rule 19, KNOT register 0.11.9). The criteria of the cruise point are in order, fuel first; two research KNUs ask for the measure of environmental effect and for the floor of service |
+| 0.3.20 | 2026-11-16 | Research on the north star of the cruise point (KNOT register 0.11.10): a published metric of fuel in cruise exists and tightens for new types from the end of 2031; the effects other than carbon dioxide point the same way as fuel and cannot be scored; nothing anchors or refutes the floor of 360 kt, which stays a requirement of the programme |
+| 0.3.21 | 2026-11-16 | Minimum objective, by decision of the authority: the most stringent of the carbon dioxide requirements in law, today 11 % below the new-type limit of ICAO (KNOT register 0.11.11). At first order and at nominal values the eWTW stands 23 % above it at the propeller points and 39 % at the jet point; the favourable values of the mission screening reach it |
+| 0.3.22 | 2026-11-16 | Dimensions of the airframe: three KNOTs opened for the fuselage section and cabin, the wing planform and the drag polar (KNOT register 0.11.13). The architecture lies between a conventional tube-and-wing and a blended wing body, by statement of the authority, and its geometry is not on record; a gain from it has to appear in the polar. The identity table of this README still classes the model as advanced tube-and-wing |
+| 0.3.23 | 2026-11-16 | Ruling R1 of the cruise point: its maturity records approved, and the minimum objective applied at the release of the preliminary-design baseline (KNOT register 0.11.14). The authority states that the wide tube is for more comfort and as the ground for an architecture better suited to tanks of liquid hydrogen, on an aircraft far from a blended wing body: the class of the identity table stands. §6 proposes a path to the concept baseline of the aircraft |
+| 0.3.24 | 2026-11-17 | Step 1 of the path to the concept baseline delivered: three research records on sections and cabins, wings and span limits, and drag data (KNOT register 0.11.15). Step 3 gains the empty mass by option and a check through fuel |
+| 0.3.25 | 2026-11-18 | Research by the reviewer, at the request of the authority: four records on wide sections and hydrogen tanks, wings in service, the method of the polar, and structural mass with additive manufacturing (KNOT register 0.11.16). `KNOT-EWTW-MAS-001` opened for the empty mass by option; the cruise point depends on it |
+| 0.3.26 | 2026-11-18 | The technology goals of ICAO, read in its Environmental Reports (KNOT register 0.11.17): the minimum objective on carbon dioxide is the margin of the regional jet of 2017, and the goal of the experts for 2037 is 26 % below the new-type level. The eWTW of the screening reaches it only with every favourable value at once |
+| 0.3.27 | 2026-11-18 | The objective, by decision of the authority: 26 % below the new-type level of the carbon dioxide standard, and beyond (KNOT register 0.11.18). Steps 2 and 3 of the path delivered in a first issue, the screening of the configurations: no aircraft meets the objective at nominal values or with the baskets of the ICAO experts for 2037, and the electrical chain costs about ten points against a mechanical drive on the same airframe |
+| 0.3.28 | 2026-11-18 | The certified carbon dioxide metrics of EASA, read from the file the authority attached (KNOT register 0.11.19): a turboprop in service stands 20.3 % below the new-type level and the A220-100 11.4 % below. The screening of the configurations carries both as checks; the objective asks a product of efficiency and lift-to-drag between the two |
+| 0.3.29 | 2026-11-18 | The publications of chapter `021` withdrawn from the TPuBS, at the request of the authority: 789 files of the information architecture, the module of the maintenance manual and 207 rows of the consolidated requirement list ([record][WDR-021]). Finding F24 entered. F01 restated: the illustration is withdrawn and no issue 02 is due. §1, §2 and §4 follow, and the PBS notes that named the illustration are amended (PBS README 0.2.3). The concept of operations of the environmental control system is corrected at 0.1.2 (KNOT register 0.11.20): the taxonomy does name the air supply without bleed, at `021-900-070` |
+| 0.3.30 | 2026-11-20 | Four acts asked by the authority. A section for air compression, `021-100`, added to the taxonomy; §2, §3 and §4 name it, and the concept of operations of the environmental control system binds its fresh-air function to it (0.1.3, KNOT register 0.11.21). The publications of section `003-900` withdrawn from the TPuBS ([record][WDR-003]); F24 and §1 follow. The convention on information codes that CM-001 cites drafted for ratification ([`AMPEL360-AMM-INFOCODE-CM-001`][CM-INFOCODE]); §8 lists it. The two labels of F01 that were left in the PBS neutralised (PBS README 0.2.4): F01 has nothing outstanding |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -345,7 +441,9 @@ The KNOT register and the architecture relations are verified with their own com
 [TPM-533001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/TPM_EWTW-533001.yaml
 [RISKS-533001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/RISKS_EWTW-533001.yaml
 [EBS-IDX]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/EVIDENCE-INDEX.yaml
-[ICN-021000010]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/01_INFORMATION-ARCHITECTURE/S-ATLAS_000-099/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-000_General/021-000-010_ECS-General-and-Zoning/ICN/ICN-EWTW-021000010-001-01.svg
+[WDR-021]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md
+[WDR-003]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-003-900_withdrawal_2026-11-20.md
+[CM-INFOCODE]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/AMPEL360-AMM-INFOCODE-CM-001_Information-Code-Breakdown-and-Effectivity-Variants.md
 [MRTT]: ../01-02-01-01-03_MRTT-Q300/README.md
 [BWB]: ../01-02-01-01-02_BWB-Q100/README.md
 [KNOT-REG]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/README.md
@@ -360,9 +458,11 @@ The KNOT register and the architecture relations are verified with their own com
 [MSN-TOOL]: ../../../../../tools/mission_closure.py
 [MSN]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
 [ELA]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+[CFG]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CFG-EWTW-AER-001/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py
 [ROOT-DELTA]: ../../../../../README.md#architecture-delta--conventional-airliner-vs-ampel360-hydrogen-electric
 [S-092]: ../../../../01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/090-099_Type-Specific-Architectures-and-Expansion/092_Advanced-Tube-and-Wing-Class/
+[S-021-100]: ../../../../01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-100_Air-Compression-Electric/
 [S-021-510]: ../../../../01-03_TECHNOLOGIES/01-03-01_Q+ATLANTIDE/000-099_S-ATLAS/020-029_Core-Aircraft-Systems/021_Air-Conditioning-Environmental-Control/021-510_Environmental-Cooling-Unit-Electric/

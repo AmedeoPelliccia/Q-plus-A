@@ -1,8 +1,11 @@
 # Shared context of every research brief — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
 model_context:
   aircraft: >-
-    The AMPEL360 eWTW is a concept for a regional airliner of about 100 passengers with a wide tube-and-wing
-    airframe. It burns conventional fuel (kerosene or sustainable aviation fuel) in a thermal machine that generates
+    The AMPEL360 eWTW is a concept for a regional airliner of about 100 passengers with a wide tube and a wing:
+    a tube-and-wing, far from a blended wing body. The wide tube is meant for more comfort and as the ground for an
+    architecture better suited to tanks of liquid hydrogen, which this model does not carry. Its geometry is not yet on record.
+    The programme builds a more ecological alternative: among the options that meet what is never traded, the more
+    ecological one prevails. It burns conventional fuel (kerosene or sustainable aviation fuel) in a thermal machine that generates
     electricity, with or without a propulsion battery. Batteries alone are excluded until a demonstrated pack closes
     its requirement mission (ruling R2 of KNOT-EWTW-NRG-001).
     It carries no hydrogen and no fuel cells. Its environmental control system is electric and bleedless. The fuselage
