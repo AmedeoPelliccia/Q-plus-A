@@ -20,7 +20,7 @@ standard_scope: governance
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
 | Version | 0.3.30 |
-| Date | 2026-11-13 |
+| Date | 2026-11-20 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
