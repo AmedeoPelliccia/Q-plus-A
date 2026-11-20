@@ -12,12 +12,12 @@ owner: Q-AIR
 green_overlay: Q-GREENTECH
 governance: [LC-A..LC-N, No-AAA, SSOT+PUB, S-ATLAS-NORM-TERM-001]
 status: baseline
-version: "1.1"
+version: "1.2"
 ---
 
 # 020-029 — Core Aircraft Systems · Green-Native Breakdown (020–027)
 
-Seven nodes of the Core Aircraft Systems range, normalized from the Embraer ATA reference into the green-native S-ATLAS form. **Chapters 028 and 029** (the two deepest substitutions: Fuel → Energy-Carrier Storage and Distribution; Hydraulic Power → Actuation and Utility Power) are covered in the companion document [`028-029_Green-Native-Breakdown.md`](028-029_Green-Native-Breakdown.md), which completes the full 020-029 master range. **Chapter 020** (Standard Maintenance Practices) is energy-neutral and carries forward whole, with an additive green delta for high-energy practices. **Chapter 021** (Air Conditioning / ECS) substitutes the conventional bleed-air air-cycle cooling pack with an electrically-driven, energy-integrated cooling architecture; the conventional pack is retained as heritage footprint. **Chapter 022** (Auto Flight) carries forward with one light substitution — Auto Throttle renamed to source-agnostic Autothrust. **Chapter 023** (Communications) carries forward whole. **Chapter 024** (Electrical Power) is the most divergent core system: the conventional engine-driven, AC-primary architecture is inverted to an HVDC-primary, fuel-cell/battery/regenerative one, and the engine IDG is fully footprinted. **Chapter 026** (Fire Protection) normalizes engine/APU detection and extinguishing to propulsion-module/auxiliary-power-module terms; the agent diverges for electric propulsion (gaseous agents do not suppress lithium thermal runaway); green delta `026-900` adds energy-system fire (battery thermal runaway, hydrogen fire, HV arc-fault) — safety-critical. **Chapter 027** (Flight Controls) carries surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/slat forward; the six hydraulic-actuation sections are substituted by agnostic powered actuation; green delta `027-900` adds the more-electric EHA/EMA architecture.
+Seven nodes of the Core Aircraft Systems range, normalized from the Embraer ATA reference into the green-native S-ATLAS form. **Chapters 028 and 029** (the two deepest substitutions: Fuel → Energy-Carrier Storage and Distribution; Hydraulic Power → Actuation and Utility Power) are covered in the companion document [`028-029_Green-Native-Breakdown.md`](028-029_Green-Native-Breakdown.md), which completes the full 020-029 master range. **Chapter 020** (Standard Maintenance Practices) is energy-neutral and carries forward whole, with an additive green delta for high-energy practices. **Chapter 021** (Air Conditioning / ECS) substitutes the conventional bleed-air supply with outside air compressed electrically, and the conventional bleed-air air-cycle cooling pack with an electrically-driven, energy-integrated cooling architecture; the conventional pack is retained as heritage footprint. **Chapter 022** (Auto Flight) carries forward with one light substitution — Auto Throttle renamed to source-agnostic Autothrust. **Chapter 023** (Communications) carries forward whole. **Chapter 024** (Electrical Power) is the most divergent core system: the conventional engine-driven, AC-primary architecture is inverted to an HVDC-primary, fuel-cell/battery/regenerative one, and the engine IDG is fully footprinted. **Chapter 026** (Fire Protection) normalizes engine/APU detection and extinguishing to propulsion-module/auxiliary-power-module terms; the agent diverges for electric propulsion (gaseous agents do not suppress lithium thermal runaway); green delta `026-900` adds energy-system fire (battery thermal runaway, hydrogen fire, HV arc-fault) — safety-critical. **Chapter 027** (Flight Controls) carries surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/slat forward; the six hydraulic-actuation sections are substituted by agnostic powered actuation; green delta `027-900` adds the more-electric EHA/EMA architecture.
 
 ---
 
@@ -69,7 +69,7 @@ Seven nodes of the Core Aircraft Systems range, normalized from the Embraer ATA 
 ## 1. Green-Native Doctrine for 020 / 021 / 022 / 023 / 024
 
 - **020 Standard Maintenance Practices — carries forward whole.** Torque, safetying, tubing, bearings, EWIS wiring, connectors, soldering, ESD, bonding, cleaning, and inspections are universal and architecture-neutral. EWIS in fact *expands* under electrification. No substitution; one additive green delta `020-900` for high-voltage / energy-storage / cryogenic-line practices.
-- **021 Air Conditioning / ECS — one major substitution.** Distribution, ventilation, pressurization, relief, and temperature control are energy-neutral and carry forward. The **cooling pack** (`021-510`, conventional ACM/bleed) is substituted ⚡ by an electrically-driven / vapour-cycle / cryo-integrated cooling unit, and a green delta `021-900` adds energy-system thermal integration with no ATA equivalent. Heating (`021-400/410`) is already electric and stays.
+- **021 Air Conditioning / ECS — two substitutions.** Distribution, ventilation, pressurization, relief, and temperature control are energy-neutral and carry forward. The **air supply** (`021-100`) is outside air compressed by electrically-driven compressors ⚡, where the conventional supply is bleed air from the pneumatic system (ATA 36). The **cooling pack** (`021-510`, conventional ACM/bleed) is substituted ⚡ by an electrically-driven / vapour-cycle / cryo-integrated cooling unit, and a green delta `021-900` adds energy-system thermal integration with no ATA equivalent. Heating (`021-400/410`) is already electric and stays.
 - **022 Auto Flight — carries forward; one light substitution.** **Auto Throttle → Autothrust / Power Management** (`022-300`), source-agnostic. FGCS, autopilot servos and cables are flight-control actuation and stay STD.
 - **023 Communications — carries forward whole, no substitution.** Radios, antennas, SATCOM, datalink, audio, and static dischargers are energy-neutral. Quantum communication is a separate band (`900-999 QCSAA`), not a green delta here.
 - **024 Electrical Power — inverted to green-native.** Substituted ⚡: **AC Generation → Primary Power Generation** (`024-200`), **Generator Drive (IDG) → Generation-Source Drive & Conditioning** (`024-210`, IDG fully footprinted), **APU AC Generation → Auxiliary Power Generation** (`024-220`). Green delta `024-900` adds the **HVDC systems-power architecture & power electronics**. Distribution, breakers, batteries, external power, converters/inverters, and outlets carry forward. Traction/propulsion HVDC is **not** here — it lives in the propulsion band `070-079`.
@@ -127,11 +127,17 @@ Energy-neutral throughout. Owner Q-AIR; EWIS overlay applies.
 
 ## 4. Chapter 021 — Air Conditioning / Environmental Control
 
-Distribution / ventilation / pressurization / temperature control carry forward; cooling ⚡ is substituted; thermal integration is a first-class green delta.
+Distribution / ventilation / pressurization / temperature control carry forward; air compression ⚡ replaces the bleed supply; cooling ⚡ is substituted; thermal integration is a first-class green delta.
 
 | S-ATLAS | ATA | Title | Layer |
 |---|---|---|:--:|
 | `021-000` | 21-00 | General — Air Conditioning (incl. AMS controller modules) | STD |
+| `021-100` ⚡ | 21-10 | **Air Compression (Electric)**[^c-2110] | STD |
+| `021-100-010` | 21-10-… | Electrically-driven air compressor | G-subject |
+| `021-100-030` | 21-10-… | Compressor drive — motor and motor controller | G-subject |
+| `021-100-050` | 21-10-… | Outside-air inlet and compressor ducting | G-subject |
+| `021-100-070` | 21-10-… | Compressor flow and surge control | G-subject |
+| `021-100-090` | 21-10-… | Compression-control sensors and protection | G-subject |
 | `021-200` | 21-20 | Distribution — main ducts, check valves, air-mix H-duct | STD |
 | `021-210` | 21-21 | Cockpit distribution — ducts, outlets, foot-outlet shutoff valves | STD |
 | `021-220` | 21-22 | Passenger-cabin distribution — ducts, outlets, plenums | STD |
@@ -347,6 +353,7 @@ Surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/
 |---|---|---|---|
 | `021-510` Cooling unit | electric / vapour-cycle / cryo-integrated | motor-driven compressor + vapour-cycle | cryogenic-H₂ cold-sink heat exchanger |
 | `021-900` Thermal integration | waste-heat + cold-sink + ECS coupling | battery/inverter waste-heat → cabin heat | fuel-cell waste-heat + LH₂ cold sink |
+| `021-100` Air compression | outside air compressed by electrically-driven compressors | electric compressors | electric compressors |
 | `021-900-070` Air supply | bleedless e-compressor / process air | electric compressor | fuel-cell process-air + e-compressor |
 | `021-620` Trim air (minor div.) | electric trim heating | resistive / heat-pump trim | fuel-cell heat trim |
 | `021-400` Heating | electric (carried) | floor-panel + waste-heat | floor-panel + FC waste-heat |
@@ -364,13 +371,15 @@ Surfaces, mechanics, sensors, trim, stall protection, FBW electronics, and flap/
 | `027-120…680` Powered actuation | hydraulic or electric | EHA/EMA (more-electric) | EHA/EMA |
 | `027-900` More-electric actuation | EHA/EMA from HVDC | actuators on traction HVDC | actuators on fuel-cell HVDC |
 
-The bleed-air *source* a conventional ECS depends on (ATA 36 Pneumatic) has no green supplier here — under the bleedless binding it is replaced by the `021-900-070` interface and cross-references the propulsion/energy bands. The conventional engine **IDG** (`024-210`) has no battery-electric equivalent and is dropped, not adapted; in the hybrid/H₂ binding it is replaced by power-electronic conditioning of the e-machine and generator sources.
+The bleed-air *source* a conventional ECS depends on (ATA 36 Pneumatic) has no green supplier here — under the bleedless binding it is replaced by the electric compression of outside air, `021-100`, with `021-900-070` as its interface to the energy system, and cross-references the propulsion/energy bands. The conventional engine **IDG** (`024-210`) has no battery-electric equivalent and is dropped, not adapted; in the hybrid/H₂ binding it is replaced by power-electronic conditioning of the e-machine and generator sources.
 
 ---
 
 ## 11. Governance
 
 Inherits **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **S-ATLAS-NORM-TERM-001** (engine/APU → propulsion-module/auxiliary-power-module). STD/STD-G nodes are the SSOT standard; programme carriers (§10) project into the programme CSDB (PUB). Owner **Q-AIR**; green overlay **Q-GREENTECH**. Cross-references the propulsion band `070-079` for traction HVDC, main energy storage, and energy-bay fire isolation. `026-900` is flagged safety-critical.
+
+**v1.2 (2026-11-20).** Section `021-100` *Air Compression (Electric)* added with five G-subjects, at the request of the author: the chapter had no home for the compressors that supply the cabin where no bleed air is taken. The address follows the numbering map from ATA `21-10`. No other node changes.
 
 ---
 
@@ -379,12 +388,15 @@ Inherits **LC-A … LC-N**; bound by **No-AAA**, **SSOT+PUB**, and **S-ATLAS-NOR
 1. ATA / Airlines for America — *iSpec 2200: Information Standards for Aviation Maintenance*. <a href="https://publications.airlines.org/">https://publications.airlines.org/</a>
 2. Embraer — *ATA breakdown, EMB 170/175/190/195 and Lineage 1000* (heritage footprint source, chapters 20–24, 26–27).
 3. S1000D — *International Specification for Technical Publications* (SNS; baseline Issue 4.2). <a href="https://s1000d.org/">https://s1000d.org/</a>
+4. Federal Aviation Administration — *Joint Aircraft System/Component Code Table and Definitions*, updated 27 October 2008 (code 2110, *Cabin Compressor System*). <a href="https://sdrs.faa.gov/documents/JASC_Code.pdf">https://sdrs.faa.gov/documents/JASC_Code.pdf</a>
 
 ---
 
 ## Conventional Heritage Footprint
 
 [^ref]: Embraer, *ATA Breakdown — EMB 170/175/190/195 and Lineage 1000*, chapters 20–24, 26–27 (uploaded reference). Conventional bindings are transcribed for heritage cross-walk only and are **not** part of the green-native S-ATLAS standard.
+
+[^c-2110]: **Conventional `21-10` — Compression.** In the ATA Spec 100 numbering, as the FAA JASC table carries it (code 2110, *Cabin Compressor System*), section 10 of chapter 21 is the system that supplies compressed air to the cabin. The breakdown transcribed from the heritage reference has no `21-10`: its air supply is engine and APU **bleed air**, chapter 36. Superseded green-native by outside air compressed by electrically-driven compressors.
 
 [^c-2150]: **Conventional `21-50` — Cooling.** The conventional cooling source is engine **bleed air** processed by an air-cycle pack. Superseded green-native by electrically-driven / energy-integrated environmental cooling.
 

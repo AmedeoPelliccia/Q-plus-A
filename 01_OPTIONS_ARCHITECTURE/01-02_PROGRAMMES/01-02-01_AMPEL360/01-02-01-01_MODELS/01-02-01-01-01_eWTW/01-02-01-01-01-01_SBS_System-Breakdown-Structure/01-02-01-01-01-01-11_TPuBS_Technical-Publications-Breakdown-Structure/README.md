@@ -11,7 +11,7 @@ csdb: S1000D Issue 4.2
 owner: Q-DATAGOV
 governance: [DEGF-v1.0, LC-A..LC-N, No-AAA, SSOT+PUB]
 status: baseline
-version: "3.0.1"
+version: "3.0.2"
 supersedes: "TPuBS README v2.0 (manual-first; S-ATLAS replicated under each PMC)"
 ---
 
@@ -21,7 +21,7 @@ The **root** of the eWTW model's technical information, and the `-11` (PUB) memb
 
 > **Correction (v3.0).** v2.0 organized the TPuBS manual-first, replicating the S-ATLAS/ATA breakdown under every PMC. That recreated the traditional book paradigm in which information is implicitly "owned" by the manual. Per the CSDB/S1000D principle, a Data Module is a standalone, reusable information unit identified by its DMC and managed in the CSDB; the manual is not the primary container of information but a **controlled composition of the common information pool**.
 
-> **Note (v3.0.1, 2026-11-18).** The information architecture holds one chapter today, `003-900`. The publications of chapter `021` were withdrawn: they came before the product they described and carried procedures at stage `LC-A` ([withdrawal record](TPuBS-EWTW-021_withdrawal_2026-11-18.md)). Where the sections below name chapter `021`, a compressor or the air conditioning, they show the pattern and point to no file. The doctrine is unchanged.
+> **Note (v3.0.2, 2026-11-20).** The information architecture holds no chapter today. The publications of chapter `021` were withdrawn on 2026-11-18 and those of section `003-900` on 2026-11-20: they came before the product they described and carried procedures at stage `LC-A` (withdrawal records: [021](TPuBS-EWTW-021_withdrawal_2026-11-18.md), [003-900](TPuBS-EWTW-003-900_withdrawal_2026-11-20.md)). Where the sections below name chapter `021`, a compressor or the air conditioning, they show the pattern and point to no file. The convention on information codes that CM-001 cites now has a text, proposed for ratification: [`AMPEL360-AMM-INFOCODE-CM-001`](AMPEL360-AMM-INFOCODE-CM-001_Information-Code-Breakdown-and-Effectivity-Variants.md). The doctrine is unchanged.
 
 ## Doctrine
 
@@ -128,7 +128,7 @@ one S-ATLAS node → several DM requirements / InfoCodes
 
 There is **no** `one node = one manual` relation and **no** `one Data Module = one manual` relation. Modular reuse is precisely one of the central benefits of S1000D.
 
-Effectivity forks inside a node (e.g. `040A_EFF-PRE-MOD-…` / `040B_EFF-POST-MOD-…`) remain governed by the fork rule: a new info-code variant is valid only when the mod changes DM content; an effectivity-only change is a stack update.
+Effectivity forks inside a node (e.g. `040A_EFF-PRE-MOD-…` / `040B_EFF-POST-MOD-…`) remain governed by the fork rule: a new info-code variant is valid only when the mod changes DM content; an effectivity-only change is a stack update. The rule is written in full in [`AMPEL360-AMM-INFOCODE-CM-001`](AMPEL360-AMM-INFOCODE-CM-001_Information-Code-Breakdown-and-Effectivity-Variants.md), §7.
 
 ---
 
@@ -233,8 +233,8 @@ Inherits **DEGF v1.0**; governed across **LC-A … LC-N**; bound by **No-AAA** a
 <!--
 Last.MarkedDown:
   artifact: TPuBS/README.md (root)
-  revision: v3.0.1 — note on the withdrawal of the chapter 021 publications, and three anchors of the index; doctrine of v3.0 unchanged (information-centric; single S-ATLAS instance; DMRL per node; PMCs as publication views)
+  revision: v3.0.2 — notes on the withdrawal of the publications of chapter 021 and of section 003-900, a pointer to the convention on information codes, and three anchors of the index; doctrine of v3.0 unchanged (information-centric; single S-ATLAS instance; DMRL per node; PMCs as publication views)
   supersedes: v2.0 (manual-first; S-ATLAS replicated under each PMC)
-  version: "3.0.1"
+  version: "3.0.2"
 .YieldedAlgorithmicMachineLearning: true
 -->

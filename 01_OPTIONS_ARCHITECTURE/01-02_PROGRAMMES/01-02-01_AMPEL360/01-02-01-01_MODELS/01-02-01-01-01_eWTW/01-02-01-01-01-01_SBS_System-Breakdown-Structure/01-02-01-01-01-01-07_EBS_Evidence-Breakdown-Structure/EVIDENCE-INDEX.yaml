@@ -431,7 +431,7 @@ rows:
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CONOPS-EWTW-ECS-001/README.md
     status: on-disk
     note: >
-      Concept of operations of the environmental control system 0.1.2: phases, functions,
+      Concept of operations of the environmental control system 0.1.3: phases, functions,
       supplies, failure and ground cases, and open inputs. Input in conops.yaml beside it;
       the tables are written and checked by tools/conops_check.py. It carries no figure of
       power and states no conformity.
@@ -453,6 +453,36 @@ rows:
       request that carries it.
     citedBy:
       - ../README.md
+      - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
+
+  - class: migration-or-completion-record
+    subject: F24
+    path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-003-900_withdrawal_2026-11-20.md
+    status: on-disk
+    note: >
+      Withdrawal record of the publications of section 003-900, of 2026-11-20, at the request of
+      the architecture authority: finding F24 of the model findings register. The tree of the
+      section in the information architecture of the TPuBS (37 files) and its rows of the
+      consolidated registers, measured against the same rules as the record of 2026-11-18 and
+      against ruling R2 of KNOT-EWTW-NRG-001. It keeps the nine carrier-neutral subjects that
+      the tree projected, and says how to restore it from commit 53848df1. Ratified by the
+      merge of the pull request that carries it.
+    citedBy:
+      - ../README.md
+      - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
+
+  - class: ratified-act-or-convention
+    subject: AMPEL360-AMM-INFOCODE-CM-001
+    path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/AMPEL360-AMM-INFOCODE-CM-001_Information-Code-Breakdown-and-Effectivity-Variants.md
+    status: on-disk
+    note: >
+      Convention on the information-code breakdown of a subject node, its one-way link to the
+      product, the modification stack and the fork rule. Issue 1, PROPOSED: drafted on
+      2026-11-20 at the request of the authority, from CM-001 section 9, the TPuBS README and
+      the form of the withdrawn example; five open points. Its header records the approval act
+      once given.
+    citedBy:
+      - 01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
       - 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/README.md
 
   - class: ratified-act-or-convention

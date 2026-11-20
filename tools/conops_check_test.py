@@ -66,7 +66,7 @@ class ConopsCheck(unittest.TestCase):
                 by[i["basis"]] = by.get(i["basis"], 0) + 1
         self.assertEqual(by, {"declared": 7, "assumption": 2, "proposed": 13, "open": 4})
         _, lines = self.run_tool()
-        self.assertEqual(lines[0], "CONOPS-EWTW-ECS-001 0.1.2 for KNOT-EWTW-SRC-001: 7 phases, 8 functions, 4 supplies, 7 cases, 8 open inputs; "
+        self.assertEqual(lines[0], "CONOPS-EWTW-ECS-001 0.1.3 for KNOT-EWTW-SRC-001: 7 phases, 8 functions, 4 supplies, 7 cases, 7 open inputs; "
                                    "26 statements — 7 declared, 2 from an analysis, 13 proposed here, 4 open; no figure; rule failures: none")
 
     def test_essential_case_sheds_the_packs_and_keeps_pressure_control(self):

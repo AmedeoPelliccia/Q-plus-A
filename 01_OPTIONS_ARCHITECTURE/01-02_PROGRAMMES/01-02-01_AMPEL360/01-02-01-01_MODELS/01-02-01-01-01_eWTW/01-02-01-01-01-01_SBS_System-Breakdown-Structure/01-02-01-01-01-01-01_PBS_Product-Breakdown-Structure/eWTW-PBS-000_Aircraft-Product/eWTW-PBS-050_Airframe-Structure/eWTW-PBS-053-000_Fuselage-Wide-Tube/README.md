@@ -107,7 +107,7 @@ after executing the exemplar migration (ruling 5).
 | Stabilizers / empennage | `055` Stabilizers-Empennage | body-side attach here |
 | Landing-gear system | `032` Landing Gear | gear bays/fittings structure here |
 | Pylons / nacelles | `054` Nacelles-and-Pylons | pylon-to-body attach here |
-| Energy carrier (battery) | `028` Energy-Carrier-Storage | bay *structure* here, carrier there |
+| Energy carrier | `028` Energy-Carrier-Storage | bay *structure* here, carrier there |
 | Fire / thermal containment | `026-900` Fire Protection | structural interface here |
 | Standard practices | `051` Standard-Practices-Structures | standards families, fasteners, repairs |
 
@@ -140,6 +140,6 @@ Terminology per **S-ATLAS-NORM-TERM-001**: engine/APU -> auxiliary-power module
 
 [^ata53]: ATA 100 / iSpec 2200 - Chapter 53 *Fuselage* (heritage scope reference).
 [^gatlas]: S-ATLAS `050-059 / 053_Fuselage` register (taxonomy reference this chapter realizes by mapping per Amendment A1).
-[^carrier]: S-ATLAS `028` Energy-Carrier-Storage (battery packs and their limits).
+[^carrier]: S-ATLAS `028` Energy-Carrier Storage and Distribution (the carrier and its storage, whatever the carrier). Note amended on 2026-11-20 (F01).
 [^fire]: S-ATLAS `026-900` Fire Protection (energy-carrier thermal/fire containment).
 [^sp]: S-ATLAS `051` Standard-Practices-Structures (standards families, fasteners, repair allowables).

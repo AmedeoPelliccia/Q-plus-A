@@ -11,10 +11,6 @@
     </dmlAddress>
   </identAndStatusSection>
   <dmlContent>
-    <dmlEntry><!-- DMREQ-003-900-010-034-001 | node 003-900-010 | infoCode 034 --><dmRef><dmRefIdent><dmCode>DMC-EWTW-A-03-90-01-00A-034A-A</dmCode></dmRefIdent></dmRef></dmlEntry>
-    <dmlEntry><!-- DMREQ-003-900-010-040-001 | node 003-900-010 | infoCode 040 --><dmRef><dmRefIdent><dmCode>DMC-EWTW-A-03-90-01-00A-040A-A</dmCode></dmRefIdent></dmRef></dmlEntry>
-    <dmlEntry><!-- DMREQ-003-900-010-420-001 | node 003-900-010 | infoCode 420 --><dmRef><dmRefIdent><dmCode>DMC-EWTW-A-03-90-01-00A-420A-A</dmCode></dmRefIdent></dmRef></dmlEntry>
-    <dmlEntry><!-- DMREQ-003-900-010-720-001 | node 003-900-010 | infoCode 720 --><dmRef><dmRefIdent><dmCode>DMC-EWTW-A-03-90-01-00A-720A-A</dmCode></dmRefIdent></dmRef></dmlEntry>
-    <dmlEntry><!-- DMREQ-003-900-010-730-001 | node 003-900-010 | infoCode 730 --><dmRef><dmRefIdent><dmCode>DMC-EWTW-A-03-90-01-00A-730A-A</dmCode></dmRefIdent></dmRef></dmlEntry>
+    <!-- No entry: no node of the information architecture holds a data module -->
   </dmlContent>
 </dml>

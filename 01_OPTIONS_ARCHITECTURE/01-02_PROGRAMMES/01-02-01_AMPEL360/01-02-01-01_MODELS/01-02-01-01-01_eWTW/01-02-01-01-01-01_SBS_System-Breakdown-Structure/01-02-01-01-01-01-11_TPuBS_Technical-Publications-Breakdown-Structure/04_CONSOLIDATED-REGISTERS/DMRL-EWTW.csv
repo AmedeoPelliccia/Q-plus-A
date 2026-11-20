@@ -1,6 +1,1 @@
 requirementId,node,infoCode,schemaType,title,status,publicationTargets,dataModules
-DMREQ-003-900-010-034-001,003-900-010,034,descriptive,Ground Charging Connection Interface - Technical data,AUTHORED,PMC-EWTW-ECHM;PMC-EWTW-SDS,DMC-EWTW-A-03-90-01-00A-034A-A
-DMREQ-003-900-010-040-001,003-900-010,040,descriptive,Ground Charging Connection Interface - Description,AUTHORED,PMC-EWTW-ECHM;PMC-EWTW-SDS,DMC-EWTW-A-03-90-01-00A-040A-A
-DMREQ-003-900-010-420-001,003-900-010,420,fault,Ground Charging Connection Interface - Fault isolation,AUTHORED,PMC-EWTW-ECHM,DMC-EWTW-A-03-90-01-00A-420A-A
-DMREQ-003-900-010-720-001,003-900-010,720,procedural,Ground Charging Connection Interface - Installation,AUTHORED,PMC-EWTW-ECHM,DMC-EWTW-A-03-90-01-00A-720A-A
-DMREQ-003-900-010-730-001,003-900-010,730,procedural,Ground Charging Connection Interface - Test and check,AUTHORED,PMC-EWTW-ECHM,DMC-EWTW-A-03-90-01-00A-730A-A

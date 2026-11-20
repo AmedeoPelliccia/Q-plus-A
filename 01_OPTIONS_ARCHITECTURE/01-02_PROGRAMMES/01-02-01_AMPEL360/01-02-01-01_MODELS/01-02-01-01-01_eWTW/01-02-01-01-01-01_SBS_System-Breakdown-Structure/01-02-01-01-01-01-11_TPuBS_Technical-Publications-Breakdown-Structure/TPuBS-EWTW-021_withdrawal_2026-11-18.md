@@ -133,6 +133,18 @@ Not changed here; each is the author's to decide.
 
 When the publications of the chapter are planned again, the rule asks for class `P0` declared on every artefact, requirement lists whose status says planned, subjects that the taxonomy defines or that are proposed to it, and an SNS from the PBS-local codes of the stations.
 
+## Since this record
+
+Acted on at the request of the authority of 2026-11-20. The text above is as written on 2026-11-18.
+
+| Point for the author | What was done |
+|---|---|
+| 1. No section for compressing outside air | Section `021-100` *Air Compression (Electric)* added to the taxonomy, with five subjects. `021-900-070` stays as the interface of the compressors with the energy system |
+| 2. The cooling has two forms | Not acted on: it was not asked |
+| 3. Chapter `003-900` of the TPuBS | Withdrawn: [record of 2026-11-20](TPuBS-EWTW-003-900_withdrawal_2026-11-20.md) |
+| 4. The convention needs a text | Drafted for ratification: [`AMPEL360-AMM-INFOCODE-CM-001`](AMPEL360-AMM-INFOCODE-CM-001_Information-Code-Breakdown-and-Effectivity-Variants.md), Issue 1 |
+| 5. Two labels of finding F01 | Neutralised in the chapter `053` README of the PBS |
+
 ## How to restore
 
 The tree as it was, defects included:
