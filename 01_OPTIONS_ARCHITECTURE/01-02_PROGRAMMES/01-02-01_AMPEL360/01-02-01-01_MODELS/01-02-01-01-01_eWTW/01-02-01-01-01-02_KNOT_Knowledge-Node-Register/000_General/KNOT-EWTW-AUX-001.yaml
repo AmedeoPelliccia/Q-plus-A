@@ -1,0 +1,157 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-AUX-001
+  title: Auxiliary power and supply at the stand
+  kind: decision-anchor
+  taxonomy: ['012', '021', '024', '049']
+  raised_at: null
+  question: 'What supplies the aircraft at the stand and starts its turbogenerators: the ground alone, a turbogenerator, or an auxiliary power module — and, if a module is carried, of which technology?'
+  context: >-
+    The model declares the mounts and the firewall of an auxiliary power module in the tailcone, and says that the name does not determine its technology. No record says whether the module is carried. In the register it appears only as option D of KNOT-EWTW-ESS-001, as an essential source. The concept of operations of the environmental control system has an open input on what supplies the packs at the stand, and until this KNOT it was left to the authority. On an aircraft whose packs are electric the stand is a sizing case of its own: the cabin is cooled or heated with the doors open and no ram air, and the turbogenerators are stopped. What supplies the stand may also start the first turbogenerator. The research has to say what power the stand asks, what the ground supplies at airports, how gas turbines of this class are started, and what an auxiliary module of each technology weighs and burns.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §3 row 15; open input ground-supply of CONOPS-EWTW-ECS-001'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-24'
+  depends_on:
+  - KNOT-EWTW-ESS-001
+  - KNOT-EWTW-GEN-001
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 15
+  - view: PBS
+    ref: eWTW-PBS-049-000
+    relation: gates
+    note: Whether an auxiliary power module is carried, and of which technology
+  - view: PBS
+    ref: eWTW-PBS-012-000
+    relation: gates
+    note: External power and conditioned air at the stand
+  options:
+  - id: A
+    text: 'no auxiliary power module: external electrical power at the stand, conditioned air from the ground where the airport gives it, and the first turbogenerator started from the ground supply or from a battery'
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: 'a turbogenerator in a ground mode supplies the stand, with no separate module'
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '068'
+      element: 'turbogenerator installation: a ground mode, at the power of the stand'
+      key: turbogenerator-installation
+      owner: KNOT-EWTW-SRC-001
+  - id: C
+    text: 'an auxiliary power module, detached from the propulsion architecture, supplies the stand and starts the turbogenerators; its technology is part of the choice'
+    state: open
+    pbs_footprint:
+    - action: update
+      taxonomy: '049'
+      element: 'auxiliary power module: its technology, its rating for the stand and the start'
+      key: auxiliary-power-module
+      owner: KNOT-EWTW-ESS-001
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'the model declares tailcone mounts and a firewall for an auxiliary power module (053-400-020 and -030), sizes the ground services against the demand of the packs, and does not determine the technology of the module'
+    ref:
+      view: model
+      ref: README §3 row 15
+  - text: 'the concept of operations names three candidates to supply the packs at the stand — external power, the auxiliary power module and a turbogenerator — and carries no figure of power'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CONOPS-EWTW-ECS-001/README.md
+  - text: 'a module chosen as an essential source is assessed with its limits of speed, attitude and altitude, and depends on starting at altitude after a cold soak; a module for the stand alone has no such duty'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ESS-001_option-set_2026-11-14.md
+  - text: 'a turbogenerator in the propulsion or main generation chain is filed under 068; 049 applies only to an auxiliary unit detached from the propulsion architecture'
+    ref:
+      view: model
+      ref: AMPEL360-KNOT-CM-004 rule 18
+  couplings:
+  - knot: KNOT-EWTW-ESS-001
+    note: option D of that KNOT and option C of this one are one element at 049, which that KNOT owns; a module carried for essential power also serves the stand, and essential power is decided first
+  - knot: KNOT-EWTW-GEN-001
+    note: the number and the rating of the turbogenerators decide whether one of them can supply the stand at an acceptable fuel flow and noise
+  - knot: KNOT-EWTW-STO-001
+    note: a buffer battery, if one is carried, can start a turbogenerator and hold the stand for a short time
+  - knot: KNOT-EWTW-ECS-001
+    note: the cooling cycle sets the power the packs draw on the ground with no ram air, which sizes the supply of the stand
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-AUX-001-01
+    title: Ground supply, start and auxiliary units on record
+    knu_class: ANALYSIS_PACKAGE
+    description: What airports supply at the stand, how gas turbines of this class are started, and what auxiliary units of each technology weigh and burn
+    research_brief:
+      questions:
+      - 'What electrical power and what conditioned air do airports supply at the stand to aircraft of 70 to 150 seats — voltage, frequency, rating of fixed and mobile units, flow and temperature of preconditioned air — and how widely is each available? Name the standards and the surveys.'
+      - 'What power does the one transport in service with electric packs draw at the stand, through which receptacles and from which sources, and what do its airport-planning documents ask of the ground?'
+      - 'How are gas turbines of 1 to 5 MW started electrically, and what power and energy does a start take? Which transport aircraft start their engines from a battery alone?'
+      - 'What do auxiliary power units of the class weigh installed, what fuel do they burn in an hour at the stand, and what do airports restrict in their use? Which alternatives were built or flown — a battery module, a fuel cell — with what mass and for how long?'
+      - 'Which published hybrid-electric or turboelectric concepts of 50 to 150 seats carry an auxiliary unit, and which of them give the reason?'
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Figures and precedents, each with its source and with whether it is measured, published or estimated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-AUX-001-02
+    title: Power at the stand and at the start
+    knu_class: ANALYSIS_PACKAGE
+    description: The power the stand asks case by case — hot day and cold day, with and without ground supply, turnaround and first flight of the day — and the power and energy of a start. It reads the cases of the concept of operations and gives the figures that document does not carry
+    research_brief:
+      questions:
+      - 'Which cases size the supply of the stand in published electrical load analyses, and which design conditions do they take for the hot day and the cold day?'
+      - 'How long does a turnaround of a 100-seat aircraft last on regional networks, and for what share of it is ground supply connected?'
+    serves:
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'A table of power by case of the stand and of energy by start, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-AUX-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria for the supply of the stand and for an auxiliary module, drawn from ReqBS and TPMS, with the fuel loaded on the scoring mission first
+    research_brief:
+      questions:
+      - 'Which criteria do operators and published designs use to keep or remove an auxiliary power unit — mass carried on every flight, fuel and noise at the stand, autonomy at airports with no ground supply, dispatch with the unit inoperative?'
+      - 'Which criteria follow from certification and from airport rules, and cannot be traded?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []

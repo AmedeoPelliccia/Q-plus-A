@@ -66,7 +66,7 @@ class ConopsCheck(unittest.TestCase):
                 by[i["basis"]] = by.get(i["basis"], 0) + 1
         self.assertEqual(by, {"declared": 7, "assumption": 2, "proposed": 13, "open": 4})
         _, lines = self.run_tool()
-        self.assertEqual(lines[0], "CONOPS-EWTW-ECS-001 0.1.3 for KNOT-EWTW-SRC-001: 7 phases, 8 functions, 4 supplies, 7 cases, 7 open inputs; "
+        self.assertEqual(lines[0], "CONOPS-EWTW-ECS-001 0.1.4 for KNOT-EWTW-SRC-001: 7 phases, 8 functions, 4 supplies, 7 cases, 8 open inputs; "
                                    "26 statements — 7 declared, 2 from an analysis, 13 proposed here, 4 open; no figure; rule failures: none")
 
     def test_essential_case_sheds_the_packs_and_keeps_pressure_control(self):
@@ -137,8 +137,8 @@ class ConopsCheck(unittest.TestCase):
     def test_serves_a_knu_of_its_knot(self):
         self.edit(lambda c: c.update(serves="KNU-EWTW-SRC-001-09"))
         self.fails("KNU-EWTW-SRC-001-09 is not a KNU of KNOT-EWTW-SRC-001")
-        self.edit(lambda c: c.update(knot="KNOT-EWTW-ECS-001"))
-        self.fails("KNOT-EWTW-ECS-001 is not a KNOT of the register")
+        self.edit(lambda c: c.update(knot="KNOT-EWTW-ZZZ-001"))
+        self.fails("KNOT-EWTW-ZZZ-001 is not a KNOT of the register")
 
     def test_keys_are_unique_across_sections(self):
         self.edit(lambda c: c["open_inputs"].append({"key": "cruise", "text": "Again", "blocks": ["climb"], "decided_by": "authority"}))

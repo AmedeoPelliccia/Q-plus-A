@@ -25,7 +25,8 @@ knot:
   - KNOT-EWTW-CRT-001
   - KNOT-EWTW-GEN-001
   closed_with: []
-  unblocks: []
+  unblocks:
+  - KNOT-EWTW-AUX-001
   affects:
   - view: model
     ref: README §3 row 5
@@ -196,7 +197,9 @@ knot:
     ref:
       view: model
       ref: AMPEL360-REL-CM-005 section 4, certification-basis
-  couplings: []
+  couplings:
+  - knot: KNOT-EWTW-AUX-001
+    note: option D creates the auxiliary power module at 049, and option C of that KNOT uses it for the stand; this KNOT is decided first, and a module carried for essential power also serves the stand
   rulings: []
   reopen_if: []
   knus:

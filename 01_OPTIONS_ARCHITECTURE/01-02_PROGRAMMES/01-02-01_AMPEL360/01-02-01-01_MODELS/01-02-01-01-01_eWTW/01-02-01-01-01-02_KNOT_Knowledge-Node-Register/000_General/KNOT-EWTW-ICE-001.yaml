@@ -1,0 +1,163 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-ICE-001
+  title: Ice protection without bleed air
+  kind: decision-anchor
+  taxonomy: ['024', '030', '055', '057', '068', '077']
+  raised_at: null
+  question: 'How are the wing, the tail, the propellers and the air inlets of the eWTW protected from ice: by heat, by mechanical expulsion, by inflated boots, or by a combination — and what does the protection draw from the network?'
+  context: >-
+    The environmental control system of the eWTW is declared without bleed air, and its gas turbines drive generators. The model says that a bleedless ECS is not an aircraft without bleed, and leaves the technology of ice protection open. No record holds the decision. The essential-loads analysis leaves wing, tail and propulsor ice protection unsupplied after the loss of the normal sources and assumes that the aircraft can leave icing conditions, which is to be shown. The concept of operations of the environmental control system has an open input on how wings and inlets are protected and on whether that load falls in the same phases as the packs; until this KNOT it was left to the authority. The working reference of the wing is a span of about 40 m, with a brace and folding tips still open: a long and thin leading edge, perhaps a strut and a hinge, and propellers ahead of it. The research has to say what each technology draws for each metre of leading edge, what it weighs, which aircraft fly it and up to what speed, and what the rules ask of an aircraft of this class.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §3 row 10; open input ice-protection of CONOPS-EWTW-ECS-001'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-24'
+  depends_on:
+  - KNOT-EWTW-WNG-001
+  - KNOT-EWTW-PRP-001
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 10
+  - view: PBS
+    ref: eWTW-PBS-030-000
+    relation: gates
+    note: Technology of ice protection of the airframe, the propellers and the inlets
+  options:
+  - id: A
+    text: 'electrothermal protection: heaters in the leading edges, kept on as anti-icing or cycled as de-icing'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '030'
+      element: 'airframe ice protection: heaters, their controllers and their feeders'
+      key: airframe-ice-protection
+  - id: B
+    text: 'electromechanical expulsion: actuators under the skin shed the ice, at low power'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '030'
+      element: 'airframe ice protection: expulsion actuators and their energy units'
+      key: airframe-ice-protection
+  - id: C
+    text: 'a combination: a heated parting strip at the leading edge, with expulsion behind it'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '030'
+      element: 'airframe ice protection: parting-strip heaters and expulsion actuators'
+      key: airframe-ice-protection
+  - id: D
+    text: 'pneumatic boots, inflated by a small electric compressor or by air bled from the turbogenerators'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '030'
+      element: 'airframe ice protection: boots, their air supply and their valves'
+      key: airframe-ice-protection
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'the model declares a bleedless environmental control system and leaves the technology of ice protection open: a bleedless ECS is not an aircraft without bleed'
+    ref:
+      view: model
+      ref: README §3 row 10
+  - text: 'the essential-loads analysis heats the probes and does not supply wing, tail and propulsor ice protection after the loss of the normal sources; that the aircraft can leave icing conditions is to be shown'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/ELA-EWTW-ESS-001/README.md
+  - text: 'on the one transport in service without bleed air for the cabin, wing ice protection is electrical and bleed air stays for cowl ice protection, as reported from a maker publication that could not be opened'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+  - text: 'the working reference of ruling R2 of KNOT-EWTW-CRZ-001 is a wing of about 40 m of span in flight at 360 kt and 31,000 ft, with the brace and folding tips open'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+  couplings:
+  - knot: KNOT-EWTW-WNG-001
+    note: a strut, the hinge of a folding tip and a thin leading edge are surfaces to protect; the protection is a cost of each wing option, in power and in mass
+  - knot: KNOT-EWTW-SRC-001
+    note: the load of ice protection enters the load analysis by phase, and falls in climb, descent and holding, where the packs also work
+  - knot: KNOT-EWTW-GEN-001
+    note: the inlets of the turbogenerators are protected by this choice, and option D may take air from them
+  - knot: KNOT-EWTW-ESS-001
+    note: the essential-loads analysis leaves ice protection unsupplied; if the aircraft cannot be shown to leave icing conditions, part of this load becomes essential
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-ICE-001-01
+    title: Ice-protection technologies and aircraft on record
+    knu_class: ANALYSIS_PACKAGE
+    description: What each technology draws and weighs, which aircraft fly it and up to what speed, and what the rules ask
+    research_brief:
+      questions:
+      - 'Which transport aircraft in service protect wing or tail without engine bleed air, by which technology, and what electrical power do they publish for it — in kilowatts, and for each square metre or each metre of protected leading edge? Distinguish anti-icing from de-icing.'
+      - 'What do electromechanical expulsion systems and combined systems draw and weigh, on which aircraft are they certified, and up to what size and speed?'
+      - 'Up to what speed and what leading-edge radius are pneumatic boots certified on turboprops of 50 to 90 seats, what air do they need and from where, and what do they cost in drag and in maintenance?'
+      - 'How are propellers, spinners and the air inlets of turboshaft engines protected on turboprops in service, and what power does each take?'
+      - 'What do CS 25.1419 and CS 25.1420, with Appendices C and O of CS-25, ask of an aircraft of this class, and which surfaces may be left unprotected by showing? Has a strut-braced wing or a folding wingtip been assessed for ice in a published study?'
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Figures, precedents and rule texts, each with its source and with whether it is measured, published or estimated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ICE-001-02
+    title: Protected surfaces and load by phase
+    knu_class: ANALYSIS_PACKAGE
+    description: The surfaces to protect on the working reference of the wing, of the tail, of the propellers and of the inlets, and the power each option draws in each phase
+    research_brief:
+      questions:
+      - 'Which share of the span and of the chord do aircraft of the class protect on wing and tail, and by what method is the protected extent set?'
+      - 'For how long, and in which phases, do published load analyses keep ice protection on in a mission of 1,100 km?'
+    serves:
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'A table of protected surfaces and of power by phase for each option, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ICE-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria for the ice protection, drawn from ReqBS and TPMS, with the fuel loaded on the scoring mission first
+    research_brief:
+      questions:
+      - 'Which criteria do published designs use to choose an ice-protection technology — power drawn, mass, drag of the protected surface, residual ice and runback, maintenance, erosion?'
+      - 'Which criteria follow from certification in icing conditions and cannot be traded?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []

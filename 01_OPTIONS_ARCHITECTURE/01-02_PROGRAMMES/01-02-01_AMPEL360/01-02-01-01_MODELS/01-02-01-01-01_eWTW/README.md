@@ -19,7 +19,7 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.31 |
+| Version | 0.3.32 |
 | Date | 2026-11-24 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
@@ -99,14 +99,14 @@ The S-ATLAS column gives taxonomy homes. PBS codes are PBS-local (CM-001 §3.1) 
 | 5 | Electrical distribution | `024` · `076` · `079` | `40` | Buses, switchgear, converters, protection, harnesses, segregation, essential supplies. E-pack supplies and protection must be allocated now; a propulsion HV network in every option since ruling R2, from the turbogenerators to the electric propulsors | I·O |
 | 6 | Thermal management | `021` · `078` | `70-40` · `20-40` · `30-30` | Equipment cooling, heat exchangers, ventilation, liquid loops, air inlets and outlets — integrated with the E-pack installation; a thermal-machine loop in every option since ruling R2, and a propulsion-battery loop in option C only | I·O |
 | 7 | Flight controls | `027` · `022` | `60` | Computers, sensors, primary and secondary surfaces, actuators. No model-specific change declared; differential thrust only if distributed propulsion is chosen | O |
-| 8 | Actuation and utility power | `029` | `60-50` · `110-20` | Pumps, accumulators, actuators, hydraulic lines, possible EHA and EMA. The electric ECS does not decide the fate of hydraulics — technology allocated function by function | O |
-| 9 | ECS, pressurisation, pneumatics | `021` · `036` | `70-10` · `70-20` | E-packs (`021-510`), electric compressors (`021-100`), air treatment, distribution, recirculation, thermal regulation, cabin pressure. **Bleedless ECS declared**; pack bay in the belly fairing; any other pneumatic consumer is treated separately | D |
-| 10 | Ice and rain protection | `030` | `70-30` | Surfaces and inlets, probes and windshield heating, rain removal. Technology open: **a bleedless ECS is not an aircraft without bleed** | O |
+| 8 | Actuation and utility power | `029` | `60-50` · `110-20` | Pumps, accumulators, actuators, hydraulic lines, possible EHA and EMA. The electric ECS does not decide the fate of hydraulics — technology allocated function by function (`KNOT-EWTW-ACT-001`) | O |
+| 9 | ECS, pressurisation, pneumatics | `021` · `036` | `70-10` · `70-20` | E-packs (`021-510`), electric compressors (`021-100`), air treatment, distribution, recirculation, thermal regulation, cabin pressure. **Bleedless ECS declared**; pack bay in the belly fairing; any other pneumatic consumer is treated separately. The cooling cycle of the packs is open (`KNOT-EWTW-ECS-001`) | D·O |
+| 10 | Ice and rain protection | `030` | `70-30` | Surfaces and inlets, probes and windshield heating, rain removal. Technology open (`KNOT-EWTW-ICE-001`): **a bleedless ECS is not an aircraft without bleed** | O |
 | 11 | Landing gear, braking, steering | `032` | `110` · `50-40` | Legs, retraction, wheels, brakes, anti-skid, steering, doors, structural interfaces. Bay and fitting structure defines an integration scope, not the gear design: NLG bay `053-100-020` with NLG fittings `053-800-030`, MLG wheelwell `053-200-030`. The MLG configuration is open (`KNOT-EWTW-MLG-001`) | I·O |
 | 12 | Avionics and flight management | `022` · `023` · `031` · `034` · `042` · `046` | `80` · `90` | Navigation, communication, surveillance, guidance, instruments, alerting, systems management; E-pack control and indication now, energy management once the sources are chosen | I·O |
 | 13 | Cabin, cargo, equipment | `025` · `033` · `035` · `044` · `050` | `100` | Furnishings, seats, floors, lighting, oxygen, water and waste, holds, evacuation; interfaces with air distribution. Floor structure (`053-700-010 … -050`) and seat tracks (`053-700-060`) carry planned part trees; water and waste has no S-ATLAS chapter yet ([F03](#9-findings)) | I |
 | 14 | Protection and emergency | `026` · `047` · `079` | `120` | Fire and smoke detection, source isolation, electrical protection, continuity of essential functions. **Fire protection of the thermal machine and its fuel in every option since ruling R2; thermal-propagation management if propulsion batteries are present (option C)** | I·O |
-| 15 | Auxiliary power and ground services | `049` · `012` | `40-50` · `110-40` | External power, auxiliary sources, start, emergency supplies, service interfaces — sized against E-pack demand and the energy configuration. Tailcone mounts and firewall are declared (`053-400-020`, `-030`); the name *Auxiliary Power Module* does not determine its technology | I·O |
+| 15 | Auxiliary power and ground services | `049` · `012` | `40-50` · `110-40` | External power, auxiliary sources, start, emergency supplies, service interfaces — sized against E-pack demand and the energy configuration. Tailcone mounts and firewall are declared (`053-400-020`, `-030`); the name *Auxiliary Power Module* does not determine its technology, and whether a module is carried is open (`KNOT-EWTW-AUX-001`) | I·O |
 | 16 | Diagnostics and maintenance support | `045` | `130` | Monitoring, built-in test, fault recording, access, test points, support equipment — extending to the E-packs and to whatever equipment is selected; TPuBS follows its configuration and effectivity | I |
 
 ---
@@ -142,7 +142,7 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 
 **Scope narrowed again on 2026-11-14** by ruling R2 of `KNOT-EWTW-NRG-001`: the eWTW keeps 100 seats; its requirement mission is 2,000 km, its scoring mission the average stage of about 1,100 km, and a stage of 500 km is a sensitivity; batteries alone are not a candidate until a demonstrated pack closes the requirement mission. The choice left open is between fuel for a turbogenerator alone and fuel with a propulsion battery.
 
-**Deferred on 2026-11-14** by ruling R3 of `KNOT-EWTW-NRG-001` and ruling R1 of `KNOT-EWTW-SRC-001`: conventional fuel carries the mission energy and a turbogenerator is a main source in every option, and the fuel storage and the turbogenerator installation are authorised for definition. The choice that remains was held by three KNOTs and stays in one, `KNOT-EWTW-STO-001`. Ruling R1 was completed the same day. Three KNOTs were opened for what the research exposed: the cruise point, the certification basis, and the location of the fuel. A fourth followed on 2026-11-15, the generation architecture: the number, rating and position of the turbogenerators are not decided by the role of storage.R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
+**Deferred on 2026-11-14** by ruling R3 of `KNOT-EWTW-NRG-001` and ruling R1 of `KNOT-EWTW-SRC-001`: conventional fuel carries the mission energy and a turbogenerator is a main source in every option, and the fuel storage and the turbogenerator installation are authorised for definition. The choice that remains was held by three KNOTs and stays in one, `KNOT-EWTW-STO-001`. Ruling R1 was completed the same day. Three KNOTs were opened for what the research exposed: the cruise point, the certification basis, and the location of the fuel. A fourth followed on 2026-11-15, the generation architecture: the number, rating and position of the turbogenerators are not decided by the role of storage. R2 also removes batteries alone from `KNOT-EWTW-SRC-001` and the all-electric chain from `KNOT-EWTW-PRP-001`.
 
 | KNOT | Question | Unblocks (§3 rows) | Meanwhile | Proposed owner |
 |---|---|---|---|---|
@@ -159,8 +159,12 @@ These are LC-B deliverables — *major configuration decisions* in the [lifecycl
 | `KNOT-EWTW-WNG-001` | Wing: which span, which aspect ratio and which area? | The wing (`057`), and the fuel its box holds | A first screening sizes three wings, of aspect ratio 11.5, 14 and 17; no wing is chosen. Working reference of ruling R2: about 40 m of span in flight | `STK_SE` |
 | `KNOT-EWTW-AER-001` | Drag polar: which wetted area, which parasite drag and which lift-to-drag ratio at each cruise point? An obligation, not a choice | The fuel and the carbon dioxide metric of every cruise point | A polar of first order by option, set on one jet and on one turboprop in service, with no second reader | `STK_SE` |
 | `KNOT-EWTW-MAS-001` | Empty mass: what does the eWTW weigh empty under each option of its fuselage and of its wing, and which part rests on structural technologies not yet in service? An obligation, not a choice | The fuel of every option | An empty mass of first order by option: 31 to 36 t at nominal values | `STK_SE` |
+| `KNOT-EWTW-AUX-001` | Auxiliary power and the stand: what supplies the aircraft on the ground and starts its turbogenerators — the ground alone, a turbogenerator, or an auxiliary power module? | 15 | Tailcone mounts and firewall declared for a module (`053-400-020`, `-030`); its technology is not determined | `STK_SE` |
+| `KNOT-EWTW-ICE-001` | Ice protection: how are the wing, the tail, the propellers and the inlets protected with no bleed air — heat, expulsion, boots, or a combination? | 10 | The essential-loads analysis leaves it unsupplied after the loss of the normal sources; no load analysis carries it | `STK_SE` |
+| `KNOT-EWTW-ECS-001` | Cooling cycle of the packs: an air cycle fed by the electric compressors, a vapour cycle, or both? | 6 · 9 | Electric packs declared with no cycle; the concept of operations carries no figure of power | `STK_SE` |
+| `KNOT-EWTW-ACT-001` | Actuation and utility power: central hydraulics with electric pumps, local electro-hydraulic units, or electromechanical actuators — function by function? | 7 · 8 · 11 | Load L10 of the essential-loads analysis stands for the power of the surfaces whatever the technology | `STK_SE` |
 
-The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed:
+The decisions constrain one another. The carrier is the root; sources and propulsion chain are best closed together. Since 2026-11-14 the carrier and the sources are deferred to the role of storage, and the cruise point and the certification basis come before the decisions they feed. The four system decisions opened on 2026-11-24 hang from them:
 
 ```mermaid
 flowchart LR
@@ -178,6 +182,10 @@ flowchart LR
   WNG["KNOT-EWTW-WNG-001<br/>wing planform"]
   AER["KNOT-EWTW-AER-001<br/>drag polar"]
   MAS["KNOT-EWTW-MAS-001<br/>empty mass"]
+  AUX["KNOT-EWTW-AUX-001<br/>auxiliary power and the stand"]
+  ICE["KNOT-EWTW-ICE-001<br/>ice protection"]
+  ECS["KNOT-EWTW-ECS-001<br/>cooling cycle of the packs"]
+  ACT["KNOT-EWTW-ACT-001<br/>actuation and utility power"]
   NRG --> SRC
   NRG --> PRP
   SRC ---|"closed together"| PRP
@@ -212,6 +220,13 @@ flowchart LR
   GEN --> ESS
   EP --> SRC
   EP --> ESS
+  ESS --> AUX
+  GEN --> AUX
+  WNG --> ICE
+  PRP --> ICE
+  CRZ --> ECS
+  ECS ---|"coupled"| AUX
+  ACT ---|"coupled"| ESS
 ```
 
 ### Ownership and taxonomy rulings
@@ -298,7 +313,7 @@ The authority then attached the database of EASA of certified carbon dioxide met
 
 On 2026-11-24 the authority took the first part of step 4 and prepared step 5, by [ruling R2](01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md) of the cruise point. The ten criteria of the cruise point are approved, two with a modification. A working reference is taken as an assumption: 360 kt at 31,000 ft, the section of five abreast, and a wing of about 40 m of span in flight. With the baskets of 2037 that aircraft stands 27.2 % below the level, and no wing inside code letter C reaches 26 %; with none of the four gains of 2037 granted it stands 2.1 % above ([review record](01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_reference-and-interval_2026-11-24.md)). Still open in step 4: the criteria of the section and of the wing, and whether the wing folds or takes code letter D.
 
-- **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, and the certification basis are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
+- **Not on this path.** The other KNOTs do not gate the concept baseline. The generation architecture, the role of storage, essential power, the place of the fuel, the propulsion chain beyond the kind of propulsor, the certification basis, and the four system decisions opened on 2026-11-24 — auxiliary power, ice protection, the cooling cycle and actuation — are due at the preliminary-design baseline; each stays open under a recorded assumption that names it. The KNOTs of the rear fuselage stations belong to their own scope.
 - **What can hold it.** No critical element of the cruise point has a readiness level on record, and the release asks for one. The polar is of first order: where it cannot separate two options, step 5 gives a reference and not a ruling. No baseline record exists for the aircraft scope, and the measure and the value of the two purposes of the wide tube are the authority's to state. The screening does not meet the objective of 26 % with the options as written. Since ruling R2 the objective gates the preliminary-design baseline through the justified upper limit of the margin; the method that builds that limit is proposed and not ratified.
 
 ---
@@ -426,6 +441,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.29 | 2026-11-18 | The publications of chapter `021` withdrawn from the TPuBS, at the request of the authority: 789 files of the information architecture, the module of the maintenance manual and 207 rows of the consolidated requirement list ([record][WDR-021]). Finding F24 entered. F01 restated: the illustration is withdrawn and no issue 02 is due. §1, §2 and §4 follow, and the PBS notes that named the illustration are amended (PBS README 0.2.3). The concept of operations of the environmental control system is corrected at 0.1.2 (KNOT register 0.11.20): the taxonomy does name the air supply without bleed, at `021-900-070` |
 | 0.3.30 | 2026-11-20 | Four acts asked by the authority. A section for air compression, `021-100`, added to the taxonomy; §2, §3 and §4 name it, and the concept of operations of the environmental control system binds its fresh-air function to it (0.1.3, KNOT register 0.11.21). The publications of section `003-900` withdrawn from the TPuBS ([record][WDR-003]); F24 and §1 follow. The convention on information codes that CM-001 cites drafted for ratification ([`AMPEL360-AMM-INFOCODE-CM-001`][CM-INFOCODE]); §8 lists it. The two labels of F01 that were left in the PBS neutralised (PBS README 0.2.4): F01 has nothing outstanding |
 | 0.3.31 | 2026-11-24 | Ruling R2 of the cruise point: its ten criteria approved, two with a modification, and a working reference taken as an assumption — 360 kt at 31,000 ft, five abreast, about 40 m of span in flight (KNOT register 0.11.24). The objective gates the preliminary-design baseline through the justified upper limit of the margin; the method for that limit is proposed. Path to the concept baseline and the table of §5 updated |
+| 0.3.32 | 2026-11-24 | Four KNOTs opened for systems that §3 lists as open and no KNOT held: auxiliary power and the stand (`AUX`, row 15), ice protection (`ICE`, row 10), the cooling cycle of the packs (`ECS`, rows 6 and 9) and actuation and utility power (`ACT`, rows 7, 8 and 11). Row 9 now reads declared and open: the packs are electric, their cycle is not chosen. §5 table and graph updated; none of the four gates the concept baseline (KNOT register 0.11.25 — 26 KNOTs, 79 KNUs) |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md

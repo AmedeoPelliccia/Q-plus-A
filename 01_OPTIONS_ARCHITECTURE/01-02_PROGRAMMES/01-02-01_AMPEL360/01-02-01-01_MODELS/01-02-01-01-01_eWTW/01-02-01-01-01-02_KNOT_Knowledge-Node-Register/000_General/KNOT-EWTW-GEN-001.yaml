@@ -27,6 +27,7 @@ knot:
   - KNOT-EWTW-PRP-001
   unblocks:
   - KNOT-EWTW-ESS-001
+  - KNOT-EWTW-AUX-001
   affects:
   - view: model
     ref: README §3 row 3
