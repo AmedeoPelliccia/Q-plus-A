@@ -3,7 +3,7 @@
 <img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/cbb5f478-c733-4508-ae82-c9ad4fef13da" />
 
 
-**From structured engineering intent to models, simulations, evidence and physical product definition.**
+## **From structured engineering intent to models, simulations, evidence and physical product definition.**
 
 Q+A is a collaborative aerospace and advanced-systems engineering repository built around controlled product structures, deterministic identifiers, technical-information governance and lifecycle traceability. It is the working repository of the **Q+** initiative and hosts the **Q+ATLANTIDE** architecture taxonomy, the **OPTIONS** enterprise architecture, and the programme breakdown structures of the **AMPEL360**, **GAIA-AIR**, **GAIA-SPACE** and **ROBBBO-T** programmes.
 
