@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - knot_check_test.py (0.1.4)
+# Generated 2026-11-16 - knot_check_test.py (0.1.6)
 """Tests of tools/knot_check.py on the eWTW KNOT register. Run from the repository root:
 
     python3 tools/knot_check_test.py
@@ -53,9 +53,10 @@ class KnotCheck(unittest.TestCase):
     def test_register_passes(self):
         bad, prov, lines = knot_check.check(self.reg, TAX, PBS)
         self.assertEqual(bad, [])
-        self.assertEqual(prov, ["`NRG` R1"])
-        self.assertTrue(lines[0].startswith("14 KNOTs, 41 KNUs"))
+        self.assertEqual(prov, [], "ruling R1 of the energy carrier was completed on 2026-11-14")
+        self.assertTrue(lines[0].startswith("22 KNOTs, 67 KNUs"))
         self.assertIn("Control: `CAD`", lines)
+        self.assertIn("Obligation: `CRT`", lines)
 
     def test_missing_required_field(self):
         self.edit("LUG", lambda k: k.pop("criteria"))
@@ -90,18 +91,94 @@ class KnotCheck(unittest.TestCase):
             self.edit("ESS", lambda k: k.update(maturity_required=[dict(MATURITY, **change)]))
             self.fails("KNOT-EWTW-ESS-001 invalid maturity record Q1")
 
+    # rule 19: criteria in order, the north star first
+    def crit(self, k, cid):
+        return next(c for c in k["criteria"] if c["id"] == cid)
+
+    def test_cruise_point_has_its_criteria_in_order(self):
+        k = yaml.safe_load(self.path("CRZ").read_text(encoding="utf-8"))["knot"]
+        tradable = [c for c in k["criteria"] if c["class"] == "tradable"]
+        self.assertEqual([c["id"] for c in sorted(tradable, key=lambda c: c["precedence"])], ["T2", "T1", "T3", "T4", "T5"])
+        self.assertEqual([c["id"] for c in k["criteria"] if c.get("north_star")], ["T2"])
+        self.assertTrue(all(c["weight"] is None and c["threshold"] == 0.05 for c in tradable))
+        self.assertTrue(all("precedence" not in c for c in k["criteria"] if c["class"] == "mandatory"))
+
+    def test_order_of_criteria_is_complete(self):
+        order = "KNOT-EWTW-CRZ-001 criteria in order: every tradable criterion has a precedence from 1, a margin and no weight"
+        for change in ({"precedence": None}, {"precedence": 2}, {"precedence": 7}, {"weight": 0.2}, {"threshold": None}, {"threshold": 1.5}):
+            self.setUp()
+            self.edit("CRZ", lambda k: self.crit(k, "T3").update(change))
+            self.fails(order)
+            self.tearDown()
+        self.setUp()
+        self.edit("CRZ", lambda k: self.crit(k, "M4").update(precedence=6))
+        self.fails(order)
+        self.edit("CRZ", lambda k: (self.crit(k, "M4").update(precedence=3), self.crit(k, "T3").pop("precedence")))
+        self.fails(order)                                                        # a mandatory criterion takes a place in the order
+
+    def test_north_star_is_single_and_first(self):
+        star = "KNOT-EWTW-CRZ-001 north star: one tradable criterion, of precedence 1"
+        self.edit("CRZ", lambda k: self.crit(k, "T1").update(north_star=True))
+        self.fails(star)
+        self.edit("CRZ", lambda k: self.crit(k, "T2").pop("north_star"))
+        self.fails(star)                                                         # the star is now on the criterion of precedence 2
+        self.edit("CRZ", lambda k: (self.crit(k, "T1").pop("north_star"), self.crit(k, "M1").update(north_star=True)))
+        self.fails(star)
+        self.edit("CRZ", lambda k: self.crit(k, "M1").pop("north_star"))
+        self.fails(star)                                                         # in order, and no star at all
+
+    def test_no_decision_anchor_is_scored_without_a_north_star(self):
+        approve = lambda k: [x.update(state="APPROVED") for x in k["criteria"] + k["maturity_required"]]
+        self.edit("CRZ", lambda k: (approve(k), self.option(k, "B").update(state="rejected")))
+        self.assertEqual(knot_check.check(self.reg, TAX, PBS)[0], [], "approved criteria in order, approved maturity: the option can be scored")
+        self.edit("ESS", lambda k: (approve(k), k.update(maturity_required=[dict(MATURITY)]), self.option(k, "A").update(state="rejected")))
+        bad = knot_check.check(self.reg, TAX, PBS)[0]
+        self.assertEqual(bad, ["KNOT-EWTW-ESS-001 scored without a north-star criterion"], "approved criteria and maturity are not enough")
+
     def test_invalid_criterion(self):
         self.edit("ESS", lambda k: k["criteria"][0].update({"class": "preferred"}))
         self.fails("KNOT-EWTW-ESS-001 invalid criterion M1")
 
+    def provisional(self, k):
+        k["rulings"][0].update(rationale=None, rationale_recorded=None, evidence=[], state="PROVISIONAL")
+
     def test_ruled_on_provisional_ruling(self):
-        self.edit("NRG", lambda k: k.update(resolution="RULED"))
+        self.edit("NRG", lambda k: (self.provisional(k), k.update(resolution="RULED")))
         self.fails("KNOT-EWTW-NRG-001 ruled on a provisional ruling")
 
     def test_provisional_ruling_with_effects(self):
         effect = {"view": "ReqBS", "action": "create", "ref": None, "description": "Scope requirement"}
-        self.edit("NRG", lambda k: k["rulings"][0]["effects"].append(effect))
+        self.edit("NRG", lambda k: (self.provisional(k), k["rulings"][0]["effects"].append(effect)))
         self.fails("KNOT-EWTW-NRG-001 R1 provisional ruling with authorised effects")
+
+    def test_completed_ruling_without_evidence_is_a_state_error(self):
+        self.edit("NRG", lambda k: k["rulings"][0].update(evidence=[]))
+        self.fails("KNOT-EWTW-NRG-001 R1 state")
+
+    # rule 6: a KNOT deferred to the choice of another
+    def test_deferred_knots_keep_their_gates(self):
+        _, _, lines = knot_check.check(self.reg, TAX, PBS)
+        self.assertIn("| `KNOT-EWTW-NRG-001` | Energy carrier | `decision-anchor` | `000` | DEFERRED | 7 | `STK_SE` |", lines)
+        self.assertTrue(any(l.startswith("| `eWTW-PBS-053-900-000` | `KNOT-EWTW-NRG-001` | DEFERRED |") for l in lines))
+        self.assertTrue(any(l.startswith("| `eWTW-PBS-024-000` | `KNOT-EWTW-SRC-001` | DEFERRED |") for l in lines))
+
+    def test_turbogenerator_chapter_is_gated_by_its_own_decision(self):
+        _, _, lines = knot_check.check(self.reg, TAX, PBS)
+        rows = [l for l in lines if l.startswith("| `eWTW-PBS-068-000` |")]
+        self.assertEqual(len(rows), 1, "a deferred KNOT does not hold the gate of a question it does not decide")
+        self.assertTrue(rows[0].startswith("| `eWTW-PBS-068-000` | `KNOT-EWTW-GEN-001` | OPEN |"))
+
+    def test_deferred_needs_another_knot(self):
+        self.edit("NRG", lambda k: k.update(closed_with=[]))
+        self.fails("KNOT-EWTW-NRG-001 deferred without another KNOT in closed_with")
+
+    def test_deferred_needs_a_complete_ruling(self):
+        self.edit("SRC", self.provisional)
+        self.fails("KNOT-EWTW-SRC-001 deferred without a complete ruling")
+
+    def test_deferring_scores_nothing(self):
+        self.edit("SRC", lambda k: self.option(k, "B").update(state="retained"))
+        self.fails("KNOT-EWTW-SRC-001 scored without criteria or maturity")
 
     def test_gate_to_missing_pbs_node(self):
         def change(k):

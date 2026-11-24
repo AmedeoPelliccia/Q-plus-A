@@ -1,0 +1,14 @@
+pbs_node:
+  id: eWTW-PBS-060
+  title: Thermal Machine and Power Generation
+  type: group
+  taxonomyRef:
+    band: "060-069"
+    localCode: "060"
+    note: "PBS-local addressing per CM-001; taxonomy linked by mapping, never mirrored"
+  parent: eWTW-PBS-000
+  model: eWTW
+  side: SSOT
+  member: "-01_PBS"
+  status: scaffold
+  version: "2.0"

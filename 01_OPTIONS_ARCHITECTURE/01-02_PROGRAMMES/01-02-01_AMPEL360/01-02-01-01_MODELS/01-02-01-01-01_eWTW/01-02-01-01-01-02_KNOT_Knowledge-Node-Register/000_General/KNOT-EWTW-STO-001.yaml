@@ -7,7 +7,7 @@ knot:
   raised_at: null
   question: 'Role of energy storage: propulsive energy, buffering for start, transients and peaks, or essential and emergency supply only?'
   context: >-
-    Batteries may play three different roles on the eWTW: storing the propulsive energy, buffering starts, transients and peaks, or supplying only essential and emergency loads. The role decides the size, mass and location of the battery installation and the safety case for the energy-carrier bay in the fuselage.
+    Batteries may play three different roles on the eWTW: storing the propulsive energy, buffering starts, transients and peaks, or supplying only essential and emergency loads. The role decides the size, mass and location of the battery installation and the safety case for the energy-carrier bay in the fuselage. Since the rulings of 2026-11-14 this KNOT holds the one choice that KNOT-EWTW-NRG-001 and KNOT-EWTW-SRC-001 left open: its option C is their option B, with no propulsion battery, and its options A and B are their option C.
   effectivity:
   - model: eWTW
     variants: []
@@ -21,7 +21,10 @@ knot:
   created_date: '2026-11-08'
   depends_on:
   - KNOT-EWTW-SRC-001
-  closed_with: []
+  - KNOT-EWTW-CRT-001
+  closed_with:
+  - KNOT-EWTW-NRG-001
+  - KNOT-EWTW-SRC-001
   unblocks:
   - KNOT-EWTW-ESS-001
   affects:
@@ -85,11 +88,13 @@ knot:
     exit: Role and size per option
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
   - knu_id: KNU-EWTW-STO-001-02
     title: Battery installation safety
     knu_class: REQUIREMENT_SET
@@ -112,11 +117,13 @@ knot:
     exit: Candidate requirements and risks; input to the disposition of F01
     owner: STK_SAF
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
   - knu_id: KNU-EWTW-STO-001-03
     title: Propagation test plan
     knu_class: VERIFICATION_OBJECT
@@ -157,8 +164,10 @@ knot:
     exit: Criteria, weights and thresholds approved by the authority and written into this record
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-12'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md

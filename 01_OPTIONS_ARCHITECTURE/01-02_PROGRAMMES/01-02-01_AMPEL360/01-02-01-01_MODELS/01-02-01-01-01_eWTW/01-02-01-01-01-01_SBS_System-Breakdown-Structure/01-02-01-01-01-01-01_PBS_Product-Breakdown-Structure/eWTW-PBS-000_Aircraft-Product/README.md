@@ -17,6 +17,7 @@ PBS riformata, codici PBS-local ×10: `eWTW-PBS-<band>` group, `eWTW-PBS-<0CC>-<
 | `eWTW-PBS-030` | Protection and Mechanical Systems | 8 |
 | `eWTW-PBS-040` | Avionics Information and Auxiliary Power | 4 |
 | `eWTW-PBS-050` | Airframe Structure | 7 |
+| `eWTW-PBS-060` | Thermal Machine and Power Generation | 1 |
 | `eWTW-PBS-070` | Electric Propulsion | 6 |
 | `eWTW-PBS-080` | Alternative and Quantum Propulsion | 1 |
 | `eWTW-PBS-090` | Software and Digital Configuration Items | 3 |

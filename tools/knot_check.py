@@ -1,4 +1,4 @@
-# Generated 2026-11-14 - knot_check.py (0.1.4)
+# Generated 2026-11-16 - knot_check.py (0.1.6)
 """Check a KNOT register against AMPEL360-KNOT-CM-004 and print its generated views.
 
 Usage: python3 tools/knot_check.py <register> <s-atlas> [<pbs>]
@@ -128,6 +128,9 @@ def check(register, tax_root, pbs=None):
                 gates.append((ref, kid, k["resolution"], effectivity_label(k["effectivity"]), note))
 
         bad += [f"{kid} ruled without a ruling"] * (k["resolution"] == "RULED" and not k["rulings"])
+        if k["resolution"] == "DEFERRED":                                                      # rule 6: deferred to the choice of another KNOT
+            bad += [f"{kid} deferred without another KNOT in closed_with"] * (not [r for r in k["closed_with"] if r in K and r != kid])
+            bad += [f"{kid} deferred without a complete ruling"] * (not any(r.get("state") == "COMPLETE" for r in k["rulings"]))
         for r in k["rulings"]:
             ruling = f"{kid} {r.get('id')}"
             bad += [f"{ruling} fields"] * any(f not in r for f in RUL)
@@ -148,6 +151,18 @@ def check(register, tax_root, pbs=None):
                     and c.get("class") in ("mandatory", "tradable") and c.get("state") in ("PROPOSED", "APPROVED")):
                 bad.append(f"{kid} invalid criterion {c.get('id') if isinstance(c, dict) else c}")
         approved = bool(k["criteria"]) and all(isinstance(c, dict) and c.get("state") == "APPROVED" for c in k["criteria"])
+        records = [c for c in k["criteria"] if isinstance(c, dict)]                              # rule 19: criteria in order, the north star first
+        tradable = [c for c in records if c.get("class") == "tradable"]
+        ordered = [c for c in records if c.get("precedence") is not None]
+        stars = [c for c in records if c.get("north_star")]
+        number = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+        if ordered or stars:
+            in_order = (len(ordered) == len(tradable) and all(c in tradable for c in ordered)
+                        and sorted(str(c["precedence"]) for c in ordered) == sorted(str(n) for n in range(1, len(tradable) + 1))
+                        and all(isinstance(c["precedence"], int) and not isinstance(c["precedence"], bool) for c in ordered)
+                        and all(c.get("weight") is None and number(c.get("threshold")) and 0 <= c["threshold"] < 1 for c in tradable))
+            bad += [f"{kid} criteria in order: every tradable criterion has a precedence from 1, a margin and no weight"] * (not in_order)
+            bad += [f"{kid} north star: one tradable criterion, of precedence 1"] * (len(stars) != 1 or stars[0] not in tradable or stars[0].get("precedence") != 1)
         level = lambda v: isinstance(v, int) and not isinstance(v, bool) and 1 <= v <= 9
         for q in k.get("maturity_required") or []:                                             # a maturity record
             if not (isinstance(q, dict) and all(isinstance(q.get(f), str) and q[f].strip() for f in ("id", "element", "decision", "evidence", "source"))
@@ -161,6 +176,7 @@ def check(register, tax_root, pbs=None):
             bad += [f"{kid} ruled on a provisional ruling"] * any(r.get("state") != "COMPLETE" for r in k["rulings"])
             waived = any(r.get("waiver") for r in k["rulings"])
             bad += [f"{kid} scored without criteria or maturity"] * (anchor and not (approved and (mature or waived)))
+            bad += [f"{kid} scored without a north-star criterion"] * (anchor and len(stars) != 1)
 
         for a in k["taxonomy"]:
             by.setdefault(a, []).append(kid[10:13])
@@ -191,7 +207,7 @@ def check(register, tax_root, pbs=None):
     lines = [f"| `{kid}` | {k['title']} | `{k['kind']}` | `{folder[kid]}` | {k['resolution']} | {len(k['knus'])} | `{k['owner']}` |"
              for kid, k in K.items()]
     lines += [f"| `{a}` | {TAX[a]} | {' · '.join(f'`{t}`' for t in by[a])} |" for a in sorted(by)]
-    for label, kind in (("Home to be ruled", "decision-anchor"), ("Lifecycle", "lifecycle-constraint"), ("Control", "control-intent")):
+    for label, kind in (("Home to be ruled", "decision-anchor"), ("Lifecycle", "lifecycle-constraint"), ("Control", "control-intent"), ("Obligation", "obligation")):
         ks = [kid[10:13] for kid, k in K.items() if not k["taxonomy"] and k["kind"] == kind]
         lines.append(f"{label}: {' · '.join(f'`{t}`' for t in ks)}")
     for k in K.values():

@@ -1,0 +1,156 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-WNG-001
+  title: 'Wing planform: span, aspect ratio and area'
+  kind: decision-anchor
+  taxonomy: ['057']
+  raised_at: null
+  question: 'Which span, which aspect ratio and which area does the wing have?'
+  context: >-
+    No record defines the wing of the eWTW. The mission screening keeps the airframe of its reference type, a regional jet, and one lift-to-drag ratio of 15 for every cruise point. The wing sets three things that open decisions wait for. Its span and its area set the induced drag and much of the wetted area, and so the lift-to-drag ratio at each cruise point. Its box sets the fuel it can hold: the fuel of the requirement mission, 6.8 to 7.7 t, is more than the tanks of the turboprops of the class hold and 53 to 60 % of what the wing of the reference jet holds. Its loading follows the cruise point and the take-off and landing fields. Electric propulsors along the span or at the tips may change the wing the aircraft needs; that effect is to be shown, not assumed. The stands the class uses limit the span: code letter C stops short of 36 m. The types of the previous generation span 27 to 29 m; the jets now in production span 33.7 to 35.1 m, with a wing of 103 to 112 m².
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; AMPEL360-KNOT-CM-004 rule 19; criterion M5 of KNOT-EWTW-CRZ-001; research record of the fuel location, 2026-11-15'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-16'
+  depends_on: []
+  closed_with: []
+  unblocks:
+  - KNOT-EWTW-AER-001
+  - KNOT-EWTW-MAS-001
+  - KNOT-EWTW-FUL-001
+  affects:
+  - view: PBS
+    ref: eWTW-PBS-057-000
+  options:
+  - id: A
+    text: 'a wing within the span of the stands the class uses, with the aspect ratio of the regional jets and turboprops in service'
+    state: open
+    pbs_footprint: []
+  - id: B
+    text: 'a wing within that span with a higher aspect ratio and a smaller area, which propulsors along the span would allow at low speed'
+    state: open
+    pbs_footprint: []
+  - id: C
+    text: 'a wing beyond that span, with folding tips or a brace'
+    state: open
+    pbs_footprint: []
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'a first screening sizes three wings, of aspect ratio 11.5, 14 and 17 with a brace, at 560 and 620 kg/m2; by a rule of similarity the two smaller wings have little or no room for the fuel of the requirement mission, which is 0.85 to 1.15 times what they hold, and the braced wing passes 36 m only at the take-off masses of the nominal case'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - text: 'the aspect ratio of the class is 11 to 12, the square of the span over the reference area of the jets now in production; a higher one inside code letter C needs a smaller wing'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md
+  - text: 'propellers at the wingtip cut the drag of a wing by 5 to 15 % in a wind tunnel at small scale, and by nothing shown in flight; no credit is taken at nominal values'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md
+  - text: 'the span stays short of 36 m, the limit of code letter C, unless option C is chosen; that allows 12.6 on the 103 m² of the jets now in production, 14 on 92.5 m² and 21 on 61 m², by arithmetic of the reviewer'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-WNG-001_wings-and-span-limits_2026-11-17.md
+  - text: 'no flight result on record supports a gain from propellers on the wing at this scale; the effect is to be shown'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-WNG-001_wings-and-span-limits_2026-11-17.md
+  - text: 'the wing of the eWTW is not defined in any record; the mission screening keeps the airframe of its reference type'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-FUL-001_fuel-location_2026-11-15.md
+  - text: 'one lift-to-drag ratio of 15 serves every cruise point of the screenings'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: 'working reference of ruling R2 of KNOT-EWTW-CRZ-001, of 2026-11-24, taken as an assumption: about 40 m of span in flight, which is code letter D with fixed tips; the brace, folding tips, the aspect ratio and the area stay open'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+  couplings:
+  - knot: KNOT-EWTW-CRZ-001
+    note: 'the wing loading follows the cruise point, and the lift-to-drag ratio at a cruise point follows the wing; the two are sized together'
+  - knot: KNOT-EWTW-FUS-001
+    note: 'a section that carries lift changes the wing the aircraft needs; the two are sized together'
+  - knot: KNOT-EWTW-PRP-001
+    note: 'propulsors along the span or at the tips change the wing the aircraft needs and the loads it carries'
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-WNG-001-01
+    title: 'Wings of the class, span limits and high aspect ratio'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'Published planforms near 100 seats, the limits that airports put on the span, and what has been measured for high aspect ratio and for propellers on the wing'
+    research_brief:
+      questions:
+      - 'What are the span, the wing area, the aspect ratio, the wing loading at maximum take-off mass and the fuel volume of the wing for the aircraft of 70 to 130 seats in service, in the documents of their manufacturers?'
+      - 'Which limits on the wingspan apply to an aircraft of this class at airports — the aerodrome reference code letters of ICAO Annex 14 and the stands they give — and which aircraft fold their wingtips to stay within one?'
+      - 'What have high-aspect-ratio wings, braced wings and folding tips shown in published tests and studies for aircraft of 100 to 200 seats: aspect ratio, lift-to-drag ratio, wing mass and flutter?'
+      - 'What have propellers at the wingtips and propellers distributed along the span shown for the induced drag and for the wing area needed at low speed, in flight tests, wind-tunnel tests and calculations? Which results were measured?'
+      - 'Which take-off and landing field lengths do operators of the class require, and which wing loading and lift coefficient do they imply?'
+    serves:
+    - KNOT-EWTW-AER-001
+    - KNOT-EWTW-PRP-001
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Planforms and limits of the class, each with its source and with whether it was measured or calculated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: IN_PROGRESS
+    created_date: '2026-11-16'
+    start_date: '2026-11-17'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-WNG-001_wings-and-span-limits_2026-11-17.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-WNG-001_wings-in-service-and-propellers_2026-11-18.md
+  - knu_id: KNU-EWTW-WNG-001-02
+    title: 'Wing area and span by cruise point'
+    knu_class: ANALYSIS_PACKAGE
+    description: 'For each candidate cruise point and each option: the wing area from the wing loading, the span and the aspect ratio, the wetted area, and the fuel the box holds'
+    research_brief: null
+    serves:
+    - KNOT-EWTW-AER-001
+    - KNOT-EWTW-FUL-001
+    - KNOT-EWTW-CRZ-001
+    outputs:
+    - view: PBS
+      ref: eWTW-PBS-057-000
+    exit: 'Dimensions for each option and cruise point, with the assumptions behind them, in a record the screening and the polar read'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: PENDING_REVIEW
+    created_date: '2026-11-16'
+    start_date: '2026-11-18'
+    end_date: null
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/CFG-EWTW-AER-001/README.md
+  - knu_id: KNU-EWTW-WNG-001-03
+    title: 'Decision criteria and maturity thresholds'
+    knu_class: REQUIREMENT_SET
+    description: 'Criteria in order, with the north-star criterion of rule 19, and the maturity the decision requires'
+    research_brief: null
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    exit: 'Criteria and maturity records approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-16'
+    start_date: null
+    end_date: null
+    evidence_refs: []

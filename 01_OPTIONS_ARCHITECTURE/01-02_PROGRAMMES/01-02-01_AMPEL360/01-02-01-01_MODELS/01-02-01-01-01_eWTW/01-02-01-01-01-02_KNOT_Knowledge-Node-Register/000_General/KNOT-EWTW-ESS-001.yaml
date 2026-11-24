@@ -22,6 +22,8 @@ knot:
   depends_on:
   - KNOT-EWTW-SRC-001
   - KNOT-EWTW-STO-001
+  - KNOT-EWTW-CRT-001
+  - KNOT-EWTW-GEN-001
   closed_with: []
   unblocks: []
   affects:

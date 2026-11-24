@@ -7,7 +7,7 @@ knot:
   raised_at: null
   question: 'Energy carrier: batteries, conventional fuel for a thermal machine — or both? Cryogenic hydrogen is out of scope'
   context: >-
-    The energy carrier is the first configuration decision of the eWTW: it fixes what the energy-carrier bay in the fuselage holds, and it conditions the electrical sources, the propulsion chain, thermal management and fire protection. The choice is between batteries alone, conventional fuel (kerosene or sustainable aviation fuel) feeding a thermal machine that generates electricity, or both. Hydrogen is excluded. The decision needs a feasible design mission for a 100-passenger aircraft, so the research must tie every energy figure to range, payload and reserves.
+    The energy carrier is the first configuration decision of the eWTW: it fixes what the energy-carrier bay in the fuselage holds, and it conditions the electrical sources, the propulsion chain, thermal management and fire protection. The choice is between batteries alone, conventional fuel (kerosene or sustainable aviation fuel) feeding a thermal machine that generates electricity, or both. Hydrogen is excluded. The decision needs a feasible design mission for a 100-passenger aircraft, so the research must tie every energy figure to range, payload and reserves. Since the rulings of 2026-11-14 batteries alone are excluded, conventional fuel carries the mission energy in every option, and the choice of a propulsion battery is deferred to KNOT-EWTW-STO-001.
   effectivity:
   - model: eWTW
     variants: []
@@ -17,10 +17,11 @@ knot:
   due: before REV-B_RELEASED of any scope it affects
   owner: STK_SE
   status: DRAFT
-  resolution: OPEN
+  resolution: DEFERRED
   created_date: '2026-11-08'
   depends_on: []
-  closed_with: []
+  closed_with:
+  - KNOT-EWTW-STO-001
   unblocks:
   - KNOT-EWTW-SRC-001
   - KNOT-EWTW-PRP-001
@@ -238,11 +239,13 @@ knot:
     authority: AM.PEL — architecture authority
     statement: 'Scope narrowed: the eWTW is all-electric, or hybrid-electric with conventional fuel; liquid hydrogen is allocated to the BWB-Q100. The KNOT stays open within that scope'
     effect: option D excluded
-    rationale: null
-    rationale_recorded: null
-    evidence: []
+    rationale: 'The exclusion is a decision of allocation within the family of models. It is not the result of a comparison of carriers on this airframe: no trade of liquid hydrogen on the eWTW is on record, and none is claimed. The family carries liquid hydrogen in one model, the BWB-Q100. For the same energy liquid hydrogen needs about four times the volume of kerosene, which moves its storage out of the wing, and the place of the tanks then drives the centre of gravity. The eWTW is the model with a wide tube and a wing, for 100 passengers: a tube-and-wing, far from a blended wing body. Its wide tube is meant for more comfort and to lay the ground for an architecture better suited to tanks of liquid hydrogen. This model carries none, and its geometry is not yet on record'
+    rationale_recorded: '2026-11-14'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R1-completion_2026-11-14.md
     waiver: null
-    state: PROVISIONAL
+    state: COMPLETE
     effectivity:
     - model: eWTW
       variants: []
@@ -277,6 +280,33 @@ knot:
       description: Mission set of the eWTW with its roles — requirement mission of 2,000 km, scoring mission of about 1,100 km, sensitivity mission of 500 km — 100 passengers, and the reserve policy
     embodied_in: []
     record: '000_General/evidence/KNOT-EWTW-NRG-001_ruling-R2_2026-11-14.md — PR #71, ratified by its merge'
+  - id: R3
+    date: '2026-11-14'
+    authority: AM.PEL — architecture authority
+    statement: 'Two decisions. One: conventional fuel for a thermal machine carries the mission energy of the eWTW in every option that stands, and the fuel storage that options B and C share is authorised for definition. Two: options B and C differ only by a propulsion battery. Whether one is carried, and in which role, is the choice of KNOT-EWTW-STO-001: its option C is option B of this KNOT, and its options A and B are option C. This KNOT is deferred to that choice and is ruled by the act that rules it'
+    effect: fuel storage authorised; the choice between options B and C deferred to KNOT-EWTW-STO-001
+    rationale: 'After R1 and R2 two options stand, and both carry conventional fuel for a thermal machine. Three KNOTs held the choice that remains, this one, the electrical sources and the role of storage, and three rulings on one choice can disagree. The mission screening sizes a battery that flies a share of the trip and not one that shaves the peaks, so the choice cannot be scored here before the role is sized. This ruling scores nothing: the criteria stay proposed and are carried to the decision of KNOT-EWTW-STO-001'
+    rationale_recorded: '2026-11-14'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+    - view: EBS
+      ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects:
+    - view: PBS
+      action: create
+      ref: null
+      description: Conventional fuel storage installation, S-ATLAS 028, common to options B and C. Where it is carried is the question of KNOT-EWTW-FUL-001
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-NRG-001_ruling-R3_2026-11-14.md — PR #74, ratified by its merge'
   reopen_if:
   - condition: A battery pack demonstrated, not projected, closes the requirement mission at 100 seats with the cycle life of service. A cell does not meet the condition
     reopens: option A
@@ -284,6 +314,9 @@ knot:
   - condition: EASA publishes a quantity for the final reserve of a CS-25 aeroplane with electric engines
     reopens: the reserve policy of the mission set
     by: R2
+  - condition: The programme allocates liquid hydrogen to the eWTW, or the BWB-Q100 leaves the family of models
+    reopens: option D
+    by: R1
   knus:
   - knu_id: KNU-EWTW-NRG-001-01
     title: Decision criteria and maturity thresholds
@@ -453,8 +486,10 @@ knot:
     exit: Rationale and evidence completed once in R1 by the authority (CM-004 rule 7); the reopen condition recorded in the KNOT's reopen_if
     owner: AM.PEL
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-08'
-    start_date: null
+    start_date: '2026-11-14'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-NRG-001_ruling-R1-completion_2026-11-14.md
