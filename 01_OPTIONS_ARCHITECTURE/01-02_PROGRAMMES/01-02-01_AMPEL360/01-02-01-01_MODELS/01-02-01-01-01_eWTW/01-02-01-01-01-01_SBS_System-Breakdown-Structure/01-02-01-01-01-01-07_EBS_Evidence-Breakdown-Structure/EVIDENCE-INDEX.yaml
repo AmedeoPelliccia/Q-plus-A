@@ -271,6 +271,34 @@ rows:
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
 
+  - class: ratified-act-or-convention
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+    status: on-disk
+    note: >
+      Decision record of ruling R2 of the cruise point, of 2026-11-24, by the architecture
+      authority: the ten criteria approved, M2 and M5 with a modification; a working reference
+      for the cruise point, the section and the wing, taken as an assumption; the ambition of
+      at least 26 % confirmed. No option scored. Ratified by the merge of the pull request
+      that carries it.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/053_Fuselage/KNOT-EWTW-FUS-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/057_Wings/KNOT-EWTW-WNG-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-CRZ-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_reference-and-interval_2026-11-24.md
+    status: on-disk
+    note: >
+      Review record of 2026-11-24: the proposal of a second reader for a reference
+      configuration reproduced with the tool of the screening, the checks of the reviewer on
+      span, altitude, section and brace, and a method proposed for the upper limit of
+      criterion M5, with a first budget. First order; the method is not ratified.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-CRZ-001.yaml
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+
   - class: analysis-or-test-record
     subject: KNOT-EWTW-FUS-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-FUS-001_sections-and-cabins_2026-11-17.md

@@ -90,6 +90,10 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/MSN-EWTW-NRG-001/README.md
+  - text: 'working reference of ruling R2 of KNOT-EWTW-CRZ-001, of 2026-11-24, taken as an assumption: five abreast, two and three, in a cabin 3.28 m wide; the section is not chosen, and the measures proposed for its two purposes are not approved'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
   couplings:
   - knot: KNOT-EWTW-WNG-001
     note: 'a section that carries lift changes the wing the aircraft needs; the two are sized together'

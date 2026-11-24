@@ -53,35 +53,35 @@ knot:
     source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15'
     weight: null
     threshold: null
-    state: PROPOSED
+    state: APPROVED
   - id: M2
     class: mandatory
-    text: 'Above 25,000 ft, the cabin pressure altitude stays at or below 15,000 ft after any reasonably probable failure of the pressurisation system. It applies to the points above 25,000 ft only'
-    source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15'
+    text: 'If certification for operation above 25,000 ft is requested, the cabin pressure altitude stays at or below 15,000 ft after any reasonably probable failure or malfunction of the pressurisation system'
+    source: 'EASA CS 25.841(a), amendment 25/15, read on 2026-11-15. Restated by ruling R2 of 2026-11-24, in the words of the authority: the limit applies if certification for operation above 25,000 ft is requested'
     weight: null
     threshold: null
-    state: PROPOSED
+    state: APPROVED
   - id: M3
     class: mandatory
     text: 'The requirement mission closes at the cruise point, with the reserves of ruling R2 of KNOT-EWTW-NRG-001'
     source: 'Ruling R2 of KNOT-EWTW-NRG-001, 2026-11-14'
     weight: null
     threshold: null
-    state: PROPOSED
+    state: APPROVED
   - id: M4
     class: mandatory
     text: 'The cruise speed is not below 360 kt true airspeed, that of the fastest turboprop of the class in service. It is the floor of service of rule 19 of CM-004'
     source: 'Proposed on 2026-11-15 as a floor of the class, on the specification sheet of the Dash 8-400, and kept by the authority on 2026-11-16. It is a requirement of the programme and is in no text; the research of 2026-11-16 found no evidence for or against a floor at this speed, and the authority then kept it, stated in knots'
     weight: null
     threshold: null
-    state: PROPOSED
+    state: APPROVED
   - id: M5
     class: mandatory
-    text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is at least 26 % below the new-type level at its take-off mass, and the aircraft is to better that margin where it can. It is the goal of the independent experts of ICAO for a regional jet of 2037. The most stringent limit in law, on 2026-11-16 the 11 % below the new-type level of the EU taxonomy for 5.7 to 60 t, stays as the floor under it. The objective is to be met at the release of the preliminary-design baseline; at the concept baseline the gap at nominal values is recorded as a target'
-    source: 'Decision of the authority of 2026-11-18: the objective is 26 % and beyond. It replaces as objective the minimum of the decision of 2026-11-16, which stays as the floor: a criterion of the EU taxonomy for the manufacturing of aircraft, and not a limit of the type certificate. Record of the objective and the premises, 2026-11-18; research record of the technology goals, 2026-11-18, statement 2; research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application was proposed by the reviewer and fixed by ruling R1 of 2026-11-16, when the criterion stood at 11 %'
+    text: 'The carbon dioxide metric of the aircraft, as ICAO Annex 16 Volume III defines it, is at least 26 % below the new-type level of its first edition of 2017, at the same maximum take-off mass, and the aircraft is to better that margin where it can. The margin of the EU taxonomy for 5.7 to 60 t, 11 % below that level, stays as a floor of the programme. At the concept baseline the gap is recorded. At the release of the preliminary-design baseline the justified upper limit of the margin is at or below −26 %'
+    source: 'Decision of the authority of 2026-11-18: the objective is 26 % and beyond. It replaces as objective the minimum of the decision of 2026-11-16, which stays as the floor: a criterion of the EU taxonomy for the manufacturing of aircraft, and not a limit of the type certificate. Record of the objective and the premises, 2026-11-18; research record of the technology goals, 2026-11-18, statement 2; research record of the environmental measure, 2026-11-16, statements 1 to 3. The moment of application was proposed by the reviewer and fixed by ruling R1 of 2026-11-16, when the criterion stood at 11 %. Approved with a modification by ruling R2 of 2026-11-24, in the words of the authority: the comparison is fixed to the new-type curve of 2017 at the same mass, the gap is recorded at the concept baseline, and at the release of the preliminary-design baseline the justified upper limit of the margin is at or below −26 %. How that limit is built is proposed in the review record of 2026-11-24 and is not ratified'
     weight: null
     threshold: null
-    state: PROPOSED
+    state: APPROVED
   - id: T1
     class: tradable
     text: 'Power of the gas turbines for the cruise, referred to sea level, on the take-off mass of the requirement mission. Lower is better'
@@ -89,7 +89,7 @@ knot:
     weight: null
     threshold: 0.05
     precedence: 2
-    state: PROPOSED
+    state: APPROVED
   - id: T2
     class: tradable
     text: 'Fuel loaded on the scoring mission, the one measure of environmental effect on record: the emissions in flight follow the fuel burned. Lower is better'
@@ -98,7 +98,7 @@ knot:
     threshold: 0.05
     precedence: 1
     north_star: true
-    state: PROPOSED
+    state: APPROVED
   - id: T3
     class: tradable
     text: 'Time at cruise speed on the scoring mission. Lower is better'
@@ -106,7 +106,7 @@ knot:
     weight: null
     threshold: 0.05
     precedence: 3
-    state: PROPOSED
+    state: APPROVED
   - id: T4
     class: tradable
     text: 'Inception voltage of partial discharge left at the cruise altitude, as a share of its value at sea level. Higher is better'
@@ -114,7 +114,7 @@ knot:
     weight: null
     threshold: 0.05
     precedence: 4
-    state: PROPOSED
+    state: APPROVED
   - id: T5
     class: tradable
     text: 'Ideal work to compress outside air to the cabin pressure. Lower is better'
@@ -122,7 +122,7 @@ knot:
     weight: null
     threshold: 0.05
     precedence: 5
-    state: PROPOSED
+    state: APPROVED
   maturity_required:
   - id: Q1
     element: 'Turbogenerator of megawatt class'
@@ -183,6 +183,10 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/KNOT-EWTW-PRP-001_propulsion-chain_2026-11-14.md
+  - text: 'working reference of ruling R2 of 2026-11-24, taken as an assumption and not as a choice among the options: 360 kt at 31,000 ft, Mach 0.614 in the standard atmosphere; the altitude is closed when the gas turbines are sized, in KNOT-EWTW-GEN-001'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
   couplings:
   - knot: KNOT-EWTW-WNG-001
     note: 'the wing loading follows the cruise point, and the lift-to-drag ratio at a cruise point follows the wing; the two are sized together'
@@ -210,6 +214,29 @@ knot:
     effects: []
     embodied_in: []
     record: '000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md — PR #74, ratified by its merge'
+  - id: R2
+    date: '2026-11-24'
+    authority: AM.PEL — architecture authority
+    statement: 'Three decisions. One: the ten criteria of the cruise point are approved, eight as proposed and two with a modification. Criterion M2 applies if certification for operation above 25,000 ft is requested. Criterion M5 is taken against the new-type level of 2017 at the same maximum take-off mass; the gap is recorded at the concept baseline, and at the release of the preliminary-design baseline the justified upper limit of the margin is at or below −26 %. Two: a working reference is taken as an assumption — 360 kt at 31,000 ft, the section of five abreast, and a wing of about 40 m of span in flight; the altitude is closed when the gas turbines are sized, and the brace and folding tips stay open. Three: the ambition of at least 26 % is confirmed. No option is scored or excluded, and the method that builds the upper limit is not ratified'
+    effect: criteria M1 to M5 and T1 to T5 approved; a working reference recorded as an assumption; no option scored or excluded
+    rationale: 'The authority reviewed the ten criteria one by one, on a page that set the text of each beside what it does on the working reference, and chose for each. Its two modifications follow a second reader: the limit of 15,000 ft is tied to the certification requested, as the rule has it, and the objective is tied to one curve, because the new-type limit itself tightens for types applied for after 2031. The reference is the combination that the review of 2026-11-24 shows to reach the objective with the technology baskets of 2037, at 27.2 % below the level: no wing inside code letter C does, and the fuel of the requirement mission fits its wing. It is an assumption because the figures are of first order and rest on gains that are not demonstrated: with none of them granted the same aircraft stands 2.1 % above the level. The authority therefore keeps the options open and asks for a method that says how much of each gain counts at the release of the preliminary-design baseline'
+    rationale_recorded: '2026-11-24'
+    evidence:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_reference-and-interval_2026-11-24.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_criteria-proposal_2026-11-15.md
+    waiver: null
+    state: COMPLETE
+    effectivity:
+    - model: eWTW
+      variants: []
+      from_baseline: null
+    effects: []
+    embodied_in: []
+    record: '000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md — PR #74, ratified by its merge'
   reopen_if: []
   knus:
   - knu_id: KNU-EWTW-CRZ-001-01
@@ -274,10 +301,10 @@ knot:
     exit: 'Criteria, weights and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: PENDING_REVIEW
+    progress: DONE
     created_date: '2026-11-14'
     start_date: '2026-11-15'
-    end_date: null
+    end_date: '2026-11-24'
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_cruise-point_2026-11-15.md
@@ -287,6 +314,8 @@ knot:
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R1_2026-11-16.md
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
   - knu_id: KNU-EWTW-CRZ-001-04
     title: Measure of environmental effect
     knu_class: ANALYSIS_PACKAGE
