@@ -1,0 +1,156 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-ACT-001
+  title: Actuation and utility power
+  kind: decision-anchor
+  taxonomy: ['024', '027', '029', '032']
+  raised_at: null
+  question: 'What powers the flight controls, the landing gear, the brakes and the other actuated functions of the eWTW: central hydraulic systems with electric pumps, local electro-hydraulic units, or electromechanical actuators — function by function?'
+  context: >-
+    The model lists actuation and utility power as an open decision. It says that the electric environmental control system does not decide the fate of hydraulics, and that the technology is allocated function by function. No record holds the decision. The propulsors of the eWTW are electric and its gas turbines drive generators; whether a turbogenerator also drives a hydraulic pump is part of the choice. The essential-loads analysis finds that the power to move the flight controls decides its total, with over two fifths of the nominal load, and that it is its least certain figure: an assumption that stands for that power whatever the technology. The choice of this KNOT sets that figure, the peaks the network has to give, and what stays powered after the loss of the normal sources. The options are families of technology, and the ruling may take a different one for each function. The research has to say what aircraft in service do function by function, what each technology weighs and draws, and what a jam and the loss of a power source ask of each.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §3 row 8; assumption A3 of ELA-EWTW-ESS-001'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-24'
+  depends_on: []
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 7
+  - view: model
+    ref: README §3 row 8
+  - view: model
+    ref: README §3 row 11
+  - view: PBS
+    ref: eWTW-PBS-029-000
+    relation: gates
+    note: Technology of actuation and utility power, function by function
+  options:
+  - id: A
+    text: 'central hydraulic systems, pressurised by electric motor pumps'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '029'
+      element: 'actuation power installation: electric motor pumps, reservoirs, accumulators and lines'
+      key: actuation-power-installation
+  - id: B
+    text: 'local electro-hydraulic units: electro-hydrostatic actuators and zonal power packs, with no central hydraulic lines'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '029'
+      element: 'actuation power installation: local electro-hydraulic units and their feeders'
+      key: actuation-power-installation
+  - id: C
+    text: 'electromechanical actuators, with no hydraulic fluid'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: '029'
+      element: 'actuation power installation: electromechanical actuators, their controllers and their feeders'
+      key: actuation-power-installation
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'the model leaves actuation and utility power open: the electric ECS does not decide the fate of hydraulics, and the technology is allocated function by function'
+    ref:
+      view: model
+      ref: README §3 row 8
+  - text: 'the power to move the minimum set of surfaces is over two fifths of the nominal essential load and more than half of the high one, and it is the least certain figure of the analysis; load L10 and event E04 stand for it whatever the technology'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/ELA-EWTW-ESS-001/README.md
+  - text: 'on the one transport in service without bleed air for the cabin the large hydraulic pumps are electrical, and bleed air stays for pressurising the hydraulic reservoirs, as reported from a maker publication that could not be opened'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+  couplings:
+  - knot: KNOT-EWTW-ESS-001
+    note: load L10 and event E04 of the essential-loads analysis are assumptions on this choice; it replaces them with design values and says which actuators stay powered
+  - knot: KNOT-EWTW-SRC-001
+    note: the average and the peak power of actuation enter the load analysis by phase and the choice of the distribution
+  - knot: KNOT-EWTW-MLG-001
+    note: the configuration of the main landing gear sets what its retraction, its brakes and its steering ask
+  - knot: KNOT-EWTW-PRP-001
+    note: differential thrust is a control function only if propulsion is distributed, and it changes what the surfaces are asked
+  - knot: KNOT-EWTW-GEN-001
+    note: a hydraulic pump driven by a turbogenerator is a power offtake of chapter 068, and falls with that unit
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-ACT-001-01
+    title: Actuation technologies in service, function by function
+    knu_class: ANALYSIS_PACKAGE
+    description: What aircraft in service use for each actuated function, what each technology weighs and draws, and how each treats a jam and the loss of a power source
+    research_brief:
+      questions:
+      - 'For transport aircraft certified since 2005 and for regional aircraft of 70 to 130 seats: what powers each function — primary flight controls, spoilers, high lift, trim, landing-gear extension and retraction, braking, steering, doors — and from how many independent sources?'
+      - 'What do electro-hydrostatic and electromechanical actuators of flight-control size weigh and draw against the hydraulic actuators they replace, by measurement or by data of the maker? Count the pumps, lines, fluid and reservoirs removed.'
+      - 'How do certified designs treat the jam of an electromechanical actuator on a primary surface, and which primary surfaces fly on electromechanical actuators today?'
+      - 'What average and what peak electrical power does the actuation of an aircraft of this class take in each phase, and which published load analyses or studies give it?'
+      - 'Which transport aircraft brake or retract their landing gear electrically, and with what experience in service?'
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'A table by function and by aircraft, and figures of mass and power, each with its source and with whether it is measured, published or estimated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ACT-001-02
+    title: Actuation loads by function and phase
+    knu_class: ANALYSIS_PACKAGE
+    description: The average and the peak power of each actuated function in each phase, for each option, on the working reference of the aircraft. It replaces load L10 and event E04 of the essential-loads analysis with values that follow a technology
+    research_brief:
+      questions:
+      - 'By what method are hinge moments and surface rates turned into actuator power at the stage of a concept, and which duty cycles do published studies take for descent and approach?'
+      - 'What power and what energy does the extension and the retraction of a landing gear of this class take?'
+    serves:
+    - KNOT-EWTW-ESS-001
+    - KNOT-EWTW-SRC-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'A table of average and peak power by function and by phase for each option, with its assumptions, read by the essential-loads analysis and by the load analysis of KNU-EWTW-SRC-001-01'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ACT-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria for the technology of each actuated function, drawn from ReqBS and TPMS, with the fuel loaded on the scoring mission first
+    research_brief:
+      questions:
+      - 'Which criteria do published designs use to allocate a technology to each function — mass, power and its peaks, the jam case, maintenance and fluid handling, heat rejected by the actuator?'
+      - 'Which criteria follow from the certification of flight controls and landing gear and cannot be traded?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []

@@ -1,0 +1,157 @@
+# KNOT record — AMPEL360-KNOT-CM-004 Issue 1 (proposed)
+knot:
+  knot_id: KNOT-EWTW-ECS-001
+  title: Cooling cycle of the packs
+  kind: decision-anchor
+  taxonomy: ['021', '024', '078']
+  raised_at: null
+  question: 'Which cycle cools the cabin air of the eWTW: an air cycle fed by the electric compressors, a vapour cycle, or the two combined?'
+  context: >-
+    The model declares electric packs with no bleed air, and does not declare their cycle. The taxonomy gives the cooling unit two forms, a vapour cycle or a cold sink shared with a cryogenic system, which the eWTW does not carry; it names no air-cycle machine, so an air cycle fed by electric compressors has no home in it. The tree of publications withdrawn on 2026-11-18 described a vapour cycle with design data that no record supports. Section 021-100 of the taxonomy holds the electric compression of outside air, which every option needs for pressure. The cruise point sets the pressure ratio of that compression and the temperature of the ram air; the stand is the case with no ram air at all. The choice also decides whether the packs can share a loop with the thermal management of the electrical chain. The research has to say what each cycle draws and weighs at this size, which aircraft fly each, how each rejects its heat, and what a refrigerant brings in rules and in maintenance.
+  effectivity:
+  - model: eWTW
+    variants: []
+    from_baseline: null
+  obligation_source: '02_LIFECYCLE_MODEL §3 — major configuration decisions are LC-B deliverables; eWTW README §3 rows 6 and 9; record TPuBS-EWTW-021_withdrawal_2026-11-18, point 2 for the author'
+  lifecycle_phase: LC-A
+  due: before REV-B_RELEASED of any scope it affects
+  owner: STK_SE
+  status: DRAFT
+  resolution: OPEN
+  created_date: '2026-11-24'
+  depends_on:
+  - KNOT-EWTW-CRZ-001
+  closed_with: []
+  unblocks: []
+  affects:
+  - view: model
+    ref: README §3 row 6
+  - view: model
+    ref: README §3 row 9
+  - view: PBS
+    ref: eWTW-PBS-021-000
+    relation: gates
+    note: Cooling cycle of the packs, and how their heat is rejected
+  options:
+  - id: A
+    text: 'air cycle: the electric compressors feed an air-cycle machine, and ram air takes the heat'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: 021-510
+      element: 'environmental cooling unit: air-cycle machine and its heat exchangers'
+      key: environmental-cooling-unit
+  - id: B
+    text: 'vapour cycle: the electric compressors supply outside air for pressure only, and a refrigerant loop cools the cabin air'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: 021-510
+      element: 'environmental cooling unit: refrigerant loop, its compressor and its heat exchangers'
+      key: environmental-cooling-unit
+  - id: C
+    text: 'combined: an air cycle in flight, with a vapour cycle for the ground and for recirculated air'
+    state: open
+    pbs_footprint:
+    - action: create
+      taxonomy: 021-510
+      element: 'environmental cooling unit: air-cycle machine with a refrigerant loop'
+      key: environmental-cooling-unit
+  criteria: []
+  maturity_required: []
+  assumptions:
+  - text: 'the model declares a bleedless environmental control system with electric packs and electric compressors, and names no cycle'
+    ref:
+      view: model
+      ref: README §3 row 9
+  - text: 'the taxonomy says that the air-cycle pack is superseded by an electrically driven compressor with a vapour cycle or a cryogenic cold sink, and names no air-cycle machine'
+    ref:
+      view: TPuBS
+      ref: TPuBS-EWTW-021_withdrawal_2026-11-18.md
+  - text: 'the concept of operations carries no figure of power, and leaves open whether this system also cools a propulsion battery or other energy equipment'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/CONOPS-EWTW-ECS-001/README.md
+  - text: 'criterion T5 of KNOT-EWTW-CRZ-001 measures the ideal work to compress outside air to the cabin pressure, which every option of this KNOT pays; the working reference of ruling R2 is 360 kt at 31,000 ft'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+  couplings:
+  - knot: KNOT-EWTW-STO-001
+    note: whether this system also cools a propulsion battery is an open input of the concept of operations, decided with the role of storage
+  - knot: KNOT-EWTW-PRP-001
+    note: the electrical chain rejects heat of its own; a liquid loop shared with the packs is open to a vapour cycle and not to an air cycle alone
+  - knot: KNOT-EWTW-AUX-001
+    note: the stand is the case with no ram air; the power the packs draw there sizes its supply
+  - knot: KNOT-EWTW-SRC-001
+    note: the load analysis has no figure for the power of the packs by phase; it follows the cycle
+  rulings: []
+  reopen_if: []
+  knus:
+  - knu_id: KNU-EWTW-ECS-001-01
+    title: Cooling cycles on record
+    knu_class: ANALYSIS_PACKAGE
+    description: What each cycle draws and weighs at this size, which aircraft fly each, how each rejects its heat, and what a refrigerant brings
+    research_brief:
+      questions:
+      - 'Which transport and business aircraft in service cool the cabin with an electrically driven air cycle, with a vapour cycle, or with both? For each: the cooling capacity, the electrical power on a hot day on the ground and in cruise, the mass of the packs, and the source.'
+      - 'What coefficient of performance do published studies and tests give for each cycle in the conditions of a 100-seat aircraft — hot day at the stand, climb, cruise at 25,000 to 35,000 ft? Distinguish measured from calculated.'
+      - 'Which refrigerants are used and allowed in aircraft vapour cycles, what do the rules of the European Union on fluorinated gases ask after 2030, and what do leaks, flammability and maintenance bring?'
+      - 'How is the heat rejected in each cycle — ram-air flow and the drag of its circuit, skin heat exchangers, a liquid loop — and which studies share that loop with the cooling of electric machines and power electronics?'
+      - 'How does each cycle behave with one pack lost at altitude, and what does dispatch with a pack inoperative ask of each?'
+    serves: []
+    outputs:
+    - view: EBS
+      ref: null
+    exit: 'Figures and precedents, each with its source and with whether it is measured, published or estimated'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ECS-001-02
+    title: Pack power by phase for each cycle
+    knu_class: ANALYSIS_PACKAGE
+    description: The electrical power of the packs and the ram air they take, phase by phase and case by case of the concept of operations, for each cycle at the working reference of the cruise point
+    research_brief:
+      questions:
+      - 'Which fresh-air flow for each occupant, which recirculation share and which heat loads do published designs of the class take, and from which rule or standard?'
+      - 'By what method is the drag of the ram-air circuit of the packs counted in published studies, and how large is it against the drag of the aircraft?'
+    serves:
+    - KNOT-EWTW-SRC-001
+    - KNOT-EWTW-CRZ-001
+    outputs:
+    - view: TPMS
+      ref: null
+    exit: 'A table of power and of ram air by phase for each cycle, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []
+  - knu_id: KNU-EWTW-ECS-001-03
+    title: Decision criteria and maturity thresholds
+    knu_class: REQUIREMENT_SET
+    description: Criteria for the cooling cycle, drawn from ReqBS and TPMS, with the fuel loaded on the scoring mission first
+    research_brief:
+      questions:
+      - 'Which criteria do published designs use to choose the cooling cycle — power drawn and its fuel, mass, ram drag, cooling on the ground, refrigerant rules, maintenance?'
+      - 'Which criteria follow from certification of ventilation and pressurisation and cannot be traded?'
+    serves: []
+    outputs:
+    - view: ReqBS
+      ref: null
+    - view: TPMS
+      ref: null
+    exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
+    owner: STK_SE
+    lifecycle_phase: LC-A
+    progress: NOT_STARTED
+    created_date: '2026-11-24'
+    start_date: null
+    end_date: null
+    evidence_refs: []

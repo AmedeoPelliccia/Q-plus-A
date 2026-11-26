@@ -26,7 +26,8 @@ knot:
   closed_with:
   - KNOT-EWTW-SRC-001
   - KNOT-EWTW-GEN-001
-  unblocks: []
+  unblocks:
+  - KNOT-EWTW-ICE-001
   affects:
   - view: model
     ref: README §3 row 3

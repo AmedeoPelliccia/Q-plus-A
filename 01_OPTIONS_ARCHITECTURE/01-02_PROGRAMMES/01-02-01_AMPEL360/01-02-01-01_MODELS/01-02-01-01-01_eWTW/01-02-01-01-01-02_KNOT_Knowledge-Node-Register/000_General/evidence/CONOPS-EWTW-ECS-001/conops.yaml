@@ -8,7 +8,7 @@
 # tools/conops_check.py checks the form and writes the tables of the README.
 conops:
   id: CONOPS-EWTW-ECS-001
-  version: '0.1.3'
+  version: '0.1.4'
   date: 2026-11-14
   title: How the environmental control system of the eWTW is operated, by phase and by failure case
   knot: KNOT-EWTW-SRC-001
@@ -76,8 +76,8 @@ conops:
     text: The auxiliary power module
     taxonomy: '049'
     basis: open
-    decided_by: authority
-    note: Its technology is not determined, and no KNOT holds it; it appears only as option D of KNOT-EWTW-ESS-001
+    decided_by: KNOT-EWTW-AUX-001
+    note: Its technology is not determined. KNOT-EWTW-AUX-001 holds it since 2026-11-24, and it is also option D of KNOT-EWTW-ESS-001
   - key: essential
     text: The essential network on its alternate source
     taxonomy: '024'
@@ -91,7 +91,7 @@ conops:
     functions: [cooling, recirculation, distribution, equipment-cooling, ground-air]
     supply: [ground-power, auxiliary, turbogenerators]
     basis: open
-    decided_by: authority
+    decided_by: KNOT-EWTW-AUX-001
     note: Which of the three supplies the packs at the stand is open input ground-supply
   - key: taxi-out
     text: Start of the turbogenerators and taxi to the runway
@@ -193,7 +193,7 @@ conops:
     sheds: []
     supply: [auxiliary, turbogenerators]
     basis: open
-    decided_by: authority
+    decided_by: KNOT-EWTW-AUX-001
 
   open_inputs:
   - key: cruise-point
@@ -203,7 +203,7 @@ conops:
   - key: ground-supply
     text: What supplies the packs at the stand. External power, the auxiliary power module and a turbogenerator are the candidates, and the technology of the module is not determined
     blocks: [stand, stand-without-supply, auxiliary]
-    decided_by: authority
+    decided_by: KNOT-EWTW-AUX-001
   - key: shed-policy
     text: What is shed on the loss of one turbogenerator, and in which order. It follows the number of turbogenerators
     blocks: [turbogenerator-lost]
@@ -219,7 +219,11 @@ conops:
   - key: ice-protection
     text: How wings and inlets are protected from ice without bleed air, and whether that load falls in the same phases as the packs
     blocks: [climb, descent]
-    decided_by: authority
+    decided_by: KNOT-EWTW-ICE-001
+  - key: cooling-cycle
+    text: Which cycle cools the air in the packs. It sets the power they draw, the ram air they take, and whether the compressors run at the stand
+    blocks: [stand, cruise, cooling]
+    decided_by: KNOT-EWTW-ECS-001
   - key: power-by-phase
     text: The electrical power of each function in each phase. This document carries none
     blocks: [stand, taxi-out, take-off, climb, cruise, descent, taxi-in]

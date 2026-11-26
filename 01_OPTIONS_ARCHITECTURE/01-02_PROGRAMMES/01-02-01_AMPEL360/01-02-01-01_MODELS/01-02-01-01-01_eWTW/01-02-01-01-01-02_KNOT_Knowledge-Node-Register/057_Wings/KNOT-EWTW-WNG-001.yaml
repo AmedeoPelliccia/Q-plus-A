@@ -25,6 +25,7 @@ knot:
   - KNOT-EWTW-AER-001
   - KNOT-EWTW-MAS-001
   - KNOT-EWTW-FUL-001
+  - KNOT-EWTW-ICE-001
   affects:
   - view: PBS
     ref: eWTW-PBS-057-000
