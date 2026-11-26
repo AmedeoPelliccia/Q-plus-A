@@ -19,8 +19,8 @@ standard_scope: governance
 | Size class | 100 passengers, kept by ruling R2 of [`KNOT-EWTW-NRG-001`][KNOT-REG] ([SBS README][SBS] §6) |
 | Propulsion posture | Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery. Batteries alone are excluded since ruling R2 of 2026-11-14, until a demonstrated pack closes the requirement mission. No hydrogen on board — liquid hydrogen is allocated to the [BWB-Q100][BWB] (architecture authority, 2026-11-07). The chain itself is open (`KNOT-EWTW-PRP-001`) |
 | Status | **DRAFT** — concept definition; every identifier `PLANNED`; not a design baseline |
-| Version | 0.3.31 |
-| Date | 2026-11-24 |
+| Version | 0.3.32 |
+| Date | 2026-11-26 |
 | Owner | Amedeo Pelliccia — GQAOA |
 | Lifecycle stage | `LC-A` Conceptual Design, per `02_LIFECYCLE_MODEL` v0.7.1 rev. I — see [§6](#6-lifecycle-baselines-and-the-path-to-first-release) |
 | Conventions | [`AMPEL360-PBS-PN-CM-001`][CM-001] Issue 2 · [`AMPEL360-SBS-ID-CM-002`][CM-002] |
@@ -382,7 +382,7 @@ python3 complete_PBS-053-200.py --root .                        # plan only, no 
 
 Every identifier, taxonomy address and link on this page was resolved against `main` at `e212e121` for revision 0.3.0.
 
-The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`. The [screening of the configurations][CFG] of `KNOT-EWTW-AER-001` is checked by `tools/configuration_screen.py`.
+The KNOT register and the architecture relations are verified with their own commands, given in the [register][KNOT-REG] and in the [relations node][REL]: `tools/knot_check.py` and `tools/relations_project.py`, each with its tests. The [essential load analysis][ELA] of `KNOT-EWTW-ESS-001` is checked by `tools/essential_loads.py`, and the [candidate missions][MSN] of `KNOT-EWTW-NRG-001` by `tools/mission_closure.py`. The [screening of the configurations][CFG] of `KNOT-EWTW-AER-001` is checked by `tools/configuration_screen.py`, and the [turbogenerator figures][TGF] of `KNOT-EWTW-GEN-001` by `tools/turbogenerator_figures.py`.
 
 ---
 
@@ -426,6 +426,7 @@ The KNOT register and the architecture relations are verified with their own com
 | 0.3.29 | 2026-11-18 | The publications of chapter `021` withdrawn from the TPuBS, at the request of the authority: 789 files of the information architecture, the module of the maintenance manual and 207 rows of the consolidated requirement list ([record][WDR-021]). Finding F24 entered. F01 restated: the illustration is withdrawn and no issue 02 is due. §1, §2 and §4 follow, and the PBS notes that named the illustration are amended (PBS README 0.2.3). The concept of operations of the environmental control system is corrected at 0.1.2 (KNOT register 0.11.20): the taxonomy does name the air supply without bleed, at `021-900-070` |
 | 0.3.30 | 2026-11-20 | Four acts asked by the authority. A section for air compression, `021-100`, added to the taxonomy; §2, §3 and §4 name it, and the concept of operations of the environmental control system binds its fresh-air function to it (0.1.3, KNOT register 0.11.21). The publications of section `003-900` withdrawn from the TPuBS ([record][WDR-003]); F24 and §1 follow. The convention on information codes that CM-001 cites drafted for ratification ([`AMPEL360-AMM-INFOCODE-CM-001`][CM-INFOCODE]); §8 lists it. The two labels of F01 that were left in the PBS neutralised (PBS README 0.2.4): F01 has nothing outstanding |
 | 0.3.31 | 2026-11-24 | Ruling R2 of the cruise point: its ten criteria approved, two with a modification, and a working reference taken as an assumption — 360 kt at 31,000 ft, five abreast, about 40 m of span in flight (KNOT register 0.11.24). The objective gates the preliminary-design baseline through the justified upper limit of the margin; the method for that limit is proposed. Path to the concept baseline and the table of §5 updated |
+| 0.3.32 | 2026-11-26 | Research on the gas turbine and the turbogenerator returned and reviewed (KNOT register 0.11.25): two published tables of power against altitude and speed, to 30,000 ft, beside the rule of the screening; no engine of 2 to 6 MW in service with a measured cruise efficiency, and no turbogenerator weighed. At the nearest tabulated point the cruise of the working reference still asks more of the gas turbines than its take-off. The figures are kept as data and checked by `tools/turbogenerator_figures.py`. No KNOT changes state |
 
 [SBS]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/
 [CM-001]: 01-02-01-01-01-01_SBS_System-Breakdown-Structure/01-02-01-01-01-01-01_PBS_Product-Breakdown-Structure/AMPEL360-PBS-PN-CM-001_Assembly-Station-and-Part-Number-Breakdown.md
@@ -462,6 +463,7 @@ The KNOT register and the architecture relations are verified with their own com
 [MSN]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
 [ELA]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
 [CFG]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/CFG-EWTW-AER-001/README.md
+[TGF]: 01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/TGF-EWTW-GEN-001/README.md
 [LCM]: ../../../../../02_LIFECYCLE_MODEL/README.md
 [CGR]: ../../../../../02_LIFECYCLE_MODEL/C-GROWTH-METHOD-SPEC.md
 [VAL]: ../../../../../tools/sbs_validate.py
