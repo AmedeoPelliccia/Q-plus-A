@@ -192,6 +192,7 @@ flowchart LR
   SRC --> STO
   SRC --> ESS
   STO --> ESS
+  SRC --> AUX
   NRG -.->|"deferred to"| STO
   SRC -.->|"deferred to"| STO
   CRZ --> PRP
@@ -203,6 +204,7 @@ flowchart LR
   STO --> FUL
   CRZ --> FUL
   FUL ---|"coupled"| GEN
+  SRC ---|"coupled: turbogenerator ground mode"| AUX
   FUS --> AER
   WNG --> AER
   AER --> CRZ

@@ -22,6 +22,7 @@ knot:
   depends_on:
   - KNOT-EWTW-ESS-001
   - KNOT-EWTW-GEN-001
+  - KNOT-EWTW-SRC-001
   closed_with: []
   unblocks: []
   affects:
@@ -82,6 +83,8 @@ knot:
     note: option D of that KNOT and option C of this one are one element at 049, which that KNOT owns; a module carried for essential power also serves the stand under option A or C of this KNOT, and essential power is decided first
   - knot: KNOT-EWTW-GEN-001
     note: the number and the rating of the turbogenerators decide whether one of them can supply the stand at an acceptable fuel flow and noise
+  - knot: KNOT-EWTW-SRC-001
+    note: option B updates the turbogenerator installation owned by this KNOT; the ground-mode choice depends on its source configuration
   - knot: KNOT-EWTW-STO-001
     note: a buffer battery, if one is carried, can start a turbogenerator and hold the stand for a short time
   - knot: KNOT-EWTW-ECS-001
