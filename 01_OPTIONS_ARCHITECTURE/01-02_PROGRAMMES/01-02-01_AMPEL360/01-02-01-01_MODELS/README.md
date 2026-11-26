@@ -10,7 +10,7 @@ standard_scope: governance
 
 | Folder | Model | On disk at this date |
 |---|---|---|
-| [`01-02-01-01-01_eWTW`](01-02-01-01-01_eWTW/README.md) | Electric Wide Tube and Wing, 100 passengers. Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery; batteries alone excluded until reopened (ruling R2) | Model README 0.3.32; SBS with eleven views; KNOT register 0.11.25 — 26 KNOTs, 79 KNUs; architecture relations 0.3.2 |
+| [`01-02-01-01-01_eWTW`](01-02-01-01-01_eWTW/README.md) | Electric Wide Tube and Wing, 100 passengers. Conventional fuel in a thermal machine that generates electricity, with or without a propulsion battery; batteries alone excluded until reopened (ruling R2) | Model README 0.3.33; SBS with eleven views; KNOT register 0.11.26 — 26 KNOTs, 79 KNUs; architecture relations 0.3.2 |
 | [`01-02-01-01-02_BWB-Q100`](01-02-01-01-02_BWB-Q100/) | Blended wing body. The model assigned liquid hydrogen | SBS scaffold. README not yet written; the node is a protected area, so writing it is an act of its author |
 | [`01-02-01-01-03_MRTT-Q300`](01-02-01-01-03_MRTT-Q300/README.md) | Medical · Relief · Tanker · Transport: a humanitarian-only wide-body relief aircraft | Concept README 0.3.0 |
 | [`01-02-01-01-04_Q10`](01-02-01-01-04_Q10/) | Q10 | README not yet written |

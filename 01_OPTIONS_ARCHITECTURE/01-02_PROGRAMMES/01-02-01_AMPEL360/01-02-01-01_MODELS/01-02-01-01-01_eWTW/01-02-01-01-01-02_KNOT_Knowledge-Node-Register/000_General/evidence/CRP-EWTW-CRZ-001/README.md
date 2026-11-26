@@ -11,6 +11,8 @@ This is a screening. It recommends no point and states no conformity with any ru
 
 *Note of 2026-11-18.* The authority has set the objective at 26 % below the new-type level, and beyond ([record](../KNOT-EWTW-CRZ-001_objective-and-premises_2026-11-18.md)). Item 7 and the section on the metric measure against the former objective, 11 % below. The [screening of the configurations](../CFG-EWTW-AER-001/README.md) gives each point its own polar and each option its own empty mass, and takes the metric at the best lift-to-drag ratio: it replaces items 2 and 7. This screening is kept as issued.
 
+*Note of 2026-11-26.* The research on the gas turbine has returned ([record](../KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md)). Two published tables give the power of turboshaft engines of 5.6 MW against altitude and speed, to 30,000 ft and 350 kt. At 25,000 and 30,000 ft they give 1 to 20 % more than the rule of item 6, when the sea-level figure is the take-off rating; a power referred to sea level has to name its rating, which the rule cannot do. At 30,000 ft and 350 kt the cruise of the working reference of 2026-11-24 still asks more turbine than its take-off. The sheet of point `P2` gives a rating and no altitude, and none was found. The tables are in the [turbogenerator figures](../TGF-EWTW-GEN-001/README.md). This screening is kept as issued.
+
 ---
 
 ## What it shows

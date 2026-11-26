@@ -109,6 +109,8 @@ A scenario stops being credible when the evidence of its line changes class, on 
 - **All nine stresses together give +21.6 %,** the worst of the 512 combinations. The fuel of the requirement mission still fits the wing there: 8,793 kg against 9,642 kg.
 - **Where it leads.** With tolerances chosen as an example (turbogenerator ±2 %, drag ±3 %, empty mass ±3 %, propulsion mass ±10 %, electrical chain −1 point, propeller −1.5 points) the index is 3.6 points. The rule then asks a central margin of −29.6 % or better: about two and a half points more than the reference has with every gain granted.
 
+*Note of 2026-11-26: the research on the lines of the turbogenerator and of the mass of the propulsion system has returned ([record](KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md)). It proposes no change of class: both lines stay in class D, and no scenario changes. It finds that the two values of the first line run from the fuel to the terminals of the generator; that no engine of 2 to 6 MW in service has a measured cruise efficiency on record; that the value for 2037 moves with the size of the unit in the one family of models read; and that the 1.45 of the third line divides a propulsion system of 2030 by an engine of today, where the same table gives 2.02 against a conventional engine of the same year. At 30,000 ft and 350 kt two published tables put the 5.6 MW of the cruise at 12.7 to 12.8 MW of take-off rating at sea level.*
+
 ### Open for the authority
 
 - The coverage of the upper limit. The second reader proposes 90 %, one-sided, as a choice of the programme.

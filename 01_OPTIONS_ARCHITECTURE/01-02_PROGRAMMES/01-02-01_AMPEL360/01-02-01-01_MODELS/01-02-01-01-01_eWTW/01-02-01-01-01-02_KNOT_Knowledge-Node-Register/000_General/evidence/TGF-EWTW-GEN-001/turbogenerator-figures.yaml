@@ -1,0 +1,199 @@
+# Generated 2026-11-26 - Claude Fable 5.2 - first issue, for KNU-EWTW-GEN-001-01 and -02
+# Figures of gas turbines and generators read at public sources, and what they give beside
+# the rule of the screening of the cruise points and the two values of the first budget.
+# The statements are those of the research record of 2026-11-26, which is read and not changed.
+# Every figure names its basis: source (read at a source, named) or assumption. A figure
+# read at a source says who read it: both (the reviewer and another reader, each on its
+# own), reviewer (the reviewer alone), or reported (not read by the reviewer). Its class
+# is the one the record proposes, A to D as the research brief defines them, or none.
+# tools/turbogenerator_figures.py checks the form and writes the tables of the README.
+analysis:
+  id: TGF-EWTW-GEN-001
+  version: '0.1.0'
+  date: 2026-11-26
+  knot: KNOT-EWTW-GEN-001
+  serves: [KNU-EWTW-GEN-001-01, KNU-EWTW-GEN-001-02]
+  record: KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+  screening: CRP-EWTW-CRZ-001
+
+  heating_value_mj_kg: {value: 43.0, low: 42.8, high: 43.2, basis: assumption, note: 'Lower heating value of kerosene, to turn a consumption into an efficiency. 42.8 is the minimum of the fuel specification; the range is a sensitivity, not the uncertainty of any engine'}
+  generator_efficiency: {value: 0.97, basis: assumption, note: 'The value the screening of the configurations takes (CFG-EWTW-AER-001). The maker of the one generator read gives 0.98 in AC and 0.97 in DC as design values (statement 25)'}
+
+  reference:
+    altitude_ft: {value: 31000, basis: assumption, note: 'Working reference of ruling R2 of KNOT-EWTW-CRZ-001, taken there as an assumption'}
+    speed_kt: {value: 360, basis: assumption, note: 'As the altitude'}
+    cruise_mw: {value: 5.6, basis: assumption, note: 'Power at the gas turbines in cruise at the working reference, at first order, as the research brief of 2026-11-24 gives it'}
+    takeoff_mw: {low: 7.9, high: 10.0, basis: assumption, note: 'Take-off power of the working reference, as the same brief gives it'}
+    candidates_ft: [25000, 31000, 35000]
+    candidates_mach: [0.50, 0.60, 0.65]
+    budget:
+    - {key: today, value: 0.350, basis: assumption, note: 'Turbogenerator efficiency of technology set T0 of CFG-EWTW-AER-001: from the fuel to the terminals of the generator'}
+    - {key: '2037', value: 0.389, basis: assumption, note: 'Technology set T1: 0.350 over 0.90, the allowance the screening takes for 2037'}
+
+  power_tables:
+  - key: nasa
+    name: NASA engine of the LCTR2 study
+    rating: Maximum continuous power for each engine, at 100 % of the power-turbine speed
+    rated_shp: 7500
+    basis: source
+    ref: 'NASA/CR-2013-216593, September 2013, table 3, page 35: NASA engine power available. Statement 10'
+    read: reviewer
+    class: C
+    note: 'The values at 0, 300 and 350 kt at sea level, 25,000 and 30,000 ft were read twice by the reviewer; the two at 250 kt and 25,000 and 30,000 ft were read by the second reader as well'
+    speeds_kt: [0, 50, 100, 150, 200, 250, 300, 350]
+    conditions:
+    - {key: 'Sea level', altitude_ft: 0, isa_k: 0, shp: [5896, 5922, 5997, 6125, 6307, 6547, 6850, 7220]}
+    - {key: '5,000 ft, ISA+20', altitude_ft: 5000, isa_k: 20, shp: [4420, 4438, 4495, 4590, 4726, 4905, 5130, 5407]}
+    - {key: '10,000 ft', altitude_ft: 10000, isa_k: 0, shp: [4743, 4763, 4824, 4926, 5071, 5263, 5504, 5800]}
+    - {key: '25,000 ft', altitude_ft: 25000, isa_k: 0, shp: [3089, 3103, 3146, 3219, 3323, 3459, 3632, 3843]}
+    - {key: '30,000 ft', altitude_ft: 30000, isa_k: 0, shp: [2605, 2618, 2657, 2723, 2817, 2942, 3100, 3294]}
+  - key: cots
+    name: Rolls-Royce engine of 2015, scaled from 8,100 to 7,500 shp
+    rating: Maximum continuous power for each engine, scaled to 7,500 shp of maximum rated power
+    rated_shp: 7500
+    basis: source
+    ref: 'NASA/CR-2013-216593, September 2013, table 4, page 35: COTS 2015 engine power available. Statement 9'
+    read: both
+    class: C
+    note: 'The nine values at 0, 300 and 350 kt at sea level, 25,000 and 30,000 ft were read by the reviewer and by the second report; the other thirty-one by the reviewer alone'
+    speeds_kt: [0, 50, 100, 150, 200, 250, 300, 350]
+    conditions:
+    - {key: 'Sea level', altitude_ft: 0, isa_k: 0, shp: [5900, 5916, 5931, 5947, 5963, 6006, 6072, 6148]}
+    - {key: '5,000 ft, ISA+20', altitude_ft: 5000, isa_k: 20, shp: [5487, 5501, 5514, 5527, 5541, 5575, 5636, 5702]}
+    - {key: '10,000 ft', altitude_ft: 10000, isa_k: 0, shp: [5296, 5311, 5326, 5341, 5356, 5405, 5469, 5546]}
+    - {key: '25,000 ft', altitude_ft: 25000, isa_k: 0, shp: [3657, 3679, 3701, 3722, 3744, 3817, 3894, 4002]}
+    - {key: '30,000 ft', altitude_ft: 30000, isa_k: 0, shp: [3005, 3023, 3041, 3059, 3078, 3143, 3208, 3303]}
+
+  second_document:
+    name: The NASA engine in a second document, sized at 6,476 hp
+    table: nasa
+    altitude_ft: 28000
+    speed_kt: 284
+    available_hp: 11070
+    engines: 4
+    rated_hp: 6476
+    basis: source
+    ref: 'NASA/TM-2013-218101, December 2013, tables 6 and 7. Statement 12'
+    read: both
+    class: C
+
+  cycle_models:
+  - key: today
+    name: NASA model of an engine like the PW127E, state of the art
+    basis: source
+    ref: 'NASA, Antcliff and others, AIAA 2016-1028, table 2. Statement 2'
+    read: both
+    class: C
+    points:
+    - {name: 'Sea level, at rest, take-off', altitude_ft: 0, mach: 0.0, load: null, shp: 2400, sfc_lb_hp_h: 0.474, air_lbm_s: 12.15}
+    - {name: '20,000 ft, Mach 0.5, full throttle', altitude_ft: 20000, mach: 0.5, load: 1.0, shp: 1696, sfc_lb_hp_h: 0.430, air_lbm_s: 7.59}
+    - {name: '20,000 ft, Mach 0.5, 90 %', altitude_ft: 20000, mach: 0.5, load: 0.9, shp: 1527, sfc_lb_hp_h: 0.432, air_lbm_s: 7.32}
+    - {name: '20,000 ft, Mach 0.5, 80 %', altitude_ft: 20000, mach: 0.5, load: 0.8, shp: 1357, sfc_lb_hp_h: 0.433, air_lbm_s: 7.01}
+  - key: advanced
+    name: The same model with the technology it takes for 2030
+    basis: source
+    ref: 'NASA, Antcliff and others, AIAA 2016-1028, tables 1 and 2. Statement 16'
+    read: both
+    class: D
+    points:
+    - {name: 'Sea level, at rest, take-off', altitude_ft: 0, mach: 0.0, load: null, shp: 2400, sfc_lb_hp_h: 0.427, air_lbm_s: 10.65}
+    - {name: '20,000 ft, Mach 0.5, full throttle', altitude_ft: 20000, mach: 0.5, load: 1.0, shp: 1604, sfc_lb_hp_h: 0.398, air_lbm_s: 6.47}
+    - {name: '20,000 ft, Mach 0.5, 90 %', altitude_ft: 20000, mach: 0.5, load: 0.9, shp: 1443, sfc_lb_hp_h: 0.394, air_lbm_s: 6.26}
+    - {name: '20,000 ft, Mach 0.5, 80 %', altitude_ft: 20000, mach: 0.5, load: 0.8, shp: 1283, sfc_lb_hp_h: 0.391, air_lbm_s: 6.01}
+
+  flight:
+    name: PW120A in airline service, one instant of a cruise
+    basis: source
+    ref: 'Specific Range Solutions, SRS-TSD-002 Rev. 1, 20 July 2009, table 3.3. Statement 3'
+    read: both
+    class: B
+    altitude_ft: 15616
+    static_temperature_c: -23.5
+    indicated_kt: 198.7
+    rated_kw: 1491
+    engines:
+    - {name: Engine 1, shaft_kw: 928.7, fuel_kg_h: 266.4}
+    - {name: Engine 2, shaft_kw: 930.4, fuel_kg_h: 281.1}
+
+  ground_test:
+    name: T56 on a test bench, four power settings
+    basis: source
+    ref: 'Balli and Hepbasli, Energy Conversion and Management 73, 2013, pages 106 to 120, tables 3 and 14. Statement 6'
+    read: reported
+    class: B
+    note: 'Read in full by the second reader, in a copy on a third-party host. The reviewer read the abstract, which gives 25.4 % at take-off, and a paper of 2020 with one of the authors, which gives the same four fuel flows and the heating value. The three lower powers, and that the points are measurements, are as the second reader reports them'
+    heating_value_mj_kg: 42.8
+    ambient_kpa: 93.6
+    ambient_k: 298.15
+    modes:
+    - {name: '75 % mode', shaft_kw: 2198.7, fuel_kg_s: 0.235}
+    - {name: '100 % mode', shaft_kw: 2996.3, fuel_kg_s: 0.294}
+    - {name: 'Military', shaft_kw: 3256.3, fuel_kg_s: 0.309}
+    - {name: 'Take-off', shaft_kw: 3442.0, fuel_kg_s: 0.317}
+
+  consumptions:
+  - {name: 'AE1107 as NASA quotes it, 6,000 hp, sea level at rest', sfc_lb_hp_h: 0.426, basis: source, ref: 'NASA/TM-2010-216089, table 1, which credits an engine yearbook of 2003. Statement 4', read: both, class: C}
+  - {name: 'GE38 class in a NASA model of 2014, scaled to 7,500 hp, sea level at rest', sfc_lb_hp_h: 0.385, basis: source, ref: 'NASA, Snyder, 2014, table 2. Statement 5', read: both, class: C}
+  - {name: 'GE38 class in a NASA model of 2019, 7,248 hp, sea level at rest', sfc_lb_hp_h: 0.394, basis: source, ref: 'NASA, Snyder and Tong, Vertical Flight Society Forum 75, 2019, table 1. Statement 5', read: both, class: C}
+  - {name: 'GE38 class in the NASA and Army model of 2023, 7,248 hp, sea level at rest', sfc_lb_hp_h: 0.3909, basis: source, ref: 'NASA and US Army, Chapman and others, Vertical Flight Society Forum 79, 2023, table 6. Statement 5', read: both, class: C}
+  - {name: 'LCTR2 engine, 6,476 hp of maximum rated power, sea level at rest', sfc_lb_hp_h: 0.345, basis: source, ref: 'NASA/TM-2013-218101, table 7. Statement 18', read: both, class: D}
+  - {name: 'LCTR2 engine, 5,105 hp of maximum continuous power, sea level at rest', sfc_lb_hp_h: 0.359, basis: source, ref: 'NASA/TM-2013-218101, table 7. Statement 18', read: both, class: D}
+  - {name: 'LCTR2 engine, cruise start, 28,000 ft and 284 kt', sfc_lb_hp_h: 0.324, basis: source, ref: 'NASA/TM-2013-218101, tables 6 and 7. Statement 18', read: both, class: D}
+  - {name: 'LCTR2 engine, cruise end, 28,000 ft and 272 kt', sfc_lb_hp_h: 0.333, basis: source, ref: 'NASA/TM-2013-218101, tables 6 and 7. Statement 18', read: both, class: D}
+  - {name: 'Engine of the technology of 2035 in a NASA study, sea level, take-off', sfc_lb_hp_h: 0.3255, basis: source, ref: 'NASA, Acree and Snyder, 2012. Its table 2 calls the figure a cruise consumption and its text gives it at take-off power at sea level. Statement 18', read: both, class: D}
+  - {name: 'First further generation in a NASA study of 2014, sea level at rest', sfc_lb_hp_h: 0.312, basis: source, ref: 'NASA, Snyder, 2014, table 2. Statement 18', read: both, class: D}
+  - {name: 'Second further generation in the same study', sfc_lb_hp_h: 0.267, basis: source, ref: 'NASA, Snyder, 2014, table 2. Statement 18', read: both, class: D}
+
+  size_models:
+  - basis: source
+    ref: 'NASA and US Army, Chapman, Vegh, Nunez and Snyder, Vertical Flight Society Forum 79, 2023, tables 4 to 6. Statement 17'
+    read: both
+    note: 'Powers and consumptions read by the reviewer and, for six rows, by the second reader; the weights by the reviewer alone. The three smallest models of the paper, 200 to 400 hp, are left out'
+    rows:
+    - {name: ts650s, technology: current, hp: 650, sfc_lb_hp_h: 0.5341, weight_lb: 242, class: C}
+    - {name: ts650a, technology: advanced, hp: 660, sfc_lb_hp_h: 0.4926, weight_lb: 231, class: D}
+    - {name: ts1300a, technology: advanced, hp: 1300, sfc_lb_hp_h: 0.4650, weight_lb: 342, class: D}
+    - {name: ts1900s, technology: current, hp: 1895, sfc_lb_hp_h: 0.4661, weight_lb: 459, class: C}
+    - {name: ts3000a1_25, technology: advanced, hp: 3000, sfc_lb_hp_h: 0.3601, weight_lb: 458, class: D}
+    - {name: ts3000a1_18, technology: advanced, hp: 3000, sfc_lb_hp_h: 0.3598, weight_lb: 460, class: D}
+    - {name: ts3000a2, technology: advanced, hp: 3000, sfc_lb_hp_h: 0.3484, weight_lb: 455, class: D}
+    - {name: ts5000s, technology: current, hp: 5000, sfc_lb_hp_h: 0.4942, weight_lb: 823, class: C}
+    - {name: ts5000a, technology: advanced, hp: 5000, sfc_lb_hp_h: 0.3358, weight_lb: 584, class: D}
+    - {name: ts7500s, technology: mid, hp: 7248, sfc_lb_hp_h: 0.3909, weight_lb: 1085, class: C}
+    - {name: ts7500a, technology: advanced, hp: 7500, sfc_lb_hp_h: 0.3293, weight_lb: 773, class: D}
+    - {name: ts11000s, technology: current, hp: 11000, sfc_lb_hp_h: 0.3481, weight_lb: 1852, class: C}
+    - {name: ts15000a, technology: advanced, hp: 15000, sfc_lb_hp_h: 0.3295, weight_lb: 1784, class: D}
+
+  part_load:
+    name: NASA engine of the LCTR2 study, power used over the maximum continuous power available
+    basis: source
+    ref: 'NASA/TM-2013-218101, tables 6 and 7. Statement 22'
+    read: both
+    class: C
+    points:
+    - {name: 'Cruise start, 28,000 ft, 284 kt', used_hp: 7620, available_hp: 11070, sfc_lb_hp_h: 0.324}
+    - {name: 'Cruise end, 28,000 ft, 272 kt', used_hp: 6710, available_hp: 10940, sfc_lb_hp_h: 0.333}
+
+  masses:
+  - {name: 'Generator of 1 MW, alone, 280 lb', kw: 1000, lb: 280, basis: source, ref: 'Honeywell, release of 31 May 2022 and brochure of June 2020. Statement 25', read: both, class: B}
+  - {name: 'The same at the 900 kW it ran continuously', kw: 900, lb: 280, basis: source, ref: 'Honeywell, release of 31 May 2022. Statement 25', read: both, class: B}
+  - {name: 'The same with its control unit and rectifier bridge, 340 lb', kw: 1000, lb: 340, basis: source, ref: 'Honeywell, brochure of June 2020: a design table. Statement 25', read: both, class: D}
+  - {name: 'Generator of 4 MW, as designed', kw: 4000, kg: 232, basis: source, ref: 'Golovanov and others, IEEE Transactions on Transportation Electrification 7(4), 2021, author manuscript. Statement 26', read: both, class: D}
+  - {name: 'The same, prototype as built, at its rated power', kw: 4000, kg: 249, basis: source, ref: 'The same manuscript: the prototype was not run at that power. Statement 26', read: both, class: C}
+  - {name: 'Active rectifier for that generator, 5 MVA, taken at 4 MW', kw: 4000, kg: 240, basis: source, ref: 'Trentin and others, IEEE Transactions on Industrial Electronics 68(12), 2021, author manuscript. Statement 27', read: reviewer, class: null}
+  - {name: 'Concept generator of 2.98 MW', kw: 2978.6, kg: 320.2, basis: source, ref: 'IMOTHEP, deliverable D3.4, version 5, June 2024, section 2.3.2. Statement 28', read: both, class: D}
+  - {name: 'Its converter of 2.93 MW', kw: 2931.7, kg: 111.8, basis: source, ref: 'The same deliverable. Statement 28', read: both, class: D}
+  - {name: 'PW150A turboprop with its reduction gearbox, dry', kw: 3781, kg: 716.9, basis: source, ref: 'EASA, type-certificate data sheet IM.E.049, Issue 01, 19 November 2014. Statement 1', read: both, class: B}
+
+  study_masses:
+    name: Hybrid turboelectric regional jet of a university study, for each wing
+    basis: source
+    ref: 'Perullo and others, AIAA, 2020, table 3. Statement 29'
+    read: both
+    class: D
+    generator_hp: 5859
+    electric_lbm: 7274
+    engine_lbm: 5450
+    total_lbm: 12724
+    baseline_lbm: 8800
+    same_year_lbm: 6300
