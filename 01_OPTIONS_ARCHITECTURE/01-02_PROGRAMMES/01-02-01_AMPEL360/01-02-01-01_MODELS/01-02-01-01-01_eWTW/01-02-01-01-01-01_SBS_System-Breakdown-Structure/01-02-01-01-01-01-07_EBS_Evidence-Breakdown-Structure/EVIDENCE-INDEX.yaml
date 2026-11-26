@@ -200,6 +200,34 @@ rows:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
 
   - class: analysis-or-test-record
+    subject: KNOT-EWTW-GEN-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+    status: on-disk
+    note: >
+      Research record: gas turbine and turbogenerator - efficiency, power against altitude
+      and mass - as accepted on review from three reports of 2026-11-26 and a second reading
+      of one of them, relayed by the author. Thirty-six statements, thirty-one of them read
+      by two readers; eight more as reported; ten report that a search found nothing. It
+      holds two published tables of power against altitude and speed, to 30,000 ft. The
+      classes of evidence are proposed, and the reviewer is the producer of one report.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-GEN-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/TGF-EWTW-GEN-001/README.md
+    status: on-disk
+    note: >
+      Turbogenerator figures 0.1.0: the figures that the research record of 2026-11-26
+      accepted, kept as data, with their arithmetic - two published tables of power beside
+      the rule of the screening of the cruise points, consumptions turned into efficiency,
+      part-load points and masses. Input in turbogenerator-figures.yaml beside it; written
+      and checked by tools/turbogenerator_figures.py. It sizes nothing and states no
+      conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-GEN-001.yaml
+
+  - class: analysis-or-test-record
     subject: KNOT-EWTW-CRT-001
     path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md
     status: on-disk

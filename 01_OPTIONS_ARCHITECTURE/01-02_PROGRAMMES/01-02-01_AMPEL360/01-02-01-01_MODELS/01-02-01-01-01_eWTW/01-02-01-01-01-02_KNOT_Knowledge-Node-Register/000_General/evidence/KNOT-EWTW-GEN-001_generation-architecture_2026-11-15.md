@@ -61,7 +61,7 @@ Six statements say that a search found nothing. They are findings of the search,
 | 14 | No turbogenerator of the megawatt class that has flown as the propulsive source of an aeroplane of 70 to 100 seats |
 | 15 | No weighed mass and no measured volume for the generator of statement 5, and no mass of a turbine together with its generator for any unit above |
 | 16 | No concept of 70 to 100 seats that publishes the number of its units together with the power to be left after the loss of one. No source says that the loss of one unit must leave the take-off power, nor that it may leave only the cruise power |
-| 17 | No published fall of power with altitude for a turbogenerator, and no concept that publishes the altitude at which its units are sized |
+| 17 | No published fall of power with altitude for a turbogenerator, and no concept that publishes the altitude at which its units are sized. *Note of 2026-11-26: two tables of power against altitude and speed were then read for turboshaft engines of 5.6 MW, to 30,000 ft, and one study of 86 seats sizes its engines at the top of climb ([record of 2026-11-26](KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md), statements 9, 10 and 35). Neither table is for a turbogenerator* |
 | 18 | No published inlet, exhaust, fire zone or rotor-burst geometry for a turbogenerator installation of several megawatts on an aeroplane of 100 seats, in a fuselage bay or in a wing pod, and none shown against the rules of statements 11 and 12 |
 | 19 | No weights for the criteria of a generation architecture that an authority has approved |
 
@@ -100,10 +100,10 @@ The [record of the sources](KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md)
 
 Research can still give:
 
-- the power of a turboshaft or of an auxiliary power unit of the megawatt class against altitude and speed, from a type-certificate data sheet, an installation manual or a chart of the maker, to replace the rule of the screening;
-- the altitude and speed at which the maximum cruise power of the Dash 8-400 is delivered, which the check of the screening on its published point takes at the cruise point;
-- the mass of a turbine together with its generator, for the units of statements 2, 4 and 5;
-- the redundancy strategy and the number of units of the study of statement 8, in the full paper;
+- the power of a turboshaft or of an auxiliary power unit of the megawatt class against altitude and speed, from a type-certificate data sheet, an installation manual or a chart of the maker, to replace the rule of the screening. *Note of 2026-11-26: two such tables were read in a NASA contractor report, to 30,000 ft; none comes from a data sheet or from a chart of a maker ([record of 2026-11-26](KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md)).*
+- the altitude and speed at which the maximum cruise power of the Dash 8-400 is delivered, which the check of the screening on its published point takes at the cruise point. *Note of 2026-11-26: looked for again, and not found.*
+- the mass of a turbine together with its generator, for the units of statements 2, 4 and 5. *Note of 2026-11-26: not found. The auxiliary power unit of statement 2 weighs 762 lb by its maker, with no weight given for the two together.*
+- the redundancy strategy and the number of units of the study of statement 8, in the full paper. *Note of 2026-11-26: the paper was read. It has two turbogenerators at the wing tips and eight electric fans, and its text describes no failure case.*
 - CS 25.903 and AMC 20-128A at the amendment in force, read at the source.
 
 The rest is work of the programme and decisions of the authority:
