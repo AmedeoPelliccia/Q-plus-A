@@ -110,11 +110,13 @@ knot:
     exit: 'Figures and precedents, each with its source and with whether it is measured, published or estimated'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-26'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
   - knu_id: KNU-EWTW-AUX-001-02
     title: Power at the stand and at the start
     knu_class: ANALYSIS_PACKAGE
@@ -131,11 +133,13 @@ knot:
     exit: 'A table of power by case of the stand and of energy by start, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-26'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
   - knu_id: KNU-EWTW-AUX-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -153,8 +157,10 @@ knot:
     exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-26'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md

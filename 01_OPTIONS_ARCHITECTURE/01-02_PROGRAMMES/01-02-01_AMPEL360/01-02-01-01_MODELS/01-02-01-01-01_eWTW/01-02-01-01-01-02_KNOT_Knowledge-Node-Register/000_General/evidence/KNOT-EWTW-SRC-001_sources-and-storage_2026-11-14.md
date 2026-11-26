@@ -106,9 +106,9 @@ These are consequences drawn by the reviewer. They are not quotations.
 
 Research can still give:
 
-- the article on the 787 and the standard AIR6127, read at the source;
+- the article on the 787 and the standard AIR6127, read at the source. *Note of 2026-11-26: the research on the stand did not read the article at the source either; it has it as a forum quotes it. The 450 kVA of the auxiliary unit were read at its maker, and the three ground receptacles of 90 kVA in the airport planning document ([record of 2026-11-26](KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md), statements 9, 12 and 39).*
 - the figures of statement 2, and whether its method can be run for an aircraft of 100 passengers;
-- the report of the investigation behind statement 12, with the special condition in full;
+- the report of the investigation behind statement 12, with the special condition in full. *Note of 2026-11-26: the incident report was read for the research on the stand, in its parts on the battery and on the event, with a factual report of its docket on the tests; the figures of statement 12 were not checked in it ([record of 2026-11-26](KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md), statements 16, 17 and 37). The special conditions were read on 2026-11-15 ([record of the certification basis](KNOT-EWTW-CRT-001_certification-basis_2026-11-15.md), statement 14).*
 - sized electric environmental control systems for aircraft of 70 to 100 seats, with their cruise and cabin altitudes.
 
 The rest is work of the programme and decisions of the authority:

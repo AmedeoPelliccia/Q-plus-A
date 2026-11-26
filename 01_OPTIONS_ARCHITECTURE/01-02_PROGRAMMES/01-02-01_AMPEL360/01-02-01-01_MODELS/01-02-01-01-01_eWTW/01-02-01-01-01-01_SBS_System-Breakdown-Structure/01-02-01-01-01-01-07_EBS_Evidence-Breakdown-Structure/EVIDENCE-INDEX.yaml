@@ -494,6 +494,20 @@ rows:
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-SRC-001.yaml
 
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AUX-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    status: on-disk
+    note: >
+      Research record: supply at the stand, start of a gas turbine and auxiliary units, as
+      accepted on review from two reports of 2026-11-26, an assessment of both and a second
+      reading of one of them, relayed by the author. Thirty-seven statements, three of them
+      read by two readers; twelve more as reported; twelve report that a search found
+      nothing. It holds seven criteria that follow from certification and from rules,
+      proposed. The reviewer is the producer of one report.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AUX-001.yaml
+
   - class: migration-or-completion-record
     subject: F24
     path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md
