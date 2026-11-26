@@ -37,7 +37,7 @@ knot:
     note: External power and conditioned air at the stand
   options:
   - id: A
-    text: 'no auxiliary power module: external electrical power at the stand, conditioned air from the ground where the airport gives it, and the first turbogenerator started from the ground supply or from a battery'
+    text: 'no auxiliary power module carried for the stand: external electrical power at the stand, conditioned air from the ground where the airport gives it, and the first turbogenerator started from the ground supply or from a battery; a module carried for essential power under option D of KNOT-EWTW-ESS-001 also serves the stand'
     state: open
     pbs_footprint: []
   - id: B
@@ -79,7 +79,7 @@ knot:
       ref: AMPEL360-KNOT-CM-004 rule 18
   couplings:
   - knot: KNOT-EWTW-ESS-001
-    note: option D of that KNOT and option C of this one are one element at 049, which that KNOT owns; a module carried for essential power also serves the stand, and essential power is decided first
+    note: option D of that KNOT and option C of this one are one element at 049, which that KNOT owns; a module carried for essential power also serves the stand under option A or C of this KNOT, and essential power is decided first
   - knot: KNOT-EWTW-GEN-001
     note: the number and the rating of the turbogenerators decide whether one of them can supply the stand at an acceptable fuel flow and noise
   - knot: KNOT-EWTW-STO-001
