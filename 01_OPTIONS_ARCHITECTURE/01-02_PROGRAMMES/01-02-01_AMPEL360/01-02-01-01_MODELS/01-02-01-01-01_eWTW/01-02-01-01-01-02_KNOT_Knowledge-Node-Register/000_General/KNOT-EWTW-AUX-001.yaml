@@ -51,7 +51,7 @@ knot:
       key: turbogenerator-installation
       owner: KNOT-EWTW-SRC-001
   - id: C
-    text: 'an auxiliary power module, detached from the propulsion architecture, supplies the stand and starts the turbogenerators; its technology is part of the choice'
+    text: 'an auxiliary power module, detached from the propulsion architecture, supplies the stand and starts the turbogenerators; its technology is part of the choice, only when KNOT-EWTW-ESS-001 selects option D and incompatible with its options A, B, C and E'
     state: open
     pbs_footprint:
     - action: update
