@@ -3,7 +3,7 @@ knot:
   knot_id: KNOT-EWTW-AUX-001
   title: Auxiliary power and supply at the stand
   kind: decision-anchor
-  taxonomy: ['012', '021', '024', '049']
+  taxonomy: ['012', '021', '024', '049', '068']
   raised_at: null
   question: 'What supplies the aircraft at the stand and starts its turbogenerators: the ground alone, a turbogenerator, or an auxiliary power module — and, if a module is carried, of which technology?'
   context: >-
