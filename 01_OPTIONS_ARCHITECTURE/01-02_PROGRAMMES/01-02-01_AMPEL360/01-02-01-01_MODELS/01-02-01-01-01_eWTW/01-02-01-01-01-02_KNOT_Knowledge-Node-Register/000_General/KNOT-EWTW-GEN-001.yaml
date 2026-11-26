@@ -76,6 +76,22 @@ knot:
   criteria: []
   maturity_required: []
   assumptions:
+  - text: 'two published tables give the maximum continuous power of turboshaft engines of 5.6 MW against altitude and speed, to 30,000 ft and 350 kt; there the 5.6 MW of the working reference ask 12.7 to 12.8 MW of maximum rated power at sea level, or 10.0 MW of maximum continuous power at rest, against 13.7 MW by the rule of the screening; nothing is tabulated at 31,000 or 35,000 ft, and neither table is a measurement'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+  - text: 'no engine of 2 to 6 MW in service has a measured cruise efficiency on record, and no source read gives an efficiency from the fuel to the terminals of a generator; the values of the screening, 0.350 today and 0.389 for 2037, stay assumptions'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+  - text: 'in the one family of engine models read, the efficiency at one level of technology rises with the size of the unit, from 0.30 on the shaft at 1 MW to 0.42 at 5.6 MW; options A and B would not carry the same turbogenerator efficiency'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+  - text: 'no turbogenerator of 1 MW or more has a weighed mass on record, and none has run in an altitude cell or flown as a gas turbine that only drives generators'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
   - text: 'at the best lift-to-drag ratio of the statistic, the turboprop certified by EASA turns 0.263 of the energy of its fuel into thrust work; the nominal chain of the screenings turns 0.268, so its thermal machine is assumed better than the engine of that type by what the electrical chain loses'
     ref:
       view: EBS
@@ -132,6 +148,10 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/TGF-EWTW-GEN-001/README.md
   - knu_id: KNU-EWTW-GEN-001-02
     title: Generation sizing by failure case
     knu_class: ANALYSIS_PACKAGE
@@ -151,6 +171,10 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/CRP-EWTW-CRZ-001/README.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/TGF-EWTW-GEN-001/README.md
   - knu_id: KNU-EWTW-GEN-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -175,3 +199,5 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-GEN-001_generation-architecture_2026-11-15.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-GEN-001_turbogenerator-efficiency-and-altitude_2026-11-26.md
