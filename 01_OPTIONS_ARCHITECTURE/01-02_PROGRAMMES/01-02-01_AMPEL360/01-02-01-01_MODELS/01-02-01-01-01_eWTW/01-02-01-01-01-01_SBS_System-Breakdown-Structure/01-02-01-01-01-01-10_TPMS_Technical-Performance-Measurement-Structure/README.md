@@ -26,10 +26,15 @@ A product measure references the PBS **by its derived id**: the CSN segment reso
 
 The workstream opens when the first measure is levied with a planned value and an owner — the natural first candidate is a mass-properties measure on chapter 053, whose stations already exist to carry it. Until then no measure, target or margin is authored here: an invented target value would be fabricated depth.
 
+## Layout
+
+One root folder, `eWTW-TPMS-000_Aircraft-Measures`, as the PBS has `eWTW-PBS-000_Aircraft-Product`. The measures of one product node — the aircraft, a system, a station — are one file in that folder, named after the node: `EWTW-000` for the aircraft, the PBS-local code for a group or a chapter, the CSN for a station. The PBS is mirrored in the file names, not in folders. A product measure keeps its derived id. A set is opened when its first record exists: no empty set mirrors the PBS ([CM-002](../AMPEL360-SBS-ID-CM-002_Cross-Structure-Identification.md), clarification C2.1).
+
 ## Status
 
 **PILOT — first product measures recorded.** Each measure is read from committed evidence with the sha256 of its source; the geometry of record and its verification report are named per station. Targets are null except where the authority levied one.
 
-**Station files.** One file per station, beside this README:
+**Sets**, in [`eWTW-TPMS-000_Aircraft-Measures`](eWTW-TPMS-000_Aircraft-Measures/README.md):
 
-- [`TPM_EWTW-533001.yaml`](TPM_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: `TPM-533001-MASS`, `-PARTS` and `-INTERF` (current 1, target 0 — the geometry of record fails its own interference check).
+- [`TPM-CANDIDATES_EWTW-000.yaml`](eWTW-TPMS-000_Aircraft-Measures/TPM-CANDIDATES_EWTW-000.yaml) — the aircraft, `eWTW-PBS-000`: four candidates read from the mission screening and the essential load analysis of 2026-11-14, each a first-order estimate with its band. No measure is levied; the id of a measure of the whole aircraft is open, because the product root has no CSN.
+- [`TPM_EWTW-533001.yaml`](eWTW-TPMS-000_Aircraft-Measures/TPM_EWTW-533001.yaml) — rear-fuselage zone, `eWTW-PBS-053-300-010`: `TPM-533001-MASS`, `-PARTS` and `-INTERF` (current 1, target 0 — the geometry of record fails its own interference check).

@@ -45,13 +45,13 @@ allocation:
         file: 01-02-01-01-01-01-04_CBS_Cost-Breakdown-Structure/COST-OBJECTS_EWTW-533001.yaml
         content: "15 cost objects classified by part.yaml role, plus a gap row for the butt straps; no figures"
       - view: RBS
-        file: 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/RISKS_EWTW-533001.yaml
+        file: 01-02-01-01-01-01-05_RBS_Risk-Breakdown-Structure/eWTW-RBS-000_Aircraft-Risks/RISKS_EWTW-533001.yaml
         content: "R-533001-01..06; likelihood, severity and owner null"
       - view: TPMS
-        file: 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/TPM_EWTW-533001.yaml
+        file: 01-02-01-01-01-01-10_TPMS_Technical-Performance-Measurement-Structure/eWTW-TPMS-000_Aircraft-Measures/TPM_EWTW-533001.yaml
         content: "TPM-533001-MASS, -PARTS, -INTERF read from the verification report of the geometry of record"
       - view: ReqBS
-        file: 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/REQUIREMENT-CANDIDATES_EWTW-533001.yaml
+        file: 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/eWTW-ReqBS-000_Aircraft-Requirements/REQUIREMENT-CANDIDATES_EWTW-533001.yaml
         content: "five candidates, no id and no wording"
       - view: EBS
         file: 01-02-01-01-01-01-07_EBS_Evidence-Breakdown-Structure/EVIDENCE-INDEX.yaml

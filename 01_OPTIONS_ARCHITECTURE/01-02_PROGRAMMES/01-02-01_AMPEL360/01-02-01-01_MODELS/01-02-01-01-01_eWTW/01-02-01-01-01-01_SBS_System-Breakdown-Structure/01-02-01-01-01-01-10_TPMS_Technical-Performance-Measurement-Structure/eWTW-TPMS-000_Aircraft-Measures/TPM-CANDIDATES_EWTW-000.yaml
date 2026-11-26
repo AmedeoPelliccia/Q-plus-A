@@ -1,0 +1,81 @@
+# Generated 2026-11-14 - Claude Fable 5.2 - aircraft-level candidates after ruling R2 of KNOT-EWTW-NRG-001
+# TPMS candidates of the aircraft, eWTW-PBS-000 - one file per product node (CM-002,
+# clarification C2.1). These are CANDIDATES: no measure is levied, no id is assigned and
+# no target is written. Every current value is read from an analysis on disk and carries
+# the sha256 of the input it was computed on; the analyses are first-order screenings and
+# say so. A value is given as a band where the analysis gives one.
+# Paths are relative to the SBS root.
+
+aircraft_tpm_candidates:
+  id: eWTW-TPMS-CANDIDATES-000
+  convention: AMPEL360-SBS-ID-CM-002 (Issue 1)
+  node: eWTW-PBS-000
+  status: CANDIDATE - none levied
+  id_note: "CM-002 derives the id of a product measure from the CSN of its scope, and CM-001 derives no CSN for the product root. Whether a measure of the whole aircraft is TPM-<CSN>-<MEASURE> on the root or TPM-PROG-<MEASURE> is for the authority"
+  sources:
+    mission_screening:
+      analysis: MSN-EWTW-NRG-001 0.3.0
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/missions.yaml
+      sha256: ad09aeb0a667679ecb16379ccd402c32bbe0b9a30c066b8f6bee2ec1a0b19d71
+      results:
+        file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/MSN-EWTW-NRG-001/README.md
+        sha256: da0f231d8f4ee0d3b6ef3e6cfc6269062bf8db2bd759a1c162c3e67e0b7a3d0a
+    essential_loads:
+      analysis: ELA-EWTW-ESS-001 0.1.0
+      file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/essential-loads.yaml
+      sha256: dd4325d2bde8bb818d46adc7ebbe6bfe73c0b3f7b45604d71a53ba63a0d0aad2
+      results:
+        file: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/ELA-EWTW-ESS-001/README.md
+        sha256: ca73090d71c09b2bb818b65c0f133f0678a0a486a768d8eaec85021e5f0cd401
+
+measures:
+  - id: null
+    subject: eWTW-PBS-000
+    quantity: take-off mass on the requirement mission L (2,000 km, 100 passengers, declared reserves), option B of KNOT-EWTW-NRG-001
+    unit: t
+    current_value: {favourable: 35.3, nominal: 44.1, unfavourable: null}
+    current_note: "at unfavourable values the mission does not close: the mass exceeds the limit of the screening"
+    limit_in_screening: 51.8
+    limit_note: "take-off limit of the reference type; the screening calls a mission closed within it. It is not a target of the eWTW"
+    target: null
+    threshold: null
+    basis: "mission_screening, table of option B"
+    related:
+      candidate: "requirement mission"
+      file: 01-02-01-01-01-01-09_ReqBS_Requirements-Breakdown-Structure/eWTW-ReqBS-000_Aircraft-Requirements/REQUIREMENT-CANDIDATES_EWTW-000.yaml
+    status: estimate - first-order screening
+
+  - id: null
+    subject: eWTW-PBS-000
+    quantity: fuel loaded for the scoring mission M (about 1,100 km), with reserves, option B
+    unit: kg
+    current_value: {nominal: 4535}
+    target: null
+    threshold: null
+    basis: "mission_screening, table of option B; nominal values only"
+    status: estimate - first-order screening
+
+  - id: null
+    subject: eWTW-PBS-000
+    quantity: take-off power on the requirement mission L, option B
+    unit: MW
+    current_value: {nominal: 8.8}
+    units_at_sizes_on_record: {motors_of_750_kW: 12, turbogenerators_of_1000_kW: 9}
+    units_note: "a count, not an architecture: all the take-off power from the turbogenerators, at the unit sizes of the research record"
+    target: null
+    threshold: null
+    basis: "mission_screening, table of option B; nominal values only"
+    status: estimate - first-order screening
+
+  - id: null
+    subject: eWTW-PBS-000
+    quantity: essential electrical load at the source
+    unit: kW
+    current_value:
+      continuous: {low: 2.07, nominal: 4.66, high: 11.37}
+      peak: {low: 3.74, nominal: 9.10, high: 22.48}
+    current_note: "base case of the load analysis; the turbogenerator case adds 500 W of loads and belongs to the base once every standing option keeps a turbogenerator - not yet applied in the analysis"
+    target: null
+    threshold: null
+    basis: "essential_loads, budget table; 23 loads, 35 of 37 figures are assumptions"
+    status: estimate - first-order budget
