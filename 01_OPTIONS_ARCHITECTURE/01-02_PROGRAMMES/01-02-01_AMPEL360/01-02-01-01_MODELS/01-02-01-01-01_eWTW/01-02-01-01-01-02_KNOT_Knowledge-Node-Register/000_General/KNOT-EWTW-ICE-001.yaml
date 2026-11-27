@@ -64,7 +64,84 @@ knot:
       taxonomy: '030'
       element: 'airframe ice protection: boots, their air supply and their valves'
       key: airframe-ice-protection
-  criteria: []
+  criteria:
+  - id: M1
+    class: mandatory
+    text: Where certification for flight in icing is sought, the aeroplane operates safely in the continuous maximum and intermittent maximum icing conditions of Appendix C, shown by analysis and by tests that include flight in measured natural icing
+    source: EASA CS 25.1419, read on 2026-11-27 (research record of 2026-11-27, statement 46). The upper altitudes of the envelopes are in charts that the reviewer could not read (statement 53)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M2
+    class: mandatory
+    text: 'A surface left unprotected is shown harmless with data: handling, performance, systems, probes and the path of shed ice. This holds for a strut, a hinge, a folding tip, a fin and any part of the span left out'
+    source: 'EASA AMC 25.1419, read in part on 2026-11-27: no exemption by class of surface was found (research record of 2026-11-27, statement 47). The one tunnel test read of a braced wing with ice is a precedent and is not that showing (statement 60)'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M3
+    class: mandatory
+    text: The ice between cycles, residual ice, the ice before activation and the ice from runback are in the shapes used for performance and handling
+    source: EASA AMC 25.1419 and AMC 25.21(g), Appendix 1, A1.2, read in part on 2026-11-27 (research record of 2026-11-27, statements 47 and 54). Holding ice is there the ice of a hold of 45 minutes
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M4
+    class: mandatory
+    text: 'One of the three means that CS 25.1419 gives to detect ice and to activate the airframe ice protection; after the first activation, continuous operation, automatic cycling, or an alert each time a cycle is needed'
+    source: EASA CS 25.1419(e) and (g), read on 2026-11-27 (research record of 2026-11-27, statement 46)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M5
+    class: mandatory
+    text: 'A caution tells the crew when the ice protection is not working normally, and an alert on failure is not waived on probability; a failure of a primary ice detection system that is not announced is taken as catastrophic unless shown otherwise'
+    source: 'EASA CS 25.1419(c) for the caution; AMC 25.1419 for the alert and for the classification, read in part on 2026-11-27 (research record of 2026-11-27, statements 46 and 48). The two are kept apart, as a second reader asks'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M6
+    class: mandatory
+    text: 'Where certification for flight in icing is sought, one of the three paths of CS 25.1420 is agreed with the authority: to detect the large-drop conditions of Appendix O and leave all icing safely; to operate safely in a chosen portion of them, detect what exceeds it and leave; or to operate safely throughout them. The detection and activation of CS 25.1419 apply on every path'
+    source: 'EASA CS 25.1420(a), read in part on 2026-11-27 (research record of 2026-11-27, statements 49 and 50). In Europe the paragraph applies to every applicant; the US rule applies below 60,000 lb or with reversible flight controls. Which path is taken is a decision of KNOT-EWTW-CRT-001: until then no means to detect large drops is common to the options. Rewritten from the first report, which had detection and exit on all three paths'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M7
+    class: mandatory
+    text: Each electrical source has a load analysis that covers the ice protection and the essential loads, and failures follow CS 25.1309
+    source: 'EASA AMC 25.1419, read in part on 2026-11-27, and CS 25.1309 (research record of 2026-11-27, statement 48). No text on load shedding was found in it. For boots a second reader asks that their controls and any compressor be in the analysis and that the air bled for them be carried apart: a derivation, and no text of the rule'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M8
+    class: mandatory
+    text: The turbine engines and their inlets operate through their flight range of power in the conditions of Appendices C, O and P and in falling and blowing snow, and idle for 30 minutes on the ground and then accelerate to take-off power, whether or not the aeroplane is certified for flight in icing
+    source: 'EASA CS 25.1093(b) and its AMC, read on 2026-11-27 (research record of 2026-11-27, statement 57). Nothing in it is specific to a turbogenerator that drives no propeller: the showing is with KNOT-EWTW-GEN-001'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M9
+    class: mandatory
+    text: Shed ice does no unacceptable damage to engines, propellers or structure
+    source: EASA AMC 25.1419 and CS 25.1093(b), read on 2026-11-27 (research record of 2026-11-27, statements 47 and 57). The paragraph on propellers, CS 25.929, was not read by the reviewer (statement 76)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M10
+    class: mandatory
+    text: 'For pneumatic boots: the rise and the maximum of the pressure are shown over the range of altitude; any limit of speed or of temperature on activation is in the flight manual; and the aeroplane is checked for vibration up to the demonstrated flight diving speed, with the boots working and not working'
+    source: EASA AMC 25.1419 and AMC 25.21(g), paragraph 6.20.3, read in part on 2026-11-27 (research record of 2026-11-27, statement 40). The check gives no speed at which a boot sheds, and no certified limit of speed or of leading-edge radius for boots was found (finding 86)
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M11
+    class: mandatory
+    text: 'For the loss of the normally supplied ice protection, the loss of normal electrical generation included: each surface affected, the protection and the thrust that remain, the annunciation, the procedure and the ice assumed are identified, and continued safe flight and landing is shown, with the exit trajectory where an exit is credited. On a part whose protection has failed the ice is that of an unprotected part, or one half of it where the failure is announced and the procedure asks to leave icing as soon as possible, unless the agency agrees another amount'
+    source: 'EASA AMC 25.21(g), Appendix 1, A1.3, read in part on 2026-11-27, and CS 25.1309 (research record of 2026-11-27, statement 55). The half is a factor on ice and is no time, no power and no endurance; the text is one means of compliance. The first sentence is worded by the reviewer and by a second reader and is no quotation of a rule. It bears on assumption A6 of ELA-EWTW-ESS-001'
+    weight: null
+    threshold: null
+    state: PROPOSED
   maturity_required: []
   assumptions:
   - text: 'the model declares a bleedless environmental control system and leaves the technology of ice protection open: a bleedless ECS is not an aircraft without bleed'
@@ -75,10 +152,10 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/ELA-EWTW-ESS-001/README.md
-  - text: 'on the one transport in service without bleed air for the cabin, wing ice protection is electrical and bleed air stays for cowl ice protection, as reported from a maker publication that could not be opened'
+  - text: 'on the one transport in service without bleed air for the cabin, wing ice protection is electrical and the engine inlets are anti-iced with ducted hot air: the wing by the trade press, by a NASA paper and by a university estimate; the inlets by a directive of the FAA of 2024, which does not say where that air comes from. The research record of 2026-11-27 has them in statements 1, 3 and 4; that the air is engine bleed air stays as reported from a maker publication'
     ref:
       view: EBS
-      ref: 000_General/evidence/KNOT-EWTW-SRC-001_sources-and-storage_2026-11-14.md
+      ref: 000_General/evidence/KNOT-EWTW-ICE-001_ice-protection-without-bleed-air_2026-11-27.md
   - text: 'the working reference of ruling R2 of KNOT-EWTW-CRZ-001 is a wing of about 40 m of span in flight at 360 kt and 31,000 ft, with the brace and folding tips open'
     ref:
       view: EBS
@@ -113,11 +190,13 @@ knot:
     exit: 'Figures, precedents and rule texts, each with its source and with whether it is measured, published or estimated'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-27'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ICE-001_ice-protection-without-bleed-air_2026-11-27.md
   - knu_id: KNU-EWTW-ICE-001-02
     title: Protected surfaces and load by phase
     knu_class: ANALYSIS_PACKAGE
@@ -134,11 +213,13 @@ knot:
     exit: 'A table of protected surfaces and of power by phase for each option, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-27'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ICE-001_ice-protection-without-bleed-air_2026-11-27.md
   - knu_id: KNU-EWTW-ICE-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -156,8 +237,10 @@ knot:
     exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-27'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ICE-001_ice-protection-without-bleed-air_2026-11-27.md
