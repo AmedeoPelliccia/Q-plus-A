@@ -509,6 +509,21 @@ rows:
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AUX-001.yaml
 
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-AUX-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
+    status: on-disk
+    note: >
+      Second research record on the same brief, of 2026-11-27: what the review accepted from
+      a third report, relayed by the author as the research of ChatGPT, and from the
+      reviewer's reading of its sources. Thirty-one statements, twenty-one of them read by
+      two readers; twelve more as reported. It corrects the record of 2026-11-26 in nine
+      places, narrows six of its findings of absence and closes one for one type. It holds
+      no criterion and no load of the eWTW. The reviewer is the producer of the record it
+      corrects.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AUX-001.yaml
+
   - class: migration-or-completion-record
     subject: F24
     path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md

@@ -166,6 +166,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
   - knu_id: KNU-EWTW-AUX-001-02
     title: Power at the stand and at the start
     knu_class: ANALYSIS_PACKAGE
@@ -189,6 +191,8 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
   - knu_id: KNU-EWTW-AUX-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -213,3 +217,5 @@ knot:
     evidence_refs:
     - view: EBS
       ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
