@@ -59,7 +59,56 @@ knot:
       element: 'auxiliary power module: its technology, its rating for the stand and the start'
       key: auxiliary-power-module
       owner: KNOT-EWTW-ESS-001
-  criteria: []
+  criteria:
+  - id: M1
+    class: mandatory
+    text: 'A module whose function is needed for the dispatch of the aeroplane or for continued safe flight is treated as an essential auxiliary power unit: Category 1, with a demonstrated envelope of altitude and airspeed for starting in flight, cold soak included'
+    source: 'EASA CS 25J901(b) and CS 25J903; CS-APU. They speak of an auxiliary power unit: no text read says what stands in their place for a module of another technology'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M2
+    class: mandatory
+    text: 'A turbogenerator can be restarted in flight within an established envelope of altitude and airspeed; where windmilling does not give the electrical power for ignition, a source independent of the engine-driven generating system gives it'
+    source: '14 CFR 25.903(e); the text of CS 25.903(e) is still to be read; its reach to a turbogenerator is not settled'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M3
+    class: mandatory
+    text: The limits of speed, attitude and altitude of an auxiliary module used as an alternate source are established and shown
+    source: 'EASA AMC 25.1351(d), as the record of 2026-11-13 has it in statement 7: as reported, and not read at the source'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M4
+    class: mandatory
+    text: A lithium battery that starts a turbogenerator or an auxiliary module is installed under the conditions the authority sets for such batteries, and the failure of one cell is contained
+    source: 'FAA special conditions 25-359-SC and NTSB/AIR-14/01, as the precedent; not a quotation of a rule'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M5
+    class: mandatory
+    text: The supply of the stand does not depend on refuelling with a machine running, unless procedures for it are approved by the authority
+    source: 'CAT.OP.MPA.200, read in its UK text, which names an engine; the text of the Union is still to be read, and no text read says whether it reaches an auxiliary module or a turbogenerator in a ground mode'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M6
+    class: mandatory
+    text: The supply of the stand meets the limits on running time and on noise that the airports of the network publish
+    source: 'AIP entries, as at Schiphol; ICAO Doc 9889; ICAO Annex 16, Volume I, Attachment C, whose levels are still to be read. They speak of auxiliary power units: no text read says whether they reach a turbogenerator in a ground mode'
+    weight: null
+    threshold: null
+    state: PROPOSED
+  - id: M7
+    class: mandatory
+    text: No person at the stand is exposed to the intake, the exhaust or a rotating part of a running machine, and a running machine is attended from the flight deck
+    source: 'derived from the limits of hotel mode as AAIB-28713 gives them; a precedent, not a quotation of a rule'
+    weight: null
+    threshold: null
+    state: PROPOSED
   maturity_required: []
   assumptions:
   - text: 'the model declares tailcone mounts and a firewall for an auxiliary power module (053-400-020 and -030), sizes the ground services against the demand of the packs, and does not determine the technology of the module'
@@ -110,11 +159,15 @@ knot:
     exit: 'Figures and precedents, each with its source and with whether it is measured, published or estimated'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-26'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
   - knu_id: KNU-EWTW-AUX-001-02
     title: Power at the stand and at the start
     knu_class: ANALYSIS_PACKAGE
@@ -131,11 +184,15 @@ knot:
     exit: 'A table of power by case of the stand and of energy by start, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-26'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
   - knu_id: KNU-EWTW-AUX-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -153,8 +210,12 @@ knot:
     exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-26'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-26.md
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-AUX-001_stand-supply-start-and-auxiliary-units_2026-11-27.md
