@@ -128,3 +128,5 @@ The rest is work of the programme and decisions of the authority:
 - the positions to seek, each with the nearest text in force (`KNU-EWTW-CRT-001-02`);
 - the failure case of the screening, as an assumption until a position exists (`KNU-EWTW-GEN-001-02`);
 - the choice between the two approaches of statement 13, and with it the side of each product of the PBS groups `060` and `070`.
+
+*Note of 2026-11-27.* The research on ice protection adds one choice to this KNOT: the path under CS 25.1420(a) for the large-drop conditions of Appendix O. Of its three paths the first two ask a means to detect those conditions and an exit from all icing, and the third asks safe operation throughout them and neither ([record of 2026-11-27](KNOT-EWTW-ICE-001_ice-protection-without-bleed-air_2026-11-27.md), statement 49). In Europe the paragraph applies to every applicant who seeks certification for flight in icing (its statement 50). Criterion `M6` of `KNOT-EWTW-ICE-001` waits for that choice, and until it is taken no means to detect large drops is common to the options of that KNOT. This document is kept as issued.
