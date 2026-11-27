@@ -524,6 +524,22 @@ rows:
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-AUX-001.yaml
 
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ICE-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ICE-001_ice-protection-without-bleed-air_2026-11-27.md
+    status: on-disk
+    note: >
+      Research record: ice protection without bleed air, as accepted on review from three
+      reports of 2026-11-27, an assessment of two of them and an audit of that assessment by
+      the producer of one. Sixty-eight statements, thirty-eight of them read by two readers;
+      fourteen more as reported; sixteen report that a search found nothing. It holds eleven
+      mandatory criteria, proposed, drawn from the rules read, and no traded one. Four
+      documents of EASA used in it carry a notice of document control: whether they are
+      public material for the brief is for the authority. The reviewer is the producer of one
+      report, and the second reader is the producer of another.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ICE-001.yaml
+
   - class: migration-or-completion-record
     subject: F24
     path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md
