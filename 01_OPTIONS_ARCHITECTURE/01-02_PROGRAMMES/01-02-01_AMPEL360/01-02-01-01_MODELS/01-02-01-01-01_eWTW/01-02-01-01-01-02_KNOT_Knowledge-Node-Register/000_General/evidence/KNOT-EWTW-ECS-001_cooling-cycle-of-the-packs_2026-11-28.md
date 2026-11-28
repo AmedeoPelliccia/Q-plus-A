@@ -242,7 +242,7 @@ Not proposed, for want of a reading: system safety (CS 25.1309), high-energy rot
 
 Each point is a derivation of the reviewer and ranks nothing.
 
-- **The compression is the common term.** Every option pays it, and at the working reference it is most of the cruise power in the one worksheet on record, 59.5 kW, and would be 35.7 kW at the ventilation floor (statement 46). The real part depends on the fresh flow the packs are designed for, which no rule fixes above 0.25 kg per occupant and minute.
+- **The compression is the common term.** Every option pays it, and at the working reference it is most of the cruise power in the one worksheet on record, 59.5 kW, and would be 35.7 kW at the ventilation floor, by the worksheet of report B above; statement 46 gives the ideal work. The real part depends on the fresh flow the packs are designed for, which no rule fixes above 0.25 kg per occupant and minute.
 - **The stand separates the options more than the cruise,** in the worksheet and in the one study at several points, where the vapour cycle takes 1.58 times the ram air of the air cycle on the hot ground and 0.47 kg/s in cruise (statement 21). Both are models. This bears on `KNOT-EWTW-AUX-001`, where the stand power is sized.
 - **After the loss of one pack in flight the cabin still needs its floor,** 0.3120 kg/s for 104 occupants; the survivor of two packs that shared the normal minimum, as the only path of fresh air, carries 1.44 times its share (statement 38). The capacity of the compressors of each option follows from the case once its terms are set, every option alike.
 - **A refrigerant brings duties from March 2027 and a question of supply after 2030** (statements 24 and 26), and a second track under REACH (statement 27).
@@ -280,7 +280,7 @@ Research can still give:
 - figures of the 787 packs from a primary source, and a coefficient measured against electrical input (findings 72 and 73);
 - statements 51 to 71 at a place the reviewer can read: the docket of the Citation 560 first, which needs an approval of the author for the reading tool (statement 68);
 - whether the 41 kW and 28 N of statement 21 are weighted;
-- CS 25.1309, 25.863 and 25.1461, and the means of compliance of CS 25.1438 (findings 80, statement 31);
+- CS 25.1309, 25.863 and 25.1461, and the means of compliance of CS 25.1438 (finding 80 and statement 31);
 - cabin loads of the eWTW's own cabin and pack maps, before any table by phase becomes a figure of record;
 - every figure of this record, read again at its document.
 
