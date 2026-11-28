@@ -540,6 +540,35 @@ rows:
     citedBy:
       - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ICE-001.yaml
 
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ECS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/KNOT-EWTW-ECS-001_cooling-cycle-of-the-packs_2026-11-28.md
+    status: on-disk
+    note: >
+      Research record: the cooling cycle of the packs, as accepted on review from four
+      reports of 2026-11-27, an assessment of them and a reading of one of them against its
+      sources by the producer of another, with five rulings of the author of 2026-11-28.
+      Fifty statements, thirty-one of them read by two readers; twenty-one more as
+      reported; ten report that a search found nothing. It holds ten mandatory criteria and
+      one traded, all proposed, and no margin. It gives no load for the eWTW, and the choice
+      among the three cycles stays open. The reviewer is the producer of one report and of
+      the assessment, and the second reader is the producer of two others.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ECS-001.yaml
+
+  - class: analysis-or-test-record
+    subject: KNOT-EWTW-ECS-001
+    path: ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/evidence/PHS-EWTW-ECS-001/README.md
+    status: on-disk
+    note: >
+      Pack power by phase 0.1.0: a candidate calculation of class D, the script and the CSV
+      of report B of 2026-11-27 kept byte for byte, with their hashes, assumptions and
+      limits. 25 cases of the concept of operations by three options, 75 rows. Admitted by
+      the author on 2026-11-28 for sensitivities, not for sizing, until cabin loads and pack
+      maps are accepted. Not a figure of record; it states no conformity.
+    citedBy:
+      - ../01-02-01-01-01-02_KNOT_Knowledge-Node-Register/000_General/KNOT-EWTW-ECS-001.yaml
+
   - class: migration-or-completion-record
     subject: F24
     path: 01-02-01-01-01-01-11_TPuBS_Technical-Publications-Breakdown-Structure/TPuBS-EWTW-021_withdrawal_2026-11-18.md

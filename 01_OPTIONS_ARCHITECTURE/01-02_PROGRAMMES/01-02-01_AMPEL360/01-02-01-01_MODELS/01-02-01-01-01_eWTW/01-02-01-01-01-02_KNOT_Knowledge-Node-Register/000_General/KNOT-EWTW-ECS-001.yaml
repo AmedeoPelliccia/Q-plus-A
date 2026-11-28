@@ -76,11 +76,19 @@ knot:
     ref:
       view: EBS
       ref: 000_General/evidence/KNOT-EWTW-CRZ-001_ruling-R2_2026-11-24.md
+  - text: 'the reference of the environmental control is 104 occupants: 100 passengers, 2 pilots and 2 cabin crew. An assumption of the programme, ruled by the author on 2026-11-28: with 100 passenger seats installed on one deck the numerical criterion of ORO.CC.100(b) gives two cabin crew, and the certified configuration may require more. It is reopened if the configuration or the operating minimum changes. For 104 persons the fresh air is 0.4333 kg/s at the normal minimum and 0.3120 kg/s in the case of criterion E2 (research record of 2026-11-28, statement 38)'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ECS-001_cooling-cycle-of-the-packs_2026-11-28.md
+  - text: 'the loss of one pack in flight is a design case of LC-A, with criterion E2, ruled by the author on 2026-11-28 and registered with STK_SAF. The study takes 0.18 kg of fresh air per person and minute for periods beyond five minutes; the means of compliance admits temporary reductions where the environment is shown to stay safe (research record of 2026-11-28, statement 37). The formal classification of the failure condition stays open until the safety assessment, power supplies, controls and common causes included. Dispatch with one pack already inoperative needs an assessment of its own'
+    ref:
+      view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ECS-001_cooling-cycle-of-the-packs_2026-11-28.md
   couplings:
   - knot: KNOT-EWTW-STO-001
     note: whether this system also cools a propulsion battery is an open input of the concept of operations, decided with the role of storage
   - knot: KNOT-EWTW-PRP-001
-    note: the electrical chain rejects heat of its own; a liquid loop shared with the packs is open to a vapour cycle and not to an air cycle alone
+    note: 'the electrical chain rejects heat of its own. A liquid loop shared with the packs is open to all three options, at different costs: an air-cycle pack, too, can cool a secondary liquid loop through an exchanger (research record of 2026-11-28, statement 34). The product breakdown takes that interface only if a later decision selects it'
   - knot: KNOT-EWTW-AUX-001
     note: the stand is the case with no ram air; the power the packs draw there sizes its supply
   - knot: KNOT-EWTW-SRC-001
@@ -106,11 +114,13 @@ knot:
     exit: 'Figures and precedents, each with its source and with whether it is measured, published or estimated'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: PENDING_REVIEW
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-27'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ECS-001_cooling-cycle-of-the-packs_2026-11-28.md
   - knu_id: KNU-EWTW-ECS-001-02
     title: Pack power by phase for each cycle
     knu_class: ANALYSIS_PACKAGE
@@ -128,11 +138,15 @@ knot:
     exit: 'A table of power and of ram air by phase for each cycle, with its assumptions, read by the load analysis of KNU-EWTW-SRC-001-01'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-27'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ECS-001_cooling-cycle-of-the-packs_2026-11-28.md
+    - view: EBS
+      ref: 000_General/evidence/PHS-EWTW-ECS-001/README.md
   - knu_id: KNU-EWTW-ECS-001-03
     title: Decision criteria and maturity thresholds
     knu_class: REQUIREMENT_SET
@@ -150,8 +164,10 @@ knot:
     exit: 'Criteria in order of precedence and thresholds approved by the authority and written into this record'
     owner: STK_SE
     lifecycle_phase: LC-A
-    progress: NOT_STARTED
+    progress: IN_PROGRESS
     created_date: '2026-11-24'
-    start_date: null
+    start_date: '2026-11-27'
     end_date: null
-    evidence_refs: []
+    evidence_refs:
+    - view: EBS
+      ref: 000_General/evidence/KNOT-EWTW-ECS-001_cooling-cycle-of-the-packs_2026-11-28.md
